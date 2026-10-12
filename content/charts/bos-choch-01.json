@@ -1,0 +1,181 @@
+{
+  "id": "bos-choch-01",
+  "title": {
+    "en": "BOS into CHoCH — Institutional Market Structure Shift",
+    "bn": "BOS থেকে CHoCH — প্রাতিষ্ঠানিক মার্কেট স্ট্রাকচার শিফট"
+  },
+  "symbol": "XAUUSD",
+  "timeframe": "H4",
+  "mode": "synthetic",
+  "type": "concept",
+  "bias": "bearish",
+  "outcome": null,
+  "tags": [
+    "BOS",
+    "CHoCH",
+    "market-structure",
+    "reversal",
+    "SMC"
+  ],
+  "module": "03-market-structure",
+  "lessonSlugs": [
+    "02-bos-choch"
+  ],
+  "caption": {
+    "en": "Consecutive BOS confirms bear trend, followed by a bullish CHoCH signaling structural trend reversal.",
+    "bn": "ধারাবাহিক BOS ডাউনট্রেন্ড নিশ্চিত করে, এরপর বুলিশ CHoCH ট্রু রিভার্সালের সংকেত দেয়।"
+  },
+  "notes": {
+    "en": "After repeated Break of Structure (BOS) making Lower Lows, price decisively closes above the prior Lower High, producing a Change of Character (CHoCH).",
+    "bn": "টানা লোয়ার লো তৈরি করে BOS কনফার্মেশনের পর, প্রাইস পূর্ববর্তী লোয়ার হাইয়ের উপরে বডি ক্লোজ দিয়ে প্রথমবার CHoCH তৈরি করে।"
+  },
+  "updatedAt": "2026-10-08T10:00:00Z",
+  "candles": [
+    {
+      "i": 0,
+      "o": 2380,
+      "h": 2388,
+      "l": 2375,
+      "c": 2382
+    },
+    {
+      "i": 1,
+      "o": 2382,
+      "h": 2390,
+      "l": 2378,
+      "c": 2386
+    },
+    {
+      "i": 2,
+      "o": 2386,
+      "h": 2392,
+      "l": 2380,
+      "c": 2388
+    },
+    {
+      "i": 3,
+      "o": 2388,
+      "h": 2394,
+      "l": 2370,
+      "c": 2372
+    },
+    {
+      "i": 4,
+      "o": 2372,
+      "h": 2378,
+      "l": 2365,
+      "c": 2376
+    },
+    {
+      "i": 5,
+      "o": 2376,
+      "h": 2380,
+      "l": 2358,
+      "c": 2360
+    },
+    {
+      "i": 6,
+      "o": 2360,
+      "h": 2365,
+      "l": 2350,
+      "c": 2362
+    },
+    {
+      "i": 7,
+      "o": 2362,
+      "h": 2370,
+      "l": 2345,
+      "c": 2348
+    },
+    {
+      "i": 8,
+      "o": 2348,
+      "h": 2355,
+      "l": 2340,
+      "c": 2352
+    },
+    {
+      "i": 9,
+      "o": 2352,
+      "h": 2360,
+      "l": 2338,
+      "c": 2340
+    },
+    {
+      "i": 10,
+      "o": 2340,
+      "h": 2348,
+      "l": 2332,
+      "c": 2344
+    },
+    {
+      "i": 11,
+      "o": 2344,
+      "h": 2375,
+      "l": 2342,
+      "c": 2372
+    },
+    {
+      "i": 12,
+      "o": 2372,
+      "h": 2384,
+      "l": 2368,
+      "c": 2382
+    }
+  ],
+  "annotations": [
+    {
+      "type": "marker",
+      "i": 3,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "LH (BOS ↓)"
+    },
+    {
+      "type": "marker",
+      "i": 7,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "LH"
+    },
+    {
+      "type": "marker",
+      "i": 9,
+      "position": "belowBar",
+      "shape": "circle",
+      "text": "LL"
+    },
+    {
+      "type": "marker",
+      "i": 11,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "CHoCH ↑"
+    },
+    {
+      "type": "hline",
+      "price": 2360,
+      "label": "CHoCH Level",
+      "color": "#f5b301",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Market structure dictates the macro order flow. Downtrend continuation is verified by Break of Structure (BOS) below prior swing lows. When smart money absorbs all sell liquidity and forcefully breaks the most recent Lower High with a candle body close, the structure shifts to bullish (CHoCH). This is the earliest high-probability signal to flip your bias from short to long.",
+    "bn": "মার্কেট স্ট্রাকচারই হলো স্মার্ট মানির গতিবিধি বোঝার মূল ভিত্তি। ডাউনট্রেন্ডে সুইং লো ভেঙে ক্যান্ডেল ক্লোজ দিলে তাকে BOS বলে। যখন বড় প্রতিষ্ঠানগুলো লিকুইডিটি নিয়ে সর্বশেষ লোয়ার হাইয়ের ওপরে ক্যান্ডেল ক্লোজ করায়, তখন স্ট্রাকচার বদলে যায় এবং একে CHoCH বলা হয়। এটি ডাউনট্রেন্ড শেষ হওয়ার সবচেয়ে নির্ভরযোগ্য প্রমাণ।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Always demand a candle body close across the swing point; wicks are mere liquidity sweeps.",
+      "bn": "সুইং হাই/লো ভাঙার ক্ষেত্রে বডি ক্লোজ বাধ্যতামূলক; শুধু উইক দিয়ে পার হলে তা লিকুইডিটি সুইপ।"
+    },
+    {
+      "en": "Never buy immediately at the CHoCH break; wait for the pullback into the discount Order Block or FVG.",
+      "bn": "CHoCH ব্রেক হওয়ার সাথে সাথে বাই করবেন না; ডিসকাউন্ট অর্ডার ব্লক বা FVG-তে রিটেস্টের অপেক্ষা করুন।"
+    }
+  ],
+  "entry": 2362,
+  "stopLoss": 2345,
+  "takeProfit": 2410,
+  "rr": "2.8"
+}

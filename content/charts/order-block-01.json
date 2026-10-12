@@ -1,0 +1,194 @@
+{
+  "id": "order-block-01",
+  "title": {
+    "en": "Bullish Order Block (OB) Mitigation & Expansion",
+    "bn": "বুলিশ অর্ডার ব্লক (OB) — লিকুইডিটি মিটিগেশন ও এক্সপ্যানশন"
+  },
+  "symbol": "XAUUSD",
+  "timeframe": "H1",
+  "mode": "synthetic",
+  "type": "concept",
+  "bias": "bullish",
+  "outcome": null,
+  "tags": [
+    "order-block",
+    "OB",
+    "mitigation",
+    "SMC",
+    "demand"
+  ],
+  "module": "03-market-structure",
+  "lessonSlugs": [
+    "04-order-blocks"
+  ],
+  "caption": {
+    "en": "Price creates a clean Bullish OB on displacement, then retests to mitigate before explosive continuation.",
+    "bn": "মার্কেট ডিসপ্লেসমেন্টের মাধ্যমে বুলিশ OB তৈরি করে এবং পরবর্তীতে তা রিটেস্ট করে রকেটের মতো ছুটে যায়।"
+  },
+  "notes": {
+    "en": "The last bearish candle before the strong bullish impulse wave is the institutional Order Block. Price retraced to mitigate it and launched.",
+    "bn": "তীব্র বুলিশ ইমপালসের ঠিক আগের শেষ বিয়ারিশ ক্যান্ডেলটিই প্রাতিষ্ঠানিক অর্ডার ব্লক। প্রাইস তা নিখুঁতভাবে রিটেস্ট করেছে।"
+  },
+  "updatedAt": "2026-10-08T14:00:00Z",
+  "candles": [
+    {
+      "i": 0,
+      "o": 2310,
+      "h": 2315,
+      "l": 2306,
+      "c": 2312
+    },
+    {
+      "i": 1,
+      "o": 2312,
+      "h": 2316,
+      "l": 2308,
+      "c": 2310
+    },
+    {
+      "i": 2,
+      "o": 2310,
+      "h": 2313,
+      "l": 2305,
+      "c": 2307
+    },
+    {
+      "i": 3,
+      "o": 2307,
+      "h": 2310,
+      "l": 2303,
+      "c": 2305
+    },
+    {
+      "i": 4,
+      "o": 2305,
+      "h": 2308,
+      "l": 2301,
+      "c": 2303
+    },
+    {
+      "i": 5,
+      "o": 2302,
+      "h": 2304,
+      "l": 2298,
+      "c": 2300
+    },
+    {
+      "i": 6,
+      "o": 2299,
+      "h": 2303,
+      "l": 2297,
+      "c": 2301
+    },
+    {
+      "i": 7,
+      "o": 2300,
+      "h": 2302,
+      "l": 2295,
+      "c": 2297
+    },
+    {
+      "i": 8,
+      "o": 2296,
+      "h": 2340,
+      "l": 2294,
+      "c": 2338
+    },
+    {
+      "i": 9,
+      "o": 2338,
+      "h": 2348,
+      "l": 2335,
+      "c": 2345
+    },
+    {
+      "i": 10,
+      "o": 2345,
+      "h": 2352,
+      "l": 2342,
+      "c": 2350
+    },
+    {
+      "i": 11,
+      "o": 2350,
+      "h": 2355,
+      "l": 2340,
+      "c": 2342
+    },
+    {
+      "i": 12,
+      "o": 2342,
+      "h": 2346,
+      "l": 2296,
+      "c": 2299
+    },
+    {
+      "i": 13,
+      "o": 2299,
+      "h": 2360,
+      "l": 2297,
+      "c": 2358
+    },
+    {
+      "i": 14,
+      "o": 2358,
+      "h": 2368,
+      "l": 2355,
+      "c": 2365
+    }
+  ],
+  "annotations": [
+    {
+      "type": "zone",
+      "from": {
+        "i": 7,
+        "price": 2302
+      },
+      "to": {
+        "i": 8,
+        "price": 2294
+      },
+      "label": "Bullish OB",
+      "color": "#22c55e"
+    },
+    {
+      "type": "marker",
+      "i": 8,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Displacement ↑"
+    },
+    {
+      "type": "marker",
+      "i": 12,
+      "position": "belowBar",
+      "shape": "circle",
+      "text": "OB Mitigation"
+    },
+    {
+      "type": "marker",
+      "i": 13,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Launch ↑"
+    }
+  ],
+  "explanation": {
+    "en": "An institutional Order Block represents the footprint where smart money placed massive buy orders, temporarily absorbing sell volume before violently driving price upward (displacement). Because institutions often have unmitigated drawdown or pending limit orders inside this candle, price returns to mitigate the block before continuing the primary trend.",
+    "bn": "অর্ডার ব্লক হলো সেই স্থান যেখানে বড় ব্যাংক ও ফান্ডগুলো বিশাল অঙ্কের বাই পজিশন ওপেন করেছিল, যার ফলে মার্কেটে বড় গ্রিন ক্যান্ডেল তৈরি হয়। তাদের কিছু হেজিং অর্ডার ব্রেক-ইভেনে ক্লোজ করার জন্য এবং নতুন বাই যোগ করার জন্য প্রাইস আবার এই জোনে ফিরে আসে। একে মিটিগেশন বলে, যা রিটেইল ট্রেডারদের জন্য সেরা এন্ট্রি পয়েন্ট।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "A valid Order Block must cause a displacement wave that breaks market structure (BOS).",
+      "bn": "একটি কার্যকরী অর্ডার ব্লকের পরে অবশ্যই এমন বড় মুভ থাকতে হবে যা আগের স্ট্রাকচার ভাঙে (BOS)।"
+    },
+    {
+      "en": "Set limit orders at the open of the OB, with stop loss safely below the OB low wick.",
+      "bn": "অর্ডার ব্লকের ওপেনিং প্রাইসে এন্ট্রি লিমিট দিন এবং এর লো উইকের নিচে স্টপ লস বসান।"
+    }
+  ],
+  "entry": 2312,
+  "stopLoss": 2298,
+  "takeProfit": 2355,
+  "rr": "3.1"
+}

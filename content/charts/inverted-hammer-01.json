@@ -1,0 +1,118 @@
+{
+  "id": "inverted-hammer-01",
+  "title": {
+    "en": "Inverted Hammer at Support Floor",
+    "bn": "সাপোর্ট ফ্লোরে ইনভার্টেড হ্যামার — বুলিশ প্রেশার টেস্ট"
+  },
+  "symbol": "EURUSD",
+  "timeframe": "H4",
+  "bias": "bullish",
+  "caption": {
+    "en": "EURUSD tests 1.0750 support floor, forming an Inverted Hammer before reversing 140 pips higher.",
+    "bn": "EURUSD ১.০৭৫০ সাপোর্টে ইনভার্টেড হ্যামার তৈরি করে বায়ারদের উপস্থিতি পরীক্ষা করে এবং ১৪০ পিপস ওপরে ওঠে।"
+  },
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.085,
+      "h": 1.0855,
+      "l": 1.081,
+      "c": 1.0815
+    },
+    {
+      "i": 1,
+      "o": 1.0815,
+      "h": 1.082,
+      "l": 1.077,
+      "c": 1.0775
+    },
+    {
+      "i": 2,
+      "o": 1.0775,
+      "h": 1.078,
+      "l": 1.074,
+      "c": 1.0745
+    },
+    {
+      "i": 3,
+      "o": 1.0745,
+      "h": 1.0795,
+      "l": 1.0742,
+      "c": 1.0752
+    },
+    {
+      "i": 4,
+      "o": 1.0752,
+      "h": 1.081,
+      "l": 1.075,
+      "c": 1.0805
+    },
+    {
+      "i": 5,
+      "o": 1.0805,
+      "h": 1.086,
+      "l": 1.08,
+      "c": 1.085
+    }
+  ],
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 1.074,
+      "label": "Key Support Floor (1.0740)",
+      "color": "#22c55e",
+      "style": "solid"
+    },
+    {
+      "type": "marker",
+      "i": 3,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Inverted Hammer Reversal"
+    },
+    {
+      "type": "hline",
+      "price": 1.0795,
+      "label": "Breakout Buy Trigger (1.0795)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.0735,
+      "label": "Stop Loss (1.0735)",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.086,
+      "label": "Take Profit Target (1.0860)",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "notes": {
+    "en": "Long upper shadow shows buyers tested higher prices. Even though price retraced, buyers successfully prevented new lows.",
+    "bn": "লম্বা ওপরের উইক প্রমাণ করে বায়াররা ওপরের প্রাইস টেস্ট করেছে এবং সেলারদের নতুন লো তৈরিতে বাঁধা দিয়েছে।"
+  },
+  "explanation": {
+    "en": "The Inverted Hammer occurs at the bottom of a downtrend. It features a small lower body and a long upper shadow. This reveals that buyers made a decisive, aggressive attempt to push prices higher. Although sellers pushed price back down before the close, the inability of sellers to push price to new lows demonstrates that the selling pressure has dried up.",
+    "bn": "ডাউনট্রেন্ডের নিচে ইনভার্টেড হ্যামার তৈরি হয় যার ওপরের উইক লম্বা এবং বডি নিচে ছোট থাকে। এর মানে হলো সেশনের মাঝে বায়াররা এক দফায় অনেক ওপরে দাম নিয়ে গিয়েছিল। সেলাররা শেষ মুহূর্তে কিছুটা নামালেও নতুন লো বানাতে পারেনি। পরের ক্যান্ডেল গ্রিন হলে ট্রেন্ড আপ হয়ে যায়।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Upper shadow must be at least twice the real body height with minimal lower wick.",
+      "bn": "ওপরের উইকটি অবশ্যই রিয়েল বডির চেয়ে অন্তত দ্বিগুণ লম্বা হতে হবে এবং নিচের উইক অতি ক্ষুদ্র হবে।"
+    },
+    {
+      "en": "Requires a bullish candle close above the pattern high for validated entry trigger.",
+      "bn": "প্যাটার্নের হাইয়ের উপরে পরবর্তী ক্যান্ডেল গ্রিন হয়ে ক্লোজ দিলে তবেই নিশ্চিত বাই এন্ট্রি পাওয়া যায়।"
+    }
+  ],
+  "entry": 1.077,
+  "stopLoss": 1.073,
+  "takeProfit": 1.088,
+  "rr": "2.7",
+  "type": "pattern"
+}

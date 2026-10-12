@@ -1,0 +1,10 @@
+{
+  "title": "Risk Management",
+  "pages": [
+    "01-risk-per-trade",
+    "02-position-sizing",
+    "03-risk-reward",
+    "04-drawdown-rules",
+    "05-daily-weekly-limits"
+  ]
+}

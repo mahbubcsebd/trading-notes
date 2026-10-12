@@ -1,0 +1,145 @@
+{
+  "id": "support-flip-01",
+  "title": {
+    "en": "Support Becomes Resistance (S/R Flip) Breakdown",
+    "bn": "সাপোর্ট রূপান্তর রেজিস্ট্যান্সে (S/R ফ্লিপ) — রিটেস্ট ও কন্টিনিউয়েশন"
+  },
+  "symbol": "GBPUSD",
+  "timeframe": "H4",
+  "mode": "synthetic",
+  "type": "concept",
+  "bias": "bearish",
+  "outcome": null,
+  "tags": [
+    "support",
+    "resistance",
+    "flip",
+    "price-action"
+  ],
+  "module": "03-market-structure",
+  "lessonSlugs": [
+    "01-market-structure"
+  ],
+  "caption": {
+    "en": "Prior support level breaks on strong momentum and flips into impenetrable resistance.",
+    "bn": "পূর্ববর্তী সাপোর্ট মোমেন্টামের সাথে ভেঙে যায় এবং পরবর্তীতে রিটেস্টে শক্তিশালী রেজিস্ট্যান্সে রূপ নেয়।"
+  },
+  "notes": {
+    "en": "Once a support level is broken with strong momentum, it flips to resistance. Any retest of that level provides a high-probability short.",
+    "bn": "সাপোর্ট লেভেল ভাঙার পর তা রেজিস্ট্যান্সে পরিণত হয়। সেই লেভেলে পুনরায় রিটেস্ট পাওয়া গেলে তা সেরা সেল সেটআপ।"
+  },
+  "updatedAt": "2026-10-10T10:00:00Z",
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.27,
+      "h": 1.272,
+      "l": 1.2692,
+      "c": 1.2715
+    },
+    {
+      "i": 1,
+      "o": 1.2715,
+      "h": 1.2728,
+      "l": 1.2708,
+      "c": 1.2722
+    },
+    {
+      "i": 2,
+      "o": 1.2722,
+      "h": 1.273,
+      "l": 1.2695,
+      "c": 1.2698
+    },
+    {
+      "i": 3,
+      "o": 1.2698,
+      "h": 1.2702,
+      "l": 1.268,
+      "c": 1.2684
+    },
+    {
+      "i": 4,
+      "o": 1.2684,
+      "h": 1.2688,
+      "l": 1.2665,
+      "c": 1.2668
+    },
+    {
+      "i": 5,
+      "o": 1.2668,
+      "h": 1.2672,
+      "l": 1.2648,
+      "c": 1.2652
+    },
+    {
+      "i": 6,
+      "o": 1.2652,
+      "h": 1.27,
+      "l": 1.2648,
+      "c": 1.2694
+    },
+    {
+      "i": 7,
+      "o": 1.2694,
+      "h": 1.2704,
+      "l": 1.2688,
+      "c": 1.2692
+    },
+    {
+      "i": 8,
+      "o": 1.2692,
+      "h": 1.27,
+      "l": 1.2682,
+      "c": 1.2684
+    },
+    {
+      "i": 9,
+      "o": 1.2684,
+      "h": 1.2688,
+      "l": 1.2658,
+      "c": 1.266
+    }
+  ],
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 1.27,
+      "label": "Old Support → New Resistance",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "marker",
+      "i": 2,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Support Break"
+    },
+    {
+      "type": "marker",
+      "i": 6,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Retest → Short"
+    }
+  ],
+  "explanation": {
+    "en": "Price Memory is a core principle in technical analysis. When price breaks below a well-established support zone, all the traders who bought at that support are now trapped in losing positions. When price pulls back to retest that level, trapped buyers exit at breakeven (selling), while new short-sellers initiate fresh sell orders, creating an overwhelming wave of supply.",
+    "bn": "প্রাইস মেমোরি হলো টেকনিক্যাল অ্যানালাইসিসের অন্যতম মৌলিক নিয়ম। একটি সুপ্রতিষ্ঠিত সাপোর্ট যখন ভেঙে যায়, তখন যারা ওই সাপোর্টে বাই করেছিল তারা বড় লসে আটকে পড়ে। পরবর্তীতে প্রাইস আবার ওই লেভেলে ফিরে এলে তারা ব্রেক-ইভেনে বাঁচার জন্য সেল দিয়ে দেয়, পাশাপাশি নতুন সেলাররাও সেল করে। ফলে পুরোনো সাপোর্টটি শক্তিশালী নতুন রেজিস্ট্যান্সে রূপ নেয়।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Look for a clean displacement candle closing completely below the support floor before trading the flip.",
+      "bn": "ফ্লিপ ট্রেড করার আগে নিশ্চিত হোন যে বড় ক্যান্ডেল দিয়ে সাপোর্টটি পরিষ্কারভাবে ভেঙে নিচে ক্লোজ হয়েছে।"
+    },
+    {
+      "en": "Enter on the retest rejection with stop loss securely placed above the newly formed resistance.",
+      "bn": "রিটেস্টে রিজেকশন দেখে সেল এন্ট্রি নিন এবং নতুন রেজিস্ট্যান্সের কিছুটা ওপরে স্টপ লস সেট করুন।"
+    }
+  ],
+  "entry": 1.272,
+  "stopLoss": 1.276,
+  "takeProfit": 1.261,
+  "rr": "2.8"
+}

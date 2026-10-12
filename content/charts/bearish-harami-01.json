@@ -1,0 +1,124 @@
+{
+  "id": "bearish-harami-01",
+  "title": {
+    "en": "Bearish Harami Inside Bar at Gold Resistance",
+    "bn": "গোল্ড রেজিস্ট্যান্সে বিয়ারিশ হারামি ইনসাইড বার"
+  },
+  "symbol": "XAUUSD",
+  "timeframe": "H4",
+  "bias": "bearish",
+  "caption": {
+    "en": "Gold hits 2350 resistance, forming a Bearish Harami before plunging 200 pips.",
+    "bn": "গোল্ড ২৩৫০ রেজিস্ট্যান্সে পৌঁছানোর পর বিয়ারিশ হারামি তৈরি করে ২০০ পিপস সেল অফ হয়।"
+  },
+  "candles": [
+    {
+      "i": 0,
+      "o": 2315,
+      "h": 2320,
+      "l": 2312,
+      "c": 2318
+    },
+    {
+      "i": 1,
+      "o": 2318,
+      "h": 2335,
+      "l": 2316,
+      "c": 2332
+    },
+    {
+      "i": 2,
+      "o": 2332,
+      "h": 2352,
+      "l": 2330,
+      "c": 2350
+    },
+    {
+      "i": 3,
+      "o": 2348,
+      "h": 2349,
+      "l": 2338,
+      "c": 2340
+    },
+    {
+      "i": 4,
+      "o": 2340,
+      "h": 2342,
+      "l": 2320,
+      "c": 2322
+    },
+    {
+      "i": 5,
+      "o": 2322,
+      "h": 2325,
+      "l": 2295,
+      "c": 2300
+    }
+  ],
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 2352,
+      "label": "Key Supply Ceiling (2352.00)",
+      "color": "#ef4444",
+      "style": "solid"
+    },
+    {
+      "type": "zone",
+      "from": {
+        "i": 2,
+        "price": 2352
+      },
+      "to": {
+        "i": 3,
+        "price": 2330
+      },
+      "label": "Bearish Harami (Inside Bar)",
+      "color": "#f43f5e"
+    },
+    {
+      "type": "hline",
+      "price": 2338,
+      "label": "Sell Trigger (2338.00)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 2355,
+      "label": "Stop Loss (2355.00)",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 2295,
+      "label": "Take Profit Target (2295.00)",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "notes": {
+    "en": "The Mother Bar pushed hard into 2350, but the subsequent Inside Bar stayed entirely within its range, signaling momentum exhaustion.",
+    "bn": "মাদার বারটি ২৩৫০ লেভেলে উঠলেও পরবর্তী ইনসাইড বারটি সম্পূর্ণ তার ভেতরেই সীমাবদ্ধ থেকে বায়ারদের ক্লান্তি প্রকাশ করে।"
+  },
+  "explanation": {
+    "en": "A Bearish Harami acts as an inside-bar pause at key resistance. After an explosive green expansion candle, buyers failed to create a higher high, closing a small bearish body contained within the previous bar. When price breaks below the mother bar or inside bar low, aggressive selling cascades downward.",
+    "bn": "কী-রেজিস্ট্যান্সে বিয়ারিশ হারামি মূলত একটি মোমেন্টাম পজ বা দ্বিধা নির্দেশ করে। বিশাল গ্রিন ক্যান্ডেলের পর বায়াররা আর হাই তৈরি করতে পারেনি এবং ছোট লাল বডি আগের ক্যান্ডেলের পেটে বন্দি থাকে। ইনসাইড বারের লো ভাঙার পর প্রাতিষ্ঠানিক সেলাররা সেল অফ শুরু করে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Indicates momentum deceleration rather than instant trend change; requires trigger break.",
+      "bn": "এটি তাৎক্ষণিক রিভার্সালের চেয়ে মোমেন্টাম কমে যাওয়া নির্দেশ করে; তাই ট্রিগার ব্রেকের অপেক্ষা আবশ্যক।"
+    },
+    {
+      "en": "Inside bar low break triggers conservative sell entries with tight stop loss at mother high.",
+      "bn": "ইনসাইড বারের লো ব্রেক করলে মাদার বারের হাইয়ে স্টপ লস দিয়ে টাইট রিস্কে সেল ট্রেড নেওয়া যায়।"
+    }
+  ],
+  "entry": 2338,
+  "stopLoss": 2355,
+  "takeProfit": 2295,
+  "rr": "2.5",
+  "type": "pattern"
+}

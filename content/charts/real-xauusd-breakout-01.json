@@ -1,0 +1,145 @@
+{
+  "id": "real-xauusd-breakout-01",
+  "title": {
+    "en": "Real Market — Gold All-Time High Daily Breakout",
+    "bn": "বাস্তব মার্কেট — গোল্ড অল-টাইম হাই ডেইলি ব্রেকআউট বিশ্লেষণ"
+  },
+  "symbol": "XAUUSD",
+  "timeframe": "D1",
+  "mode": "real",
+  "type": "real",
+  "bias": "bullish",
+  "outcome": null,
+  "tags": [
+    "XAUUSD",
+    "Breakout",
+    "Daily",
+    "Macro",
+    "Real-Market"
+  ],
+  "module": "01-foundations",
+  "lessonSlugs": [
+    "06-sessions-and-overlap"
+  ],
+  "caption": {
+    "en": "Gold breaking out of multi-month resistance with institutional momentum on the Daily timeframe.",
+    "bn": "ডেইলি টাইমফ্রেমে গোল্ড কয়েক মাসের দীর্ঘ রেজিস্ট্যান্স ভেঙে অল-টাইম হাইয়ের নতুন যুগে প্রবেশ করে।"
+  },
+  "notes": {
+    "en": "Multi-week consolidation under $2400 ended with a decisive expansion candle closing above resistance, confirming macro continuation.",
+    "bn": "২৪০০ ডলারের নিচে কয়েক সপ্তাহের কনসলিডেশন সমাপ্ত করে বড় ডেইলি ক্যান্ডেল রেজিস্ট্যান্সের ওপরে ক্লোজ দিয়ে আপট্রেন্ড নিশ্চিত করে।"
+  },
+  "updatedAt": "2026-10-09T18:00:00Z",
+  "candles": [
+    {
+      "i": 0,
+      "o": 2380,
+      "h": 2392,
+      "l": 2375,
+      "c": 2388
+    },
+    {
+      "i": 1,
+      "o": 2388,
+      "h": 2398,
+      "l": 2382,
+      "c": 2395
+    },
+    {
+      "i": 2,
+      "o": 2395,
+      "h": 2400,
+      "l": 2388,
+      "c": 2392
+    },
+    {
+      "i": 3,
+      "o": 2392,
+      "h": 2396,
+      "l": 2385,
+      "c": 2390
+    },
+    {
+      "i": 4,
+      "o": 2390,
+      "h": 2394,
+      "l": 2380,
+      "c": 2385
+    },
+    {
+      "i": 5,
+      "o": 2385,
+      "h": 2395,
+      "l": 2382,
+      "c": 2394
+    },
+    {
+      "i": 6,
+      "o": 2394,
+      "h": 2418,
+      "l": 2390,
+      "c": 2414
+    },
+    {
+      "i": 7,
+      "o": 2414,
+      "h": 2430,
+      "l": 2410,
+      "c": 2426
+    },
+    {
+      "i": 8,
+      "o": 2426,
+      "h": 2445,
+      "l": 2420,
+      "c": 2440
+    }
+  ],
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 2400,
+      "label": "Key Resistance $2,400",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "marker",
+      "i": 6,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "D1 Close Above $2400"
+    },
+    {
+      "type": "zone",
+      "from": {
+        "i": 6,
+        "price": 2414
+      },
+      "to": {
+        "i": 7,
+        "price": 2398
+      },
+      "label": "Daily FVG / Re-test",
+      "color": "#38bdf8"
+    }
+  ],
+  "explanation": {
+    "en": "This real-market case study documents Gold breaking out to historic all-time highs. After accumulating liquidity between $2340 and $2400 for weeks, an expansion candle closed firmly above $2400 on massive institutional volume. Notice that the breakout candle had no hesitation, closing at its daily high to trigger macro trend-followers.",
+    "bn": "এই রিয়েল-মার্কেট কেস স্টাডিতে গোল্ডের ঐতিহাসিক অল-টাইম হাই ব্রেকআউট নথিভুক্ত করা হয়েছে। কয়েক সপ্তাহ ধরে ২৩৪০ থেকে ২৪০০-এর মধ্যে লিকুইডিটি জমার পর, একটি বড় ডেইলি ক্যান্ডেল ২৪০০-এর ওপরে ক্লোজ দেয়। কোনো আপার উইক ছাড়াই ক্যান্ডেলটি ক্লোজ হওয়া নির্দেশ করে যে ম্যাক্রো ফান্ডগুলো এতে বিপুল মূলধন খাটিয়েছে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Higher timeframe daily candle closes carry 10x more weight than intraday 15-minute breakouts.",
+      "bn": "ডেইলি টাইমফ্রেমের বডি ক্লোজ লোয়ার টাইমফ্রেমের ব্রেকআউটের চেয়ে ১০ গুণ বেশি শক্তিশালী ও নির্ভরযোগ্য।"
+    },
+    {
+      "en": "In macro breakouts, avoid looking for reversals; trade strictly in alignment with the expansion trend.",
+      "bn": "অল-টাইম হাই ব্রেকআউটে টপ ধরার জন্য রিভার্সাল সেল খুঁজবেন না; ট্রেন্ডের সাথে বাই করাই নিরাপদ।"
+    }
+  ],
+  "entry": 2392,
+  "stopLoss": 2360,
+  "takeProfit": 2480,
+  "rr": "2.8"
+}

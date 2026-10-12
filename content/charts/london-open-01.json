@@ -1,0 +1,146 @@
+{
+  "id": "london-open-01",
+  "title": {
+    "en": "London Open Judas Swing — Asian Range Liquidity Run",
+    "bn": "লন্ডন ওপেন জুডাস সুইং — এশিয়ান রেঞ্জ লিকুইডিটি ট্র্যাপ ও এক্সপ্যানশন"
+  },
+  "symbol": "XAUUSD",
+  "timeframe": "M15",
+  "mode": "synthetic",
+  "type": "concept",
+  "bias": "bullish",
+  "outcome": null,
+  "tags": [
+    "session",
+    "london",
+    "judas-swing",
+    "liquidity",
+    "SMC"
+  ],
+  "module": "03-market-structure",
+  "lessonSlugs": [
+    "09-sessions"
+  ],
+  "caption": {
+    "en": "London open sweeps Asian session lows to trap breakout sellers, then rockets 150 pips bullish.",
+    "bn": "লন্ডন সেশন খোলার সাথে সাথে এশিয়ান লো সুইপ করে ফেক ব্রেকডাউন তৈরি করে এবং পরবর্তীতে ১৫০ পিপস ওপরে ওঠে।"
+  },
+  "notes": {
+    "en": "Classic Judas Swing: The initial fake move at 07:00–08:00 GMT engineered to induce wrong-side retail traders before the true trend begins.",
+    "bn": "ক্লাসিক জুডাস সুইং: লন্ডন সেশনের প্রথম ১ ঘণ্টায় ভুয়া ব্রেকডাউন তৈরি করে রিটেইলারদের ট্র্যাপ করা হয়, তারপর আসল মুভ শুরু হয়।"
+  },
+  "updatedAt": "2026-10-10T08:00:00Z",
+  "candles": [
+    {
+      "i": 0,
+      "o": 2340,
+      "h": 2344,
+      "l": 2337,
+      "c": 2342
+    },
+    {
+      "i": 1,
+      "o": 2342,
+      "h": 2346,
+      "l": 2338,
+      "c": 2344
+    },
+    {
+      "i": 2,
+      "o": 2344,
+      "h": 2348,
+      "l": 2340,
+      "c": 2346
+    },
+    {
+      "i": 3,
+      "o": 2346,
+      "h": 2349,
+      "l": 2342,
+      "c": 2347
+    },
+    {
+      "i": 4,
+      "o": 2347,
+      "h": 2350,
+      "l": 2338,
+      "c": 2340
+    },
+    {
+      "i": 5,
+      "o": 2340,
+      "h": 2342,
+      "l": 2330,
+      "c": 2332
+    },
+    {
+      "i": 6,
+      "o": 2332,
+      "h": 2336,
+      "l": 2326,
+      "c": 2330
+    },
+    {
+      "i": 7,
+      "o": 2329,
+      "h": 2332,
+      "l": 2322,
+      "c": 2362
+    },
+    {
+      "i": 8,
+      "o": 2362,
+      "h": 2372,
+      "l": 2358,
+      "c": 2370
+    },
+    {
+      "i": 9,
+      "o": 2370,
+      "h": 2380,
+      "l": 2367,
+      "c": 2378
+    }
+  ],
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 2338,
+      "label": "Asian Low (SSL)",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "marker",
+      "i": 7,
+      "position": "belowBar",
+      "shape": "arrowDown",
+      "text": "Sweep SSL"
+    },
+    {
+      "type": "marker",
+      "i": 7,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "London Reversal ↑"
+    }
+  ],
+  "explanation": {
+    "en": "During the Asian session, volatility is low, establishing clear highs and lows with accumulated liquidity above and below. At the London open (07:00–08:00 GMT / 1pm–2pm BST), algorithms engineer a deceptive fake move (Judas Swing) in the opposite direction of the daily bias. Once retail breakout traders jump in and stop losses are triggered, the real institutional expansion begins.",
+    "bn": "এশিয়ান সেশনে মার্কেট তুলনামূলক শান্ত থাকে এবং একটি নির্দিষ্ট রেঞ্জে বন্দি থাকে। লন্ডন ওপেনে স্মার্ট মানি ইচ্ছা করে দিনের আসল ট্রেন্ডের উল্টো দিকে একটি দ্রুত ফেক মুভ (জুডাস সুইং) তৈরি করে। রিটেইল ট্রেডাররা ব্রেকডাউন ভেবে সেল দিলে তাদের লিকুইডিটি কাজে লাগিয়ে প্রাতিষ্ঠানিক বায়াররা দিনের মূল আপট্রেন্ড চালু করে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Never chase the initial 15-minute spike at London Open; wait for the liquidity sweep and displacement.",
+      "bn": "লন্ডন সেশনের প্রথম ১৫ মিনিটের ভোলাটাইল মুভে অন্ধের মতো ঢুকবেন না; সুইপ ও ডিসপ্লেসমেন্টের অপেক্ষা করুন।"
+    },
+    {
+      "en": "Target the Asian High once the Asian Low has been swept with an impulsive bullish engulfing bar.",
+      "bn": "এশিয়ান লো সুইপ হয়ে বুলিশ রিভার্সাল দিলে নিশ্চিন্তে এশিয়ান হাইকে টেক প্রফিট টার্গেট করুন।"
+    }
+  ],
+  "entry": 2318,
+  "stopLoss": 2305,
+  "takeProfit": 2355,
+  "rr": "2.8"
+}

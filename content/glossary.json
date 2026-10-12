@@ -1,0 +1,974 @@
+[
+  {
+    "term": "1% Risk Rule",
+    "category": "Risk Management",
+    "categoryBn": "রিস্ক ম্যানেজমেন্ট",
+    "en": "The golden risk management rule dictating that you never risk more than 1% (or at maximum 2%) of total account equity on any individual trade.",
+    "bn": "ট্রেডিংয়ের সুবর্ণ নিয়ম—যেখানে কোনো একক ট্রেডে অ্যাকাউন্টের সর্বমোট পুঁজির ১% (বা সর্বোচ্চ ২%)-এর বেশি কখনো ঝুঁকির মুখে ফেলা যাবে না।",
+    "exampleEn": "On a $5,000 account balance, 1% risk equals a strict maximum loss of $50 per trade.",
+    "exampleBn": "$৫,০০০ ব্যালেন্সে ১টি ট্রেডে সর্বোচ্চ ক্ষতি সীমিত রাখতে হবে মাত্র $৫০ ডলারে।"
+  },
+  {
+    "term": "Asian / Tokyo Session",
+    "category": "Macro & Sessions",
+    "categoryBn": "ম্যাক্রো ও সেশন",
+    "en": "The opening forex session of the day (approx. 11:00 PM to 8:00 AM UTC). Characterized by consolidated ranges across European pairs and active liquidity on JPY/AUD.",
+    "bn": "দিনের প্রথম প্রধান ফরেক্স সেশন (টোকিও ও সিডনি)। এতে সাধারণত মার্কেট তুলনামূলক শান্ত থাকে এবং রেঞ্জের মধ্যে ঘোরাফেরা করে।",
+    "exampleEn": "Asian session highs and lows serve as prime liquidity targets for London session stop runs.",
+    "exampleBn": "লন্ডন সেশন শুরুর আগে এশিয়ান হাই এবং লো লিকুইডিটি টার্গেট হিসেবে ব্যবহৃত হয়।"
+  },
+  {
+    "term": "Ask Price",
+    "category": "Forex Basics",
+    "categoryBn": "ফরেক্স বেসিকস",
+    "en": "The lowest price at which sellers in the market (or your broker) are willing to sell an asset. It is the exact price you pay when executing a Buy (long) trade or closing a Sell trade. Always quoted higher than the Bid.",
+    "bn": "বর্তমান বাজারে বিক্রেতারা যে মূল্যে কোনো কারেন্সি বিক্রি করতে প্রস্তুত। অর্থাৎ আপনি যখন চার্টে 'Buy' ক্লিক করেন অথবা চলমান সেল ট্রেড ক্লোজ করেন, তা এই আস্ক মূল্যে ফিল হয়। এটি সর্বদা বিড থেকে সামান্য বেশি হয়।",
+    "exampleEn": "If EUR/USD quote is 1.0850 / 1.0852, the Ask price is 1.0852.",
+    "exampleBn": "EUR/USD কোটেশনে আস্ক প্রাইস ১.০৮৫২; অর্থাৎ বাই এন্ট্রি এই মূল্যে কার্যকর হবে।"
+  },
+  {
+    "term": "ATR (Average True Range)",
+    "category": "Indicators",
+    "categoryBn": "ইন্ডিকেটর ও টুলস",
+    "en": "A non-directional volatility gauge calculating the average range an instrument travels over a set period (typically 14 bars). Essential for data-driven stop loss sizing.",
+    "bn": "নির্দিষ্ট ১৪টি ক্যান্ডেলের গড় প্রাইস রেঞ্জ পরিমাপকারী ভোলাটিলিটি নির্দেশক। এটি পরিমাপ করে দিনে বা ঘণ্টায় একটি কারেন্সি বা গোল্ড গড়ে কত পিপ ওঠানামা করে।",
+    "exampleEn": "Placing your SL at 1.5x ATR distance shields your order from regular market noise.",
+    "exampleBn": "স্টপ লসকে ১.৫ বা ২ × ATR দূরত্বে রাখলে অপ্রয়োজনীয় মার্কেট নয়েজ ও ফেক স্টপ আউট এড়ানো যায়।"
+  },
+  {
+    "term": "Base Currency",
+    "category": "Forex Basics",
+    "categoryBn": "ফরেক্স বেসিকস",
+    "en": "The first currency appearing in a foreign exchange currency pair quotation. It represents the unit being bought or sold relative to the secondary currency.",
+    "bn": "যেকোনো ফরেক্স পেয়ারের নামের শুরুতে থাকা প্রথম মুদ্রাটি (যেমন EUR/USD-তে EUR)। এর মান সর্বদা ১ ইউনিট ধরে হিসাব করা হয়।",
+    "exampleEn": "In GBP/USD, GBP is the base currency. A quote of 1.2500 indicates 1 Pound costs 1.2500 US Dollars.",
+    "exampleBn": "GBP/USD পেয়ারে GBP হলো বেস কারেন্সি। ১.২৫০০ কোটেশনের অর্থ ১ ব্রিটিশ পাউন্ড কিনতে ১.২৫০০ ডলার প্রয়োজন।"
+  },
+  {
+    "term": "Bearish Engulfing",
+    "category": "Candlesticks",
+    "categoryBn": "ক্যান্ডেলস্টিক",
+    "en": "A 2-candle bearish reversal formation where an aggressive red candle body completely engulfs the prior green candle body.",
+    "bn": "দুটি ক্যান্ডেলের বিয়ারিশ রিভার্সাল প্যাটার্ন, যেখানে একটি বড় লাল ক্যান্ডেল আগের সবুজ ক্যান্ডেলটিকে সম্পূর্ণ গ্রাস করে ফেলে।",
+    "exampleEn": "High-probability trigger for short setups at resistance or bearish order blocks.",
+    "exampleBn": "রেজিস্ট্যান্সের কাছে বিয়ারিশ এনগালফিং সেল ট্রেডের চমৎকার ট্রিগার।"
+  },
+  {
+    "term": "Bearish Order Block",
+    "category": "SMC & Structure",
+    "categoryBn": "এসএমসি ও স্ট্রাকচার",
+    "en": "The last up-close (bullish) candle immediately preceding an aggressive downward displacement that breaks previous swing lows, acting as an elite institutional supply barrier.",
+    "bn": "তীব্র পতনের মাধ্যমে নিম্নমুখী স্ট্রাকচার ভাঙার ঠিক আগের শেষ বুলিশ বা সবুজ ক্যান্ডেল। এটি অত্যন্ত শক্তিশালী সাপ্লাই জোন যেখান থেকে প্রতিষ্ঠানগুলো সেল করে।",
+    "exampleEn": "Wait for LTF confirmation (like a 5M CHoCH) inside a 1H Bearish OB before entering short.",
+    "exampleBn": "১ ঘণ্টার Bearish OB-তে প্রাইস পৌঁছালে ছোট টাইমফ্রেমে CHoCH দেখে নিখুঁত সেল নেওয়া হয়।"
+  },
+  {
+    "term": "Bid Price",
+    "category": "Forex Basics",
+    "categoryBn": "ফরেক্স বেসিকস",
+    "en": "The current highest price that buyers in the market (or your broker) are willing to pay for an asset. It is the exact execution price when you initiate a Sell (short) trade or close a Buy trade.",
+    "bn": "বর্তমান বাজারে ক্রেতারা (বা ব্রোকার) যে মূল্যে আপনার সম্পদ কিনতে ইচ্ছুক। অর্থাৎ আপনি যখন কোনো সেল (Short) অর্ডার প্লেস করেন অথবা রানিং বাই ট্রেড ক্লোজ করেন, তখন তা বিড প্রাইসে কার্যকর হয়।",
+    "exampleEn": "If EUR/USD quote is 1.0850 / 1.0852, the Bid price is 1.0850.",
+    "exampleBn": "EUR/USD কোটেশন ১.০৮৫০ / ১.০৮৫২ হলে বিড প্রাইস হলো ১.০৮৫০।"
+  },
+  {
+    "term": "Break of Structure (BOS)",
+    "category": "SMC & Structure",
+    "categoryBn": "এসএমসি ও স্ট্রাকচার",
+    "en": "When price decisively breaks and closes with a full candle body beyond a preceding major swing high (in an uptrend) or swing low (in a downtrend), validating trend continuation.",
+    "bn": "চলতি ট্রেন্ডের দিকে প্রাইস যখন পূর্ববর্তী প্রধান সুইং হাই (আপট্রেন্ডে) বা সুইং লো (ডাউনট্রেন্ডে) ভেঙে ফুল ক্যান্ডেল বডি ক্লোজ দেয়, যা ট্রেন্ড বহাল থাকার প্রাতিষ্ঠানিক প্রমাণ।",
+    "exampleEn": "A bullish BOS signals that buyers remain fully in command and pullbacks offer buy entries.",
+    "exampleBn": "আপট্রেন্ডে নতুন হাই তৈরি করে বডি ক্লোজ দেওয়া হলো বুলিশ BOS; এটি ট্রেন্ড কন্টিনিউয়েশনের সংকেত।"
+  },
+  {
+    "term": "Breakeven (BE)",
+    "category": "Order Types",
+    "categoryBn": "অর্ডারের প্রকারভেদ",
+    "en": "Moving your Stop Loss to the exact entry price after the trade has moved sufficiently into profit, effectively transforming the position into a completely risk-free trade.",
+    "bn": "ট্রেড কাঙ্ক্ষিত লাভে পৌঁছানোর পর স্টপ লসটি সরিয়ে ঠিক এন্ট্রি প্রাইসে নিয়ে আসা, যাতে বাজার সম্পূর্ণ উল্টো ঘুরলেও ১ সেন্টও লোকসান না হয়।",
+    "exampleEn": "After price achieves a 1:2 Risk-to-Reward milestone, shifting SL to Breakeven secures psychological freedom.",
+    "exampleBn": "ট্রেড ১:২ লাভে পৌঁছালে SL এন্ট্রি প্রাইসে এনে ট্রেডকে শতভাগ ঝুঁকিমুক্ত করা যায়।"
+  },
+  {
+    "term": "Breakout",
+    "category": "Price Action",
+    "categoryBn": "প্রাইস অ্যাকশন",
+    "en": "When price punches decisively beyond an established support line, resistance barrier, or consolidation boundary accompanied by elevated volume.",
+    "bn": "যখন পর্যাপ্ত ভলিউম ও গতি নিয়ে মূল্য কোনো সুপ্রতিষ্ঠিত সাপোর্ট, রেজিস্ট্যান্স বা রেঞ্জের সীমানা সজোরে ভেঙে বাইরে বেরিয়ে যায়।",
+    "exampleEn": "Waiting for a retest of the broken boundary confirms breakout legitimacy and limits risk.",
+    "exampleBn": "ব্রেকআউট হওয়ার পর লেভেলটি পুনরায় রিটেস্ট করার জন্য অপেক্ষা করা নিরাপদ ট্রেডিংয়ের লক্ষণ।"
+  },
+  {
+    "term": "Bullish Engulfing",
+    "category": "Candlesticks",
+    "categoryBn": "ক্যান্ডেলস্টিক",
+    "en": "A 2-candle bullish reversal pattern where a large green candle completely engulfs the real body of the preceding red candle.",
+    "bn": "দুটি ক্যান্ডেলের সমন্বয়ে গঠিত শক্তিশালী বুলিশ প্যাটার্ন, যেখানে একটি বড় সবুজ ক্যান্ডেল তার আগের লাল ক্যান্ডেলের বডিকে পুরোপুরি গিলে বা ঢেকে ফেলে।",
+    "exampleEn": "Occurs at structural support, showing buyers taking complete control.",
+    "exampleBn": "সাপোর্টে বুলিশ এনগালফিং দেখা দিলে বায়ারদের প্রচণ্ড শক্তির প্রকাশ ঘটে।"
+  },
+  {
+    "term": "Bullish Order Block",
+    "category": "SMC & Structure",
+    "categoryBn": "এসএমসি ও স্ট্রাকচার",
+    "en": "The last down-close (bearish) candle immediately preceding a massive upward expansion that shatters previous swing highs, functioning as a premier institutional demand zone.",
+    "bn": "তীব্র গতিতে উপরে উঠে স্ট্রাকচার ভাঙার ঠিক আগে তৈরি হওয়া শেষ বিয়ারিশ বা লাল ক্যান্ডেল। ভবিষ্যতে মূল্য এখানে ফিরে এলে এটি শক্তিশালী বাই জোন হিসেবে কাজ করে।",
+    "exampleEn": "Look for Bullish OBs positioned within Discount zones below equilibrium for maximum R:R.",
+    "exampleBn": "ডিসকাউন্ট জোনে থাকা Bullish OB থেকে বাই এন্ট্রি নিলে সবচেয়ে বড় রিস্ক-রিওয়ার্ড পাওয়া যায়।"
+  },
+  {
+    "term": "Buy Limit",
+    "category": "Order Types",
+    "categoryBn": "অর্ডারের প্রকারভেদ",
+    "en": "A pending order placed below the prevailing market price. Used when anticipating price will decline into a support zone or order block, bounce, and rally upward.",
+    "bn": "বর্তমান বাজারদরের নিচে সেট করা পেন্ডিং বাই অর্ডার। উদ্দেশ্য থাকে প্রাইস নিচে নেমে সাপোর্ট বা অর্ডার ব্লকে টাচ করে পুনরায় উপরের দিকে বাউন্স করবে।",
+    "exampleEn": "If EUR/USD is 1.0850, placing a Buy Limit at 1.0800 triggers a buy only when price drops to 1.0800.",
+    "exampleBn": "বর্তমান প্রাইস ১.০৮৫০ থাকা অবস্থায় ১.০৮০০-তে Buy Limit সেট করা হয় সস্তায় এন্ট্রি নেওয়ার জন্য।"
+  },
+  {
+    "term": "Buy Stop",
+    "category": "Order Types",
+    "categoryBn": "অর্ডারের প্রকারভেদ",
+    "en": "A pending order placed above the prevailing market price. Used when anticipating price will break through an overhead resistance level and continue surging upward with aggressive breakout momentum.",
+    "bn": "বর্তমান মূল্যের উপরে সেট করা পেন্ডিং অর্ডার; যখন ধারণা করা হয় প্রাইস রেজিস্ট্যান্স ভেঙে উপরে ছুটে গেলে সেই ঊর্ধ্বমুখী মোমেন্টামে ট্রেড ওপেন হবে।",
+    "exampleEn": "If Gold trades at $2,380, placing a Buy Stop at $2,401 catches the breakout if buyers blast through $2,400.",
+    "exampleBn": "গোল্ড $২,৩৮০ তে থাকা অবস্থায় $২,৪০১ ডলারে Buy Stop রাখলে ব্রেকআউটের সাথে সাথে এন্ট্রি মিলবে।"
+  },
+  {
+    "term": "Buy-Side Liquidity (BSL)",
+    "category": "SMC & Structure",
+    "categoryBn": "এসএমসি ও স্ট্রাকচার",
+    "en": "Resting liquidity situated above key swing highs consisting of buy stop orders belonging to breakout buyers and protective stop-losses belonging to short sellers.",
+    "bn": "কোনো বড় সুইং হাই বা রেজিস্ট্যান্সের উপরে অবস্থানরত লিকুইডিটি, যেখানে শর্ট ট্রেডারদের স্টপ লস এবং ব্রেকআউট ট্রেডারদের বাই-স্টপ অর্ডার জমা থাকে।",
+    "exampleEn": "Smart money engineers runs into BSL to match their massive institutional sell orders.",
+    "exampleBn": "BSL শিকার করার পর বাজার দ্রুত গতিতে নিচের দিকে ঘুরে যায়।"
+  },
+  {
+    "term": "Candlestick Body",
+    "category": "Candlesticks",
+    "categoryBn": "ক্যান্ডেলস্টিক",
+    "en": "The solid rectangular portion of a Japanese candlestick charting the net distance between the open price and close price of that interval.",
+    "bn": "ক্যান্ডেলস্টিকের চওড়া আয়তাকার অংশ যা সংশ্লিষ্ট টাইমফ্রেমে ওপেন এবং ক্লোজ মূল্যের মধ্যকার ব্যবধান নির্দেশ করে।",
+    "exampleEn": "A wide body indicates dominant market control by either buyers or sellers.",
+    "exampleBn": "বড় নিরেট বডি মানে সেই ক্যান্ডেলে একতরফা ক্রেতা বা বিক্রেতার বিপুল শক্তির আধিপত্য ছিল।"
+  },
+  {
+    "term": "Capital Preservation",
+    "category": "Risk Management",
+    "categoryBn": "রিস্ক ম্যানেজমেন্ট",
+    "en": "The primary directive of professional trading: prioritizing asset protection over profit generation to ensure survival across inevitable losing streaks.",
+    "bn": "মুনাফা করার চেয়ে নিজের মূলধন টিকিয়ে রাখাকে সর্বোচ্চ অগ্রাধিকার দেওয়া। মূলধন রক্ষা পেলে মুনাফা স্বাভাবিক নিয়মেই আসবে।",
+    "exampleEn": "The market's first objective is taking your capital; defensive risk management is your only armor.",
+    "exampleBn": "ট্রেডিংয়ে টিকে থাকার এক নম্বর শর্ত হলো মূলধনের কোনো অপচয় হতে না দেওয়া।"
+  },
+  {
+    "term": "Change of Character (CHoCH)",
+    "category": "SMC & Structure",
+    "categoryBn": "এসএমসি ও স্ট্রাকচার",
+    "en": "The first primary structural signal of an impending trend reversal, occurring when price violates and closes beyond the structural swing point responsible for the most recent extreme high or low.",
+    "bn": "ট্রেন্ড পরিবর্তনের প্রথম প্রাতিষ্ঠানিক সংকেত। আপট্রেন্ডে যখন সর্বশেষ সুইং লো ভেঙে নিচে ক্যান্ডেল ক্লোজ দেয় অথবা ডাউনট্রেন্ডে আগের সুইং হাই ভাঙে, তখন তাকে CHoCH বলে।",
+    "exampleEn": "A CHoCH on the 15-minute timeframe inside a 4-Hour POI triggers sniper reversal entries.",
+    "exampleBn": "৪ ঘণ্টার সাপোর্ট জোনে এসে ১৫ মিনিটের টাইমফ্রেমে বুলিশ CHoCH দেখলে ট্রেন্ড রিভার্সাল এন্ট্রি নিশ্চিত হয়।"
+  },
+  {
+    "term": "Confluence",
+    "category": "Price Action",
+    "categoryBn": "প্রাইস অ্যাকশন",
+    "en": "The strategic convergence of multiple independent technical variables (e.g., Support + Fib 61.8% + Order Block + HTF Trend) at the identical price level, boosting win probabilities.",
+    "bn": "একই প্রাইস জোনে একাধিক টেকনিক্যাল লজিকের একবিন্দুতে মিলিত হওয়া (যেমন সাপোর্ট লেভেল + ফিবোনাচ্চি গোল্ডেন রেশিও + অর্ডার ব্লক)। যত বেশি কনফ্লুয়েন্স, ট্রেডের সাফল্যের সম্ভাবনা তত বেশি।",
+    "exampleEn": "Taking setups supported by at least 3 distinct confluence factors dramatically improves long-term profitability.",
+    "exampleBn": "অন্তত ৩টি শক্তিশালী টেকনিক্যাল ফ্যাক্টর বা কনফ্লুয়েন্স একসাথে মিললে তবেই ট্রেড এক্সেকিউট করা উচিত।"
+  },
+  {
+    "term": "Consolidation / Range",
+    "category": "Price Action",
+    "categoryBn": "প্রাইস অ্যাকশন",
+    "en": "A sideways market regime where price bounces between defined support floors and resistance ceilings with no clear directional trend.",
+    "bn": "বাজারের এমন একটি পার্শ্ববর্তী বা সাইডওয়েজ অবস্থা, যেখানে কোনো নির্দিষ্ট আপট্রেন্ড বা ডাউনট্রেন্ড না থেকে মূল্য একটি নির্দিষ্ট ব্যান্ডের মধ্যে আবদ্ধ থাকে।",
+    "exampleEn": "Consolidation represents energy accumulation; the longer the range, the larger the eventual breakout.",
+    "exampleBn": "রেঞ্জ যত দীর্ঘ সময় ধরে চলবে, পরবর্তী ব্রেকআউট তত বেশি বিধ্বংসী ও তীব্র হবে।"
+  },
+  {
+    "term": "Consumer Price Index (CPI)",
+    "category": "Macro & Sessions",
+    "categoryBn": "ম্যাক্রো ও সেশন",
+    "en": "A key macroeconomic benchmark measuring inflation and changes in consumer purchasing power. Steers central bank interest rate projections.",
+    "bn": "মুদ্রাস্ফীতি বা পণ্যের মূল্যবৃদ্ধির মূল পরিমাপক সূচক। উচ্চ CPI কেন্দ্রীয় ব্যাংককে সুদের হার বাড়াতে প্রভাবিত করে।",
+    "exampleEn": "Higher than anticipated CPI typically strengthens the US Dollar and depresses Gold.",
+    "exampleBn": "CPI প্রত্যাশার চেয়ে বেশি শক্তিশালী এলে সাধারণত ইউএস ডলার বাড়ে এবং গোল্ডের দাম কমে।"
+  },
+  {
+    "term": "Cross Pairs",
+    "category": "Forex Basics",
+    "categoryBn": "ফরেক্স বেসিকস",
+    "en": "Currency pairs pairing two major global currencies that exclude the US Dollar (e.g., EUR/GBP, EUR/JPY, GBP/JPY, AUD/NZD).",
+    "bn": "দুটি প্রভাবশালী বা মেজর মুদ্রার সমন্বয়ে গঠিত পেয়ার যেখানে মার্কিন ডলার (USD) সরাসরি অন্তর্ভুক্ত থাকে না।",
+    "exampleEn": "GBP/JPY is a notoriously volatile cross pair popular among scalpers and breakout traders.",
+    "exampleBn": "GBP/JPY এবং EUR/JPY হলো অত্যন্ত গতিশীল ও জনপ্রিয় দুটি ক্রস পেয়ার।"
+  },
+  {
+    "term": "Discount Zone",
+    "category": "SMC & Structure",
+    "categoryBn": "এসএমসি ও স্ট্রাকচার",
+    "en": "The lower 50% sector of a defined dealing range (below equilibrium). Considered structurally cheap and prime territory for executing high-probability buy trades.",
+    "bn": "একটি ট্রেডিং রেঞ্জের নিচের ৫০% এলাকা। এটি সস্তা বা অবমূল্যায়িত অঞ্চল, যেখানে পাইকারি দরে Buy বা লং করার মোক্ষম সুযোগ থাকে।",
+    "exampleEn": "Institutional algorithms are programmed to purchase exclusively in Discount.",
+    "exampleBn": "ডিসকাউন্ট জোনে স্মার্ট মানি সস্তায় লিকুইডিটি সংগ্রহ করে বাই ট্রেড ওপেন করে।"
+  },
+  {
+    "term": "Displacement",
+    "category": "SMC & Structure",
+    "categoryBn": "এসএমসি ও স্ট্রাকচার",
+    "en": "A sudden, high-velocity price move marked by outsized institutional candle bodies and Fair Value Gaps, demonstrating unmistakable institutional commitment.",
+    "bn": "বাজারে হঠাৎ সৃষ্টি হওয়া তীব্র গতির একমুখী মুভমেন্ট, যাতে বড় বড় ক্যান্ডেল এবং FVG তৈরি হয়। এটি বড় প্রাতিষ্ঠানিক উপস্থিতির প্রমাণ।",
+    "exampleEn": "A structure break without displacement is often just an elusive liquidity grab.",
+    "exampleBn": "ডিসপ্লেসমেন্ট ছাড়া কোনো স্ট্রাকচার ব্রেক হলে তা প্রায়শই ফেক বা ফাঁদ হয়।"
+  },
+  {
+    "term": "Divergence",
+    "category": "Indicators",
+    "categoryBn": "ইন্ডিকেটর ও টুলস",
+    "en": "A condition where price action and a technical oscillator (like RSI or MACD) head in opposing directions, signaling that underlying momentum is weakening.",
+    "bn": "যখন চার্টের মূল্য এবং টেকনিক্যাল নির্দেশক (যেমন RSI বা MACD) বিপরীত দিকে চলে। যেমন প্রাইস নতুন হাই বানাল কিন্তু RSI বানাতে পারল না। এটি বড় রিভার্সালের আগমনী বার্তা।",
+    "exampleEn": "Bearish divergence (Higher High on price, Lower High on RSI) foreshadows deep corrections.",
+    "exampleBn": "রেজিস্ট্যান্সে বিয়ারিশ ডাইভারজেন্স দেখা দিলে যেকোনো সময় তীব্র দরপতন আসতে পারে।"
+  },
+  {
+    "term": "Doji",
+    "category": "Candlesticks",
+    "categoryBn": "ক্যান্ডেলস্টিক",
+    "en": "A candlestick where the opening and closing prices are virtually equal, leaving a razor-thin body resembling a cross. Denotes complete equilibrium and indecision.",
+    "bn": "এমন একটি ক্যান্ডেল যার ওপেন এবং ক্লোজ মূল্য প্রায় একই স্থানে থাকে (প্লাস চিহ্নের মতো)। এটি ক্রেতা ও বিক্রেতার মধ্যকার চরম অনিশ্চয়তা ও সিদ্ধান্তহীনতা বোঝায়।",
+    "exampleEn": "A Doji appearing after an extended bull run warns of buyer exhaustion and potential reversal.",
+    "exampleBn": "একটি দীর্ঘ ট্রেন্ডের মাথায় দোজি ক্যান্ডেল তৈরি হলে তা রিভার্সালের আগমনী বার্তা হতে পারে।"
+  },
+  {
+    "term": "Dragonfly Doji",
+    "category": "Candlesticks",
+    "categoryBn": "ক্যান্ডেলস্টিক",
+    "en": "A bullish reversal candlestick with open, high, and close clustered near the top extreme, combined with an exceptionally long lower wick.",
+    "bn": "বুলিশ রিভার্সাল দোজি যার ওপেন ও ক্লোজ ক্যান্ডেলের একেবারে মাথায় থাকে এবং নিচে অস্বাভাবিক লম্বা উইক থাকে। এটি নির্দেশ করে বিক্রেতারা ব্যর্থ হয়ে বায়াররা বাজার টেনে তুলেছে।",
+    "exampleEn": "Forms at key support levels indicating that aggressive sellers were completely absorbed.",
+    "exampleBn": "সাপোর্টে Dragonfly Doji দেখা দিলে এটি শক্তিশালী বাই রিজেকশন নির্দেশ করে।"
+  },
+  {
+    "term": "Drawdown (DD)",
+    "category": "Risk Management",
+    "categoryBn": "রিস্ক ম্যানেজমেন্ট",
+    "en": "The percentage drop in trading account equity measured from an equity high water mark down to the subsequent equity low point.",
+    "bn": "অ্যাকাউন্টের সর্বোচ্চ ব্যালেন্স থেকে লোকসানের কারণে সর্বনিম্ন স্তরে নেমে যাওয়ার পরিমাণ বা শতকরা হার।",
+    "exampleEn": "If a $10,000 account drops to $9,000, the experienced drawdown is 10%.",
+    "exampleBn": "আপনার অ্যাকাউন্ট $১০,০০০ থেকে কমে $৯,০০০ ডলারে নামলে অ্যাকাউন্টের ড্রডাউন হলো ১০%।"
+  },
+  {
+    "term": "Dynamic Support & Resistance",
+    "category": "Price Action",
+    "categoryBn": "প্রাইস অ্যাকশন",
+    "en": "Support and resistance zones that evolve continuously across time alongside price, typically tracked via moving averages (such as the 20 or 50 EMA).",
+    "bn": "স্থির আনুভূমিক রেখার পরিবর্তে সময়ের সাথে সাথে পরিবর্তনশীল সাপোর্ট ও রেজিস্ট্যান্স (যেমন ২০ EMA বা ৫০ EMA লাইন)।",
+    "exampleEn": "In strong trending conditions, the 20 EMA frequently serves as impeccable dynamic support.",
+    "exampleBn": "ট্রেন্ডিং মার্কেটে ২০ ও ৫০ EMA লাইন অসাধারণ ডায়নামিক সাপোর্ট হিসেবে কাজ করে।"
+  },
+  {
+    "term": "Equal Highs / Equal Lows (EQH / EQL)",
+    "category": "SMC & Structure",
+    "categoryBn": "এসএমসি ও স্ট্রাকচার",
+    "en": "Two or more swing peaks or valleys halting at virtually identical price levels. These formations store massive liquidity pools destined to be purged.",
+    "bn": "একই মূল্যে পাশাপাশি তৈরি হওয়া দুটি বা ততোধিক চূড়া (EQH) বা তলদেশ (EQL)। এদের বাইরে রিটেইলারদের অগুনতি স্টপ লস থাকায় মার্কেট এদের চুম্বকের মতো টেনে নিয়ে সুইপ করে।",
+    "exampleEn": "EQH acts as a magnet drawing price upward before smart money dumps the market.",
+    "exampleBn": "EQH-এর উপরে বাই-সাইড লিকুইডিটি এবং EQL-এর নিচে সেল-সাইড লিকুইডিটি জমা থাকে।"
+  },
+  {
+    "term": "Equilibrium (EQ)",
+    "category": "SMC & Structure",
+    "categoryBn": "এসএমসি ও স্ট্রাকচার",
+    "en": "The exact 50% median line between the swing high and swing low of an active price range representing balanced, fair market value.",
+    "bn": "একটি নির্দিষ্ট ট্রেডিং রেঞ্জের সর্বোচ্চ ও সর্বনিম্ন পয়েন্টের ঠিক মধ্যবর্তী ৫০% ভারসাম্য বিন্দু।",
+    "exampleEn": "Price above EQ represents Premium; price below EQ represents Discount.",
+    "exampleBn": "EQ-এর উপরে প্রিমিয়াম জোন এবং EQ-এর নিচে ডিসকাউন্ট জোন।"
+  },
+  {
+    "term": "Evening Star",
+    "category": "Candlesticks",
+    "categoryBn": "ক্যান্ডেলস্টিক",
+    "en": "A 3-candle bearish reversal structure: a large bullish candle, followed by an indecisive star candle, followed by a decisive bearish candle piercing Candle 1.",
+    "bn": "তিনটি ক্যান্ডেলের সমন্বয়ে গঠিত শীর্ষস্থানীয় বিয়ারিশ রিভার্সাল প্যাটার্ন: প্রথমে বড় সবুজ ক্যান্ডেল, মাঝে দ্বিধাগ্রস্ত ছোট স্টার এবং শেষে বড় লাল ক্যান্ডেল।",
+    "exampleEn": "Forms at swing peaks, warning of severe trend reversals.",
+    "exampleBn": "আপট্রেন্ডের মাথায় ইভনিং স্টার দেখা দেওয়া আসন্ন বড় দরপতনের আলামত।"
+  },
+  {
+    "term": "Exotic Pairs",
+    "category": "Forex Basics",
+    "categoryBn": "ফরেক্স বেসিকস",
+    "en": "Currency pairs pairing one major global currency with the currency of a developing or emerging economy (e.g., USD/TRY, USD/ZAR, EUR/PLN). Characterized by high spreads and wide volatility.",
+    "bn": "একটি মেজর কারেন্সির সাথে যেকোনো একটি উন্নয়নশীল বা ছোট অর্থনীতির দেশের মুদ্রার সমন্বয়ে গঠিত পেয়ার (যেমন USD/TRY বা USD/ZAR)। এদের স্প্রেড ও ঝুঁকি অনেক বেশি।",
+    "exampleEn": "Exotics require wider stop losses and smaller position sizing due to sparse market liquidity.",
+    "exampleBn": "এক্সোটিক পেয়ারে লিকুইডিটি কম থাকায় বড় স্প্রেড ও স্লিপেজের ঝুঁকি থাকে।"
+  },
+  {
+    "term": "Exponential Moving Average (EMA)",
+    "category": "Indicators",
+    "categoryBn": "ইন্ডিকেটর ও টুলস",
+    "en": "A moving average placing greater weighting and sensitivity on recent price changes. Reacts significantly faster to emerging market shifts than an SMA.",
+    "bn": "মুভিং এভারেজের একটি উন্নত রূপ যা সাম্প্রতিকতম মূল্যের ওপর বেশি গুরুত্ব দেয়। ফলে এটি সাধারণ SMA-এর চেয়ে দ্রুত বাজার পরিবর্তনে সাড়া দেয়।",
+    "exampleEn": "The 20 and 50 EMAs are the primary choices for dynamic trend-following strategies.",
+    "exampleBn": "ট্রেডারদের মাঝে ৯, ২০ এবং ৫০ EMA লাইন অত্যন্ত জনপ্রিয়।"
+  },
+  {
+    "term": "Fair Value Gap (FVG) / Imbalance",
+    "category": "SMC & Structure",
+    "categoryBn": "এসএমসি ও স্ট্রাকচার",
+    "en": "A 3-candle price sequence where overwhelming one-sided market orders create an unfilled price void between Candle 1's wick and Candle 3's wick. The market treats FVGs as inefficiencies that must be revisited and balanced.",
+    "bn": "৩টি ক্যান্ডেলের সমন্বয়ে গঠিত মূল্যের শূন্যস্থান বা অসমতা, যেখানে ক্যান্ডেল ১-এর উইক এবং ক্যান্ডেল ৩-এর উইকের মাঝে কোনো ওভারল্যাপ থাকে না। অ্যালগরিদম ও প্রতিষ্ঠানগুলো এই খালি গ্যাপ ভরাট করতে মূল্যকে পুনরায় টেনে আনে।",
+    "exampleEn": "Entering at the 50% midpoint (Consequent Encroachment) of an FVG offers optimal risk-to-reward.",
+    "exampleBn": "FVG-এর ঠিক ৫০% মধ্যবিন্দুতে (Consequent Encroachment) লিমিট অর্ডার দিলে স্নাইপার এন্ট্রি মেলে।"
+  },
+  {
+    "term": "Fakeout / False Breakout",
+    "category": "Price Action",
+    "categoryBn": "প্রাইস অ্যাকশন",
+    "en": "A deceptive price probe that breaches a key level to lure breakout traders, only to sharply reverse and trap participants inside the range.",
+    "bn": "প্রতারণামূলক মুভমেন্ট যেখানে প্রাইস সাপোর্ট বা রেজিস্ট্যান্স ভেঙে বাইরে যাওয়ার ভান করে সাধারণ ট্রেডারদের ফাঁদে ফেলে দ্রুত পূর্বের রেঞ্জের ভেতরে ফিরে আসে।",
+    "exampleEn": "A fakeout creates trapped volume and often powers aggressive moves toward the opposite range extreme.",
+    "exampleBn": "রেজিস্ট্যান্সে ফেকআউট ধরা পড়লে বিপরীত দিকে (সাপোর্টের দিকে) খুব বড় প্রফিটের শর্ট ট্রেড পাওয়া যায়।"
+  },
+  {
+    "term": "Fibonacci Retracement",
+    "category": "Indicators",
+    "categoryBn": "ইন্ডিকেটর ও টুলস",
+    "en": "A mathematical charting tool using golden ratios (23.6%, 38.2%, 50%, 61.8%, 78.6%) to forecast high-probability reversal zones during pullbacks.",
+    "bn": "গাণিতিক অনুপাতের ভিত্তিতে মূল্যের সম্ভাব্য রিট্রেসমেন্ট ও সাপোর্ট স্তর শনাক্ত করার টুল। এর সবচেয়ে মোক্ষম মাত্রাগুলো হলো ৫০%, ৬১.৮% এবং ৭৮.৬%।",
+    "exampleEn": "The 61.8% to 65% zone is termed the Golden Pocket, offering elite Risk-to-Reward entries.",
+    "exampleBn": "৬১.৮% এবং ৬৫% লেভেলের মধ্যবর্তী অংশকে গোল্ডেন পকেট বলা হয়, যেখানে প্রাতিষ্ঠানিক বায়াররা অপেক্ষা করে।"
+  },
+  {
+    "term": "FOMC",
+    "category": "Macro & Sessions",
+    "categoryBn": "ম্যাক্রো ও সেশন",
+    "en": "Federal Open Market Committee. The monetary policymaking branch of the US Federal Reserve governing benchmark interest rates and asset purchases.",
+    "bn": "ইউএস ফেডারেল রিজার্ভের মুদ্রানীতি ও সুদের হার নির্ধারণকারী কমিটি। এদের সুদের হারের সিদ্ধান্ত গোটা বৈশ্বিক অর্থনীতির মোড় ঘুরিয়ে দেয়।",
+    "exampleEn": "FOMC interest rate decisions and press conferences generate intense market re-pricing.",
+    "exampleBn": "FOMC মিটিং এবং জেরোম পাওয়েলের প্রেস কনফারেন্সে গোল্ডে বিশাল সুইং ঘটে।"
+  },
+  {
+    "term": "FOMO (Fear Of Missing Out)",
+    "category": "Psychology",
+    "categoryBn": "ট্রেডিং সাইকোলজি",
+    "en": "The anxiety-driven urge driving traders to enter impulsive trades late after a major market rally or selloff has already occurred, typically buying tops and selling bottoms.",
+    "bn": "সুযোগ হাতছাড়া হয়ে যাওয়ার ভয় থেকে আবেগতাড়িত হয়ে বড় মুভমেন্টের একদম শেষে গিয়ে ভুল এন্ট্রি নেওয়া।",
+    "exampleEn": "Chasing a green candle that is already up 100 pips is textbook FOMO that leads to losses.",
+    "exampleBn": "কোনো পেয়ার ৫০-১০০ পিপ উঠে যাওয়ার পর লাফিয়ে পড়ে বাই দেওয়া চরম ফোমোর উদাহরণ।"
+  },
+  {
+    "term": "Free Margin",
+    "category": "Forex Basics",
+    "categoryBn": "ফরেক্স বেসিকস",
+    "en": "The uncommitted portion of account equity available to absorb floating losses or open additional trading positions. Formula: Free Margin = Equity - Used Margin.",
+    "bn": "অ্যাকাউন্টের ইকুইটি থেকে ব্যবহৃত মার্জিন বাদ দেওয়ার পর যে অতিরিক্ত অর্থ অবশিষ্ট থাকে। এই অর্থ দিয়ে নতুন ট্রেড খোলা যায় অথবা রানিং ট্রেডের সাময়িক ক্ষতি বহন করা যায়।",
+    "exampleEn": "If your equity is $2,500 and used margin is $500, your free margin is $2,000 available for new positions.",
+    "exampleBn": "আপনার ইকুইটি $২,৫০০ এবং ব্যবহৃত মার্জিন $৫০০ হলে, ফ্রি মার্জিন থাকবে $২,০০০।"
+  },
+  {
+    "term": "Gravestone Doji",
+    "category": "Candlesticks",
+    "categoryBn": "ক্যান্ডেলস্টিক",
+    "en": "A bearish reversal candlestick with open, low, and close clustered at the bottom extreme, paired with an extensive upper wick.",
+    "bn": "বিয়ারিশ রিভার্সাল দোজি যার ওপেন, লো এবং ক্লোজ একেবারে নিচে থাকে এবং ওপরে একটি লম্বা উইক থাকে। এটি ওপরে ক্রেতাদের ব্যর্থতা ও বিক্রেতাদের নিয়ন্ত্রণ প্রমাণ করে।",
+    "exampleEn": "Appears at major resistance levels indicating sellers obliterated an attempted breakout.",
+    "exampleBn": "রেজিস্ট্যান্স জোনে Gravestone Doji দেখা যাওয়া আসন্ন বড় দরপতনের লক্ষণ।"
+  },
+  {
+    "term": "Hammer",
+    "category": "Candlesticks",
+    "categoryBn": "ক্যান্ডেলস্টিক",
+    "en": "A single-candle bullish reversal formation at the base of a downtrend with a small body near the top and a lower wick at least twice the length of the body.",
+    "bn": "ডাউনট্রেন্ডের তলদেশে গঠিত হাতুড়িসদৃশ সিঙ্গেল ক্যান্ডেল প্যাটার্ন। এর ওপরে ছোট বডি থাকে এবং নিচে বডির চেয়ে অন্তত দ্বিগুণ লম্বা উইক থাকে।",
+    "exampleEn": "Shows that bears drove prices down to new lows, but bulls rallied back with overwhelming force.",
+    "exampleBn": "সাপোর্ট লেভেলে হ্যামার ক্যান্ডেল ক্লোজ হওয়া নিশ্চিত বুলিশ প্রত্যাবর্তনের সংকেত।"
+  },
+  {
+    "term": "Higher High (HH)",
+    "category": "SMC & Structure",
+    "categoryBn": "এসএমসি ও স্ট্রাকচার",
+    "en": "A price peak that ascends higher than the preceding swing high, affirming dominant bullish market structure and buyer control.",
+    "bn": "পূর্ববর্তী সর্বোচ্চ চূড়ার চেয়ে আরও উপরে গঠিত নতুন চূড়া। এটি আপট্রেন্ড এবং বাজারে ক্রেতাদের নিরঙ্কুশ আধিপত্যের প্রমাণ।",
+    "exampleEn": "Consecutive Higher Highs and Higher Lows define textbook upward trending markets.",
+    "exampleBn": "ধারাবাহিক HH এবং HL গঠিত হওয়া স্বাস্থ্যকর আপট্রেন্ডের প্রধান বৈশিষ্ট্য।"
+  },
+  {
+    "term": "Higher Low (HL)",
+    "category": "SMC & Structure",
+    "categoryBn": "এসএমসি ও স্ট্রাকচার",
+    "en": "A corrective trough that bottoms out above the preceding swing low in an uptrend, confirming buyers are stepping in aggressively at higher price levels.",
+    "bn": "আপট্রেন্ডে মূল্য কারেকশন বা পুলব্যাক করার পর যখন পূর্ববর্তী সর্বনিম্ন বিন্দুর উপরে নতুন লো তৈরি করে বাউন্স করে।",
+    "exampleEn": "A protected HL must not be breached for an uptrend to stay mathematically valid.",
+    "exampleBn": "একটি স্ট্রং বুলিশ ট্রেন্ডে পূর্ববর্তী HL কখনো ব্রেক হয় না।"
+  },
+  {
+    "term": "Inducement (IDM)",
+    "category": "SMC & Structure",
+    "categoryBn": "এসএমসি ও স্ট্রাকচার",
+    "en": "A seductive internal swing high or low formed intentionally to bait retail traders into entering early, providing fresh fuel to be swept before price touches the actual high-timeframe POI.",
+    "bn": "আসল অর্ডার ব্লকে পৌঁছানোর আগেই অধৈর্য রিটেইল ট্রেডারদের ভুল এন্ট্রিতে ফাঁদে ফেলার জন্য তৈরি হওয়া কৃত্রিম অভ্যন্তরীণ সুইং। এটি সুইপ হওয়ার পরই আসল মুভ আসে।",
+    "exampleEn": "Never enter at internal swings; wait for Inducement to get swept first.",
+    "exampleBn": "IDM সুইপ হওয়ার পরেই কেবল আসল ট্রেড সেটআপ নিশ্চিত হয়।"
+  },
+  {
+    "term": "Leverage",
+    "category": "Forex Basics",
+    "categoryBn": "ফরেক্স বেসিকস",
+    "en": "A financial tool provided by brokers that allows traders to control much larger market positions using a small amount of invested capital. For example, 1:100 leverage allows $1 of trading margin to control $100 in market value. Leverage magnifies both potential gains and losses.",
+    "bn": "ব্রোকারের সরবরাহকৃত এমন একটি আর্থিক সুবিধা বা অনুপাত, যার মাধ্যমে স্বল্প পরিমাণ নিজস্ব মূলধন জামানত রেখে বাজারে বহুগুণ বড় সাইজের পজিশন নিয়ন্ত্রণ করা যায়। যেমন ১:১০০ লেভারেজে আপনার $১ দিয়ে বাজারে $১০০ ডলার মূল্যের ট্রেড ওপেন করা সম্ভব।",
+    "exampleEn": "With 1:100 leverage, opening a $100,000 position requires only $1,000 in required margin collateral.",
+    "exampleBn": "১:১০০ লেভারেজে $১,০০,০০০ মূল্যের ১ স্ট্যান্ডার্ড লট ট্রেড ওপেন করতে আপনার নিজস্ব একাউন্ট থেকে মাত্র $১,০০০ মার্জিন আটকানো হয়।"
+  },
+  {
+    "term": "Liquidity",
+    "category": "Forex Basics",
+    "categoryBn": "ফরেক্স বেসিকস",
+    "en": "The ease and speed with which an asset can be converted into cash or traded without triggering erratic, uncontrolled price swings. High market liquidity results in tight spreads and instantaneous order fills.",
+    "bn": "বাজারে বড় ভলিউমের কেনা-বেচার অর্ডার দামের অস্বাভাবিক বিকৃতি ছাড়াই দ্রুত কার্যকর হওয়ার সক্ষমতা। বাজারে সক্রিয় ক্রেতা ও বিক্রেতার উপস্থিতি বেশি থাকলে লিকুইডিটি বেশি হয়।",
+    "exampleEn": "London and New York sessions feature the deepest liquidity pools in global finance.",
+    "exampleBn": "লন্ডন ও নিউ ইয়র্ক সেশনের ওভারল্যাপে বাজারে সর্বোচ্চ লিকুইডিটি বিদ্যমান থাকে।"
+  },
+  {
+    "term": "Liquidity Pool",
+    "category": "SMC & Structure",
+    "categoryBn": "এসএমসি ও স্ট্রাকচার",
+    "en": "A heavy concentration of retail resting orders (stop-loss orders and breakout buy/sell stops) clustered directly above prominent double tops or below swing lows.",
+    "bn": "চার্টের নির্দিষ্ট এলাকা (যেমন সমান চূড়া বা তলদেশ) যার বাইরে হাজার হাজার সাধারণ রিটেইল ট্রেডারের স্টপ লস ও ব্রেকআউট অর্ডার পুঞ্জীভূত হয়ে থাকে।",
+    "exampleEn": "Institutions require the liquidity stored in these pools to fill their multi-million dollar positions.",
+    "exampleBn": "প্রতিষ্ঠানগুলো নিজেদের বিশাল অর্ডার কার্যকর করতে রিটেইলারদের স্টপ লস এলাকায় মার্কেটকে ঠেলে দেয়।"
+  },
+  {
+    "term": "Liquidity Sweep / Stop Hunt",
+    "category": "SMC & Structure",
+    "categoryBn": "এসএমসি ও স্ট্রাকচার",
+    "en": "A rapid, deliberate price thrust engineered to penetrate beyond a prominent high or low strictly to purge retail stop orders before violently reversing in the true intended direction.",
+    "bn": "সাধারণ ট্রেডারদের স্টপ লস ট্রিগার করিয়ে বাজারে লিকুইডিটি তৈরি করার উদ্দেশ্যে মূল্যের ক্ষণস্থায়ী আক্রমণ, যার পরপরই মার্কেট তীব্র গতিতে উল্টো দিকে ছোটে।",
+    "exampleEn": "Identified when a candle wicks through an old high on huge volume but closes back inside the range.",
+    "exampleBn": "পুরোনো হাইয়ের ওপরে কেবল উইক দিয়ে ক্যান্ডেল রেঞ্জের ভেতরে ক্লোজ হওয়া একটি আদর্শ লিকুইডিটি সুইপ।"
+  },
+  {
+    "term": "London Session",
+    "category": "Macro & Sessions",
+    "categoryBn": "ম্যাক্রো ও সেশন",
+    "en": "The most liquid trading session globally (approx. 7:00 AM to 4:00 PM UTC), generating aggressive volatility and establishing the prevailing daily trend.",
+    "bn": "বিশ্বের বৃহত্তম এবং সর্বাধিক সক্রিয় ট্রেডিং সেশন। এতে বিপুল ভলিউম ও ভোলাটিলিটি দেখা যায় এবং দিনের মূল ট্রেন্ডের ভিত্তি তৈরি হয়।",
+    "exampleEn": "London Open regularly engineers the Judas Swing to manipulate retail participants before launching.",
+    "exampleBn": "লন্ডন ওপেনে প্রায়শই এশিয়ান সেশনের লিকুইডিটি সুইপ করে আসল দৈনিক মুভ শুরু হয়।"
+  },
+  {
+    "term": "London-NY Overlap",
+    "category": "Macro & Sessions",
+    "categoryBn": "ম্যাক্রো ও সেশন",
+    "en": "The 4-hour golden window (approx. 12:00 PM to 4:00 PM UTC / 6:00 PM to 10:00 PM BST) when both London and New York centers trade concurrently, producing peak global liquidity.",
+    "bn": "লন্ডন ও নিউ ইয়র্ক সেশনের একসাথে চলার ৪ ঘণ্টার ওভারল্যাপ (বাংলাদেশ সময় সন্ধ্যা ৬টা থেকে রাত ১০টা)। এ সময় বাজারে লিকুইডিটি ও ট্রেন্ডের শক্তি চরম রূপ নেয়।",
+    "exampleEn": "Over 60% of all global forex turnover is settled during this 4-hour window.",
+    "exampleBn": "বিশ্বের ৬০% এরও বেশি ফরেক্স লেনদেন এই ওভারল্যাপের ৪ ঘণ্টায় সংঘটিত হয়।"
+  },
+  {
+    "term": "Long Position",
+    "category": "Forex Basics",
+    "categoryBn": "ফরেক্স বেসিকস",
+    "en": "An investment position where a trader buys an asset anticipation that its market value will appreciate, aiming to sell it later at a higher price.",
+    "bn": "ভবিষ্যতে বাজারদর বৃদ্ধি পাবে এই প্রত্যাশায় কোনো অ্যাসেট বা কারেন্সি বাই (Buy) করে রাখা। দর বাড়লে এই পজিশনে প্রফিট হয়।",
+    "exampleEn": "Going long on EUR/USD means buying Euros and selling US Dollars.",
+    "exampleBn": "EUR/USD-তে লং করা মানে ইউরো বাই করা এবং ডলার সেল করা।"
+  },
+  {
+    "term": "Lot Size",
+    "category": "Forex Basics",
+    "categoryBn": "ফরেক্স বেসিকস",
+    "en": "The standardized volume or contract quantity representing the number of currency units bought or sold in a transaction. Lot size dictates how much money is made or lost with each pip fluctuation.",
+    "bn": "ট্রেডিং ভলিউম বা কন্ট্রাক্টের পরিমাপক একক, যা নির্দেশ করে একটি অর্ডারে কত ইউনিট কারেন্সি লেনদেন হচ্ছে। লট সাইজের ওপর ভিত্তি করেই প্রতিটি পিপের ওঠানামায় লাভ বা ক্ষতির আর্থিক পরিমাণ নির্ধারিত হয়।",
+    "exampleEn": "Higher lot sizes amplify profit and loss per pip, requiring careful position size calculations before entry.",
+    "exampleBn": "লট সাইজ যত বড় হবে, প্রতি পিপ মুভমেন্টে লাভ বা ক্ষতির পরিমাণ তত গুণ বৃদ্ধি পাবে। তাই ব্যালেন্স অনুযায়ী লট নির্ধারণ করা জরুরি।"
+  },
+  {
+    "term": "Lower High (LH)",
+    "category": "SMC & Structure",
+    "categoryBn": "এসএমসি ও স্ট্রাকচার",
+    "en": "A bounce rally in a downtrend that fails to exceed the previous swing high, forming a lower peak and signaling sustained bearish dominance.",
+    "bn": "ডাউনট্রেন্ডে পুলব্যাকের পর যখন প্রাইস আগের হাইকে অতিক্রম করতে ব্যর্থ হয়ে নিচের দিকে নতুন চূড়া গঠন করে।",
+    "exampleEn": "Lower Highs present prime discount areas to execute high-probability sell setups.",
+    "exampleBn": "ডাউনট্রেন্ডে প্রতিটি নতুন LH হলো নতুন করে শর্ট বা সেল এন্ট্রি নেওয়ার সেরা সুযোগ।"
+  },
+  {
+    "term": "Lower Low (LL)",
+    "category": "SMC & Structure",
+    "categoryBn": "এসএমসি ও স্ট্রাকচার",
+    "en": "A price trough that plunges below the preceding swing low, validating active downward trend progression.",
+    "bn": "পূর্বের সর্বনিম্ন বিন্দুর চেয়ে আরও নিচে নেমে তৈরি হওয়া নতুন নিম্নবিন্দু। এটি অব্যাহত ডাউনট্রেন্ডের প্রধান নিদর্শন।",
+    "exampleEn": "Selling rallies after a freshly printed LL aligns your capital with market momentum.",
+    "exampleBn": "নতুন LL তৈরি হলে বুঝতে হবে বিক্রেতারা বাজারে পূর্ণ নিয়ন্ত্রণে রয়েছে।"
+  },
+  {
+    "term": "MACD",
+    "category": "Indicators",
+    "categoryBn": "ইন্ডিকেটর ও টুলস",
+    "en": "Moving Average Convergence Divergence. A momentum indicator illustrating the relationship between two moving averages (typically 12 EMA and 26 EMA) plus a signal line and histogram.",
+    "bn": "দুটি এক্সপোনেনশিয়াল মুভিং এভারেজের (১২ এবং ২৬) মধ্যকার সম্পর্ক বিশ্লেষণকারী ট্রেন্ড ও মোমেন্টাম নির্দেশক। এর সাথে সিগন্যাল লাইন ও হিস্টোগ্রাম থাকে।",
+    "exampleEn": "A bullish MACD line crossover occurring below the zero baseline signals emerging upside momentum.",
+    "exampleBn": "জিরো লাইনের নিচে MACD বুলিশ ক্রসওভার দিলে শক্তিশালী বাই মোমেন্টামের সূচনা হয়।"
+  },
+  {
+    "term": "Major Pairs",
+    "category": "Forex Basics",
+    "categoryBn": "ফরেক্স বেসিকস",
+    "en": "The seven most heavily traded foreign exchange pairs in the global market, each paired directly with the US Dollar (USD): EUR/USD, GBP/USD, USD/JPY, USD/CHF, AUD/USD, USD/CAD, NZD/USD.",
+    "bn": "বিশ্বের সবচেয়ে বেশি লেনদেন হওয়া ৭টি প্রধান মুদ্রা জোড়া, যার প্রতিটিতে ইউএস ডলার (USD) বিদ্যমান। এই পেয়ারগুলোতে বিশ্বের সর্বোচ্চ লিকুইডিটি ও সবচেয়ে কম স্প্রেড থাকে।",
+    "exampleEn": "Major pairs account for over 75% of global forex transaction volume.",
+    "exampleBn": "বিশ্বের মোট ফরেক্স লেনদেনের ৭৫ শতাংশেরও বেশি এই মেজর পেয়ারগুলোতে সম্পন্ন হয়।"
+  },
+  {
+    "term": "Margin",
+    "category": "Forex Basics",
+    "categoryBn": "ফরেক্স বেসিকস",
+    "en": "The initial deposit or locked collateral required by a broker to open and maintain an active leveraged trading position. It is not a transaction fee, but a portion of account equity temporarily held in reserve.",
+    "bn": "লেভারেজযুক্ত কোনো ট্রেড ওপেন এবং বাজারে সচল রাখার জন্য ব্রোকার কর্তৃক জামানত হিসেবে সাময়িকভাবে আটকে রাখা ব্যালেন্স। এটি কোনো সার্ভিস চার্জ নয়, বরং পজিশন সুরক্ষার জন্য সংরক্ষিত অর্থ।",
+    "exampleEn": "Used margin remains locked while a trade is open and is released back into free margin immediately upon closing.",
+    "exampleBn": "ট্রেড চলাকালীন সময়ে মার্জিন লক থাকে এবং ট্রেডটি ক্লোজ করার সাথে সাথেই তা পুনরায় ফ্রি মার্জিনে ফেরত চলে আসে।"
+  },
+  {
+    "term": "Margin Call",
+    "category": "Forex Basics",
+    "categoryBn": "ফরেক্স বেসিকস",
+    "en": "A mandatory alert triggered by a broker when account equity declines to equal or fall near the required margin (typically 100% margin level). It warns that the account cannot sustain ongoing floating losses without additional deposits.",
+    "bn": "ট্রেড অতিরিক্ত লসে চলার কারণে অ্যাকাউন্টের ইকুইটি যখন প্রয়োজনীয় মার্জিনের কাছাকাছি নেমে আসে (সাধারণত ১০০% মার্জিন লেভেল), তখন ব্রোকারের দেওয়া জরুরি সতর্কবার্তা।",
+    "exampleEn": "Reaching a margin call means you cannot open new positions until you either deposit more funds or close losing trades.",
+    "exampleBn": "মার্জিন কল এলে নতুন কোনো ট্রেড ওপেন করা যায় না যতক্ষণ না অতিরিক্ত ব্যালেন্স ডিপোজিট করা হয় বা লোকসানি ট্রেড ক্লোজ করা হয়।"
+  },
+  {
+    "term": "Margin Level (%)",
+    "category": "Forex Basics",
+    "categoryBn": "ফরেক্স বেসিকস",
+    "en": "A vital financial health indicator calculated as the percentage ratio of Equity to Used Margin: (Equity / Used Margin) x 100%. Higher margin levels reflect safer, low-risk accounts.",
+    "bn": "ট্রেডিং অ্যাকাউন্টের সার্বিক আর্থিক নিরাপত্তার মূল সূচক। হিসাবের সূত্র: (ইকুইটি ÷ ব্যবহৃত মার্জিন) × ১০০%। মার্জিন লেভেল যত বেশি থাকে, অ্যাকাউন্ট তত নিরাপদ ও বিপদমুক্ত থাকে।",
+    "exampleEn": "A margin level of 1000%+ indicates strong account health; levels dropping below 200% indicate severe risk.",
+    "exampleBn": "মার্জিন লেভেল ৫০০% বা ১০০০% এর ওপরে থাকা স্বাস্থ্যকর; ২০০% এর নিচে নামা বিপজ্জনক সংকেত।"
+  },
+  {
+    "term": "Market Order",
+    "category": "Order Types",
+    "categoryBn": "অর্ডারের প্রকারভেদ",
+    "en": "An instant execution order instruction sent to your broker to buy or sell immediately at the best available current market price.",
+    "bn": "বর্তমান বাজারদরে তাৎক্ষণিকভাবে কোনো কারেন্সি বা অ্যাসেট কেনা অথবা বেচার সবচেয়ে প্রচলিত সাধারণ ডিরেক্ট অর্ডার।",
+    "exampleEn": "Used when immediate execution is prioritized over holding out for a discounted price.",
+    "exampleBn": "সিগন্যাল দেখা মাত্রই 'Buy Now' বা 'Sell Now' চাপলে তা মার্কেট অর্ডার হিসেবে সাথে সাথে কার্যকর হয়।"
+  },
+  {
+    "term": "Market Structure",
+    "category": "SMC & Structure",
+    "categoryBn": "এসএমসি ও স্ট্রাকচার",
+    "en": "The anatomical framework of price action formed by sequences of swing highs and swing lows that dictates market trend, equilibrium, and institutional direction.",
+    "bn": "চার্টে ধারাবাহিক সুইং হাই ও সুইং লো দ্বারা গঠিত বাজার কাঠামোর নকশা, যা বাজারের সামগ্রিক গতিপথ বা ট্রেন্ড (আপট্রেন্ড, ডাউনট্রেন্ড বা সাইডওয়েজ) নির্ধারণ করে।",
+    "exampleEn": "Trading in strict alignment with Higher Timeframe market structure yields the highest statistical edge.",
+    "exampleBn": "মার্কেট স্ট্রাকচারের দিক না চিনে চার্টে ট্রেড নেওয়া অন্ধের মতো হাঁটার সমান।"
+  },
+  {
+    "term": "Micro Lot",
+    "category": "Forex Basics",
+    "categoryBn": "ফরেক্স বেসিকস",
+    "en": "A transaction size equivalent to 1,000 units of the base currency (designated as 0.01 lot). On standard pairs, 1 pip equals approximately $0.10 USD. Ideal for beginners and low-balance accounts.",
+    "bn": "০.০১ লটের ট্রেড, যা বেস কারেন্সির ১,০০০ ইউনিটের সমান। সাধারণ পেয়ারে ০.০১ লটে ১ পিপ মুভমেন্টে মাত্র ১০ সেন্ট ($০.১০) লাভ বা লস হয়। ছোট ব্যালেন্স ও নতুনদের জন্য এটি সবচেয়ে নিরাপদ।",
+    "exampleEn": "On a $200 account, taking a 0.01 lot trade with a 30-pip stop loss risks only $3 (1.5% of total capital).",
+    "exampleBn": "$২০০ ব্যালেন্সের অ্যাকাউন্টে ০.০১ লট দিয়ে ৩০ পিপের স্টপ লস দিলে মোট রিস্ক মাত্র $৩ ডলার (১.৫%)।"
+  },
+  {
+    "term": "Mini Lot",
+    "category": "Forex Basics",
+    "categoryBn": "ফরেক্স বেসিকস",
+    "en": "A transaction size equivalent to 10,000 units of the base currency (designated as 0.10 lot). On standard currency pairs, 1 pip equals approximately $1.00 USD.",
+    "bn": "০.১০ লট সাইজের ট্রেড, যা বেস কারেন্সির ১০,০০০ ইউনিটের সমপরিমাণ। সাধারণ ফরেক্স পেয়ারে ০.১ লটে প্রতি ১ পিপ মুভমেন্টের আর্থিক মান প্রায় ১ ডলার।",
+    "exampleEn": "Trading 0.10 lot on GBP/USD with a 20-pip stop loss limits monetary risk to approximately $20 USD.",
+    "exampleBn": "GBP/USD-তে ০.১০ লট নিয়ে ২০ পিপ স্টপ লস সেট করলে সম্ভাব্য ক্ষতির পরিমাণ হবে প্রায় $২০ ডলার।"
+  },
+  {
+    "term": "Mitigation",
+    "category": "SMC & Structure",
+    "categoryBn": "এসএমসি ও স্ট্রাকচার",
+    "en": "The institutional protocol of returning price to an unfilled Order Block or Breaker to close out underwater drawdown orders at breakeven before embarking on the primary trend.",
+    "bn": "পূর্বে ওপেন করা বড় বড় লস বা ড্রডাউন অর্ডারগুলো শূন্য ক্ষতিতে ক্লোজ করার জন্য প্রতিষ্ঠানগুলো যখন মূল্যকে পূর্বের অর্ডারে সাময়িকভাবে ফিরিয়ে আনে।",
+    "exampleEn": "Once an Order Block has been mitigated, it loses its technical freshness and effectiveness.",
+    "exampleBn": "একবার মিটিগেশন সম্পন্ন হলে সেই অর্ডার ব্লকের কার্যকারিতা শেষ হয়ে যায়।"
+  },
+  {
+    "term": "Morning Star",
+    "category": "Candlesticks",
+    "categoryBn": "ক্যান্ডেলস্টিক",
+    "en": "A 3-candle bullish reversal formation: a large bearish candle, followed by an indecision star candle, followed by a strong bullish candle closing deep into Candle 1.",
+    "bn": "তিনটি ক্যান্ডেলের একটি নির্ভরযোগ্য বুলিশ রিভার্সাল প্যাটার্ন: প্রথমে একটি লম্বা লাল ক্যান্ডেল, মাঝে একটি ছোট ক্যান্ডেল এবং শেষে একটি শক্তিশালী সবুজ ক্যান্ডেল।",
+    "exampleEn": "Signals the transition of power from sellers to buyers at key market lows.",
+    "exampleBn": "মর্নিং স্টার প্যাটার্ন নির্দেশ করে সেলারদের ক্ষমতা শেষ এবং বায়াররা বাজারে রাজত্ব শুরু করেছে।"
+  },
+  {
+    "term": "Moving Average (SMA)",
+    "category": "Indicators",
+    "categoryBn": "ইন্ডিকেটর ও টুলস",
+    "en": "Simple Moving Average. A trend indicator calculated by averaging past closing prices over a specific number of periods (e.g., 50 or 200). Smoothes out market noise.",
+    "bn": "নির্দিষ্ট সংখ্যক পিরিয়ডের (যেমন ৫০ বা ২০০) সমাপনী মূল্যের সাধারণ গড় নির্দেশকারী রেখা। এটি বাজারের সাধারণ ট্রেন্ড ও ডায়নামিক সাপোর্ট/রেজিস্ট্যান্স দেখায়।",
+    "exampleEn": "Price trading above the 200 SMA indicates an overall institutional bull market.",
+    "exampleBn": "২০০ SMA-এর ওপরে মার্কেট অবস্থান করা সামগ্রিক দীর্ঘমেয়াদী বুলিশ ট্রেন্ডের পরিচায়ক।"
+  },
+  {
+    "term": "Multi-Timeframe Analysis (MTFA)",
+    "category": "Price Action",
+    "categoryBn": "প্রাইস অ্যাকশন",
+    "en": "The practice of examining an asset across multiple timeframes (e.g., Daily for bias, 4H for structure, 15M for entry timing) to achieve macro-to-micro alignment.",
+    "bn": "একাধিক টাইমফ্রেমে (যেমন ডেইলি চার্টে ট্রেন্ড বায়াস, ৪ ঘণ্টায় স্ট্রাকচার এবং ১৫ মিনিটে এন্ট্রি টাইমিং) চার্ট বিশ্লেষণ করে সুসংহত ট্রেড সিদ্ধান্ত নেওয়ার পদ্ধতি।",
+    "exampleEn": "Aligning LTF entries in the exact direction of HTF flow produces sniper trades with minimal drawdowns.",
+    "exampleBn": "বড় টাইমফ্রেমের ট্রেন্ডের সাথে মিল রেখে ছোট টাইমফ্রেমে এন্ট্রি নিলে ড্রডাউন নগণ্য হয়।"
+  },
+  {
+    "term": "New York Session",
+    "category": "Macro & Sessions",
+    "categoryBn": "ম্যাক্রো ও সেশন",
+    "en": "The second major session (approx. 12:00 PM to 9:00 PM UTC), driven by Wall Street institutions and high-impact US macroeconomic releases.",
+    "bn": "নিউ ইয়র্ক ও ওয়াল স্ট্রিটের সেশন। মার্কিন অর্থনৈতিক নিউজগুলোর কারণে এই সেশনে বড় বড় আকস্মিক মুভমেন্ট ঘটে থাকে।",
+    "exampleEn": "Gold and USD majors experience their peak momentum during New York trading hours.",
+    "exampleBn": "গোল্ড ও ডলার পেয়ারগুলোতে নিউ ইয়র্ক সেশনে সর্বোচ্চ ভোলাটিলিটি দেখা যায়।"
+  },
+  {
+    "term": "Non-Farm Payrolls (NFP)",
+    "category": "Macro & Sessions",
+    "categoryBn": "ম্যাক্রো ও সেশন",
+    "en": "A critical US labor market release published on the first Friday of each month by the Bureau of Labor Statistics, heavily impacting the USD and Gold.",
+    "bn": "প্রতি মাসের প্রথম শুক্রবার প্রকাশিত মার্কিন চাকরির রিপোর্ট। এটি পুরো ফরেক্স ও গোল্ড মার্কেটে মাসের সবচেয়ে তীব্র মোমেন্টাম তৈরি করে।",
+    "exampleEn": "NFP data releases regularly trigger 100+ pip instant spikes in Gold and EUR/USD.",
+    "exampleBn": "NFP ডেটা প্রকাশের সময় গোল্ড ও ডলার পেয়ারে মুহূর্তের মধ্যে ১০০-১৫০ পিপ ওঠানামা হতে পারে।"
+  },
+  {
+    "term": "Order Block (OB)",
+    "category": "SMC & Structure",
+    "categoryBn": "এসএমসি ও স্ট্রাকচার",
+    "en": "The institutional footprint of central bank capital. Specifically, the final opposing candle prior to an aggressive explosive price displacement that breaks market structure, representing unfulfilled limit orders.",
+    "bn": "বড় বড় প্রাতিষ্ঠানিক বিনিয়োগকারী ও ব্যাংকের বিশাল ভলিউম অর্ডারের পদচিহ্ন। কোনো স্ট্রাকচার ভাঙার আগে তৈরি হওয়া শেষ বিপরীত ক্যান্ডেল (তীব্র আপমুভের আগের শেষ লাল ক্যান্ডেল বা পতনের আগের শেষ সবুজ ক্যান্ডেল)।",
+    "exampleEn": "When price returns to an unmitigated Order Block, institutions defend their positions, creating rapid bounces.",
+    "exampleBn": "মূল্য যখন অতীতে তৈরি হওয়া আনমিটিগেটেড অর্ডার ব্লকে ফিরে আসে, সেখান থেকে তীব্র রিঅ্যাকশন দেখা যায়।"
+  },
+  {
+    "term": "Overtrading",
+    "category": "Psychology",
+    "categoryBn": "ট্রেডিং সাইকোলজি",
+    "en": "Executing excessive trade frequency driven by restlessness, dopamine seeking, or greed rather than waiting for disciplined, high-quality technical setups.",
+    "bn": "কোনো বৈধ কারণ বা সেটআপ ছাড়াই অস্থিরতা বা লোভে পড়ে দিনে অপ্রয়োজনীয় ডজন ডজন ট্রেড নেওয়া।",
+    "exampleEn": "Quality over quantity: taking 3 exceptional trades per week beats taking 20 mediocre ones.",
+    "exampleBn": "সপ্তাহে ৩টি সেরা ট্রেড নেওয়া দিনে ২০টি এলোমেলো ট্রেড নেওয়ার চেয়ে হাজার গুণ বেশি লাভজনক।"
+  },
+  {
+    "term": "Partial Close",
+    "category": "Order Types",
+    "categoryBn": "অর্ডারের প্রকারভেদ",
+    "en": "Closing a designated portion of your total lot size (e.g., closing 50% of 1.00 lot) to secure actual cash profits while leaving the remaining position active for bigger trend targets.",
+    "bn": "চলমান ট্রেডের একটি নির্দিষ্ট অংশ (যেমন ৫০% বা ৭০% ভলিউম) ক্লোজ করে লাভ ক্যাশ করে নেওয়া এবং বাকি অংশকে বড় টার্গেটের জন্য রানিং রাখা।",
+    "exampleEn": "Taking 50% off at TP1 and letting the runner hit TP2 optimizes risk-adjusted returns.",
+    "exampleBn": "০.১০ লটের মধ্যে ০.০৫ লট প্রফিট বুক করে বাকিটা ব্রেকইভেনে রেখে দেওয়া একটি সেরা কৌশল।"
+  },
+  {
+    "term": "Pending Order",
+    "category": "Order Types",
+    "categoryBn": "অর্ডারের প্রকারভেদ",
+    "en": "An advance order scheduled to execute automatically only when price reaches a specified future price level set by the trader.",
+    "bn": "একটি পূর্বনির্ধারিত অর্ডার যা বর্তমান মূল্যে খোলে না; বরং ভবিষ্যতে বাজার নির্দিষ্ট মূল্যে পৌঁছালে তবেই স্বয়ংক্রিয়ভাবে ট্রেড ওপেন হয়।",
+    "exampleEn": "Pending orders eliminate the requirement to sit continuously watching the screen for setups.",
+    "exampleBn": "পেন্ডিং অর্ডার ব্যবহারের ফলে সারাক্ষণ স্ক্রিনের সামনে বসে থাকার প্রয়োজন পড়ে না।"
+  },
+  {
+    "term": "Pin Bar",
+    "category": "Candlesticks",
+    "categoryBn": "ক্যান্ডেলস্টিক",
+    "en": "A candlestick with a tiny body and a wick accounting for at least two-thirds (66%) of the total candle length, signifying decisive rejection of a price level.",
+    "bn": "এমন একটি ক্যান্ডেল যার বডি অতি ক্ষুদ্র এবং এর একদিকের উইক বা লেজ মোট ক্যান্ডেলের কমপক্ষে দুই-তৃতীয়াংশ (৬৬%) জুড়ে থাকে। এটি কঠোর রিজেকশন বোঝায়।",
+    "exampleEn": "The long tail points in the direction of rejection; trade in the opposite direction of the tail.",
+    "exampleBn": "পিন বার যেদিকে লেজ দেয়, বাজার সাধারণত তার বিপরীত দিকে দ্রুত ছুটে চলে।"
+  },
+  {
+    "term": "Pip",
+    "category": "Forex Basics",
+    "categoryBn": "ফরেক্স বেসিকস",
+    "en": "Percentage in Point. The standardized unit of measurement expressing the smallest price fluctuation in an exchange rate. For 4-decimal currency pairs (like EUR/USD), 1 pip equals 0.0001. For Japanese Yen pairs quoted to 2 decimal places (like USD/JPY), 1 pip equals 0.01.",
+    "bn": "পিপ (Percentage in Point) হলো কোনো কারেন্সি পেয়ারের বিনিময় মূল্যের পরিবর্তন পরিমাপের প্রমিত বা স্ট্যান্ডার্ড একক। সাধারণত ৪-দশমিকের কারেন্সি পেয়ারে (যেমন EUR/USD) ৪র্থ দশমিকের পরিবর্তন (০.০০০১) হলো ১ পিপ। আর জাপানি ইয়েন (JPY) পেয়ারে ২য় দশমিকের পরিবর্তন (০.০১) হলো ১ পিপ।",
+    "exampleEn": "If EUR/USD rises from 1.0850 to 1.0875, it has moved up by 25 pips. On a 1.0 standard lot, each pip equals $10 USD ($250 profit).",
+    "exampleBn": "EUR/USD যদি ১.০৮৫০ থেকে ১.০৮৭৫ এ ওঠে, তবে ২৫ পিপ বৃদ্ধি পেয়েছে। ১.০০ স্ট্যান্ডার্ড লটে প্রতি পিপের মান প্রায় ১০ ডলার ($২৫০ প্রফিট)।"
+  },
+  {
+    "term": "Pipette / Point",
+    "category": "Forex Basics",
+    "categoryBn": "ফরেক্স বেসিকস",
+    "en": "A fractional pip, representing one-tenth (1/10th) of a pip (0.1 pip). It corresponds to the 5th decimal place in major currency pairs (0.00001) and the 3rd decimal place in JPY pairs (0.001). Modern ECN/STP brokers display pipettes to offer tighter and more precise fractional spreads.",
+    "bn": "পিপেট বা পয়েন্ট হলো একটি পিপের ১০ ভাগের ১ ভাগ (০.১ পিপ)। এটি সাধারণ কারেন্সি পেয়ারের ক্ষেত্রে ৫ম দশমিক (০.০০০০১) এবং JPY পেয়ারে ৩য় দশমিক (০.০০১)। আধুনিক ব্রোকাররা অতি ক্ষুদ্র স্প্রেড এবং নিখুঁত প্রাইসিং বোঝাতে পিপেট ব্যবহার করে।",
+    "exampleEn": "10 Pipettes equal exactly 1 Pip. A spread of 15 points means 1.5 pips.",
+    "exampleBn": "১০টি পিপেট (বা পয়েন্ট) সমান ১ পিপ। ব্রোকারে ১৫ পয়েন্ট স্প্রেড মানে ১.৫ পিপ।"
+  },
+  {
+    "term": "Point of Interest (POI)",
+    "category": "SMC & Structure",
+    "categoryBn": "এসএমসি ও স্ট্রাকচার",
+    "en": "A refined technical price zone on the chart (such as an Unmitigated Order Block, FVG, or Breaker Block) where a trader expects institutional reaction and awaits execution confirmation.",
+    "bn": "চার্টের একটি চিহ্নিত গুরুত্বপূর্ণ এলাকা (যেমন অর্ডার ব্লক বা ফেয়ার ভ্যালু গ্যাপ), যেখানে মূল্য পৌঁছালে ট্রেডার কনফার্মেশন নিয়ে ট্রেডে প্রবেশ করার পরিকল্পনা করেন।",
+    "exampleEn": "Mark your POIs on the 4H/1H charts and wait patiently for LTF confirmation entries.",
+    "exampleBn": "POI চিহ্নিত করে রাখা এবং সেখানে প্রাইস আসা পর্যন্ত ধৈর্য ধরে অপেক্ষা করা সফল ট্রেডারের নিয়ম।"
+  },
+  {
+    "term": "Position Sizing",
+    "category": "Risk Management",
+    "categoryBn": "রিস্ক ম্যানেজমেন্ট",
+    "en": "The mathematical computation of the exact lot size required to risk a precise dollar figure based on the distance in pips to your invalidation stop loss.",
+    "bn": "অ্যাকাউন্টের ব্যালেন্স, অনুমোদিত ডলার রিস্ক এবং স্টপ লসের দূরত্বের ভিত্তিতে নিখুঁত লট সাইজ নির্ধারণের গাণিতিক হিসাব।",
+    "exampleEn": "Lot Size = Risk Amount in Dollars / (Stop Loss in Pips x Pip Value per Standard Lot).",
+    "exampleBn": "আন্দাজে লট সাইজ না দিয়ে রিস্ক ক্যালকুলেটরের মাধ্যমে সঠিক লট নির্ধারণ করাই প্রফেশনালিজম।"
+  },
+  {
+    "term": "Premium Zone",
+    "category": "SMC & Structure",
+    "categoryBn": "এসএমসি ও স্ট্রাকচার",
+    "en": "The upper 50% sector of a defined dealing range (above equilibrium). Considered structurally expensive and favorable strictly for finding sell/short opportunities.",
+    "bn": "একটি নির্দিষ্ট ট্রেডিং রেঞ্জের ওপরের ৫০% অঞ্চল। এটি তুলনামূলক চড়া মূল্যের এলাকা, যেখানে শুধুমাত্র Sell বা শর্ট এন্ট্রি খোঁজা বুদ্ধিমানের কাজ।",
+    "exampleEn": "Never buy in Premium; only execute shorts when price enters premium supply zones.",
+    "exampleBn": "প্রিমিয়াম জোনে কখনো বাই নেওয়া উচিত নয়; এখানে শুধু সেল অপরচুনিটি খুঁজতে হয়।"
+  },
+  {
+    "term": "Price Action",
+    "category": "Price Action",
+    "categoryBn": "প্রাইস অ্যাকশন",
+    "en": "A trading discipline based solely on the analysis of raw price movements, candlestick patterns, and structural levels across time, free from lagging mathematical indicators.",
+    "bn": "কোনো ল্যাগিং ইন্ডিকেটর ছাড়া শুধুমাত্র চার্টের ক্যান্ডেলস্টিক, সাপোর্ট-রেজিস্ট্যান্স এবং মূল্যের নিজস্ব গতিবিধি বিশ্লেষণ করে ট্রেড করার আধুনিক পদ্ধতি।",
+    "exampleEn": "Price action traders focus on where orders actually rest rather than oscillator calculations.",
+    "exampleBn": "প্রাইস অ্যাকশন ট্রেডাররা চার্টকে পরিষ্কার রাখেন এবং সরাসরি ক্যান্ডেলস্টিকের ভাষা পড়েন।"
+  },
+  {
+    "term": "Quote Currency",
+    "category": "Forex Basics",
+    "categoryBn": "ফরেক্স বেসিকস",
+    "en": "The second currency listed in a currency pair quotation, also known as the counter currency. It determines the purchasing cost of one base currency unit.",
+    "bn": "ফরেক্স পেয়ারের নামের দ্বিতীয় মুদ্রাটি (যেমন EUR/USD-তে USD)। এটি বেস কারেন্সির বিনিময় মূল্য পরিমাপে ব্যবহৃত হয়।",
+    "exampleEn": "In USD/JPY, the Japanese Yen (JPY) is the quote currency.",
+    "exampleBn": "USD/JPY পেয়ারে JPY হলো কোট কারেন্সি।"
+  },
+  {
+    "term": "Resistance",
+    "category": "Price Action",
+    "categoryBn": "প্রাইস অ্যাকশন",
+    "en": "A horizontal price ceiling where selling pressure exceeds buying demand, halting an upward advance and forcing prices downward.",
+    "bn": "চার্টের একটি ছাদসদৃশ স্তর যেখানে বিক্রেতাদের সাপ্লাই ক্রেতাদের আটকে দেয় এবং দামকে আরও ওপরে উঠতে বাধা দেয়।",
+    "exampleEn": "Prior support levels frequently flip to become new resistance levels once cleanly broken.",
+    "exampleBn": "পূর্বে সাপোর্ট হিসেবে কাজ করা লেভেল একবার ভেঙে গেলে তা ভবিষ্যতে শক্তিশালী রেজিস্ট্যান্সে পরিণত হয়।"
+  },
+  {
+    "term": "Retracement / Pullback",
+    "category": "Price Action",
+    "categoryBn": "প্রাইস অ্যাকশন",
+    "en": "A temporary counter-trend price correction within an ongoing broader trend before original directional movement resumes.",
+    "bn": "মূল ট্রেন্ড চলাকালীন সময়ে সাময়িকভাবে উল্টো দিকে ফিরে আসা কারেকশন বা পুলব্যাক। এর পর বাজার আবার মূল ট্রেন্ডের দিকে ধাবিত হয়।",
+    "exampleEn": "Never chase green candles; patiently await retracements into key structural zones.",
+    "exampleBn": "চলন্ত মার্কেট তাড়া না করে স্বাস্থ্যকর পুলব্যাকের জন্য অপেক্ষা করাই পেশাদার ট্রেডারের গুণ।"
+  },
+  {
+    "term": "Revenge Trading",
+    "category": "Psychology",
+    "categoryBn": "ট্রেডিং সাইকোলজি",
+    "en": "The irrational impulse to instantly enter larger, undisciplined trades immediately following a painful loss in an emotionally charged attempt to make the money back.",
+    "bn": "ট্রেডে লস করার পর ক্ষুব্ধ হয়ে সেই লস মুহূর্তেই উসুল করার জন্য অতিরিক্ত লট দিয়ে এলোমেলো ট্রেড করা, যা অ্যাকাউন্ট ধ্বংস ডেকে আনে।",
+    "exampleEn": "Step away from the screen for at least 30 minutes following any unexpected loss.",
+    "exampleBn": "লস হওয়ার পর চার্ট বন্ধ করে বিরতি নেওয়া রিভেঞ্জ ট্রেডিং ঠেকানোর একমাত্র বাস্তব উপায়।"
+  },
+  {
+    "term": "Risk to Reward Ratio (R:R)",
+    "category": "Risk Management",
+    "categoryBn": "রিস্ক ম্যানেজমেন্ট",
+    "en": "The mathematical ratio comparing the monetary capital risked on a trade versus the targeted profit potential. E.g., risking $100 to target $300 represents a 1:3 R:R.",
+    "bn": "ট্রেডে সম্ভাব্য আর্থিক ক্ষতির বিপরীতে প্রত্যাশিত লাভের গাণিতিক অনুপাত। যেমন: $১০০ রিস্ক নিয়ে $৩০০ লাভের টার্গেট নিলে তা ১:৩ রিস্ক-রিওয়ার্ড।",
+    "exampleEn": "Maintaining a 1:3 R:R allows a trader to stay profitable with a win rate as low as 35%.",
+    "exampleBn": "১:৩ R:R বজায় রাখলে মাত্র ৩৫% উইন রেট নিয়েও দীর্ঘমেয়াদে বিপুল লাভে থাকা সম্ভব।"
+  },
+  {
+    "term": "RSI (Relative Strength Index)",
+    "category": "Indicators",
+    "categoryBn": "ইন্ডিকেটর ও টুলস",
+    "en": "A momentum oscillator bound between 0 and 100 measuring the velocity and magnitude of directional price movements. Standard thresholds: 70 (Overbought) and 30 (Oversold).",
+    "bn": "০ থেকে ১০০ স্কেলের একটি মোমেন্টাম অসিলেটর যা সাম্প্রতিক মূল্যের গতিবেগ পরিমাপ করে অতিরিক্ত ক্রয় (Overbought) বা অতিরিক্ত বিক্রয় (Oversold) অবস্থা শনাক্ত করে।",
+    "exampleEn": "Do not buy solely because RSI is under 30; wait for price structural confirmation.",
+    "exampleBn": "RSI ৩০ এর নিচে নামলেই অন্ধভাবে বাই না করে চার্টে রিভার্সাল কনফার্মেশন দেখা উচিত।"
+  },
+  {
+    "term": "Sell Limit",
+    "category": "Order Types",
+    "categoryBn": "অর্ডারের প্রকারভেদ",
+    "en": "A pending order placed above the prevailing market price. Used when expecting price will climb into an institutional resistance or supply zone, exhaust, and reverse downward.",
+    "bn": "বর্তমান মূল্যের উপরে সেট করা পেন্ডিং সেল অর্ডার। উদ্দেশ্য থাকে প্রাইস উপরে উঠে রেজিস্ট্যান্স বা সাপ্লাই জোনে ধাক্কা খেয়ে নিচের দিকে রিভার্স করবে।",
+    "exampleEn": "Placing a Sell Limit at key resistance ensures you enter short at the highest possible price.",
+    "exampleBn": "রেজিস্ট্যান্স লেভেলের মাথায় Sell Limit পেন্ডিং রেখে সবচেয়ে লাভজনক প্রাইসে সেল নিশ্চিত করা যায়।"
+  },
+  {
+    "term": "Sell Stop",
+    "category": "Order Types",
+    "categoryBn": "অর্ডারের প্রকারভেদ",
+    "en": "A pending order placed below the current market price. Used when expecting that if price breaches a key floor of support, it will tumble aggressively downward.",
+    "bn": "বর্তমান মূল্যের নিচে সেট করা পেন্ডিং অর্ডার; যখন আশা করা হয় প্রাইস সাপোর্ট ভেঙে নিচের দিকে ছুটে গেলে সেই নিম্নমুখী মোমেন্টামে সেল কার্যকর হবে।",
+    "exampleEn": "Placing a Sell Stop underneath a multi-week consolidation low capitalizes on sudden breakdown velocity.",
+    "exampleBn": "সাপোর্ট ব্রেকআউটের ঠিক নিচে Sell Stop সেট করে নিম্নমুখী তীব্র গতি কাজে লাগানো হয়।"
+  },
+  {
+    "term": "Sell-Side Liquidity (SSL)",
+    "category": "SMC & Structure",
+    "categoryBn": "এসএমসি ও স্ট্রাকচার",
+    "en": "Resting liquidity situated underneath prominent swing lows consisting of sell stop breakout orders and protective stop-losses belonging to buyers.",
+    "bn": "কোনো বড় সুইং লো বা মেঝের নিচে অবস্থানরত লিকুইডিটি, যেখানে বায়ারদের স্টপ লস এবং সেল-স্টপ অর্ডার জমা থাকে।",
+    "exampleEn": "After SSL is swept at Asian session lows, London open frequently sparks strong rallies.",
+    "exampleBn": "SSL সুইপ করার পর স্মার্ট মানি সস্তায় বাই অর্ডার ফিল করে আপট্রেন্ড শুরু করে।"
+  },
+  {
+    "term": "Shooting Star",
+    "category": "Candlesticks",
+    "categoryBn": "ক্যান্ডেলস্টিক",
+    "en": "A single-candle bearish reversal pattern forming at the peak of an uptrend with a small body at the lower end and an upper wick at least twice the body size.",
+    "bn": "আপট্রেন্ডের শীর্ষে তৈরি হওয়া একটি শক্তিশালী বিয়ারিশ রিভার্সাল ক্যান্ডেল। এর নিচে ছোট বডি ও ওপরে লম্বা লেজ থাকে, যা ওপরে বায়ারদের সম্পূর্ণ রিজেকশন নির্দেশ করে।",
+    "exampleEn": "Signals that buyers pushed up to new highs but were met with heavy institutional supply.",
+    "exampleBn": "রেজিস্ট্যান্স জোনে শুটিং স্টার ক্যান্ডেল তৈরি হলে নিখুঁত সেল সেটআপ পাওয়া যায়।"
+  },
+  {
+    "term": "Short Position",
+    "category": "Forex Basics",
+    "categoryBn": "ফরেক্স বেসিকস",
+    "en": "A trading position where a trader sells a borrowed financial instrument anticipating that price will depreciate, planning to repurchase it later at a lower price for profit.",
+    "bn": "ভবিষ্যতে বাজারদর হ্রাস পাবে এই প্রত্যাশায় কোনো অ্যাসেট সেল (Sell) করা। বাজার যত নিচে নামবে, এই পজিশনে তত বেশি প্রফিট অর্জিত হবে।",
+    "exampleEn": "Going short on Gold at $2,400 yields profit if gold drops to $2,350.",
+    "exampleBn": "স্বর্ণ $২,৪০০ ডলারে থাকা অবস্থায় শর্ট (Sell) এন্ট্রি নিলে দাম $২,৩৫০ ডলারে নামলে লাভ হবে।"
+  },
+  {
+    "term": "Slippage",
+    "category": "Forex Basics",
+    "categoryBn": "ফরেক্স বেসিকস",
+    "en": "The discrepancy between the expected execution price of an order and the actual price at which it fills in the market. Frequent during volatile macroeconomic news releases, weekend market gaps, or low-liquidity phases.",
+    "bn": "ট্রেডার যে মূল্যে অর্ডার সাবমিট করেছিলেন এবং বাস্তবে যে মূল্যে ট্রেডটি কার্যকর হলো—তার মধ্যকার পার্থক্য। তীব্র মার্কেট মুভমেন্ট বা নিউজের সময় বাজারে দ্রুত দাম পরিবর্তনের কারণে স্লিপেজ ঘটে।",
+    "exampleEn": "Placing a market buy order at 1.0820 during NFP that fills at 1.0824 represents 4 pips of negative slippage.",
+    "exampleBn": "১.০৮২০ এ বাই অর্ডার দিয়ে নিউজের তীব্র গতির কারণে ১.০৮২৪ এ অর্ডার ফিল হওয়া মানে ৪ পিপ স্লিপেজ।"
+  },
+  {
+    "term": "Spread",
+    "category": "Forex Basics",
+    "categoryBn": "ফরেক্স বেসিকস",
+    "en": "The numerical price difference between the Ask price and the Bid price. Spread represents the core transaction fee charged by brokers for executing orders and providing liquidity.",
+    "bn": "আস্ক (Buy) এবং বিড (Sell) মূল্যের মধ্যকার পার্থক্য। এটি ব্রোকারের প্রাতিষ্ঠানিক চার্জ বা সেবামূল্য। ট্রেড ওপেন করার সাথে সাথেই এই স্প্রেডের কারণে ট্রেডটি সামান্য মাইনাসে শুরু হয়।",
+    "exampleEn": "Ask 1.0852 minus Bid 1.0850 equals a 2-pip spread cost paid to the broker upon entry.",
+    "exampleBn": "Ask ১.০৮৫২ এবং Bid ১.০৮৫০ হলে স্প্রেড হলো ২ পিপ।"
+  },
+  {
+    "term": "Standard Lot",
+    "category": "Forex Basics",
+    "categoryBn": "ফরেক্স বেসিকস",
+    "en": "A transaction size equivalent to 100,000 units of the base currency (designated as 1.00 lot). On USD-quoted major pairs, a 1-pip movement is worth approximately $10 USD.",
+    "bn": "১.০০ লট সাইজের ট্রেড, যা বেস কারেন্সির ১,০০,০০০ ইউনিটের সমান। মার্কিন ডলারে মূল্যায়িত প্রধান পেয়ারগুলোতে (যেমন EUR/USD) ১ পিপের ওঠা-নামায় প্রায় ১০ ডলার লাভ বা ক্ষতি হয়।",
+    "exampleEn": "Buying 1.00 lot of EUR/USD requires controlling 100,000 Euros. A 30-pip gain yields $300 profit.",
+    "exampleBn": "EUR/USD-তে ১.০০ লট ট্রেড ওপেন করে ৩০ পিপ লাভ করলে অ্যাকাউন্টে $৩০০ ডলার প্রফিট যোগ হবে।"
+  },
+  {
+    "term": "Stop Loss (SL)",
+    "category": "Order Types",
+    "categoryBn": "অর্ডারের প্রকারভেদ",
+    "en": "A predefined defensive order instruction closing an open trade automatically at a designated unfavorable price to strictly cap maximum potential loss on capital.",
+    "bn": "ট্রেড বিপরীত দিকে গেলে অ্যাকাউন্টের মূলধন রক্ষার্থে নির্দিষ্ট মূল্যে স্বয়ংক্রিয়ভাবে লোকসান মেনে ট্রেড বন্ধ করার পূর্বনির্ধারিত সুরক্ষামূলক অর্ডার।",
+    "exampleEn": "Never enter a trade without an SL. Professional risk management dictates capping loss to 1-2% per trade.",
+    "exampleBn": "স্টপ লস ছাড়া ট্রেড করা নিশ্চিত ধ্বংস ডেকে আনে; এটি প্রতিটি ট্রেডারের মূল আর্থিক ঢাল।"
+  },
+  {
+    "term": "Stop Out",
+    "category": "Forex Basics",
+    "categoryBn": "ফরেক্স বেসিকস",
+    "en": "The automated liquidation protocol where the broker forcibly closes open positions at current market prices when account equity falls to a critical threshold (typically 20% to 50% margin level) to prevent negative balance.",
+    "bn": "অ্যাকাউন্টের ইকুইটি যখন বিপজ্জনক তলানিতে পৌঁছায় (যেমন ২০% বা ৫০% মার্জিন লেভেল), তখন অ্যাকাউন্টকে ব্যালেন্স শূন্য বা ঋণাত্মক হওয়া থেকে বাঁচাতে ব্রোকার কর্তৃক স্বয়ক্রিয়ভাবে রানিং ট্রেডগুলো লসে কেটে ফেলা।",
+    "exampleEn": "Proper stop-loss placement guarantees you will never suffer an automatic stop out.",
+    "exampleBn": "প্রতিটি ট্রেডে সুনির্দিষ্ট স্টপ লস ব্যবহার করলে কখনো স্টপ আউটের মুখে পড়তে হয় না।"
+  },
+  {
+    "term": "Support",
+    "category": "Price Action",
+    "categoryBn": "প্রাইস অ্যাকশন",
+    "en": "A horizontal price floor where demand is strong enough to halt further decline and push prices back upward.",
+    "bn": "চার্টের একটি মেঝেসদৃশ তল বা মূল্যস্তর, যেখানে ক্রেতাদের চাপ বিক্রেতাদের চেয়ে শক্তিশালী হয়ে দামকে আর নিচে পড়তে দেয় না এবং বাউন্স করায়।",
+    "exampleEn": "Buying at support with a tight stop directly below provides favorable risk:reward.",
+    "exampleBn": "সাপোর্টে বুলিশ ক্যান্ডেল কনফার্মেশন পেলে কম ঝুঁকিতে বাই ট্রেড নেওয়া যায়।"
+  },
+  {
+    "term": "Swap / Rollover",
+    "category": "Forex Basics",
+    "categoryBn": "ফরেক্স বেসিকস",
+    "en": "The net interest rate differential credited to or debited from your trading account for holding open positions overnight past the daily rollover cutoff (typically 5:00 PM EST). Can be positive or negative depending on central bank benchmark rates.",
+    "bn": "দৈনিক ট্রেডিং সেশন শেষে (সাধারণত নিউ ইয়র্ক সময় বিকাল ৫টা) রাতভর কোনো ট্রেড ওপেন রাখলে দুটি দেশের সুদের হারের পার্থক্যের ওপর ভিত্তি করে যে চার্জ কাটা হয় বা অ্যাকাউন্টে জমা হয়।",
+    "exampleEn": "Muslim traders frequently utilize Swap-Free (Islamic) accounts to avoid interest-bearing rollover charges.",
+    "exampleBn": "সুদ এড়াতে অনেক মুসলিম ট্রেডার ব্রোকারের নো-সোয়াপ বা ইসলামিক একাউন্ট অপশন ব্যবহার করেন।"
+  },
+  {
+    "term": "Take Profit (TP)",
+    "category": "Order Types",
+    "categoryBn": "অর্ডারের প্রকারভেদ",
+    "en": "A predetermined profit-locking order instruction closing a winning trade automatically when price reaches a targeted favorable price objective.",
+    "bn": "কাঙ্ক্ষিত লাভে পৌঁছালে স্বয়ংক্রিয়ভাবে প্রফিট সুরক্ষিত করে ট্রেড ক্লোজ করার পূর্বনির্ধারিত অর্ডার।",
+    "exampleEn": "Setting realistic TP targets at next structural liquidity pools prevents giving profits back to the market.",
+    "exampleBn": "পরবর্তী সাপোর্ট বা রেজিস্ট্যান্সে TP সেট করে নিশ্চিত লাভ বুক করা সম্ভব হয়।"
+  },
+  {
+    "term": "Trading Discipline",
+    "category": "Psychology",
+    "categoryBn": "ট্রেডিং সাইকোলজি",
+    "en": "The mental fortitude to rigorously adhere to your predefined trading plan, risk rules, and execution criteria across all market conditions.",
+    "bn": "আবেগের বশে না গিয়ে প্রতিটি মুহূর্তে নিজের সুনির্দিষ্ট ট্রেডিং রুলস ও রিস্ক ম্যানেজমেন্ট কঠোরভাবে মেনে চলার মানসিক শক্তি।",
+    "exampleEn": "Without discipline, even the highest win-rate trading strategy will fail over time.",
+    "exampleBn": "শৃঙ্খলা বা ডিসিপ্লিন ছাড়া বিশ্বের সেরা স্ট্র্যাটেজি দিয়েও লাভবান হওয়া অসম্ভব।"
+  },
+  {
+    "term": "Trailing Stop",
+    "category": "Order Types",
+    "categoryBn": "অর্ডারের প্রকারভেদ",
+    "en": "A dynamic stop-loss order that tracks behind price at a fixed distance as a trade advances profitably, locking in accrued profits while protecting against sudden reversals.",
+    "bn": "একটি চলমান স্টপ লস যা ট্রেড লাভে এগিয়ে চলার সাথে সাথে স্বয়ংক্রিয়ভাবে প্রফিটের দিকে সরে যায় এবং বাজার আচমকা ঘুরে গেলে অর্জিত লাভ নিশ্চিত করে।",
+    "exampleEn": "A 20-pip trailing stop on a trade that runs 60 pips into profit automatically secures 40 pips of locked gain.",
+    "exampleBn": "৬০ পিপ লাভে থাকা ট্রেডে ২০ পিপের ট্রেইলিং স্টপ থাকলে মার্কেট ফিরে আসলেও ৪০ পিপ লাভ সুরক্ষিত থাকে।"
+  },
+  {
+    "term": "Trendline",
+    "category": "Price Action",
+    "categoryBn": "প্রাইস অ্যাকশন",
+    "en": "A bounding diagonal line drawn connecting consecutive swing pivots to illustrate trend slope, trajectory, and dynamic support or resistance.",
+    "bn": "চার্টে পরপর অন্তত দুটি বা তিনটি সুইং হাই বা সুইং লো সংযুক্ত করে টানা তির্যক রেখা, যা ট্রেন্ডের ঢাল ও গতিপথ নির্দেশ করে।",
+    "exampleEn": "A trendline requires at least 3 distinct touches to be considered fully confirmed.",
+    "exampleBn": "একটি ট্রেন্ডলাইন ভ্যালিড হতে কমপক্ষে ৩টি ভিন্ন বাউন্স বা টাচ প্রয়োজন।"
+  },
+  {
+    "term": "US Dollar Index (DXY)",
+    "category": "Macro & Sessions",
+    "categoryBn": "ম্যাক্রো ও সেশন",
+    "en": "A geometric index tracking the relative strength of the US Dollar against a basket of six major global currencies (dominated by the Euro at 57.6%).",
+    "bn": "বিশ্বের ৬টি প্রধান আন্তর্জাতিক মুদ্রার বিপরীতে ইউএস ডলারের একক শক্তির পরিমাপক সূচক।",
+    "exampleEn": "Gold (XAU/USD) shares a strong inverse correlation with DXY movements.",
+    "exampleBn": "DXY এবং গোল্ড (XAUUSD)-এর মধ্যে তীব্র বিপরীত সম্পর্ক থাকে; DXY বাড়লে গোল্ড কমে।"
+  },
+  {
+    "term": "Volatility",
+    "category": "Forex Basics",
+    "categoryBn": "ফরেক্স বেসিকস",
+    "en": "The rate and magnitude of price oscillations experienced by a financial instrument over a specified timeframe. High volatility indicates large, rapid price movements.",
+    "bn": "নির্দিষ্ট সময়ের মধ্যে কোনো অ্যাসেটের মূল্যের ওঠানামার তীব্রতা ও গতি। উচ্চ ভোলাটিলিটি স্বল্প সময়ে বড় লাভ বা বড় ক্ষতির সুযোগ সৃষ্টি করে।",
+    "exampleEn": "Gold (XAU/USD) regularly demonstrates high daily volatility, moving 200–400 pips per day.",
+    "exampleBn": "গোল্ড (XAUUSD) একটি অত্যন্ত ভোলাটাইল মার্কেট যা দিনে ২০-৪০ ডলার পর্যন্ত ওঠানামা করে।"
+  },
+  {
+    "term": "Wick / Shadow",
+    "category": "Candlesticks",
+    "categoryBn": "ক্যান্ডেলস্টিক",
+    "en": "The thin vertical lines protruding above and below a candlestick's real body, showing the maximum extreme high and low reached during that period.",
+    "bn": "ক্যান্ডেলের বডি থেকে উপরের ও নিচের দিকে বিস্তৃত সরু দাগ বা ছায়া, যা সেই সময়ে মূল্যের সর্বোচ্চ চূড়া ও সর্বনিম্ন তল নির্দেশ করে।",
+    "exampleEn": "Long wicks denote price rejection where market participants aggressively pushed price away.",
+    "exampleBn": "লম্বা উইক নির্দেশ করে সেই প্রাইস লেভেলটি বাজার কঠোরভাবে রিজেক্ট করেছে।"
+  },
+  {
+    "term": "XAUUSD (Gold)",
+    "category": "Macro & Sessions",
+    "categoryBn": "ম্যাক্রো ও সেশন",
+    "en": "The premier financial trading symbol for Gold priced against the US Dollar. 1 standard lot represents 100 troy ounces, where every $1.00 move yields $100 P&L.",
+    "bn": "মার্কিন ডলারে মূল্যায়িত স্বর্ণের ট্রেডিং কোটেশন। ১ স্ট্যান্ডার্ড লটে ১০০ ট্রয় আউন্স থাকে, ফলে সোনার দাম মাত্র $১ বাড়লে বা কমলে ১ লটে $১০০ লাভ বা ক্ষতি হয়।",
+    "exampleEn": "Gold requires strict risk control due to rapid 200–500 pip daily movement velocity.",
+    "exampleBn": "স্বর্ণের বাজার অত্যন্ত দ্রুত গতিশীল হওয়ায় এতে কঠোর রিস্ক ম্যানেজমেন্ট প্রয়োজন।"
+  }
+]

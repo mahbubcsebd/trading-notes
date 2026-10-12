@@ -1,0 +1,166 @@
+{
+  "id": "bullish-engulfing-02",
+  "title": {
+    "en": "EURUSD H1 — Bullish Engulfing at Major Support",
+    "bn": "EURUSD H1 — মেজর সাপোর্টে বুলিশ এনগালফিং রিভার্সাল"
+  },
+  "symbol": "EURUSD",
+  "timeframe": "H1",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bullish",
+  "outcome": null,
+  "tags": [
+    "engulfing",
+    "reversal",
+    "demand-zone",
+    "support"
+  ],
+  "module": "04-candlesticks",
+  "lessonSlugs": [
+    "04-bullish-engulfing"
+  ],
+  "caption": {
+    "en": "Classic EURUSD rejection at key support resulting in a 110-pip upward surge.",
+    "bn": "EURUSD-এর গুরুত্বপূর্ণ সাপোর্টে বায়ারদের রিজেকশন যা পরবর্তীতে ১১০ পিপস আপট্রেন্ড তৈরি করে।"
+  },
+  "notes": {
+    "en": "Strong buyer rejection at demand zone with full body engulfing. Ideal entry on next bar open.",
+    "bn": "ডিমান্ড জোনে শক্তিশালী রিজেকশন এবং ফুল বডি এনগালফিং। পরবর্তী বারের শুরুতে এন্ট্রি নেওয়া আদর্শ।"
+  },
+  "updatedAt": "2026-10-05T10:00:00Z",
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.082,
+      "h": 1.0835,
+      "l": 1.0815,
+      "c": 1.0818
+    },
+    {
+      "i": 1,
+      "o": 1.0818,
+      "h": 1.0822,
+      "l": 1.0808,
+      "c": 1.081
+    },
+    {
+      "i": 2,
+      "o": 1.081,
+      "h": 1.0814,
+      "l": 1.08,
+      "c": 1.0802
+    },
+    {
+      "i": 3,
+      "o": 1.0802,
+      "h": 1.0806,
+      "l": 1.0795,
+      "c": 1.0797
+    },
+    {
+      "i": 4,
+      "o": 1.0796,
+      "h": 1.0799,
+      "l": 1.0788,
+      "c": 1.079
+    },
+    {
+      "i": 5,
+      "o": 1.0789,
+      "h": 1.0793,
+      "l": 1.0782,
+      "c": 1.0784
+    },
+    {
+      "i": 6,
+      "o": 1.0783,
+      "h": 1.0787,
+      "l": 1.0779,
+      "c": 1.0781
+    },
+    {
+      "i": 7,
+      "o": 1.078,
+      "h": 1.0782,
+      "l": 1.0774,
+      "c": 1.0776
+    },
+    {
+      "i": 8,
+      "o": 1.0775,
+      "h": 1.0778,
+      "l": 1.077,
+      "c": 1.0772
+    },
+    {
+      "i": 9,
+      "o": 1.0771,
+      "h": 1.0775,
+      "l": 1.0766,
+      "c": 1.0768
+    },
+    {
+      "i": 10,
+      "o": 1.0767,
+      "h": 1.077,
+      "l": 1.0762,
+      "c": 1.0764
+    },
+    {
+      "i": 11,
+      "o": 1.0763,
+      "h": 1.079,
+      "l": 1.0761,
+      "c": 1.0787
+    },
+    {
+      "i": 12,
+      "o": 1.0788,
+      "h": 1.08,
+      "l": 1.0786,
+      "c": 1.0798
+    }
+  ],
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 1.0765,
+      "label": "Demand Zone",
+      "color": "#22c55e",
+      "style": "dashed"
+    },
+    {
+      "type": "marker",
+      "i": 10,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Bearish (1st)"
+    },
+    {
+      "type": "marker",
+      "i": 11,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Bullish Engulfing"
+    }
+  ],
+  "explanation": {
+    "en": "On EURUSD H1, price descended smoothly into a prior swing low liquidity pool. Sellers attempted a continuation breakdown, but institutional buyers absorbed the liquidity, printing an outsized green candle. The failure of sellers to maintain new lows signals that the path of least resistance is now upward.",
+    "bn": "EURUSD চার্টে প্রাইস একটি পুরোনো সুইং লো-এর লিকুইডিটি পুলে নেমে আসে। সেলাররা ব্রেকডাউন ঘটানোর চেষ্টা করলেও প্রাতিষ্ঠানিক বায়াররা সমস্ত সেল অর্ডার লুফে নিয়ে বড় গ্রিন ক্যান্ডেলে রূপ দেয়, যা আপট্রেন্ড কনফার্ম করে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "High probability when forming directly at session opens (London / New York overlap).",
+      "bn": "লন্ডন বা নিউইয়র্ক সেশন শুরুর মুহূর্তে এই প্যাটার্ন গঠিত হলে সফলতার হার সবচেয়ে বেশি থাকে।"
+    },
+    {
+      "en": "Keep stops strictly below the engulfing candle wick with a small spread buffer.",
+      "bn": "এনগালফিং ক্যান্ডেলের লো এর কিছুটা নিচে স্প্রেড বাফার রেখে স্টপ লস সেট করুন।"
+    }
+  ],
+  "entry": 1.082,
+  "stopLoss": 1.0785,
+  "takeProfit": 1.091,
+  "rr": "2.6"
+}

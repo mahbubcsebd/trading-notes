@@ -1,0 +1,10 @@
+{
+  "title": "Candlesticks",
+  "pages": [
+    "01-anatomy-of-a-candle",
+    "02-single-candle-patterns",
+    "03-two-candle-patterns",
+    "04-bullish-engulfing",
+    "05-candle-context"
+  ]
+}

@@ -1,0 +1,124 @@
+{
+  "id": "bullish-harami-01",
+  "title": {
+    "en": "Bullish Harami at EURUSD Demand Floor",
+    "bn": "EURUSD ডিমান্ড ফ্লোরে বুলিশ হারামি ইনসাইড বার"
+  },
+  "symbol": "EURUSD",
+  "timeframe": "H4",
+  "bias": "bullish",
+  "caption": {
+    "en": "EURUSD contracts into a Bullish Harami at 1.0800 demand, leading to a 130-pip breakout.",
+    "bn": "১.০৮০০ ডিমান্ড জোনে বুলিশ হারামি তৈরি করে ভোলাটিলিটি সংকোচন, যার পর ১৩০ পিপসের ব্রেকআউট ঘটে।"
+  },
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.092,
+      "h": 1.0925,
+      "l": 1.087,
+      "c": 1.0875
+    },
+    {
+      "i": 1,
+      "o": 1.0875,
+      "h": 1.088,
+      "l": 1.082,
+      "c": 1.0825
+    },
+    {
+      "i": 2,
+      "o": 1.0825,
+      "h": 1.083,
+      "l": 1.079,
+      "c": 1.08
+    },
+    {
+      "i": 3,
+      "o": 1.0805,
+      "h": 1.0822,
+      "l": 1.0802,
+      "c": 1.082
+    },
+    {
+      "i": 4,
+      "o": 1.082,
+      "h": 1.087,
+      "l": 1.0818,
+      "c": 1.0865
+    },
+    {
+      "i": 5,
+      "o": 1.0865,
+      "h": 1.093,
+      "l": 1.086,
+      "c": 1.0925
+    }
+  ],
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 1.079,
+      "label": "Demand Floor (1.0790)",
+      "color": "#22c55e",
+      "style": "solid"
+    },
+    {
+      "type": "zone",
+      "from": {
+        "i": 2,
+        "price": 1.083
+      },
+      "to": {
+        "i": 3,
+        "price": 1.079
+      },
+      "label": "Bullish Harami (Inside Bar)",
+      "color": "#10b981"
+    },
+    {
+      "type": "hline",
+      "price": 1.083,
+      "label": "Breakout Buy (1.0830)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.0785,
+      "label": "Stop Loss (1.0785)",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.093,
+      "label": "Take Profit Target (1.0930)",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "notes": {
+    "en": "The large red mother candle is followed by a small green inside candle completely nestled within its body, indicating selling cessation.",
+    "bn": "বড় লাল মাদার ক্যান্ডেলের পেটে ছোট সবুজ ক্যান্ডেল তৈরি হয়ে সেলারদের শক্তি ফুরিয়ে যাওয়ার সংকেত দেয়।"
+  },
+  "explanation": {
+    "en": "The Bullish Harami is a two-candle reversal pattern where an aggressive selling candle is followed by a smaller bullish candle that is completely enclosed within the previous body. This shows that despite previous aggressive selling, bears were unable to push price to new lows, and volatility is contracting before an upward release.",
+    "bn": "বুলিশ হারামি প্যাটার্নে আগের বড় বিয়ারিশ ক্যান্ডেলের ভেতর পরবর্তী ছোট বুলিশ ক্যান্ডেল অবস্থান করে। এটি প্রকাশ করে যে সেলাররা শত চেষ্টা করেও প্রাইসকে আর নিচে নামাতে পারছে না। এরপর বায়াররা মোমেন্টাম নিয়ে উপরের দিকে ব্রেকআউট ঘটায়।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Always wait for the high of the mother candle or inside candle to break before going long.",
+      "bn": "লং এন্ট্রি নেওয়ার আগে অবশ্যই ইনসাইড ক্যান্ডেল বা মাদার ক্যান্ডেলের হাই ভাঙার অপেক্ষা করুন।"
+    },
+    {
+      "en": "Target the nearest supply zone or prior swing high with minimum 1:2 Risk-Reward ratio.",
+      "bn": "টার্গেট হিসেবে পূর্ববর্তী সুইং হাই বা সাপ্লাই জোন নির্ধারণ করুন যাতে ন্যূনতম ১:২ R:R নিশ্চিত হয়।"
+    }
+  ],
+  "entry": 1.0835,
+  "stopLoss": 1.079,
+  "takeProfit": 1.0945,
+  "rr": "2.4",
+  "type": "pattern"
+}

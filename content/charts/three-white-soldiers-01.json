@@ -1,0 +1,117 @@
+{
+  "id": "three-white-soldiers-01",
+  "title": {
+    "en": "Three White Soldiers — Relentless Bullish Trend Expansion",
+    "bn": "থ্রি হোয়াইট সোলজার্স — অপ্রতিরোধ্য বুলিশ ট্রেন্ড এক্সপ্যানশন"
+  },
+  "symbol": "XAUUSD",
+  "timeframe": "H4",
+  "bias": "bullish",
+  "caption": {
+    "en": "Gold breaks out of a 2-week consolidation with Three White Soldiers, surging over 400 pips.",
+    "bn": "গোল্ড ২ সপ্তাহের রেঞ্জ ভেঙে থ্রি হোয়াইট সোলজার্স ক্যান্ডেল তৈরি করে ৪০০ পিপসেরও বেশি ওপরে ওঠে।"
+  },
+  "candles": [
+    {
+      "i": 0,
+      "o": 2310,
+      "h": 2315,
+      "l": 2308,
+      "c": 2312
+    },
+    {
+      "i": 1,
+      "o": 2312,
+      "h": 2328,
+      "l": 2310,
+      "c": 2326
+    },
+    {
+      "i": 2,
+      "o": 2326,
+      "h": 2345,
+      "l": 2324,
+      "c": 2342
+    },
+    {
+      "i": 3,
+      "o": 2342,
+      "h": 2362,
+      "l": 2340,
+      "c": 2360
+    },
+    {
+      "i": 4,
+      "o": 2360,
+      "h": 2365,
+      "l": 2352,
+      "c": 2355
+    },
+    {
+      "i": 5,
+      "o": 2355,
+      "h": 2390,
+      "l": 2354,
+      "c": 2388
+    }
+  ],
+  "annotations": [
+    {
+      "type": "zone",
+      "from": {
+        "i": 1,
+        "price": 2362
+      },
+      "to": {
+        "i": 3,
+        "price": 2310
+      },
+      "label": "Three White Soldiers",
+      "color": "#22c55e"
+    },
+    {
+      "type": "hline",
+      "price": 2352,
+      "label": "Pullback Retest Buy (2352.00)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 2324,
+      "label": "Stop Loss (2324.00)",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 2400,
+      "label": "Take Profit Target (2400.00)",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "notes": {
+    "en": "Three consecutive large green candles, each opening within the prior body and closing near highs with small wicks.",
+    "bn": "টানা ৩টি বড় গ্রিন ক্যান্ডেল, যার প্রতিটি আগের বডির ভেতরে ওপেন হয়ে শীর্ষের কাছে ক্লোজ দিয়ে বায়ারদের দাপট প্রতিষ্ঠা করে।"
+  },
+  "explanation": {
+    "en": "The bullish counterpart to Three Black Crows. Three White Soldiers manifests after an extended consolidation or bottoming phase. Each of the three candles opens within the preceding candle body and expands upward with strong momentum to close near the high. This pattern signifies that institutional smart money has initiated a sustained macro bull campaign.",
+    "bn": "থ্রি হোয়াইট সোলজার্স হলো দীর্ঘ ডাউনট্রেন্ড বা কনসলিডেশন শেষের সবচেয়ে নির্ভরযোগ্য বুলিশ প্যাটার্ন। টানা ৩টি বড় সবুজ ক্যান্ডেল পরপর হাইয়ার হাই ও হাইয়ার লো তৈরি করে কোনো বড় আপার উইক ছাড়াই ক্লোজ দেয়। এটি প্রমাণ করে স্মার্ট মানি দীর্ঘমেয়াদি আপট্রেন্ডের জন্য মার্কেটকে ড্রাইভ করছে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Each candle must make progressive new highs and close near its absolute upper limit.",
+      "bn": "প্রতিটি ক্যান্ডেল অবশ্যই নতুন হাই তৈরি করবে এবং তার সর্বোচ্চ পয়েন্টের কাছাকাছি ক্লোজ দেবে।"
+    },
+    {
+      "en": "Best execution is entering on a 15-minute FVG retracement within the body of Soldier 2 or 3.",
+      "bn": "লোয়ার টাইমফ্রেমে ২য় বা ৩য় ক্যান্ডেলের ভেতরের FVG-তে পুলব্যাক পেলে নিরাপদ এন্ট্রি নিশ্চিত হয়।"
+    }
+  ],
+  "entry": 2315,
+  "stopLoss": 2295,
+  "takeProfit": 2370,
+  "rr": "2.8",
+  "type": "pattern"
+}

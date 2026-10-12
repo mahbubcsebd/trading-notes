@@ -1,0 +1,179 @@
+{
+  "id": "trade-setup-xauusd-01",
+  "title": {
+    "en": "XAUUSD H4 — Bullish Order Block Master Trade Setup",
+    "bn": "XAUUSD H4 — বুলিশ অর্ডার ব্লক মাস্টার ট্রেড সেটআপ (১:৪ R:R)"
+  },
+  "symbol": "XAUUSD",
+  "timeframe": "H4",
+  "mode": "synthetic",
+  "type": "trade-setup",
+  "bias": "bullish",
+  "outcome": "win",
+  "tags": [
+    "trade-setup",
+    "order-block",
+    "SMC",
+    "XAUUSD"
+  ],
+  "module": "03-market-structure",
+  "lessonSlugs": [
+    "04-order-blocks"
+  ],
+  "entry": 2302,
+  "stopLoss": 2293,
+  "takeProfit": 2338,
+  "rr": "4.0",
+  "caption": {
+    "en": "Full trade setup on Gold H4: OB mitigation entry at 2302 with clean 1:4 RR run to 2338.",
+    "bn": "গোল্ড H4-এ পূর্ণাঙ্গ ট্রেড সেটআপ: ২৩০২ অর্ডার ব্লকে নিখুঁত এন্ট্রি এবং ২৩৩৮ টার্গেটে ১:৪ R:R অর্জন।"
+  },
+  "notes": {
+    "en": "Entered on OB mitigation at 2302 with tight SL at 2293. TP hit at 2338 for a clean 1:4 RR trade.",
+    "bn": "২৩০২-এ OB মিটিগেশন এন্ট্রি, টাইট স্টপ লস ২২৯৩। ২৩৩৮-এ টেক প্রফিট স্পর্শ করে ১:৪ R:R নিশ্চিত।"
+  },
+  "updatedAt": "2026-10-10T12:00:00Z",
+  "candles": [
+    {
+      "i": 0,
+      "o": 2325,
+      "h": 2330,
+      "l": 2318,
+      "c": 2328
+    },
+    {
+      "i": 1,
+      "o": 2328,
+      "h": 2335,
+      "l": 2322,
+      "c": 2332
+    },
+    {
+      "i": 2,
+      "o": 2332,
+      "h": 2340,
+      "l": 2316,
+      "c": 2318
+    },
+    {
+      "i": 3,
+      "o": 2318,
+      "h": 2322,
+      "l": 2304,
+      "c": 2306
+    },
+    {
+      "i": 4,
+      "o": 2306,
+      "h": 2310,
+      "l": 2299,
+      "c": 2304
+    },
+    {
+      "i": 5,
+      "o": 2304,
+      "h": 2308,
+      "l": 2296,
+      "c": 2300
+    },
+    {
+      "i": 6,
+      "o": 2300,
+      "h": 2302,
+      "l": 2292,
+      "c": 2296
+    },
+    {
+      "i": 7,
+      "o": 2295,
+      "h": 2310,
+      "l": 2291,
+      "c": 2308
+    },
+    {
+      "i": 8,
+      "o": 2308,
+      "h": 2322,
+      "l": 2305,
+      "c": 2320
+    },
+    {
+      "i": 9,
+      "o": 2320,
+      "h": 2334,
+      "l": 2316,
+      "c": 2332
+    },
+    {
+      "i": 10,
+      "o": 2332,
+      "h": 2340,
+      "l": 2328,
+      "c": 2338
+    }
+  ],
+  "annotations": [
+    {
+      "type": "zone",
+      "from": {
+        "i": 6,
+        "price": 2302
+      },
+      "to": {
+        "i": 7,
+        "price": 2294
+      },
+      "label": "Bullish OB",
+      "color": "#22c55e"
+    },
+    {
+      "type": "hline",
+      "price": 2302,
+      "label": "Entry",
+      "color": "#6366f1",
+      "style": "solid"
+    },
+    {
+      "type": "hline",
+      "price": 2293,
+      "label": "SL",
+      "color": "#ef4444",
+      "style": "dotted"
+    },
+    {
+      "type": "hline",
+      "price": 2338,
+      "label": "TP ✓",
+      "color": "#22c55e",
+      "style": "dashed"
+    },
+    {
+      "type": "marker",
+      "i": 7,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Entry ↑"
+    },
+    {
+      "type": "marker",
+      "i": 10,
+      "position": "aboveBar",
+      "shape": "circle",
+      "text": "TP Hit ✓"
+    }
+  ],
+  "explanation": {
+    "en": "A high-timeframe institutional setup on Gold H4. Price formed a massive displacement move breaking market structure (BOS) above 2320, leaving behind an unmitigated Bullish Order Block between 2295 and 2304. A pending buy limit was placed at 2302. Price retraced smoothly, wicked into the block, and expanded forcefully to hit the 2338 swing high target for an exemplary 1:4 Risk-to-Reward gain.",
+    "bn": "গোল্ড H4-এ একটি উচ্চমানের প্রাতিষ্ঠানিক সেটআপ। ২৩২০-এর ওপরে মার্কেট স্ট্রাকচার ব্রেক (BOS) করে প্রাইস ২২৯৫ থেকে ২৩০৪-এ একটি আনমিটিগেটেড বুলিশ অর্ডার ব্লক রেখে যায়। ২৩০২ লেভেলে বাই লিমিট দেওয়া ছিল। প্রাইস সুন্দরভাবে রিট্রেস করে ব্লকে টাচ করে এবং মুহূর্তের মধ্যে ২৩৩৮ টার্গেটে পৌঁছে যায়, যা ১:৪ রিস্ক রিওয়ার্ড এনে দেয়।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "High timeframe H4 Order Blocks produce the most reliable and stable reward-to-risk ratios.",
+      "bn": "H4-এর মতো হাইয়ার টাইমফ্রেমের অর্ডার ব্লকগুলো সবচেয়ে বেশি নির্ভরযোগ্য ও স্থিতিশীল প্রফিট দেয়।"
+    },
+    {
+      "en": "Calculate position size strictly based on the 9-point stop loss distance to risk only 1% of account.",
+      "bn": "৯ পয়েন্ট স্টপ লস দূরত্বের ওপর ভিত্তি করে লট সাইজ নির্ধারণ করুন যাতে অ্যাকাউন্টের মাত্র ১% ঝুঁকি থাকে।"
+    }
+  ]
+}

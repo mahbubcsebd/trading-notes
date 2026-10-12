@@ -1,0 +1,172 @@
+{
+  "id": "fvg-01",
+  "title": {
+    "en": "Fair Value Gap (FVG) — Inefficiency Fill & Continuation",
+    "bn": "ফেয়ার ভ্যালু গ্যাপ (FVG) — প্রাইস ইমব্যালান্স ফিল ও রি-লঞ্চ"
+  },
+  "symbol": "EURUSD",
+  "timeframe": "M15",
+  "mode": "synthetic",
+  "type": "concept",
+  "bias": "bullish",
+  "outcome": null,
+  "tags": [
+    "FVG",
+    "imbalance",
+    "SMC",
+    "retracement"
+  ],
+  "module": "03-market-structure",
+  "lessonSlugs": [
+    "05-fvg-imbalance"
+  ],
+  "caption": {
+    "en": "3-candle FVG formed on strong impulse; price returns to mitigate Consequent Encroachment (50%).",
+    "bn": "৩ ক্যান্ডেলের তীব্র গতিতে তৈরি FVG; প্রাইস ৫০% কনসিকোয়েন্ট এনক্রোচমেন্ট ফিল করে পুনরায় ছুটতে থাকে।"
+  },
+  "notes": {
+    "en": "The gap between Candle 1 high and Candle 3 low forms an unfilled liquidity void. Price retraced precisely to the 50% midpoint before continuing.",
+    "bn": "১ম ক্যান্ডেলের হাই এবং ৩য় ক্যান্ডেলের লো-এর মধ্যকার ফাঁকা স্থানটিই FVG। প্রাইস ৫০% ফিল করে নতুন মুভ শুরু করেছে।"
+  },
+  "updatedAt": "2026-10-09T10:00:00Z",
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.082,
+      "h": 1.0826,
+      "l": 1.0816,
+      "c": 1.0823
+    },
+    {
+      "i": 1,
+      "o": 1.0823,
+      "h": 1.0828,
+      "l": 1.0819,
+      "c": 1.0826
+    },
+    {
+      "i": 2,
+      "o": 1.0826,
+      "h": 1.083,
+      "l": 1.0822,
+      "c": 1.0828
+    },
+    {
+      "i": 3,
+      "o": 1.0828,
+      "h": 1.087,
+      "l": 1.0826,
+      "c": 1.0865
+    },
+    {
+      "i": 4,
+      "o": 1.0865,
+      "h": 1.0875,
+      "l": 1.086,
+      "c": 1.0872
+    },
+    {
+      "i": 5,
+      "o": 1.0872,
+      "h": 1.0876,
+      "l": 1.0858,
+      "c": 1.0862
+    },
+    {
+      "i": 6,
+      "o": 1.0862,
+      "h": 1.0866,
+      "l": 1.0848,
+      "c": 1.085
+    },
+    {
+      "i": 7,
+      "o": 1.085,
+      "h": 1.0856,
+      "l": 1.0838,
+      "c": 1.084
+    },
+    {
+      "i": 8,
+      "o": 1.084,
+      "h": 1.0846,
+      "l": 1.0832,
+      "c": 1.0835
+    },
+    {
+      "i": 9,
+      "o": 1.0835,
+      "h": 1.088,
+      "l": 1.0833,
+      "c": 1.0878
+    },
+    {
+      "i": 10,
+      "o": 1.0878,
+      "h": 1.089,
+      "l": 1.0874,
+      "c": 1.0887
+    }
+  ],
+  "annotations": [
+    {
+      "type": "zone",
+      "from": {
+        "i": 2,
+        "price": 1.083
+      },
+      "to": {
+        "i": 4,
+        "price": 1.086
+      },
+      "label": "FVG",
+      "color": "#6366f1"
+    },
+    {
+      "type": "marker",
+      "i": 3,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Strong Impulse"
+    },
+    {
+      "type": "hline",
+      "price": 1.0845,
+      "label": "CE (50%)",
+      "color": "#f5b301",
+      "style": "dotted"
+    },
+    {
+      "type": "marker",
+      "i": 8,
+      "position": "belowBar",
+      "shape": "circle",
+      "text": "FVG Fill"
+    },
+    {
+      "type": "marker",
+      "i": 9,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Continue ↑"
+    }
+  ],
+  "explanation": {
+    "en": "A Fair Value Gap occurs when aggressive institutional displacement creates a 3-candle imbalance where Candle 1 high does not overlap Candle 3 low. The market algorithm seeks delivery efficiency and pulls price back into this void. When price taps the Consequent Encroachment (50% of the FVG), smart money adds to their positions, driving price toward external liquidity.",
+    "bn": "ফেয়ার ভ্যালু গ্যাপ তৈরি হয় যখন অতিরিক্ত প্রাতিষ্ঠানিক মোমেন্টামের কারণে ১ম ক্যান্ডেলের হাই এবং ৩য় ক্যান্ডেলের লো একে অপরকে ওভারল্যাপ করতে পারে না। মার্কেট অ্যালগরিদম প্রাইসকে ব্যালান্স করতে এই শূন্যস্থানে ফিরে আসে। বিশেষ করে গ্যাপের ৫০% লেভেল স্পর্শ করার সাথে সাথে বড় প্লেয়াররা নতুন পজিশন নিয়ে মার্কেটকে ট্রেন্ডে এগিয়ে নেয়।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Mark the 50% level (Consequent Encroachment); this is the highest reaction sensitivity point.",
+      "bn": "FVG-এর ৫০% মিডপয়েন্ট মার্ক করুন; এটি রিঅ্যাকশনের জন্য সবচেয়ে সংবেদনশীল জায়গা।"
+    },
+    {
+      "en": "If candle bodies close completely through the FVG, the gap is invalidated and becomes a breaker.",
+      "bn": "যদি কোনো ক্যান্ডেলের বডি FVG পার হয়ে সম্পূর্ণ বাইরে ক্লোজ দেয়, তবে সেটআপটি বাতিল হয়ে যায়।"
+    }
+  ],
+  "entry": 1.0855,
+  "stopLoss": 1.083,
+  "takeProfit": 1.092,
+  "rr": "2.6"
+}

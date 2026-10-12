@@ -1,0 +1,165 @@
+{
+  "id": "premium-discount-01",
+  "title": {
+    "en": "Premium vs Discount Zones — The 50% Equilibrium Rule",
+    "bn": "প্রিমিয়াম বনাম ডিসকাউন্ট জোন — ৫০% ইকুইলিব্রিয়াম নিয়ম"
+  },
+  "symbol": "XAUUSD",
+  "timeframe": "H4",
+  "mode": "synthetic",
+  "type": "concept",
+  "bias": "neutral",
+  "outcome": null,
+  "tags": [
+    "premium",
+    "discount",
+    "equilibrium",
+    "SMC",
+    "concept"
+  ],
+  "module": "03-market-structure",
+  "lessonSlugs": [
+    "07-premium-discount"
+  ],
+  "caption": {
+    "en": "Identifying premium (expensive) and discount (cheap) halves of an institutional dealing range.",
+    "bn": "প্রাতিষ্ঠানিক ডিলিং রেঞ্জে ৫০% ইকুইলিব্রিয়াম দিয়ে সস্তা (ডিসকাউন্ট) ও দামি (প্রিমিয়াম) জোন শনাক্তকরণ।"
+  },
+  "notes": {
+    "en": "The 50% Equilibrium line divides the dealing range. Smart money only buys in discount (below 50%) and sells in premium (above 50%).",
+    "bn": "৫০% লাইন রেঞ্জকে দুই ভাগে ভাগ করে। স্মার্ট মানি ডিসকাউন্টে কেনে এবং প্রিমিয়ামে বিক্রি করে।"
+  },
+  "updatedAt": "2026-10-09T16:00:00Z",
+  "candles": [
+    {
+      "i": 0,
+      "o": 2300,
+      "h": 2308,
+      "l": 2296,
+      "c": 2304
+    },
+    {
+      "i": 1,
+      "o": 2304,
+      "h": 2310,
+      "l": 2300,
+      "c": 2307
+    },
+    {
+      "i": 2,
+      "o": 2307,
+      "h": 2313,
+      "l": 2303,
+      "c": 2310
+    },
+    {
+      "i": 3,
+      "o": 2310,
+      "h": 2316,
+      "l": 2306,
+      "c": 2313
+    },
+    {
+      "i": 4,
+      "o": 2313,
+      "h": 2319,
+      "l": 2309,
+      "c": 2316
+    },
+    {
+      "i": 5,
+      "o": 2316,
+      "h": 2322,
+      "l": 2311,
+      "c": 2318
+    },
+    {
+      "i": 6,
+      "o": 2318,
+      "h": 2325,
+      "l": 2314,
+      "c": 2320
+    },
+    {
+      "i": 7,
+      "o": 2320,
+      "h": 2326,
+      "l": 2316,
+      "c": 2322
+    },
+    {
+      "i": 8,
+      "o": 2322,
+      "h": 2330,
+      "l": 2318,
+      "c": 2328
+    }
+  ],
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 2300,
+      "label": "Range Low",
+      "color": "#22c55e",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 2330,
+      "label": "Range High",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 2315,
+      "label": "Equilibrium (50%)",
+      "color": "#f5b301",
+      "style": "solid"
+    },
+    {
+      "type": "zone",
+      "from": {
+        "i": 0,
+        "price": 2300
+      },
+      "to": {
+        "i": 4,
+        "price": 2315
+      },
+      "label": "Discount Zone",
+      "color": "#22c55e"
+    },
+    {
+      "type": "zone",
+      "from": {
+        "i": 5,
+        "price": 2315
+      },
+      "to": {
+        "i": 8,
+        "price": 2330
+      },
+      "label": "Premium Zone",
+      "color": "#ef4444"
+    }
+  ],
+  "explanation": {
+    "en": "Commercial and institutional participants treat financial markets like any wholesale business: buy cheap (discount), sell expensive (premium). By identifying the dealing range high and low, the 50% equilibrium line separates the chart. Executing longs in premium or shorts in discount drastically degrades long-term profitability.",
+    "bn": "বড় প্রাতিষ্ঠানিক ব্যবসায়ীরা ট্রেডিংকে পাইকারি বাজারের মতো দেখে: সস্তায় কেনা (ডিসকাউন্ট) এবং চড়া দামে বিক্রি (প্রিমিয়াম)। একটি সুইং রেঞ্জের ৫০% দাগ হলো ইকুইলিব্রিয়াম। ৫০% এর উপরে থাকা অবস্থায় বাই নেওয়া অথবা নিচে থাকা অবস্থায় সেল নেওয়া হলো রিটেইলারদের সবচেয়ে বড় ফাঁদ।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Never enter long positions above the 50% equilibrium level of your trading range.",
+      "bn": "ডিলিং রেঞ্জের ৫০% ইকুইলিব্রিয়ামের ওপরে থাকা অবস্থায় কখনোই নতুন বাই এন্ট্রি খুঁজবেন না।"
+    },
+    {
+      "en": "Combine discount pricing with an Order Block or FVG for institutional grade setups.",
+      "bn": "ডিসকাউন্ট জোনের ভেতরে অর্ডার ব্লক বা FVG থাকলে তা ৯০% নিখুঁত ট্রেডিং সেটআপে পরিণত হয়।"
+    }
+  ],
+  "entry": 2310,
+  "stopLoss": 2285,
+  "takeProfit": 2375,
+  "rr": "2.6"
+}

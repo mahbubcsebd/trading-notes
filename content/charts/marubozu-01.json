@@ -1,0 +1,124 @@
+{
+  "id": "marubozu-01",
+  "title": {
+    "en": "Bullish Marubozu Structural Breakout on Gold",
+    "bn": "গোল্ডে বুলিশ মারুবোজু — নিখুঁত স্ট্রাকচারাল ব্রেকআউট ক্যান্ডেল"
+  },
+  "symbol": "XAUUSD",
+  "timeframe": "H4",
+  "bias": "bullish",
+  "caption": {
+    "en": "Gold fires a 180-pip Bullish Marubozu through key 2320 resistance, kicking off a major bull trend.",
+    "bn": "২৩২০ কী-রেজিস্ট্যান্স গুঁড়িয়ে ১৮০ পিপসের বুলিশ মারুবোজু তৈরি করে শক্তিশালী বুলিশ ধারা চালু করে।"
+  },
+  "candles": [
+    {
+      "i": 0,
+      "o": 2310,
+      "h": 2315,
+      "l": 2308,
+      "c": 2312
+    },
+    {
+      "i": 1,
+      "o": 2312,
+      "h": 2318,
+      "l": 2310,
+      "c": 2315
+    },
+    {
+      "i": 2,
+      "o": 2315,
+      "h": 2335,
+      "l": 2315,
+      "c": 2334
+    },
+    {
+      "i": 3,
+      "o": 2334,
+      "h": 2336,
+      "l": 2325,
+      "c": 2328
+    },
+    {
+      "i": 4,
+      "o": 2328,
+      "h": 2355,
+      "l": 2327,
+      "c": 2352
+    },
+    {
+      "i": 5,
+      "o": 2352,
+      "h": 2375,
+      "l": 2350,
+      "c": 2370
+    }
+  ],
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 2320,
+      "label": "Broken Resistance (2320.00)",
+      "color": "#f5b301",
+      "style": "solid"
+    },
+    {
+      "type": "zone",
+      "from": {
+        "i": 2,
+        "price": 2335
+      },
+      "to": {
+        "i": 2,
+        "price": 2315
+      },
+      "label": "Bullish Marubozu",
+      "color": "#22c55e"
+    },
+    {
+      "type": "hline",
+      "price": 2325,
+      "label": "50% Retest Entry (2325.00)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 2312,
+      "label": "Stop Loss (2312.00)",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 2370,
+      "label": "Take Profit Target (2370.00)",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "notes": {
+    "en": "A Marubozu has no upper or lower wicks (or negligible ones). Price opened at the absolute low and closed at the absolute high.",
+    "bn": "মারুবোজুতে কোনো ওপর বা নিচের উইক থাকে না। ওপেনিং ছিল সর্বনিম্ন পয়েন্টে এবং ক্লোজিং সর্বোচ্চ পয়েন্টে।"
+  },
+  "explanation": {
+    "en": "A Marubozu is the purest representation of directional institutional conviction. Opening at the absolute session low and closing at the absolute high means buyers dominated every single minute of the candle. When printed through major resistance, it confirms a genuine structural breakout rather than a fakeout trap.",
+    "bn": "মারুবোজু হলো প্রাতিষ্ঠানিক মোমেন্টামের সবচেয়ে স্পষ্ট ও খাঁটি রূপ। ক্যান্ডেলটি একদম নিচের পয়েন্টে ওপেন হয়ে বিরতিহীনভাবে সর্বোচ্চ পয়েন্টে গিয়ে ক্লোজ হয়। কোনো উইক না থাকার অর্থ হলো পুরো সময়জুড়ে সেলারদের বিন্দুমাত্র কোনো প্রতিরোধ ছিল না। রেজিস্ট্যান্সের ওপর এমন ক্যান্ডেল ট্রু ব্রেকআউট প্রমাণ করে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Do not fade or short against a Marubozu; the directional momentum is overwhelmingly strong.",
+      "bn": "মারুবোজু ক্যান্ডেলের বিপরীতে কখনোই রিভার্সাল সেল নেওয়ার চেষ্টা করবেন না; মোমেন্টাম অতি তীব্র।"
+    },
+    {
+      "en": "Enter on a shallow pullback to the 50% midpoint of the Marubozu body with stops below its open.",
+      "bn": "মারুবোজুর ৫০% বডিতে হালকা রিট্রেসমেন্ট পেলে বাই নিন এবং এর ওপেনিং পয়েন্টের নিচে স্টপ লস দিন।"
+    }
+  ],
+  "entry": 2325,
+  "stopLoss": 2310,
+  "takeProfit": 2368,
+  "rr": "2.9",
+  "type": "pattern"
+}

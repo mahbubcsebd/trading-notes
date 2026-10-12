@@ -1,0 +1,144 @@
+{
+  "id": "trade-review-loss-01",
+  "title": {
+    "en": "Trade Review — FOMO Premature Entry on EURUSD (Loss)",
+    "bn": "ট্রেড রিভিউ — EURUSD-তে FOMO প্রিম্যাচিওর এন্ট্রি (লস ট্রেড পোস্টমর্টেম)"
+  },
+  "symbol": "EURUSD",
+  "timeframe": "H1",
+  "mode": "synthetic",
+  "type": "trade-review",
+  "bias": "bullish",
+  "outcome": "loss",
+  "tags": [
+    "trade-review",
+    "loss",
+    "mistake",
+    "fakeout",
+    "FOMO"
+  ],
+  "module": "04-candlesticks",
+  "lessonSlugs": [],
+  "entry": 1.083,
+  "stopLoss": 1.081,
+  "takeProfit": 1.087,
+  "rr": "2.0",
+  "caption": {
+    "en": "FOMO entry before official candle close. Price swept the stop before eventually moving to target.",
+    "bn": "ক্যান্ডেল ক্লোজের আগে তাড়াহুড়ো করে FOMO এন্ট্রি। প্রাইস স্টপ লস সুইপ করে পরে কাঙ্ক্ষিত টার্গেটে যায়।"
+  },
+  "notes": {
+    "en": "Entered prematurely without waiting for candle close confirmation. Price dipped into liquidity pool to tag the stop before reversing to original target. Core lesson: always wait for candle close!",
+    "bn": "ক্যান্ডেল ক্লোজের অপেক্ষা না করে আগেভাগে ঢোকার মারাত্মক পরিণতি। প্রাইস স্টপ লস হান্ট করে তবেই টার্গেটে গেছে। শিক্ষা: সব সময় ক্যান্ডেল ক্লোজের অপেক্ষা করুন!"
+  },
+  "updatedAt": "2026-10-10T16:00:00Z",
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.08,
+      "h": 1.0808,
+      "l": 1.0795,
+      "c": 1.0804
+    },
+    {
+      "i": 1,
+      "o": 1.0804,
+      "h": 1.0812,
+      "l": 1.08,
+      "c": 1.0808
+    },
+    {
+      "i": 2,
+      "o": 1.0808,
+      "h": 1.0818,
+      "l": 1.0804,
+      "c": 1.0815
+    },
+    {
+      "i": 3,
+      "o": 1.0815,
+      "h": 1.0832,
+      "l": 1.0812,
+      "c": 1.0828
+    },
+    {
+      "i": 4,
+      "o": 1.0828,
+      "h": 1.0838,
+      "l": 1.0807,
+      "c": 1.081
+    },
+    {
+      "i": 5,
+      "o": 1.081,
+      "h": 1.0815,
+      "l": 1.0798,
+      "c": 1.0801
+    },
+    {
+      "i": 6,
+      "o": 1.0801,
+      "h": 1.084,
+      "l": 1.0799,
+      "c": 1.0837
+    },
+    {
+      "i": 7,
+      "o": 1.0837,
+      "h": 1.0858,
+      "l": 1.0833,
+      "c": 1.0855
+    },
+    {
+      "i": 8,
+      "o": 1.0855,
+      "h": 1.0872,
+      "l": 1.0851,
+      "c": 1.087
+    }
+  ],
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 1.083,
+      "label": "Entry (premature)",
+      "color": "#6366f1",
+      "style": "solid"
+    },
+    {
+      "type": "hline",
+      "price": 1.081,
+      "label": "SL Hit ✗",
+      "color": "#ef4444",
+      "style": "dotted"
+    },
+    {
+      "type": "marker",
+      "i": 3,
+      "position": "aboveBar",
+      "shape": "arrowUp",
+      "text": "Early Entry ← FOMO"
+    },
+    {
+      "type": "marker",
+      "i": 4,
+      "position": "belowBar",
+      "shape": "arrowDown",
+      "text": "SL Hit"
+    }
+  ],
+  "explanation": {
+    "en": "Post-mortem analysis of an execution mistake. The trader identified the correct market direction (bullish), but acted on fear of missing out (FOMO) and bought mid-candle before the 1-hour bar closed. Market makers used the last 10 minutes of the hour to sweep the low, hitting the traders stop loss before immediately rocketing 60 pips toward the planned profit target.",
+    "bn": "একটি বাস্তব ভুলের ট্রেড পোস্টমর্টেম বিশ্লেষণ। ট্রেডারের মার্কেট ডিরেকশন সঠিক ছিল (বুলিশ), কিন্তু ক্যান্ডেল ক্লোজ হওয়ার আগেই FOMO-এর বশবর্তী হয়ে তাড়াহুড়ো করে বাই নেন। স্মার্ট মানি ঘণ্টার শেষ ১০ মিনিটে নিচের লিকুইডিটি পুলে ডাইভ দিয়ে ট্রেডারের স্টপ লস খেয়ে ফেলে, এবং তারপর চোখের পলকে ৬০ পিপস টার্গেটে পৌঁছে যায়।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Direction alone is not enough; timing and waiting for the official candle close protects your capital.",
+      "bn": "শুধু দিক ঠিক থাকলেই হয় না; নিখুঁত টাইমিং এবং ক্যান্ডেল ক্লোজের অপেক্ষা করাই আসল পুঁজি রক্ষা করে।"
+    },
+    {
+      "en": "Always place your stop loss behind the structural liquidity pool, not right on it.",
+      "bn": "স্টপ লস কখনোই স্পষ্ট সুইং পয়েন্টের ঠিক ওপরে রাখবেন না; বাফার দিয়ে কাঠামোর বাইরে রাখুন।"
+    }
+  ]
+}

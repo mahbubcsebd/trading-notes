@@ -1,0 +1,124 @@
+{
+  "id": "evening-star-01",
+  "title": {
+    "en": "Evening Star 3-Candle Reversal at Daily Resistance",
+    "bn": "ডেইলি রেজিস্ট্যান্সে ইভনিং স্টার — ৩-ক্যান্ডেল বিয়ারিশ রিভার্সাল"
+  },
+  "symbol": "XAUUSD",
+  "timeframe": "H4",
+  "bias": "bearish",
+  "caption": {
+    "en": "Gold forms an Evening Star at key 2340 resistance, triggering an aggressive 300-pip selloff.",
+    "bn": "গোল্ড ২৩৪০ রেজিস্ট্যান্সে ৩ ক্যান্ডেলের ইভনিং স্টার তৈরি করে ৩০০ পিপস বিশাল পতন ঘটায়।"
+  },
+  "candles": [
+    {
+      "i": 0,
+      "o": 2315,
+      "h": 2322,
+      "l": 2312,
+      "c": 2320
+    },
+    {
+      "i": 1,
+      "o": 2320,
+      "h": 2332,
+      "l": 2318,
+      "c": 2330
+    },
+    {
+      "i": 2,
+      "o": 2330,
+      "h": 2342,
+      "l": 2328,
+      "c": 2340
+    },
+    {
+      "i": 3,
+      "o": 2341,
+      "h": 2346,
+      "l": 2339,
+      "c": 2342
+    },
+    {
+      "i": 4,
+      "o": 2341,
+      "h": 2342,
+      "l": 2320,
+      "c": 2322
+    },
+    {
+      "i": 5,
+      "o": 2322,
+      "h": 2324,
+      "l": 2305,
+      "c": 2308
+    }
+  ],
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 2346,
+      "label": "HTF Key Supply (2346.00)",
+      "color": "#ef4444",
+      "style": "solid"
+    },
+    {
+      "type": "zone",
+      "from": {
+        "i": 2,
+        "price": 2346
+      },
+      "to": {
+        "i": 4,
+        "price": 2320
+      },
+      "label": "Evening Star Pattern",
+      "color": "#f43f5e"
+    },
+    {
+      "type": "hline",
+      "price": 2320,
+      "label": "Entry Sell (2320.00)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 2350,
+      "label": "Stop Loss (2350.00)",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 2260,
+      "label": "Take Profit Target (2260.00)",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "notes": {
+    "en": "Three-candle masterclass: Candle 1 is large green expansion, Candle 2 is small indecision star, and Candle 3 is strong red close below Candle 1 midpoint.",
+    "bn": "৩ ক্যান্ডেলের মাস্টারক্লাস: ১ম ক্যান্ডেল বড় গ্রিন, ২য় ক্যান্ডেল ছোট স্টার এবং ৩য় ক্যান্ডেল ১ম ক্যান্ডেলের অর্ধেকের নিচে লাল ক্লোজ।"
+  },
+  "explanation": {
+    "en": "The Evening Star is one of the highest-probability candlestick reversal formations. Candle 1 shows strong bull momentum into resistance. Candle 2 gaps or pauses at the top, showing buyer exhaustion. Candle 3 confirms the regime shift by closing deep into the body of Candle 1, proving that bears have decisively seized control of order flow.",
+    "bn": "ইভনিং স্টার সবচেয়ে শক্তিশালী বিয়ারিশ রিভার্সাল প্যাটার্নগুলোর একটি। ১ম ক্যান্ডেল বায়ারদের জোয়ার দেখায়, ২য় ক্যান্ডেল শীর্ষে দ্বিধা ও ক্লান্তি নির্দেশ করে, এবং ৩য় শক্তিশালী লাল ক্যান্ডেল ১ম ক্যান্ডেলের গভীরে ক্লোজ দিয়ে সেলারদের রাজত্ব নিশ্চিত করে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Candle 3 MUST close at least 50% below the real body of Candle 1.",
+      "bn": "৩য় ক্যান্ডেলটিকে অবশ্যই ১ম ক্যান্ডেলের ৫০% এর নিচে শক্তভাবে ক্লোজ হতে হবে।"
+    },
+    {
+      "en": "Aggressive traders enter on Candle 3 close; conservative traders wait for a 38.2% pullback.",
+      "bn": "অ্যাগ্রেসিভ ট্রেডাররা ৩য় ক্যান্ডেল ক্লোজে এন্ট্রি নেন; কনজারভেটিভরা কিছুটা রিট্রেসমেন্টের অপেক্ষা করেন।"
+    }
+  ],
+  "entry": 2332,
+  "stopLoss": 2346,
+  "takeProfit": 2285,
+  "rr": "3.3",
+  "type": "pattern"
+}

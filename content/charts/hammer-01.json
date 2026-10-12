@@ -1,0 +1,131 @@
+{
+  "id": "hammer-01",
+  "title": {
+    "en": "Bullish Hammer at Major Support Floor",
+    "bn": "মেজর সাপোর্টে বুলিশ হ্যামার — আগ্রাসী রিজেকশন"
+  },
+  "symbol": "GBPUSD",
+  "timeframe": "H1",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bullish",
+  "outcome": null,
+  "tags": [
+    "hammer",
+    "reversal",
+    "support",
+    "bullish"
+  ],
+  "module": "04-candlesticks",
+  "lessonSlugs": [
+    "06-hammer-inverted-hammer"
+  ],
+  "caption": {
+    "en": "Textbook hammer candle at strong support level showing massive buyer rejection of the lows.",
+    "bn": "শক্তিশালী সাপোর্টে ক্লাসিক হ্যামার ক্যান্ডেল যা প্রমাণ করে নিচের প্রাইসে বায়ারদের তীব্র চাহিদা তৈরি হয়েছে।"
+  },
+  "notes": {
+    "en": "Long lower wick (over 2x body height) proves sellers completely failed to hold lower prices.",
+    "bn": "বডির চেয়ে দ্বিগুণেরও বড় নিচের উইক প্রমাণ করে সেলাররা প্রাইস ধরে রাখতে সম্পূর্ণ ব্যর্থ হয়েছে।"
+  },
+  "updatedAt": "2026-10-07T10:00:00Z",
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.275,
+      "h": 1.276,
+      "l": 1.274,
+      "c": 1.2745
+    },
+    {
+      "i": 1,
+      "o": 1.2745,
+      "h": 1.275,
+      "l": 1.273,
+      "c": 1.2735
+    },
+    {
+      "i": 2,
+      "o": 1.2735,
+      "h": 1.274,
+      "l": 1.272,
+      "c": 1.2725
+    },
+    {
+      "i": 3,
+      "o": 1.2725,
+      "h": 1.273,
+      "l": 1.271,
+      "c": 1.2715
+    },
+    {
+      "i": 4,
+      "o": 1.2715,
+      "h": 1.2718,
+      "l": 1.2695,
+      "c": 1.2713
+    },
+    {
+      "i": 5,
+      "o": 1.2713,
+      "h": 1.2715,
+      "l": 1.2688,
+      "c": 1.2712
+    },
+    {
+      "i": 6,
+      "o": 1.271,
+      "h": 1.2714,
+      "l": 1.268,
+      "c": 1.2711
+    },
+    {
+      "i": 7,
+      "o": 1.271,
+      "h": 1.2748,
+      "l": 1.2702,
+      "c": 1.2745
+    },
+    {
+      "i": 8,
+      "o": 1.2746,
+      "h": 1.276,
+      "l": 1.2742,
+      "c": 1.2758
+    }
+  ],
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 1.27,
+      "label": "Support",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "marker",
+      "i": 6,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Hammer"
+    }
+  ],
+  "explanation": {
+    "en": "A Hammer pattern emerges at the trough of a downtrend. During the session, sellers pushed price aggressively down, but buyers stepped in forcefully, driving the price back up to close near the session high. The long lower shadow represents a liquidity sweep and wholesale rejection of lower prices.",
+    "bn": "ডাউনট্রেন্ডের নিচে হ্যামার তৈরি হওয়া অত্যন্ত শক্তিশালী রিভার্সাল ইঙ্গিত। সেশনের শুরুতে সেলাররা প্রাইস অনেক নিচে নামিয়ে দিলেও শেষ পর্যন্ত বায়াররা বিপুল শক্তিতে প্রবেশ করে ওপেনিং প্রাইসের কাছাকাছি বা উপরে ক্লোজ করায়। দীর্ঘ নিচের উইকটি প্রমাণ করে বিক্রেতারা শক্তি হারিয়ে ফেলেছে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Lower wick must be at least twice the length of the real body with minimal/no upper wick.",
+      "bn": "নিচের উইকটি অবশ্যই রিয়েল বডির অন্তত দ্বিগুণ লম্বা হতে হবে এবং উপরের উইক খুব ছোট বা শূন্য হতে হবে।"
+    },
+    {
+      "en": "Enter above the hammer high with stop loss comfortably below the low wick.",
+      "bn": "হ্যামারের হাই ব্রেক করলে বাই এন্ট্রি নিন এবং স্টপ লস নিচের উইকের কিছুটা নিচে নিরাপদ দূরত্বে রাখুন।"
+    }
+  ],
+  "entry": 1.264,
+  "stopLoss": 1.258,
+  "takeProfit": 1.281,
+  "rr": "2.8"
+}

@@ -1,0 +1,179 @@
+{
+  "id": "fibonacci-retracement-01",
+  "title": {
+    "en": "Fibonacci Golden Pocket (61.8% – 65%) Retracement",
+    "bn": "ফিবোনাচি গোল্ডেন পকেট (৬১.৮% – ৬৫%) রিট্রেসমেন্ট রিজেকশন"
+  },
+  "symbol": "XAUUSD",
+  "timeframe": "H4",
+  "mode": "synthetic",
+  "type": "concept",
+  "bias": "bullish",
+  "outcome": null,
+  "tags": [
+    "fibonacci",
+    "retracement",
+    "golden-pocket",
+    "confluence"
+  ],
+  "module": "05-indicators",
+  "lessonSlugs": [
+    "04-fibonacci"
+  ],
+  "caption": {
+    "en": "Price retraces into the 61.8%–65% Golden Pocket confluence zone and launches higher.",
+    "bn": "প্রাইস সুনির্দিষ্টভাবে ফিবোনাচি ৬১.৮%–৬৫% গোল্ডেন পকেটে রিট্রেস করে বড় আপওয়ার্ড বাউন্স দেয়।"
+  },
+  "notes": {
+    "en": "After a strong bullish impulse, price pulled back to the Fibonacci golden pocket (0.618–0.65) and found strong support.",
+    "bn": "স্ট্রং বুলিশ ইমপালসিভ মুভের পর প্রাইস ৬১.৮%–৬৫% গোল্ডেন পকেটে পুলব্যাক করে কনফ্লুয়েন্স সাপোর্ট খুঁজে পায়।"
+  },
+  "updatedAt": "2026-10-09T12:00:00Z",
+  "candles": [
+    {
+      "i": 0,
+      "o": 2280,
+      "h": 2286,
+      "l": 2276,
+      "c": 2283
+    },
+    {
+      "i": 1,
+      "o": 2283,
+      "h": 2292,
+      "l": 2280,
+      "c": 2290
+    },
+    {
+      "i": 2,
+      "o": 2290,
+      "h": 2302,
+      "l": 2288,
+      "c": 2300
+    },
+    {
+      "i": 3,
+      "o": 2300,
+      "h": 2314,
+      "l": 2297,
+      "c": 2312
+    },
+    {
+      "i": 4,
+      "o": 2312,
+      "h": 2328,
+      "l": 2309,
+      "c": 2325
+    },
+    {
+      "i": 5,
+      "o": 2325,
+      "h": 2338,
+      "l": 2320,
+      "c": 2334
+    },
+    {
+      "i": 6,
+      "o": 2334,
+      "h": 2340,
+      "l": 2318,
+      "c": 2322
+    },
+    {
+      "i": 7,
+      "o": 2322,
+      "h": 2326,
+      "l": 2308,
+      "c": 2312
+    },
+    {
+      "i": 8,
+      "o": 2312,
+      "h": 2316,
+      "l": 2300,
+      "c": 2304
+    },
+    {
+      "i": 9,
+      "o": 2304,
+      "h": 2308,
+      "l": 2296,
+      "c": 2300
+    },
+    {
+      "i": 10,
+      "o": 2300,
+      "h": 2306,
+      "l": 2294,
+      "c": 2297
+    },
+    {
+      "i": 11,
+      "o": 2297,
+      "h": 2342,
+      "l": 2295,
+      "c": 2340
+    },
+    {
+      "i": 12,
+      "o": 2340,
+      "h": 2352,
+      "l": 2337,
+      "c": 2349
+    }
+  ],
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 2297,
+      "label": "0.618 Fib",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 2293,
+      "label": "0.65 Fib",
+      "color": "#f5b301",
+      "style": "dotted"
+    },
+    {
+      "type": "zone",
+      "from": {
+        "i": 9,
+        "price": 2300
+      },
+      "to": {
+        "i": 10,
+        "price": 2293
+      },
+      "label": "Golden Pocket",
+      "color": "#f5b301"
+    },
+    {
+      "type": "marker",
+      "i": 11,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Bounce from GP ↑"
+    }
+  ],
+  "explanation": {
+    "en": "Institutions rarely buy at the top of an impulsive move; they wait for discount pricing. By measuring the low-to-high swing of the impulse wave, the 61.8% to 65% zone represents the algorithmic \"Golden Pocket\" where risk-to-reward is mathematically optimized. When this zone aligns with a prior breaker or order block, reversal probability exceeds 70%.",
+    "bn": "বড় প্রাতিষ্ঠানিক ফান্ডগুলো কখনোই হাই প্রাইসে কেনে না; তারা ডিসকাউন্ট বা কম দামের অপেক্ষা করে। ইমপালসিভ ওয়েভের বটম থেকে টপ পর্যন্ত ফিবোনাচি টানলে ৬১.৮% থেকে ৬৫% জোনটি হলো \"গোল্ডেন পকেট\", যেখানে সর্বনিম্ন রিস্কে সর্বোচ্চ রিওয়ার্ড পাওয়া যায়। পুরোনো সাপোর্ট ও অর্ডার ব্লকের সাথে এই জোনের মেলবন্ধন ঘটলে এটি অপ্রতিরোধ্য সেটআপে পরিণত হয়।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Draw Fibonacci strictly from the true swing low wick to the absolute swing high wick.",
+      "bn": "ফিবোনাচি সব সময় নিখুঁত সুইং লো উইক থেকে সুইং হাই উইক পর্যন্ত পরিমাপ করতে হবে।"
+    },
+    {
+      "en": "Never blind limit order: look for candlestick rejection (Hammer, Pin Bar) inside the golden pocket.",
+      "bn": "ব্লাইন্ড লিমিট অর্ডার দেবেন না; গোল্ডেন পকেটে পিনবার বা রিজেকশন ক্যান্ডেল দেখে কনফার্মেশন সহ ঢুকুন।"
+    }
+  ],
+  "entry": 2315,
+  "stopLoss": 2298,
+  "takeProfit": 2365,
+  "rr": "2.9"
+}

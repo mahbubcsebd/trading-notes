@@ -1,0 +1,123 @@
+{
+  "id": "morning-star-01",
+  "title": {
+    "en": "Morning Star 3-Candle Bullish Reversal at Key Support",
+    "bn": "মেজর সাপোর্টে মর্নিং স্টার — ৩-ক্যান্ডেল বুলিশ রিভার্সাল মাস্টারক্লাস"
+  },
+  "symbol": "EURUSD",
+  "timeframe": "H4",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bullish",
+  "outcome": null,
+  "tags": [
+    "EURUSD",
+    "Morning-Star",
+    "Candlestick",
+    "Reversal"
+  ],
+  "module": "04-candlesticks",
+  "lessonSlugs": [
+    "03-two-candle-patterns"
+  ],
+  "caption": {
+    "en": "A textbook 3-candle Morning Star pattern ending a 150-pip downtrend and initiating a strong rally.",
+    "bn": "১৫০ পিপস ডাউনট্রেন্ড সমাপ্ত করে সাপোর্টে ৩ ক্যান্ডেলের মর্নিং স্টার গঠন ও বড় বুলিশ র‍্যালি।"
+  },
+  "notes": {
+    "en": "Candle 1 is a heavy bearish candle, Candle 2 is an indecision star at support, and Candle 3 is a surging bullish expansion confirming buyer dominance.",
+    "bn": "১ম ক্যান্ডেল বড় লাল, ২য় ক্যান্ডেল সাপোর্টে ছোট স্টার এবং ৩য় ক্যান্ডেল শক্তিশালী গ্রিন ক্লোজ যা বায়ারদের প্রাধান্য প্রমাণ করে।"
+  },
+  "updatedAt": "2026-10-06T09:00:00Z",
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.092,
+      "h": 1.0925,
+      "l": 1.089,
+      "c": 1.0895
+    },
+    {
+      "i": 1,
+      "o": 1.0895,
+      "h": 1.09,
+      "l": 1.0865,
+      "c": 1.087
+    },
+    {
+      "i": 2,
+      "o": 1.087,
+      "h": 1.0875,
+      "l": 1.084,
+      "c": 1.0845
+    },
+    {
+      "i": 3,
+      "o": 1.0842,
+      "h": 1.0848,
+      "l": 1.0836,
+      "c": 1.0841
+    },
+    {
+      "i": 4,
+      "o": 1.0843,
+      "h": 1.0885,
+      "l": 1.084,
+      "c": 1.088
+    },
+    {
+      "i": 5,
+      "o": 1.088,
+      "h": 1.091,
+      "l": 1.0875,
+      "c": 1.0905
+    }
+  ],
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 1.084,
+      "label": "H4 Support Floor",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "zone",
+      "from": {
+        "i": 2,
+        "price": 1.089
+      },
+      "to": {
+        "i": 4,
+        "price": 1.0835
+      },
+      "label": "Morning Star Pattern",
+      "color": "#22c55e"
+    },
+    {
+      "type": "marker",
+      "i": 4,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Confirmation Close"
+    }
+  ],
+  "explanation": {
+    "en": "The Morning Star is the classic bullish counterpart to the Evening Star. Candle 1 shows the final panic wave of selling. Candle 2 represents equilibrium where selling exhausts. Candle 3 acts as the confirmation catalyst, closing well above the midpoint of Candle 1, trapping sellers and triggering aggressive buy-side algorithms.",
+    "bn": "মর্নিং স্টার হলো ট্রেডিংয়ের অন্যতম নির্ভরযোগ্য ৩-ক্যান্ডেল বুলিশ রিভার্সাল। ১ম ক্যান্ডেল সেলারদের শেষ ধাক্কা দেখায়, ২য় ছোট ক্যান্ডেল বোঝায় সেলাররা ক্লান্ত, এবং ৩য় বড় গ্রিন ক্যান্ডেল ১ম ক্যান্ডেলের অর্ধেকের বেশি ওপরে ক্লোজ দিয়ে নিশ্চিত করে যে বায়াররা পুরোপুরি মার্কেট নিয়ন্ত্রণ নিয়েছে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Candle 3 must close above the 50% level of Candle 1 to validate the reversal.",
+      "bn": "৩য় ক্যান্ডেলটিকে অবশ্যই ১ম ক্যান্ডেলের বডির ৫০% লেভেলের উপরে ক্লোজ হতে হবে।"
+    },
+    {
+      "en": "Stop loss sits safely below the lowest point of Candle 2 with minimum 1:2 R:R target.",
+      "bn": "স্টপ লস ২য় ক্যান্ডেলের সর্বনিম্ন উইকের নিচে রাখুন এবং লক্ষ্যমাত্রা অন্তত ১:২ রাখুন।"
+    }
+  ],
+  "entry": 1.078,
+  "stopLoss": 1.0735,
+  "takeProfit": 1.089,
+  "rr": "2.4"
+}

@@ -1,0 +1,124 @@
+{
+  "id": "trade-setup-gbpusd-01",
+  "title": {
+    "en": "GBPUSD Trade Setup — Asian Range Sweep & Mitigation",
+    "bn": "GBPUSD ট্রেড সেটআপ — এশিয়ান হাই সুইপ ও অর্ডার ব্লক মিটিগেশন"
+  },
+  "symbol": "GBPUSD",
+  "timeframe": "H1",
+  "mode": "synthetic",
+  "type": "trade-setup",
+  "bias": "bearish",
+  "outcome": "breakeven",
+  "tags": [
+    "GBPUSD",
+    "Trade-Setup",
+    "London-Session",
+    "Breakeven"
+  ],
+  "module": "03-market-structure",
+  "lessonSlugs": [
+    "04-market-phases"
+  ],
+  "caption": {
+    "en": "GBPUSD short setup executed at London high mitigation, moved to breakeven after TP1.",
+    "bn": "লন্ডন হাই মিটিগেশনে GBPUSD শর্ট এক্সিকিউশন; TP1 হিটের পর স্টপ ব্রেক-ইভেনে স্থানান্তর।"
+  },
+  "notes": {
+    "en": "Trade triggered at 1.2740 OB mitigation. Hit TP1 (+25 pips), moved stop to breakeven, and remainder was stopped out at BE during NY chop.",
+    "bn": "১.২৭৪০ OB মিটিগেশনে এন্ট্রি। TP1 হিটের পর (+২৫ পিপস) স্টপ ব্রেক-ইভেনে নেওয়া হয় এবং বাকি অংশ BE-তে ক্লোজ হয়।"
+  },
+  "updatedAt": "2026-10-07T12:00:00Z",
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.272,
+      "h": 1.2735,
+      "l": 1.2715,
+      "c": 1.273
+    },
+    {
+      "i": 1,
+      "o": 1.273,
+      "h": 1.2748,
+      "l": 1.2725,
+      "c": 1.2742
+    },
+    {
+      "i": 2,
+      "o": 1.2742,
+      "h": 1.2745,
+      "l": 1.271,
+      "c": 1.2715
+    },
+    {
+      "i": 3,
+      "o": 1.2715,
+      "h": 1.274,
+      "l": 1.2712,
+      "c": 1.2738
+    },
+    {
+      "i": 4,
+      "o": 1.2738,
+      "h": 1.274,
+      "l": 1.271,
+      "c": 1.2712
+    },
+    {
+      "i": 5,
+      "o": 1.2712,
+      "h": 1.2742,
+      "l": 1.2708,
+      "c": 1.274
+    }
+  ],
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 1.2745,
+      "label": "Bearish OB 1.2740",
+      "color": "#f43f5e",
+      "style": "dashed"
+    },
+    {
+      "type": "marker",
+      "i": 3,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Short Entry @ 1.2738"
+    },
+    {
+      "type": "hline",
+      "price": 1.2712,
+      "label": "TP1 Hit (+26 pips)",
+      "color": "#22c55e",
+      "style": "solid"
+    },
+    {
+      "type": "marker",
+      "i": 5,
+      "position": "aboveBar",
+      "shape": "circle",
+      "text": "Runner Stopped at BE"
+    }
+  ],
+  "explanation": {
+    "en": "This setup illustrates disciplined trade management on GBPUSD. Price swept the Asian Session High at the London open and printed a bearish Order Block at 1.2740. A limit sell order was executed upon mitigation. Price reached TP1 (+25 pips) at the Asian equilibrium, prompting the trader to secure 50% profits and move the stop loss to entry. When New York volatility chopped back, the remaining position exited at zero risk.",
+    "bn": "GBPUSD-তে শৃঙ্খলাবদ্ধ ট্রেড ম্যানেজমেন্টের চমৎকার উদাহরণ। লন্ডন ওপেনে এশিয়ান হাই সুইপ করে ১.২৭৪০-এ বিয়ারিশ অর্ডার ব্লক তৈরি হয়। মিটিগেশনে সেল এন্ট্রি নিয়ে ২৫ পিপস লাভে ৫০% প্রফিট বুক করা হয় এবং স্টপ লস ব্রেক-ইভেনে নেওয়া হয়। পরবর্তীতে নিউ ইয়র্ক সেশনের চপিতে বাকি অংশ শূন্য ঝুঁকিতে বের হয়ে যায়।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Moving stop loss to breakeven after TP1 guarantees that a winning trade can never turn into a loss.",
+      "bn": "TP1 পাওয়ার পর স্টপ লস ব্রেক-ইভেনে নেওয়া নিশ্চিত করে যে লাভজনক ট্রেড কখনোই লসে রূপ নেবে না।"
+    },
+    {
+      "en": "Breakeven exits are wins of capital preservation, never view them as failures.",
+      "bn": "ব্রেক-ইভেন এক্সিট মানে মূলধন রক্ষা পাওয়া; একে কখনোই ব্যর্থতা ভাববেন না।"
+    }
+  ],
+  "entry": 1.274,
+  "stopLoss": 1.2765,
+  "takeProfit": 1.2665,
+  "rr": "3.0"
+}

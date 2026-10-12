@@ -1,0 +1,131 @@
+{
+  "id": "shooting-star-01",
+  "title": {
+    "en": "Shooting Star at Resistance — Bearish Supply Rejection",
+    "bn": "রেজিস্ট্যান্সে শুটিং স্টার — বিয়ারিশ সাপ্লাই রিজেকশন"
+  },
+  "symbol": "XAUUSD",
+  "timeframe": "H1",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bearish",
+  "outcome": null,
+  "tags": [
+    "shooting-star",
+    "reversal",
+    "resistance",
+    "bearish"
+  ],
+  "module": "04-candlesticks",
+  "lessonSlugs": [
+    "07-shooting-star"
+  ],
+  "caption": {
+    "en": "Shooting star with long upper wick at resistance level proves violent rejection of higher prices.",
+    "bn": "রেজিস্ট্যান্স লেভেলে দীর্ঘ আপার উইক সহ শুটিং স্টার যা ওপরের প্রাইসে সেলারদের তীব্র বাধার প্রমাণ।"
+  },
+  "notes": {
+    "en": "Buyers pushed price up during the session, but heavy institutional supply rejected it back down near the open.",
+    "bn": "সেশনের মাঝে বায়াররা দাম অনেক ওপরে উঠালেও সাপ্লাই জোনের সেলাররা একে টেনে একদম ওপেনের নিচে নামিয়ে দেয়।"
+  },
+  "updatedAt": "2026-10-07T14:00:00Z",
+  "candles": [
+    {
+      "i": 0,
+      "o": 2350,
+      "h": 2355,
+      "l": 2346,
+      "c": 2352
+    },
+    {
+      "i": 1,
+      "o": 2352,
+      "h": 2358,
+      "l": 2349,
+      "c": 2356
+    },
+    {
+      "i": 2,
+      "o": 2356,
+      "h": 2362,
+      "l": 2353,
+      "c": 2360
+    },
+    {
+      "i": 3,
+      "o": 2360,
+      "h": 2368,
+      "l": 2357,
+      "c": 2365
+    },
+    {
+      "i": 4,
+      "o": 2365,
+      "h": 2375,
+      "l": 2362,
+      "c": 2368
+    },
+    {
+      "i": 5,
+      "o": 2368,
+      "h": 2380,
+      "l": 2364,
+      "c": 2370
+    },
+    {
+      "i": 6,
+      "o": 2371,
+      "h": 2395,
+      "l": 2369,
+      "c": 2372
+    },
+    {
+      "i": 7,
+      "o": 2372,
+      "h": 2376,
+      "l": 2358,
+      "c": 2360
+    },
+    {
+      "i": 8,
+      "o": 2360,
+      "h": 2364,
+      "l": 2348,
+      "c": 2350
+    }
+  ],
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 2390,
+      "label": "Resistance",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "marker",
+      "i": 6,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Shooting Star"
+    }
+  ],
+  "explanation": {
+    "en": "A Shooting Star appears at the zenith of an uptrend or at key resistance. Price opens and rallies strongly, creating an impressive green bar during the session. However, when it encounters resting institutional sell orders, price is slammed downward to close near the low, leaving a long upper wick. This traps greedy breakout buyers at the very top.",
+    "bn": "শুটিং স্টার আপট্রেন্ডের চূড়ায় বা রেজিস্ট্যান্স লেভেলে দেখা যায়। সেশনের শুরুতে বায়াররা দাম অনেক ওপরে তুলে দিলেও সাপ্লাই জোনে পৌঁছানোর সাথে সাথে প্রাতিষ্ঠানিক সেলিং প্রেশারে তা ধসে পড়ে এবং সেশনের লো-এর কাছাকাছি ক্লোজ দেয়। দীর্ঘ ওপরের উইকটি রিটেইল বায়ারদের ফাঁদে পড়ার স্মৃতিচিহ্ন।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Upper wick must be at least 2 to 3 times the size of the real body, with little to no lower wick.",
+      "bn": "ওপরের উইকটি অবশ্যই রিয়েল বডির ২ থেকে ৩ গুণ লম্বা হতে হবে এবং নিচের উইক প্রায় থাকবেই না।"
+    },
+    {
+      "en": "Sell entry triggers when the following candle breaks below the Shooting Star real body.",
+      "bn": "পরবর্তী ক্যান্ডেল শুটিং স্টারের বডির নিচে নামলে কনফার্মেশন সহ সেল এন্ট্রি ট্রিগার হয়।"
+    }
+  ],
+  "entry": 2348,
+  "stopLoss": 2362,
+  "takeProfit": 2312,
+  "rr": "2.6"
+}

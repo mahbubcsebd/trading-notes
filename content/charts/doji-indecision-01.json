@@ -1,0 +1,131 @@
+{
+  "id": "doji-indecision-01",
+  "title": {
+    "en": "Doji at Resistance — Institutional Equilibrium & Reversal",
+    "bn": "রেজিস্ট্যান্সে ডোজি ক্যান্ডেল — বায়ার-সেলার দ্বিধা ও সম্ভাব্য রিভার্সাল"
+  },
+  "symbol": "USDJPY",
+  "timeframe": "H4",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "neutral",
+  "outcome": null,
+  "tags": [
+    "doji",
+    "indecision",
+    "candlestick",
+    "reversal"
+  ],
+  "module": "04-candlesticks",
+  "lessonSlugs": [
+    "03-doji"
+  ],
+  "caption": {
+    "en": "Doji forming at major resistance after extended uptrend, signaling buyer exhaustion.",
+    "bn": "দীর্ঘ আপট্রেন্ডের পর প্রধান রেজিস্ট্যান্সে ডোজি গঠন, যা বায়ারদের ক্লান্তি ও শক্তির সমতা প্রকাশ করে।"
+  },
+  "notes": {
+    "en": "A Doji at the top of a trend signals buyer exhaustion. The equal open and close proves neither bulls nor bears could maintain dominance.",
+    "bn": "ট্রেন্ডের শীর্ষে ডোজি মানে বায়ারদের গতি কমে যাওয়া। ওপেন এবং ক্লোজ প্রায় সমান হওয়ায় শক্তি ভারসাম্যে চলে এসেছে।"
+  },
+  "updatedAt": "2026-10-07T16:00:00Z",
+  "candles": [
+    {
+      "i": 0,
+      "o": 148.5,
+      "h": 149.2,
+      "l": 148.2,
+      "c": 148.9
+    },
+    {
+      "i": 1,
+      "o": 148.9,
+      "h": 149.8,
+      "l": 148.7,
+      "c": 149.5
+    },
+    {
+      "i": 2,
+      "o": 149.5,
+      "h": 150.3,
+      "l": 149.2,
+      "c": 150
+    },
+    {
+      "i": 3,
+      "o": 150,
+      "h": 150.8,
+      "l": 149.8,
+      "c": 150.5
+    },
+    {
+      "i": 4,
+      "o": 150.5,
+      "h": 151.2,
+      "l": 150.3,
+      "c": 151
+    },
+    {
+      "i": 5,
+      "o": 151,
+      "h": 151.5,
+      "l": 150.8,
+      "c": 151.2
+    },
+    {
+      "i": 6,
+      "o": 151.2,
+      "h": 152.5,
+      "l": 150.9,
+      "c": 151.22
+    },
+    {
+      "i": 7,
+      "o": 151.22,
+      "h": 151.4,
+      "l": 150.5,
+      "c": 150.8
+    },
+    {
+      "i": 8,
+      "o": 150.8,
+      "h": 151,
+      "l": 150,
+      "c": 150.2
+    }
+  ],
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 152,
+      "label": "Resistance",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "marker",
+      "i": 6,
+      "position": "aboveBar",
+      "shape": "circle",
+      "text": "Doji — Indecision"
+    }
+  ],
+  "explanation": {
+    "en": "A classic Doji forms when opening and closing prices are virtually identical. In the context of an extended rally into key resistance, a Doji demonstrates that buyers who were previously in total control are now met with an equal volume of aggressive sellers. It warns traders that momentum has stalled and a reversal or consolidation is imminent.",
+    "bn": "একটি ডোজি ক্যান্ডেলে ওপেন ও ক্লোজ প্রাইস প্রায় হুবহু সমান থাকে। দীর্ঘ আপট্রেন্ডের পর যখন রেজিস্ট্যান্সে এমন ক্যান্ডেল দেখা যায়, তখন বোঝা যায় বায়াররা একা আর মার্কেট চালাতে পারছে না, সেলাররা সমান শক্তিতে বাঁধা দিচ্ছে। এর পরবর্তী ক্যান্ডেল বিয়ারিশ হলে বড় পতনের সম্ভাবনা তৈরি হয়।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "A Doji is an alert, NOT an execution signal on its own. It requires a confirming break.",
+      "bn": "ডোজি শুধুমাত্র একটি সতর্কতা সংকেত, একা ট্রেড নেওয়ার জন্য যথেষ্ট নয়। পরবর্তী ক্যান্ডেলে কনফার্মেশন চাই।"
+    },
+    {
+      "en": "If the subsequent candle closes below the Doji low, execute short with stops above the Doji high.",
+      "bn": "পরবর্তী ক্যান্ডেল ডোজির লো এর নিচে ক্লোজ দিলে শর্ট এন্ট্রি নিন এবং স্টপ লস ডোজির হাইয়ের ওপরে রাখুন।"
+    }
+  ],
+  "entry": 154.2,
+  "stopLoss": 155.1,
+  "takeProfit": 151.8,
+  "rr": "2.7"
+}

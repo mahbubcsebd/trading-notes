@@ -1,0 +1,124 @@
+{
+  "id": "tweezer-bottom-01",
+  "title": {
+    "en": "Tweezer Bottom Liquidity Rejection on GBPUSD",
+    "bn": "GBPUSD-তে টুইজার বটম — ডাবল লো রিজেকশন ও বুলিশ বাউন্স"
+  },
+  "symbol": "GBPUSD",
+  "timeframe": "H4",
+  "bias": "bullish",
+  "caption": {
+    "en": "GBPUSD forms matching lows at 1.2600 support, bouncing 180 pips into higher timeframe targets.",
+    "bn": "১.২৬০০ সাইকোলজিক্যাল সাপোর্টে টুইজার বটম তৈরি করে ১৮০ পিপসের শক্তিশালী ঊর্ধ্বমুখী রিভার্সাল।"
+  },
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.272,
+      "h": 1.2725,
+      "l": 1.266,
+      "c": 1.2665
+    },
+    {
+      "i": 1,
+      "o": 1.2665,
+      "h": 1.267,
+      "l": 1.262,
+      "c": 1.2625
+    },
+    {
+      "i": 2,
+      "o": 1.2625,
+      "h": 1.263,
+      "l": 1.26,
+      "c": 1.2608
+    },
+    {
+      "i": 3,
+      "o": 1.2608,
+      "h": 1.265,
+      "l": 1.26,
+      "c": 1.2645
+    },
+    {
+      "i": 4,
+      "o": 1.2645,
+      "h": 1.27,
+      "l": 1.264,
+      "c": 1.269
+    },
+    {
+      "i": 5,
+      "o": 1.269,
+      "h": 1.278,
+      "l": 1.2685,
+      "c": 1.276
+    }
+  ],
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 1.26,
+      "label": "Double Rejection Floor (1.2600)",
+      "color": "#22c55e",
+      "style": "solid"
+    },
+    {
+      "type": "zone",
+      "from": {
+        "i": 2,
+        "price": 1.263
+      },
+      "to": {
+        "i": 3,
+        "price": 1.2595
+      },
+      "label": "Tweezer Bottoms",
+      "color": "#10b981"
+    },
+    {
+      "type": "hline",
+      "price": 1.265,
+      "label": "Buy Entry (1.2650)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.2585,
+      "label": "Stop Loss (1.2585)",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.276,
+      "label": "Take Profit Target (1.2760)",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "notes": {
+    "en": "Two consecutive candles with identical lows at key support. Candle 1 is bearish; Candle 2 is bullish with identical bottom wick.",
+    "bn": "কী-সাপোর্টে পরপর দুটি ক্যান্ডেলের লো পয়েন্ট হুবহু সমান। ১ম ক্যান্ডেল লাল, ২য় ক্যান্ডেল সবুজ।"
+  },
+  "explanation": {
+    "en": "A Tweezer Bottom occurs when two consecutive candles test the exact same price floor and reject it cleanly. The first candle shows sellers driving price down, while the second candle tests that exact same price level but finds immediate, overwhelming buying interest. The matching wicks prove that an impenetrable floor of institutional bids exists at this level.",
+    "bn": "টুইজার বটম গঠিত হয় যখন পরপর দুটি ক্যান্ডেল হুবহু একই প্রাইস লেভেলে নেমে এসে আঘাত করে এবং শক্তভাবে ওপরে উঠে যায়। ১ম ক্যান্ডেলটিতে সেলাররা দাম নিচে নামালেও ২য় ক্যান্ডেলে একই লেভেলে বায়ারদের বিপুল অর্ডার সক্রিয় হয়ে ওঠে। দুটি সমান লো উইক প্রমাণ করে এই লেভেলে শক্তিশালী প্রাতিষ্ঠানিক বিড রয়েছে যা প্রাইসকে আর নামতে দেবে না।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "The matching lows must occur at a validated HTF support, round number, or demand zone.",
+      "bn": "ম্যাচিং লো অবশ্যই কোনো ভ্যালিড হাইয়ার টাইমফ্রেম সাপোর্ট বা রাউন্ড নাম্বারে হতে হবে।"
+    },
+    {
+      "en": "Enter when Candle 2 closes green, placing stop loss comfortably below the twin lows.",
+      "bn": "২য় ক্যান্ডেলটি গ্রিন হয়ে ক্লোজ দিলে এন্ট্রি নিন এবং টুইন লো-এর নিচে স্টপ লস সেট করুন।"
+    }
+  ],
+  "entry": 1.2625,
+  "stopLoss": 1.258,
+  "takeProfit": 1.276,
+  "rr": "3.0",
+  "type": "pattern"
+}

@@ -1,0 +1,145 @@
+---
+title: "Bullish Engulfing Pattern"
+description: "কখন এই reversal signal কাজ করে, আর কখন করে না — বাংলায় সম্পূর্ণ গাইড"
+level: beginner
+tags: [candlestick, reversal, price-action, bullish]
+instruments: [XAUUSD, EURUSD]
+timeframes: [H1, H4]
+status: done
+sources:
+  - type: youtube
+    title: "ICT - Candlestick Patterns Explained"
+    url: "https://www.youtube.com/watch?v=example"
+    note: "timestamp 12:40 — engulfing section"
+  - type: book
+    title: "Japanese Candlestick Charting Techniques"
+    url: ""
+    note: "Chapter 4"
+updated: 2026-10-10
+---
+
+# Bullish Engulfing Pattern
+
+<KeyTakeaways>
+- Bullish Engulfing = একটি বড় সবুজ candle আগের লাল candle কে সম্পূর্ণ "গিলে" নেয়
+- এটি একটি **reversal signal** — downtrend এর শেষে কাজ করে
+- শুধু pattern দেখলেই হবে না, **location** সবচেয়ে গুরুত্বপূর্ণ (S&R zone, demand area)
+- Confirmation candle বা close এর জন্য অপেক্ষা করো
+- Volume বেশি থাকলে signal আরো strong হয়
+</KeyTakeaways>
+
+## Definition
+
+Bullish Engulfing হলো একটি **two-candle reversal pattern**। এটি তখন তৈরি হয় যখন:
+
+1. প্রথম candle: **Bearish** (লাল/ফাঁকা) — sellers এর control এ বাজার
+2. দ্বিতীয় candle: **Bullish** (সবুজ/ভরা) — এবং এর **body** প্রথম candle এর পুরো body কে ঢেকে দেয়
+
+<Callout type="rule">
+**মূল নিয়ম:** দ্বিতীয় candle এর open, প্রথম candle এর close এর নিচে হতে হবে। আর দ্বিতীয় candle এর close, প্রথম candle এর open এর উপরে হতে হবে।
+</Callout>
+
+## Chart Example
+
+<Chart id="bullish-engulfing-01" height={420} caption="XAUUSD H4 — Support zone এ Bullish Engulfing। লক্ষ্য করো দ্বিতীয় সবুজ candle টি আগের লাল candle কে সম্পূর্ণ cover করেছে।" />
+
+## Context — কোথায় খুঁজবে?
+
+Pattern দেখলেই trade নেওয়া যাবে না। Location সবচেয়ে জরুরি:
+
+<Steps>
+
+### Step 1: Downtrend confirm করো
+Engulfing pattern downtrend এর শেষে কাজ করে। Uptrend বা range এর মাঝে দেখলে ignore করো।
+
+### Step 2: Key level খোঁজো
+Pattern টি কোনো important area তে হচ্ছে কিনা দেখো:
+- **Support level** বা **demand zone**
+- **Fibonacci 0.618 বা 0.786** retracement
+- **Round number** (যেমন XAUUSD এ 2300, 2350)
+- **Previous swing low**
+
+### Step 3: Volume চেক করো (যদি available থাকে)
+দ্বিতীয় bullish candle এ volume বেশি হলে buyers এর strength বেশি।
+
+### Step 4: Confirmation নাও
+Entry নেওয়ার আগে পরের candle confirm করুক। Conservative approach: পরের candle যদি bullish close করে।
+
+</Steps>
+
+## Entry / Stop / Target
+
+<TradeSetup
+  direction="long"
+  pair="XAUUSD"
+  entry={2305.50}
+  stop={2298.00}
+  target={2325.00}
+/>
+
+<Callout type="note">
+**Entry:** Engulfing candle close এর উপরে (বা পরের candle open)
+**Stop Loss:** Engulfing pattern এর low এর নিচে (কিছু buffer সহ)
+**Target:** পরের significant resistance বা minimum 1:2 RR
+</Callout>
+
+## When It Works vs When It Fails
+
+<Compare
+  leftLabel="✅ কাজ করে যখন"
+  rightLabel="❌ ব্যর্থ হয় যখন"
+  left="- Downtrend এর শেষে\n- Key support বা demand zone এ\n- Strong bearish trend এ reversal\n- Volume confirmation আছে\n- Higher timeframe bullish bias"
+  right="- Uptrend এর মাঝে (random signal)\n- No key level nearby\n- News event এর আগে বা পরে\n- Very small second candle (weak)\n- Resistance zone এর কাছে entry নিলে"
+/>
+
+## Common Mistakes
+
+<Callout type="mistake">
+**ভুল #1:** যেকোনো জায়গায় pattern দেখলেই trade নেওয়া।
+**সঠিক:** শুধু key S&R zone বা demand area তে।
+</Callout>
+
+<Callout type="mistake">
+**ভুল #2:** Stop loss pattern এর ঠিক নিচে রাখা (liquidity নিয়ে যাবে)।
+**সঠিক:** Pattern এর low এর একটু নিচে buffer দাও।
+</Callout>
+
+<Callout type="mistake">
+**ভুল #3:** শুধু lower timeframe (M5, M15) এ দেখা।
+**সঠিক:** H1 বা H4 এ দেখো, higher timeframe এ bias নাও।
+</Callout>
+
+## My Own Examples
+
+<Figure
+  src="/images/03-candlesticks/04-bullish-engulfing/example-01.webp"
+  caption="XAUUSD H4 chart — 2024 সালের একটি real example। দেখো কিভাবে 2300 support zone এ pattern formed হয়ে price 80+ pips উপরে গেছে। ① Entry candle ② Stop level ③ Target area"
+/>
+
+## Pattern Checklist
+
+<Checklist
+  id="bullish-engulfing-checklist"
+  items={[
+    "Downtrend বা swing low এ pattern দেখেছি",
+    "Key support / demand zone এ আছে",
+    "Second candle প্রথম candle এর body সম্পূর্ণ cover করেছে",
+    "Higher timeframe বুলিশ বা neutral",
+    "Stop loss পরিষ্কার (pattern low এর নিচে)",
+    "Minimum 1:2 RR আছে target এ",
+    "কোনো major news event নেই কাছাকাছি"
+  ]}
+/>
+
+## Pattern এর Relatives
+
+<PatternCard name="bearish-engulfing" />
+<PatternCard name="hammer" />
+<PatternCard name="morning-star" />
+
+## Sources
+
+এই lesson টি নিচের resources থেকে তৈরি:
+
+- 📺 **YouTube:** ICT Candlestick Patterns — timestamp 12:40 (engulfing section)
+- 📚 **Book:** Steve Nison — *Japanese Candlestick Charting Techniques*, Chapter 4

@@ -1,0 +1,9 @@
+{
+  "title": "Backtesting & Journal",
+  "pages": [
+    "01-how-to-backtest",
+    "02-journal-template",
+    "03-reviewing-trades",
+    "04-building-a-plan"
+  ]
+}

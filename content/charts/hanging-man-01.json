@@ -1,0 +1,118 @@
+{
+  "id": "hanging-man-01",
+  "title": {
+    "en": "Hanging Man Reversal at Gold Swing High",
+    "bn": "গোল্ড সুইং হাইয়ে হ্যাংগিং ম্যান — টপ রিভার্সাল সংকেত"
+  },
+  "symbol": "XAUUSD",
+  "timeframe": "H4",
+  "bias": "bearish",
+  "caption": {
+    "en": "Gold reaches 2380 resistance, creating a Hanging Man candle before plunging 250 pips.",
+    "bn": "গোল্ড ২৩৮০ রেজিস্ট্যান্সে পৌঁছে হ্যাংগিং ম্যান ক্যান্ডেল তৈরি করে এবং পরবর্তীতে ২৫০ পিপস ড্রপ করে।"
+  },
+  "candles": [
+    {
+      "i": 0,
+      "o": 2340,
+      "h": 2355,
+      "l": 2338,
+      "c": 2352
+    },
+    {
+      "i": 1,
+      "o": 2352,
+      "h": 2370,
+      "l": 2350,
+      "c": 2368
+    },
+    {
+      "i": 2,
+      "o": 2368,
+      "h": 2382,
+      "l": 2365,
+      "c": 2380
+    },
+    {
+      "i": 3,
+      "o": 2380,
+      "h": 2382,
+      "l": 2360,
+      "c": 2378
+    },
+    {
+      "i": 4,
+      "o": 2378,
+      "h": 2380,
+      "l": 2352,
+      "c": 2355
+    },
+    {
+      "i": 5,
+      "o": 2355,
+      "h": 2358,
+      "l": 2330,
+      "c": 2335
+    }
+  ],
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 2382,
+      "label": "Key Resistance Peak (2382.00)",
+      "color": "#ef4444",
+      "style": "solid"
+    },
+    {
+      "type": "marker",
+      "i": 3,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Hanging Man"
+    },
+    {
+      "type": "hline",
+      "price": 2360,
+      "label": "Sell Trigger Low (2360.00)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 2385,
+      "label": "Stop Loss (2385.00)",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 2330,
+      "label": "Take Profit Target (2330.00)",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "notes": {
+    "en": "Identical shape to a hammer, but appearing at the TOP of an uptrend. The long lower shadow proves sellers are beginning to break through.",
+    "bn": "হ্যামারের মতোই দেখতে, তবে এটি তৈরি হয় আপট্রেন্ডের শীর্ষে। লম্বা নিচের উইক প্রমাণ করে সেলারদের আগমন শুরু হয়েছে।"
+  },
+  "explanation": {
+    "en": "While structurally identical to a hammer, context determines the outcome. At the peak of an uptrend, a Hanging Man shows that heavy selling occurred during the candle before buyers rescued it. This is a critical warning sign that buyer dominance is cracking, and institutional profit-taking has commenced.",
+    "bn": "দেখতে হ্যামারের মতো হলেও আপট্রেন্ডের চূড়ায় এর ভূমিকা সম্পূর্ণ বিপরীত। এটি ইঙ্গিত দেয় যে ক্যান্ডেলের চলার সময় সেলাররা ব্যাপক সেল করেছিল, বায়াররা কোনোমতে টেনে উপরে ক্লোজ করলেও তাদের নিয়ন্ত্রণ দুর্বল হয়ে পড়েছে। পরের ক্যান্ডেল লাল হলে এটি নিশ্চিত সেল সিগন্যাল।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "A Hanging Man requires bearish confirmation on the NEXT candle closing below its body.",
+      "bn": "হ্যাংগিং ম্যান ট্রেড করার জন্য পরের ক্যান্ডেলটি অবশ্যই এর বডির নিচে লাল হয়ে ক্লোজ হতে হবে।"
+    },
+    {
+      "en": "Never short without confirmation; an unconfirmed Hanging Man is often just a bull flag.",
+      "bn": "কনফার্মেশন ছাড়া শর্ট করবেন না; অন্যথায় এটি কন্টিনিউয়েশন বুলিশ মুভে রূপ নিতে পারে।"
+    }
+  ],
+  "entry": 2368,
+  "stopLoss": 2385,
+  "takeProfit": 2320,
+  "rr": "2.8",
+  "type": "pattern"
+}

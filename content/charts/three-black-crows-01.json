@@ -1,0 +1,117 @@
+{
+  "id": "three-black-crows-01",
+  "title": {
+    "en": "Three Black Crows — Institutional Trend Reversal Breakdown",
+    "bn": "থ্রি ব্ল্যাক ক্রোজ — প্রাতিষ্ঠানিক বিয়ারিশ রিভার্সাল ও মোমেন্টাম ক্যাসকেড"
+  },
+  "symbol": "GBPUSD",
+  "timeframe": "H4",
+  "bias": "bearish",
+  "caption": {
+    "en": "GBPUSD breaks market structure with Three Black Crows, cascading 320 pips lower.",
+    "bn": "GBPUSD পরপর ৩টি শক্তিশালী বিয়ারিশ ক্যান্ডেলে মার্কেট স্ট্রাকচার ভেঙে ৩২০ পিপস নিচে নেমে যায়।"
+  },
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.284,
+      "h": 1.2855,
+      "l": 1.2835,
+      "c": 1.285
+    },
+    {
+      "i": 1,
+      "o": 1.285,
+      "h": 1.2852,
+      "l": 1.279,
+      "c": 1.2795
+    },
+    {
+      "i": 2,
+      "o": 1.2795,
+      "h": 1.28,
+      "l": 1.273,
+      "c": 1.2735
+    },
+    {
+      "i": 3,
+      "o": 1.2735,
+      "h": 1.274,
+      "l": 1.267,
+      "c": 1.2675
+    },
+    {
+      "i": 4,
+      "o": 1.2675,
+      "h": 1.2715,
+      "l": 1.267,
+      "c": 1.2705
+    },
+    {
+      "i": 5,
+      "o": 1.2705,
+      "h": 1.271,
+      "l": 1.261,
+      "c": 1.262
+    }
+  ],
+  "annotations": [
+    {
+      "type": "zone",
+      "from": {
+        "i": 1,
+        "price": 1.2855
+      },
+      "to": {
+        "i": 3,
+        "price": 1.267
+      },
+      "label": "Three Black Crows",
+      "color": "#ef4444"
+    },
+    {
+      "type": "hline",
+      "price": 1.2715,
+      "label": "Pullback Sell Entry (1.2715)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.28,
+      "label": "Stop Loss (1.2800)",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.26,
+      "label": "Take Profit Target (1.2600)",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "notes": {
+    "en": "Three consecutive long-bodied bearish candles, each opening within the previous body and closing lower, signaling massive sell conviction.",
+    "bn": "টানা ৩টি দীর্ঘ বডির লাল ক্যান্ডেল, যার প্রতিটি আগেরটির বডির ভেতরে ওপেন হয়ে নিচে ক্লোজ দিয়ে ব্যাপক সেলিং পাওয়ার দেখায়।"
+  },
+  "explanation": {
+    "en": "The Three Black Crows is a powerful bearish reversal pattern consisting of three consecutive long-bodied red candles. Each candle opens within the body of the previous candle and closes near its absolute low. This pattern indicates complete institutional abandonment of the previous bullish trend and aggressive repricing downward.",
+    "bn": "থ্রি ব্ল্যাক ক্রোজ হলো অত্যন্ত শক্তিশালী বিয়ারিশ প্যাটার্ন যা টানা ৩টি দীর্ঘ লাল ক্যান্ডেল নিয়ে গঠিত। প্রতিটি ক্যান্ডেল আগের ক্যান্ডেলের বডির ভেতর ওপেন হয় এবং কোনো লোয়ার উইক ছাড়াই প্রায় সর্বনিম্ন পয়েন্টে ক্লোজ হয়। এটি প্রমাণ করে প্রাতিষ্ঠানিক ফান্ডগুলো পুরো মার্কেট সেল মোডে নিয়ে গেছে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Do not chase the market at the low of Candle 3; wait for a healthy pullback into the Candle 2/3 zone.",
+      "bn": "৩য় ক্যান্ডেলের একদম নিচে অন্ধের মতো সেল দেবেন না; হালকা পুলব্যাকের অপেক্ষা করুন।"
+    },
+    {
+      "en": "Each candle should have relatively short lower wicks, confirming that bears maintained control into every close.",
+      "bn": "প্রতিটি ক্যান্ডেলের নিচের উইক ছোট হতে হবে, যা বোঝায় শেষ সেকেন্ড পর্যন্ত সেলাররা কন্ট্রোলে ছিল।"
+    }
+  ],
+  "entry": 1.268,
+  "stopLoss": 1.276,
+  "takeProfit": 1.248,
+  "rr": "2.5",
+  "type": "pattern"
+}

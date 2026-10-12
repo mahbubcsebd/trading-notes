@@ -1,0 +1,124 @@
+{
+  "id": "tweezer-top-01",
+  "title": {
+    "en": "Tweezer Top Double Rejection at Resistance",
+    "bn": "EURUSD রেজিস্ট্যান্সে টুইজার টপ — ডাবল হাই রিজেকশন"
+  },
+  "symbol": "EURUSD",
+  "timeframe": "H4",
+  "bias": "bearish",
+  "caption": {
+    "en": "EURUSD forms identical highs at 1.0950 resistance, triggering a 160-pip decline.",
+    "bn": "১.০৯৫০ কী-রেজিস্ট্যান্সে হুবহু সমান জোড়া হাই তৈরি করে ১৬০ পিপসের ডাউনট্রেন্ড শুরু করে।"
+  },
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.085,
+      "h": 1.088,
+      "l": 1.0845,
+      "c": 1.0875
+    },
+    {
+      "i": 1,
+      "o": 1.0875,
+      "h": 1.092,
+      "l": 1.087,
+      "c": 1.0915
+    },
+    {
+      "i": 2,
+      "o": 1.0915,
+      "h": 1.095,
+      "l": 1.091,
+      "c": 1.0942
+    },
+    {
+      "i": 3,
+      "o": 1.0942,
+      "h": 1.095,
+      "l": 1.09,
+      "c": 1.0905
+    },
+    {
+      "i": 4,
+      "o": 1.0905,
+      "h": 1.091,
+      "l": 1.086,
+      "c": 1.0865
+    },
+    {
+      "i": 5,
+      "o": 1.0865,
+      "h": 1.087,
+      "l": 1.08,
+      "c": 1.081
+    }
+  ],
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 1.095,
+      "label": "Double Rejection Ceiling (1.0950)",
+      "color": "#ef4444",
+      "style": "solid"
+    },
+    {
+      "type": "zone",
+      "from": {
+        "i": 2,
+        "price": 1.095
+      },
+      "to": {
+        "i": 3,
+        "price": 1.0905
+      },
+      "label": "Tweezer Tops",
+      "color": "#f43f5e"
+    },
+    {
+      "type": "hline",
+      "price": 1.0905,
+      "label": "Sell Entry (1.0905)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.096,
+      "label": "Stop Loss (1.0960)",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.081,
+      "label": "Take Profit Target (1.0810)",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "notes": {
+    "en": "Two consecutive candles with identical highs at key resistance. First candle bullish, second candle bearish.",
+    "bn": "রেজিস্ট্যান্সে পরপর দুটি ক্যান্ডেলের হাই সমান। ১ম ক্যান্ডেল গ্রিন, ২য় ক্যান্ডেল রেড।"
+  },
+  "explanation": {
+    "en": "A Tweezer Top is a two-candle bearish reversal formation characterized by two consecutive candles hitting the exact same ceiling price. Candle 1 rallies into resistance. Candle 2 pushes to the exact same high, but meets immediate institutional selling pressure and closes down. The inability of buyers to push even a single pip higher confirms a distribution ceiling.",
+    "bn": "টুইজার টপ হলো দুই ক্যান্ডেলের বিয়ারিশ রিভার্সাল যেখানে পরপর দুটি ক্যান্ডেল হুবহু একই সর্বোচ্চ প্রাইস লেভেল টেস্ট করে। ১ম ক্যান্ডেল বায়ারদের শক্তিতে ওপরে উঠলেও ২য় ক্যান্ডেল একই হাই থেকে প্রচণ্ড সেলিং প্রেশারে নিচে নেমে লাল হয়ে ক্লোজ হয়। বায়ারদের আর ১ পিপও ওপরে তুলতে না পারা প্রমাণ করে সিলিংয়ে সেলাররা দাঁড়িয়ে আছে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Twin highs at resistance show heavy limit sell orders waiting to absorb buy momentum.",
+      "bn": "রেজিস্ট্যান্সে জোড়া হাই প্রমাণ করে সেখানে বিপুল পরিমাণ লিমিট সেল অর্ডার অপেক্ষা করছিল।"
+    },
+    {
+      "en": "Enter short on Candle 2 close with stop loss placed with a 3-pip buffer above the twin highs.",
+      "bn": "২য় ক্যান্ডেল ক্লোজে সেল এন্ট্রি নিন এবং টুইন হাইয়ের ৩ পিপস ওপরে স্টপ লস রাখুন।"
+    }
+  ],
+  "entry": 1.093,
+  "stopLoss": 1.0965,
+  "takeProfit": 1.082,
+  "rr": "3.1",
+  "type": "pattern"
+}
