@@ -15,9 +15,9 @@
     "fvg",
     "no-context"
   ],
-  "module": "16-advanced",
+  "module": "16-trading-methodologies",
   "lessonSlugs": [
-    "01-smart-money-concepts-ict-basics"
+    "06-smc-ict"
   ],
   "caption": {
     "en": "A gap appears in a bounce inside a downtrend. The trader buys the pullback into it at 1.0952, but no low was swept and no lower high was broken. The downtrend resumes and the stop is hit.",

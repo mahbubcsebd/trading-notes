@@ -1,0 +1,396 @@
+---
+title: "SMC / ICT: Liquidity আর institutional price delivery — বাংলায় সহজ গাইড"
+description: "SMC ও ICT কী, liquidity, sweep, BOS, CHoCH, FVG ও order block কীভাবে একটি ক্রমে সাজে, কী প্রমাণিত নয়, আর সৎ সীমা: XAUUSD chart-এ উদাহরণসহ।"
+level: advanced
+tags: [smc, ict, liquidity, sweep, choch, fvg, order-block, methodology]
+instruments: [XAUUSD]
+timeframes: [M15, H1, H4, D1]
+status: done
+sources:
+  - type: blog
+    title: "Support and Resistance (Investopedia)"
+    url: "https://www.investopedia.com/terms/s/support.asp"
+  - type: blog
+    title: "Wyckoff Method (Investopedia)"
+    url: "https://www.investopedia.com/terms/w/wyckoffmethod.asp"
+  - type: other
+    title: "Park & Irwin (2007), What Do We Know About the Profitability of Technical Analysis? (Journal of Economic Surveys)"
+    url: "https://doi.org/10.1111/j.1467-6419.2007.00519.x"
+updated: 2026-11-07
+---
+
+# SMC / ICT: Liquidity আর institutional price delivery
+
+SMC-র ভিডিও দেখে অনেকে প্রতিটি gap-এ আর প্রতিটি wick-এ "smart money" খোঁজেন। ফল: সব জায়গায় সংকেত, কোথাও আস্থা নেই। এই পাঠে শব্দগুলো একটি **ক্রমে** সাজানো শিখবেন, আর কোন দাবি প্রমাণিত নয়, তাও জানবেন।
+
+## এক নজরে
+
+<MethodCard
+  name="SMC / ICT"
+  origin="ICT: Michael J. Huddleston (অনলাইন শিক্ষা, ২০১০-এর দশক); SMC বৃহত্তর নাম"
+  reads="Price + Liquidity narrative"
+  question="Liquidity কোথায় জমে আছে, দাম এরপর কোথায় deliver হবে?"
+  timeframes="Entry M1–H1, bias H4–D1"
+  difficulty="advanced"
+  subjectivity="high"
+/>
+
+## এই লেখা পড়ে আপনি যা পারবেন
+
+- **Liquidity, sweep, BOS, CHoCH, FVG ও order block** সংজ্ঞায়িত করতে পারবেন।
+- এই শব্দগুলোকে **একটি entry ক্রমে** সাজাতে পারবেন।
+- Context ছাড়া ব্যবহারের ভুল চিনবেন।
+- SMC-র কোন দাবি প্রমাণিত, কোনটি নয়, সৎভাবে বলতে পারবেন।
+- Wyckoff-এর সাথে SMC-র মিল ও অমিল বুঝবেন।
+
+## ইতিহাস ও উৎপত্তি
+
+- **ICT:** "Inner Circle Trader" নামে পরিচিত Michael J. Huddleston ২০১০-এর দশকে অনলাইন ভিডিও ও কোর্সের মাধ্যমে এই পরিভাষা ছড়ান। শব্দগুলোর বেশিরভাগ তাঁর শিক্ষা থেকে এসেছে।
+- **SMC (Smart Money Concepts):** একটি বৃহত্তর, অনানুষ্ঠানিক নাম। ICT-র ধারণা, সাথে আরও অনেক শিক্ষকের ব্যাখ্যা ও সংযোজন মিলে এই সম্প্রদায়। সব শিক্ষক একই সংজ্ঞা ব্যবহার করেন না।
+- **পুরোনো শিকড়:** Stop hunt, supply-demand zone, Wyckoff-এর spring: SMC-র অনেক ধারণা আগের ধারণার নতুন নাম। এতে দোষ নেই, কিন্তু এটাও জানা দরকার যে "নতুন আবিষ্কার" নয়।
+
+এই পাঠের নামগুলো ও সংজ্ঞা একটি সাধারণ সংস্করণ। প্রতিটি শব্দে শিক্ষকভেদে মতভেদ আছে, যেখানে জরুরি সেখানে বলা হয়েছে।
+
+## মূল দর্শন
+
+**SMC-র প্রশ্ন: liquidity কোথায় জমে আছে, আর দাম এরপর কোথায় deliver হবে?**
+
+ধারণাটা এই: বড় প্রতিষ্ঠান বিশাল অঙ্কের অর্ডার নিয়ে নামে। এত বড় অর্ডার ভরাতে প্রচুর বিপরীত অর্ডার দরকার। সেই অর্ডারগুলো জমে থাকে পরিষ্কার swing high/low-এর ওপারে (যেখানে সাধারণ trader-দের stop বসে)। তাই দাম প্রথমে সেখানে যায়, অর্ডার ভরে, তারপর আসল দিকে চলে।
+
+তুলনা: ঈদের আগে বড় ব্যবসায়ী সব মাল কিনতে চান। কিন্তু একসাথে কিনলে দাম লাফায়। তাই আগে দাম একটু নামিয়ে ভয় পাওয়া বিক্রেতাদের মাল সস্তায় নেন, তারপর দাম তোলেন।
+
+<Callout type="warning">
+  **"Smart money ইচ্ছে করে retail stop শিকার করে"**: এই দাবি SMC-র কেন্দ্রে,
+  কিন্তু সাধারণ trader এটি সরাসরি যাচাই করতে পারে না। এটি একটি ব্যাখ্যামূলক
+  গল্প। Chart-এ দাম stop-এর ওপারে গিয়ে ফেরে, এটা দেখা যায়; কারণ যে "কেউ ইচ্ছে
+  করে করছে", এটা দেখা যায় না।
+</Callout>
+
+## মূল ধারণাগুলো
+
+প্রতিটি ধারণার সাথে সংশ্লিষ্ট আগের পাঠের কথা আছে। এখানে methodology-র চোখে সাতটি।
+
+### ১. Liquidity: BSL ও SSL
+
+**Liquidity হলো সেই দামের এলাকা, যেখানে অনেক pending অর্ডার ও stop জমে আছে।** দুই ধরন:
+
+- **BSL (Buy-side liquidity):** swing high-এর ওপরে। Short-এর stop আর breakout buyer-দের অর্ডার এখানে।
+- **SSL (Sell-side liquidity):** swing low-এর নিচে। Long-এর stop আর breakout seller-দের অর্ডার এখানে।
+
+বিশেষ করে **equal highs / equal lows** (দুটি প্রায় সমান high বা low) পরিষ্কার liquidity হিসেবে ধরা হয়। বিস্তারিত: [Liquidity ও stop hunt](/bn/learn/03-market-structure/04-liquidity-stop-hunts)।
+
+তুলনা: দুটি প্রায় সমান উঁচু বাঁধ। সবাই জানে ওপারে পানি জমা, তাই সেখানে নজর।
+
+### ২. Sweep
+
+**Sweep হলো দাম liquidity-র এলাকা ছুঁয়ে বা সামান্য ভেঙে আবার ফিরে আসা।** Wick দিয়ে swing low ছুঁয়ে ওপরে close করলে SSL sweep।
+
+এটি Price Action-এর false break বা Wyckoff-এর spring-এর খুব কাছের ঘটনা। শর্ত একই: **ফিরে আসা**। ফিরে না এলে সেটা sweep নয়, আসল breakout।
+
+### ৩. BOS ও CHoCH
+
+- **BOS (Break of Structure):** চলমান trend-এর দিকে swing ভাঙা। Uptrend-এ আগের swing high-এর ওপরে close। Trend চলছে।
+- **CHoCH (Change of Character):** trend-এর বিপরীতে প্রথম structure ভাঙা। Uptrend-এ আগের higher low-এর নিচে close। Trend বদলাতে পারে। অনেক শিক্ষক একে **MSS (Market Structure Shift)** বলেন।
+
+বিস্তারিত: [Break of structure](/bn/learn/03-market-structure/03-break-of-structure)। কোন swing ধরবেন, তা trader-ভেদে আলাদা: এই জায়গায় subjectivity সবচেয়ে বেশি।
+
+### ৪. Fair Value Gap (FVG)
+
+**FVG হলো তিন-candle নকশা, যেখানে প্রথম candle-এর high আর তৃতীয় candle-এর low-এর মাঝে ফাঁক থাকে (bullish-এর ক্ষেত্রে)।** মাঝের বড় candle এত দ্রুত চলেছে যে ওই এলাকায় দুই দিকের লেনদেন হয়নি। এটিকে imbalance-ও বলে।
+
+ধারণা: দাম পরে ওই ফাঁকে ফিরে এসে "ভরাট" করার প্রবণতা রাখে। এটি প্রবণতা, নিয়ম নয়।
+
+তুলনা: রাস্তার মাঝখানের একটি গর্ত। গাড়ি পাশ কাটিয়ে গেছে, কিন্তু সবাই জানে এখানে একদিন মেরামত লাগবে।
+
+<CandleDiagram
+  title="Bullish FVG"
+  candles={[
+    { o: 10, h: 12, l: 9.5, c: 11.5, label: "Candle 1: high 12" },
+    { o: 11.5, h: 18, l: 11, c: 17.5, note: "দ্রুত চলন" },
+    { o: 17.5, h: 19, l: 15, c: 18.5, label: "Candle 3: low 15" },
+    { o: 18.5, h: 18.8, l: 14.5, c: 15.5, note: "ফাঁকে ফেরা" },
+    { o: 15.5, h: 20, l: 15, c: 19.5 },
+  ]}
+  levels={[
+    { price: 12, label: "FVG নিচ", tone: "support" },
+    { price: 15, label: "FVG ওপর", tone: "support" },
+  ]}
+  caption="Candle 1-এর high (12) আর candle 3-এর low (15)-এর মাঝে 12–15 ফাঁকা: FVG। দাম পরে ফাঁকে ফিরে এসেছে ও ঠেকে ওপরে উঠেছে।"
+/>
+
+### ৫. Order Block (OB)
+
+**Order block হলো বড় চলনের ঠিক আগের শেষ বিপরীতমুখী candle।** Bullish OB: বড় ওঠার আগের শেষ bearish candle। ধারণা: ওই candle-এ প্রতিষ্ঠান অর্ডার ভরেছে, তাই দাম ফিরলে সেখানে প্রতিক্রিয়া হতে পারে।
+
+সৎ কথা: OB-র সংজ্ঞায় সবচেয়ে বেশি মতভেদ। কেউ পুরো candle (wick সহ), কেউ শুধু body ধরেন; কেউ বড় চলনের আগের কয়েকটি candle ধরেন। বিস্তারিত পাঠ: [Supply ও demand](/bn/learn/05-support-resistance/03-supply-demand), যা OB-র কাছাকাছি পুরোনো ধারণা।
+
+### ৬. Premium ও discount
+
+**Dealing range-এর (সাম্প্রতিক swing low থেকে high) মাঝের রেখার ওপরের অর্ধেক premium, নিচের অর্ধেক discount।** নিয়ম: bullish bias হলে কিনুন discount-এ, bearish হলে বেচুন premium-এ।
+
+তুলনা: বাজারের গড় দামের নিচে কেনা, ওপরে বেচা।
+
+### ৭. Session ও bias
+
+SMC শিক্ষকরা সাধারণত দিনের নির্দিষ্ট সময়ে (London ও New York session-এর শুরুর দিকে, যাকে "killzone" বলা হয়) বেশি মনোযোগ দেন, কারণ তখন liquidity ও volatility বেশি। সঠিক সময় শিক্ষকভেদে আলাদা। Gold-এ session-এর সময় সত্যিই গুরুত্বপূর্ণ, কারণ London ও New York-এর খোলার সময় চলন বাড়ে।
+
+**Bias** মানে বড় timeframe (H4/D1) থেকে দিক ঠিক করা: আজ বেশি সম্ভাবনা ওপরে না নিচে। নিচের timeframe-এ শুধু সেই দিকের entry খোঁজা হয়।
+
+### সবকিছু একটি ক্রমে
+
+SMC-র শব্দগুলো আলাদা আলাদা সংকেত নয়। একটি সম্পূর্ণ bullish ক্রম:
+
+| ধাপ | ঘটনা                                    | অর্থ                          |
+| :-- | :-------------------------------------- | :---------------------------- |
+| ১   | Bias: বড় timeframe-এ bullish           | দিক ঠিক                       |
+| ২   | SSL sweep (swing low ছুঁয়ে ফেরা)       | নিচের liquidity নেওয়া হয়েছে |
+| ৩   | CHoCH / BOS ওপরে                        | Structure বদলেছে/ওপরে ভাঙল    |
+| ৪   | ওঠার সময় FVG বা OB রেখে যাওয়া         | Entry-র এলাকা তৈরি            |
+| ৫   | সেই FVG/OB-তে ফিরে এলে entry            | Discount-এ কেনা               |
+| ৬   | Stop sweep low বা OB-র নিচে; target BSL | Target = ওপরের liquidity      |
+
+<DiagramRow>
+  <CandleDiagram
+    title="Context সহ"
+    verdict="good"
+    verdictLabel="ক্রম পূর্ণ"
+    candles={[
+      { o: 16, h: 16.5, l: 13.5, c: 14, dim: true },
+      { o: 14, h: 14.5, l: 10, c: 14.2, label: "SSL sweep" },
+      { o: 14.2, h: 19, l: 14, c: 18.5, note: "CHoCH + FVG" },
+      { o: 18.5, h: 19.2, l: 16.5, c: 17, label: "FVG-তে ফেরা" },
+      { o: 17, h: 21, l: 16.8, c: 20.6 },
+    ]}
+    levels={[{ price: 13, label: "Sweep low (stop-এর নিচে)", tone: "support" }]}
+    caption="Sweep, CHoCH, FVG, তারপর FVG-তে ফেরা: প্রতিটি ধাপ আগের ধাপের ওপর দাঁড়িয়ে।"
+  />
+  <CandleDiagram
+    title="Context ছাড়া"
+    verdict="bad"
+    verdictLabel="শুধু gap"
+    candles={[
+      { o: 20, h: 20.5, l: 17.5, c: 18, dim: true },
+      { o: 18, h: 18.5, l: 15.5, c: 16, dim: true },
+      { o: 16, h: 19, l: 15.8, c: 18.6, label: "bounce, FVG" },
+      { o: 18.6, h: 18.8, l: 16.8, c: 17, label: "FVG-তে ফেরা" },
+      { o: 17, h: 17.2, l: 13, c: 13.5, note: "downtrend ফিরল" },
+    ]}
+    caption="Downtrend-এর মধ্যে ছোট bounce একটি gap রেখে গেল। কোনো sweep নেই, কোনো high ভাঙেনি। FVG একা কিছু বলে না।"
+  />
+</DiagramRow>
+
+## Shared chart-এ পড়া
+
+এবার অধ্যায়ের সেই একই XAUUSD H4 chart, SMC-র চোখে। (Range, প্রায় 2296–2344, আগের পাঠগুলোর মতোই।)
+
+<Chart
+  id="meth-smc-shared"
+  height={520}
+  caption="XAUUSD H4 (শিক্ষামূলক কাল্পনিক ডেটা) — Range-এর নিচের sell-side liquidity sweep; bullish BOS একটি FVG রেখে যায় ও দাম তাতে ফেরে; চূড়ায় buy-side liquidity sweep, তারপর bearish CHoCH।"
+/>
+
+<Steps>
+
+### ধাপ ১: SSL sweep
+
+Range-এর নিচের low ছিল 2296। একটি candle নেমে **2287** ছোঁয় (range low-এর নিচে জমা stop ছুঁয়ে), তারপর 2304-এ close করে, ভেতরে। Sell-side liquidity নেওয়া হলো। Wyckoff-এর ভাষায় এটিই spring।
+
+### ধাপ ২: BOS ওপরে
+
+কয়েক candle পরে দাম range-এর ছাদ (2344) ভেঙে **2346**-এ close করে। উপরের structure ভাঙল: bullish BOS।
+
+### ধাপ ৩: FVG ও OB
+
+BOS-এর candle-এ দ্রুত চলনে একটি gap রয়ে গেল: **2335 থেকে 2344**। নিচে sweep-এর পরের বড় ওঠার আগের শেষ bearish candle: **OB, প্রায় 2301–2313**।
+
+### ধাপ ৪: FVG-তে ফেরা
+
+দাম নেমে 2336 পর্যন্ত আসে, FVG-র ভেতরে, তারপর আবার ওপরে। Discount-এ entry-র সুযোগ।
+
+### ধাপ ৫: BSL sweep
+
+দাম চূড়ায় 2474 high-এর ওপর **2487** ছোঁয়, কিন্তু 2467-এ close করে। Buy-side liquidity নেওয়া হলো।
+
+### ধাপ ৬: CHoCH
+
+কিছু candle পরে দাম আগের higher low (2418) ভেঙে **2415**-এ close করে: bearish CHoCH। Structure উল্টোদিকে বদলাল।
+
+</Steps>
+
+<Callout type="note">
+  **Subjectivity এখানেই দেখা যায়।** ধাপ ৬-এ আমি 2418 swing low ধরেছি। যিনি আরও
+  ছোট swing low (প্রায় 2434) ধরবেন, তাঁর CHoCH আরও এক candle আগে, ওপরের দামে।
+  দুজনেই "ঠিক", কারণ সংজ্ঞা ঠিক করে দেওয়া নেই।
+</Callout>
+
+## Trade-এর মূল যুক্তি
+
+| অংশ       | নিয়ম (সাধারণ রূপ)                  | Shared chart-এ (কাল্পনিক)             |
+| :-------- | :---------------------------------- | :------------------------------------ |
+| Bias      | বড় timeframe-এ দিক                 | Sweep-এর পর bullish                   |
+| Setup     | Sweep → CHoCH/BOS → FVG বা OB       | 2287 sweep, 2346 BOS, FVG 2335–2344   |
+| Entry     | FVG/OB-তে ফিরে এলে (limit order)    | 2340 (FVG-র মাঝামাঝি)                 |
+| Stop loss | OB-র নিচে বা sweep low-এর নিচে      | 2299 (OB-র নিচে); প্রশস্ত বিকল্প 2285 |
+| Target    | ওপরের liquidity (পুরোনো swing high) | 2403, তারপর 2454                      |
+
+হিসাব: ঝুঁকি 2340 − 2299 = 41, 2403-এ লাভ 63, অনুপাত প্রায় **1:1.5**; 2454-এ লাভ 114, প্রায় **1:2.8**। Sweep low-এর নিচে (2285) stop দিলে ঝুঁকি 55, 2403-এ অনুপাত প্রায় 1:1.1। সৎ কথা: সংকীর্ণ stop-এ অনুপাত ভালো, কিন্তু stop সহজে লাগতে পারে।
+
+EURUSD H1 উদাহরণ (কাল্পনিক), পূর্ণ ক্রম:
+
+<Chart
+  id="smc-sweep-choch-fvg-win-01"
+  height={460}
+  caption="EURUSD H1 (শিক্ষামূলক কাল্পনিক ডেটা) — একটি low sweep হয় (wick 1.0893), দাম শেষ lower high 1.0950 ভাঙে (CHoCH) এবং FVG রেখে যায়। Pullback-এ 1.0950-এ buy, stop sweep low-এর নিচে 1.0888, target 1.1074 (2R)।"
+/>
+
+<Callout type="warning">
+  Stop loss ছাড়া SMC entry নেই। Limit order FVG-তে বসানো মানে দাম ফিরবে এই
+  অনুমান; না ফিরলে trade হয়ই না, ফিরে ভেঙে নামলে stop লাগে। Position size:
+  [Risk per trade](/bn/learn/08-risk-management/01-risk-per-trade)।
+</Callout>
+
+## শক্তি
+
+- **নির্দিষ্ট entry zone ও ছোট stop।** FVG বা OB থেকে অনুপাত ভালো আসতে পারে।
+- **ক্রম আছে।** Bias → sweep → structure → zone: এটি একটি চেকলিস্টের মতো কাজ করে।
+- **Liquidity-র ধারণা দরকারি।** Swing high/low-এর ওপারে stop জমে, এই সচেতনতা যেকোনো পদ্ধতিতে কাজে লাগে।
+- **Wyckoff ও Price Action-এর সাথে মেলে।** Spring = SSL sweep, SOS = BOS, LPS = FVG-তে ফেরা। একটি জানলে অন্যটি সহজ।
+
+## দুর্বলতা ও সীমা
+
+- **High subjectivity।** কোন swing, কোন candle OB, FVG কতটা ছোট ধরবেন: নির্দিষ্ট নিয়ম নেই। উপরের CHoCH-এর উদাহরণ দেখুন। এই কারণেই "high"।
+- **Hindsight সহজ।** পুরোনো chart-এ sweep, CHoCH, FVG খোঁজা সহজ; সবসময় কিছু একটা মেলে। Live-এ আপনি জানেন না কোনটি আসল।
+- **শব্দের অতিরিক্ত।** একই জিনিসের জন্য একাধিক নাম (CHoCH/MSS, OB/supply-demand)। শেখা কঠিন ও পরস্পরবিরোধী।
+- **ধারণা সবসময় কাজ করে না।** Context ছাড়া FVG-তে entry ব্যর্থ হয় (নিচের উদাহরণ)।
+- **স্বাধীন প্রমাণ কম।** এর বেশিরভাগ জ্ঞান ICT ও অনুসারীদের ভিডিও/কোর্স থেকে। Peer-reviewed গবেষণায় নির্দিষ্ট SMC setup পরীক্ষিত হওয়ার তথ্য এই লেখার জন্য পাওয়া যায়নি। যা আছে তা পুরোনো ধারণাগুলোর (stop cluster, supply-demand) সাধারণ আলোচনা।
+
+**প্রমাণের অবস্থা:** Technical analysis নিয়ে সাধারণ গবেষণার ফল মিশ্র (Park ও Irwin, 2007)। SMC-র নির্দিষ্ট setup-এর জন্য স্বাধীন, বড় মাপের backtest-ভিত্তিক প্রমাণ পাওয়া যায়নি। **কোনো পদ্ধতিই নিশ্চিত লাভ দেয় না।** নিজের backtest-এ যাচাই করুন।
+
+ব্যর্থ উদাহরণ দেখুন। Context ছাড়া শুধু FVG-তে entry:
+
+<Chart
+  id="smc-fvg-no-context-fail-01"
+  height={460}
+  caption="EURUSD H1 (শিক্ষামূলক কাল্পনিক ডেটা) — Downtrend-এর bounce-এ একটি gap তৈরি হয়। Trader pullback-এ 1.0952-এ buy করেন, কিন্তু কোনো low sweep হয়নি, কোনো lower high-ও ভাঙেনি। Downtrend ফিরে এসে stop 1.0920 ছুঁয়েছে (ক্ষতি 1R)।"
+/>
+
+শিক্ষা: **FVG একা কোনো সংকেত নয়।** আগের ক্রম (sweep, structure ভাঙা) ছাড়া gap কেবল gap।
+
+## কার জন্য, কার জন্য নয়
+
+| উপযুক্ত যদি আপনি…                               | উপযুক্ত নয় যদি আপনি…                  |
+| :---------------------------------------------- | :------------------------------------- |
+| Price Action ও market structure আগে শিখেছেন     | সম্পূর্ণ নতুন                          |
+| অস্পষ্টতা ও একাধিক ব্যাখ্যা সহ্য করতে পারেন     | স্পষ্ট, যান্ত্রিক নিয়ম চান            |
+| Intraday-তে London/NY session-এ সময় দিতে পারেন | দিনে একবারের বেশি chart দেখতে পারেন না |
+| ছোট stop ও ভালো অনুপাতের জন্য শৃঙ্খলা রাখেন     | Stop সরানোর প্রবণতা আছে                |
+
+## অন্য পদ্ধতির সাথে মেলানো
+
+- **SMC + Wyckoff:** সবচেয়ে প্রাকৃতিক। দুটি একই ঘটনার দুটি ভাষা। Wyckoff বড় ছবি (কোন phase), SMC entry-র সূক্ষ্মতা (কোন FVG)।
+- **SMC + Price Action:** Bias ও structure Price Action-এরই অংশ। এর ভিত্তি দৃঢ় না হলে SMC ভাসমান।
+- **SMC + Volume Profile:** Sweep-এর পর দাম Value Area-য় ফিরলে অর্থ আরও পরিষ্কার।
+
+**যা মেশাবেন না:** SMC-র সাথে একগুচ্ছ indicator। Indicator দেরিতে আসে, SMC entry-র সূক্ষ্ম জায়গা খোঁজে; দুটির সময়কাল আলাদা। আরও জরুরি: **একসাথে সব SMC শব্দ ব্যবহার না করা।** একটি ক্রম (sweep → CHoCH → FVG) দিয়ে শুরু করুন।
+
+## পরে গভীরে যা শিখবেন
+
+এই পাঠ overview। বিস্তারিত আলাদা অধ্যায়ে আছে: [SMC / ICT গভীরে](/bn/learn/19-smc-ict/00-overview)। সেখানে structure, liquidity, order block ও FVG, premium/discount ও OTE, session ও kill zone, Power of 3, entry model আর সীমা ও ঝুঁকি আলাদা পাঠে, chart ও ব্যর্থ উদাহরণসহ।
+
+## কীভাবে শেখা শুরু করবেন
+
+<Steps>
+
+### ধাপ ১: Structure আগে
+
+Swing high/low চিহ্নিত করা আয়ত্তে আনুন (আগের পাঠগুলো)। এটি না থাকলে বাকিটা ভাসে।
+
+### ধাপ ২: শুধু একটি ক্রম
+
+একটি ক্রম বাছুন: SSL sweep → bullish CHoCH → FVG-তে ফেরা। বাকি শব্দ আপাতত ভুলে যান।
+
+### ধাপ ৩: ২০টি উদাহরণ লিখুন
+
+XAUUSD H1/H4-এ ক্রমটি খুঁজুন। প্রতিটির ফল লিখুন: কাজ করল, ব্যর্থ হলো, না ক্রম পূর্ণ হয়নি।
+
+### ধাপ ৪: Replay করে আগে লেবেল
+
+Chart-এর ডান দিক ঢেকে এক candle করে এগোন। প্রতিবার আগে লেবেল বসান, তারপর পরের candle দেখুন। Hindsight bias ধরা পড়বে।
+
+### ধাপ ৫: নিয়ম লিখে backtest
+
+Entry, stop, target সংখ্যাসহ নিয়ম লিখুন। অন্তত ৫০টি উদাহরণে [backtest](/bn/learn/15-backtesting-journal/01-how-to-backtest) করুন।
+
+</Steps>
+
+## সাধারণ ভুল
+
+| ভুল                                   | কেন সমস্যা                           | সমাধান                                       |
+| :------------------------------------ | :----------------------------------- | :------------------------------------------- |
+| প্রতিটি gap-কে FVG ভেবে entry         | Context ছাড়া gap অর্থহীন            | আগে sweep ও structure ভাঙা চাই               |
+| Bias ছাড়া নিচের timeframe-এ লাফ      | স্রোতের উল্টো trade                  | আগে H4/D1-এ দিক ঠিক করুন                     |
+| সব শব্দ একসাথে ব্যবহার                | সংকেত ভিড়, সিদ্ধান্তহীনতা           | একটি ক্রম দিয়ে শুরু                         |
+| Stop ছাড়া limit order রেখে যাওয়া    | দাম না ফিরলে বা ভেঙে নামলে বড় ক্ষতি | প্রতিটি order-এর সাথে stop                   |
+| "Smart money করছে" নিশ্চিত ধরে নেওয়া | এটি অনুমান, প্রমাণিত নয়             | chart-এর ঘটনা বলুন, উদ্দেশ্য অনুমান করবেন না |
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- SMC liquidity-র অবস্থান দেখে অনুমান করে দাম কোথায় deliver হবে।
+- শব্দগুলো একটি ক্রমে কাজ করে: bias → sweep → BOS/CHoCH → FVG/OB → entry।
+- Spring = SSL sweep, SOS = BOS, LPS = FVG-তে ফেরা: Wyckoff-এর সাথে প্রায় এক ঘটনা।
+- Subjectivity high: swing, OB, CHoCH-এর সংজ্ঞা শিক্ষকভেদে আলাদা।
+- স্বাধীন প্রমাণ কম; context ছাড়া FVG ব্যর্থ হয়। নিশ্চিত লাভ নেই।
+
+</KeyTakeaways>
+
+## কুইজ
+
+1. SMC-র মূল প্রশ্ন কী?
+2. BSL আর SSL কোথায় থাকে?
+3. BOS আর CHoCH-এর পার্থক্য কী?
+4. FVG কী, আর কেন একা তা যথেষ্ট নয়?
+5. SMC-র subjectivity "high" কেন?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** Liquidity কোথায় জমে আছে, আর দাম এরপর কোথায় deliver হবে।
+
+**২.** BSL swing high-এর ওপরে; SSL swing low-এর নিচে।
+
+**৩.** BOS চলমান trend-এর দিকে swing ভাঙে (trend চলছে); CHoCH trend-এর বিপরীতে প্রথম structure ভাঙে (বদলাতে পারে)।
+
+**৪.** তিন-candle নকশার ফাঁক, যেখানে দ্রুত চলনে দুই দিকের লেনদেন হয়নি। একা যথেষ্ট নয়, কারণ sweep ও structure ভাঙা ছাড়া gap কেবল gap।
+
+**৫.** কোন swing, কোন candle OB, কোন চলন CHoCH: এসবের নির্দিষ্ট নিয়ম নেই, তাই দুজন trader একই chart-এ আলাদা সিদ্ধান্তে পৌঁছান।
+
+</details>
+
+## পরের ধাপ
+
+- অধ্যায়ের তুলনা: [Trading Methodology: আটটি পদ্ধতি](/bn/learn/16-trading-methodologies/00-overview)।
+- আগের পাঠ: [Volume Profile](/bn/learn/16-trading-methodologies/05-volume-profile)।
+- পরের পাঠ: [Elliott Wave](/bn/learn/16-trading-methodologies/07-elliott-wave)।
+- সম্পর্কিত: [Wyckoff Method](/bn/learn/16-trading-methodologies/03-wyckoff-method), [Price Action](/bn/learn/16-trading-methodologies/01-price-action)।
+
+### সূত্র
+
+- <ExternalLink href="https://www.investopedia.com/terms/w/wyckoffmethod.asp">
+    Wyckoff Method (Investopedia)
+  </ExternalLink>
+- <ExternalLink href="https://www.investopedia.com/terms/s/support.asp">
+    Support and Resistance (Investopedia)
+  </ExternalLink>
+- <ExternalLink href="https://doi.org/10.1111/j.1467-6419.2007.00519.x">
+    Park & Irwin (2007), What Do We Know About the Profitability of Technical
+    Analysis?
+  </ExternalLink>
+
+<Disclaimer>
+  এই লেখাটি শুধুমাত্র শিক্ষামূলক উদ্দেশ্যে। এটি কোনো financial advice নয়। কোনো
+  trading পদ্ধতিই নিশ্চিত লাভ দেয় না। Forex ও Gold trading-এ উল্লেখযোগ্য আর্থিক
+  ঝুঁকি রয়েছে এবং আপনি আপনার বিনিয়োগের পুরোটাই হারাতে পারেন। Real money দিয়ে
+  trade করার আগে demo account-এ যথেষ্ট অনুশীলন করুন।
+</Disclaimer>

@@ -1,0 +1,14 @@
+{
+  "title": "SMC / ICT in Depth",
+  "pages": [
+    "00-overview",
+    "01-market-structure",
+    "02-liquidity-sweeps",
+    "03-order-block-fvg",
+    "04-premium-discount",
+    "05-sessions-kill-zones",
+    "06-power-of-3",
+    "07-entry-models",
+    "08-risk-and-limits"
+  ]
+}

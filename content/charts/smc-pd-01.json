@@ -1,0 +1,315 @@
+{
+  "id": "smc-pd-01",
+  "title": {
+    "en": "Dealing range: premium, discount and the OTE zone",
+    "bn": "Dealing range: premium, discount ও OTE zone"
+  },
+  "symbol": "XAUUSD",
+  "timeframe": "H1",
+  "mode": "synthetic",
+  "type": "trade-setup",
+  "bias": "bullish",
+  "outcome": "win",
+  "tags": [
+    "XAUUSD",
+    "smc",
+    "premium-discount",
+    "ote"
+  ],
+  "module": "19-smc-ict",
+  "lessonSlugs": [
+    "04-premium-discount"
+  ],
+  "caption": {
+    "en": "XAUUSD H1 (synthetic): range 2299.49–2360, equilibrium 2329.74. Price retraces into the discount half, inside the 0.62–0.79 zone (2312.2–2322.48). Buy at 2319.48, stop 2302.49 below the range low, target near the high.",
+    "bn": "XAUUSD H1 (কাল্পনিক): range 2299.49–2360, equilibrium 2329.74। দাম discount অংশে, 0.62–0.79 zone-এর (2312.2–2322.48) ভেতরে ফেরে। 2319.48-এ buy, stop range low-র নিচে 2302.49, target high-এর কাছে।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data (incl. synthetic tick volume), not a real market record.",
+    "bn": "শিক্ষামূলক কাল্পনিক ডেটা (tick volume-ও কাল্পনিক), বাস্তব মার্কেটের রেকর্ড নয়।"
+  },
+  "updatedAt": "2026-11-07T18:00:00Z",
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 2360,
+      "label": "Range high",
+      "color": "#64748b",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 2329.74,
+      "label": "EQ 2329.74",
+      "color": "#f5b301",
+      "style": "solid"
+    },
+    {
+      "type": "hline",
+      "price": 2299.49,
+      "label": "Range low",
+      "color": "#64748b",
+      "style": "dashed"
+    },
+    {
+      "type": "zone",
+      "from": {
+        "i": 20,
+        "price": 2322.48
+      },
+      "to": {
+        "i": 28,
+        "price": 2312.2
+      },
+      "label": "OTE",
+      "color": "#f5b301"
+    },
+    {
+      "type": "marker",
+      "i": 22,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Buy"
+    },
+    {
+      "type": "hline",
+      "price": 2302.49,
+      "label": "Stop 2302.49",
+      "color": "#ef4444",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Buying in discount and selling in premium gives a better entry price and a closer stop. Direction still comes from structure, not from the zone.",
+    "bn": "Discount-এ buy আর premium-এ sell ভালো entry দাম ও কাছের stop দেয়। দিক তবু structure থেকে আসে, zone থেকে নয়।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Direction from structure, price from the zone",
+      "bn": "দিক structure থেকে, দাম zone থেকে"
+    }
+  ],
+  "entry": 2319.48,
+  "stopLoss": 2302.49,
+  "takeProfit": 2356,
+  "rr": "1:2.1",
+  "candles": [
+    {
+      "i": 0,
+      "o": 2300,
+      "h": 2303.98,
+      "l": 2299.49,
+      "c": 2302.99
+    },
+    {
+      "i": 1,
+      "o": 2302.99,
+      "h": 2310.87,
+      "l": 2301.79,
+      "c": 2309.33
+    },
+    {
+      "i": 2,
+      "o": 2309.33,
+      "h": 2314.51,
+      "l": 2307.91,
+      "c": 2312.71
+    },
+    {
+      "i": 3,
+      "o": 2312.71,
+      "h": 2318.56,
+      "l": 2311.41,
+      "c": 2317.34
+    },
+    {
+      "i": 4,
+      "o": 2317.34,
+      "h": 2322.8,
+      "l": 2316.39,
+      "c": 2322.01
+    },
+    {
+      "i": 5,
+      "o": 2322.01,
+      "h": 2325.79,
+      "l": 2320.38,
+      "c": 2325.01
+    },
+    {
+      "i": 6,
+      "o": 2325.01,
+      "h": 2329.95,
+      "l": 2324.39,
+      "c": 2328.59
+    },
+    {
+      "i": 7,
+      "o": 2328.59,
+      "h": 2335.32,
+      "l": 2326.95,
+      "c": 2334.01
+    },
+    {
+      "i": 8,
+      "o": 2334.01,
+      "h": 2340.06,
+      "l": 2333.37,
+      "c": 2339.12
+    },
+    {
+      "i": 9,
+      "o": 2339.12,
+      "h": 2344.8,
+      "l": 2337.3,
+      "c": 2342.96
+    },
+    {
+      "i": 10,
+      "o": 2342.96,
+      "h": 2348.44,
+      "l": 2341.83,
+      "c": 2346.88
+    },
+    {
+      "i": 11,
+      "o": 2346.88,
+      "h": 2351.09,
+      "l": 2345.12,
+      "c": 2349.97
+    },
+    {
+      "i": 12,
+      "o": 2349.97,
+      "h": 2356.61,
+      "l": 2348.58,
+      "c": 2355.73
+    },
+    {
+      "i": 13,
+      "o": 2355.73,
+      "h": 2360,
+      "l": 2354.73,
+      "c": 2358.5
+    },
+    {
+      "i": 14,
+      "o": 2358.5,
+      "h": 2359.29,
+      "l": 2351.77,
+      "c": 2353.15
+    },
+    {
+      "i": 15,
+      "o": 2353.15,
+      "h": 2354.54,
+      "l": 2347.36,
+      "c": 2348.71
+    },
+    {
+      "i": 16,
+      "o": 2348.71,
+      "h": 2349.77,
+      "l": 2340.58,
+      "c": 2342.39
+    },
+    {
+      "i": 17,
+      "o": 2342.39,
+      "h": 2344.32,
+      "l": 2339.28,
+      "c": 2339.84
+    },
+    {
+      "i": 18,
+      "o": 2339.84,
+      "h": 2340.34,
+      "l": 2333.25,
+      "c": 2334.08
+    },
+    {
+      "i": 19,
+      "o": 2334.08,
+      "h": 2335.89,
+      "l": 2328.09,
+      "c": 2329.12
+    },
+    {
+      "i": 20,
+      "o": 2329.12,
+      "h": 2331.03,
+      "l": 2322.13,
+      "c": 2324.09
+    },
+    {
+      "i": 21,
+      "o": 2324.09,
+      "h": 2325.09,
+      "l": 2319.48,
+      "c": 2320.98
+    },
+    {
+      "i": 22,
+      "o": 2320.98,
+      "h": 2321.58,
+      "l": 2318.88,
+      "c": 2319.78
+    },
+    {
+      "i": 23,
+      "o": 2319.78,
+      "h": 2325.4,
+      "l": 2317.95,
+      "c": 2324.4
+    },
+    {
+      "i": 24,
+      "o": 2324.4,
+      "h": 2330.4,
+      "l": 2322.42,
+      "c": 2329.9
+    },
+    {
+      "i": 25,
+      "o": 2329.9,
+      "h": 2339.52,
+      "l": 2328.94,
+      "c": 2338.5
+    },
+    {
+      "i": 26,
+      "o": 2338.5,
+      "h": 2342.94,
+      "l": 2337.77,
+      "c": 2341.54
+    },
+    {
+      "i": 27,
+      "o": 2341.54,
+      "h": 2350.29,
+      "l": 2339.56,
+      "c": 2349.44
+    },
+    {
+      "i": 28,
+      "o": 2349.44,
+      "h": 2356.21,
+      "l": 2348.58,
+      "c": 2354.75
+    },
+    {
+      "i": 29,
+      "o": 2354.75,
+      "h": 2360.7,
+      "l": 2353.45,
+      "c": 2358.84
+    },
+    {
+      "i": 30,
+      "o": 2358.84,
+      "h": 2366,
+      "l": 2357.84,
+      "c": 2364.5
+    }
+  ]
+}

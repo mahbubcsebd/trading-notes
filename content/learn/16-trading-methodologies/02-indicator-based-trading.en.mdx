@@ -1,0 +1,382 @@
+---
+title: "Indicator-Based Trading: Measuring the Market with Formulas — A Plain Guide"
+description: "What indicator-based trading is, how moving averages, RSI, MACD and ATR measure price, and the limits of lag, whipsaw and overfitting, on an XAUUSD chart."
+level: beginner
+tags: [indicators, moving-average, rsi, macd, atr, methodology]
+instruments: [XAUUSD]
+timeframes: [H4, D1]
+status: done
+sources:
+  - type: other
+    title: "Technical analysis (Wikipedia)"
+    url: "https://en.wikipedia.org/wiki/Technical_analysis"
+  - type: other
+    title: "Relative strength index (Wikipedia)"
+    url: "https://en.wikipedia.org/wiki/Relative_strength_index"
+  - type: other
+    title: "Moving average (Wikipedia)"
+    url: "https://en.wikipedia.org/wiki/Moving_average"
+  - type: other
+    title: "Average true range (Wikipedia)"
+    url: "https://en.wikipedia.org/wiki/Average_true_range"
+  - type: other
+    title: "Park & Irwin (2007), What Do We Know About the Profitability of Technical Analysis? (Journal of Economic Surveys)"
+    url: "https://doi.org/10.1111/j.1467-6419.2007.00519.x"
+updated: 2026-11-07
+---
+
+# Indicator-Based Trading: Measuring the Market with Formulas
+
+In Price Action you judge by eye: "Is this breakout strong?" Indicator-Based Trading takes the opposite road. The judging is handed to a **formula**. The formula takes price, does a calculation, and gives you a line or a number. You just follow the rules.
+
+## At a glance
+
+<MethodCard
+  lang="en"
+  name="Indicator-Based Trading"
+  origin="Many contributors; RSI and ATR: J. Welles Wilder, 1978"
+  reads="Indicators (math on price/volume)"
+  question="What do formula-measured momentum and trend say?"
+  timeframes="All timeframes"
+  difficulty="beginner"
+  subjectivity="low"
+/>
+
+## What you will learn
+
+- Say in one sentence what an indicator does and does not do.
+- Tell apart trend, momentum and volatility indicators.
+- Understand lagging vs leading indicators, and why neither is perfect.
+- Recognise whipsaw in ranges and overfitting in backtests.
+- See on the shared XAUUSD chart when indicators help and when they arrive late.
+
+## History and origin
+
+Indicator-Based Trading has **no single founder.** It is the sum of many inventions.
+
+- **Moving average:** averaging prices to smooth the waves is a very old idea. No one person can be called its creator.
+- **J. Welles Wilder Jr.:** his 1978 book _New Concepts in Technical Trading Systems_ introduced RSI, ATR and more. Today's default settings (such as RSI's 14 periods) come from there.
+- **MACD and Bollinger Bands:** MACD was created by Gerald Appel (1970s), Bollinger Bands by John Bollinger (1980s). Familiar defaults: MACD 12-26-9, Bollinger 20 periods and 2 standard deviations.
+- **The computer age:** once charting software arrived, hundreds of indicators were built. Anyone can now write their own.
+
+## Core philosophy
+
+**The indicator's question: what do formula-measured momentum and trend say?**
+
+The belief is this: human eyes tire and carry bias. A formula does not tire. Given the same input, it gives the same output. So if you write rules and follow that output, your decisions stay steady.
+
+An analogy: a doctor can guess a fever by touching the forehead. A thermometer turns that into a number. The number is not perfect, but everyone sees the same number.
+
+<Callout type="note">
+  An indicator brings no new information. It **rearranges the same price**.
+  Every indicator is built from price (and sometimes volume). So its job is to
+  summarise, not to predict.
+</Callout>
+
+## Core concepts
+
+The full lesson on each indicator is in an earlier chapter. Here are seven ideas through the methodology lens.
+
+### 1. Trend indicator: the moving average
+
+**A moving average (MA) is the average of the last few closes, shifting forward with every candle.** An SMA gives all prices equal weight. An EMA gives recent prices more weight, so it reacts faster.
+
+An analogy: the average temperature of the last 20 days. One hot day barely moves it. The average tells you the season, not today's weather.
+
+Common rule: price above the MA means uptrend, below means downtrend. A cross of two MAs (say EMA 20 rising through EMA 50) signals a trend change. Details: [Moving averages and crossover](/en/learn/07-technical-indicators/01-moving-averages-crossover).
+
+### 2. Momentum indicator: RSI
+
+**RSI (Relative Strength Index) is a number between 0 and 100 that compares the strength of recent rises and falls.** Common rule: above 70 is overbought, below 30 is oversold.
+
+An analogy: a car's speedometer. High speed does not mean the car will stop right now. It only tells you it is moving fast.
+
+Here is the biggest mistake: **in a strong trend RSI can stay above 70 for a long time.** Overbought does not mean "sell". A more useful signal is **divergence**: price makes a new high, but RSI fails to reach its earlier high. Details: [RSI and divergence](/en/learn/07-technical-indicators/02-rsi-divergence).
+
+<CandleDiagram
+  title="Bearish divergence"
+  candles={[
+    { o: 10, h: 14, l: 9.5, c: 13.5, dim: true },
+    { o: 13.5, h: 18, l: 13, c: 17.5, note: "High 1" },
+    { o: 17.5, h: 18, l: 14.5, c: 15, dim: true },
+    { o: 15, h: 17, l: 14.5, c: 16.5, dim: true },
+    { o: 16.5, h: 20, l: 16, c: 18, note: "High 2 (higher)" },
+    { o: 18, h: 18.5, l: 14.5, c: 15, label: "Turns" },
+  ]}
+  caption="The second high is higher than the first, but the push is weaker (small body, big upper wick). RSI measures this weakness."
+/>
+
+### 3. Momentum and trend together: MACD
+
+**MACD is the difference between two EMAs (usually 12 and 26), plus a 9-period signal line of that difference.** You watch the cross of the two lines and their position relative to zero.
+
+An analogy: the gap between two runners. A widening gap means the leader is speeding up. A shrinking gap means the pace is fading, hinting at a turn early.
+
+Details: [MACD](/en/learn/07-technical-indicators/03-macd).
+
+### 4. Volatility indicators: ATR and Bollinger Bands
+
+**ATR (Average True Range) measures how far a candle moves on average.** It does not give direction, only the size of the movement. That makes it useful for choosing stop size. **Bollinger Bands** draw two lines 2 standard deviations either side of a 20-period MA. Narrow bands mean low volatility, wide bands mean high.
+
+An analogy: the height of river waves. Knowing how big the waves are tells you how far from the bank to moor the boat.
+
+Details: [ATR for stop size](/en/learn/07-technical-indicators/04-atr-stop-size), [Bollinger Bands](/en/learn/07-technical-indicators/05-bollinger-bands).
+
+### 5. Lagging vs leading
+
+**A lagging indicator reacts after the event; a leading indicator tries to hint before it.** Everything MA-based is lagging, because an average is built from the past. Many call RSI divergence leading, but it too arrives after price.
+
+The honest truth: **every indicator lags somewhat.** All are computed from price. Making one faster (shorter period) gives more signals but more errors. Making it slower (longer period) cuts errors but adds delay. It is a trade-off, not a problem with a solution.
+
+| Period         | Advantage    | Disadvantage               |
+| :------------- | :----------- | :------------------------- |
+| Short (e.g. 9) | Fast signals | More false signals (noise) |
+| Long (e.g. 50) | Fewer errors | Signals very late          |
+
+### 6. Whipsaw: the trap in a range
+
+**Whipsaw is when an indicator gives repeated, opposite signals in a sideways market.** Trend-following indicators work well when there is a trend. In a range, price wanders back and forth, the MAs cross again and again, and each cross leaves a small loss.
+
+An analogy: a saw moves back and forth. You get tired without cutting any wood.
+
+The remedy: first work out whether the market is trending or ranging. Then choose the indicator. Trend indicators confuse you in ranges, and oscillators confuse you in strong trends.
+
+### 7. Repainting and overfitting
+
+Two separate traps.
+
+- **Repainting:** some indicators change the value of old candles later. On the chart the signal looks perfect in the past, but it never appeared live. **Be suspicious of a perfect signal history.**
+- **Overfitting:** if you try enough settings (periods, thresholds), you can always find a profitable combination on past data. But it only fits the shape of that data, not the future.
+
+An analogy: if the exam questions are known in advance, everyone scores 100. When the real exam has new questions, the result differs.
+
+The remedy: keep settings few, do not hunt for the "best" value in a narrow range, and split your data in two: build the rules on one part, test on the other. Details: [How to backtest](/en/learn/15-backtesting-journal/01-how-to-backtest).
+
+## Reading the shared chart
+
+The same XAUUSD H4 chart from the chapter. Now with EMA 20, EMA 50 and RSI 14.
+
+<Chart
+  id="meth-ind-shared"
+  height={520}
+  caption="XAUUSD H4 (educational synthetic data) — EMA 20 (blue) and EMA 50 (purple), RSI 14 below. There is a ten-bar gap between the breakout and the EMA cross up; RSI makes a lower high at the final high; after the drop the EMAs have still not crossed down."
+/>
+
+<Steps>
+
+### Step 1: In the range, almost silent
+
+Price wanders in the 2296–2344 range (grey zone). In this part EMA 50 is not even formed yet (it needs 50 candles), and EMA 20 hugs price. There is no clear trend signal. The honest answer from Indicator-Based here: "no signal."
+
+### Step 2: The cross comes ten bars after the breakout
+
+Price breaks the range top and closes at 2346. But **EMA 20 crosses EMA 50 ten candles later**, with price at 2378. That is about 32 dollars after the breakout entry. You get trend confirmation, but after a lot of the move is gone.
+
+### Step 3: RSI overbought, yet the trend continues
+
+At the top of the wave RSI is about **76.8** (above 70). But price still rises from 2454 to 2487. Selling under the "overbought = sell" rule would have been wrong here.
+
+### Step 4: Bearish divergence
+
+At the last high price is 2487, higher than the earlier 2454. But RSI is only about **71.6**, lower than the earlier 76.8. Price made a new high, momentum did not: bearish divergence. This is the most useful signal on this chart.
+
+### Step 5: After the drop the EMAs are still up
+
+Price has fallen from 2487 to 2394 (about 93 dollars). Yet EMA 20 (about 2425) is still above EMA 50 (about 2417). **The trend indicator still says "bullish"** even though price has dropped a lot. That is lag.
+
+</Steps>
+
+<Callout type="tip">
+  Note that on one chart the indicators behaved three ways: silent in the range,
+  late at the breakout, and a warning through divergence at the last high. No
+  single indicator is good in every situation.
+</Callout>
+
+## Basic trade logic
+
+An indicator trade's strength is that the rules **can be written beforehand.** A simple trend-pullback example:
+
+| Part      | Rule (common form)                                                | In the example below (EURUSD H4) |
+| :-------- | :---------------------------------------------------------------- | :------------------------------- |
+| Filter    | EMA 20 > EMA 50 and both rising (uptrend)                         | Both rising                      |
+| Setup     | Price pulls back to EMA 20                                        | Pullback touched EMA 20          |
+| Entry     | Buy when a bullish candle closes above EMA 20                     | Buy on the bull candle           |
+| Stop loss | Below the pullback low                                            | 1.0943                           |
+| Target    | The previous high, or a fixed multiple of stop distance (e.g. 2R) | 1.1057                           |
+
+The rules are mechanical, so you can test the same rules on 50 past examples.
+
+<Chart
+  id="ma-trend-pullback-01"
+  height={420}
+  caption="EURUSD H4 (educational synthetic data) — EMA 20 is above EMA 50 and rising. Price pulled back to EMA 20 and closed above it on a bull candle: buy, stop below the pullback low at 1.0943, target 1.1057."
+/>
+
+<Callout type="warning">
+  An indicator signal is not a substitute for a stop loss. ATR can set the stop
+  distance, but you must still place a stop. Position size:
+  [Risk per trade](/en/learn/08-risk-management/01-risk-per-trade).
+</Callout>
+
+## Strengths
+
+- **Clear rules.** "EMA 20 > EMA 50" is a yes-or-no condition. Two traders give the same answer.
+- **Easy to backtest.** Mechanical rules can be verified by computer, with less hindsight bias.
+- **Reduces emotion.** The formula decides, so there is less room to break the rules with "let me wait a bit."
+- **Easy to learn.** Put it on the platform and it works; a good start for beginners.
+- **Suits automation.** Mechanical rules can become a robot. See [Automation](/en/learn/15-backtesting-journal/06-automation).
+
+## Weaknesses and limits
+
+- **Subjectivity is low, but judgment is not removed.** Which indicator, which period, which timeframe: that choice is yours. The rules are mechanical, but writing the rules is not. So "low", not "zero".
+- **Late signals (lag).** On the shared chart the EMA cross came ten bars after the breakout, and did not cross after the drop.
+- **Whipsaw in ranges.** A string of small losses builds into a large one.
+- **Overfitting risk.** The more you tune settings, the better it looks on the past and the worse in the future.
+- **Counting the same information many times.** RSI, MACD, Stochastic all measure the same price momentum. When all three agree it feels three times as certain, but it is one witness called three times. See [Indicator overload](/en/learn/07-technical-indicators/07-indicator-overload).
+- **Volume indicators:** in spot Forex and Gold, volume is really tick volume (not actual traded volume). Indicators built on it are approximate too.
+
+**Evidence status:** research on technical trading rules is mixed. The review by Park and Irwin (2007) says that much of the modern research has shown profits for technical rules, but problems with data snooping, transaction costs and settings chosen after the fact leave doubt about those results. Choosing settings is itself what creates overfitting, a well-known problem in this field. **No indicator guarantees profit.**
+
+Here is a failed example. A similar rule, but in a sideways market:
+
+<Chart
+  id="ma-chop-whipsaw-01"
+  height={420}
+  caption="EURUSD H4 (educational synthetic data) — price moves sideways; EMA 9 keeps crossing EMA 21. Each cross is a signal, but it reverses before any profit arrives."
+/>
+
+This chart teaches: an indicator does not know whether the market is trending or ranging. You must decide that, which is why an indicator alone is not enough.
+
+## Who it suits
+
+| Suits you if you…                            | Does not suit you if you…                            |
+| :------------------------------------------- | :--------------------------------------------------- |
+| Like clear rules and backtesting             | Want to read and judge each setup yourself           |
+| Want to reduce changing decisions on emotion | Want to enter as early as possible                   |
+| Check the chart once a day on H4/D1          | Cannot tolerate a string of small range losses       |
+| Want to automate later                       | Want an explanation for every move (why price moved) |
+
+## Combining with other methods
+
+Indicators work best as a **helper**, answering one specific question.
+
+- **Price Action + MA:** Price Action gives direction and levels; EMA 50 is only a trend filter. See [Price Action](/en/learn/16-trading-methodologies/01-price-action).
+- **Any method + ATR:** to size the stop. ATR gives no direction, so it never conflicts with any method.
+- **Volume Profile + VWAP:** both talk about "fair price", so they fit naturally. See [Volume and VWAP](/en/learn/07-technical-indicators/06-volume-vwap).
+
+**What not to mix:** three indicators of the same kind (two oscillators plus MACD). They measure the same thing, so certainty does not increase; the chart just fills up.
+
+## Deep dive later
+
+This lesson is an overview. The full lesson on each part already exists:
+
+- Indicators overview, Moving averages and crossover
+- RSI and divergence, MACD
+- ATR for stop size, Bollinger Bands
+- Backtest and Automation
+
+No sub-series is needed: chapter 07 is already the full course on this.
+
+## How to start
+
+<Steps>
+
+### Step 1: Two indicators
+
+Keep only EMA 50 and RSI 14. Remove everything else.
+
+### Step 2: Write the market type
+
+Split the last six months of XAUUSD H4 into trending and ranging parts. For each part, write how EMA 50 behaved.
+
+### Step 3: One rule
+
+Write one rule in one line (such as the trend-pullback above). Entry, stop and target, with numbers.
+
+### Step 4: 50 examples
+
+Apply the rule by hand to at least 50 past places. Record win or loss and the R.
+
+### Step 5: Look at ranges separately
+
+Within the same 50, look at the results during ranges separately. That is where losses usually pile up.
+
+</Steps>
+
+## Common mistakes
+
+| Mistake                                        | Why it is a problem                                      | Fix                                                |
+| :--------------------------------------------- | :------------------------------------------------------- | :------------------------------------------------- |
+| Selling just because it is overbought          | In a strong trend RSI stays above 70 for a long time     | Read the trend; treat divergence as the signal     |
+| Many indicators at once                        | Same information counted many times, conflicting signals | One trend plus one momentum, at most               |
+| Tuning settings to find the "best" value       | Overfitting: good on the past, not the future            | Keep defaults; verify by splitting the data in two |
+| Running a trend indicator in a range           | Whipsaw: a string of small losses                        | Understand the market type first                   |
+| Trusting the history of a repainting indicator | Perfect in the past, the signal never came live          | Verify on a live demo; doubt a perfect history     |
+
+## Summary
+
+<KeyTakeaways>
+
+- An indicator arranges price into a formula; it brings no new information and does not predict.
+- Three kinds: trend (MA), momentum (RSI, MACD), volatility (ATR, Bollinger).
+- Every indicator lags somewhat; faster means more noise, slower means more delay.
+- Know the two traps: whipsaw in ranges and overfitting from tuning settings.
+- Mechanical rules make backtesting easy; subjectivity is low, yet not zero. No guaranteed profit.
+
+</KeyTakeaways>
+
+## Quiz
+
+1. What is the core question of Indicator-Based Trading?
+2. Name one indicator each for trend, momentum and volatility.
+3. If RSI stays above 70 in a strong uptrend, is that a sell signal by itself?
+4. What is whipsaw, and in which market is it more common?
+5. Why does overfitting make a backtest result misleading?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** What formula-measured momentum and trend say.
+
+**2.** Trend: moving average. Momentum: RSI or MACD. Volatility: ATR or Bollinger Bands.
+
+**3.** No. In a strong trend RSI can stay above 70 for a long time. The more useful signal is divergence (price makes a new high, RSI does not).
+
+**4.** In a sideways market the indicator repeatedly gives opposite signals, each leaving a small loss. It is more common in ranging or choppy markets.
+
+**5.** Tuning many settings to fit past data makes the result look good, but it only fits the shape of that data; it does not hold on new data.
+
+</details>
+
+## Next steps
+
+- Chapter comparison: [Trading Methodologies: the eight approaches](/en/learn/16-trading-methodologies/00-overview).
+- Previous lesson: [Price Action](/en/learn/16-trading-methodologies/01-price-action).
+- Next lesson: [Wyckoff Method](/en/learn/16-trading-methodologies/03-wyckoff-method).
+- Related: [Indicators chapter](/en/learn/07-technical-indicators/00-overview), [Backtest](/en/learn/15-backtesting-journal/01-how-to-backtest).
+
+### Sources
+
+- <ExternalLink href="https://en.wikipedia.org/wiki/Technical_analysis">
+    Technical analysis (Wikipedia)
+  </ExternalLink>
+- <ExternalLink href="https://en.wikipedia.org/wiki/Relative_strength_index">
+    Relative strength index (Wikipedia)
+  </ExternalLink>
+- <ExternalLink href="https://en.wikipedia.org/wiki/Moving_average">
+    Moving average (Wikipedia)
+  </ExternalLink>
+- <ExternalLink href="https://en.wikipedia.org/wiki/Average_true_range">
+    Average true range (Wikipedia)
+  </ExternalLink>
+- <ExternalLink href="https://doi.org/10.1111/j.1467-6419.2007.00519.x">
+    Park & Irwin (2007), What Do We Know About the Profitability of Technical
+    Analysis?
+  </ExternalLink>
+
+<Disclaimer>
+  This article is for educational purposes only and is not financial advice. No
+  trading methodology guarantees profit. Forex and gold trading carry
+  significant financial risk, and you can lose all of your capital. Practise on
+  a demo account before trading with real money.
+</Disclaimer>

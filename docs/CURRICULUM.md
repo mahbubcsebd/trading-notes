@@ -214,19 +214,23 @@ Chapter title: Backtesting & Journal
 | 03 | Journal Template: কোন কলাম, কেন, কীভাবে পূরণ | intermediate | done | `/bn/learn/15-backtesting-journal/03-journal-template` |
 | 04 | Reviewing Trades: ডেটা ভাগ করে দুর্বল জায়গা খোঁজা | intermediate | done | `/bn/learn/15-backtesting-journal/04-reviewing-trades` |
 | 05 | Building a Plan: ডেটা থেকে plan v2 বানানো | intermediate | done | `/bn/learn/15-backtesting-journal/05-building-a-plan` |
+| 06 | Automation: নিয়ম কোডে চালানোর আগে যা জানা দরকার | advanced | done | `/bn/learn/15-backtesting-journal/06-automation` |
 
-## 16-advanced
+## 16-trading-methodologies
 
-Chapter title: Advanced
+Chapter title: Trading Methodologies
 
 | # | Lesson | Level | Status | URL |
 |---|---|---|---|---|
-| 00 | Advanced: SMC, Volume Profile, Wyckoff, Elliott ও Automation (চ্যাপ্টার পরিচিতি) | advanced | done | `/bn/learn/16-advanced/00-overview` |
-| 01 | Smart Money Concepts (SMC) ও ICT Basics: ক্রম মিলিয়ে entry | advanced | done | `/bn/learn/16-advanced/01-smart-money-concepts-ict-basics` |
-| 02 | Volume Profile ও Market Profile: কোন দামে বাজার সবচেয়ে বেশি সময় কাটায় | advanced | done | `/bn/learn/16-advanced/02-volume-profile-market-profile` |
-| 03 | Wyckoff Basics: Accumulation range-এর ক্রম পড়া | advanced | done | `/bn/learn/16-advanced/03-wyckoff-basics` |
-| 04 | Elliott Wave: গণনার নিয়ম, ব্যবহারযোগ্য অংশ ও সীমা | advanced | done | `/bn/learn/16-advanced/04-elliott-wave` |
-| 05 | Automation: নিয়ম কোডে চালানোর আগে যা জানা দরকার | advanced | done | `/bn/learn/16-advanced/05-automation` |
+| 00 | Trading Methodology: আটটি পদ্ধতি, এক chart (চ্যাপ্টার পরিচিতি) | intermediate | done | `/bn/learn/16-trading-methodologies/00-overview` |
+| 01 | Price Action: দাম আর candle দিয়ে market পড়া — বাংলায় সহজ গাইড | beginner | done | `/bn/learn/16-trading-methodologies/01-price-action` |
+| 02 | Indicator-Based Trading: সূত্র দিয়ে market মাপা — বাংলায় সহজ গাইড | beginner | done | `/bn/learn/16-trading-methodologies/02-indicator-based-trading` |
+| 03 | Wyckoff Method: Accumulation ও Distribution — বাংলায় সহজ গাইড | intermediate | done | `/bn/learn/16-trading-methodologies/03-wyckoff-method` |
+| 04 | Volume Spread Analysis (VSA): প্রতিটি bar-এর শক্তি-দুর্বলতা — বাংলায় সহজ গাইড | intermediate | done | `/bn/learn/16-trading-methodologies/04-volume-spread-analysis` |
+| 05 | Volume Profile: কোন দামে market একমত হয়েছে — বাংলায় সহজ গাইড | intermediate | done | `/bn/learn/16-trading-methodologies/05-volume-profile` |
+| 06 | SMC / ICT: Liquidity আর institutional price delivery — বাংলায় সহজ গাইড | advanced | done | `/bn/learn/16-trading-methodologies/06-smc-ict` |
+| 07 | Elliott Wave: ভিড়ের ঢেউ গুনে market পড়া — বাংলায় সহজ গাইড | advanced | done | `/bn/learn/16-trading-methodologies/07-elliott-wave` |
+| 08 | Harmonic Patterns: Fibonacci অনুপাতে আঁকা pattern — বাংলায় সহজ গাইড | intermediate | done | `/bn/learn/16-trading-methodologies/08-harmonic-patterns` |
 
 ## 17-case-studies-trade-reviews
 
@@ -251,3 +255,19 @@ Chapter title: Notes Library
 | 03 | Cheat Sheets: ঝুঁকি, R ও recovery-র সূত্র এক পাতায় | beginner | done | `/bn/learn/18-notes-library/03-cheat-sheets` |
 | 04 | Mistakes Log: ভুলের খরচ R-এ মেপে সবচেয়ে দামিটি আগে ঠিক করা | beginner | done | `/bn/learn/18-notes-library/04-mistakes-log` |
 | 05 | Weekly Review সংগ্রহ: চার সপ্তাহ একসঙ্গে পড়া | beginner | done | `/bn/learn/18-notes-library/05-weekly-review` |
+
+## 19-smc-ict
+
+Chapter title: SMC / ICT in Depth
+
+| # | Lesson | Level | Status | URL |
+|---|---|---|---|---|
+| 00 | SMC / ICT গভীরে: Liquidity থেকে entry model পর্যন্ত (চ্যাপ্টার পরিচিতি) | advanced | done | `/bn/learn/19-smc-ict/00-overview` |
+| 01 | SMC Market Structure: কোন ভাঙা BOS, কোনটা CHoCH | intermediate | done | `/bn/learn/19-smc-ict/01-market-structure` |
+| 02 | Liquidity ও Sweep: stop কোথায় জমে, কখন নেওয়া হয় | intermediate | done | `/bn/learn/19-smc-ict/02-liquidity-sweeps` |
+| 03 | Order Block ও FVG: কোন zone প্রাসঙ্গিক, কোনটা শুধু gap | advanced | done | `/bn/learn/19-smc-ict/03-order-block-fvg` |
+| 04 | Premium, Discount ও OTE: কোন দামে entry নেবেন | advanced | done | `/bn/learn/19-smc-ict/04-premium-discount` |
+| 05 | Session ও Kill Zone: দিনের কোন সময়ে SMC/ICT খুঁজবেন | advanced | done | `/bn/learn/19-smc-ict/05-sessions-kill-zones` |
+| 06 | Power of 3 (AMD): Accumulation, Manipulation, Distribution | advanced | done | `/bn/learn/19-smc-ict/06-power-of-3` |
+| 07 | SMC/ICT Entry Model: Sweep, CHoCH, FVG ও Silver Bullet | advanced | done | `/bn/learn/19-smc-ict/07-entry-models` |
+| 08 | SMC/ICT-র সীমা ও ঝুঁকি: কোথায় ব্যর্থ হয়, কীভাবে পরীক্ষা করবেন | advanced | done | `/bn/learn/19-smc-ict/08-risk-and-limits` |

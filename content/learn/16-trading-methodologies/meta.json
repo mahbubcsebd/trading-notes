@@ -1,0 +1,14 @@
+{
+  "title": "Trading Methodologies",
+  "pages": [
+    "00-overview",
+    "01-price-action",
+    "02-indicator-based-trading",
+    "03-wyckoff-method",
+    "04-volume-spread-analysis",
+    "05-volume-profile",
+    "06-smc-ict",
+    "07-elliott-wave",
+    "08-harmonic-patterns"
+  ]
+}

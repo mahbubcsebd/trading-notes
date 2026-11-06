@@ -1,0 +1,260 @@
+{
+  "id": "smc-po3-01",
+  "title": {
+    "en": "Power of 3: accumulation, manipulation, distribution",
+    "bn": "Power of 3: accumulation, manipulation, distribution"
+  },
+  "symbol": "XAUUSD",
+  "timeframe": "H1",
+  "mode": "synthetic",
+  "type": "concept",
+  "bias": "bearish",
+  "outcome": null,
+  "tags": [
+    "XAUUSD",
+    "smc",
+    "power-of-3",
+    "amd"
+  ],
+  "module": "19-smc-ict",
+  "lessonSlugs": [
+    "06-power-of-3"
+  ],
+  "caption": {
+    "en": "XAUUSD H1 (synthetic): the same day read as AMD. The Asia range is accumulation, the push above it is manipulation (Judas swing), the move below the range is distribution.",
+    "bn": "XAUUSD H1 (কাল্পনিক): একই দিন AMD হিসেবে পড়া। Asia range হলো accumulation, তার ওপরে push হলো manipulation (Judas swing), range-এর নিচে যাওয়া হলো distribution।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data (incl. synthetic tick volume), not a real market record.",
+    "bn": "শিক্ষামূলক কাল্পনিক ডেটা (tick volume-ও কাল্পনিক), বাস্তব মার্কেটের রেকর্ড নয়।"
+  },
+  "updatedAt": "2026-11-07T18:00:00Z",
+  "annotations": [
+    {
+      "type": "zone",
+      "from": {
+        "i": 0,
+        "price": 2340
+      },
+      "to": {
+        "i": 7,
+        "price": 2336
+      },
+      "label": "A: Accumulation",
+      "color": "#64748b"
+    },
+    {
+      "type": "zone",
+      "from": {
+        "i": 8,
+        "price": 2345.5
+      },
+      "to": {
+        "i": 10,
+        "price": 2333
+      },
+      "label": "M: Manipulation",
+      "color": "#ef4444"
+    },
+    {
+      "type": "zone",
+      "from": {
+        "i": 11,
+        "price": 2332
+      },
+      "to": {
+        "i": 23,
+        "price": 2306
+      },
+      "label": "D: Distribution",
+      "color": "#22c55e"
+    },
+    {
+      "type": "marker",
+      "i": 9,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Judas swing"
+    }
+  ],
+  "explanation": {
+    "en": "AMD is a model, not a law. Many days do not follow it, and the manipulation can also be down first on a bullish day.",
+    "bn": "AMD একটি model, নিয়ম নয়। অনেক দিন এটি মানে না, আর bullish দিনে manipulation আগে নিচেও হতে পারে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Judge the model only after the day ends",
+      "bn": "Model যাচাই হয় দিন শেষে, আগে নয়"
+    }
+  ],
+  "candles": [
+    {
+      "i": 0,
+      "o": 2338,
+      "h": 2339.5,
+      "l": 2337,
+      "c": 2338.5
+    },
+    {
+      "i": 1,
+      "o": 2338.5,
+      "h": 2339.5,
+      "l": 2336,
+      "c": 2337
+    },
+    {
+      "i": 2,
+      "o": 2337,
+      "h": 2340,
+      "l": 2336,
+      "c": 2339
+    },
+    {
+      "i": 3,
+      "o": 2339,
+      "h": 2340,
+      "l": 2336.5,
+      "c": 2337.5
+    },
+    {
+      "i": 4,
+      "o": 2337.5,
+      "h": 2339.8,
+      "l": 2336.5,
+      "c": 2338.8
+    },
+    {
+      "i": 5,
+      "o": 2338.8,
+      "h": 2339.8,
+      "l": 2336.2,
+      "c": 2337.2
+    },
+    {
+      "i": 6,
+      "o": 2337.2,
+      "h": 2339.4,
+      "l": 2336.2,
+      "c": 2338.4
+    },
+    {
+      "i": 7,
+      "o": 2338.4,
+      "h": 2339.4,
+      "l": 2337,
+      "c": 2338
+    },
+    {
+      "i": 8,
+      "o": 2338,
+      "h": 2343.0,
+      "l": 2337.5,
+      "c": 2341.5
+    },
+    {
+      "i": 9,
+      "o": 2341.5,
+      "h": 2345,
+      "l": 2341.0,
+      "c": 2344
+    },
+    {
+      "i": 10,
+      "o": 2344,
+      "h": 2344.5,
+      "l": 2338.5,
+      "c": 2339.5
+    },
+    {
+      "i": 11,
+      "o": 2339.5,
+      "h": 2340.0,
+      "l": 2333.5,
+      "c": 2334.5
+    },
+    {
+      "i": 12,
+      "o": 2334.5,
+      "h": 2335.0,
+      "l": 2330,
+      "c": 2331
+    },
+    {
+      "i": 13,
+      "o": 2331,
+      "h": 2334,
+      "l": 2330.5,
+      "c": 2333
+    },
+    {
+      "i": 14,
+      "o": 2333,
+      "h": 2333.5,
+      "l": 2327,
+      "c": 2328
+    },
+    {
+      "i": 15,
+      "o": 2328,
+      "h": 2331,
+      "l": 2327.5,
+      "c": 2330
+    },
+    {
+      "i": 16,
+      "o": 2330,
+      "h": 2330.5,
+      "l": 2323,
+      "c": 2324
+    },
+    {
+      "i": 17,
+      "o": 2324,
+      "h": 2324.5,
+      "l": 2318,
+      "c": 2319
+    },
+    {
+      "i": 18,
+      "o": 2319,
+      "h": 2322,
+      "l": 2318.5,
+      "c": 2321
+    },
+    {
+      "i": 19,
+      "o": 2321,
+      "h": 2321.5,
+      "l": 2313,
+      "c": 2314
+    },
+    {
+      "i": 20,
+      "o": 2314,
+      "h": 2317,
+      "l": 2313.5,
+      "c": 2316
+    },
+    {
+      "i": 21,
+      "o": 2316,
+      "h": 2316.5,
+      "l": 2309,
+      "c": 2310
+    },
+    {
+      "i": 22,
+      "o": 2310,
+      "h": 2313,
+      "l": 2309.5,
+      "c": 2312
+    },
+    {
+      "i": 23,
+      "o": 2312,
+      "h": 2312.5,
+      "l": 2307,
+      "c": 2308
+    }
+  ]
+}

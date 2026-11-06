@@ -15,9 +15,9 @@
     "spring",
     "failed-spring"
   ],
-  "module": "16-advanced",
+  "module": "16-trading-methodologies",
   "lessonSlugs": [
-    "03-wyckoff-basics"
+    "03-wyckoff-method"
   ],
   "caption": {
     "en": "Price dips below range support and the trader buys at 1.0893 expecting a spring. There is no quick recovery; price keeps falling and the stop is hit.",

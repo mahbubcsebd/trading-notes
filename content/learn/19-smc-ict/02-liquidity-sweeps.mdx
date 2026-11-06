@@ -1,0 +1,151 @@
+---
+title: "Liquidity ও Sweep: stop কোথায় জমে, কখন নেওয়া হয়"
+description: "BSL, SSL, equal high/low, আগের দিনের high-low ও inducement চিনুন, আর sweep এবং সত্যিকারের breakout আলাদা করার নিয়ম শিখুন: chart ও ব্যর্থ উদাহরণসহ।"
+level: intermediate
+tags: [smc, ict, liquidity, sweep, bsl, ssl, inducement]
+instruments: [XAUUSD]
+timeframes: [H1, H4]
+status: done
+updated: 2026-11-07
+---
+
+# Liquidity ও Sweep: stop কোথায় জমে, কখন নেওয়া হয়
+
+দাম আপনার stop ছুঁয়ে ঠিক উল্টো দিকে চলে গেল। কাকতালীয়? প্রায়ই নয়: stop একটি নির্দিষ্ট জায়গায় জমে থাকে, আর সেই জায়গা chart-এ দেখা যায়। এই পাঠে সেই জায়গাগুলো চিনবেন, আর শিখবেন কখন দাম সেগুলো ছুঁয়ে ফেরে, কখন ভেঙে চলে যায়।
+
+## এই পাঠে আপনি যা পারবেন
+
+- BSL ও SSL চিনতে পারবেন।
+- Liquidity-র সাধারণ ধরনগুলো chart-এ খুঁজতে পারবেন।
+- Sweep আর breakout আলাদা করার নিয়ম প্রয়োগ করতে পারবেন।
+- Inducement কী, তা বুঝবেন।
+
+## কেন গুরুত্বপূর্ণ
+
+Liquidity-র জায়গা চিনলে বোঝা যায় দাম কোথায় "টানা" হতে পারে। আর না চিনলে আপনার stop-ই অন্যের entry হয়। Stop hunt-এর প্রাথমিক ধারণা [Liquidity ও Stop Hunt পাঠে](/bn/learn/03-market-structure/04-liquidity-stop-hunts) আছে; এখানে SMC-র নিয়ম।
+
+## মূল ধারণা
+
+**Liquidity হলো সেই জায়গা, যেখানে অনেক order (বিশেষ করে stop) জমে আছে।** Swing high-র ঠিক ওপরে short-এর stop আর breakout-buyer-এর order থাকে; swing low-র ঠিক নিচে long-এর stop আর breakout-seller-এর order।
+
+তুলনা: ব্যস্ত মোড়ের সিগনাল। সবাই ওখানে জমা হয়, তাই ওখানে লেনদেন সবচেয়ে সহজ।
+
+- **BSL (Buy-side liquidity):** high-এর ওপরে।
+- **SSL (Sell-side liquidity):** low-এর নিচে।
+
+### Liquidity কোথায় থাকে
+
+- **Equal high / equal low:** একই স্তরে দুই-তিনবার ছোঁয়া। সবার চোখে পড়ে, তাই stop ঠিক ওপরে-নিচে জমে।
+- **আগের দিন/সপ্তাহের high-low:** অনেকেই এগুলো দেখেন।
+- **Session high-low:** Asia range-এর সীমা (পাঠ ৫)।
+- **স্পষ্ট swing high/low:** যে স্তর থেকে দাম একবার জোরে ফিরেছে।
+
+### Sweep
+
+**Sweep হলো দাম liquidity-র ওপর (বা নিচে) গিয়ে সেটি নেয়, তারপর ফিরে আসে।** ফেরা মানে body আবার আগের সীমার ভেতরে close।
+
+### Inducement
+
+**Inducement হলো একটি ছোট, সহজ swing, যা বড় zone-এর আগে বসে এবং আগে entry নিতে প্রলুব্ধ করে।** দাম সেটি নেয়, তারপর আসল zone-এ যায়। নিয়ম হিসেবে নেবেন না; এটি একটি পর্যবেক্ষণ।
+
+## Chart-এ কেমন দেখায়
+
+<Chart
+  id="smc-liq-01"
+  height={440}
+  caption="XAUUSD H1 (শিক্ষামূলক কাল্পনিক ডেটা) — একই high তিনবার ছোঁয়া (equal highs), ওপরে buy stop জমে। একটি bar সেগুলো ছাড়িয়ে আবার নিচে close হয়: sweep। তারপর দাম নামে।"
+/>
+
+<Steps>
+
+### ধাপ ১: স্পষ্ট level খুঁজুন
+
+Equal high/low, আগের দিনের সীমা।
+
+### ধাপ ২: ওপরে-নিচে লিখুন
+
+কোনটি BSL, কোনটি SSL।
+
+### ধাপ ৩: Sweep-এর অপেক্ষা
+
+Wick সীমা ছাড়িয়ে যাক, body ভেতরে ফিরুক।
+
+### ধাপ ৪: Sweep-এর পরের ঘটনা দেখুন
+
+Structure ভাঙে কিনা (পাঠ ১-এর CHoCH)। এটিই sweep আর breakout আলাদা করে।
+
+</Steps>
+
+## ব্যর্থ উদাহরণ: যে sweep আসলে breakout
+
+<Chart
+  id="smc-liq-02"
+  height={440}
+  caption="XAUUSD H1 (শিক্ষামূলক কাল্পনিক ডেটা) — আগের chart-এর মতোই ছবি, কিন্তু sell ব্যর্থ। Buyer ছাড়েনি, দাম high-এর ওপরে close হয়ে stop লাগে।"
+/>
+
+ছবি একই; পার্থক্য পরের bar-গুলোতে। Sweep-এর পর নিচে structure ভাঙেনি (CHoCH আসেনি), বরং দাম আবার high ছাড়িয়ে close দিয়েছে। শুধু sweep দেখে sell করলে এই ক্ষতি হয়।
+
+নিয়ম: **sweep একা সংকেত নয়; sweep + structure-এর ভাঙা সংকেতের শুরু।**
+
+## সাধারণ ভুল
+
+| ভুল                        | কেন সমস্যা            | সমাধান                     |
+| :------------------------- | :-------------------- | :------------------------- |
+| প্রতিটি wick-কে sweep ধরা  | সব জায়গায় সংকেত     | স্পষ্ট level লাগবে         |
+| Sweep দেখেই entry          | Breakout-ও একই দেখায় | পরে CHoCH-এর অপেক্ষা       |
+| বড় timeframe-এর bias ভোলা | স্রোতের উল্টো trade   | আগে HTF bias               |
+| প্রতিটি ছোট equal high ধরা | অনেক noise            | বড় timeframe-এর level আগে |
+
+<Callout type="warning">
+  Stop hunt "ষড়যন্ত্র" নয়, বাজারের গঠন: stop জমলে সেখানে লেনদেনও সহজ। কেউ
+  আপনাকে লক্ষ্য করছে এমন ভেবে trade করবেন না; chart-এর ঘটনা বলুন।
+</Callout>
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- BSL high-র ওপরে, SSL low-র নিচে।
+- Equal high/low, আগের দিনের সীমা ও session সীমায় liquidity জমে।
+- Sweep = সীমা ছাড়িয়ে গিয়ে body ভেতরে ফিরে আসা।
+- Sweep একা সংকেত নয়; পরে structure ভাঙা দরকার।
+
+</KeyTakeaways>
+
+## অনুশীলন
+
+XAUUSD H1-এ গত সপ্তাহের ৫টি equal high/low চিহ্নিত করুন। প্রতিটিতে লিখুন: sweep হয়েছে কিনা, তারপর CHoCH এসেছে কিনা, আর দাম কোথায় গেছে।
+
+## কুইজ
+
+1. BSL আর SSL কোথায় থাকে?
+2. Sweep আর breakout-এর পার্থক্য কীভাবে বোঝা যায়?
+3. Equal high-এ stop কেন জমে?
+4. কেন sweep একা entry-র কারণ নয়?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** BSL swing high-র ওপরে; SSL swing low-র নিচে।
+
+**২.** Sweep-এ body সীমার ভেতরে ফেরে ও পরে structure ভাঙে; breakout-এ body সীমার বাইরে close হয়।
+
+**৩.** সবার চোখে পড়ে, তাই stop ঠিক ওপরে-নিচে রাখা হয়।
+
+**৪.** একই ছবি breakout-এরও হতে পারে; পরের structure-ই পার্থক্য করে।
+
+</details>
+
+## পরের ধাপ
+
+- অধ্যায়ের পরিচিতি: [SMC / ICT গভীরে](/bn/learn/19-smc-ict/00-overview)।
+- আগের পাঠ: [Market Structure](/bn/learn/19-smc-ict/01-market-structure)।
+- পরের পাঠ: [Order Block ও FVG](/bn/learn/19-smc-ict/03-order-block-fvg)।
+
+<Disclaimer>
+  এই লেখাটি শুধুমাত্র শিক্ষামূলক উদ্দেশ্যে। এটি কোনো financial advice নয়। কোনো
+  trading পদ্ধতিই নিশ্চিত লাভ দেয় না। Forex ও Gold trading-এ উল্লেখযোগ্য আর্থিক
+  ঝুঁকি রয়েছে এবং আপনি আপনার বিনিয়োগের পুরোটাই হারাতে পারেন। Real money দিয়ে
+  trade করার আগে demo account-এ যথেষ্ট অনুশীলন করুন।
+</Disclaimer>

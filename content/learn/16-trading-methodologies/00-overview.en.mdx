@@ -1,0 +1,269 @@
+---
+title: "Trading Methodologies: Eight Approaches, One Chart (Chapter Overview)"
+description: "Price Action, Indicators, Wyckoff, VSA, Volume Profile, SMC/ICT, Elliott Wave and Harmonics compared on one XAUUSD chart, plus how to pick your own method."
+level: intermediate
+tags:
+  [
+    methodology,
+    price-action,
+    indicators,
+    wyckoff,
+    vsa,
+    volume-profile,
+    smc,
+    ict,
+    elliott-wave,
+    harmonic,
+    overview,
+  ]
+instruments: [XAUUSD]
+timeframes: [H4]
+status: done
+updated: 2026-11-07
+---
+
+# Trading Methodologies: Eight Approaches, One Chart
+
+Give the same chart to eight traders. One says "range breakout", another says "spring", a third says "wave 3 is starting". One looks at RSI, one at volume bars, one at a liquidity sweep. **None of them is wrong. Each one is asking the market a different question.** This chapter puts those eight questions side by side.
+
+## What you will be able to do
+
+- State the core question of eight popular **trading methodologies** in one line each.
+- Tell which **data** each method reads (price only, price + volume, or indicators).
+- Recognise the **links and overlaps** between methods (for example, Wyckoff to VSA).
+- Understand the **limits of volume** in Forex and Gold.
+- **Pick one method** that fits your time, temperament and style, and start learning it.
+
+## Why so many methodologies exist
+
+**A methodology is a fixed framework for reading a chart: what to look at, in which order, and when to take a trade.**
+
+A simple comparison. Four people look at the same street in Dhaka in four ways. The traffic police officer sees the jam of cars. The shopkeeper sees how many people are walking past. The rickshaw driver sees which lane is empty. The city planner sees how the street has changed over ten years. One street, different questions.
+
+Trading works the same way:
+
+- Some want to know **which way price is moving now** (Price Action).
+- Some want **signals measured by a formula** (Indicators).
+- Some want to know **whether big players are accumulating or distributing** (Wyckoff, VSA).
+- Some want to know **at which prices the most trading happened** (Volume Profile).
+- Some look for **where stops are resting** (SMC/ICT).
+- Some look for **waves of crowd psychology** (Elliott Wave) or **the geometry of ratios** (Harmonics).
+
+Each method is a **model**. None of them is the full truth about the market.
+
+## The shared chart for the whole chapter
+
+<Chart
+  id="meth-shared-base"
+  height={480}
+  caption="XAUUSD H4 (illustrative synthetic data, tick volume also synthetic) — a downtrend, a long range, a sharp rally in steps, a spike above the highs, then a drop. Every lesson in this chapter reads this same chart with its own method."
+/>
+
+This chart deliberately contains every kind of event: trend, range, false break, strong breakout, pullback and reversal. Each lesson shows **what that method sees, and where, on this chart.** If a method finds nothing clean, the lesson says so honestly.
+
+<Callout type="note">
+  Honest note: the repo does not have real XAUUSD OHLC data yet, so the shared
+  chart is synthetic. When real data is available, a real chart will replace it
+  in the same structure.
+</Callout>
+
+## Eight methods in one line each
+
+| Method          | The question it asks the chart                                          |
+| :-------------- | :---------------------------------------------------------------------- |
+| Price Action    | How is price behaving at levels, and which way is structure?            |
+| Indicator-Based | What do formula-measured momentum and trend say?                        |
+| Wyckoff         | Are big players accumulating or distributing?                           |
+| VSA             | Do this bar's spread, close and volume show strength or weakness?       |
+| Volume Profile  | At which prices did the market agree, and where did it move fast?       |
+| SMC / ICT       | Where is liquidity resting, and where will price be delivered next?     |
+| Elliott Wave    | Which stage of the crowd's wave are we in, and where is the count void? |
+| Harmonic        | Do the price swings follow specific Fibonacci ratios?                   |
+
+## Master comparison
+
+Split into three small tables so it can be read on a phone. Every value matches the "At a glance" card in the lessons that follow.
+
+### Foundation: what it reads, where it came from
+
+| Method          | Core focus                           | Origin                                                                        | Data needed         |
+| :-------------- | :----------------------------------- | :---------------------------------------------------------------------------- | :------------------ |
+| Price Action    | Price movement and candlesticks      | No single founder; from Dow Theory and classic chart reading                  | Price only          |
+| Indicator-Based | Mathematical indicators              | Many authors (e.g. RSI and ATR: J. Welles Wilder, 1978)                       | Indicators          |
+| Wyckoff         | Accumulation and distribution        | Richard D. Wyckoff, early 20th century                                        | Price + volume      |
+| VSA             | Volume–price relationship            | Tom Williams, from Wyckoff's ideas                                            | Price + volume      |
+| Volume Profile  | How much traded at each price        | Market Profile: J. Peter Steidlmayer, CBOT, 1980s                             | Price + volume      |
+| SMC / ICT       | Liquidity and institutional delivery | ICT: Michael J. Huddleston (online teaching, 2010s); SMC is the broader label | Price only          |
+| Elliott Wave    | Market cycles and waves              | Ralph Nelson Elliott, 1930s                                                   | Price only          |
+| Harmonic        | Fibonacci-based patterns             | H.M. Gartley (1935); later Larry Pesavento, Scott Carney                      | Price only (ratios) |
+
+### Use: where, and how hard
+
+| Method          | Typical timeframe           | Subjectivity | Learning curve |
+| :-------------- | :-------------------------- | :----------- | :------------- |
+| Price Action    | All timeframes (M15 to D1)  | medium       | beginner       |
+| Indicator-Based | All timeframes              | low          | beginner       |
+| Wyckoff         | H4, D1, W1                  | medium       | intermediate   |
+| VSA             | H1 to D1                    | medium       | intermediate   |
+| Volume Profile  | Intraday sessions, M5 to H1 | low          | intermediate   |
+| SMC / ICT       | Entry M1–H1, bias H4–D1     | high         | advanced       |
+| Elliott Wave    | H4, D1, W1                  | high         | advanced       |
+| Harmonic        | H1, H4, D1                  | medium       | intermediate   |
+
+### Trade-offs: strength, weakness, Gold caveat
+
+| Method          | Main strength                            | Main weakness                                       | Forex/Gold caveat                                  |
+| :-------------- | :--------------------------------------- | :-------------------------------------------------- | :------------------------------------------------- |
+| Price Action    | Works on any market, needs no extra data | Discretionary, hard to write rules and backtest     | Spread and news spikes on low timeframes           |
+| Indicator-Based | Clear rules, easy to backtest            | Late signals, whipsaw in ranges, overfitting        | Volume indicators use tick volume                  |
+| Wyckoff         | Reads a range as a planned campaign      | Easy to label in hindsight, hard live               | Tick volume, not real volume                       |
+| VSA             | Bar-level detail on supply and demand    | Single-bar signals are weak without background      | Depends on tick volume the most                    |
+| Volume Profile  | Objective levels based on activity       | Levels do not give direction                        | Tick volume; Gold futures (CME GC) a better option |
+| SMC / ICT       | Precise entry zone, small stop           | Many terms, hindsight, little independent evidence  | Session timing (London/NY) matters                 |
+| Elliott Wave    | Big picture and a clear invalidation     | Several valid counts on the same chart              | Nothing special                                    |
+| Harmonic        | Zone and stop fixed in advance           | Few valid patterns, disagreement on ratio tolerance | Gold often overshoots the D point on news          |
+
+Subjectivity means how far two experienced traders can disagree when looking at the same chart. "Low" means the rules are nearly mechanical. "High" means there is a lot of room for interpretation.
+
+## Who reads what: four groups
+
+| Group                          | Methods                              | What you need                             |
+| :----------------------------- | :----------------------------------- | :---------------------------------------- |
+| Price only                     | Price Action, Elliott Wave, Harmonic | Candle chart, swings, Fibonacci           |
+| Price + liquidity narrative    | SMC / ICT                            | Swing highs/lows, where stops sit         |
+| Price + volume                 | Wyckoff, VSA, Volume Profile         | Volume data (limited in Forex, see below) |
+| Math derived from price/volume | Indicator-Based                      | Formulas and settings                     |
+
+This grouping tells you something important: **the three volume-based methods hit the biggest limits in spot Forex and Gold.**
+
+## How the methods relate
+
+They are not separate islands. Many ideas moved from one to another:
+
+- **Wyckoff → VSA:** Tom Williams built VSA from Wyckoff's ideas. VSA is roughly Wyckoff at the level of single bars.
+- **Wyckoff ↔ SMC:** Wyckoff's spring looks like SMC's sell-side liquidity sweep. Different names, almost the same event.
+- **Price Action → the base of all:** none of the other seven works without [swing highs and swing lows](/en/learn/03-market-structure/01-swing-high-low) and [support and resistance](/en/learn/05-support-resistance/01-levels-vs-zones).
+- **Fibonacci → Elliott and Harmonics:** both use [Fibonacci](/en/learn/05-support-resistance/05-fibonacci-basics) ratios. Elliott measures the length of waves, Harmonics the points of a pattern.
+- **Volume Profile ↔ Wyckoff:** a long Wyckoff range usually shows up in the profile as a high-volume area.
+
+## The limits of volume in Forex and Gold
+
+<Callout type="warning">
+  Spot Forex and spot Gold have no central exchange. So the volume in MT4/MT5 is
+  really **tick volume**: a count of how many times price changed on your
+  broker's server. It is not the amount actually traded, only a rough hint.
+</Callout>
+
+What you can do:
+
+- Look at the volume of **Gold futures (CME's GC contract)**. Because it is exchange-traded, its volume is a record of real trading.
+- Treat broker tick volume as **approximate**. Look for big differences (such as a sudden tripling), not small ones.
+- Tick volume can differ between brokers. Do not call one broker's data "the market's volume".
+
+## Which method suits you
+
+No method is "the best". The question is which one fits **your** time and temperament.
+
+<Steps>
+
+### Step 1: How much time do you have?
+
+With less than an hour a day, H4/D1-based methods are realistic: Price Action, Wyckoff, Elliott, Indicators. If you are at the screen all day, intraday methods (Volume Profile, SMC/ICT entries) are possible.
+
+### Step 2: Do you prefer rules or judgement?
+
+If you like clear rules and backtesting, start with Indicator-Based or Volume Profile. If you are comfortable reading with judgement, Price Action, Wyckoff, SMC.
+
+### Step 3: How much uncertainty can you handle?
+
+High-subjectivity methods (SMC/ICT, Elliott) give several interpretations of the same chart. If doubt makes you restless, start with low or medium subjectivity.
+
+### Step 4: Does your market have the data?
+
+If you only have spot Gold/Forex charts, treat volume-based signals as supporting evidence, not proof.
+
+### Step 5: Pick one, study 50 examples
+
+Pick one method. Write down at least 50 historical examples and [backtest](/en/learn/15-backtesting-journal/01-how-to-backtest) them. Then decide.
+
+</Steps>
+
+## Common mistake: methodology hopping
+
+SMC this week, Elliott next week, Harmonics the week after. A few losses with each method and you switch, saying "this doesn't work". This is called **methodology hopping**.
+
+There are two problems:
+
+- **No method gets a large enough sample.** Ten trades cannot tell you whether a method is good or bad.
+- **Mixing many methods produces conflicting signals.** RSI says sell, Wyckoff says spring, Elliott says wave 3. In the end you pick whichever you wanted. This is called confirmation bias.
+
+<Callout type="tip">
+  Rule: one **main** method, at most one **supporting** method. The supporting
+  method's only job is to answer one specific question, such as "what is volume
+  like at this level?"
+</Callout>
+
+## Reading order
+
+| #   | Lesson                                                                                   | Main question                                     | Difficulty   |
+| :-- | :--------------------------------------------------------------------------------------- | :------------------------------------------------ | :----------- |
+| 1   | [Price Action](/en/learn/16-trading-methodologies/01-price-action)                       | How is price behaving at levels?                  | beginner     |
+| 2   | [Indicator-Based Trading](/en/learn/16-trading-methodologies/02-indicator-based-trading) | What do formula-measured signals say?             | beginner     |
+| 3   | [Wyckoff Method](/en/learn/16-trading-methodologies/03-wyckoff-method)                   | Are big players accumulating or distributing?     | intermediate |
+| 4   | [Volume Spread Analysis](/en/learn/16-trading-methodologies/04-volume-spread-analysis)   | Is this bar strength or weakness?                 | intermediate |
+| 5   | [Volume Profile](/en/learn/16-trading-methodologies/05-volume-profile)                   | At which prices does the market agree?            | intermediate |
+| 6   | [SMC / ICT](/en/learn/16-trading-methodologies/06-smc-ict)                               | Where is liquidity, where will price go?          | advanced     |
+| 7   | [Elliott Wave](/en/learn/16-trading-methodologies/07-elliott-wave)                       | Which stage of the wave, where is the count void? | advanced     |
+| 8   | [Harmonic Patterns](/en/learn/16-trading-methodologies/08-harmonic-patterns)             | Do the swings follow Fibonacci ratios?            | intermediate |
+
+Why this order: Price Action is the base of all. Wyckoff comes before VSA and SMC because both sit close to Wyckoff's ideas. Elliott and Harmonics come last because they are the most rule-heavy.
+
+## The chart colour code
+
+All charts in this chapter use the same colour language:
+
+| Element                         | Colour                    |
+| :------------------------------ | :------------------------ |
+| Bullish zone, demand, target    | Green                     |
+| Bearish zone, supply, stop loss | Red                       |
+| Range / consolidation           | Grey zone                 |
+| Fibonacci, POC, main highlight  | Gold                      |
+| Entry, FVG                      | Blue                      |
+| Volume and indicators           | Separate pane under price |
+
+## Summary
+
+<KeyTakeaways>
+
+- Each methodology asks the market a different question; none is "the best".
+- Four groups: price only, price + liquidity, price + volume, and indicators.
+- In spot Forex and Gold, volume means tick volume, not real volume.
+- One main method, at most one supporting method; don't keep switching.
+- Test any method in your own backtest.
+
+</KeyTakeaways>
+
+## Check yourself
+
+<Checklist
+  id="ch16-overview-check"
+  items={[
+    "I can identify swing highs/lows and support/resistance",
+    "I know tick volume is not real volume",
+    "I am willing to backtest one method with at least 50 examples",
+    "My trades always have a stop loss",
+  ]}
+/>
+
+## Next steps
+
+- First lesson: [Price Action](/en/learn/16-trading-methodologies/01-price-action).
+- Previous chapter: [Backtesting and Journal](/en/learn/15-backtesting-journal/00-overview).
+- Next chapter: [Case Studies](/en/learn/17-case-studies-trade-reviews/00-overview).
+
+<Disclaimer>
+  This article is for educational purposes only and is not financial advice. No
+  trading methodology guarantees profit. Forex and gold trading carry
+  significant financial risk, and you can lose all of your capital. Practise on
+  a demo account before trading with real money.
+</Disclaimer>

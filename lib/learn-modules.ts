@@ -80,9 +80,9 @@ export const MODULE_DEFINITIONS: Record<
     bn: '১৫. ব্যাকটেস্টিং ও জার্নাল',
     order: 15,
   },
-  '16-advanced': {
-    en: '16. Advanced SMC & ICT',
-    bn: '১৬. প্রাতিষ্ঠানিক SMC ও ICT',
+  '16-trading-methodologies': {
+    en: '16. Trading Methodologies',
+    bn: '১৬. Trading Methodology',
     order: 16,
   },
   '17-case-studies-trade-reviews': {
@@ -94,6 +94,11 @@ export const MODULE_DEFINITIONS: Record<
     en: '18. Notes & Cheat Sheets',
     bn: '১৮. নোটস ও চিটশিট লাইব্রেরি',
     order: 18,
+  },
+  '19-smc-ict': {
+    en: '19. SMC / ICT in Depth',
+    bn: '১৯. SMC / ICT গভীরে',
+    order: 19,
   },
 };
 

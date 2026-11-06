@@ -1,0 +1,464 @@
+---
+title: "Price Action: Reading the Market Through Price and Candles — A Simple Guide"
+description: "What Price Action is, how it reads structure, support-resistance and candle behaviour, its strengths, weaknesses and how to start learning: on an XAUUSD chart."
+level: beginner
+tags:
+  [
+    price-action,
+    market-structure,
+    support-resistance,
+    candlestick,
+    breakout,
+    methodology,
+  ]
+instruments: [XAUUSD]
+timeframes: [H4, H1, D1]
+status: done
+sources:
+  - type: other
+    title: "Price action trading (Wikipedia)"
+    url: "https://en.wikipedia.org/wiki/Price_action_trading"
+  - type: other
+    title: "Dow theory (Wikipedia)"
+    url: "https://en.wikipedia.org/wiki/Dow_theory"
+  - type: other
+    title: "Candlestick chart (Wikipedia)"
+    url: "https://en.wikipedia.org/wiki/Candlestick_chart"
+  - type: pdf
+    title: "Lo, Mamaysky & Wang (2000), Foundations of Technical Analysis (NBER Working Paper 7613)"
+    url: "https://www.nber.org/papers/w7613"
+  - type: other
+    title: "Park & Irwin (2007), What Do We Know About the Profitability of Technical Analysis? (Journal of Economic Surveys)"
+    url: "https://doi.org/10.1111/j.1467-6419.2007.00519.x"
+updated: 2026-11-07
+---
+
+# Price Action: Reading the Market Through Price and Candles
+
+Remove every indicator from the chart. Only the candles remain. Many traders will say, "Now the chart is clearer." Every indicator is built from price in the end. **Price Action reads that source directly.**
+
+## At a glance
+
+<MethodCard
+  name="Price Action"
+  origin="No single founder; grew out of Dow Theory and classic chart reading"
+  reads="Price"
+  question="How is price behaving at which level, and which way is the structure pointing?"
+  timeframes="All timeframes (M15 to D1)"
+  difficulty="beginner"
+  subjectivity="medium"
+  lang="en"
+/>
+
+## What you will learn
+
+- State the core question of Price Action in one line.
+- Understand the reading order on three layers: **structure, level and candle**.
+- Tell a breakout, a false break and a retest apart.
+- Understand where the entry, stop loss and target of a Price Action trade come from.
+- Know the honest limits of this method: where it relies on judgement.
+
+## History and origin
+
+Price Action has **no single founder.** It is the name of a broad tradition, not one person's invention.
+
+- **Dow Theory:** Charles H. Dow wrote about the market in the Wall Street Journal in the late 19th and early 20th century. The idea of viewing a trend through higher highs and higher lows is generally traced back to him.
+- **Japanese candlesticks:** Candle charts have an old history in Japan's rice markets. They became popular in the West after Steve Nison's 1991 book.
+- **The modern name:** The term "price action trading" became popular later, when traders began teaching how to read only bars and candles without indicators.
+
+So today, Price Action usually means: **market structure + support/resistance + candle behaviour.** Different teachers teach different versions. This lesson covers the common core.
+
+## Core philosophy
+
+**The Price Action question: how is price behaving at which level, and which way is the structure pointing?**
+
+Behind it is a simple belief. All news, all orders and all emotions end up in price. So if you read price directly, you need fewer extra formulas.
+
+An analogy. An experienced fish seller stands in the wholesale market and watches at which price buyers pull back and at which price a crowd forms. The seller opens no ledger, and understands just by watching price and how people react. A Price Action trader does exactly this on a chart.
+
+<Callout type="note">
+  Price Action does not predict the future. It tells you which side is ahead
+  right now, and at which price that view is proven wrong.
+</Callout>
+
+## Core concepts
+
+This lesson covers six concepts. Each has a full lesson in an earlier chapter; here we only see how they fit together through the eyes of the methodology.
+
+### 1. Market structure
+
+**Structure is the sequence of swing highs and swing lows.** Higher highs + higher lows mean an uptrend. Lower highs + lower lows mean a downtrend. Neither means a range.
+
+Analogy: when you climb stairs, each step is higher than the last. As soon as one step is lower, you know the climb has stopped.
+
+Details: [Swing highs and swing lows](/en/learn/03-market-structure/01-swing-high-low) and [Trend and range](/en/learn/03-market-structure/02-trend-range-hhhl).
+
+<CandleDiagram
+  title="Uptrend structure"
+  candles={[
+    { o: 10, h: 14, l: 9, c: 13 },
+    { o: 13, h: 18, l: 12, c: 17, note: "HH" },
+    { o: 17, h: 17.5, l: 13, c: 14 },
+    { o: 14, h: 15, l: 12.5, c: 14.5, label: "HL" },
+    { o: 14.5, h: 21, l: 14, c: 20, note: "HH" },
+    { o: 20, h: 20.5, l: 16, c: 16.5, label: "HL" },
+    { o: 16.5, h: 24, l: 16, c: 23, note: "HH" },
+  ]}
+  caption="Each high is higher than the last (HH), and so is each low (HL). The structure breaks when an HL is broken to the downside."
+/>
+
+### 2. Support and resistance zones
+
+**Support is a price area where buying pressure has stopped price before; resistance is the opposite.** These are not thin lines but areas (zones).
+
+Analogy: an embankment on a riverbank. The water keeps stopping at the same place. If the embankment breaks, that same place becomes a new barrier from the other side.
+
+This "reversed role" is called **role reversal**: broken resistance can later become support. Details: [Levels vs zones](/en/learn/05-support-resistance/01-levels-vs-zones), [Role reversal](/en/learn/05-support-resistance/02-role-reversal).
+
+<CandleDiagram
+  title="Role reversal"
+  candles={[
+    { o: 10, h: 15, l: 9.5, c: 14, dim: true },
+    { o: 14, h: 15.2, l: 12, c: 12.5, dim: true },
+    { o: 12.5, h: 15.1, l: 12, c: 14.5, dim: true },
+    { o: 14.5, h: 19, l: 14, c: 18.5, note: "Breakout" },
+    { o: 18.5, h: 19, l: 15.2, c: 15.8, label: "Retest" },
+    { o: 15.8, h: 21, l: 15.5, c: 20.5 },
+  ]}
+  levels={[
+    { price: 15, label: "Resistance before, support now", tone: "support" },
+  ]}
+  caption="The area around 15 stopped price twice. After the break, price came back and stopped right there: the old ceiling is now the floor."
+/>
+
+### 3. Candle behaviour at a level
+
+**A candle tells you which side won at a level.** A long wick means price went there and was rejected. A big body with a close near the high means buyers are strong.
+
+Analogy: knocking on a door versus breaking it down. A wick is knocking and walking away; a strong close is getting inside.
+
+Key rule: **the same candle in the wrong place means nothing.** A hammer in the middle of the chart says nothing; on top of support it does. Details: [Candle context](/en/learn/04-candlesticks/05-candle-context).
+
+<DiagramRow>
+  <CandleDiagram
+    title="At a level"
+    verdict="good"
+    verdictLabel="meaningful"
+    candles={[
+      { o: 20, h: 20.5, l: 16, c: 16.5, dim: true },
+      { o: 16.5, h: 17, l: 13.5, c: 14, dim: true },
+      { o: 14, h: 15, l: 10.5, c: 14.6, label: "Rejection wick" },
+      { o: 14.6, h: 17.5, l: 14.2, c: 17.2 },
+    ]}
+    levels={[{ price: 11.5, label: "Support zone", tone: "support" }]}
+    caption="A long lower wick at support, then a strong bullish candle. The level and the candle speak together."
+  />
+  <CandleDiagram
+    title="Mid-range"
+    verdict="bad"
+    verdictLabel="weak"
+    candles={[
+      { o: 14, h: 15, l: 13.5, c: 14.6, dim: true },
+      { o: 14.6, h: 15.2, l: 14, c: 14.3, dim: true },
+      { o: 14.3, h: 14.8, l: 12.3, c: 14.5, label: "Same wick" },
+      { o: 14.5, h: 15, l: 13.6, c: 13.9 },
+    ]}
+    caption="A wick of the same size, but no level. This is just noise, not a signal."
+  />
+</DiagramRow>
+
+### 4. Breakout vs false break
+
+**A breakout means price moves beyond a zone and stays there. A false break means it moves beyond and comes back inside.** Both look the same at the start; the difference shows in the close and the next few candles.
+
+Analogy: one person walks through the door and sits down (breakout). Another peeks in and walks back out (false break).
+
+False breaks happen often because many people's stops sit just outside the zone. Price touches them and comes back. Details: [Range breakout](/en/learn/06-trend-chart-patterns/03-range-breakout), [Fake breakout](/en/learn/06-trend-chart-patterns/04-fake-breakout).
+
+<DiagramRow>
+  <CandleDiagram
+    title="Breakout"
+    verdict="good"
+    verdictLabel="held"
+    candles={[
+      { o: 14, h: 15, l: 12, c: 14.5, dim: true },
+      { o: 14.5, h: 18.5, l: 14.3, c: 18.2, note: "Close outside" },
+      { o: 18.2, h: 19.5, l: 16.5, c: 19 },
+      { o: 19, h: 21, l: 18.6, c: 20.6 },
+    ]}
+    levels={[{ price: 15.5, label: "Range top", tone: "resistance" }]}
+    caption="A body close outside the range, and the next candles stayed outside."
+  />
+  <CandleDiagram
+    title="False break"
+    verdict="bad"
+    verdictLabel="came back"
+    candles={[
+      { o: 14, h: 15, l: 12, c: 14.5, dim: true },
+      { o: 14.5, h: 17.5, l: 14.3, c: 15, note: "Wick only" },
+      { o: 15, h: 15.3, l: 12.8, c: 13.2 },
+      { o: 13.2, h: 13.8, l: 11.5, c: 11.8 },
+    ]}
+    levels={[{ price: 15.5, label: "Range top", tone: "resistance" }]}
+    caption="The wick went outside the zone, but the close stayed inside. Then price fell back into the range."
+  />
+</DiagramRow>
+
+### 5. Pullback and retest
+
+**A pullback is a short pause against the trend. A retest is price coming back to a broken level.** Price Action traders often wait for this return instead of entering at the moment of the breakout.
+
+Analogy: instead of jumping onto a moving bus, you board it when it stops at the bus stop. It is a little slower, but the risk is lower.
+
+The reason is simple: with a retest entry, the stop can sit just beyond the level, so the risk is small. Details: [Breakout, retest and pullback entry](/en/learn/09-price-action-entries-strategies/01-breakout-retest-pullback-entry).
+
+### 6. Context and multi-timeframe
+
+**The same setup is strong when it agrees with the higher timeframe's direction and weak when it goes against it.** If H4 is in an uptrend, an H1 buy setup makes more sense.
+
+Analogy: rowing a boat with the river current versus against it. Both are possible, but one takes less effort.
+
+Details: [Multi-timeframe analysis](/en/learn/03-market-structure/05-multi-timeframe-analysis).
+
+| Layer      | Question                         | Example answer                                     |
+| :--------- | :------------------------------- | :------------------------------------------------- |
+| Structure  | Which way is the direction?      | A run of lower highs stops in a range              |
+| Level      | At which price is the fight?     | Range top and bottom                               |
+| Candle     | Which side won at the level?     | Back inside after a wick below, strong close above |
+| Trigger    | Which event do I enter on?       | A bullish close after the retest                   |
+| Wrong when | At which price is the idea void? | Below the retest low                               |
+
+This order is the backbone of Price Action: **structure first, then level, candle last.**
+
+## Reading the shared chart
+
+Now the same XAUUSD H4 chart of this chapter. Let us read it step by step through the eyes of Price Action.
+
+<Chart
+  id="meth-pa-shared"
+  height={480}
+  caption="XAUUSD H4 (illustrative synthetic data) — a run of lower highs stops in a range; a false break below support with a close back inside, then the breakout and retest of the range top. At the end, a long rejection wick at the new high."
+/>
+
+<Steps>
+
+### Step 1: Structure
+
+At the start, price falls from 2403, and each high is lower than the last (red dashed line). This is a downtrend. Then no new lower high comes; price moves sideways.
+
+### Step 2: Marking the range
+
+Between roughly **2296 and 2344**, price moves up and down again and again (grey zone). The trend has stopped and a range has formed. Here Price Action says: "The direction is not decided yet; watch both edges."
+
+### Step 3: False break
+
+Near the end of the range, one candle drops to **2287**, but closes at **2304**, inside the range. Price touched the stops sitting below support and came back. This is not a bearish breakout; rather, it hints at the sellers' weakness.
+
+### Step 4: Breakout
+
+A few candles later, price closes above the range top 2344, at **2346**. The next candles also stay outside. This is the first condition of a real breakout.
+
+### Step 5: Retest
+
+Price rises to 2365 and comes back down. One candle wicks down to **2336**, touching the area of the old range top. The next candle closes bullish at **2347**. The old ceiling is now the floor.
+
+### Step 6: The final rejection
+
+Price climbs step by step to the 2480 area. There, a candle touches **2487** and closes at **2467**: a long upper wick. After that, price keeps falling. Through the eyes of Price Action: buyers could not hold the new high.
+
+</Steps>
+
+<Callout type="tip">
+  Notice that the whole story could be read without any indicator: downtrend →
+  range → false break → breakout → retest → rally → rejection. This is the
+  strength of Price Action.
+</Callout>
+
+## Basic trade logic
+
+A Price Action trade usually answers these four questions:
+
+| Part      | Rule (general form)                                        | On the shared chart (synthetic)      |
+| :-------- | :--------------------------------------------------------- | :----------------------------------- |
+| Setup     | Do structure and level agree?                              | Range breakout, then retest          |
+| Entry     | Close of a confirmation candle at the level                | Bullish close after the retest, 2347 |
+| Stop loss | Just beyond the price where the idea is proven wrong       | Below the retest low 2336, at 2333   |
+| Target    | The next level, or the height of the range (measured move) | 2344 + 48 = 2392 (range height 48)   |
+
+Calculation: risk 2347 − 2333 = 14 dollars, potential gain 2392 − 2347 = 45 dollars. Risk-reward is about **1:3**. On this synthetic chart, price passed 2392 a few candles later.
+
+The same logic works in other markets too. The example below is EURUSD H1 (synthetic), not XAUUSD:
+
+<Chart
+  id="breakout-retest-win-01"
+  height={420}
+  caption="EURUSD H1 (illustrative synthetic data) — price breaks 1.0900, comes back to retest it and holds. Buy at the retest, stop 1.0875, target 1.0995 (about 1:3)."
+/>
+
+<Callout type="warning">
+  There is no Price Action entry without a stop loss. The belief that "the level
+  will hold" is only an assumption. The stop is the exit door you set in
+  advance, in case that assumption is wrong. Position size: [Risk per
+  trade](/en/learn/08-risk-management/01-risk-per-trade).
+</Callout>
+
+## Strengths
+
+- **No extra data needed.** Just a candle chart; any broker, any market.
+- **Works on all timeframes.** M15 to D1, same rules.
+- **Less lag.** Indicators calculate from price, so they lag behind. Price Action looks at price directly.
+- **Clear invalidation.** Every setup naturally comes with a "where it is wrong" price, so placing a stop is easy.
+- **The base of every other method.** Wyckoff, SMC, Elliott: all use swings and levels. Being solid here makes the others easier to learn.
+
+## Weaknesses and limits
+
+- **Relies on judgement (subjectivity: medium).** What counts as a "strong" close, how wide a zone is, which swing matters: two traders can give different answers. There are rules, but not everything is mechanical. So it is not "low". At the same time, the same chart does not usually produce many opposite readings, as in Elliott or SMC, so it is not "high" either.
+- **Hard to backtest.** Writing "rejection at a level" in code means fixing many definitions. Backtesting by hand lets hindsight bias creep in.
+- **False breaks are common.** The clearer the level, the more people's stops sit beyond it, and the more false breaks occur.
+- **More noise on low timeframes.** On Gold M5/M15, spread and news spikes create many wicks that mean nothing.
+
+**Evidence status:** Research on technical analysis gives mixed results. Lo, Mamaysky and Wang (2000) found statistical information in some chart patterns, but that is not proof of a profitable strategy. The review by Park and Irwin (2007) notes that while many studies showed profits, there are problems with data snooping and cost accounting. There is little large, independent research under the name "price action", because its very definition differs from teacher to teacher. **No method guarantees profit.**
+
+Look at the failed example. Same setup, opposite result:
+
+<Chart
+  id="breakout-retest-fail-01"
+  height={420}
+  caption="EURUSD H1 (illustrative synthetic data) — the same buy at the 1.0900 retest, but price slips back into the old range and hits the stop. The breakout was a fakeout; with a stop in place, the loss was limited to 1R."
+/>
+
+This chart teaches: a retest can fail even when it looks right. You cannot know the difference in advance. That is why the risk on every trade is kept small and defined.
+
+## Who it suits
+
+| Suits you if you…                        | Does not suit you if you…                  |
+| :--------------------------------------- | :----------------------------------------- |
+| Are new and want to build a foundation   | Want only mechanical, codeable rules       |
+| Are comfortable judging a chart yourself | Get restless when a setup looks "unclear"  |
+| Prefer few tools and a clean chart       | Want deep volume or order flow information |
+| Can check the chart once a day on H4/D1  | Cannot wait patiently for a retest         |
+
+## Combining with other methods
+
+Price Action fits with almost every method, because the others stand on it.
+
+- **Price Action + one indicator:** for example, a moving average as a trend filter, or ATR to size the stop. The indicator answers only one specific question. See [ATR for stop size](/en/learn/07-technical-indicators/04-atr-stop-size).
+- **Price Action + Volume Profile:** choosing zones by where most trading happened.
+- **Price Action → Wyckoff/SMC:** range, false break, breakout: Wyckoff and SMC explain these same events under their own names.
+
+**What not to mix:** five oscillators, three kinds of trendlines and candle patterns on the same chart. When signals conflict, you will end up picking the one you want. See [Indicator overload](/en/learn/07-technical-indicators/07-indicator-overload).
+
+## Deep dive later
+
+This lesson is an overview. A full lesson for each part already exists:
+
+- Structure: [Break of structure](/en/learn/03-market-structure/03-break-of-structure), [Liquidity and stop hunts](/en/learn/03-market-structure/04-liquidity-stop-hunts)
+- Level: [Supply and demand](/en/learn/05-support-resistance/03-supply-demand), [Trendlines and channels](/en/learn/05-support-resistance/04-trendlines-channels)
+- Candle: [Single candle patterns](/en/learn/04-candlesticks/02-single-candle-patterns), [Two candle patterns](/en/learn/04-candlesticks/03-two-candle-patterns)
+- Chart patterns: [Reversal patterns](/en/learn/06-trend-chart-patterns/01-reversal-patterns), [Continuation patterns](/en/learn/06-trend-chart-patterns/02-continuation-patterns)
+- Entry: [Confirmation vs trigger](/en/learn/09-price-action-entries-strategies/04-confirmation-vs-trigger), [Entry model checklist](/en/learn/09-price-action-entries-strategies/05-entry-model-checklist)
+
+No sub-series needed: chapters 03–09 are already a full Price Action course.
+
+## How to start
+
+<Steps>
+
+### Step 1: A clean chart
+
+Open XAUUSD H4. Remove all indicators.
+
+### Step 2: Structure only
+
+Mark every swing high and low of the last three months. For each section, write: uptrend, downtrend or range.
+
+### Step 3: Three zones
+
+Draw the three zones where price has stopped most often. Areas, not lines.
+
+### Step 4: Write down 20 events
+
+Write down 20 events of what price did when it reached these zones: breakout, false break or rejection. Also note what happened after each.
+
+### Step 5: Write rules and backtest
+
+Pick one setup (for example breakout-retest) and write rules for entry, stop and target. [Backtest](/en/learn/15-backtesting-journal/01-how-to-backtest) it on at least 50 examples.
+
+</Steps>
+
+## Common mistakes
+
+| Mistake                                 | Why it is a problem                                  | Fix                                            |
+| :-------------------------------------- | :--------------------------------------------------- | :--------------------------------------------- |
+| Trading candle patterns without a level | A pattern without context is just noise              | Zone first, then candle                        |
+| Treating every wick as a level          | The chart fills with lines; every price is a "level" | Keep only repeatedly tested zones, 3–4 at most |
+| Assuming a breakout from a wick alone   | Getting trapped in false breaks                      | Look at the body close and the next candle     |
+| Ignoring the higher timeframe           | Trading against the current                          | Write down the H4/D1 structure first           |
+| Stop "too close" or no stop at all      | Stopped out by normal movement, or a big loss        | Place the stop beyond the invalidation price   |
+
+## Summary
+
+<KeyTakeaways>
+
+- Price Action reads price directly: structure, level, and candle behaviour at the level.
+- Order: structure first, then level, candle last.
+- The proof of a breakout is the close and the next candle; not the wick alone.
+- A retest entry means a small, clear stop.
+- Subjectivity is medium; verify your own rules with a backtest. There is no guaranteed profit.
+
+</KeyTakeaways>
+
+## Quiz
+
+1. What is the core question of Price Action?
+2. In what order do the three layers of chart reading come?
+3. What is the main difference between a breakout and a false break?
+4. Why is placing a stop easier with a retest entry?
+5. Why is Price Action's subjectivity "medium" and not "low"?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** How price is behaving at which level, and which way the structure is pointing.
+
+**2.** Structure → level → candle.
+
+**3.** In a breakout, price closes outside the zone and stays there; in a false break, it goes outside and closes back inside.
+
+**4.** Because the invalidation price (beyond the broken level) is very close to the entry, so the risk is small and defined.
+
+**5.** Judging zone width, a "strong" close and which swings matter differs from trader to trader, so the rules are not fully mechanical.
+
+</details>
+
+## Next steps
+
+- Chapter comparison: [Trading Methodologies: eight methods](/en/learn/16-trading-methodologies/00-overview).
+- Next lesson: [Indicator-Based Trading](/en/learn/16-trading-methodologies/02-indicator-based-trading).
+- Related: [Wyckoff Method](/en/learn/16-trading-methodologies/03-wyckoff-method) (another reading of range and false break), [Price Action entries and strategies](/en/learn/09-price-action-entries-strategies/00-overview).
+
+### Sources
+
+- <ExternalLink href="https://en.wikipedia.org/wiki/Price_action_trading">
+    Price action trading (Wikipedia)
+  </ExternalLink>
+- <ExternalLink href="https://en.wikipedia.org/wiki/Dow_theory">
+    Dow theory (Wikipedia)
+  </ExternalLink>
+- <ExternalLink href="https://en.wikipedia.org/wiki/Candlestick_chart">
+    Candlestick chart (Wikipedia)
+  </ExternalLink>
+- <ExternalLink href="https://www.nber.org/papers/w7613">
+    Lo, Mamaysky & Wang (2000), Foundations of Technical Analysis
+  </ExternalLink>
+- <ExternalLink href="https://doi.org/10.1111/j.1467-6419.2007.00519.x">
+    Park & Irwin (2007), What Do We Know About the Profitability of Technical
+    Analysis?
+  </ExternalLink>
+
+<Disclaimer>
+  This article is for educational purposes only and is not financial advice. No
+  trading methodology guarantees profit. Forex and gold trading carry
+  significant financial risk, and you can lose all of your capital. Practise on
+  a demo account before trading with real money.
+</Disclaimer>

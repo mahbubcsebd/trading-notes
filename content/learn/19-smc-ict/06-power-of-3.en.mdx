@@ -1,0 +1,150 @@
+---
+title: "Power of 3 (AMD): Accumulation, Manipulation, Distribution"
+description: "What ICT's Power of 3 model is, how to spot a Judas swing, the bullish and bearish day patterns, and why it is a model, not a rule: with a failed example."
+level: advanced
+tags: [smc, ict, power-of-3, amd, judas-swing, manipulation]
+instruments: [XAUUSD]
+timeframes: [M15, H1]
+status: done
+updated: 2026-11-07
+---
+
+# Power of 3 (AMD): Accumulation, Manipulation, Distribution
+
+On many days you see this: in the morning price runs one way, you enter, then price turns and runs the other way all day. ICT arranged this pattern into three phases: the **Power of 3**. This lesson covers the model, how it is used, and its limits.
+
+## What you will be able to do
+
+- Recognise the three phases of AMD.
+- Understand what a Judas swing is.
+- Draw bullish and bearish day patterns.
+- Know when the model fails.
+
+## Why it matters
+
+Lesson 5 showed that the Asia range's high and low are liquidity. AMD ties taking that liquidity and the real move afterwards into one story. But it is a model, not a law: many days do not follow it.
+
+## Core idea
+
+**AMD has three phases: Accumulation (building), Manipulation (the wrong-way move), Distribution (the real move).**
+
+- **Accumulation:** a quiet range. Usually Asia. Close to the day's open.
+- **Manipulation:** a move against the real direction that takes liquidity on one side of the range. Most often seen at the start of London. ICT calls it a **Judas swing**.
+- **Distribution:** the real move. In the opposite direction to the manipulation, often large and sustained.
+
+Analogy: a shop "sale". First everyone is drawn in, a crowd builds, then the real selling starts.
+
+### Bullish and bearish forms
+
+- **Bullish day:** first manipulation down below the Asia low (an SSL sweep), then distribution up.
+- **Bearish day:** first manipulation up above the Asia high (a BSL sweep), then distribution down.
+
+## How it looks on a chart
+
+<Chart
+  id="smc-po3-01"
+  height={460}
+  caption="XAUUSD H1 (illustrative synthetic data) — the Asia range = accumulation; the push above it = manipulation (Judas swing); the move below the range = distribution. This is the same day as in the previous lesson."
+/>
+
+<Steps>
+
+### Step 1: Set the bias
+
+Read direction on a higher timeframe (lesson 1). With a bearish bias, look for manipulation upward.
+
+### Step 2: Draw the accumulation range
+
+The Asia high and low.
+
+### Step 3: Wait for the manipulation
+
+A sweep on the opposite side of the range (lesson 2).
+
+### Step 4: Check for the structure break
+
+Look for a distribution entry only after the CHoCH appears.
+
+### Step 5: Stop
+
+Beyond the extreme of the manipulation. If that breaks, the model is wrong.
+
+</Steps>
+
+The full entry sequence is in lesson 7.
+
+## Failed example: the day AMD did not happen
+
+<Chart
+  id="smc-sess-02"
+  height={440}
+  caption="XAUUSD H1 (illustrative synthetic data) — a push above the Asia range that does not reverse; price keeps going up. The 'manipulation' here was really the start of the distribution."
+/>
+
+Anyone who sold a "Judas swing" in London lost all day. Whether a picture begins as manipulation or as distribution cannot be known in advance. It becomes clear from the structure that follows.
+
+An honest point: at the end of the day AMD can be found on almost any day's chart, because looking back, three phases can be fitted to almost any move. Whether it works looking forward has no independent evidence.
+
+## Common mistakes
+
+| Mistake                            | Why it hurts                     | Fix                          |
+| :--------------------------------- | :------------------------------- | :--------------------------- |
+| Calling every push a Judas swing   | A breakout looks the same        | Wait for the CHoCH           |
+| Fitting the model looking backward | Hindsight, not evidence          | Write rules looking forward  |
+| Using it without a bias            | Guessing the direction           | HTF bias first               |
+| Holding without a stop             | Large loss if the model is wrong | Stop beyond the manipulation |
+
+<Callout type="warning">
+  Seeing AMD on a chart after the fact is easy, and it makes the model look like
+  it always works. In your own backtest, count only the days where you would
+  have had a signal in time by following the rules.
+</Callout>
+
+## Summary
+
+<KeyTakeaways>
+
+- AMD = Accumulation, Manipulation, Distribution.
+- Judas swing = the first move against the real direction, which takes liquidity.
+- Manipulation is up on a bearish day, down on a bullish day.
+- It is a model, not a law; many days do not follow it.
+- It always seems to have worked in hindsight: be careful.
+
+</KeyTakeaways>
+
+## Practice task
+
+On XAUUSD H1 for the last 20 days, draw the Asia range each day. Write down whether the day followed AMD. Of the days that did, on how many would you have had a signal in time (after the CHoCH, not before)?
+
+## Quiz
+
+1. What are the three phases of AMD?
+2. What is a Judas swing?
+3. On a bearish day, which way does the manipulation go?
+4. Why does AMD always seem to have worked in hindsight?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** Accumulation, Manipulation, Distribution.
+
+**2.** The first move against the real direction, taking liquidity on one side of the range.
+
+**3.** Up, above the Asia high.
+
+**4.** Looking back, three phases can be fitted to almost any move; looking forward it cannot be known in advance.
+
+</details>
+
+## Next steps
+
+- Chapter overview: [SMC / ICT in Depth](/en/learn/19-smc-ict/00-overview).
+- Previous lesson: [Sessions and Kill Zones](/en/learn/19-smc-ict/05-sessions-kill-zones).
+- Next lesson: [Entry Model](/en/learn/19-smc-ict/07-entry-models).
+
+<Disclaimer>
+  This article is for educational purposes only and is not financial advice. No
+  trading methodology guarantees profit. Forex and gold trading carry
+  significant financial risk, and you can lose all of your capital. Practise on
+  a demo account before trading with real money.
+</Disclaimer>

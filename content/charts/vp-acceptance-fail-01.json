@@ -14,9 +14,9 @@
     "volume-profile",
     "acceptance"
   ],
-  "module": "16-advanced",
+  "module": "16-trading-methodologies",
   "lessonSlugs": [
-    "02-volume-profile-market-profile"
+    "05-volume-profile"
   ],
   "caption": {
     "en": "Same levels, but this time price holds above VAH and builds a new range there. The fade sell at 1.0944 is stopped.",

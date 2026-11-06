@@ -1,0 +1,169 @@
+---
+title: "Limits and Risks of SMC/ICT: Where It Fails and How to Test It"
+description: "The evidence status of SMC/ICT, hindsight bias, subjectivity, news and spread risk, and a rule set for testing the model in your own backtest: with honest limits."
+level: advanced
+tags: [smc, ict, risk, limits, backtest, hindsight-bias, evidence]
+instruments: [XAUUSD]
+timeframes: [H1, H4]
+status: done
+sources:
+  - type: other
+    title: "Park & Irwin (2007), What Do We Know About the Profitability of Technical Analysis? (Journal of Economic Surveys)"
+    url: "https://doi.org/10.1111/j.1467-6419.2007.00519.x"
+updated: 2026-11-07
+---
+
+# Limits and Risks of SMC/ICT: Where It Fails and How to Test It
+
+Every lesson in this chapter said how to use it. This lesson says how far to trust it. In videos the model looks perfect, because the examples shown are selected. Your own money does not run on selected examples.
+
+## What you will be able to do
+
+- State the evidence status of SMC/ICT honestly.
+- Recognise hindsight bias.
+- Count the model's real risks (news, spread, subjectivity).
+- Apply a rule set to test the model in your own backtest.
+
+## Why it matters
+
+High subjectivity means two people make different decisions on the same chart. Then the question "does the model work?" can only be answered with your own written rules and your own data.
+
+## Core idea
+
+### Evidence status
+
+- **Independent research:** we know of no verified, independent research on the specific SMC/ICT models (order block, FVG, kill zone, AMD). This does not mean they do not work; it means they are unproven.
+- **General technical analysis:** research on the profitability of chart-based methods is mixed, with evidence that results shrink over time ([Park & Irwin, 2007](https://doi.org/10.1111/j.1467-6419.2007.00519.x)). That is about technical analysis in general, not SMC.
+- **Teachers' claims:** videos, courses and screenshots are not evidence; they are selected examples.
+
+### Hindsight bias
+
+**Hindsight bias is the feeling, after the event, that it was obviously clear beforehand.** It is especially strong in SMC, because looking back you can find a sweep, a CHoCH and an FVG in almost any move.
+
+<Chart
+  id="meth-smc-shared"
+  height={460}
+  caption="XAUUSD H4 (illustrative synthetic data) — the whole story is perfect in hindsight. The question: with the candles on the right hidden, what decision would you have made?"
+/>
+
+The test: cover the right side of the chart, write your decision from the left side only, then remove the cover.
+
+### Real risks
+
+| Risk                | Why                                                          | What to do                                                                                                          |
+| :------------------ | :----------------------------------------------------------- | :------------------------------------------------------------------------------------------------------------------ |
+| Subjectivity        | Definitions of swing, OB and CHoCH differ by teacher         | Your own written rules, one version                                                                                 |
+| News                | Many news releases fall in kill zones, price jumps           | Avoid news times or widen the stop                                                                                  |
+| Spread and slippage | Spreads widen at the start of a window, gaps on limit orders | Count it as an entry cost ([Slippage](/en/learn/10-trade-management-execution/04-slippage-requote-spread-widening)) |
+| Stop size           | Taking the whole OB range makes risk large                   | Size the lot from the stop                                                                                          |
+| Overtrading         | Looking for the model every day                              | Do not enter when no signal comes                                                                                   |
+
+## How to test it
+
+<Steps>
+
+### Step 1: Write the rules
+
+The lesson 7 checklist in your own words.
+
+### Step 2: Go back with the right side covered
+
+Scroll the chart with the right side hidden; avoid hindsight.
+
+### Step 3: Record every setup
+
+Winners and losers, all of them. At least 50.
+
+### Step 4: Include costs
+
+Compute results with spread and slippage included.
+
+### Step 5: Read the results
+
+Expectancy, maximum consecutive losses. If you change the rules, start again.
+
+### Step 6: Move on to demo
+
+If the results are good, at least one month on a demo account.
+
+</Steps>
+
+More detail: [How to Backtest](/en/learn/15-backtesting-journal/01-how-to-backtest).
+
+<Callout type="warning">
+  Even 50 trades is a small sample; good results can still be luck. Start small
+  and keep risk low even when the results look good.
+</Callout>
+
+## When to drop the model
+
+- Negative expectancy over 50 trades by your own rules.
+- You are repeatedly tempted to take trades that break the rules.
+- Recognising a signal gives a different decision every time (the rules are not clear enough).
+
+Dropping it is not failure; it is a decision based on data. Other approaches: [Methodology comparison](/en/learn/16-trading-methodologies/00-overview).
+
+## Common mistakes
+
+| Mistake                                            | Why it hurts           | Fix                         |
+| :------------------------------------------------- | :--------------------- | :-------------------------- |
+| Treating a video example as proof                  | It is selected         | Your own 50 trades          |
+| Recording only the winning setups                  | Results inflate        | Record the losses too       |
+| Leaving out costs                                  | Real results are lower | Include spread and slippage |
+| Changing rules after bad results and testing again | Overfitting            | Test on new data            |
+
+## Summary
+
+<KeyTakeaways>
+
+- We know of no independent, verified evidence for the SMC/ICT models; neither proven nor disproven.
+- Hindsight bias is strong: test with the right side covered.
+- News, spread, subjectivity and stop size are real risks.
+- Your own written rules, at least 50 trades, with costs, wins and losses both.
+- Start small, on demo first.
+
+</KeyTakeaways>
+
+## Practice task
+
+Apply step 2: pick five days from last month, cover the right side, write your decision from the lesson 7 checklist, then remove the cover and compare.
+
+## Quiz
+
+1. What is the evidence status of the SMC/ICT models?
+2. What is hindsight bias and how can you avoid it?
+3. Why is news a risk in a kill zone?
+4. When is it right to drop the model?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** We know of no independent, verified research; neither proven nor disproven.
+
+**2.** The feeling after the event that it was clear beforehand. Avoid it by covering the right side of the chart and writing your decision first.
+
+**3.** Many news releases fall in kill zones, price jumps and spreads widen.
+
+**4.** When expectancy over 50 trades by your own rules is negative, or when the rules cannot be followed.
+
+</details>
+
+## Next steps
+
+- Chapter overview: [SMC / ICT in Depth](/en/learn/19-smc-ict/00-overview).
+- Previous lesson: [Entry Model](/en/learn/19-smc-ict/07-entry-models).
+- Related: [Building a Trading Plan](/en/learn/15-backtesting-journal/05-building-a-plan).
+
+### Sources
+
+- <ExternalLink href="https://doi.org/10.1111/j.1467-6419.2007.00519.x">
+    Park & Irwin (2007), What Do We Know About the Profitability of Technical
+    Analysis?
+  </ExternalLink>
+
+<Disclaimer>
+  This article is for educational purposes only and is not financial advice. No
+  trading methodology guarantees profit. Forex and gold trading carry
+  significant financial risk, and you can lose all of your capital. Practise on
+  a demo account before trading with real money.
+</Disclaimer>

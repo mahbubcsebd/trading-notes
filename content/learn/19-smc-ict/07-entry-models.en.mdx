@@ -1,0 +1,174 @@
+---
+title: "SMC/ICT Entry Model: Sweep, CHoCH, FVG and the Silver Bullet"
+description: "Write a complete SMC/ICT entry model from bias to stop and target, understand ICT's Silver Bullet, and see why even a perfect sequence fails: with a failed example."
+level: advanced
+tags: [smc, ict, entry-model, silver-bullet, sweep, choch, fvg]
+instruments: [XAUUSD, EURUSD]
+timeframes: [M15, H1]
+status: done
+updated: 2026-11-07
+---
+
+# SMC/ICT Entry Model: Sweep, CHoCH, FVG and the Silver Bullet
+
+So far you have learned the parts separately. Now you will join them into one written rule so that you ask the same questions in the same order on every trade. Without a written rule, trades are made on "feel", and cannot be backtested.
+
+## What you will be able to do
+
+- Write a complete entry model step by step.
+- Place the stop and target by the model's rules.
+- Understand ICT's Silver Bullet.
+- Know why even a perfect sequence can fail.
+
+## Why it matters
+
+Lessons 1–6 gave the ingredients. With the ingredients apart, every gap becomes an entry. Putting the sequence and the filters together cuts the number of signals and raises their quality. For stops and position size, see [Stop Loss Placement](/en/learn/10-trade-management-execution/01-stop-loss-placement) and [Position Sizing](/en/learn/08-risk-management/02-position-sizing).
+
+## Core idea
+
+### The basic entry model (long)
+
+1. **Bias:** the higher timeframe (H4/D1) is bullish, or at least not bearish.
+2. **Time:** a kill zone or a window you chose.
+3. **Sweep:** price takes SSL (goes below a low and the body returns inside).
+4. **CHoCH:** a body close breaks the last lower high.
+5. **Zone:** the FVG (or OB) the impulse left behind.
+6. **Entry:** when price returns to the zone, ideally in discount.
+7. **Stop:** below the sweep low.
+8. **Target:** opposing liquidity (the previous high), at least 1:2.
+
+For a short, reverse everything.
+
+### Silver Bullet
+
+**The Silver Bullet is an ICT time-based model: after liquidity is taken inside a specific one-hour window, enter on the FVG.** The windows commonly cited in ICT teaching (New York time) are 03:00–04:00, 10:00–11:00 and 14:00–15:00. Times differ by teacher, so verify them. The idea is the same: a sweep inside the window, a return to the FVG, a target at opposing liquidity. It is a narrower form of the model above.
+
+## How it looks on a chart
+
+<Chart
+  id="smc-sweep-choch-fvg-win-01"
+  height={460}
+  caption="EURUSD H1 (illustrative synthetic data) — a low is swept, the last lower high breaks (CHoCH) and leaves an FVG. Buy the pullback into the FVG, stop below the sweep low, target 2R."
+/>
+
+<Steps>
+
+### Step 1: Bias and time
+
+Confirm the direction and the window.
+
+### Step 2: Sweep
+
+The low is taken and the body comes back inside.
+
+### Step 3: CHoCH
+
+A body close above the last lower high.
+
+### Step 4: Draw the FVG
+
+The three-candle gap in the impulse.
+
+### Step 5: Enter on the pullback
+
+With a limit order or after a reaction signal, with the stop in place.
+
+### Step 6: Target
+
+The previous high or 1:2, whichever comes first.
+
+</Steps>
+
+Below is the model's checklist. If any answer is not "yes", do not take the trade.
+
+<Checklist
+  id="smc-entry-model"
+  items={[
+    "The higher-timeframe bias is with me",
+    "I am inside the time window I chose",
+    "A clear liquidity sweep happened (the body came back inside)",
+    "A CHoCH happened on a body close",
+    "There is an untouched FVG or OB",
+    "The stop is placed and the risk is within my limit",
+    "The target is at least 1:2",
+  ]}
+/>
+
+## Failed example: a perfect sequence against the bigger trend
+
+<Chart
+  id="smc-entry-fail-01"
+  height={460}
+  caption="XAUUSD H1 (illustrative synthetic data) — low swept, CHoCH up, buy in the FVG. Every step is textbook, but the higher-timeframe trend is down: the bounce ends and the stop is hit."
+/>
+
+The sequence is perfect, yet it loses. The reason is that the lower-timeframe CHoCH was a pullback inside a larger move down. If the first checklist question (bias) is "no", the trade should not have been taken even with all the others "yes".
+
+The rule: **the model only times the entry; the bias decides the direction.**
+
+This loss is normal. The stop was small, so the loss was controlled. That is the real job of the model.
+
+## Common mistakes
+
+| Mistake                         | Why it hurts                                       | Fix                          |
+| :------------------------------ | :------------------------------------------------- | :--------------------------- |
+| Skipping the bias               | A small-timeframe CHoCH drowns in the bigger trend | First checklist question     |
+| Not placing a stop              | Unlimited loss if the model is wrong               | Stop before entry            |
+| Looking for the model every day | Quality falls, count rises                         | Sit out when no signal comes |
+| Not writing the target          | Exiting from greed or fear                         | Write the target first       |
+| Changing the rules repeatedly   | Backtest is meaningless                            | One version, 50 trades       |
+
+<Callout type="tip">
+  Keep a screenshot of the checklist on every trade. At month end, see which
+  question was "no" when you still took the trade, and what those trades
+  returned.
+</Callout>
+
+## Summary
+
+<KeyTakeaways>
+
+- Model: bias → time → sweep → CHoCH → FVG/OB → pullback entry → stop → target.
+- Silver Bullet = a narrower, one-hour-window form of ICT.
+- Even a perfect sequence fails; most often when there is no bias.
+- Place the stop first; keeping losses controlled is the model's job.
+- Write the rules and backtest 50 trades.
+
+</KeyTakeaways>
+
+## Practice task
+
+Write the checklist above in your own words. Apply it to every possible setup on XAUUSD H1 last month: in how many are all answers "yes"? What did they return? ([How to backtest](/en/learn/15-backtesting-journal/01-how-to-backtest))
+
+## Quiz
+
+1. What are the eight steps of the entry model?
+2. What is the Silver Bullet?
+3. Why can even a perfect sequence fail?
+4. Where does the stop go?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** Bias, time, sweep, CHoCH, FVG/OB, pullback entry, stop, target.
+
+**2.** ICT's one-hour-window model: take liquidity inside the window, then enter on the FVG.
+
+**3.** A lower-timeframe sequence can be a pullback inside a larger trend; that happens when the bias does not match.
+
+**4.** For a long, below the sweep low; for a short, above the sweep high.
+
+</details>
+
+## Next steps
+
+- Chapter overview: [SMC / ICT in Depth](/en/learn/19-smc-ict/00-overview).
+- Previous lesson: [Power of 3](/en/learn/19-smc-ict/06-power-of-3).
+- Next lesson: [Limits and Risk](/en/learn/19-smc-ict/08-risk-and-limits).
+
+<Disclaimer>
+  This article is for educational purposes only and is not financial advice. No
+  trading methodology guarantees profit. Forex and gold trading carry
+  significant financial risk, and you can lose all of your capital. Practise on
+  a demo account before trading with real money.
+</Disclaimer>

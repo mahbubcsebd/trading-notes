@@ -1,0 +1,160 @@
+---
+title: "Order Block ও FVG: কোন zone প্রাসঙ্গিক, কোনটা শুধু gap"
+description: "Order block, breaker ও Fair Value Gap কী, কোন zone বাছবেন কোনটা বাদ দেবেন, আর context ছাড়া FVG কেন ব্যর্থ হয়: chart ও ব্যর্থ উদাহরণসহ।"
+level: advanced
+tags: [smc, ict, order-block, fvg, imbalance, breaker]
+instruments: [XAUUSD]
+timeframes: [H1, H4]
+status: done
+updated: 2026-11-07
+---
+
+# Order Block ও FVG: কোন zone প্রাসঙ্গিক, কোনটা শুধু gap
+
+Chart খুললে ডজন ডজন gap আর candle দেখা যায়, সবই নাকি "OB"। সবগুলোতে entry নিলে হিসাব মেলে না। এই পাঠে শিখবেন কোন zone-এর পেছনে কারণ আছে, আর কোনটা শুধু chart-এর একটি ফাঁক।
+
+## এই পাঠে আপনি যা পারবেন
+
+- Order block ও FVG সংজ্ঞায়িত করতে পারবেন।
+- প্রাসঙ্গিক zone বাছার ফিল্টার প্রয়োগ করতে পারবেন।
+- Breaker কী, বুঝবেন।
+- Zone-এর stop ও invalidation ঠিক করতে পারবেন।
+
+## কেন গুরুত্বপূর্ণ
+
+Zone-ই entry-র জায়গা, আর stop-ও তার ওপর নির্ভর করে। ভুল zone বাছলে stop ছোট হয় কিন্তু প্রায়ই লাগে। Supply/demand-এর সাধারণ ধারণা [Supply & Demand পাঠে](/bn/learn/05-support-resistance/03-supply-demand) আছে; এখানে SMC-র দুটি নির্দিষ্ট রূপ।
+
+## মূল ধারণা
+
+### Order block (OB)
+
+**Bullish OB হলো বড় ওপরের চলনের ঠিক আগের শেষ bearish candle।** Bearish OB উল্টো। ধারণা: ওই candle-এ বড় order জমেছিল, তাই দাম ফিরলে সেখানে প্রতিক্রিয়া হতে পারে। এটি প্রতিক্রিয়ার সম্ভাবনা, নিশ্চয়তা নয়।
+
+তুলনা: বন্যার আগে নদীর শেষ নিচু বাঁধ। জল সেখান থেকেই উপচে বেরিয়েছিল।
+
+### Fair Value Gap (FVG)
+
+**FVG হলো তিন-candle নকশা, যেখানে প্রথম candle-এর high আর তৃতীয় candle-এর low-এর মাঝে ফাঁক থাকে।** মাঝের বড় candle এত দ্রুত চলেছে যে ওই এলাকায় দুই দিকের লেনদেন হয়নি। একে imbalance-ও বলে। ICT-র শিক্ষায় ফাঁকের ৫০% স্তরকে (consequent encroachment) আলাদা গুরুত্ব দেওয়া হয়; সেটি একটি শিক্ষকভিত্তিক পছন্দ।
+
+### Breaker
+
+**Breaker হলো ব্যর্থ OB।** Bullish OB ভেঙে দাম নিচে close হলে সেই zone পরে resistance হয়ে ফিরতে পারে। ভূমিকা পাল্টে যাওয়ার (role reversal) একটি রূপ।
+
+### প্রাসঙ্গিক zone বাছার ফিল্টার
+
+OB/FVG তখনই বিবেচ্য, যখন:
+
+1. **চলনটি structure ভেঙেছে** (BOS বা CHoCH, পাঠ ১)।
+2. **তার আগে liquidity নেওয়া হয়েছে** (sweep, পাঠ ২)।
+3. **Zone বড় timeframe-এর bias-এর দিকে।**
+4. **Zone এখনো অস্পৃষ্ট**, মানে দাম আগে ফেরেনি।
+
+চারটির বেশিরভাগ না মিললে zone-টি শুধু একটি gap।
+
+## Chart-এ কেমন দেখায়
+
+<Chart
+  id="smc-ob-01"
+  height={460}
+  caption="XAUUSD H1 (শিক্ষামূলক কাল্পনিক ডেটা) — impulse-এর আগের শেষ down candle (OB) আর impulse-এর রেখে যাওয়া ফাঁক (FVG)। Impulse আগের high-এর ওপরে close করে (BOS)। দাম FVG-তে ফেরে, buy, stop OB low-র নিচে।"
+/>
+
+<Steps>
+
+### ধাপ ১: Impulse খুঁজুন
+
+আগের swing high ভাঙা বড় চলন।
+
+### ধাপ ২: তার শুরুর candle
+
+শেষ বিপরীতমুখী candle: OB zone আঁকুন।
+
+### ধাপ ৩: FVG আঁকুন
+
+Impulse-এর তিন-candle ফাঁক।
+
+### ধাপ ৪: দামের ফেরার অপেক্ষা
+
+Zone-এ ফিরলে প্রতিক্রিয়া দেখুন, ফেরার আগে entry নয়।
+
+### ধাপ ৫: Stop বসান
+
+OB-র low-র নিচে। Zone ভাঙলে idea ভুল।
+
+</Steps>
+
+এখানে entry FVG-র ভেতরে, stop OB-র নিচে। Stop-এর পরিমাণ ছোট নয়: zone-এর পুরো পরিসর ধরলে ঝুঁকি বাড়ে, সেটি lot size-এ মিলাতে হবে।
+
+## ব্যর্থ উদাহরণ: context ছাড়া FVG
+
+<Chart
+  id="smc-fvg-no-context-fail-01"
+  height={440}
+  caption="শিক্ষামূলক কাল্পনিক ডেটা — একটি FVG আছে, কিন্তু আগে কোনো sweep নেই, structure-ও ভাঙেনি। FVG-তে entry ব্যর্থ হয়।"
+/>
+
+Gap ছিল, তাই entry হয়েছিল। কিন্তু gap একা কোনো কারণ নয়। Sweep আর structure ভাঙা ছিল না, তাই এটি শুধু একটি ফাঁক ছিল। ফিল্টারের ১ ও ২ নম্বর ছাড়া FVG বাদ দিন।
+
+## সাধারণ ভুল
+
+| ভুল                          | কেন সমস্যা              | সমাধান             |
+| :--------------------------- | :---------------------- | :----------------- |
+| প্রতিটি gap-এ entry          | কারণ ছাড়া zone         | চার ফিল্টার        |
+| আগে ছোঁয়া zone আবার ব্যবহার | প্রতিক্রিয়ার সুযোগ শেষ | অস্পৃষ্ট zone      |
+| OB-র stop খুব ছোট            | Wick-এ লেগে যায়        | পুরো OB পরিসর ধরুন |
+| Bias-এর উল্টো দিকের zone     | স্রোতের বিরুদ্ধে        | আগে HTF bias       |
+
+<Callout type="note">
+  OB-র সংজ্ঞা শিক্ষকভেদে আলাদা: কেউ পুরো candle, কেউ শুধু body, কেউ শেষ দুটি
+  candle ধরেন। এই series-এ পুরো candle পরিসর নেওয়া হয়েছে। আপনার নিয়ম আগে লিখে
+  রাখুন, পরে বদলাবেন না।
+</Callout>
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- OB = বড় চলনের আগের শেষ বিপরীতমুখী candle; FVG = তিন-candle ফাঁক।
+- Breaker = ব্যর্থ OB, ভূমিকা বদলে।
+- চার ফিল্টার: structure ভাঙা, আগে liquidity, bias-এর দিক, অস্পৃষ্ট zone।
+- Zone-এর পেছনে কারণ না থাকলে সেটি শুধু gap।
+- Stop zone-এর বাইরে; idea ভাঙলে বেরিয়ে যান।
+
+</KeyTakeaways>
+
+## অনুশীলন
+
+XAUUSD H1-এ ১০টি FVG চিহ্নিত করুন। প্রতিটিতে চার ফিল্টার মেলান। কয়টি সবগুলো মেলে? সেগুলোতে দাম ফিরে কী করেছে লিখুন।
+
+## কুইজ
+
+1. Bullish OB কী?
+2. FVG কীভাবে তৈরি হয়?
+3. Breaker কী?
+4. কোন চারটি ফিল্টার zone বাছতে সাহায্য করে?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** বড় ওপরের চলনের ঠিক আগের শেষ bearish candle।
+
+**২.** তিন-candle নকশায় প্রথমের high আর তৃতীয়ের low-এর মাঝে ফাঁক থাকলে; মাঝের candle খুব দ্রুত চলে।
+
+**৩.** ব্যর্থ OB, যা ভেঙে গিয়ে পরে উল্টো ভূমিকায় (resistance/support) ফেরে।
+
+**৪.** Structure ভাঙা, আগে liquidity নেওয়া, bias-এর দিক, অস্পৃষ্ট zone।
+
+</details>
+
+## পরের ধাপ
+
+- অধ্যায়ের পরিচিতি: [SMC / ICT গভীরে](/bn/learn/19-smc-ict/00-overview)।
+- আগের পাঠ: [Liquidity ও Sweep](/bn/learn/19-smc-ict/02-liquidity-sweeps)।
+- পরের পাঠ: [Premium, Discount ও OTE](/bn/learn/19-smc-ict/04-premium-discount)।
+
+<Disclaimer>
+  এই লেখাটি শুধুমাত্র শিক্ষামূলক উদ্দেশ্যে। এটি কোনো financial advice নয়। কোনো
+  trading পদ্ধতিই নিশ্চিত লাভ দেয় না। Forex ও Gold trading-এ উল্লেখযোগ্য আর্থিক
+  ঝুঁকি রয়েছে এবং আপনি আপনার বিনিয়োগের পুরোটাই হারাতে পারেন। Real money দিয়ে
+  trade করার আগে demo account-এ যথেষ্ট অনুশীলন করুন।
+</Disclaimer>

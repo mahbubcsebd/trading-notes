@@ -1,0 +1,346 @@
+---
+title: "Harmonic Patterns: Fibonacci অনুপাতে আঁকা pattern — বাংলায় সহজ গাইড"
+description: "Harmonic Patterns কী, X-A-B-C-D কাঠামো, Gartley, Bat, Butterfly, Crab-এর অনুপাত, PRZ, tolerance নিয়ে মতভেদ আর সৎ সীমা: XAUUSD chart-এ উদাহরণসহ।"
+level: intermediate
+tags: [harmonic, gartley, bat, butterfly, crab, fibonacci, methodology]
+instruments: [XAUUSD]
+timeframes: [H1, H4, D1]
+status: done
+sources:
+  - type: blog
+    title: "Gartley Pattern (Investopedia)"
+    url: "https://www.investopedia.com/terms/g/gartley.asp"
+  - type: other
+    title: "Harmonic pattern (Wikipedia)"
+    url: "https://en.wikipedia.org/wiki/Harmonic_pattern"
+  - type: other
+    title: "Park & Irwin (2007), What Do We Know About the Profitability of Technical Analysis? (Journal of Economic Surveys)"
+    url: "https://doi.org/10.1111/j.1467-6419.2007.00519.x"
+updated: 2026-11-07
+---
+
+# Harmonic Patterns: Fibonacci অনুপাতে আঁকা pattern
+
+কোনো trader বললেন, "এই pattern-টা ঠিক Gartley।" আপনি জিজ্ঞেস করলেন, "কীভাবে বুঝলেন?" তিনি বললেন, "প্রতিটি swing মেপে।" এখানে চোখের আন্দাজ নয়, **অনুপাত মাপা**। Harmonic Patterns-এর বিশেষত্ব এটাই: আকার ভালো দেখালেই হয় না, সংখ্যা মিলতে হবে।
+
+## এক নজরে
+
+<MethodCard
+  name="Harmonic Patterns"
+  origin="H.M. Gartley (1935); পরে Larry Pesavento, Scott Carney"
+  reads="Price"
+  question="Swing-গুলো কি নির্দিষ্ট Fibonacci অনুপাত মেনে চলছে?"
+  timeframes="H1, H4, D1"
+  difficulty="intermediate"
+  subjectivity="medium"
+/>
+
+## এই লেখা পড়ে আপনি যা পারবেন
+
+- X-A-B-C-D পাঁচ বিন্দুর কাঠামো বুঝিয়ে বলতে পারবেন।
+- Gartley, Bat, Butterfly ও Crab-এর অনুপাত আলাদা করতে পারবেন।
+- PRZ (Potential Reversal Zone) কী ও কেন, বুঝবেন।
+- একটি pattern কখন বৈধ, কখন নয়, মাপতে পারবেন।
+- অনুপাতের tolerance নিয়ে মতভেদ আর পদ্ধতির সৎ সীমা জানবেন।
+
+## ইতিহাস ও উৎপত্তি
+
+- **H.M. Gartley:** ১৯৩৫ সালে তাঁর বই _Profits in the Stock Market_-এ একটি নির্দিষ্ট আকারের chart pattern বর্ণনা করেন। পরে সেটি "Gartley pattern" নামে পরিচিত হয়।
+- **Larry Pesavento:** ১৯৯০-এর দশকে Fibonacci অনুপাত দিয়ে pattern-এর সংখ্যাগত সংজ্ঞা দেন। এখান থেকেই অনুপাত-ভিত্তিক দৃষ্টিভঙ্গির শুরু।
+- **Scott Carney:** ২০০০-এর দশকে "Harmonic Trading" নামে পদ্ধতিটি জনপ্রিয় করেন এবং Bat, Crab ইত্যাদি নতুন pattern যোগ করেন।
+- **অনুপাতের তালিকায় মতভেদ।** শিক্ষক ও বইভেদে সীমা সামান্য আলাদা। এই পাঠ একটি সাধারণ সংস্করণ ধরে।
+
+## মূল দর্শন
+
+**Harmonic-এর প্রশ্ন: দামের swing-গুলো কি নির্দিষ্ট Fibonacci অনুপাত মেনে চলছে?**
+
+ধারণাটা এই: বাজারে কিছু অনুপাত বারবার ফিরে আসে (0.618, 0.786 ইত্যাদি), তাই কয়েকটি swing যদি একসাথে সঠিক অনুপাত মেনে সাজে, শেষ বিন্দু (D) এমন এলাকা যেখানে দাম ঘুরে যেতে পারে। আগে থেকে সংখ্যা জানা থাকায় আপনি D-র আগেই পরিকল্পনা করেন।
+
+তুলনা: দর্জির মাপ। কাপড় কাটার আগে সব মাপ লিখে নেওয়া হয়। মাপ না মিললে কাটা হয় না। Harmonic trader-ও মাপ না মিললে trade নেন না।
+
+<Callout type="warning">
+  অনুপাত মিললেই দাম ঘুরবে, এমন নয়। Harmonic একটি **পরিকল্পনার কাঠামো**: কোথায়
+  দেখব, কোথায় ভুল প্রমাণ হবে। ঘোরার নিশ্চয়তা নয়।
+</Callout>
+
+## মূল ধারণাগুলো
+
+### ১. X-A-B-C-D কাঠামো
+
+Harmonic pattern পাঁচটি বিন্দু আর চারটি পায়ে গঠিত:
+
+- **XA:** প্রথম বড় চলন।
+- **AB:** XA-র একটি অংশ ফেরত নেয় (retracement)।
+- **BC:** AB-র একটি অংশ ফেরত নেয়।
+- **CD:** শেষ চলন, যা XA-র সাপেক্ষে একটি নির্দিষ্ট অনুপাত পর্যন্ত যায়। **D-ই হলো সম্ভাব্য প্রবেশের বিন্দু।**
+
+**Bullish pattern:** শেষ চলন (CD) নিচে নামে, D-তে কেনার সুযোগ। **Bearish pattern:** উল্টো, D-তে বিক্রি।
+
+<CandleDiagram
+  title="Bullish X-A-B-C-D"
+  candles={[
+    { o: 10, h: 10.5, l: 9.5, c: 10, label: "X" },
+    { o: 10, h: 18, l: 9.8, c: 17.5, label: "A" },
+    { o: 17.5, h: 17.8, l: 13, c: 13.5, label: "B" },
+    { o: 13.5, h: 16.5, l: 13.2, c: 16, label: "C" },
+    { o: 16, h: 16.2, l: 11.8, c: 12, label: "D" },
+    { o: 12, h: 16, l: 11.5, c: 15.5, note: "ঘুরে ওঠা" },
+  ]}
+  caption="X থেকে A উঠে, B-তে নেমে, C-তে আবার উঠে, D পর্যন্ত নামা। D-তে ঘুরে ওঠার প্রত্যাশা। প্রতিটি পা একটি নির্দিষ্ট অনুপাতে মাপা।"
+/>
+
+### ২. Fibonacci অনুপাত
+
+Harmonic-এ ব্যবহৃত অনুপাতগুলো [Fibonacci](/bn/learn/05-support-resistance/05-fibonacci-basics) ক্রম থেকে এসেছে: 0.382, 0.5, 0.618, 0.786, 0.886, এবং extension হিসেবে 1.272, 1.618।
+
+**Retracement** মানে আগের চলনের কত অংশ ফেরত নেয়, যেমন B যদি XA-র 0.618 ফেরত নেয়। **Extension** মানে আগের চলন ছাড়িয়ে যাওয়া, যেমন D যদি XA-র 1.272 গুণ পর্যন্ত যায়।
+
+### ৩. চারটি জনপ্রিয় pattern
+
+| Pattern   | B (XA-র)    | D (XA-র)            | বৈশিষ্ট্য                      |
+| :-------- | :---------- | :------------------ | :----------------------------- |
+| Gartley   | 0.618       | 0.786 (retracement) | সবচেয়ে পুরোনো; D, X ছোঁয় না  |
+| Bat       | 0.382–0.50  | 0.886 (retracement) | D, X-এর খুব কাছে, গভীর retrace |
+| Butterfly | 0.786       | 1.272 (extension)   | D, X ছাড়িয়ে যায়             |
+| Crab      | 0.382–0.618 | 1.618 (extension)   | D অনেক দূর, গভীরতম extension   |
+
+**মতভেদ:** এই সংখ্যা একটি সাধারণ সংস্করণ। শিক্ষক ও বইভেদে B ও C-র সীমা, এমনকি D-র সংখ্যাও সামান্য আলাদা। আপনি কোন সংস্করণ ধরছেন, তা আগে লিখে রাখুন।
+
+আরও একটি সাধারণ শর্ত: C সাধারণত AB-র 0.382 থেকে 0.886 অংশ ফেরত নেয়। C যদি A ছাড়িয়ে যায়, এই চার pattern-এর কোনোটিই বৈধ নয়।
+
+### ৪. PRZ: সম্ভাব্য ঘোরার এলাকা
+
+**PRZ (Potential Reversal Zone) হলো D-র কাছের সেই এলাকা, যেখানে একাধিক অনুপাত একসাথে পড়ে।** যেমন XA-র 0.786, আবার BC-র কোনো projection, দুটি প্রায় একই দামে।
+
+একটি অনুপাত আলাদা করে দুর্বল; একাধিক অনুপাত মিললে সেই এলাকা বেশি গুরুত্ব পায়। কিন্তু "বেশি গুরুত্ব" মানে নিশ্চয়তা নয়।
+
+### ৫. Tolerance: কতটা "মিল" গ্রহণযোগ্য?
+
+বাস্তব chart-এ অনুপাত ঠিক 0.618 হয় না; হয় 0.60 বা 0.64। কতটা পর্যন্ত গ্রহণযোগ্য? **এ নিয়ে সবার ঐকমত্য নেই।** কেউ ±৩%, কেউ ±৫%, কেউ আরও বেশি ধরেন।
+
+তুলনা: দর্জির মাপে এক ইঞ্চি এদিক-ওদিক চলে? শার্টে হয়তো চলে, বিয়ের শেরওয়ানিতে নয়।
+
+ফল: tolerance বাড়ালে বৈধ pattern বেড়ে যায়, কিন্তু গুণমান কমে। কমালে pattern দুর্লভ হয়ে ওঠে। এই বাছাই আপনার, আর এখানেই subjectivity ঢোকে।
+
+### ৬. Trade-এর কাঠামো
+
+Harmonic trade-এর ধরন নির্দিষ্ট:
+
+- **Entry:** D-তে (PRZ-এ), pattern সম্পূর্ণ হওয়ার পর।
+- **Stop:** pattern যেখানে বাতিল হয়: সাধারণত X-এর ঠিক বাইরে।
+- **Target:** AD চলনের 0.382 বা 0.618 retracement, তারপর আরও।
+
+সুবিধা: সব সংখ্যা আগে থেকে জানা। অসুবিধা: pattern ভাঙলে (X ভাঙলে) পুরো যুক্তিই শেষ।
+
+## Shared chart-এ পড়া
+
+অধ্যায়ের সেই একই XAUUSD H4 chart। Harmonic-এর চোখে **সবচেয়ে কাছের** X-A-B-C-D দেখা হলো।
+
+<Chart
+  id="meth-harm-shared"
+  height={520}
+  caption="XAUUSD H4 (শিক্ষামূলক কাল্পনিক ডেটা) — চূড়ার কাছে সবচেয়ে কাছের X-A-B-C-D: B মাত্র XA-র 0.31 retrace করেছে, Gartley (0.618) ও Bat (0.382–0.50)-এর বাইরে। C আবার A ছাড়িয়ে গেছে। বৈধ pattern নেই।"
+/>
+
+<Steps>
+
+### ধাপ ১: X ও A
+
+Wave 2-এর low **2336**-কে X ধরা হলো, আর wave 3-এর high **2454**-কে A। XA = 118।
+
+### ধাপ ২: B মাপা
+
+A থেকে নেমে **2418**-এ B। AB = 36। 36 ÷ 118 ≈ **0.31**। Gartley চায় 0.618, Bat চায় 0.382–0.50। 0.31 কোনোটার সীমায় নেই।
+
+### ধাপ ৩: C মাপা
+
+B থেকে ওঠে **2487**-এ, যা A (2454)-এরও ওপরে। এই চার pattern-এ C, A ছাড়ায় না। এটিও বৈধতার শর্ত ভাঙে।
+
+### ধাপ ৪: সিদ্ধান্ত
+
+Harmonic-এর সৎ উত্তর: **এই chart-এ বৈধ pattern নেই।** কোনো trade নয়। আর "প্রায় মিলছে" বলে tolerance বাড়ানো মানে pattern বানিয়ে ফেলা।
+
+</Steps>
+
+<Callout type="note">
+  এই chart-এ Harmonic কিছু পায়নি, আর সেটাই ঠিক। অধ্যায়ের নিয়ম: যে পদ্ধতি
+  পরিষ্কার কিছু পায় না, সে সেটা স্বীকার করবে। Harmonic-এ বৈধ pattern তুলনামূলক
+  দুর্লভ।
+</Callout>
+
+## Trade-এর মূল যুক্তি
+
+যেহেতু shared chart-এ pattern নেই, দেখুন একটি বৈধ উদাহরণ। XAUUSD H1 (কাল্পনিক), bullish Gartley:
+
+<Chart
+  id="meth-harm-ex-01"
+  height={460}
+  caption="XAUUSD H1 (শিক্ষামূলক কাল্পনিক ডেটা) — B = XA-র 0.618, C = AB-র 0.618, D = XA-র 0.786 (2317.1), CD = BC-র 1.44 গুণ। D-র কাছে buy, stop X-এর নিচে, target AD-র 0.618।"
+/>
+
+| অংশ       | নিয়ম (সাধারণ রূপ)                   | উদাহরণে (কাল্পনিক)       |
+| :-------- | :----------------------------------- | :----------------------- |
+| Setup     | X-A-B-C-D সব অনুপাত মিলছে            | X 2300, A 2380, D 2317.1 |
+| Entry     | D-তে (PRZ-এ)                         | প্রায় 2318.6            |
+| Stop loss | X-এর ঠিক বাইরে (pattern বাতিলের দাম) | 2296                     |
+| Target    | AD চলনের 0.618 retracement           | প্রায় 2356              |
+
+হিসাব: ঝুঁকি 2318.6 − 2296 = 22.6, লাভ 2356 − 2318.6 ≈ 37.4, অনুপাত প্রায় **1:1.65**।
+
+<Callout type="warning">
+  Stop loss ছাড়া Harmonic entry নেই। X ভাঙার সাথে সাথে pattern বাতিল। "D-তে
+  ঘুরবে" একটি অনুমান। Position size: [Risk per
+  trade](/bn/learn/08-risk-management/01-risk-per-trade)।
+</Callout>
+
+## শক্তি
+
+- **সব সংখ্যা আগে থেকে জানা।** Entry, stop, target D-তে পৌঁছানোর আগেই ঠিক।
+- **স্পষ্ট বাতিলের দাম।** X ভাঙলে pattern শেষ; stop রাখা সহজ।
+- **নির্দিষ্ট নিয়ম।** "আকার ভালো" নয়, সংখ্যা মেলা চাই। এতে কিছুটা বস্তুনিষ্ঠতা আসে।
+- **পরিকল্পনার ভাষা।** D-তে কী করবেন, তা আগে লিখে ফেলা যায়।
+
+## দুর্বলতা ও সীমা
+
+- **বৈধ pattern কম।** বেশিরভাগ swing কোনো pattern-এর সাথে মেলে না। মিলাতে tolerance বাড়ালে pattern "বানানো" হয়ে যায়।
+- **Tolerance নিয়ে মতভেদ।** কতটা অনুপাত-বিচ্যুতি গ্রহণযোগ্য, ঠিক করা নেই। এখানেই subjectivity (medium)।
+- **নিখুঁত অনুপাত ঘোরার কারণ নয়।** ব্যর্থ উদাহরণ দেখুন। বাজার অনুপাত জানে না।
+- **Hindsight।** পুরোনো chart-এ X-A-B-C-D খোঁজা সহজ; অনেক swing-এর মধ্যে কোনটা X, live-এ বুঝতে পারা কঠিন।
+- **Gold-এ সতর্কতা।** News-এর সময় Gold প্রায়ই D বিন্দু ছাড়িয়ে চলে যায়। তাই বড় খবরের আগে-পরে সতর্ক।
+
+**প্রমাণের অবস্থা:** Harmonic pattern নিয়ে স্বাধীন, বড় মাপের গবেষণা খুব কম। বেশিরভাগ জ্ঞান practitioner-এর বই ও কোর্সে। Technical analysis নিয়ে সাধারণ গবেষণার ফল মিশ্র (Park ও Irwin, 2007)। **কোনো পদ্ধতিই নিশ্চিত লাভ দেয় না।** নিজের backtest-এ যাচাই করুন।
+
+ব্যর্থ উদাহরণ দেখুন। বইয়ের মতো নিখুঁত Bat, তবু দাম ঘুরল না:
+
+<Chart
+  id="meth-harm-fail-01"
+  height={460}
+  caption="XAUUSD H1 (শিক্ষামূলক কাল্পনিক ডেটা) — বইয়ের মতো Bat ratio (B = 0.5, D = 0.886), D-তে (2410.9) sell, কিন্তু কেনা থামে না; দাম X ভাঙে, 2424.0-এ stop লাগে।"
+/>
+
+হিসাব: sell প্রায় 2409.4-এ, stop 2424, ঝুঁকি প্রায় 14.6, ক্ষতি 1R। Target ছিল প্রায় 2367, অর্থাৎ সম্ভাব্য লাভ প্রায় 2.9R। শিক্ষা: ভালো সম্ভাব্য অনুপাত আর ছোট stop থাকলেও কিছু trade ব্যর্থ হয়, আর নিখুঁত অনুপাত তা আটকায় না। প্রেক্ষাপট এখানে জোরালো uptrend ছিল।
+
+## কার জন্য, কার জন্য নয়
+
+| উপযুক্ত যদি আপনি…                         | উপযুক্ত নয় যদি আপনি…   |
+| :---------------------------------------- | :---------------------- |
+| সংখ্যা ও মাপে স্বচ্ছন্দ                   | মাপ-জোখ ঝামেলা মনে করেন |
+| আগে থেকে পরিকল্পনা করে অপেক্ষা করতে পারেন | সবসময় trade চান        |
+| H1–D1-এ কাজ করেন                          | M1–M5 scalping করেন     |
+| Fibonacci আগে শিখেছেন                     | Fibonacci এখনো শেখেননি  |
+
+## অন্য পদ্ধতির সাথে মেলানো
+
+- **Harmonic + Price Action:** D-তে candle-এর confirmation (যেমন rejection wick) দেখে ঢোকা। অনুপাত এলাকা বলে, candle সময় বলে।
+- **Harmonic + Elliott:** দুটিই Fibonacci ব্যবহার করে; Elliott wave-এর দৈর্ঘ্য মাপে, Harmonic pattern-এর বিন্দু। একই এলাকা দুই দিক থেকে মিললে মনোযোগ বাড়ে।
+- **Harmonic + Volume Profile বা support/resistance:** D যদি একটি পরিচিত level-এর কাছে পড়ে, PRZ আরও অর্থবহ।
+
+**যা মেশাবেন না:** একই chart-এ ১০টি pattern স্ক্যানার আর ২০টি indicator। Scanner অনেক "pattern" দেখায়, যার বেশিরভাগ লুজ tolerance-এ বানানো। স্বয়ংক্রিয় scanner-এর tolerance জানুন।
+
+## পরে গভীরে যা শিখবেন
+
+এই পাঠ overview। আলাদা সিরিজ হলে এগুলো থাকতে পারে:
+
+- সম্পূর্ণ pattern তালিকা (Shark, Cypher, 5-0, three drives ইত্যাদি)
+- BC projection ও PRZ-এর বিস্তারিত
+- Bullish ও bearish উভয়ের জন্য পূর্ণ নিয়মতালিকা
+- Pattern scanner ব্যবহার ও তার সীমা
+
+**Sub-series প্রস্তাব:** এখনই দরকার নেই। এই পাঠ ২,৫০০ শব্দের কাছাকাছি, মূল ধারণা চারটি pattern ও কাঠামো। পাঠকের চাহিদা এলে দেখা যাবে। সিদ্ধান্ত আপনার।
+
+## কীভাবে শেখা শুরু করবেন
+
+<Steps>
+
+### ধাপ ১: Fibonacci tool
+
+আপনার platform-এ Fibonacci retracement ও extension tool চালান। 0.382, 0.5, 0.618, 0.786 চিনুন।
+
+### ধাপ ২: শুধু Gartley
+
+শুধু একটি pattern শিখুন: Gartley। B = 0.618, D = 0.786। বাকিগুলো পরে।
+
+### ধাপ ৩: ২০টি উদাহরণ মাপুন
+
+XAUUSD H4-এ ২০টি জায়গা খুঁজুন, যা Gartley মনে হয়। প্রতিটি মেপে লিখুন: কয়টি আসলে বৈধ?
+
+### ধাপ ৪: Tolerance ঠিক করুন
+
+আপনার tolerance লিখুন (যেমন ±৫%)। ঠিক করার পর কয়টি টিকল?
+
+### ধাপ ৫: নিয়ম লিখে backtest
+
+Entry D-তে, stop X-এর বাইরে, target 0.618: নিয়ম লিখে অন্তত ৩০টি বৈধ উদাহরণে [backtest](/bn/learn/15-backtesting-journal/01-how-to-backtest) করুন।
+
+</Steps>
+
+## সাধারণ ভুল
+
+| ভুল                                          | কেন সমস্যা                               | সমাধান                           |
+| :------------------------------------------- | :--------------------------------------- | :------------------------------- |
+| "প্রায় মিলছে" বলে pattern মেনে নেওয়া       | Tolerance চুপিসারে বাড়ে, pattern বানানো | আগে tolerance লিখুন, তারপর মাপুন |
+| D-র আগেই ঢুকে পড়া                           | Pattern সম্পূর্ণই হয়নি                  | D পূর্ণ না হলে অপেক্ষা           |
+| X ভাঙার পরেও ধরে থাকা                        | Pattern বাতিল, যুক্তি শেষ                | X-এর বাইরে stop, ভাঙলে বের       |
+| প্রেক্ষাপট উপেক্ষা (জোরালো trend-এর বিপরীতে) | নিখুঁত অনুপাত trend আটকায় না            | বড় timeframe-এর দিক দেখুন       |
+| Scanner-এর ফল অন্ধভাবে মানা                  | Loose tolerance-এ অনেক ভুয়া pattern     | নিজে মেপে যাচাই করুন             |
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- Harmonic pattern X-A-B-C-D পাঁচ বিন্দুর কাঠামো, প্রতিটি পা নির্দিষ্ট Fibonacci অনুপাতে মাপা।
+- Gartley, Bat, Butterfly, Crab-এর B ও D-র অনুপাত আলাদা; C সাধারণত A ছাড়ায় না।
+- D-তে entry, X-এর বাইরে stop: সব সংখ্যা আগে থেকে জানা।
+- Tolerance নিয়ে মতভেদ আছে; বাড়ালে pattern বানানো হয়ে যায়।
+- বৈধ pattern দুর্লভ (shared chart-এ নেই); নিখুঁত অনুপাত ঘোরার নিশ্চয়তা নয়। নিশ্চিত লাভ নেই।
+
+</KeyTakeaways>
+
+## কুইজ
+
+1. Harmonic pattern কয়টি বিন্দুতে গঠিত, আর কোনটি entry-র বিন্দু?
+2. Gartley আর Bat-এর B ও D-র অনুপাত কী?
+3. PRZ কী?
+4. Tolerance বাড়ালে কী সমস্যা হয়?
+5. কেন নিখুঁত অনুপাত থাকলেও trade ব্যর্থ হতে পারে?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** পাঁচটি বিন্দু (X, A, B, C, D); entry সাধারণত D-তে।
+
+**২.** Gartley: B = XA-র 0.618, D = XA-র 0.786। Bat: B = 0.382–0.50, D = 0.886।
+
+**৩.** D-র কাছের সেই এলাকা, যেখানে একাধিক অনুপাত একসাথে পড়ে ও দাম ঘুরতে পারে।
+
+**৪.** বৈধ pattern বেড়ে যায় বটে, কিন্তু গুণমান কমে; শেষে pattern "বানানো" হয়ে যায়।
+
+**৫.** বাজার Fibonacci অনুপাত জানে না। অনুপাত মেলা মানে ঘোরার সম্ভাবনা বাড়তে পারে, নিশ্চয়তা নয়; জোরালো trend তা ভেঙে দিতে পারে।
+
+</details>
+
+## পরের ধাপ
+
+- অধ্যায়ের তুলনা: [Trading Methodology: আটটি পদ্ধতি](/bn/learn/16-trading-methodologies/00-overview)।
+- আগের পাঠ: [Elliott Wave](/bn/learn/16-trading-methodologies/07-elliott-wave)।
+- সম্পর্কিত: [Price Action](/bn/learn/16-trading-methodologies/01-price-action), [Backtest](/bn/learn/15-backtesting-journal/01-how-to-backtest)।
+
+### সূত্র
+
+- <ExternalLink href="https://www.investopedia.com/terms/g/gartley.asp">
+    Gartley Pattern (Investopedia)
+  </ExternalLink>
+- <ExternalLink href="https://en.wikipedia.org/wiki/Harmonic_pattern">
+    Harmonic pattern (Wikipedia)
+  </ExternalLink>
+- <ExternalLink href="https://doi.org/10.1111/j.1467-6419.2007.00519.x">
+    Park & Irwin (2007), What Do We Know About the Profitability of Technical
+    Analysis?
+  </ExternalLink>
+
+<Disclaimer>
+  এই লেখাটি শুধুমাত্র শিক্ষামূলক উদ্দেশ্যে। এটি কোনো financial advice নয়। কোনো
+  trading পদ্ধতিই নিশ্চিত লাভ দেয় না। Forex ও Gold trading-এ উল্লেখযোগ্য আর্থিক
+  ঝুঁকি রয়েছে এবং আপনি আপনার বিনিয়োগের পুরোটাই হারাতে পারেন। Real money দিয়ে
+  trade করার আগে demo account-এ যথেষ্ট অনুশীলন করুন।
+</Disclaimer>

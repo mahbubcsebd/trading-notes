@@ -14,9 +14,9 @@
     "elliott",
     "invalidation"
   ],
-  "module": "16-advanced",
+  "module": "16-trading-methodologies",
   "lessonSlugs": [
-    "04-elliott-wave"
+    "07-elliott-wave"
   ],
   "caption": {
     "en": "Same start, but price falls back through the start of wave 1 at 1.0800. Wave 2 may not retrace more than 100% of wave 1, so the count is void and the stop at 1.0795 is hit.",

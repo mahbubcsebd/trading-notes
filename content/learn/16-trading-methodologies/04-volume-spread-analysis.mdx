@@ -1,0 +1,383 @@
+---
+title: "Volume Spread Analysis (VSA): প্রতিটি bar-এর শক্তি-দুর্বলতা — বাংলায় সহজ গাইড"
+description: "VSA কী, spread, close আর volume মিলিয়ে কীভাবে একটি bar-এর শক্তি বা দুর্বলতা পড়া হয়, no demand, upthrust, shakeout, শক্তি-সীমা: XAUUSD chart-এ।"
+level: intermediate
+tags: [vsa, volume-spread-analysis, volume, no-demand, upthrust, methodology]
+instruments: [XAUUSD]
+timeframes: [H1, H4, D1]
+status: done
+sources:
+  - type: other
+    title: "Volume spread analysis (Wikipedia)"
+    url: "https://en.wikipedia.org/wiki/Volume_spread_analysis"
+  - type: blog
+    title: "Wyckoff Method (Investopedia)"
+    url: "https://www.investopedia.com/terms/w/wyckoffmethod.asp"
+  - type: other
+    title: "Park & Irwin (2007), What Do We Know About the Profitability of Technical Analysis? (Journal of Economic Surveys)"
+    url: "https://doi.org/10.1111/j.1467-6419.2007.00519.x"
+updated: 2026-11-07
+---
+
+# Volume Spread Analysis (VSA): প্রতিটি bar-এর শক্তি-দুর্বলতা
+
+Wyckoff পুরো range-এর গল্প পড়েন। VSA সেই গল্পের **একটি একটি বাক্য** পড়ে। প্রশ্ন সহজ: এই একটি bar-এ কতটা প্রচেষ্টা (volume) হলো, আর তার ফল (spread ও close) কেমন? দুটি মিলল, নাকি মিলল না?
+
+## এক নজরে
+
+<MethodCard
+  name="Volume Spread Analysis (VSA)"
+  origin="Tom Williams, Wyckoff-এর ধারণা থেকে"
+  reads="Price + Volume"
+  question="এই bar-এর spread, close আর volume কি শক্তি না দুর্বলতা?"
+  timeframes="H1 থেকে D1"
+  difficulty="intermediate"
+  subjectivity="medium"
+  needsVolume
+/>
+
+## এই লেখা পড়ে আপনি যা পারবেন
+
+- Spread, close আর volume: একটি bar-এর এই তিন উপাদান চিনবেন।
+- Effort বনাম result নীতি দিয়ে একটি bar পড়তে পারবেন।
+- শক্তির সংকেত (stopping volume, shakeout, test) আর দুর্বলতার সংকেত (no demand, upthrust) আলাদা করবেন।
+- কেন একক bar যথেষ্ট নয়, **background** দরকার, বুঝবেন।
+- Forex ও Gold-এ tick volume-এর কারণে VSA-র সীমা জানবেন।
+
+## ইতিহাস ও উৎপত্তি
+
+**Tom Williams** VSA-র নামকরণ ও প্রচারের সাথে সবচেয়ে বেশি জড়িত। তিনি ১৯৯০-এর দশক থেকে বই ও প্রশিক্ষণের মাধ্যমে পদ্ধতিটি ছড়িয়ে দেন। তাঁর পদ্ধতি সরাসরি **Wyckoff-এর ধারণা** থেকে এসেছে, বিশেষ করে effort-result নীতি।
+
+- **Wyckoff** পুরো range ও পর্ব পড়েন; **VSA** প্রতিটি bar-এর স্তরে নামে। তাই অনেকে VSA-কে Wyckoff-এর "bar-স্তরের রূপ" বলেন।
+- **নাম ও সংকেত:** "no demand", "upthrust", "stopping volume" ইত্যাদি নাম মূলত Wyckoff-ধারার শিক্ষকদের ব্যবহৃত। সব শিক্ষক হুবহু একই সংজ্ঞা দেন না।
+- Tom Williams-এর কাজ সাধারণত তাঁর নিজের বই ও কোর্সে পাওয়া যায়। স্বাধীন গবেষণা পরে দেখুন "দুর্বলতা" অংশে।
+
+পূর্বশর্ত: Wyckoff Method (আগের পাঠ)। সেখানকার effort-result ধারণা এখানে মূল ভিত্তি।
+
+## মূল দর্শন
+
+**VSA-র প্রশ্ন: এই bar-এর spread, close আর volume কি শক্তি না দুর্বলতা বলছে?**
+
+বিশ্বাসটা এই: বড় player-দের কাজ volume-এ ছাপ ফেলে। তাই প্রতিটি bar-এ volume আর দামের চলন মিলিয়ে দেখলে বোঝা যায় বড় হাত কোন দিকে।
+
+তুলনা: দোকানে ক্যাশ কাউন্টারে ভিড় (volume), অথচ বিক্রি খুব কম (ছোট spread)। কিছু একটা গোলমাল: লোক আসছে, কিন্তু কিনছে না, বা কেউ ভেতরে বসে সবাইকে ফিরিয়ে দিচ্ছে।
+
+<Callout type="note">
+  VSA একটি **bar-ভিত্তিক ব্যাখ্যা**। এটি "বড় player এটা করছে" বলে না; বলে, "এই
+  bar-এর আচরণ শক্তির মতো/দুর্বলতার মতো।" ব্যাখ্যা অনুমান, প্রমাণ নয়।
+</Callout>
+
+## মূল ধারণাগুলো
+
+### ১. তিন উপাদান: spread, close, volume
+
+- **Spread:** bar-এর high থেকে low-এর দূরত্ব। চওড়া মানে বড় চলন।
+- **Close:** bar-এর বন্ধ হওয়ার জায়গা: high-এর কাছে, মাঝে, না low-এর কাছে।
+- **Volume:** ওই bar-এ কতটা কার্যকলাপ। আগের কয়েকটি bar-এর তুলনায় বেশি, কম, না সাধারণ।
+
+তিনটি আলাদা করে নয়, **একসাথে** পড়তে হয়। চওড়া spread + high-এর কাছে close + বেশি volume = শক্তির মতো। চওড়া spread + low-এর কাছে close + বেশি volume = উল্টো ইঙ্গিত।
+
+### ২. Effort বনাম result
+
+**Volume হলো effort, spread হলো result। দুটি মিললে bar স্বাভাবিক; না মিললে সেটাই সংকেত।**
+
+- বড় volume, ছোট spread: অনেক প্রচেষ্টা, অল্প ফল। কেউ উল্টো দিকে শোষণ করছে।
+- ছোট volume, বড় spread: প্রচেষ্টা ছাড়াই দাম নড়ল। ফাঁপা চলন, টিকবে না।
+
+তুলনা: দুজন মিলে ভারী আলমারি ঠেলছে, সুতো দিয়ে নয়। আলমারি সামান্য নড়লে মানে ওপাশে কেউ ঠেলছে।
+
+<DiagramRow>
+  <CandleDiagram
+    title="Effort ও result মিলেছে"
+    verdict="good"
+    verdictLabel="স্বাভাবিক শক্তি"
+    candles={[
+      { o: 14, h: 15, l: 13.5, c: 14.5, dim: true },
+      { o: 14.5, h: 15.5, l: 14, c: 15, dim: true },
+      { o: 15, h: 20, l: 14.8, c: 19.6, label: "চওড়া up, বেশি volume" },
+      { o: 19.6, h: 21, l: 19, c: 20.5 },
+    ]}
+    caption="বেশি volume-এ চওড়া up bar, close high-এর কাছে। প্রচেষ্টা ও ফল একমত।"
+  />
+  <CandleDiagram
+    title="Effort ও result মেলেনি"
+    verdict="bad"
+    verdictLabel="দুর্বলতার ইঙ্গিত"
+    candles={[
+      { o: 14, h: 15, l: 13.5, c: 14.5, dim: true },
+      { o: 14.5, h: 15.5, l: 14, c: 15, dim: true },
+      { o: 15, h: 15.8, l: 14.6, c: 15.4, label: "ছোট spread, বেশি volume" },
+      { o: 15.4, h: 15.6, l: 14, c: 14.3 },
+    ]}
+    caption="বিশাল volume, অথচ bar ছোট। ওপরে কেউ বিক্রি করে সব শোষণ করছে। পরে দাম নেমেছে।"
+  />
+</DiagramRow>
+
+### ৩. শক্তির সংকেত
+
+কয়েকটি bar-ধরন সাধারণত চাহিদা বা বিক্রির ক্লান্তির ইঙ্গিত দেয়:
+
+| সংকেত           | কেমন দেখায়                                             | সাধারণ ব্যাখ্যা               |
+| :-------------- | :------------------------------------------------------ | :---------------------------- |
+| Stopping volume | Downtrend-এ খুব বড় volume, দাম নামা থামে/close উঠে আসে | বড় ক্রেতারা বিক্রি শোষণ করছে |
+| Shakeout        | নতুন low, খুব বেশি volume, কিন্তু high-এর কাছে close    | দুর্বল হাত বেরিয়ে গেল        |
+| Test            | Shakeout-এর পর সরু bar, সবচেয়ে কম volume               | যোগান শুকিয়েছে               |
+| No supply       | Down bar, সরু spread, কম volume                         | বিক্রেতা আগ্রহী নয়           |
+
+**Shakeout ও Test:** শক্ত একটি জুটি। প্রথমে ভয় দেখিয়ে দুর্বলদের বের করা (high volume), তারপর পরীক্ষা, বিক্রেতা আর আছে কি না (low volume)। এটি Wyckoff-এর spring ও test-এর bar-স্তরের রূপ।
+
+### ৪. দুর্বলতার সংকেত
+
+উল্টো দিকে:
+
+| সংকেত          | কেমন দেখায়                                           | সাধারণ ব্যাখ্যা                |
+| :------------- | :---------------------------------------------------- | :----------------------------- |
+| No demand      | Up bar, সরু spread, আগের দুই bar-এর সমান বা কম volume | ক্রেতারা আগ্রহী নয়, ওঠা ফাঁপা |
+| Upthrust       | নতুন high ছুঁয়ে low-এর কাছে close, বড় volume        | ওপরে ফাঁদ: ক্রেতারা আটকে গেল   |
+| Buying climax  | খুব বড় volume, চওড়া up bar, বড় upper wick          | চাহিদা শেষ প্রান্তে            |
+| Effort to rise | বেশি volume, কিন্তু ছোট up spread                     | ওপরে বিক্রেতারা শোষণ করছে      |
+
+**Upthrust:** সম্পর্কিত ধারণা [liquidity sweep](/bn/learn/03-market-structure/04-liquidity-stop-hunts)। দাম ওপরের stop ছুঁয়ে ফিরে আসে।
+
+### ৫. Background: একক bar যথেষ্ট নয়
+
+**Bar-এর অর্থ নির্ভর করে তার আগে কী ঘটেছে তার ওপর।** একই "ছোট spread, কম volume up bar" শক্ত uptrend-এর বিরতিতে অর্থহীন, কিন্তু আগের কয়েক bar-এ দুর্বলতার লক্ষণ থাকলে no demand।
+
+তুলনা: ক্লাসে একজন ছাত্রের চুপ করে থাকা। পরীক্ষার আগে তা একরকম অর্থ, ছুটির আগের দিন আরেক।
+
+নিয়ম: **আগে background, তারপর signal bar।** Background মানে: কোথায়? (range-এর কিনারা, নতুন high/low), আগের trend কেমন, আর কয়েক bar ধরে volume কেমন।
+
+### ৬. Volume তুলনা: কী "বেশি" আর কী "কম"?
+
+VSA-তে volume সবসময় **তুলনামূলক**: আগের ১০–২০টি bar-এর গড়ের সাথে। সংখ্যা নিজে কিছু বলে না। তাই "বিশাল" মানে সাধারণত গড়ের দেড়-দুই গুণ বা তার বেশি, "কম" মানে অর্ধেক বা কম। এই সীমা কঠোর নিয়ম নয়, মোটামুটি হিসাব।
+
+### ৭. Tick volume-এর সমস্যা
+
+<Callout type="warning">
+  **Forex ও Gold-এ volume-এর সীমা।** Spot Forex ও spot Gold-এর কেন্দ্রীয়
+  exchange নেই। MT4/MT5-এর volume আসলে **tick volume**: broker-এর server-এ দাম
+  কতবার বদলেছে। এটি প্রকৃত লেনদেন নয়। **VSA এই সীমায় সবচেয়ে বেশি আঘাত পায়,**
+  কারণ এর প্রতিটি সংকেত volume-এর সূক্ষ্ম তারতম্যের ওপর নির্ভরশীল। বিকল্প: Gold
+  futures (CME GC)-এর volume। আর বড় পার্থক্য (হঠাৎ দ্বিগুণ বা অর্ধেক) দেখুন,
+  ছোট পার্থক্য নয়।
+</Callout>
+
+## Shared chart-এ পড়া
+
+অধ্যায়ের সেই একই XAUUSD H4 chart, এবার bar ধরে ধরে। গড় spread প্রায় 12 ডলার, গড় volume প্রায় 1165 (কাল্পনিক tick volume)।
+
+<Chart
+  id="meth-vsa-shared"
+  height={520}
+  caption="XAUUSD H4 (শিক্ষামূলক কাল্পনিক ডেটা) — Bar ধরে ধরে: low-এ stopping volume, spring-এর পর কম volume-এর test, শক্তির wide up bar, শেষ ওঠায় no demand, চূড়ায় upthrust। নিচে tick volume (কাল্পনিক)।"
+/>
+
+<Steps>
+
+### ধাপ ১: Stopping volume
+
+Downtrend-এর শেষে একটি bar low **2296** ছুঁয়ে 2306-এ close করে। Volume **3200**, গড়ের প্রায় তিনগুণ। এত বিক্রি, অথচ দাম আর নামল না। বড় ক্রেতা শোষণ করছে: stopping volume।
+
+### ধাপ ২: Spring ও Test
+
+পরে একটি bar **2287**-এ নেমে 2304-এ close করে (volume 1500), নতুন low কিন্তু close উঠে এসেছে: shakeout-এর মতো। দুই bar পরে সরু bar (spread 12), volume মাত্র **450**, গড়ের প্রায় দুই-পঞ্চমাংশ: test। বিক্রেতা প্রায় নেই।
+
+### ধাপ ৩: শক্তির wide up bar
+
+দাম range-এর ছাদ ভেঙে 2346-এ close করে। Spread 17 (গড়ের চেয়ে বেশি), volume **2400**, close high-এর কাছে। Effort আর result একমত: শক্তি।
+
+### ধাপ ৪: No demand
+
+উঁচুতে, 2458–2474-এর এলাকায় কয়েকটি ছোট up bar: spread 8, volume প্রায় **600**, গড়ের অর্ধেক। ওঠা আছে, কিন্তু কেউ কিনছে না। No demand।
+
+### ধাপ ৫: Upthrust
+
+পরের bar সর্বোচ্চ **2487** ছোঁয়, কিন্তু close করে **2467**-এ, প্রায় low-এর কাছে (spread 22, chart-এর সবচেয়ে চওড়া)। Volume **2600**। নতুন high-এ বড় volume আর দুর্বল close: upthrust। এরপর দাম নামে।
+
+</Steps>
+
+<Callout type="tip">
+  ধাপ ৪ আর ৫-এর ক্রমটি দেখুন: আগে কম volume-এ ফাঁপা ওঠা (background তৈরি), তারপর
+  সংকেত bar। একই upthrust-এর মতো bar শক্ত trend-এর মাঝখানে হলে এত অর্থ রাখত না।
+</Callout>
+
+## Trade-এর মূল যুক্তি
+
+VSA-তে সংকেত bar সাধারণত **setup**; entry আসে পরের bar-এর confirmation-এ।
+
+| অংশ        | নিয়ম (সাধারণ রূপ)                                      | Shared chart-এ (কাল্পনিক)          |
+| :--------- | :------------------------------------------------------ | :--------------------------------- |
+| Background | Downtrend/range-এর নিচে, শোষণের লক্ষণ (stopping volume) | Range-এর নিচে 2296                 |
+| Setup      | Shakeout এবং তার পর কম volume-এর test                   | 2287 spring, তারপর volume 450 test |
+| Entry      | Test bar-এর high-এর ওপরে (চাহিদা ফিরছে)                 | প্রায় 2314                        |
+| Stop loss  | Shakeout low-এর নিচে                                    | 2285                               |
+| Target     | পরের level বা stop-এর দূরত্বের গুণ (যেমন 2R)            | 2314 + 58 = 2372                   |
+
+হিসাব: ঝুঁকি 2314 − 2285 = 29, লাভ 2372 − 2314 = 58, অনুপাত **1:2**। এই কাল্পনিক chart-এ দাম পরে 2372 ছাড়িয়েছে।
+
+আরেকটি উদাহরণ, এবার XAUUSD H1 (কাল্পনিক), শুধু shakeout ও test দেখানোর জন্য:
+
+<Chart
+  id="meth-vsa-ex-01"
+  height={440}
+  caption="XAUUSD H1 (শিক্ষামূলক কাল্পনিক ডেটা) — খুব বেশি volume-এ (2600) নতুন low কিন্তু close high-এর কাছে (shakeout); দুই bar পরে সবচেয়ে কম volume-এ (300) সরু down bar (test)। Test-এর ওপরে buy, stop 2305.0, লক্ষ্য প্রায় 2.5R।"
+/>
+
+<Callout type="warning">
+  Stop loss ছাড়া VSA entry নেই। Bar-এর ব্যাখ্যা একটি অনুমান; stop সেই অনুমান
+  ভুল হলে বেরোনোর দরজা। Position size: [Risk per
+  trade](/bn/learn/08-risk-management/01-risk-per-trade)।
+</Callout>
+
+## শক্তি
+
+- **সূক্ষ্ম দৃষ্টি।** একটি bar-এও ঘটনার সূত্র পাওয়া যায়; পুরো range-এর অপেক্ষা করতে হয় না।
+- **Wyckoff-এর পরিপূরক।** Wyckoff গল্প বলে, VSA প্রতিটি বাক্যের অর্থ খোঁজে।
+- **Stop-এর যুক্তি স্পষ্ট।** Shakeout low বা upthrust high: সংকেত ভুল হলে কোথায়, জানা।
+- **Effort-result নীতি সার্বজনীন।** যে কোনো পদ্ধতিতে "volume কি দামের সাথে মিলছে?" প্রশ্ন কাজে লাগে।
+
+## দুর্বলতা ও সীমা
+
+- **Background ছাড়া একক bar দুর্বল।** ঠিক একই আকারের bar শক্তি আর দুর্বলতা দুটোই বোঝাতে পারে, প্রসঙ্গের ওপর নির্ভর করে।
+- **বিচারনির্ভর (subjectivity: medium)।** "বেশি volume" কতটা, "সরু spread" কতটা, "close low-এর কাছে" কতটা: শিক্ষকভেদে সংজ্ঞা আলাদা। মোটামুটি নিয়ম আছে, কিন্তু যান্ত্রিক নয়।
+- **Tick volume-এর ওপর সবচেয়ে বেশি নির্ভর।** Spot Forex ও Gold-এ প্রকৃত volume নেই। Broker বদলালে tick volume-ও বদলায়। যে পদ্ধতির সব সংকেত volume-নির্ভর, তার জন্য এটি সবচেয়ে বড় সমস্যা।
+- **পরে দেখে সাজানো সহজ।** চার্টের পেছনে ফিরে "এটা no demand ছিল" বলা সহজ। Live-এ অনেক bar-ই দ্ব্যর্থক।
+- **বেশি সংকেত, কম নিশ্চয়তা।** প্রতিটি bar-কে ব্যাখ্যা করার চেষ্টা করলে সবসময় একটি "সংকেত" পাওয়া যায়। সব সংকেত গুরুত্বপূর্ণ নয়।
+
+**প্রমাণের অবস্থা:** VSA নিয়ে স্বাধীন, বড় মাপের গবেষণা তেমন পাওয়া যায় না; এর বেশিরভাগ জ্ঞান Tom Williams-এর বই ও practitioner-দের কোর্স থেকে আসে। Technical analysis নিয়ে সাধারণ গবেষণার ফল মিশ্র (Park ও Irwin, 2007)। **কোনো পদ্ধতিই নিশ্চিত লাভ দেয় না।** নিজের backtest-এ যাচাই করুন।
+
+ব্যর্থ উদাহরণ দেখুন। Upthrust ভেবে sell, কিন্তু background ছিল শক্ত uptrend:
+
+<Chart
+  id="meth-vsa-fail-01"
+  height={440}
+  caption="XAUUSD H1 (শিক্ষামূলক কাল্পনিক ডেটা) — শক্ত uptrend-এ upthrust-এর মতো একটি bar; 2368.5-এ sell ব্যর্থ, বাড়তি volume-এ চওড়া up bar ফিরে আসে; stop 2383.5 লাগে (ঝুঁকি 15, ক্ষতি 1R)।"
+/>
+
+শিক্ষা: **একটি bar trend ঘোরায় না।** Upthrust-এর আগে দুর্বলতার লক্ষণ (no demand, কমে আসা volume) ছিল না, তাই সংকেত বিশ্বাসযোগ্য ছিল না। আগে background।
+
+## কার জন্য, কার জন্য নয়
+
+| উপযুক্ত যদি আপনি…                            | উপযুক্ত নয় যদি আপনি…                    |
+| :------------------------------------------- | :--------------------------------------- |
+| Wyckoff আগে বুঝেছেন, এবার সূক্ষ্মে নামতে চান | সম্পূর্ণ নতুন, Price Action এখনো শেখেননি |
+| Futures বা real volume পান                   | শুধু spot Forex/Gold-এর tick volume আছে  |
+| ধীরে, bar ধরে ধরে chart পড়তে ভালোবাসেন      | স্পষ্ট, যান্ত্রিক নিয়ম চান              |
+| H1–D1 timeframe-এ কাজ করেন                   | M1–M5 scalping করেন (volume noise বেশি)  |
+
+## অন্য পদ্ধতির সাথে মেলানো
+
+- **VSA + Wyckoff:** সবচেয়ে স্বাভাবিক। Wyckoff বলে "এখন কোন পর্বে", VSA বলে "এই bar কী বলছে"। দেখুন আগের পাঠ।
+- **VSA + Price Action:** Support/resistance-এ VSA সংকেত বেশি অর্থ রাখে, কারণ background আছে।
+- **VSA + Volume Profile:** কোন দামে বেশি লেনদেন, সেটা জানলে "কম volume-এ ওঠা"-র অর্থ আরও পরিষ্কার। দেখুন পরের পাঠ।
+
+**যা মেশাবেন না:** VSA-র সাথে একগুচ্ছ volume-oscillator। দুটিই একই কাঁচা তথ্য থেকে তৈরি, তাই নিশ্চয়তা বাড়ে না। Volume ও VWAP indicator হিসেবে আলাদাভাবে দেখুন: [Volume ও VWAP](/bn/learn/07-technical-indicators/06-volume-vwap)।
+
+## পরে গভীরে যা শিখবেন
+
+এই পাঠ overview। আলাদা সিরিজ হলে এগুলো থাকতে পারে:
+
+- সম্পূর্ণ bar-ধরন তালিকা (no supply, effort to fall, climactic action ইত্যাদি)
+- Background-এর শ্রেণিবিন্যাস (trend, range, climax)
+- Multi-bar সংকেত (test এবং confirmation-এর ক্রম)
+- Futures volume দিয়ে Gold-এ প্রয়োগ
+
+**Sub-series প্রস্তাব:** হ্যাঁ, পরে। কারণ: bar-ধরনের পূর্ণ তালিকা ও background শ্রেণিবিন্যাস এই পাঠে ঢোকালে ৩,০০০ শব্দ ছাড়াবে। সিদ্ধান্ত আপনার।
+
+## কীভাবে শেখা শুরু করবেন
+
+<Steps>
+
+### ধাপ ১: Volume-সহ chart
+
+XAUUSD H4 খুলুন, volume চালু করুন। জানুন, এটি tick volume।
+
+### ধাপ ২: তিন উপাদান লিখুন
+
+গত ৫০টি bar-এর প্রতিটির জন্য লিখুন: spread (চওড়া/মাঝারি/সরু), close (উপরে/মাঝে/নিচে), volume (বেশি/সাধারণ/কম)।
+
+### ধাপ ৩: অস্বাভাবিকগুলো খুঁজুন
+
+যে bar-এ effort আর result মেলেনি (বড় volume, ছোট spread; বা উল্টো), সেগুলো চিহ্নিত করুন।
+
+### ধাপ ৪: পরে কী হলো, দেখুন
+
+প্রতিটি অস্বাভাবিক bar-এর পরের ৫টি bar লিখুন। সংকেত কতবার কাজ করল? Background কেমন ছিল?
+
+### ধাপ ৫: নিয়ম লিখে backtest
+
+একটি জুটি (যেমন shakeout + test) বেছে নিয়মগুলো লিখুন। অন্তত ৩০টি উদাহরণে [backtest](/bn/learn/15-backtesting-journal/01-how-to-backtest) করুন।
+
+</Steps>
+
+## সাধারণ ভুল
+
+| ভুল                               | কেন সমস্যা                          | সমাধান                                             |
+| :-------------------------------- | :---------------------------------- | :------------------------------------------------- |
+| Background ছাড়া একক bar-এ trade  | একই bar দুই অর্থ রাখে               | আগে context: কোথায়, কী trend, volume কেমন         |
+| Tick volume-কে প্রকৃত volume ভাবা | Broker-ভেদে আলাদা, আনুমানিক         | শুধু বড় পার্থক্য দেখুন; futures volume দেখুন      |
+| প্রতিটি bar-কে সংকেত ধরা          | সবসময় কিছু একটা "পাওয়া" যায়      | শুধু key জায়গায় (range-এর কিনারা, নতুন high/low) |
+| Volume সংখ্যা তুলনা ছাড়া পড়া    | সংখ্যা নিজে কিছু বলে না             | আগের ১০–২০ bar-এর গড়ের সাথে তুলনা                 |
+| Confirmation ছাড়া entry          | একটি bar পরের bar-এ উল্টে যেতে পারে | পরের bar-এর শক্তি দেখে ঢুকুন, stop রাখুন           |
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- VSA প্রতিটি bar-এর spread, close আর volume মিলিয়ে শক্তি বা দুর্বলতা পড়ে।
+- মূল নীতি: effort (volume) আর result (spread) না মিললে সেটাই সংকেত।
+- শক্তি: stopping volume, shakeout, test, no supply। দুর্বলতা: no demand, upthrust, buying climax।
+- একক bar যথেষ্ট নয়; আগে background, তারপর signal bar।
+- Spot Forex/Gold-এ tick volume আনুমানিক; এই পদ্ধতি সবচেয়ে বেশি আঘাত পায়। নিশ্চিত লাভ নেই।
+
+</KeyTakeaways>
+
+## কুইজ
+
+1. VSA-র তিন উপাদান কী?
+2. Effort বনাম result বলতে কী বোঝায়?
+3. Shakeout ও test কেন একটি জুটি?
+4. No demand bar কেমন দেখায়?
+5. কেন একক upthrust bar-এ sell করা ঝুঁকিপূর্ণ?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** Spread (high-low দূরত্ব), close (বন্ধ হওয়ার জায়গা), volume।
+
+**২.** Volume হলো প্রচেষ্টা, spread হলো ফল। দুটি না মিললে (বড় volume ছোট spread, বা উল্টো) সেটা সংকেত।
+
+**৩.** Shakeout (বেশি volume) দুর্বল হাতকে বের করে; test (কম volume) দেখায় আর বিক্রেতা আছে কি না। দুটি একসাথে শক্তির ইঙ্গিত।
+
+**৪.** Up bar, সরু spread, আগের দুই bar-এর সমান বা কম volume। ক্রেতারা আগ্রহী নয়।
+
+**৫.** Background ছাড়া একটি bar trend ঘোরায় না। শক্ত uptrend-এ upthrust-এর মতো bar ব্যর্থ হতে পারে, যেমন ব্যর্থ উদাহরণে দেখা গেল।
+
+</details>
+
+## পরের ধাপ
+
+- অধ্যায়ের তুলনা: [Trading Methodology: আটটি পদ্ধতি](/bn/learn/16-trading-methodologies/00-overview)।
+- আগের পাঠ: [Wyckoff Method](/bn/learn/16-trading-methodologies/03-wyckoff-method)।
+- পরের পাঠ: [Volume Profile](/bn/learn/16-trading-methodologies/05-volume-profile)।
+- সম্পর্কিত: [Candle context](/bn/learn/04-candlesticks/05-candle-context), [Backtest](/bn/learn/15-backtesting-journal/01-how-to-backtest)।
+
+### সূত্র
+
+- <ExternalLink href="https://en.wikipedia.org/wiki/Volume_spread_analysis">
+    Volume spread analysis (Wikipedia)
+  </ExternalLink>
+- <ExternalLink href="https://www.investopedia.com/terms/w/wyckoffmethod.asp">
+    Wyckoff Method (Investopedia)
+  </ExternalLink>
+- <ExternalLink href="https://doi.org/10.1111/j.1467-6419.2007.00519.x">
+    Park & Irwin (2007), What Do We Know About the Profitability of Technical
+    Analysis?
+  </ExternalLink>
+
+<Disclaimer>
+  এই লেখাটি শুধুমাত্র শিক্ষামূলক উদ্দেশ্যে। এটি কোনো financial advice নয়। কোনো
+  trading পদ্ধতিই নিশ্চিত লাভ দেয় না। Forex ও Gold trading-এ উল্লেখযোগ্য আর্থিক
+  ঝুঁকি রয়েছে এবং আপনি আপনার বিনিয়োগের পুরোটাই হারাতে পারেন। Real money দিয়ে
+  trade করার আগে demo account-এ যথেষ্ট অনুশীলন করুন।
+</Disclaimer>

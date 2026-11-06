@@ -1,0 +1,154 @@
+---
+title: "SMC Market Structure: Which Break Is a BOS, Which Is a CHoCH"
+description: "How SMC counts swings, internal and external structure, BOS and CHoCH, and why a wick break does not count: with charts and a failed example."
+level: intermediate
+tags: [smc, ict, bos, choch, market-structure, swing]
+instruments: [XAUUSD]
+timeframes: [H1, H4]
+status: done
+updated: 2026-11-07
+---
+
+# SMC Market Structure: Which Break Is a BOS, Which Is a CHoCH
+
+Two traders look at the same chart. One says "that's a BOS", the other says "that's just a wick". Each is right by their own rule, because the rule was never fixed. This lesson picks one definite rule so your chart gives the same answer every time.
+
+## What you will be able to do
+
+- Mark swing highs and swing lows by one rule.
+- Tell internal from external structure.
+- Say when a BOS or a CHoCH counts, by rule.
+- Understand why a wick break is a different event.
+
+## Why it matters
+
+Every later step (zone, entry) stands on structure. Read structure wrong and the direction is wrong, and everything after inherits the error. The basics of swings and BOS are in the [Market Structure chapter](/en/learn/03-market-structure/03-break-of-structure). Here the SMC rule is fixed.
+
+## Core idea
+
+**A swing high is a candle whose high is higher than the highs of the candles on both sides.** A swing low is the opposite. This is the simplest definition; some teachers want two or three candles on each side.
+
+Analogy: the bends of a mountain road. Which way the bends keep climbing tells you the direction of the road.
+
+### BOS and CHoCH
+
+- **BOS (Break of Structure):** a break of the previous swing in the direction of the trend. In an uptrend, a close above the previous swing high. The trend continues.
+- **CHoCH (Change of Character):** the first break against the trend. In an uptrend, a close below the last higher low. The trend may be changing.
+
+**The rule for this series: a break means the candle body closes beyond the swing.** A wick that only touches is not a break; it is a sweep candidate (next lesson).
+
+### Internal and external structure
+
+- **External:** the larger swings that form the range boundaries.
+- **Internal:** the smaller swings inside that range.
+
+Internal CHoCHs appear far more often and are wrong far more often. External structure sets the direction; internal structure times the entry.
+
+### Protected low and weak high
+
+In an uptrend, the higher low from which the new high (and the BOS) was made is the **protected low**. Breaking it is the CHoCH. Breaking older, smaller lows may leave the trend intact.
+
+## How it looks on a chart
+
+<Chart
+  id="smc-ms-01"
+  height={460}
+  caption="XAUUSD H1 (illustrative synthetic data) — each new high gets a BOS by closing above the previous one. The first close below the Last HL is the CHoCH."
+/>
+
+<Steps>
+
+### Step 1: Mark the swings
+
+Put a small label on every swing high and low (HH, HL, LH, LL).
+
+### Step 2: Decide the trend
+
+HH and HL in a row mean an uptrend.
+
+### Step 3: Look for a BOS
+
+A **close** above the previous swing high is a BOS. Write it down.
+
+### Step 4: Place the protected low
+
+Draw a line at the higher low that caused the BOS.
+
+### Step 5: Wait for the CHoCH
+
+A **close** below that line is the CHoCH. Until then, do not say the trend has changed.
+
+</Steps>
+
+## Failed example: the wick break
+
+<Chart
+  id="smc-ms-02"
+  height={420}
+  caption="XAUUSD H1 (illustrative synthetic data) — one candle's wick goes above the previous high, but it closes below. No BOS; price falls back."
+/>
+
+The trader who counted the wick as a BOS bought. Price came back and fell. With the "close" rule this trap is avoided, though the entry comes a little later. That is the cost.
+
+## Common mistakes
+
+| Mistake                                   | Why it hurts                       | Fix                              |
+| :---------------------------------------- | :--------------------------------- | :------------------------------- |
+| Counting a wick as a BOS                  | Sweeps and breakouts blur together | Require a body close             |
+| Counting every small swing                | Internal noise, many false CHoCHs  | External structure first         |
+| Trading the opposite way on a CHoCH alone | It is a warning, not a guarantee   | Wait for confirmation and a zone |
+| Looking at one timeframe                  | Entering against the larger trend  | Bias on H4/D1, entry on H1       |
+
+<Callout type="tip">
+  Mark the same timeframe by the same rule every day. After a month, check on
+  your own chart how often a CHoCH was really followed by a change of trend.
+</Callout>
+
+## Summary
+
+<KeyTakeaways>
+
+- A BOS continues the trend; a CHoCH is the first warning.
+- The rule: body close beyond the swing, not a wick.
+- External structure gives direction; internal structure gives timing.
+- Only breaking the protected low makes a CHoCH, not before.
+- A CHoCH is not a guaranteed reversal.
+
+</KeyTakeaways>
+
+## Practice task
+
+Open XAUUSD H1 on TradingView and mark all swings in the last 100 candles. Write down every BOS and CHoCH, and keep one wick-break example separately.
+
+## Quiz
+
+1. What is the difference between a BOS and a CHoCH?
+2. Which break counts in this series?
+3. What are external and internal structure used for?
+4. What is the protected low?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** A BOS is a break in the direction of the trend (the trend continues); a CHoCH is the first break against it (the trend may change).
+
+**2.** A candle body close beyond the swing, not just a wick.
+
+**3.** External sets the direction; internal times the entry.
+
+**4.** The higher low that produced the BOS; breaking it makes a CHoCH.
+
+</details>
+
+## Next steps
+
+- Chapter overview: [SMC / ICT in Depth](/en/learn/19-smc-ict/00-overview).
+- Next lesson: [Liquidity and Sweeps](/en/learn/19-smc-ict/02-liquidity-sweeps).
+- Related: [Swing High and Swing Low](/en/learn/03-market-structure/01-swing-high-low).
+
+<Disclaimer>
+  This article is for educational purposes only and is not financial advice. No
+  trading methodology guarantees profit. Forex and gold trading carry
+  significant financial risk, and you can lose all of your capital. Practise on
+  a demo account before trading with real money.
+</Disclaimer>

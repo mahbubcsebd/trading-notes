@@ -1,0 +1,355 @@
+---
+title: "Volume Profile: কোন দামে market একমত হয়েছে — বাংলায় সহজ গাইড"
+description: "Volume Profile ও Market Profile কী, POC, Value Area, VAH-VAL, HVN-LVN, acceptance বনাম failed break, আর Forex-এ volume-এর সীমা: XAUUSD chart-এ।"
+level: intermediate
+tags: [volume-profile, market-profile, poc, value-area, vah, val, methodology]
+instruments: [XAUUSD]
+timeframes: [M5, M15, H1]
+status: done
+sources:
+  - type: blog
+    title: "Volume Profile (Investopedia)"
+    url: "https://www.investopedia.com/terms/v/volume-analysis.asp"
+  - type: other
+    title: "Market profile (Wikipedia)"
+    url: "https://en.wikipedia.org/wiki/Market_profile"
+  - type: other
+    title: "Park & Irwin (2007), What Do We Know About the Profitability of Technical Analysis? (Journal of Economic Surveys)"
+    url: "https://doi.org/10.1111/j.1467-6419.2007.00519.x"
+updated: 2026-11-07
+---
+
+# Volume Profile: কোন দামে market একমত হয়েছে
+
+সাধারণ chart বলে **কখন** দাম কত ছিল। Volume Profile উল্টো প্রশ্ন করে: **কোন দামে** সবচেয়ে বেশি লেনদেন হয়েছে? যেখানে বেশি লেনদেন, সেখানে ক্রেতা-বিক্রেতা একমত হয়েছিল, সেটাই "ন্যায্য দাম"। যেখানে কম, সেখানে দাম ঝটপট পেরিয়ে গেছে।
+
+## এক নজরে
+
+<MethodCard
+  name="Volume Profile"
+  origin="Market Profile: J. Peter Steidlmayer, CBOT, ১৯৮০-এর দশক"
+  reads="Price + Volume"
+  question="কোন দামে market একমত হয়েছে, কোথায় দ্রুত পার হয়েছে?"
+  timeframes="Intraday session, M5 থেকে H1"
+  difficulty="intermediate"
+  subjectivity="low"
+  needsVolume
+/>
+
+## এই লেখা পড়ে আপনি যা পারবেন
+
+- Volume Profile আর সাধারণ volume bar-এর পার্থক্য বলতে পারবেন।
+- **POC, Value Area, VAH, VAL, HVN, LVN** চিনবেন।
+- Market Profile (TPO) আর Volume Profile আলাদা করবেন।
+- **Acceptance** বনাম **failed break** পড়তে পারবেন।
+- Forex ও Gold-এ volume-এর সীমা এবং এই পদ্ধতির সৎ দুর্বলতা জানবেন।
+
+## ইতিহাস ও উৎপত্তি
+
+- **Market Profile:** J. Peter Steidlmayer Chicago Board of Trade (CBOT)-এ কাজ করার সময় এই ধারণা গড়েন। ১৯৮০-এর দশকে এটি বেশ ছড়ায়। মূল ধারণা: দামের বণ্টন অনেকটা ঘণ্টাকৃতি (bell curve) হয়, আর তার কেন্দ্রের কাছে বেশি সময় কাটে।
+- **TPO:** আদি Market Profile সময় গোনে। প্রতি ৩০ মিনিটের জন্য একটি অক্ষর (A, B, C…) আর অক্ষরগুলো দামের স্তরে সাজানো হয়। এই এককের নাম **TPO (Time Price Opportunity)**।
+- **Volume Profile:** পরবর্তী রূপ। অক্ষরের বদলে প্রতিটি দামে **লেনদেনের পরিমাণ** গোনে। আজকের বেশিরভাগ chart software এটিই দেয়।
+
+এই পাঠে "Volume Profile" মূল শব্দ; Market Profile যেখানে আলাদা, সেখানে স্পষ্ট বলা হয়েছে।
+
+## মূল দর্শন
+
+**Volume Profile-এর প্রশ্ন: কোন দামে market একমত হয়েছে, আর কোথায় দ্রুত পার হয়েছে?**
+
+বিশ্বাসটা এই: যেখানে অনেক লেনদেন হয়েছে, সেখানে অনেকে অবস্থান নিয়েছে। সেই দামে ফিরে এলে তারা প্রতিক্রিয়া দেখাবে। যেখানে প্রায় লেনদেন হয়নি, সেখানে ধরে রাখার কেউ নেই, দাম দ্রুত পেরিয়ে যায়।
+
+তুলনা: ঢাকার একটি বাজারে কোন দোকানে সবচেয়ে ভিড়? সেই দোকানের দাম বাজারের "চলতি দাম" হয়ে ওঠে। ফাঁকা গলির দোকানে দাম যা-ই বলুক, কেউ তেমন মাথা ঘামায় না।
+
+<Callout type="note">
+  Volume Profile **দিক** বলে না। এটি বলে কোন দামগুলো গুরুত্বপূর্ণ। ওপরে যাবে না
+  নিচে, সেটা আপনার অন্য বিশ্লেষণ বা price action ঠিক করবে।
+</Callout>
+
+## মূল ধারণাগুলো
+
+### ১. Profile বনাম সাধারণ volume bar
+
+সাধারণ volume bar **সময়ের** অক্ষে বসে: প্রতি candle-এর নিচে একটি। Volume Profile বসে **দামের** অক্ষে, chart-এর পাশে আড়াআড়ি histogram হিসেবে। প্রতিটি দামের স্তরে কতটা লেনদেন হয়েছে, তা বাঁকা আকারে দেখা যায়।
+
+তুলনা: সারা বছরের বৃষ্টি মাসওয়ারি (সাধারণ volume) বনাম কোন এলাকায় মোট কত বৃষ্টি হলো (profile)।
+
+### ২. POC (Point of Control)
+
+**POC হলো সেই দাম, যেখানে সবচেয়ে বেশি লেনদেন হয়েছে।** Profile-এর সবচেয়ে লম্বা bar।
+
+বাজারের "চুম্বক" হিসেবে ধরা হয়: দাম দূরে গেলেও প্রায়ই POC-র দিকে ফিরে আসে। এটি একটি প্রবণতা, নিয়ম নয়।
+
+### ৩. Value Area, VAH ও VAL
+
+**Value Area হলো সেই দামের পরিসর, যার মধ্যে মোট লেনদেনের প্রায় ৭০% হয়েছে।** সাধারণত POC-কে কেন্দ্র করে নেওয়া হয়। এর ওপরের সীমা **VAH (Value Area High)**, নিচের সীমা **VAL (Value Area Low)**।
+
+৭০% একটি প্রচলিত মান (ঘণ্টা-কৃতির এক standard deviation-এর কাছাকাছি)। কিছু software-এ সেটিং বদলানো যায়।
+
+তুলনা: ক্লাসের ৭০% ছাত্র যে নম্বরের মধ্যে পড়ে, সেটাই "স্বাভাবিক পরিসর"। তার বাইরে যারা, তারা ব্যতিক্রম।
+
+### ৪. HVN ও LVN
+
+- **HVN (High Volume Node):** profile-এর উঁচু অংশ। এখানে দাম থামে, ঘুরে বেড়ায়; support/resistance-এর মতো আচরণ।
+- **LVN (Low Volume Node):** profile-এর খাদ। এখানে দাম ঝটপট পেরিয়ে যায়; কেউ ধরে রাখে না।
+
+তুলনা: HVN হলো ধান-ক্ষেতের আল, যেখানে পানি আটকায়। LVN হলো আল ভাঙা জায়গা, যেখান দিয়ে পানি হুড়মুড় করে বেরোয়।
+
+ব্যবহার: HVN-এ দাম থামতে পারে, তাই সেখানে target বা সতর্কতা। LVN-এ দাম দ্রুত চলে, তাই LVN পেরোলে পরের HVN পর্যন্ত target ধরা যায়।
+
+### ৫. Market Profile (TPO) বনাম Volume Profile
+
+| বিষয়         | Market Profile (TPO)              | Volume Profile                      |
+| :------------ | :-------------------------------- | :---------------------------------- |
+| কী গোনে       | সময় (প্রতি দামে কতবার)           | লেনদেনের পরিমাণ                     |
+| Volume দরকার? | না, শুধু দাম ও সময়               | হ্যাঁ                               |
+| Forex-এ       | ব্যবহারযোগ্য, কারণ volume লাগে না | tick volume-এর ওপর নির্ভর, আনুমানিক |
+| প্রকাশ        | অক্ষরের ঘণ্টা-আকৃতি               | আড়াআড়ি histogram                  |
+
+Spot Forex ও Gold-এ প্রকৃত volume না থাকায় TPO-ভিত্তিক Market Profile কখনো কখনো বেশি নির্ভরযোগ্য।
+
+### ৬. Acceptance বনাম rejection
+
+**Acceptance মানে দাম Value Area-র বাইরে গিয়ে সেখানে টিকে থাকা ও নতুন লেনদেন গড়া। Rejection (failed break) মানে বাইরে গিয়ে আবার ভেতরে ফিরে আসা।**
+
+- **Acceptance:** দাম VAH-এর ওপরে উঠে সেখানেই নতুন range গড়ে। বাজার নতুন "ন্যায্য দাম" মেনে নিয়েছে। Value Area ওপরে সরে যায়।
+- **Failed break:** দাম VAH-এর ওপরে উঠল, কিন্তু ফিরে এল। বাজার নতুন দাম মানেনি। ফিরে আসা দাম প্রায়ই Value Area-র উল্টো প্রান্তের দিকে যায়।
+
+কিছু শিক্ষক এর ওপর একটি ঠিক-করা নিয়ম ("৮০% নিয়ম") শেখান। এর নির্ভরযোগ্য, স্বাধীন প্রমাণ এই পাঠে নেই, তাই নিয়ম হিসেবে ধরা হয়নি; নিজের backtest-এ দেখুন।
+
+### ৭. কোন সময়ের profile?
+
+- **Session profile:** প্রতিদিন নতুন, যেমন London বা New York session। Intraday trader-দের প্রধান পছন্দ।
+- **Fixed range profile:** আপনার বেছে নেওয়া একটি পরিসর, যেমন একটি range বা একটি trend leg।
+- **Composite:** অনেক দিনের একত্র profile, বড় HVN খুঁজতে।
+
+আগের session-এর POC, VAH, VAL পরের দিনের জন্য reference level।
+
+<Callout type="warning">
+  **Forex ও Gold-এ volume-এর সীমা।** Spot Forex ও spot Gold-এর কেন্দ্রীয়
+  exchange নেই। MT4/MT5-এর volume আসলে **tick volume**: broker-এর server-এ দাম
+  কতবার বদলেছে। তাই Volume Profile-এর প্রতিটি দামের মান আনুমানিক। বিকল্প: Gold
+  futures (CME GC)-এর volume-ভিত্তিক profile, বা TPO-ভিত্তিক Market Profile (যা
+  volume ছাড়াই চলে)। আলাদা broker-এ আলাদা profile হতে পারে।
+</Callout>
+
+## Shared chart-এ পড়া
+
+অধ্যায়ের সেই একই XAUUSD H4 chart। Range-এর সময়ের (bar 17 থেকে 44) profile ধরা হয়েছে। Volume কাল্পনিক tick volume।
+
+<Chart
+  id="meth-vp-shared"
+  height={520}
+  caption="XAUUSD H4 (শিক্ষামূলক কাল্পনিক ডেটা) — Range-এর profile: POC 2313, Value Area 2302–2330। ওপরের দ্রুত rally একটি low-volume এলাকা (LVN) রেখে গেছে। নিচে tick volume (কাল্পনিক)।"
+/>
+
+<Steps>
+
+### ধাপ ১: Range-এর profile
+
+Bar 17 থেকে 44-এর দাম 2296–2344-এ ঘুরেছে। এই সময়ের profile-এ সবচেয়ে বেশি লেনদেন **2313**-এর কাছে (POC), আর প্রায় ৭০% লেনদেন **2302 থেকে 2330**-এর মধ্যে (VAL ও VAH)। এটি বাজারের "ন্যায্য" এলাকা।
+
+### ধাপ ২: নিচে ভেঙে ভেতরে ফেরা
+
+Range-এর শেষ দিকে একটি candle 2287 পর্যন্ত নেমে VAL (2302)-এর নিচে যায়, কিন্তু 2304-এ close করে, আবার **Value Area-র ভেতরে**। Failed break: বাজার নিচের দাম মানেনি।
+
+### ধাপ ৩: ওপরে acceptance
+
+দাম পরে VAH ও range-এর ছাদ ভেঙে 2346-এ close করে, এবং ফিরে আসে না। ওপরের দামে নতুন লেনদেন গড়ে। এটি acceptance: Value Area ওপরে সরছে।
+
+### ধাপ ৪: LVN: দ্রুত rally-র খাদ
+
+2380 থেকে 2405-এর মধ্যে দাম দ্রুত উঠেছে। নিচের pane-এ এই bar-গুলোর volume বড় দেখাতে পারে, কিন্তু প্রতিটি bar অনেক দামজুড়ে ছড়ানো। তাই প্রতিটি **দামে** লেনদেন কম, আর profile-এ এই এলাকা পাতলা (LVN)। এখানে কেউ ধরে রাখেনি। ভবিষ্যতে দাম এই এলাকায় ফিরলে দ্রুত পেরিয়ে যাওয়ার সম্ভাবনা বেশি।
+
+</Steps>
+
+<Callout type="tip">
+  একই chart-এ দুই রকম break দেখা গেল: নিচে failed break (ভেতরে ফিরল), ওপরে
+  acceptance (টিকল)। পার্থক্য আগে থেকে জানা যায় না, এটাই এই পদ্ধতির মূল শিক্ষা।
+  তাই ফিরে আসার আগে দ্রুত ধরে নেওয়া ঝুঁকিপূর্ণ।
+</Callout>
+
+## Trade-এর মূল যুক্তি
+
+Volume Profile-এর দুটি সাধারণ trade ধরন:
+
+- **Failed break (mean reversion):** Value Area-র বাইরে গিয়ে ফিরে এলে উল্টো প্রান্ত পর্যন্ত যাওয়ার চেষ্টা।
+- **Acceptance (breakout):** বাইরে টিকে গেলে নতুন Value Area-র দিকে ধরা।
+
+Shared chart-এর failed break-এ:
+
+| অংশ       | নিয়ম (সাধারণ রূপ)                         | Shared chart-এ (কাল্পনিক) |
+| :-------- | :----------------------------------------- | :------------------------ |
+| Setup     | VAL-এর নিচে গিয়ে Value Area-র ভেতরে ফেরা  | 2287 থেকে 2304-এ close    |
+| Entry     | ভেতরে ফেরার confirmation-এর পর             | প্রায় 2305               |
+| Stop loss | ব্যর্থ break-এর extreme-এর নিচে            | 2285                      |
+| Target    | Value Area-র উল্টো প্রান্ত (VAH), মাঝে POC | VAH 2330, POC 2313 আংশিক  |
+
+হিসাব: ঝুঁকি 2305 − 2285 = 20, VAH পর্যন্ত লাভ 2330 − 2305 = 25। অনুপাত প্রায় **1:1.25**। সৎ কথা: এই setup-এর অনুপাত বড় নয়; POC পর্যন্ত গেলে লাভ আরও কম (8)। তাই অনেকে এটি বড় ছবির (যেমন Wyckoff-এর spring) সংকেতের সাথে মেলান।
+
+EURUSD H1 উদাহরণ (কাল্পনিক), পরিষ্কার failed break:
+
+<Chart
+  id="vp-failed-break-win-01"
+  height={440}
+  caption="EURUSD H1 (শিক্ষামূলক কাল্পনিক ডেটা) — প্রথম session-এর profile: POC 1.0930, VAH 1.0945, VAL 1.0920। দাম VAH-এর ওপরে উঠে ভেতরে ফিরে এলে 1.0944-এ sell, stop 1.0960, target VAL 1.0920 (ঝুঁকি 16 pip, লাভ 24 pip)।"
+/>
+
+<Callout type="warning">
+  Stop loss ছাড়া Volume Profile entry নেই। "Value Area-য় ফিরবে" একটি অনুমান।
+  Position size: [Risk per
+  trade](/bn/learn/08-risk-management/01-risk-per-trade)।
+</Callout>
+
+## শক্তি
+
+- **লেনদেনের ভিত্তিতে level।** Support-resistance কোথায়, তার একটি পরিমাপযোগ্য উত্তর; চোখের আন্দাজ নয়।
+- **Subjectivity কম।** POC, VAH, VAL software হিসাব করে; দুজন trader একই সংখ্যা পান (একই setting-এ)।
+- **বাতিলের দাম স্পষ্ট।** Failed break-এর extreme, বা acceptance হলে VAH।
+- **Price Action-এর পরিপূরক।** কোন zone বেশি গুরুত্বপূর্ণ, তা বাছাইয়ে সাহায্য করে।
+
+## দুর্বলতা ও সীমা
+
+- **Level দিক বলে না।** POC বা VAH-এ দাম থামবে, না ভাঙবে, profile তা বলে না। দিক আপনাকে অন্য উপায়ে ঠিক করতে হবে।
+- **Subjectivity low, কিন্তু শূন্য নয়।** হিসাব যান্ত্রিক, কিন্তু কোন সময়ের profile, কোন timeframe, ৭০% না অন্য মান: এই বাছাই আপনার। তাই "low"।
+- **Tick volume আনুমানিক।** Spot Forex ও Gold-এ প্রতিটি দামের volume আসল নয়। আলাদা broker-এ আলাদা profile।
+- **পরিবর্তনশীল।** Session শেষ না হওয়া পর্যন্ত profile বদলায়। চলতি session-এর POC মাঝে সরে যেতে পারে।
+- **Acceptance বনাম failed break আগে জানা যায় না।** শুধু পরে বোঝা যায়। Entry তাই ঝুঁকিপূর্ণ।
+
+**প্রমাণের অবস্থা:** Market Profile নিয়ে practitioner-দের বই অনেক, কিন্তু স্বাধীন, বড় মাপের গবেষণা কম। Technical analysis নিয়ে সাধারণ গবেষণার ফল মিশ্র (Park ও Irwin, 2007)। **কোনো পদ্ধতিই নিশ্চিত লাভ দেয় না।** নিজের backtest-এ যাচাই করুন।
+
+ব্যর্থ উদাহরণ দেখুন। একই level, কিন্তু এবার দাম VAH-এর ওপরে টিকে গেল (acceptance), আর fade sell stop খেল:
+
+<Chart
+  id="vp-acceptance-fail-01"
+  height={440}
+  caption="EURUSD H1 (শিক্ষামূলক কাল্পনিক ডেটা) — একই POC 1.0930, VAH 1.0945, VAL 1.0920। দাম এবার VAH-এর ওপরে টিকে নতুন range বানায়। 1.0944-এর fade sell stop 1.0960 ছুঁয়েছে (ক্ষতি 1R)।"
+/>
+
+শিক্ষা: ভেতরে ফেরার জন্য অপেক্ষা না করে VAH-এ আগে থেকে sell করা acceptance-এ ফাঁদ হয়। Confirmation (ভেতরে close) আগে।
+
+## কার জন্য, কার জন্য নয়
+
+| উপযুক্ত যদি আপনি…                              | উপযুক্ত নয় যদি আপনি…                   |
+| :--------------------------------------------- | :-------------------------------------- |
+| Intraday (M5–H1) trade করেন                    | শুধু D1/W1-এ দীর্ঘমেয়াদি দেখেন         |
+| Futures volume বা TPO profile পান              | শুধু spot Forex-এর tick volume আছে      |
+| বস্তুনিষ্ঠ level পছন্দ করেন                    | সরাসরি দিক-সংকেত চান                    |
+| Price Action-এ level বাছাই আরও ধারালো করতে চান | কোনো software-এ profile চালাতে পারেন না |
+
+## অন্য পদ্ধতির সাথে মেলানো
+
+- **Volume Profile + Price Action:** সবচেয়ে সরল। Price Action দিক ও candle দেয়; profile বলে কোন zone আসল।
+- **Volume Profile + Wyckoff:** Wyckoff-এর দীর্ঘ range profile-এ বড় HVN হিসেবে দেখা দেয়। Spring Value Area-র নিচে ভেঙে ফেরার সাথে মেলে।
+- **Volume Profile + VSA:** HVN-এ VSA-র bar-সংকেত বেশি অর্থ রাখে।
+- **Volume Profile + VWAP:** দুটিই "ন্যায্য দাম" নিয়ে। দেখুন [Volume ও VWAP](/bn/learn/07-technical-indicators/06-volume-vwap)।
+
+**যা মেশাবেন না:** একই chart-এ session, weekly আর monthly profile একসাথে, সাথে আরও ১০টি indicator। Level এত বেড়ে যায় যে সবখানে "level" দেখা যায়, আর কোনোটাই গুরুত্বপূর্ণ থাকে না।
+
+## পরে গভীরে যা শিখবেন
+
+এই পাঠ overview। আলাদা সিরিজ হলে এগুলো থাকতে পারে:
+
+- TPO ও Market Profile-এর পূর্ণ আকার (initial balance, single print, profile shape)
+- Profile-এর আকার (D, P, b, B-shape) ও তার অর্থ
+- Composite profile ও multi-day balance
+- Futures volume দিয়ে Gold-এ প্রয়োগ
+
+**Sub-series প্রস্তাব:** হ্যাঁ, পরে। কারণ: TPO ও profile-shape ঢোকালে ৩,০০০ শব্দ ছাড়াবে। সিদ্ধান্ত আপনার।
+
+## কীভাবে শেখা শুরু করবেন
+
+<Steps>
+
+### ধাপ ১: Profile চালু করুন
+
+আপনার platform-এ session volume profile (বা TPO) চালু করুন। জানুন সেটি tick না real volume।
+
+### ধাপ ২: তিনটি সংখ্যা লিখুন
+
+গত ২০ দিনের প্রতিটির জন্য POC, VAH, VAL লিখুন।
+
+### ধাপ ৩: পরের দিনের আচরণ
+
+পরের দিন দাম আগের VAH বা VAL ছুঁয়ে কী করল? Failed break, acceptance, না কিছুই না? ২০টি ঘটনা লিখুন।
+
+### ধাপ ৪: LVN দেখুন
+
+কোন দিন দাম LVN-এ ঢুকে দ্রুত পেরোল, লিখুন। কতবার?
+
+### ধাপ ৫: নিয়ম লিখে backtest
+
+Failed break-এর নিয়ম লিখুন (entry, stop, target)। অন্তত ৫০টি উদাহরণে [backtest](/bn/learn/15-backtesting-journal/01-how-to-backtest) করুন।
+
+</Steps>
+
+## সাধারণ ভুল
+
+| ভুল                                           | কেন সমস্যা                   | সমাধান                                          |
+| :-------------------------------------------- | :--------------------------- | :---------------------------------------------- |
+| POC বা VAH-কে নিশ্চিত support/resistance ভাবা | Level দিক বলে না             | Confirmation candle ও stop রাখুন                |
+| Tick volume-কে প্রকৃত volume ভাবা             | Broker-ভেদে আলাদা profile    | Futures volume বা TPO বিবেচনা করুন              |
+| Acceptance-এ fade করা                         | টিকে গেলে value বদলে যায়    | ভেতরে ফেরার close দেখে ঢুকুন                    |
+| চলতি session-এর profile-কে চূড়ান্ত ধরা       | Profile সারাদিন বদলায়       | আগের session-এর সংখ্যা reference ধরুন           |
+| অনেকগুলো profile একসাথে                       | সবখানে level, সিদ্ধান্তহীনতা | একটি session profile + একটি composite, সর্বোচ্চ |
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- Volume Profile দামের অক্ষে লেনদেন দেখায়: কোথায় market একমত, কোথায় নয়।
+- POC সর্বোচ্চ লেনদেনের দাম; Value Area প্রায় ৭০% লেনদেন (VAH-VAL)।
+- HVN-এ দাম থামে, LVN-এ দ্রুত পেরোয়।
+- Value Area-র বাইরে টিকলে acceptance, ফিরলে failed break; আগে জানা যায় না।
+- Spot Forex/Gold-এ volume tick-ভিত্তিক; level দিক বলে না। নিশ্চিত লাভ নেই।
+
+</KeyTakeaways>
+
+## কুইজ
+
+1. Volume Profile-এর মূল প্রশ্ন কী?
+2. POC আর Value Area কী?
+3. HVN আর LVN-এ দাম কীভাবে আচরণ করে?
+4. Acceptance আর failed break-এর পার্থক্য কী?
+5. Forex-এ Market Profile (TPO) কখনো বেশি নির্ভরযোগ্য কেন?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** কোন দামে market একমত হয়েছে, আর কোথায় দ্রুত পার হয়েছে।
+
+**২.** POC হলো সবচেয়ে বেশি লেনদেনের দাম। Value Area হলো সেই পরিসর, যার মধ্যে মোট লেনদেনের প্রায় ৭০% হয়েছে।
+
+**৩.** HVN-এ দাম থামে ও ঘোরাফেরা করে; LVN-এ ঝটপট পেরিয়ে যায়।
+
+**৪.** Acceptance-এ দাম Value Area-র বাইরে টিকে নতুন লেনদেন গড়ে; failed break-এ বাইরে গিয়ে আবার ভেতরে ফিরে আসে।
+
+**৫.** TPO সময় গোনে, volume নয়। Spot Forex-এ প্রকৃত volume না থাকায় এটি tick volume-এর চেয়ে কম আনুমানিক।
+
+</details>
+
+## পরের ধাপ
+
+- অধ্যায়ের তুলনা: [Trading Methodology: আটটি পদ্ধতি](/bn/learn/16-trading-methodologies/00-overview)।
+- আগের পাঠ: [Volume Spread Analysis](/bn/learn/16-trading-methodologies/04-volume-spread-analysis)।
+- পরের পাঠ: [SMC / ICT](/bn/learn/16-trading-methodologies/06-smc-ict)।
+- সম্পর্কিত: [Fake breakout](/bn/learn/06-trend-chart-patterns/04-fake-breakout), [Wyckoff Method](/bn/learn/16-trading-methodologies/03-wyckoff-method)।
+
+### সূত্র
+
+- <ExternalLink href="https://www.investopedia.com/terms/v/volume-analysis.asp">
+    Volume Profile (Investopedia)
+  </ExternalLink>
+- <ExternalLink href="https://en.wikipedia.org/wiki/Market_profile">
+    Market profile (Wikipedia)
+  </ExternalLink>
+- <ExternalLink href="https://doi.org/10.1111/j.1467-6419.2007.00519.x">
+    Park & Irwin (2007), What Do We Know About the Profitability of Technical
+    Analysis?
+  </ExternalLink>
+
+<Disclaimer>
+  এই লেখাটি শুধুমাত্র শিক্ষামূলক উদ্দেশ্যে। এটি কোনো financial advice নয়। কোনো
+  trading পদ্ধতিই নিশ্চিত লাভ দেয় না। Forex ও Gold trading-এ উল্লেখযোগ্য আর্থিক
+  ঝুঁকি রয়েছে এবং আপনি আপনার বিনিয়োগের পুরোটাই হারাতে পারেন। Real money দিয়ে
+  trade করার আগে demo account-এ যথেষ্ট অনুশীলন করুন।
+</Disclaimer>

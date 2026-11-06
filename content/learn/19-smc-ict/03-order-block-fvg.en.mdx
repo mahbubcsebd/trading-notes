@@ -1,0 +1,160 @@
+---
+title: "Order Block and FVG: Which Zone Is Relevant, Which Is Just a Gap"
+description: "What order blocks, breakers and Fair Value Gaps are, which zones to keep and which to skip, and why an FVG without context fails: with charts and a failed example."
+level: advanced
+tags: [smc, ict, order-block, fvg, imbalance, breaker]
+instruments: [XAUUSD]
+timeframes: [H1, H4]
+status: done
+updated: 2026-11-07
+---
+
+# Order Block and FVG: Which Zone Is Relevant, Which Is Just a Gap
+
+Open a chart and you see dozens of gaps and candles, all supposedly "OBs". Entering on every one does not add up. This lesson shows which zones have a reason behind them and which are just a gap on the chart.
+
+## What you will be able to do
+
+- Define an order block and an FVG.
+- Apply a filter to pick the relevant zone.
+- Understand what a breaker is.
+- Set the stop and the invalidation of a zone.
+
+## Why it matters
+
+The zone is where you enter, and your stop depends on it. Pick the wrong zone and the stop is small but often hit. The general idea of supply and demand is in the [Supply & Demand lesson](/en/learn/05-support-resistance/03-supply-demand); here are the two specific SMC forms.
+
+## Core idea
+
+### Order block (OB)
+
+**A bullish OB is the last bearish candle before a strong move up.** A bearish OB is the opposite. The idea: large orders built up in that candle, so price may react there when it returns. That is a chance of a reaction, not a guarantee.
+
+Analogy: the last low embankment before a flood. The water overflowed from exactly there.
+
+### Fair Value Gap (FVG)
+
+**An FVG is a three-candle pattern where there is a gap between the high of the first candle and the low of the third.** The middle candle moved so fast that both sides did not trade in that area. It is also called an imbalance. ICT teaching gives extra weight to the 50% level of the gap (consequent encroachment); that is a teacher-specific choice.
+
+### Breaker
+
+**A breaker is a failed OB.** If price closes below a bullish OB, the zone may come back later as resistance. It is a form of role reversal.
+
+### A filter for relevant zones
+
+An OB/FVG is worth considering when:
+
+1. **The move broke structure** (BOS or CHoCH, lesson 1).
+2. **Liquidity was taken first** (a sweep, lesson 2).
+3. **The zone is in the direction of the higher-timeframe bias.**
+4. **The zone is untouched**, meaning price has not returned to it yet.
+
+If most of the four are missing, the zone is just a gap.
+
+## How it looks on a chart
+
+<Chart
+  id="smc-ob-01"
+  height={460}
+  caption="XAUUSD H1 (illustrative synthetic data) — the last down candle before the impulse (OB) and the gap the impulse leaves (FVG). The impulse closes above the previous high (BOS). Price returns to the FVG, buy, stop below the OB low."
+/>
+
+<Steps>
+
+### Step 1: Find the impulse
+
+A strong move that broke the previous swing high.
+
+### Step 2: The candle it started from
+
+The last opposite candle: draw the OB zone.
+
+### Step 3: Draw the FVG
+
+The three-candle gap in the impulse.
+
+### Step 4: Wait for price to return
+
+When it returns to the zone, watch the reaction. No entry before it returns.
+
+### Step 5: Place the stop
+
+Below the OB low. If the zone breaks, the idea is wrong.
+
+</Steps>
+
+Here the entry is inside the FVG and the stop below the OB. The stop is not small: taking the full zone range raises the risk, and that must be reflected in the lot size.
+
+## Failed example: an FVG without context
+
+<Chart
+  id="smc-fvg-no-context-fail-01"
+  height={440}
+  caption="Illustrative synthetic data — there is an FVG, but no earlier sweep and structure has not broken. The entry in the FVG fails."
+/>
+
+There was a gap, so there was an entry. But a gap alone is no reason. With no sweep and no break of structure, it was just a gap. Without filters 1 and 2, skip the FVG.
+
+## Common mistakes
+
+| Mistake                              | Why it hurts                   | Fix                    |
+| :----------------------------------- | :----------------------------- | :--------------------- |
+| Entering on every gap                | Zone without a reason          | The four filters       |
+| Reusing a zone price already touched | The reaction chance is used up | Untouched zones        |
+| Stop too tight on the OB             | Hit by a wick                  | Take the full OB range |
+| Zone against the bias                | Against the flow               | HTF bias first         |
+
+<Callout type="note">
+  The definition of an OB varies by teacher: some use the full candle, some only
+  the body, some the last two candles. This series uses the full candle range.
+  Write your rule down first and do not change it afterwards.
+</Callout>
+
+## Summary
+
+<KeyTakeaways>
+
+- OB = last opposite candle before a big move; FVG = three-candle gap.
+- Breaker = a failed OB, with the role reversed.
+- Four filters: structure broke, liquidity taken, with the bias, untouched zone.
+- A zone with no reason behind it is just a gap.
+- The stop goes beyond the zone; if the idea breaks, get out.
+
+</KeyTakeaways>
+
+## Practice task
+
+Mark ten FVGs on XAUUSD H1. Apply the four filters to each. How many pass all four? Write down what price did when it returned to those.
+
+## Quiz
+
+1. What is a bullish OB?
+2. How does an FVG form?
+3. What is a breaker?
+4. Which four filters help pick a zone?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** The last bearish candle before a strong move up.
+
+**2.** In a three-candle pattern there is a gap between the first candle's high and the third candle's low; the middle candle moves very fast.
+
+**3.** A failed OB that broke and later returns in the opposite role (resistance/support).
+
+**4.** Structure broke, liquidity taken first, with the bias, untouched zone.
+
+</details>
+
+## Next steps
+
+- Chapter overview: [SMC / ICT in Depth](/en/learn/19-smc-ict/00-overview).
+- Previous lesson: [Liquidity and Sweeps](/en/learn/19-smc-ict/02-liquidity-sweeps).
+- Next lesson: [Premium, Discount and OTE](/en/learn/19-smc-ict/04-premium-discount).
+
+<Disclaimer>
+  This article is for educational purposes only and is not financial advice. No
+  trading methodology guarantees profit. Forex and gold trading carry
+  significant financial risk, and you can lose all of your capital. Practise on
+  a demo account before trading with real money.
+</Disclaimer>

@@ -16,6 +16,7 @@ import {
   ChartPlaceholder,
 } from "@/components/mdx/ArticleBlocks";
 import { CandleDiagram, DiagramRow } from "@/components/mdx/CandleDiagram";
+import { MethodCard } from "@/components/mdx/MethodCard";
 
 /** @type {Record<string, React.ComponentType<any>>} */
 const components = {
@@ -34,6 +35,7 @@ const components = {
   ChartPlaceholder,
   CandleDiagram,
   DiagramRow,
+  MethodCard,
   // Placeholder for Phase 2
   ChartInline: Chart,
   TVWidget: ({ symbol, interval }) => (

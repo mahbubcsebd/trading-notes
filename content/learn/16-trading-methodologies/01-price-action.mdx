@@ -1,0 +1,463 @@
+---
+title: "Price Action: দাম আর candle দিয়ে market পড়া — বাংলায় সহজ গাইড"
+description: "Price Action কী, কীভাবে structure, support-resistance আর candle-এর আচরণ দিয়ে chart পড়ে, শক্তি-দুর্বলতা আর শেখা শুরুর উপায়: XAUUSD chart-এ।"
+level: beginner
+tags:
+  [
+    price-action,
+    market-structure,
+    support-resistance,
+    candlestick,
+    breakout,
+    methodology,
+  ]
+instruments: [XAUUSD]
+timeframes: [H4, H1, D1]
+status: done
+sources:
+  - type: other
+    title: "Price action trading (Wikipedia)"
+    url: "https://en.wikipedia.org/wiki/Price_action_trading"
+  - type: other
+    title: "Dow theory (Wikipedia)"
+    url: "https://en.wikipedia.org/wiki/Dow_theory"
+  - type: other
+    title: "Candlestick chart (Wikipedia)"
+    url: "https://en.wikipedia.org/wiki/Candlestick_chart"
+  - type: pdf
+    title: "Lo, Mamaysky & Wang (2000), Foundations of Technical Analysis (NBER Working Paper 7613)"
+    url: "https://www.nber.org/papers/w7613"
+  - type: other
+    title: "Park & Irwin (2007), What Do We Know About the Profitability of Technical Analysis? (Journal of Economic Surveys)"
+    url: "https://doi.org/10.1111/j.1467-6419.2007.00519.x"
+updated: 2026-11-07
+---
+
+# Price Action: দাম আর candle দিয়ে market পড়া
+
+Chart থেকে সব indicator মুছে ফেলুন। থাকল শুধু candle। অনেক trader বলবেন, "এখন chart আরও পরিষ্কার।" কারণ প্রতিটি indicator শেষ পর্যন্ত দাম থেকেই তৈরি। **Price Action সরাসরি সেই উৎসটা পড়ে।**
+
+## এক নজরে
+
+<MethodCard
+  name="Price Action"
+  origin="একক প্রতিষ্ঠাতা নেই; Dow Theory ও ক্লাসিক chart reading থেকে"
+  reads="Price"
+  question="দাম কোন level-এ কী আচরণ করছে, structure কোন দিকে?"
+  timeframes="সব timeframe (M15 থেকে D1)"
+  difficulty="beginner"
+  subjectivity="medium"
+/>
+
+## এই লেখা পড়ে আপনি যা পারবেন
+
+- Price Action-এর মূল প্রশ্ন এক লাইনে বলতে পারবেন।
+- **Structure, level আর candle**: এই তিন স্তরে chart পড়ার ক্রম বুঝবেন।
+- Breakout, false break আর retest আলাদা করতে পারবেন।
+- একটি Price Action trade-এর entry, stop loss ও target কীভাবে আসে, বুঝবেন।
+- এই পদ্ধতির সৎ সীমা জানবেন: কোথায় এটি বিচারনির্ভর।
+
+## ইতিহাস ও উৎপত্তি
+
+Price Action-এর **কোনো একক প্রতিষ্ঠাতা নেই।** এটি একটি বড় ঐতিহ্যের নাম, কোনো একজনের আবিষ্কার নয়।
+
+- **Dow Theory:** Charles H. Dow উনিশ শতকের শেষে ও বিশ শতকের শুরুতে Wall Street Journal-এ market নিয়ে লিখতেন। Trend-কে higher high/higher low দিয়ে দেখার ধারণা সেখান থেকে এসেছে বলে ধরা হয়।
+- **Japanese candlestick:** জাপানের চালের বাজারে candle chart-এর ব্যবহার পুরোনো। পশ্চিমে এটি জনপ্রিয় হয় Steve Nison-এর ১৯৯১ সালের বইয়ের পর।
+- **আধুনিক নাম:** "Price action trading" নামটি পরে জনপ্রিয় হয়, যখন trader-রা indicator ছাড়া শুধু bar ও candle পড়ার পদ্ধতি শেখাতে শুরু করেন।
+
+তাই আজকের Price Action বলতে সাধারণত বোঝায়: **market structure + support/resistance + candle-এর আচরণ।** বিভিন্ন শিক্ষক এর বিভিন্ন রূপ শেখান। এই পাঠ সেই সাধারণ অংশটুকু ধরে।
+
+## মূল দর্শন
+
+**Price Action-এর প্রশ্ন: দাম কোন level-এ কী আচরণ করছে, আর structure কোন দিকে?**
+
+এর পেছনে একটি সরল বিশ্বাস। সব খবর, সব অর্ডার, সব আবেগ শেষ পর্যন্ত দামে এসে জমা হয়। তাই দামকে সরাসরি পড়লে আলাদা সূত্রের দরকার কম।
+
+একটি তুলনা। একজন অভিজ্ঞ মাছ বিক্রেতা আড়তে দাঁড়িয়ে দেখেন, কোন দামে ক্রেতা হাত গুটিয়ে নিচ্ছেন আর কোন দামে ভিড় জমছে। তিনি কোনো হিসাবের খাতা খোলেন না। দাম আর মানুষের প্রতিক্রিয়া দেখেই বোঝেন। Price Action trader chart-এ ঠিক এটাই করেন।
+
+<Callout type="note">
+  Price Action ভবিষ্যৎ বলে না। এটি বলে, এই মুহূর্তে কোন পক্ষ এগিয়ে আছে, আর কোন
+  দামে সেই ধারণা ভুল প্রমাণ হবে।
+</Callout>
+
+## মূল ধারণাগুলো
+
+এই পাঠ ছয়টি ধারণা ধরে। প্রতিটির বিস্তারিত পাঠ আগের অধ্যায়ে আছে; এখানে শুধু methodology-র চোখে কীভাবে জোড়া লাগে, সেটা।
+
+### ১. Market structure
+
+**Structure হলো swing high ও swing low-এর ক্রম।** Higher high + higher low মানে uptrend। Lower high + lower low মানে downtrend। দুটোই না হলে range।
+
+তুলনা: সিঁড়ি দিয়ে ওঠার সময় প্রতিটি ধাপ আগেরটার চেয়ে উঁচু। একটি ধাপ নিচু হলেই বুঝবেন, ওঠা থেমেছে।
+
+বিস্তারিত: [Swing high ও swing low](/bn/learn/03-market-structure/01-swing-high-low) এবং [Trend ও range](/bn/learn/03-market-structure/02-trend-range-hhhl)।
+
+<CandleDiagram
+  title="Uptrend structure"
+  candles={[
+    { o: 10, h: 14, l: 9, c: 13 },
+    { o: 13, h: 18, l: 12, c: 17, note: "HH" },
+    { o: 17, h: 17.5, l: 13, c: 14 },
+    { o: 14, h: 15, l: 12.5, c: 14.5, label: "HL" },
+    { o: 14.5, h: 21, l: 14, c: 20, note: "HH" },
+    { o: 20, h: 20.5, l: 16, c: 16.5, label: "HL" },
+    { o: 16.5, h: 24, l: 16, c: 23, note: "HH" },
+  ]}
+  caption="প্রতিটি high আগেরটার চেয়ে উঁচু (HH), প্রতিটি low-ও (HL)। Structure ভাঙে যখন একটি HL নিচে ভেঙে যায়।"
+/>
+
+### ২. Support ও resistance zone
+
+**Support হলো যে দামের এলাকায় আগে কেনার চাপ দাম থামিয়েছে; resistance তার উল্টো।** এগুলো সরু রেখা নয়, এলাকা (zone)।
+
+তুলনা: নদীর পাড়ে বাঁধ। পানি বারবার এক জায়গায় এসে থামে। বাঁধ ভাঙলে সেই জায়গাটাই উল্টো দিক থেকে নতুন বাধা হয়।
+
+এই "উল্টো ভূমিকা"কে বলে **role reversal**: ভাঙা resistance পরে support হতে পারে। বিস্তারিত: [Level বনাম zone](/bn/learn/05-support-resistance/01-levels-vs-zones), [Role reversal](/bn/learn/05-support-resistance/02-role-reversal)।
+
+<CandleDiagram
+  title="Role reversal"
+  candles={[
+    { o: 10, h: 15, l: 9.5, c: 14, dim: true },
+    { o: 14, h: 15.2, l: 12, c: 12.5, dim: true },
+    { o: 12.5, h: 15.1, l: 12, c: 14.5, dim: true },
+    { o: 14.5, h: 19, l: 14, c: 18.5, note: "Breakout" },
+    { o: 18.5, h: 19, l: 15.2, c: 15.8, label: "Retest" },
+    { o: 15.8, h: 21, l: 15.5, c: 20.5 },
+  ]}
+  levels={[
+    { price: 15, label: "আগে resistance, এখন support", tone: "support" },
+  ]}
+  caption="15-এর এলাকা দুবার দাম আটকেছে। ভাঙার পর দাম ফিরে এসে সেখানেই থেমেছে: পুরোনো ছাদ এখন মেঝে।"
+/>
+
+### ৩. Level-এ candle-এর আচরণ
+
+**Candle বলে, একটি level-এ এসে কোন পক্ষ জিতল।** লম্বা wick মানে দাম সেখানে গিয়ে প্রত্যাখ্যাত হয়েছে। বড় body ও high-এর কাছে close মানে buyer-রা শক্ত।
+
+তুলনা: দরজায় টোকা দেওয়া আর দরজা ভেঙে ঢোকা। Wick হলো টোকা দিয়ে ফিরে আসা; শক্ত close হলো ঢুকে পড়া।
+
+জরুরি নিয়ম: **একই candle ভুল জায়গায় অর্থহীন।** একটি hammer chart-এর মাঝখানে কিছু বলে না; support-এর ওপর বললে তবে কথা। বিস্তারিত: [Candle context](/bn/learn/04-candlesticks/05-candle-context)।
+
+<DiagramRow>
+  <CandleDiagram
+    title="Level-এ"
+    verdict="good"
+    verdictLabel="অর্থবহ"
+    candles={[
+      { o: 20, h: 20.5, l: 16, c: 16.5, dim: true },
+      { o: 16.5, h: 17, l: 13.5, c: 14, dim: true },
+      { o: 14, h: 15, l: 10.5, c: 14.6, label: "Rejection wick" },
+      { o: 14.6, h: 17.5, l: 14.2, c: 17.2 },
+    ]}
+    levels={[{ price: 11.5, label: "Support zone", tone: "support" }]}
+    caption="Support-এ লম্বা নিচের wick, তারপর শক্ত bullish candle। Level ও candle একসাথে কথা বলছে।"
+  />
+  <CandleDiagram
+    title="মাঝপথে"
+    verdict="bad"
+    verdictLabel="দুর্বল"
+    candles={[
+      { o: 14, h: 15, l: 13.5, c: 14.6, dim: true },
+      { o: 14.6, h: 15.2, l: 14, c: 14.3, dim: true },
+      { o: 14.3, h: 14.8, l: 12.3, c: 14.5, label: "একই wick" },
+      { o: 14.5, h: 15, l: 13.6, c: 13.9 },
+    ]}
+    caption="একই আকারের wick, কিন্তু কোনো level নেই। এটা শুধু শব্দ (noise), সংকেত নয়।"
+  />
+</DiagramRow>
+
+### ৪. Breakout বনাম false break
+
+**Breakout মানে দাম একটি zone পেরিয়ে সেখানে টিকে থাকা। False break মানে পেরিয়ে আবার ভেতরে ফিরে আসা।** দুটোর শুরু দেখতে একই; পার্থক্য বোঝা যায় close আর পরের কয়েকটি candle-এ।
+
+তুলনা: কেউ দরজা পেরিয়ে ঘরে ঢুকে বসে পড়লেন (breakout)। আরেকজন উঁকি দিয়ে ফিরে গেলেন (false break)।
+
+False break প্রায়ই ঘটে কারণ zone-এর ঠিক বাইরে অনেকের stop জমে থাকে। দাম সেগুলো ছুঁয়ে ফিরে আসে। বিস্তারিত: [Range breakout](/bn/learn/06-trend-chart-patterns/03-range-breakout), [Fake breakout](/bn/learn/06-trend-chart-patterns/04-fake-breakout)।
+
+<DiagramRow>
+  <CandleDiagram
+    title="Breakout"
+    verdict="good"
+    verdictLabel="টিকেছে"
+    candles={[
+      { o: 14, h: 15, l: 12, c: 14.5, dim: true },
+      { o: 14.5, h: 18.5, l: 14.3, c: 18.2, note: "বাইরে close" },
+      { o: 18.2, h: 19.5, l: 16.5, c: 19 },
+      { o: 19, h: 21, l: 18.6, c: 20.6 },
+    ]}
+    levels={[{ price: 15.5, label: "Range top", tone: "resistance" }]}
+    caption="Range-এর বাইরে body দিয়ে close, পরের candle-গুলো বাইরেই থেকেছে।"
+  />
+  <CandleDiagram
+    title="False break"
+    verdict="bad"
+    verdictLabel="ফিরে এসেছে"
+    candles={[
+      { o: 14, h: 15, l: 12, c: 14.5, dim: true },
+      { o: 14.5, h: 17.5, l: 14.3, c: 15, note: "শুধু wick" },
+      { o: 15, h: 15.3, l: 12.8, c: 13.2 },
+      { o: 13.2, h: 13.8, l: 11.5, c: 11.8 },
+    ]}
+    levels={[{ price: 15.5, label: "Range top", tone: "resistance" }]}
+    caption="Wick zone-এর বাইরে গেছে, কিন্তু close ভেতরে। তারপর দাম range-এর ভেতরে নেমে গেছে।"
+  />
+</DiagramRow>
+
+### ৫. Pullback ও retest
+
+**Pullback হলো trend-এর মধ্যে বিপরীত দিকে ছোট বিরতি। Retest হলো ভাঙা level-এ দামের ফিরে আসা।** Price Action trader প্রায়ই breakout-এর মুহূর্তে না ঢুকে এই ফিরে আসার জন্য অপেক্ষা করেন।
+
+তুলনা: চলন্ত বাসে লাফিয়ে না উঠে স্টপেজে থামলে ওঠা। একটু দেরি হয়, কিন্তু ঝুঁকি কম।
+
+কারণ সহজ: retest-এ entry নিলে stop রাখা যায় level-এর ঠিক ওপারে, তাই ঝুঁকি ছোট হয়। বিস্তারিত: [Breakout, retest ও pullback entry](/bn/learn/09-price-action-entries-strategies/01-breakout-retest-pullback-entry)।
+
+### ৬. Context ও multi-timeframe
+
+**একই setup বড় timeframe-এর দিকের সাথে মিললে শক্ত, উল্টো হলে দুর্বল।** H4-এ uptrend থাকলে H1-এর buy setup বেশি যুক্তিসঙ্গত।
+
+তুলনা: নদীতে স্রোতের দিকে নৌকা বাওয়া আর স্রোতের বিপরীতে বাওয়া। দুটোই সম্ভব, কিন্তু একটায় পরিশ্রম কম।
+
+বিস্তারিত: [Multi-timeframe analysis](/bn/learn/03-market-structure/05-multi-timeframe-analysis)।
+
+| স্তর      | প্রশ্ন                 | উদাহরণ উত্তর                              |
+| :-------- | :--------------------- | :---------------------------------------- |
+| Structure | দিক কোন দিকে?          | Lower high-এর সারি থেমে range             |
+| Level     | কোন দামে লড়াই হচ্ছে?  | Range top ও bottom                        |
+| Candle    | Level-এ কোন পক্ষ জিতল? | নিচে wick দিয়ে ফিরে আসা, ওপরে শক্ত close |
+| Trigger   | কোন ঘটনায় ঢুকব?       | Retest-এর পর bullish close                |
+| ভুল কখন   | কোন দামে ধারণা বাতিল?  | Retest-এর low-এর নিচে                     |
+
+এই ক্রমই Price Action-এর মেরুদণ্ড: **আগে structure, তারপর level, শেষে candle।**
+
+## Shared chart-এ পড়া
+
+এবার অধ্যায়ের সেই একই XAUUSD H4 chart। Price Action-এর চোখে ধাপে ধাপে পড়ি।
+
+<Chart
+  id="meth-pa-shared"
+  height={480}
+  caption="XAUUSD H4 (শিক্ষামূলক কাল্পনিক ডেটা) — lower high-এর সারি range-এ থামে; support-এর নিচে false break ও ভেতরে close, তারপর range top-এর breakout ও retest। শেষে নতুন high-এ লম্বা rejection wick।"
+/>
+
+<Steps>
+
+### ধাপ ১: Structure
+
+শুরুতে দাম 2403 থেকে নামছে, প্রতিটি high আগেরটার চেয়ে নিচু (লাল dashed রেখা)। এটা downtrend। তারপর lower high আর আসে না; দাম পাশাপাশি চলতে থাকে।
+
+### ধাপ ২: Range চিহ্নিত করা
+
+প্রায় **2296 থেকে 2344**-এর মধ্যে দাম বারবার ওপর-নিচ করছে (ধূসর zone)। Trend থেমে range। Price Action এখানে বলে: "দিক এখনো ঠিক হয়নি, দুই প্রান্তে নজর রাখো।"
+
+### ধাপ ৩: False break
+
+Range-এর শেষ দিকে একটি candle নিচে **2287** পর্যন্ত নামে, কিন্তু close করে **2304**-এ, range-এর ভেতরে। নিচের support-এর নিচে জমা stop ছুঁয়ে দাম ফিরে এসেছে। এটা bearish breakout নয়; বরং seller-দের দুর্বলতার ইঙ্গিত।
+
+### ধাপ ৪: Breakout
+
+কয়েকটি candle পরে দাম range top 2344 পেরিয়ে **2346**-এ close করে। পরের candle-গুলোও বাইরে থাকে। এটা আসল breakout-এর প্রথম শর্ত।
+
+### ধাপ ৫: Retest
+
+দাম 2365 পর্যন্ত উঠে আবার নামে। একটি candle **2336** পর্যন্ত wick দিয়ে পুরোনো range top-এর এলাকা ছোঁয়। তারপরের candle bullish close করে **2347**-এ। পুরোনো ছাদ এখন মেঝে।
+
+### ধাপ ৬: শেষের rejection
+
+দাম ধাপে ধাপে 2480-এর এলাকায় ওঠে। সেখানে একটি candle **2487** ছুঁয়ে **2467**-এ close করে: লম্বা ওপরের wick। এরপর দাম নিচে নামতে থাকে। Price Action-এর চোখে: নতুন high-এ buyer-রা টিকতে পারেনি।
+
+</Steps>
+
+<Callout type="tip">
+  লক্ষ করুন, কোনো indicator ছাড়াই পুরো গল্পটা পড়া গেল: downtrend → range →
+  false break → breakout → retest → rally → rejection। Price Action-এর শক্তি
+  এটাই।
+</Callout>
+
+## Trade-এর মূল যুক্তি
+
+Price Action trade সাধারণত এই চার প্রশ্নের উত্তর দেয়:
+
+| অংশ       | নিয়ম (সাধারণ রূপ)                             | Shared chart-এ (কাল্পনিক)             |
+| :-------- | :--------------------------------------------- | :------------------------------------ |
+| Setup     | Structure ও level মিলছে কি?                    | Range breakout, তারপর retest          |
+| Entry     | Level-এ confirmation candle-এর close           | Retest-এর পর bullish close, 2347      |
+| Stop loss | ধারণা যে দামে ভুল প্রমাণ হয়, তার ঠিক ওপারে    | Retest low 2336-এর নিচে, 2333         |
+| Target    | পরের level, বা range-এর উচ্চতা (measured move) | 2344 + 48 = 2392 (range-এর উচ্চতা 48) |
+
+হিসাব: ঝুঁকি 2347 − 2333 = 14 ডলার, সম্ভাব্য লাভ 2392 − 2347 = 45 ডলার। Risk-reward প্রায় **1:3**। এই কাল্পনিক chart-এ কয়েক candle পরেই দাম 2392 ছাড়িয়েছে।
+
+একই যুক্তি অন্য market-এও খাটে। নিচের উদাহরণটি EURUSD H1 (কাল্পনিক), XAUUSD নয়:
+
+<Chart
+  id="breakout-retest-win-01"
+  height={420}
+  caption="EURUSD H1 (শিক্ষামূলক কাল্পনিক ডেটা) — 1.0900 ভেঙে দাম ফিরে এসে retest করে ও টিকে থাকে। Retest-এ buy, stop 1.0875, target 1.0995 (প্রায় 1:3)।"
+/>
+
+<Callout type="warning">
+  Stop loss ছাড়া কোনো Price Action entry নেই। "Level ধরে রাখবে" এই বিশ্বাস একটি
+  অনুমান মাত্র। Stop হলো সেই অনুমান ভুল হলে বেরিয়ে আসার আগে থেকে ঠিক করা দরজা।
+  Position size: [Risk per
+  trade](/bn/learn/08-risk-management/01-risk-per-trade)।
+</Callout>
+
+## শক্তি
+
+- **বাড়তি data লাগে না।** শুধু candle chart; যেকোনো broker, যেকোনো market।
+- **সব timeframe-এ চলে।** M15 থেকে D1, একই নিয়ম।
+- **দেরি কম।** Indicator দাম থেকে হিসাব করে, তাই পিছিয়ে থাকে। Price Action সরাসরি দাম দেখে।
+- **স্পষ্ট invalidation।** প্রতিটি setup-এর সাথে "কোথায় ভুল" দামটা স্বাভাবিকভাবে আসে, তাই stop রাখা সহজ।
+- **বাকি সব পদ্ধতির ভিত্তি।** Wyckoff, SMC, Elliott: সবাই swing ও level ব্যবহার করে। এখানে শক্ত হলে বাকিগুলো শেখা সহজ।
+
+## দুর্বলতা ও সীমা
+
+- **বিচারনির্ভর (subjectivity: medium)।** কোনটা "শক্ত" close, zone কতটা চওড়া, কোন swing গুরুত্বপূর্ণ: দুজন trader আলাদা উত্তর দিতে পারেন। নিয়ম আছে, কিন্তু সব যান্ত্রিক নয়। তাই "low" নয়। আবার Elliott বা SMC-র মতো একই chart-এ অনেক বিপরীত ব্যাখ্যাও সাধারণত হয় না, তাই "high"-ও নয়।
+- **Backtest কঠিন।** "Level-এ rejection" কথাটা code-এ লিখতে গেলে অনেক সংজ্ঞা ঠিক করতে হয়। হাতে backtest করলে hindsight bias ঢুকে পড়ে।
+- **False break সাধারণ ঘটনা।** Level যত স্পষ্ট, তত বেশি মানুষের stop তার ওপারে, তত বেশি false break।
+- **Low timeframe-এ শব্দ বেশি।** Gold-এ M5/M15-এ spread ও news spike অনেক wick তৈরি করে, যার কোনো অর্থ নেই।
+
+**প্রমাণের অবস্থা:** Technical analysis নিয়ে গবেষণার ফল মিশ্র। Lo, Mamaysky ও Wang (2000) কিছু chart pattern-এ পরিসংখ্যানগত তথ্য পেয়েছেন, কিন্তু সেটা লাভজনক কৌশলের প্রমাণ নয়। Park ও Irwin (2007)-এর পর্যালোচনায় অনেক গবেষণা লাভ দেখালেও, data snooping ও খরচ হিসাবের সমস্যার কথা বলা হয়েছে। "Price action" নামে স্বাধীন, বড় গবেষণা কম, কারণ এর সংজ্ঞাই শিক্ষকভেদে আলাদা। **কোনো পদ্ধতিই নিশ্চিত লাভ দেয় না।**
+
+ব্যর্থ উদাহরণটি দেখুন। Setup একই, ফল উল্টো:
+
+<Chart
+  id="breakout-retest-fail-01"
+  height={420}
+  caption="EURUSD H1 (শিক্ষামূলক কাল্পনিক ডেটা) — একই 1.0900 retest-এ buy, কিন্তু দাম পুরোনো range-এ ফিরে গিয়ে stop ছুঁয়েছে। Breakout ছিল fakeout; stop থাকায় লোকসান 1R-এ সীমিত।"
+/>
+
+এই chart শেখায়: retest দেখতে ঠিক থাকলেও ব্যর্থ হতে পারে। পার্থক্য আগে থেকে জানা যায় না। তাই প্রতিটি trade-এ ঝুঁকি ছোট ও নির্দিষ্ট রাখা হয়।
+
+## কার জন্য, কার জন্য নয়
+
+| উপযুক্ত যদি আপনি…                    | উপযুক্ত নয় যদি আপনি…                     |
+| :----------------------------------- | :---------------------------------------- |
+| নতুন, এবং একটি ভিত্তি গড়তে চান      | শুধু যান্ত্রিক, code-যোগ্য নিয়ম চান      |
+| Chart দেখে নিজে বিচার করতে স্বচ্ছন্দ | "অস্পষ্ট" setup দেখলে অস্থির হয়ে পড়েন   |
+| অল্প tool, পরিষ্কার chart পছন্দ করেন | Volume বা order flow-এর গভীর তথ্য চান     |
+| H4/D1-এ দিনে একবার chart দেখতে পারেন | ধৈর্য ধরে retest-এর অপেক্ষা করতে পারেন না |
+
+## অন্য পদ্ধতির সাথে মেলানো
+
+Price Action প্রায় সব পদ্ধতির সাথে মেলে, কারণ বাকিরা এর ওপরই দাঁড়িয়ে।
+
+- **Price Action + একটি indicator:** যেমন trend filter হিসেবে একটি moving average, বা stop-এর আকার মাপতে ATR। Indicator শুধু একটি নির্দিষ্ট প্রশ্নের উত্তর দেবে। দেখুন [ATR দিয়ে stop size](/bn/learn/07-technical-indicators/04-atr-stop-size)।
+- **Price Action + Volume Profile:** কোন level-এ বেশি লেনদেন হয়েছে, সেটা দিয়ে zone বাছাই।
+- **Price Action → Wyckoff/SMC:** Range, false break, breakout: এই ঘটনাগুলোকেই Wyckoff ও SMC নিজের নামে ব্যাখ্যা করে।
+
+**যা মেশাবেন না:** একই chart-এ পাঁচটি oscillator, তিন রকম trendline আর candle pattern। সংকেত পরস্পরবিরোধী হলে আপনি শেষে সেটাই বেছে নেবেন, যেটা আপনি চান। দেখুন [Indicator overload](/bn/learn/07-technical-indicators/07-indicator-overload)।
+
+## পরে গভীরে যা শিখবেন
+
+এই পাঠ overview। প্রতিটি অংশের পূর্ণ পাঠ আগেই আছে:
+
+- Structure: [Break of structure](/bn/learn/03-market-structure/03-break-of-structure), [Liquidity ও stop hunt](/bn/learn/03-market-structure/04-liquidity-stop-hunts)
+- Level: [Supply ও demand](/bn/learn/05-support-resistance/03-supply-demand), [Trendline ও channel](/bn/learn/05-support-resistance/04-trendlines-channels)
+- Candle: [Single candle pattern](/bn/learn/04-candlesticks/02-single-candle-patterns), [Two candle pattern](/bn/learn/04-candlesticks/03-two-candle-patterns)
+- Chart pattern: [Reversal pattern](/bn/learn/06-trend-chart-patterns/01-reversal-patterns), [Continuation pattern](/bn/learn/06-trend-chart-patterns/02-continuation-patterns)
+- Entry: [Confirmation বনাম trigger](/bn/learn/09-price-action-entries-strategies/04-confirmation-vs-trigger), [Entry model checklist](/bn/learn/09-price-action-entries-strategies/05-entry-model-checklist)
+
+Sub-series দরকার নেই: অধ্যায় ০৩–০৯ ইতিমধ্যে Price Action-এর পূর্ণ কোর্স।
+
+## কীভাবে শেখা শুরু করবেন
+
+<Steps>
+
+### ধাপ ১: পরিষ্কার chart
+
+XAUUSD H4 খুলুন। সব indicator সরিয়ে দিন।
+
+### ধাপ ২: শুধু structure
+
+গত তিন মাসের প্রতিটি swing high ও low চিহ্নিত করুন। প্রতিটি অংশে লিখুন: uptrend, downtrend না range।
+
+### ধাপ ৩: তিনটি zone
+
+সবচেয়ে বেশিবার দাম থেমেছে, এমন তিনটি zone আঁকুন। রেখা নয়, এলাকা।
+
+### ধাপ ৪: ২০টি ঘটনা লিখুন
+
+এই zone-গুলোতে দাম এসে কী করেছে, ২০টি ঘটনা লিখুন: breakout, false break না rejection। প্রতিটির পর কী হয়েছে, সেটাও।
+
+### ধাপ ৫: নিয়ম লিখে backtest
+
+একটি setup বেছে (যেমন breakout-retest) entry, stop, target-এর নিয়ম লিখুন। অন্তত ৫০টি উদাহরণে [backtest](/bn/learn/15-backtesting-journal/01-how-to-backtest) করুন।
+
+</Steps>
+
+## সাধারণ ভুল
+
+| ভুল                                | কেন সমস্যা                                | সমাধান                                          |
+| :--------------------------------- | :---------------------------------------- | :---------------------------------------------- |
+| Level ছাড়া candle pattern-এ trade | Context ছাড়া pattern শুধু noise          | আগে zone, তারপর candle                          |
+| প্রতিটি wick-কে level ধরা          | Chart রেখায় ভরে যায়, সব দামই "level"    | শুধু বারবার পরীক্ষিত zone রাখুন, সর্বোচ্চ ৩–৪টি |
+| Wick দেখেই breakout ধরে নেওয়া     | False break-এ ফাঁদে পড়া                  | Body-র close ও পরের candle দেখুন                |
+| বড় timeframe উপেক্ষা করা          | স্রোতের উল্টো trade                       | H4/D1-এর structure আগে লিখে নিন                 |
+| Stop "বেশি কাছে" বা নেই            | স্বাভাবিক নড়াচড়াতেই stop, বা বড় লোকসান | Stop রাখুন invalidation দামের ওপারে             |
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- Price Action সরাসরি দাম পড়ে: structure, level, আর level-এ candle-এর আচরণ।
+- ক্রম: আগে structure, তারপর level, শেষে candle।
+- Breakout-এর প্রমাণ close ও পরের candle; শুধু wick নয়।
+- Retest-এ entry মানে ছোট, স্পষ্ট stop।
+- Subjectivity medium; backtest করে নিজের নিয়ম যাচাই করুন। নিশ্চিত লাভ নেই।
+
+</KeyTakeaways>
+
+## কুইজ
+
+1. Price Action-এর মূল প্রশ্ন কী?
+2. Chart পড়ার তিন স্তর কোন ক্রমে আসে?
+3. Breakout আর false break-এর মূল পার্থক্য কী?
+4. Retest-এ entry নিলে stop রাখা সহজ কেন?
+5. Price Action-এর subjectivity "medium" কেন, "low" নয়?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** দাম কোন level-এ কী আচরণ করছে, আর structure কোন দিকে।
+
+**২.** Structure → level → candle।
+
+**৩.** Breakout-এ দাম zone-এর বাইরে close করে টিকে থাকে; false break-এ বাইরে গিয়ে আবার ভেতরে close করে।
+
+**৪.** কারণ invalidation দাম (ভাঙা level-এর ওপার) entry-র খুব কাছে, তাই ঝুঁকি ছোট ও নির্দিষ্ট।
+
+**৫.** Zone-এর চওড়া, "শক্ত" close, গুরুত্বপূর্ণ swing: এগুলোর বিচার trader-ভেদে আলাদা হয়, তাই নিয়ম পুরো যান্ত্রিক নয়।
+
+</details>
+
+## পরের ধাপ
+
+- অধ্যায়ের তুলনা: [Trading Methodology: আটটি পদ্ধতি](/bn/learn/16-trading-methodologies/00-overview)।
+- পরের পাঠ: [Indicator-Based Trading](/bn/learn/16-trading-methodologies/02-indicator-based-trading)।
+- সম্পর্কিত: [Wyckoff Method](/bn/learn/16-trading-methodologies/03-wyckoff-method) (range ও false break-এর আরেক ব্যাখ্যা), [Price Action entry ও strategy](/bn/learn/09-price-action-entries-strategies/00-overview)।
+
+### সূত্র
+
+- <ExternalLink href="https://en.wikipedia.org/wiki/Price_action_trading">
+    Price action trading (Wikipedia)
+  </ExternalLink>
+- <ExternalLink href="https://en.wikipedia.org/wiki/Dow_theory">
+    Dow theory (Wikipedia)
+  </ExternalLink>
+- <ExternalLink href="https://en.wikipedia.org/wiki/Candlestick_chart">
+    Candlestick chart (Wikipedia)
+  </ExternalLink>
+- <ExternalLink href="https://www.nber.org/papers/w7613">
+    Lo, Mamaysky & Wang (2000), Foundations of Technical Analysis
+  </ExternalLink>
+- <ExternalLink href="https://doi.org/10.1111/j.1467-6419.2007.00519.x">
+    Park & Irwin (2007), What Do We Know About the Profitability of Technical
+    Analysis?
+  </ExternalLink>
+
+<Disclaimer>
+  এই লেখাটি শুধুমাত্র শিক্ষামূলক উদ্দেশ্যে। এটি কোনো financial advice নয়। কোনো
+  trading পদ্ধতিই নিশ্চিত লাভ দেয় না। Forex ও Gold trading-এ উল্লেখযোগ্য আর্থিক
+  ঝুঁকি রয়েছে এবং আপনি আপনার বিনিয়োগের পুরোটাই হারাতে পারেন। Real money দিয়ে
+  trade করার আগে demo account-এ যথেষ্ট অনুশীলন করুন।
+</Disclaimer>

@@ -1,0 +1,202 @@
+---
+title: "Automation: নিয়ম কোডে চালানোর আগে যা জানা দরকার"
+description: "কোন নিয়ম automate করা যায়, automation-এর সুবিধা ও ফাঁদ (overfitting, খরচ, execution), moving-average cross উদাহরণ ও in-sample বনাম out-of-sample পরীক্ষা — দুটি chart সহ।"
+level: advanced
+tags: [automation, expert-advisor, backtest, overfitting, out-of-sample]
+instruments: [EURUSD, ACCOUNT]
+timeframes: [H1, per-trade]
+status: done
+sources:
+  - type: blog
+    title: "Algorithmic Trading - Investopedia"
+    url: "https://www.investopedia.com/terms/a/algorithmictrading.asp"
+updated: 2026-11-05
+---
+
+# Automation: নিয়ম কোডে চালানোর আগে যা জানা দরকার
+
+Automation মানে "মেশিন আমার হয়ে লাভ করবে" নয়। মেশিন আপনার নিয়ম **হুবহু** চালাবে, ভালো নিয়ম হলে ভালো, ভুল হলে প্রতিটি ভুল নিখুঁতভাবে। এই পাঠ বলে কখন automation অর্থবহ, আর কোন ফাঁদ এড়াতে হয়।
+
+## এই লেখা পড়ে আপনি যা পারবেন
+
+- **কোন নিয়ম automate করা যায়**, বলতে পারবেন।
+- Automation-এর **সুবিধা ও ফাঁদ** জানবেন।
+- **In-sample ও out-of-sample** পরীক্ষার পার্থক্য বুঝবেন।
+- Live চালানোর আগের **নিরাপদ ধাপ** সাজাতে পারবেন।
+
+## কেন এটি জরুরি
+
+- **আবেগ বাদ যায়,** কিন্তু ভুলের পুনরাবৃত্তি যোগ হয়।
+- **[Backtest](/bn/learn/15-backtesting-journal/01-how-to-backtest)-এর স্বাভাবিক ধাপ।** Automation-এ শত শত trade মিনিটে পরীক্ষা হয়, এবং overfitting-এর ঝুঁকিও বাড়ে।
+- **বিক্রয়ের ফাঁদ থেকে সুরক্ষা।** "Robot মাসে ৩০% দেয়" জাতীয় বিজ্ঞাপন চেনার জন্য মৌলিক ধারণা দরকার।
+
+পূর্বশর্ত: [Performance Metrics ও Forward Testing](/bn/learn/15-backtesting-journal/02-performance-metrics-forward-testing)।
+
+## Automation কী
+
+**Automation হলো লিখিত নিয়ম কোডে রূপ দিয়ে প্রোগ্রামকে সংকেত খোঁজা বা trade করানো।** প্রচলিত ধরন: MetaTrader-এর Expert Advisor (EA), TradingView-এর Pine Script alert, Python দিয়ে নিজস্ব script।
+
+| স্তর               | কী করে                           | ঝুঁকি               |
+| :----------------- | :------------------------------- | :------------------ |
+| সংকেত-সতর্কতা      | শর্ত মিললে alert, trade আপনি নেন | কম                  |
+| আধা-স্বয়ংক্রিয়   | Entry স্বয়ংক্রিয়, exit আপনি    | মাঝারি              |
+| পূর্ণ স্বয়ংক্রিয় | Entry, stop, exit সব কোডে        | বেশি; নজরদারি দরকার |
+
+শুরুতে **সংকেত-সতর্কতা** দিয়ে শিখুন।
+
+## কোন নিয়ম automate করা যায়
+
+যে নিয়ম **পুরোপুরি মাপার যোগ্য**: প্রতিটি শর্ত হ্যাঁ/না, কোনো "ভালো মনে হলে" নয়। [Entry, Exit ও Risk Rules](/bn/learn/14-trading-plan-system/02-entry-exit-risk-rules-ek-page-e)-এ আপনি এমন নিয়ম লেখা শিখেছেন। যা সেখানে লেখা যায় না, তা কোডেও যাবে না।
+
+## Chart-এ কেমন দেখায়
+
+<Chart
+  id="automation-ma-cross-01"
+  height={480}
+  caption="EURUSD H1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — নিয়ম: 8-period average 21-period average-কে ওপরে কাটলে buy, উল্টো cross-এ exit। Trend-এ এক trade-এ +161 pip, শেষের range-এ দুটি ছোট loss (−29, −21 pip)। শুধু উদাহরণ, সুপারিশকৃত strategy নয়; খরচ ধরা হয়নি।"
+/>
+
+নিয়মটি trend-এ কাজ করেছে, range-এ ধাক্কা খেয়েছে। কোড এটি **জানে না**; প্রতিটি cross-এ সে একই কাজ করে।
+
+আদর্শ নিয়ম-বর্ণনা (কোড নয়, সিউডো):
+
+```text
+যদি fast_average ওপরে কাটে slow_average এবং কোনো position নেই:
+    buy
+যদি fast_average নিচে কাটে slow_average এবং position খোলা:
+    close
+(উপরের chart-এ শুধু cross-এ exit; বাস্তবে আলাদা stop ও ঝুঁকি-নিয়ম যোগ করতে হবে)
+```
+
+## ধাপে ধাপে: automation-এর পথ
+
+<Steps>
+
+### ধাপ ১: নিয়ম আগে কাগজে
+
+[Plan](/bn/learn/14-trading-plan-system/01-trading-plan-template)-এর মতো সম্পূর্ণ, সংখ্যাসহ।
+
+### ধাপ ২: ডেটা ভাগ করুন
+
+সময়কালের প্রথম ~৬০–৭০% **in-sample** (নিয়ম গড়া), বাকিটা **out-of-sample** (শুধু চূড়ান্ত পরীক্ষা)। Out-of-sample দেখার আগে নিয়ম বদলাবেন না।
+
+### ধাপ ৩: খরচ ধরুন
+
+Spread, commission, slippage। বেশি trade হলে খরচ লাভ খেয়ে ফেলে।
+
+### ধাপ ৪: Out-of-sample পরীক্ষা
+
+একবার চালান। ফল খারাপ হলে "টিউন করে আবার" নয়; নতুন ধারণা, নতুন ডেটা।
+
+### ধাপ ৫: Demo, তারপর ছোট live
+
+আসল execution (slippage, requote) backtest-এর চেয়ে ভিন্ন।
+
+### ধাপ ৬: নজরদারি ও বন্ধ করার নিয়ম
+
+Automation চলছে বলে নিশ্চিন্ত নয়। দৈনিক/সাপ্তাহিক limit কোডেই বসান ([থামার নিয়ম](/bn/learn/14-trading-plan-system/05-kokhon-trading-bondho-korbo))।
+
+</Steps>
+
+## উদাহরণ ১: যখন কাজ করে (কাল্পনিক)
+
+- **কী ছিল:** সহজ MA cross নিয়ম, stop ও ঝুঁকি স্থির, খরচসহ backtest।
+- **চলাকালীন:** In-sample-এ নিয়ম বানিয়ে out-of-sample-এ একবার চালানো। ফল in-sample-এর চেয়ে দুর্বল, কিন্তু একই দিকে (ধনাত্মক)।
+- **ফল:** ছোট ঝুঁকিতে demo-তে চালু; দুই মাস পর প্রত্যাশার কাছাকাছি।
+- **শিক্ষা:** Out-of-sample ফল কিছুটা দুর্বল হওয়া স্বাভাবিক। একই দিক থাকলে আস্থা বাড়ে।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়।)
+
+## উদাহরণ ২: যখন ব্যর্থ হয় (কাল্পনিক)
+
+<Chart
+  id="automation-overfit-equity-01"
+  height={420}
+  caption="ACCOUNT, প্রতি trade (শিক্ষামূলক, কাল্পনিক উদাহরণ) — প্রথম ৩০টি trade সুন্দর দেখানো পর্যন্ত নিয়ম টিউন করা। পরের ২০টি অদেখা trade-এ curve ১,৭৮২ লাভের প্রায় ১,১৩০ ফিরিয়ে দেয়।"
+/>
+
+- **কী ঘটল:** Trader বারবার পরামিতি (average-এর দৈর্ঘ্য, stop, সময়) বদলে in-sample-এ curve সুন্দর করলেন।
+- **ফল:** 10,000 থেকে 11,782। কিন্তু পরের ২০টি অদেখা trade-এ 10,653, লাভের বড় অংশ ফেরত।
+- **কেন ব্যর্থ:** টিউন করা নিয়ম অতীতের আওয়াজও মুখস্থ করেছে। এটি overfitting।
+- **শিক্ষা:** Out-of-sample-ই সৎ পরীক্ষা। সেটি দেখে আবার টিউন করলে সেটিও in-sample হয়ে যায়।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়।)
+
+## সাধারণ ভুল
+
+| ভুল                               | কেন হয়             | কী করবেন                       |
+| :-------------------------------- | :------------------ | :----------------------------- |
+| পরামিতি বারবার টিউন               | সুন্দর curve-এর লোভ | টিউন কম, out-of-sample আলাদা   |
+| খরচ বাদ দিয়ে backtest            | সরল মনে হয়         | spread/slippage যোগ করুন       |
+| কেনা "robot"-এর বিজ্ঞাপনে বিশ্বাস | সহজ লাভের আশা       | নিজের ডেটা ও পরীক্ষা ছাড়া নয় |
+| নজরদারি না রাখা                   | "মেশিন চালাচ্ছে"    | limit, alert, সাপ্তাহিক review |
+| Live-এ সরাসরি বড় ঝুঁকিতে         | backtest-এ আস্থা    | demo → ছোট live                |
+
+## Pro tips
+
+<Callout type="tip">
+  নিয়ম যত সহজ, overfitting-এর ঝুঁকি তত কম। কম পরামিতি, বেশি যুক্তি। পাঁচটি
+  পরামিতি টিউন করার চেয়ে দুটিতে থাকা ভালো।
+</Callout>
+
+<Callout type="warning">
+  "নিশ্চিত লাভ", "ঝুঁকিহীন", "মাসে X% গ্যারান্টি", এ ধরনের কোনো দাবি বিশ্বাস
+  করবেন না। এটি শিক্ষামূলক লেখা, বিনিয়োগ পরামর্শ নয়। যেকোনো কেনা সফটওয়্যারের
+  আগে স্বাধীনভাবে যাচাই করুন।
+</Callout>
+
+## কখন এটা কাজ করে না
+
+- **নিয়ম অস্পষ্ট হলে:** কোডে লেখা যায় না।
+- **বাজারের ধরন বদলালে:** Trend-এর জন্য বানানো নিয়ম range-এ ভুগবে (উপরের chart)।
+- **অতি-অল্প ডেটায়:** কয়েক ডজন trade-এ পরামিতি অর্থপূর্ণ নয়।
+- **Execution-এ ফাঁক:** Backtest-এর দাম ও live-এর দাম আলাদা, বিশেষত খবরে।
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- Automation নিয়ম হুবহু চালায়; ভালো-খারাপ বিচার করে না।
+- শুরু সংকেত-সতর্কতা দিয়ে।
+- ডেটা ভাগ করুন; out-of-sample একবারই দেখুন।
+- খরচ ধরুন, ছোট ঝুঁকিতে demo ও live, সবসময় limit রাখুন।
+
+</KeyTakeaways>
+
+## অনুশীলন
+
+আপনার সবচেয়ে সহজ নিয়মটি সিউডো-কোডে (উপরের মতো) লিখুন। কোনো লাইনে "মনে হলে" বা "ভালো" শব্দ আসে কি? এলে সেই নিয়ম এখনো automation-এর জন্য তৈরি নয়।
+
+## কুইজ
+
+1. Automation কোন ধরনের নিয়মের জন্য উপযোগী?
+2. In-sample ও out-of-sample-এর পার্থক্য কী?
+3. ওপরের ব্যর্থ উদাহরণে curve কেন নামল?
+4. Live-এ যাওয়ার আগে কোন তিনটি ধাপ?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** পুরোপুরি মাপার যোগ্য, হ্যাঁ/না শর্তের নিয়ম।
+
+**২.** In-sample-এ নিয়ম গড়া হয়; out-of-sample শুধু চূড়ান্ত পরীক্ষার জন্য, নিয়ম বদলানোর পর দেখা হয় না।
+
+**৩.** Overfitting: নিয়ম অতীতের আওয়াজ মুখস্থ করেছিল।
+
+**৪.** Out-of-sample পরীক্ষা, demo, ছোট ঝুঁকিতে live।
+
+</details>
+
+## পরের ধাপ
+
+- আগে: [Elliott Wave](/bn/learn/16-trading-methodologies/07-elliott-wave)।
+- পরে: [আপনার জেতা ও হারা trade-এর breakdown](/bn/learn/17-case-studies-trade-reviews/01-nijer-winning-losing-trade-breakdown)।
+- সম্পর্কিত: [How to Backtest](/bn/learn/15-backtesting-journal/01-how-to-backtest)।
+
+### সূত্র
+
+- <ExternalLink href="https://www.investopedia.com/terms/a/algorithmictrading.asp">
+    Algorithmic Trading, Investopedia
+  </ExternalLink>
+
+<Disclaimer />

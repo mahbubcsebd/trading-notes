@@ -1,0 +1,173 @@
+---
+title: "SMC/ICT Entry Model: Sweep, CHoCH, FVG ও Silver Bullet"
+description: "Bias থেকে stop ও target পর্যন্ত একটি সম্পূর্ণ SMC/ICT entry model লিখুন, ICT-র Silver Bullet বুঝুন, আর কেন নিখুঁত ক্রমও ব্যর্থ হয়: chart ও ব্যর্থ উদাহরণসহ।"
+level: advanced
+tags: [smc, ict, entry-model, silver-bullet, sweep, choch, fvg]
+instruments: [XAUUSD, EURUSD]
+timeframes: [M15, H1]
+status: done
+updated: 2026-11-07
+---
+
+# SMC/ICT Entry Model: Sweep, CHoCH, FVG ও Silver Bullet
+
+এতক্ষণ আলাদা আলাদা অংশ শিখলেন। এবার সেগুলো একটি লিখিত নিয়মে জোড়া লাগাবেন, যাতে প্রতিটি trade-এ আপনি একই প্রশ্ন একই ক্রমে করেন। নিয়ম লেখা না থাকলে "অনুভূতি" দিয়ে trade হয়, আর backtest করা যায় না।
+
+## এই পাঠে আপনি যা পারবেন
+
+- একটি সম্পূর্ণ entry model ধাপে ধাপে লিখতে পারবেন।
+- Stop ও target model-এর নিয়মে বসাতে পারবেন।
+- ICT-র Silver Bullet কী, বুঝবেন।
+- নিখুঁত ক্রমও কেন ব্যর্থ হয়, জানবেন।
+
+## কেন গুরুত্বপূর্ণ
+
+পাঠ ১–৬ উপাদান দিয়েছে। উপাদান আলাদা থাকলে প্রতিটি gap-এ entry আসে। ক্রম আর ফিল্টার একসাথে বসালে সংকেত কমে, মান বাড়ে। Stop ও position size নিয়ে [Stop Loss Placement](/bn/learn/10-trade-management-execution/01-stop-loss-placement) আর [Position Sizing](/bn/learn/08-risk-management/02-position-sizing) দেখুন।
+
+## মূল ধারণা
+
+### বেসিক entry model (long)
+
+1. **Bias:** বড় timeframe (H4/D1) bullish, বা অন্তত নিচের দিক বন্ধ।
+2. **সময়:** kill zone বা আপনার বাছা window।
+3. **Sweep:** দাম SSL নেয় (low-র নিচে গিয়ে body ভেতরে ফেরে)।
+4. **CHoCH:** body close দিয়ে শেষ lower high ভাঙে।
+5. **Zone:** impulse-এর রেখে যাওয়া FVG (বা OB)।
+6. **Entry:** zone-এ দাম ফিরলে, আদর্শভাবে discount-এ।
+7. **Stop:** sweep-এর low-র নিচে।
+8. **Target:** বিপরীত liquidity (আগের high), অন্তত 1:2।
+
+Short হলে সবকিছু উল্টো।
+
+### Silver Bullet
+
+**Silver Bullet হলো ICT-র সময়-ভিত্তিক model: নির্দিষ্ট এক ঘণ্টার window-এ liquidity নেওয়ার পর FVG-তে entry।** ICT-র শিক্ষায় সাধারণত উল্লেখ করা window (New York সময়): 03:00–04:00, 10:00–11:00 ও 14:00–15:00। সময় শিক্ষকভেদে আলাদা, তাই যাচাই করুন। ধারণা একই: window-এর ভেতরে sweep, তারপর FVG-তে ফেরা, লক্ষ্য বিপরীত liquidity। এটি উপরের model-এরই একটি সংকীর্ণ রূপ।
+
+## Chart-এ কেমন দেখায়
+
+<Chart
+  id="smc-sweep-choch-fvg-win-01"
+  height={460}
+  caption="EURUSD H1 (শিক্ষামূলক কাল্পনিক ডেটা) — low sweep, শেষ lower high ভেঙে CHoCH, FVG রেখে যায়। FVG-তে pullback-এ buy, stop sweep low-র নিচে, target 2R।"
+/>
+
+<Steps>
+
+### ধাপ ১: Bias ও সময়
+
+দিক ও window নিশ্চিত করুন।
+
+### ধাপ ২: Sweep
+
+Low নেওয়া হলো, body ভেতরে ফিরল।
+
+### ধাপ ৩: CHoCH
+
+Body close শেষ lower high-র ওপরে।
+
+### ধাপ ৪: FVG আঁকুন
+
+Impulse-এর তিন-candle ফাঁক।
+
+### ধাপ ৫: Pullback-এ entry
+
+Limit order বা প্রতিক্রিয়ার সংকেত দেখে, stop বসিয়ে।
+
+### ধাপ ৬: Target
+
+আগের high বা 1:2, যেটি আগে।
+
+</Steps>
+
+নিচে model-এর চেকলিস্ট। প্রতিটির উত্তর "হ্যাঁ" না হলে trade নেবেন না।
+
+<Checklist
+  id="smc-entry-model"
+  items={[
+    "বড় timeframe-এর bias আমার দিকে",
+    "আমার বাছা সময়-window-এর ভেতরে",
+    "স্পষ্ট liquidity sweep হয়েছে (body ভেতরে ফিরেছে)",
+    "Body close দিয়ে CHoCH হয়েছে",
+    "অস্পৃষ্ট FVG বা OB আছে",
+    "Stop বসানো আছে ও ঝুঁকি আমার সীমার ভেতরে",
+    "Target-এ অন্তত 1:2",
+  ]}
+/>
+
+## ব্যর্থ উদাহরণ: নিখুঁত ক্রম, বড় trend উল্টো
+
+<Chart
+  id="smc-entry-fail-01"
+  height={460}
+  caption="XAUUSD H1 (শিক্ষামূলক কাল্পনিক ডেটা) — low sweep, ওপরে CHoCH, FVG-তে buy। প্রতিটি ধাপ বইয়ের মতো, কিন্তু higher-timeframe trend নিচে: bounce শেষ হয়, stop লাগে।"
+/>
+
+ক্রম নিখুঁত, তবু ক্ষতি। কারণ ছোট timeframe-এর CHoCH বড় নিচের চলনের ভেতরের একটি pullback ছিল। চেকলিস্টের প্রথম প্রশ্ন (bias) "না" হলে বাকি সব "হ্যাঁ" হয়েও trade নেওয়া ঠিক ছিল না।
+
+নিয়ম: **model শুধু entry-র সময় ঠিক করে; দিক ঠিক করে bias।**
+
+এই ক্ষতি স্বাভাবিক। Stop ছোট ছিল, তাই ক্ষতিও ছিল নিয়ন্ত্রিত। সেটাই model-এর আসল কাজ।
+
+## সাধারণ ভুল
+
+| ভুল                  | কেন সমস্যা                                   | সমাধান                   |
+| :------------------- | :------------------------------------------- | :----------------------- |
+| Bias বাদ দেওয়া      | ছোট timeframe-এর CHoCH বড় trend-এ ডুবে যায় | চেকলিস্টের প্রথম প্রশ্ন  |
+| Stop না বসানো        | Model ভুল হলে ক্ষতি সীমাহীন                  | Entry-র আগে stop         |
+| প্রতিদিন model খোঁজা | মান কমে, সংখ্যা বাড়ে                        | সংকেত না এলে বসে থাকুন   |
+| Target না লেখা       | লোভে বা ভয়ে বের হওয়া                       | আগে target লিখুন         |
+| নিয়ম বারবার বদলানো  | Backtest অর্থহীন                             | একটি সংস্করণ, ৫০টি trade |
+
+<Callout type="tip">
+  প্রতিটি trade-এ চেকলিস্টের screenshot রাখুন। মাস শেষে দেখুন কোন প্রশ্নে "না"
+  থাকলেও আপনি trade নিয়েছিলেন, আর তাদের ফল কী।
+</Callout>
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- Model: bias → সময় → sweep → CHoCH → FVG/OB → pullback entry → stop → target।
+- Silver Bullet = ICT-র এক ঘণ্টার window-ভিত্তিক সংকীর্ণ রূপ।
+- নিখুঁত ক্রমও ব্যর্থ হয়; bias ছাড়া সবচেয়ে বেশি।
+- Stop আগে বসান; ক্ষতি নিয়ন্ত্রিত থাকাই model-এর কাজ।
+- নিয়ম লিখে ৫০টি trade backtest করুন।
+
+</KeyTakeaways>
+
+## অনুশীলন
+
+উপরের চেকলিস্ট নিজের ভাষায় লিখুন। XAUUSD H1-এ গত মাসের প্রতিটি সম্ভাব্য setup-এ প্রয়োগ করুন: কয়টিতে সবগুলো "হ্যাঁ"? সেগুলোর ফল কী? ([Backtest কীভাবে করবেন](/bn/learn/15-backtesting-journal/01-how-to-backtest))
+
+## কুইজ
+
+1. Entry model-এর আটটি ধাপ কী কী?
+2. Silver Bullet কী?
+3. কেন নিখুঁত ক্রমও ব্যর্থ হতে পারে?
+4. Stop কোথায় বসে?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** Bias, সময়, sweep, CHoCH, FVG/OB, pullback entry, stop, target।
+
+**২.** ICT-র এক ঘণ্টার window-ভিত্তিক model: window-এর ভেতরে liquidity নেওয়া, তারপর FVG-তে entry।
+
+**৩.** ছোট timeframe-এর ক্রম বড় trend-এর ভেতরের pullback হতে পারে; bias না মিললে তাই হয়।
+
+**৪.** Long-এ sweep-এর low-র নিচে; short-এ sweep-এর high-র ওপরে।
+
+</details>
+
+## পরের ধাপ
+
+- অধ্যায়ের পরিচিতি: [SMC / ICT গভীরে](/bn/learn/19-smc-ict/00-overview)।
+- আগের পাঠ: [Power of 3](/bn/learn/19-smc-ict/06-power-of-3)।
+- পরের পাঠ: [সীমা ও ঝুঁকি](/bn/learn/19-smc-ict/08-risk-and-limits)।
+
+<Disclaimer>
+  এই লেখাটি শুধুমাত্র শিক্ষামূলক উদ্দেশ্যে। এটি কোনো financial advice নয়। কোনো
+  trading পদ্ধতিই নিশ্চিত লাভ দেয় না। Forex ও Gold trading-এ উল্লেখযোগ্য আর্থিক
+  ঝুঁকি রয়েছে এবং আপনি আপনার বিনিয়োগের পুরোটাই হারাতে পারেন। Real money দিয়ে
+  trade করার আগে demo account-এ যথেষ্ট অনুশীলন করুন।
+</Disclaimer>

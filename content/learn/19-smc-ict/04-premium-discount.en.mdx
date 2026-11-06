@@ -1,0 +1,148 @@
+---
+title: "Premium, Discount and OTE: At What Price to Enter"
+description: "How to draw a dealing range, equilibrium, premium-discount and ICT's OTE zone (0.62–0.79), and when it fails: with a chart and a failed example."
+level: advanced
+tags: [smc, ict, premium, discount, ote, equilibrium, fibonacci]
+instruments: [XAUUSD]
+timeframes: [H1, H4]
+status: done
+updated: 2026-11-07
+---
+
+# Premium, Discount and OTE: At What Price to Enter
+
+The zone is right, the direction is right, yet the entry price puts the stop far away and the target close. The risk:reward is poor. This lesson shows which part of a range is cheap to buy, which part is expensive, and what ICT's OTE zone is.
+
+## What you will be able to do
+
+- Draw a dealing range.
+- Recognise equilibrium, premium and discount.
+- Work out the OTE zone (0.62–0.79).
+- Understand when this idea does not work.
+
+## Why it matters
+
+Same idea, better entry price: a smaller stop and a bigger target. The basic idea is in the [Premium and Discount lesson](/en/learn/03-market-structure/06-premium-discount-zones) and the Fibonacci base is in the [Fibonacci Retracement lesson](/en/learn/05-support-resistance/05-fibonacci-basics). Here is ICT's specific use.
+
+## Core idea
+
+**A dealing range is the span from a recent important swing low to a swing high.** Its middle is **equilibrium (EQ)**, 50%.
+
+- **Premium:** the upper half above EQ. Good for selling, expensive for buying.
+- **Discount:** the lower half below EQ. Good for buying, cheap for selling.
+
+Analogy: prices in a market. Buying below the middle price leaves more room for profit; buying above leaves less.
+
+### OTE (Optimal Trade Entry)
+
+**OTE is the area between the 62% and 79% retracement of an impulse.** ICT teaching singles out 70.5%. It is drawn with Fibonacci levels, and the numbers are a common convention; the market is not obliged to respect them.
+
+### The rule: direction first, price second
+
+Premium/discount does not give direction. Direction comes from structure (lesson 1). In an uptrend, look for buys only in discount; avoid buying in premium.
+
+## How it looks on a chart
+
+<Chart
+  id="smc-pd-01"
+  height={460}
+  caption="XAUUSD H1 (illustrative synthetic data) — range low to high, EQ as the gold line. Price returns into discount, inside the 0.62–0.79 zone. Buy, stop below the range low, target near the high."
+/>
+
+<Steps>
+
+### Step 1: Pick the swing
+
+In an uptrend, the last important low to the new high.
+
+### Step 2: Draw EQ
+
+50% between the low and the high.
+
+### Step 3: Place the OTE zone
+
+62% and 79% retracement from the high.
+
+### Step 4: Wait for a signal in the zone
+
+Price arriving in the zone is not enough; only if an OB/FVG from lesson 3 lines up.
+
+### Step 5: Stop and target
+
+Stop below the range low. Target near the high.
+
+</Steps>
+
+In this example the risk:reward is about 1:2. An entry at a cheaper price allows a smaller stop. That is the real benefit of the idea.
+
+## Failed example
+
+<Chart
+  id="smc-pd-02"
+  height={460}
+  caption="XAUUSD H1 (illustrative synthetic data) — buy in the OTE zone, but the retracement does not stop. Price closes below the range low and the stop is hit."
+/>
+
+Discount only says that price is cheaper inside the range. Once the range low breaks, the range no longer exists, so the zone means nothing. That is why the stop sits beyond the range low: the idea ends there.
+
+## Common mistakes
+
+| Mistake                            | Why it hurts            | Fix                               |
+| :--------------------------------- | :---------------------- | :-------------------------------- |
+| Entering because of the zone alone | No reason               | Match OB/FVG and structure        |
+| Picking the wrong swing            | Zone in the wrong place | Higher-timeframe swing            |
+| Buying discount in a downtrend     | Cheap gets cheaper      | Direction first                   |
+| Treating the numbers as law        | 62–79 is not a rule     | Think of it as a zone, not a line |
+
+<Callout type="tip">
+  When the range changes (a new high forms), redraw EQ and OTE. Do not hold on
+  to the old zone.
+</Callout>
+
+## Summary
+
+<KeyTakeaways>
+
+- Dealing range = swing low to swing high; EQ = 50%.
+- Premium for selling, discount for buying; but direction comes from structure.
+- OTE = 62–79% retracement; a common convention, not a law of nature.
+- If the range breaks, the zone is void; the stop is there.
+
+</KeyTakeaways>
+
+## Practice task
+
+On XAUUSD H1, draw the dealing range, EQ and OTE for five impulses from last month. For each, check whether price returned to the OTE and what it did.
+
+## Quiz
+
+1. What is equilibrium?
+2. In an uptrend, which part do you look to buy in?
+3. Which retracement levels make the OTE zone?
+4. When does a buy in discount fail?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** The 50% level of the dealing range.
+
+**2.** Discount, the lower half below EQ.
+
+**3.** 62% to 79% (70.5% is singled out).
+
+**4.** When the range low breaks; the range is then void.
+
+</details>
+
+## Next steps
+
+- Chapter overview: [SMC / ICT in Depth](/en/learn/19-smc-ict/00-overview).
+- Previous lesson: [Order Block and FVG](/en/learn/19-smc-ict/03-order-block-fvg).
+- Next lesson: [Sessions and Kill Zones](/en/learn/19-smc-ict/05-sessions-kill-zones).
+
+<Disclaimer>
+  This article is for educational purposes only and is not financial advice. No
+  trading methodology guarantees profit. Forex and gold trading carry
+  significant financial risk, and you can lose all of your capital. Practise on
+  a demo account before trading with real money.
+</Disclaimer>

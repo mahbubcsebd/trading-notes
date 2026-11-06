@@ -15,9 +15,9 @@
     "value-area",
     "poc"
   ],
-  "module": "16-advanced",
+  "module": "16-trading-methodologies",
   "lessonSlugs": [
-    "02-volume-profile-market-profile"
+    "05-volume-profile"
   ],
   "caption": {
     "en": "A profile from the first session gives POC 1.093, VAH 1.0945, VAL 1.092. Price pokes above VAH, falls back inside, and the sell at 1.0944 rotates to VAL.",

@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ThemeToggle } from "./ThemeToggle";
+import { InstallButton } from "./InstallButton";
 import { LogoMark } from "./LogoMark";
 import { NavLinks } from "./NavLinks";
 import { MobileNav } from "./MobileNav";
@@ -32,6 +33,7 @@ export function Header({ lang = "bn" }: { lang: string }) {
         <div className="flex shrink-0 items-center gap-2">
           <SearchButton lang={lang} labels={t} />
           <LanguageSwitcher currentLang={lang} />
+          <InstallButton lang={lang} />
           <ThemeToggle />
           <MobileNav lang={lang} items={navItems} />
         </div>

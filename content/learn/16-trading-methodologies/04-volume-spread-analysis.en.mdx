@@ -1,0 +1,386 @@
+---
+title: "Volume Spread Analysis (VSA): Reading Strength and Weakness Bar by Bar — A Plain Guide"
+description: "What VSA is: how spread, close and volume together show a bar's strength or weakness, no demand, upthrust, shakeout, strengths and limits, on an XAUUSD chart."
+level: intermediate
+tags: [vsa, volume-spread-analysis, volume, no-demand, upthrust, methodology]
+instruments: [XAUUSD]
+timeframes: [H1, H4, D1]
+status: done
+sources:
+  - type: other
+    title: "Volume spread analysis (Wikipedia)"
+    url: "https://en.wikipedia.org/wiki/Volume_spread_analysis"
+  - type: blog
+    title: "Wyckoff Method (Investopedia)"
+    url: "https://www.investopedia.com/terms/w/wyckoffmethod.asp"
+  - type: other
+    title: "Park & Irwin (2007), What Do We Know About the Profitability of Technical Analysis? (Journal of Economic Surveys)"
+    url: "https://doi.org/10.1111/j.1467-6419.2007.00519.x"
+updated: 2026-11-07
+---
+
+# Volume Spread Analysis (VSA): Reading Strength and Weakness Bar by Bar
+
+Wyckoff reads the story of a whole range. VSA reads **one sentence of that story at a time**. The question is simple: how much effort (volume) went into this one bar, and how does the result (spread and close) look? Do the two agree, or not?
+
+## At a glance
+
+<MethodCard
+  lang="en"
+  name="Volume Spread Analysis (VSA)"
+  origin="Tom Williams, from Wyckoff's ideas"
+  reads="Price + Volume"
+  question="Do this bar's spread, close and volume show strength or weakness?"
+  timeframes="H1 to D1"
+  difficulty="intermediate"
+  subjectivity="medium"
+  needsVolume
+/>
+
+## What you will learn
+
+- Recognise the three parts of a bar: spread, close and volume.
+- Read a bar with the effort-versus-result principle.
+- Tell strength signals (stopping volume, shakeout, test) from weakness signals (no demand, upthrust).
+- Understand why a single bar is not enough and **background** is needed.
+- Know VSA's limits in Forex and Gold because of tick volume.
+
+## History and origin
+
+**Tom Williams** is the person most associated with naming and spreading VSA. From the 1990s he spread the method through books and training. His method came directly from **Wyckoff's ideas**, especially the effort-result principle.
+
+- **Wyckoff** reads the whole range and its phases; **VSA** goes down to the level of each bar. So many people call VSA the "bar-level form" of Wyckoff.
+- **Names and signals:** terms such as "no demand", "upthrust" and "stopping volume" are mostly used by teachers in the Wyckoff tradition. Not every teacher gives exactly the same definitions.
+- Tom Williams's work is usually found in his own books and courses. For independent research, see the "Weaknesses" section.
+
+Prerequisite: the Wyckoff Method (previous lesson). Its effort-result idea is the main foundation here.
+
+## Core philosophy
+
+**VSA's question: do this bar's spread, close and volume show strength or weakness?**
+
+The belief is this: the work of big players leaves a mark on volume. So if you compare volume and price movement in every bar, you can see which way the big hand is leaning.
+
+An analogy: a crowd at a shop's cash counter (volume), yet very few sales (small spread). Something is off: people are coming but not buying, or someone inside is turning everyone away.
+
+<Callout type="note">
+  VSA is a **bar-based interpretation**. It does not say "a big player is doing
+  this"; it says, "this bar behaves like strength / like weakness." The
+  interpretation is an inference, not proof.
+</Callout>
+
+## Core concepts
+
+### 1. Three components: spread, close, volume
+
+- **Spread:** the distance from the bar's high to its low. Wide means a big move.
+- **Close:** where the bar closes: near the high, in the middle, or near the low.
+- **Volume:** how much activity in that bar. More, less or normal compared with the previous few bars.
+
+The three are read **together**, not separately. Wide spread + close near the high + high volume looks like strength. Wide spread + close near the low + high volume hints at the opposite.
+
+### 2. Effort vs result
+
+**Volume is the effort, spread is the result. If the two agree, the bar is normal; if not, that is the signal.**
+
+- Big volume, small spread: much effort, little result. Someone on the other side is absorbing.
+- Small volume, big spread: price moved without effort. A hollow move that will not last.
+
+An analogy: two people pushing a heavy cupboard, not pulling it with a string. If the cupboard barely moves, someone on the other side is pushing back.
+
+<DiagramRow>
+  <CandleDiagram
+    title="Effort and result agree"
+    verdict="good"
+    verdictLabel="Normal strength"
+    candles={[
+      { o: 14, h: 15, l: 13.5, c: 14.5, dim: true },
+      { o: 14.5, h: 15.5, l: 14, c: 15, dim: true },
+      { o: 15, h: 20, l: 14.8, c: 19.6, label: "Wide up, high volume" },
+      { o: 19.6, h: 21, l: 19, c: 20.5 },
+    ]}
+    caption="A wide up bar on high volume, closing near the high. Effort and result agree."
+  />
+  <CandleDiagram
+    title="Effort and result disagree"
+    verdict="bad"
+    verdictLabel="Hint of weakness"
+    candles={[
+      { o: 14, h: 15, l: 13.5, c: 14.5, dim: true },
+      { o: 14.5, h: 15.5, l: 14, c: 15, dim: true },
+      { o: 15, h: 15.8, l: 14.6, c: 15.4, label: "Small spread, high volume" },
+      { o: 15.4, h: 15.6, l: 14, c: 14.3 },
+    ]}
+    caption="Huge volume, yet a small bar. Someone is selling above and absorbing it all. Price fell afterwards."
+  />
+</DiagramRow>
+
+### 3. Strength signals
+
+A few bar types usually hint at demand or exhausted selling:
+
+| Signal          | What it looks like                                               | Usual reading                        |
+| :-------------- | :--------------------------------------------------------------- | :----------------------------------- |
+| Stopping volume | Very big volume in a downtrend; the fall stops / the close lifts | Big buyers are absorbing the selling |
+| Shakeout        | A new low on very high volume, but closing near the high         | Weak hands have left                 |
+| Test            | A narrow bar after the shakeout, on the lowest volume            | Supply has dried up                  |
+| No supply       | A down bar, narrow spread, low volume                            | Sellers are not interested           |
+
+**Shakeout and Test:** a strong pair. First scare the weak out (high volume), then check whether any sellers remain (low volume). This is the bar-level form of Wyckoff's spring and test.
+
+### 4. Weakness signals
+
+The opposite side:
+
+| Signal         | What it looks like                                                            | Usual reading                             |
+| :------------- | :---------------------------------------------------------------------------- | :---------------------------------------- |
+| No demand      | An up bar, narrow spread, volume equal to or lower than the previous two bars | Buyers not interested, the rise is hollow |
+| Upthrust       | Touches a new high and closes near the low, big volume                        | A trap above: buyers get stuck            |
+| Buying climax  | Very big volume, wide up bar, large upper wick                                | Demand at its end                         |
+| Effort to rise | High volume but a small up spread                                             | Sellers above are absorbing               |
+
+**Upthrust:** a related idea is a [liquidity sweep](/en/learn/03-market-structure/04-liquidity-stop-hunts). Price touches the stops above and returns.
+
+### 5. Background: one bar is not enough
+
+**A bar's meaning depends on what happened before it.** The same "small spread, low volume up bar" means nothing in a pause inside a strong uptrend, but if the previous few bars showed weakness, it is no demand.
+
+An analogy: a student keeping quiet in class. Before an exam it means one thing, the day before a holiday another.
+
+The rule: **background first, then the signal bar.** Background means: where (range edge, a new high/low), how the earlier trend looked, and how volume has been over the last few bars.
+
+### 6. Comparing volume: what is "high" and what is "low"?
+
+In VSA, volume is always **relative**: against the average of the previous 10–20 bars. The number alone says nothing. So "huge" usually means one and a half to two times the average or more, and "low" means half or less. This limit is not a strict rule, just a rough guide.
+
+### 7. The tick volume problem
+
+<Callout type="warning">
+  **The limit of volume in Forex and Gold.** Spot Forex and spot Gold have no
+  central exchange. The volume in MT4/MT5 is really **tick volume**: how many
+  times price changed on your broker's server. It is not actual trading. **VSA
+  is hit hardest by this limit,** because each of its signals depends on subtle
+  differences in volume. An alternative: Gold futures (CME GC) volume. And watch
+  for big differences (a sudden doubling or halving), not small ones.
+</Callout>
+
+## Reading the shared chart
+
+The same XAUUSD H4 chart from the chapter, now bar by bar. The average spread is about 12 dollars and the average volume about 1165 (synthetic tick volume).
+
+<Chart
+  id="meth-vsa-shared"
+  height={520}
+  caption="XAUUSD H4 (educational synthetic data) — Bar by bar: stopping volume at the low, a low-volume test after the spring, a wide up bar showing strength, no demand on the last push up, an upthrust at the top. Tick volume (synthetic) below."
+/>
+
+<Steps>
+
+### Step 1: Stopping volume
+
+At the end of the downtrend one bar touches the low **2296** and closes at 2306. Volume **3200**, almost three times the average. So much selling, yet price did not fall further. Big buyers are absorbing: stopping volume.
+
+### Step 2: Spring and Test
+
+Later a bar drops to **2287** and closes at 2304 (volume 1500): a new low but the close has come back up, like a shakeout. Two bars later a narrow bar (spread 12) with volume only **450**, about two fifths of the average: the test. There are almost no sellers.
+
+### Step 3: The wide up bar of strength
+
+Price breaks the range ceiling and closes at 2346. Spread 17 (above average), volume **2400**, close near the high. Effort and result agree: strength.
+
+### Step 4: No demand
+
+High up, in the 2458–2474 area, a few small up bars: spread 8, volume about **600**, half the average. There is a rise, but no one is buying. No demand.
+
+### Step 5: Upthrust
+
+The next bar touches a high of **2487** but closes at **2467**, near the low (spread 22, the widest on the chart). Volume **2600**. Big volume and a weak close at a new high: an upthrust. Price then falls.
+
+</Steps>
+
+<Callout type="tip">
+  Look at the order of steps 4 and 5: first a hollow rise on low volume (the
+  background is built), then the signal bar. The same upthrust-like bar in the
+  middle of a strong trend would not mean as much.
+</Callout>
+
+## Basic trade logic
+
+In VSA the signal bar is usually the **setup**; the entry comes on the confirmation of the next bar.
+
+| Part       | Rule (common form)                                             | On the shared chart (synthetic)           |
+| :--------- | :------------------------------------------------------------- | :---------------------------------------- |
+| Background | Under a downtrend/range, signs of absorption (stopping volume) | Under the range at 2296                   |
+| Setup      | A shakeout and then a low-volume test                          | The 2287 spring, then the volume-450 test |
+| Entry      | Above the high of the test bar (demand returning)              | About 2314                                |
+| Stop loss  | Below the shakeout low                                         | 2285                                      |
+| Target     | The next level or a multiple of the stop distance (e.g. 2R)    | 2314 + 58 = 2372                          |
+
+The arithmetic: risk 2314 − 2285 = 29, reward 2372 − 2314 = 58, ratio **1:2**. On this synthetic chart price later passed 2372.
+
+Another example, XAUUSD H1 (synthetic), just to show a shakeout and a test:
+
+<Chart
+  id="meth-vsa-ex-01"
+  height={440}
+  caption="XAUUSD H1 (educational synthetic data) — A new low on very high volume (2600) but closing near the high (shakeout); two bars later a narrow down bar on the lowest volume (300), the test. Buy above the test, stop 2305.0, target about 2.5R."
+/>
+
+<Callout type="warning">
+  There is no VSA entry without a stop loss. A bar's interpretation is an
+  assumption; the stop is the exit for when it is wrong. Position size: [Risk
+  per trade](/en/learn/08-risk-management/01-risk-per-trade).
+</Callout>
+
+## Strengths
+
+- **Fine-grained view.** Even one bar offers clues; you need not wait for a whole range.
+- **Complements Wyckoff.** Wyckoff tells the story, VSA looks for the meaning of each sentence.
+- **Clear stop logic.** The shakeout low or the upthrust high: you know where the signal is wrong.
+- **The effort-result principle is universal.** The question "does volume agree with price?" helps in any method.
+
+## Weaknesses and limits
+
+- **A single bar without background is weak.** The exact same bar can mean strength or weakness, depending on context.
+- **Judgment-based (subjectivity: medium).** How much is "high volume", how narrow is a "narrow spread", how close to the low is "near the low": definitions differ between teachers. There are rough rules, but not mechanical ones.
+- **Most dependent on tick volume.** Spot Forex and Gold have no actual volume. Tick volume changes when you change broker. For a method whose every signal depends on volume, this is the biggest problem.
+- **Easy to arrange after the fact.** Going back over a chart and saying "that was no demand" is easy. Live, many bars are ambiguous.
+- **More signals, less certainty.** If you try to interpret every bar you can always find a "signal". Not all signals matter.
+
+**Evidence status:** there is little independent, large-scale research on VSA; most of the knowledge comes from Tom Williams's books and practitioners' courses. General research on technical analysis is mixed (Park and Irwin, 2007). **No method guarantees profit.** Verify it in your own backtest.
+
+Here is a failed example. Selling an assumed upthrust, but the background was a strong uptrend:
+
+<Chart
+  id="meth-vsa-fail-01"
+  height={440}
+  caption="XAUUSD H1 (educational synthetic data) — An upthrust-looking bar in a strong uptrend; the sell at 2368.5 fails as wide up bars on rising volume return; the stop at 2383.5 is hit (risk 15, loss 1R)."
+/>
+
+The lesson: **one bar does not reverse a trend.** Before the upthrust there were no signs of weakness (no demand, falling volume), so the signal was not credible. Background first.
+
+## Who it suits
+
+| Suits you if you…                            | Does not suit you if you…                                    |
+| :------------------------------------------- | :----------------------------------------------------------- |
+| Have understood Wyckoff and want to go finer | Are a complete beginner who has not learned Price Action yet |
+| Have access to futures or real volume        | Have only spot Forex/Gold tick volume                        |
+| Like reading a chart slowly, bar by bar      | Want clear, mechanical rules                                 |
+| Work on H1–D1 timeframes                     | Scalp on M1–M5 (volume noise is high)                        |
+
+## Combining with other methods
+
+- **VSA + Wyckoff:** the most natural. Wyckoff says "which phase now", VSA says "what is this bar saying". See the previous lesson.
+- **VSA + Price Action:** at support/resistance a VSA signal means more, because there is background.
+- **VSA + Volume Profile:** knowing at which prices more trading happened makes "a rise on low volume" clearer. See the next lesson.
+
+**What not to mix:** a pile of volume oscillators with VSA. Both are built from the same raw information, so certainty does not grow. Look at volume and VWAP indicators separately: [Volume and VWAP](/en/learn/07-technical-indicators/06-volume-vwap).
+
+## Deep dive later
+
+This lesson is an overview. A separate series could cover:
+
+- The full list of bar types (no supply, effort to fall, climactic action and so on)
+- A classification of background (trend, range, climax)
+- Multi-bar signals (the order of test and confirmation)
+- Applying it to Gold with futures volume
+
+**Sub-series suggestion:** yes, later. Reason: putting the full list of bar types and the background classification into this lesson would pass 3,000 words. The decision is yours.
+
+## How to start
+
+<Steps>
+
+### Step 1: A chart with volume
+
+Open XAUUSD H4 and turn volume on. Know that it is tick volume.
+
+### Step 2: Write the three components
+
+For each of the last 50 bars write: spread (wide/medium/narrow), close (top/middle/bottom), volume (high/normal/low).
+
+### Step 3: Find the unusual ones
+
+Mark the bars where effort and result did not agree (big volume, small spread; or the reverse).
+
+### Step 4: See what happened next
+
+For each unusual bar, write the next 5 bars. How often did the signal work? What was the background?
+
+### Step 5: Write the rules and backtest
+
+Pick one pair (such as shakeout + test) and write the rules. [Backtest](/en/learn/15-backtesting-journal/01-how-to-backtest) on at least 30 examples.
+
+</Steps>
+
+## Common mistakes
+
+| Mistake                                    | Why it is a problem                | Fix                                                   |
+| :----------------------------------------- | :--------------------------------- | :---------------------------------------------------- |
+| Trading a single bar without background    | The same bar can have two meanings | Context first: where, what trend, how volume has been |
+| Treating tick volume as real volume        | Differs by broker, approximate     | Watch only big differences; look at futures volume    |
+| Treating every bar as a signal             | You can always "find" something    | Only at key places (range edges, new highs/lows)      |
+| Reading a volume number without comparison | A number alone says nothing        | Compare with the average of the previous 10–20 bars   |
+| Entering without confirmation              | One bar can reverse on the next    | Enter on the next bar's strength, and set a stop      |
+
+## Summary
+
+<KeyTakeaways>
+
+- VSA reads strength or weakness from each bar's spread, close and volume together.
+- The core principle: when effort (volume) and result (spread) disagree, that is the signal.
+- Strength: stopping volume, shakeout, test, no supply. Weakness: no demand, upthrust, buying climax.
+- One bar is not enough; background first, then the signal bar.
+- Tick volume in spot Forex/Gold is approximate, and this method is hit hardest. No guaranteed profit.
+
+</KeyTakeaways>
+
+## Quiz
+
+1. What are VSA's three components?
+2. What does effort vs result mean?
+3. Why are shakeout and test a pair?
+4. What does a no demand bar look like?
+5. Why is selling a single upthrust bar risky?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** Spread (high-low distance), close (where the bar closes), volume.
+
+**2.** Volume is the effort, spread is the result. When they do not agree (big volume with small spread, or the reverse), that is the signal.
+
+**3.** The shakeout (high volume) shakes out weak hands; the test (low volume) shows whether any sellers remain. Together they hint at strength.
+
+**4.** An up bar, narrow spread, volume equal to or lower than the previous two bars. Buyers are not interested.
+
+**5.** Without background, one bar does not reverse a trend. An upthrust-like bar in a strong uptrend can fail, as the failed example showed.
+
+</details>
+
+## Next steps
+
+- Chapter comparison: [Trading Methodologies: the eight approaches](/en/learn/16-trading-methodologies/00-overview).
+- Previous lesson: [Wyckoff Method](/en/learn/16-trading-methodologies/03-wyckoff-method).
+- Next lesson: [Volume Profile](/en/learn/16-trading-methodologies/05-volume-profile).
+- Related: [Candle context](/en/learn/04-candlesticks/05-candle-context), [Backtest](/en/learn/15-backtesting-journal/01-how-to-backtest).
+
+### Sources
+
+- <ExternalLink href="https://en.wikipedia.org/wiki/Volume_spread_analysis">
+    Volume spread analysis (Wikipedia)
+  </ExternalLink>
+- <ExternalLink href="https://www.investopedia.com/terms/w/wyckoffmethod.asp">
+    Wyckoff Method (Investopedia)
+  </ExternalLink>
+- <ExternalLink href="https://doi.org/10.1111/j.1467-6419.2007.00519.x">
+    Park & Irwin (2007), What Do We Know About the Profitability of Technical
+    Analysis?
+  </ExternalLink>
+
+<Disclaimer>
+  This article is for educational purposes only and is not financial advice. No
+  trading methodology guarantees profit. Forex and gold trading carry
+  significant financial risk, and you can lose all of your capital. Practise on
+  a demo account before trading with real money.
+</Disclaimer>

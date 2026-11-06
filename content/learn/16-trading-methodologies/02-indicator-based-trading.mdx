@@ -1,0 +1,381 @@
+---
+title: "Indicator-Based Trading: সূত্র দিয়ে market মাপা — বাংলায় সহজ গাইড"
+description: "Indicator-Based Trading কী, moving average, RSI, MACD, ATR কীভাবে দাম মাপে, lag, whipsaw আর overfitting-এর সীমা: XAUUSD chart-এ উদাহরণসহ।"
+level: beginner
+tags: [indicators, moving-average, rsi, macd, atr, methodology]
+instruments: [XAUUSD]
+timeframes: [H4, D1]
+status: done
+sources:
+  - type: other
+    title: "Technical analysis (Wikipedia)"
+    url: "https://en.wikipedia.org/wiki/Technical_analysis"
+  - type: other
+    title: "Relative strength index (Wikipedia)"
+    url: "https://en.wikipedia.org/wiki/Relative_strength_index"
+  - type: other
+    title: "Moving average (Wikipedia)"
+    url: "https://en.wikipedia.org/wiki/Moving_average"
+  - type: other
+    title: "Average true range (Wikipedia)"
+    url: "https://en.wikipedia.org/wiki/Average_true_range"
+  - type: other
+    title: "Park & Irwin (2007), What Do We Know About the Profitability of Technical Analysis? (Journal of Economic Surveys)"
+    url: "https://doi.org/10.1111/j.1467-6419.2007.00519.x"
+updated: 2026-11-07
+---
+
+# Indicator-Based Trading: সূত্র দিয়ে market মাপা
+
+Price Action-এ আপনি নিজের চোখে বিচার করেন, "এই breakout কি শক্ত?" Indicator-Based Trading উল্টো পথ ধরে। এখানে বিচারের কাজটা একটি **সূত্রকে** দেওয়া হয়। সূত্র দাম নেয়, হিসাব করে, একটি রেখা বা সংখ্যা দেয়। আপনি শুধু নিয়ম মেনে চলেন।
+
+## এক নজরে
+
+<MethodCard
+  name="Indicator-Based Trading"
+  origin="নানা জন; RSI ও ATR: J. Welles Wilder, 1978"
+  reads="Indicators (math on price/volume)"
+  question="সূত্রে মাপা momentum ও trend কী বলছে?"
+  timeframes="সব timeframe"
+  difficulty="beginner"
+  subjectivity="low"
+/>
+
+## এই লেখা পড়ে আপনি যা পারবেন
+
+- Indicator কী করে আর কী করে না, এক বাক্যে বলতে পারবেন।
+- Trend, momentum আর volatility: তিন ধরনের indicator আলাদা করতে পারবেন।
+- Lagging ও leading indicator-এর পার্থক্য এবং কেন কোনোটিই নিখুঁত নয়, বুঝবেন।
+- Range-এ whipsaw আর backtest-এ overfitting চিনতে পারবেন।
+- Shared XAUUSD chart-এ indicator কখন সাহায্য করে, কখন দেরি করে, দেখবেন।
+
+## ইতিহাস ও উৎপত্তি
+
+Indicator-Based Trading-এর **কোনো একক প্রতিষ্ঠাতা নেই।** এটি অনেক আবিষ্কারের সমষ্টি।
+
+- **Moving average:** দামের গড় নিয়ে ঢেউ মসৃণ করার ধারণা বহু পুরোনো। কোনো একজনকে এর স্রষ্টা বলা যায় না।
+- **J. Welles Wilder Jr.:** তাঁর ১৯৭৮ সালের বই _New Concepts in Technical Trading Systems_-এ RSI, ATR ও আরও কিছু indicator এসেছে। আজকের default setting (যেমন RSI-এর ১৪ period) সেখান থেকে।
+- **MACD ও Bollinger Bands:** MACD তৈরি করেন Gerald Appel (১৯৭০-এর দশক), Bollinger Bands John Bollinger (১৯৮০-এর দশক)। পরিচিত default: MACD ১২-২৬-৯, Bollinger ২০ period ও ২ standard deviation।
+- **কম্পিউটার যুগ:** chart software আসার পর শত শত indicator তৈরি হয়েছে। এখন যে কেউ নিজের indicator লিখতে পারে।
+
+## মূল দর্শন
+
+**Indicator-এর প্রশ্ন: সূত্রে মাপা momentum আর trend কী বলছে?**
+
+বিশ্বাসটা এই: মানুষের চোখ ক্লান্ত হয়, পক্ষপাতে ভোগে। সূত্র ক্লান্ত হয় না। একই input দিলে একই output দেয়। তাই নিয়ম লিখে সেই output মেনে চললে সিদ্ধান্ত স্থির থাকে।
+
+তুলনা: ডাক্তার রোগীর কপালে হাত দিয়ে জ্বর আন্দাজ করতে পারেন। থার্মোমিটার সেটাকে একটি সংখ্যা বানায়। সংখ্যা নিখুঁত নয়, কিন্তু সবাই একই সংখ্যা দেখে।
+
+<Callout type="note">
+  Indicator নতুন কোনো তথ্য আনে না। এটি **একই দামকে** অন্যভাবে সাজায়। প্রতিটি
+  indicator দাম (আর কখনো volume) থেকে তৈরি। তাই এর কাজ সংক্ষেপ করা, ভবিষ্যৎ বলা
+  নয়।
+</Callout>
+
+## মূল ধারণাগুলো
+
+প্রতিটি indicator-এর পূর্ণ পাঠ আগের অধ্যায়ে আছে। এখানে methodology-র চোখে সাতটি ধারণা।
+
+### ১. Trend indicator: Moving average
+
+**Moving average (MA) হলো শেষ কয়েকটি close-এর গড়, যা প্রতি candle-এ সামনে সরে।** SMA সব দামকে সমান গুরুত্ব দেয়। EMA সাম্প্রতিক দামকে বেশি গুরুত্ব দেয়, তাই দ্রুত সাড়া দেয়।
+
+তুলনা: গত ২০ দিনের গড় তাপমাত্রা। আজ এক দিন গরম হলেও গড় সামান্যই নড়ে। গড় দেখে ঋতু বোঝা যায়, আজকের আবহাওয়া নয়।
+
+সাধারণ নিয়ম: দাম MA-র ওপরে থাকলে uptrend, নিচে থাকলে downtrend। দুটি MA-র cross (যেমন EMA 20 ওপরে উঠে EMA 50 পেরোলে) trend বদলের সংকেত। বিস্তারিত: [Moving average ও crossover](/bn/learn/07-technical-indicators/01-moving-averages-crossover)।
+
+### ২. Momentum indicator: RSI
+
+**RSI (Relative Strength Index) ০ থেকে ১০০-র মধ্যে একটি সংখ্যা, যা সাম্প্রতিক ওঠা আর নামার শক্তি তুলনা করে।** প্রচলিত নিয়ম: ৭০-এর ওপরে overbought, ৩০-এর নিচে oversold।
+
+তুলনা: গাড়ির গতিমিটার। গতি বেশি মানে গাড়ি এখনই থামবে, এমন নয়। শুধু বোঝা যায় এটি দ্রুত চলছে।
+
+এখানেই সবচেয়ে বড় ভুল: **শক্ত trend-এ RSI দীর্ঘদিন ৭০-এর ওপরে থাকতে পারে।** Overbought মানে "বিক্রি করো" নয়। বেশি কাজের সংকেত **divergence**: দাম নতুন high করল, কিন্তু RSI আগের high ছুঁতে পারল না। বিস্তারিত: [RSI ও divergence](/bn/learn/07-technical-indicators/02-rsi-divergence)।
+
+<CandleDiagram
+  title="Bearish divergence"
+  candles={[
+    { o: 10, h: 14, l: 9.5, c: 13.5, dim: true },
+    { o: 13.5, h: 18, l: 13, c: 17.5, note: "High 1" },
+    { o: 17.5, h: 18, l: 14.5, c: 15, dim: true },
+    { o: 15, h: 17, l: 14.5, c: 16.5, dim: true },
+    { o: 16.5, h: 20, l: 16, c: 18, note: "High 2 (উঁচু)" },
+    { o: 18, h: 18.5, l: 14.5, c: 15, label: "ঘুরে যায়" },
+  ]}
+  caption="দ্বিতীয় high প্রথমটির চেয়ে উঁচু, কিন্তু push-এর শক্তি কম (ছোট body, বড় upper wick)। RSI এই দুর্বলতা মাপে।"
+/>
+
+### ৩. Momentum ও trend একসাথে: MACD
+
+**MACD হলো দুটি EMA-র পার্থক্য (সাধারণত ১২ ও ২৬), সাথে সেই পার্থক্যের একটি ৯-period signal line।** দুই রেখার cross ও শূন্য-রেখার সাপেক্ষে অবস্থান দেখা হয়।
+
+তুলনা: দুজন দৌড়বিদের মধ্যে ফাঁক। ফাঁক বাড়লে এগিয়ে থাকা জন গতি বাড়াচ্ছে। ফাঁক কমলে গতি কমছে, আগে মোড় নেওয়া শুরুর আভাস পাওয়া যায়।
+
+বিস্তারিত: [MACD](/bn/learn/07-technical-indicators/03-macd)।
+
+### ৪. Volatility indicator: ATR ও Bollinger Bands
+
+**ATR (Average True Range) গড়ে একটি candle কতটা নড়ে, তা মাপে।** এটি দিক বলে না, শুধু নড়াচড়ার আকার বলে। তাই stop size ঠিক করতে কাজে লাগে। **Bollinger Bands** ২০ period MA-র দুই পাশে ২ standard deviation দূরে দুটি রেখা টানে। Band সরু হলে volatility কম, চওড়া হলে বেশি।
+
+তুলনা: নদীর ঢেউয়ের উচ্চতা। ঢেউ কত বড় জানলে বুঝবেন নৌকা কত দূরে বাঁধলে নিরাপদ।
+
+বিস্তারিত: [ATR দিয়ে stop size](/bn/learn/07-technical-indicators/04-atr-stop-size), [Bollinger Bands](/bn/learn/07-technical-indicators/05-bollinger-bands)।
+
+### ৫. Lagging বনাম leading
+
+**Lagging indicator ঘটনার পরে সাড়া দেয়; leading indicator আগে ইঙ্গিত দেওয়ার চেষ্টা করে।** MA-ভিত্তিক সবই lagging, কারণ গড় অতীত থেকে তৈরি। RSI divergence-কে অনেকে leading বলেন, কিন্তু সেটিও দামের পরেই আসে।
+
+সৎ কথা: **সব indicator কিছুটা lagging।** কারণ সব দাম থেকে হিসাব করা। দ্রুত সাড়া দিতে (ছোট period) গেলে সংকেত বেশি আসে, কিন্তু ভুলও বেশি। ধীর করলে (বড় period) ভুল কমে, কিন্তু দেরি বাড়ে। এটা দেওয়া-নেওয়ার ব্যাপার, সমাধান নেই।
+
+| Period        | সুবিধা      | অসুবিধা                |
+| :------------ | :---------- | :--------------------- |
+| ছোট (যেমন ৯)  | দ্রুত সংকেত | বেশি ভুল সংকেত (noise) |
+| বড় (যেমন ৫০) | কম ভুল      | সংকেত অনেক দেরিতে      |
+
+### ৬. Whipsaw: range-এ ফাঁদ
+
+**Whipsaw হলো এমন অবস্থা, যখন sideways market-এ indicator বারবার উল্টো সংকেত দেয়।** Trend-follow করা indicator trend থাকলে ভালো চলে। Range-এ দাম এদিক-ওদিক ঘোরে, MA বারবার cross করে, প্রতিটি cross একটি ছোট লোকসান রেখে যায়।
+
+তুলনা: কাঠ কাটার করাত (saw) সামনে-পেছনে চলে। কাঠ না কেটেই ক্লান্ত হওয়া।
+
+প্রতিকার: আগে বুঝে নিন market trending না ranging। তারপর indicator বেছে নিন। Trend-এর indicator range-এ আর oscillator শক্ত trend-এ বিভ্রান্ত করে।
+
+### ৭. Repainting ও overfitting
+
+দুটি আলাদা ফাঁদ।
+
+- **Repainting:** কিছু indicator পুরোনো candle-এর মান পরে বদলে ফেলে। Chart-এ সংকেতটি অতীতে নিখুঁত দেখায়, কিন্তু live-এ আসেনি। **ইতিহাসে নিখুঁত সংকেত দেখলে সন্দেহ করুন।**
+- **Overfitting:** যথেষ্ট setting (period, threshold) ঘুরিয়ে দেখলে অতীত data-তে সবসময় একটি লাভজনক মিশ্রণ পাওয়া যায়। কিন্তু সেটা শুধু ওই data-র আকারের সাথে মিলেছে, ভবিষ্যতের সাথে নয়।
+
+তুলনা: পরীক্ষার প্রশ্ন আগে জানা থাকলে সবাই ১০০ পায়। আসল পরীক্ষার প্রশ্ন নতুন হলে ফল আলাদা।
+
+প্রতিকার: setting কম রাখুন, ছোট পরিসরে "সেরা" মান খুঁজবেন না, আর data-কে দুই ভাগ করুন: এক ভাগে নিয়ম বানান, অন্য ভাগে পরীক্ষা করুন। বিস্তারিত: [কীভাবে backtest করবেন](/bn/learn/15-backtesting-journal/01-how-to-backtest)।
+
+## Shared chart-এ পড়া
+
+অধ্যায়ের সেই একই XAUUSD H4 chart। এবার EMA 20, EMA 50 আর RSI 14 দিয়ে।
+
+<Chart
+  id="meth-ind-shared"
+  height={520}
+  caption="XAUUSD H4 (শিক্ষামূলক কাল্পনিক ডেটা) — EMA 20 (নীল) ও EMA 50 (বেগুনি), নিচে RSI 14। EMA cross up ও breakout-এর মধ্যে দশ bar-এর ফাঁক; শেষ high-এ RSI lower high; নামার পরও EMA দুটি নিচে cross করেনি।"
+/>
+
+<Steps>
+
+### ধাপ ১: Range-এ প্রায় কিছুই বলে না
+
+দাম 2296–2344 range-এ ঘুরছে (ধূসর zone)। এই অংশে EMA 50 তখনো তৈরিই হয়নি (এর জন্য ৫০টি candle লাগে), আর EMA 20 দামের সাথে লেপ্টে আছে। কোনো পরিষ্কার trend সংকেত নেই। এখানে Indicator-Based পদ্ধতির সৎ উত্তর: "সংকেত নেই।"
+
+### ধাপ ২: Breakout-এর দশ bar পরে cross
+
+দাম range top ভেঙে 2346-এ close করে। কিন্তু **EMA 20, EMA 50-কে পেরোয় আরও দশটি candle পরে**, দাম তখন 2378-এ। অর্থাৎ breakout-এর entry-র তুলনায় প্রায় ৩২ ডলার পরে। Trend-এর নিশ্চয়তা পেলেন, কিন্তু অনেকটা পথ চলে যাওয়ার পর।
+
+### ধাপ ৩: RSI overbought, তবু trend চলে
+
+Wave-এর উঁচুতে RSI প্রায় **76.8** (৭০-এর ওপরে)। কিন্তু দাম এরপরও 2454 থেকে আরও 2487-এ ওঠে। "Overbought = sell" নিয়মে এখানে sell করলে ভুল হতো।
+
+### ধাপ ৪: Bearish divergence
+
+শেষ high-এ দাম 2487, যা আগের 2454 থেকে উঁচু। কিন্তু RSI মাত্র প্রায় **71.6**, আগের 76.8 থেকে কম। দাম নতুন high করেছে, গতি করেনি: bearish divergence। এটিই এই chart-এ সবচেয়ে কাজের সংকেত।
+
+### ধাপ ৫: নামার পরও EMA ওপরে
+
+দাম 2487 থেকে 2394-এ নেমেছে (প্রায় ৯৩ ডলার)। তবু EMA 20 (প্রায় 2425) এখনো EMA 50 (প্রায় 2417)-এর ওপরে। **Trend-এর indicator এখনো "bullish" বলছে**, যদিও দাম অনেকটা পড়ে গেছে। এই হলো lag।
+
+</Steps>
+
+<Callout type="tip">
+  লক্ষ করুন, একই chart-এ indicator তিন রকম আচরণ করল: range-এ চুপ, breakout-এ
+  দেরি, শেষ high-এ divergence দিয়ে একটি সতর্কতা। কোনো একটি indicator সব
+  পরিস্থিতিতে ভালো নয়।
+</Callout>
+
+## Trade-এর মূল যুক্তি
+
+Indicator trade-এর শক্তি, নিয়ম **আগে থেকে লিখে রাখা যায়।** একটি সাধারণ trend-pullback উদাহরণ:
+
+| অংশ       | নিয়ম (সাধারণ রূপ)                                     | নিচের উদাহরণে (EURUSD H4) |
+| :-------- | :----------------------------------------------------- | :------------------------ |
+| Filter    | EMA 20 > EMA 50 এবং দুটিই ওপরমুখী (uptrend)            | দুটিই ওপরমুখী             |
+| Setup     | দাম নেমে EMA 20-তে আসে                                 | Pullback EMA 20 ছুঁয়েছে  |
+| Entry     | Bullish candle EMA 20-এর ওপরে close করলে buy           | Bull candle-এ buy         |
+| Stop loss | Pullback low-এর নিচে                                   | 1.0943                    |
+| Target    | আগের high, বা stop-এর দূরত্বের নির্দিষ্ট গুণ (যেমন 2R) | 1.1057                    |
+
+নিয়মগুলো যান্ত্রিক, তাই একই নিয়ম আপনি ৫০টি পুরোনো উদাহরণে যাচাই করতে পারেন।
+
+<Chart
+  id="ma-trend-pullback-01"
+  height={420}
+  caption="EURUSD H4 (শিক্ষামূলক কাল্পনিক ডেটা) — EMA 20 EMA 50-এর ওপরে এবং ওপরমুখী। দাম EMA 20-তে নেমে bull candle-এ ওপরে close করেছে: buy, stop pullback low-এর নিচে 1.0943, target 1.1057।"
+/>
+
+<Callout type="warning">
+  Indicator সংকেত stop loss-এর বিকল্প নয়। ATR থেকে stop-এর দূরত্ব ঠিক করা যায়,
+  কিন্তু stop রাখতেই হবে। Position size:
+  [Risk per trade](/bn/learn/08-risk-management/01-risk-per-trade)।
+</Callout>
+
+## শক্তি
+
+- **নিয়ম স্পষ্ট।** "EMA 20 > EMA 50" একটি শর্ত যা হ্যাঁ বা না। দুজন trader-এর উত্তর একই হবে।
+- **Backtest সহজ।** নিয়ম যান্ত্রিক বলে কম্পিউটারে যাচাই করা যায়, hindsight bias কম।
+- **আবেগ কমায়।** সিদ্ধান্ত সূত্র দেয়, তাই "আরেকটু দেখি" বলে নিয়ম ভাঙার সুযোগ কম।
+- **শেখা সহজ।** Platform-এ বসিয়ে দিলেই কাজ করে; নতুনদের জন্য ভালো শুরু।
+- **Automation-এর উপযোগী।** যান্ত্রিক নিয়ম robot-এ রূপ দেওয়া যায়। দেখুন [Automation](/bn/learn/15-backtesting-journal/06-automation)।
+
+## দুর্বলতা ও সীমা
+
+- **Subjectivity low, কিন্তু বিচার পুরো বাদ যায় না।** কোন indicator, কোন period, কোন timeframe: এই বাছাই আপনার। নিয়ম যান্ত্রিক, কিন্তু নিয়ম বানানো যান্ত্রিক নয়। তাই "low", "শূন্য" নয়।
+- **দেরিতে সংকেত (lag)।** Shared chart-এ EMA cross breakout-এর দশ bar পরে এসেছিল, আর নামার পরও cross করেনি।
+- **Range-এ whipsaw।** ছোট ক্ষতির সারি জমে বড় ক্ষতি হয়।
+- **Overfitting-এর ঝুঁকি।** Setting যত বেশি ঘোরাবেন, অতীতে তত ভালো দেখাবে, ভবিষ্যতে তত কম।
+- **একই তথ্য বহুবার গোনা।** RSI, MACD, Stochastic: তিনটিই একই দামের গতি মাপে। তিনটি একমত হলে মনে হয় তিনগুণ নিশ্চিত, আসলে একই সাক্ষী তিনবার ডাকা। দেখুন [Indicator overload](/bn/learn/07-technical-indicators/07-indicator-overload)।
+- **Volume indicator:** Spot Forex ও Gold-এ volume আসলে tick volume (প্রকৃত লেনদেন নয়)। এর ওপর তৈরি indicator-ও আনুমানিক।
+
+**প্রমাণের অবস্থা:** Technical trading rule নিয়ে গবেষণা মিশ্র। Park ও Irwin (2007)-এর পর্যালোচনা বলে, আধুনিক গবেষণার অনেকটাই technical rule-এ লাভ দেখিয়েছে, কিন্তু data snooping, লেনদেন খরচ আর পরে-বাছাই করা setting-এর সমস্যার কারণে সেই ফল নিয়ে সংশয় থেকে যায়। Setting বাছাই করার প্রক্রিয়াই overfitting তৈরি করে, এটি এই ক্ষেত্রের পরিচিত সমস্যা। **কোনো indicator নিশ্চিত লাভ দেয় না।**
+
+ব্যর্থ উদাহরণ দেখুন। একই ধরনের নিয়ম, কিন্তু sideways market-এ:
+
+<Chart
+  id="ma-chop-whipsaw-01"
+  height={420}
+  caption="EURUSD H4 (শিক্ষামূলক কাল্পনিক ডেটা) — দাম sideways ঘোরে; EMA 9 বারবার EMA 21 কাটে। প্রতিটি cross একটি signal, কিন্তু লাভ আসার আগেই উল্টে যায়।"
+/>
+
+এই chart শেখায়: indicator নিজে জানে না market trending না ranging। সেই সিদ্ধান্ত আপনাকে নিতে হবে, আর সেজন্যই শুধু indicator যথেষ্ট নয়।
+
+## কার জন্য, কার জন্য নয়
+
+| উপযুক্ত যদি আপনি…                            | উপযুক্ত নয় যদি আপনি…                             |
+| :------------------------------------------- | :------------------------------------------------ |
+| স্পষ্ট নিয়ম ও backtest পছন্দ করেন           | প্রতিটি setup নিজে বিচার করে পড়তে চান            |
+| আবেগে সিদ্ধান্ত বদলে ফেলার প্রবণতা কমাতে চান | Entry যতটা সম্ভব আগে নিতে চান                     |
+| H4/D1-এ দিনে একবার chart দেখেন               | Range market-এ ছোট ক্ষতির সারি সহ্য করতে পারেন না |
+| পরে automation করতে চান                      | সব ঘটনার ব্যাখ্যা চান (কেন দাম নড়ল)              |
+
+## অন্য পদ্ধতির সাথে মেলানো
+
+Indicator সবচেয়ে ভালো কাজ করে **সহায়ক** হিসেবে, একটি নির্দিষ্ট প্রশ্নের উত্তরে।
+
+- **Price Action + MA:** Price Action দিক ও level বলে; EMA 50 শুধু trend filter। দেখুন [Price Action](/bn/learn/16-trading-methodologies/01-price-action)।
+- **যেকোনো পদ্ধতি + ATR:** Stop-এর আকার মাপতে। ATR দিক বলে না, তাই কোনো পদ্ধতির সাথেই বিরোধ করে না।
+- **Volume Profile + VWAP:** দুটিই "ন্যায্য দাম" নিয়ে কথা বলে, তাই স্বাভাবিকভাবে মেলে। দেখুন [Volume ও VWAP](/bn/learn/07-technical-indicators/06-volume-vwap)।
+
+**যা মেশাবেন না:** একই ধরনের তিনটি indicator (দুটি oscillator + MACD)। এরা একই জিনিস মাপে, তাই নিশ্চিয়তা বাড়ে না, শুধু chart ভরে যায়।
+
+## পরে গভীরে যা শিখবেন
+
+এই পাঠ overview। প্রতিটি অংশের পূর্ণ পাঠ আগেই আছে:
+
+- Indicator-এর overview, Moving average ও crossover
+- RSI ও divergence, MACD
+- ATR দিয়ে stop size, Bollinger Bands
+- Backtest ও Automation
+
+Sub-series দরকার নেই: অধ্যায় ০৭ ইতিমধ্যে এর পূর্ণ কোর্স।
+
+## কীভাবে শেখা শুরু করবেন
+
+<Steps>
+
+### ধাপ ১: দুটি indicator
+
+শুধু EMA 50 আর RSI 14 রাখুন। বাকি সব সরিয়ে দিন।
+
+### ধাপ ২: Market-এর ধরন লিখুন
+
+XAUUSD H4-এর গত ছয় মাস ভাগ করুন: trending না ranging। প্রতিটি অংশে EMA 50 কীভাবে আচরণ করেছে লিখুন।
+
+### ধাপ ৩: একটি নিয়ম
+
+এক লাইনে একটি নিয়ম লিখুন (যেমন ওপরের trend-pullback)। Entry, stop, target সংখ্যাসহ।
+
+### ধাপ ৪: ৫০টি উদাহরণ
+
+নিয়মটি অতীতের অন্তত ৫০টি জায়গায় হাতে প্রয়োগ করুন। জয়-পরাজয় আর R লিখুন।
+
+### ধাপ ৫: Range-এ আলাদা করে দেখুন
+
+একই ৫০টির মধ্যে range-এর সময়ের ফল আলাদা করে দেখুন। ওখানেই সাধারণত ক্ষতি জমে।
+
+</Steps>
+
+## সাধারণ ভুল
+
+| ভুল                                         | কেন সমস্যা                                | সমাধান                                          |
+| :------------------------------------------ | :---------------------------------------- | :---------------------------------------------- |
+| Overbought দেখেই sell                       | শক্ত trend-এ RSI দীর্ঘদিন ৭০-এর ওপরে থাকে | Trend দেখুন; divergence সংকেত হিসেবে ধরুন       |
+| বহু indicator একসাথে                        | একই তথ্য বহুবার গোনা, সংকেত পরস্পরবিরোধী  | একটি trend + একটি momentum, সর্বোচ্চ            |
+| Setting ঘুরিয়ে "সেরা" মান খোঁজা            | Overfitting: অতীতে ভালো, ভবিষ্যতে নয়     | Default রাখুন; data দুই ভাগ করে যাচাই করুন      |
+| Range-এ trend-indicator চালানো              | Whipsaw: ছোট ক্ষতির সারি                  | আগে market-এর ধরন বুঝুন                         |
+| Repaint করা indicator-এর ইতিহাস বিশ্বাস করা | অতীতে নিখুঁত, live-এ সংকেত আসেনি          | Live demo-তে যাচাই; ইতিহাসে নিখুঁত দেখলে সন্দেহ |
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- Indicator দামকে সূত্রে সাজায়; নতুন তথ্য আনে না, ভবিষ্যৎও বলে না।
+- তিন ধরন: trend (MA), momentum (RSI, MACD), volatility (ATR, Bollinger)।
+- সব indicator কিছুটা lagging; দ্রুত করলে noise বাড়ে, ধীর করলে দেরি।
+- Range-এ whipsaw, setting ঘোরালে overfitting: এই দুই ফাঁদ চিনে রাখুন।
+- নিয়ম যান্ত্রিক বলে backtest সহজ; subjectivity low, তবু শূন্য নয়। নিশ্চিত লাভ নেই।
+
+</KeyTakeaways>
+
+## কুইজ
+
+1. Indicator-Based Trading-এর মূল প্রশ্ন কী?
+2. Trend, momentum ও volatility-র জন্য একটি করে indicator-এর নাম বলুন।
+3. শক্ত uptrend-এ RSI ৭০-এর ওপরে থাকলে সেটি কি নিজে থেকেই sell সংকেত?
+4. Whipsaw কী, আর কোন market-এ বেশি হয়?
+5. Overfitting কেন backtest-এর ফলকে বিভ্রান্তিকর করে?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** সূত্রে মাপা momentum ও trend কী বলছে।
+
+**২.** Trend: Moving average। Momentum: RSI বা MACD। Volatility: ATR বা Bollinger Bands।
+
+**৩.** না। শক্ত trend-এ RSI দীর্ঘদিন ৭০-এর ওপরে থাকতে পারে। বেশি কাজের সংকেত divergence (দাম নতুন high, RSI নয়)।
+
+**৪.** Sideways market-এ indicator বারবার উল্টো সংকেত দেয়, প্রতিটি ছোট ক্ষতি রেখে যায়। Range বা choppy market-এ বেশি হয়।
+
+**৫.** অনেক setting ঘুরিয়ে অতীত data-র সাথে মিলিয়ে নিলে ফল ভালো দেখায়, কিন্তু সেটা শুধু ওই data-র আকারের সাথে মেলে; নতুন data-তে টেকে না।
+
+</details>
+
+## পরের ধাপ
+
+- অধ্যায়ের তুলনা: [Trading Methodology: আটটি পদ্ধতি](/bn/learn/16-trading-methodologies/00-overview)।
+- আগের পাঠ: [Price Action](/bn/learn/16-trading-methodologies/01-price-action)।
+- পরের পাঠ: [Wyckoff Method](/bn/learn/16-trading-methodologies/03-wyckoff-method)।
+- সম্পর্কিত: [Indicator অধ্যায়](/bn/learn/07-technical-indicators/00-overview), [Backtest](/bn/learn/15-backtesting-journal/01-how-to-backtest)।
+
+### সূত্র
+
+- <ExternalLink href="https://en.wikipedia.org/wiki/Technical_analysis">
+    Technical analysis (Wikipedia)
+  </ExternalLink>
+- <ExternalLink href="https://en.wikipedia.org/wiki/Relative_strength_index">
+    Relative strength index (Wikipedia)
+  </ExternalLink>
+- <ExternalLink href="https://en.wikipedia.org/wiki/Moving_average">
+    Moving average (Wikipedia)
+  </ExternalLink>
+- <ExternalLink href="https://en.wikipedia.org/wiki/Average_true_range">
+    Average true range (Wikipedia)
+  </ExternalLink>
+- <ExternalLink href="https://doi.org/10.1111/j.1467-6419.2007.00519.x">
+    Park & Irwin (2007), What Do We Know About the Profitability of Technical
+    Analysis?
+  </ExternalLink>
+
+<Disclaimer>
+  এই লেখাটি শুধুমাত্র শিক্ষামূলক উদ্দেশ্যে। এটি কোনো financial advice নয়। কোনো
+  trading পদ্ধতিই নিশ্চিত লাভ দেয় না। Forex ও Gold trading-এ উল্লেখযোগ্য আর্থিক
+  ঝুঁকি রয়েছে এবং আপনি আপনার বিনিয়োগের পুরোটাই হারাতে পারেন। Real money দিয়ে
+  trade করার আগে demo account-এ যথেষ্ট অনুশীলন করুন।
+</Disclaimer>

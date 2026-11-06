@@ -1,0 +1,152 @@
+---
+title: "Liquidity and Sweeps: Where Stops Rest and When They Are Taken"
+description: "Learn BSL, SSL, equal highs/lows, previous-day levels and inducement, and the rule that separates a sweep from a real breakout: with charts and a failed example."
+level: intermediate
+tags: [smc, ict, liquidity, sweep, bsl, ssl, inducement]
+instruments: [XAUUSD]
+timeframes: [H1, H4]
+status: done
+updated: 2026-11-07
+---
+
+# Liquidity and Sweeps: Where Stops Rest and When They Are Taken
+
+Price touched your stop and then went exactly the other way. Coincidence? Often not: stops pile up at certain places, and those places are visible on the chart. This lesson shows you how to find them, and how to tell when price touches them and returns versus breaks through.
+
+## What you will be able to do
+
+- Recognise BSL and SSL.
+- Find the common types of liquidity on a chart.
+- Apply the rule that separates a sweep from a breakout.
+- Understand what inducement is.
+
+## Why it matters
+
+Knowing where liquidity sits tells you where price may be "pulled". Without it, your stop becomes someone else's entry. The basic idea of a stop hunt is in the [Liquidity and Stop Hunts lesson](/en/learn/03-market-structure/04-liquidity-stop-hunts); here is the SMC rule.
+
+## Core idea
+
+**Liquidity is a place where many orders (especially stops) are resting.** Just above a swing high sit the stops of shorts and the orders of breakout buyers; just below a swing low sit the stops of longs and the orders of breakout sellers.
+
+Analogy: a busy junction. Everyone gathers there, so trading there is easiest.
+
+- **BSL (Buy-side liquidity):** above highs.
+- **SSL (Sell-side liquidity):** below lows.
+
+### Where liquidity sits
+
+- **Equal highs / equal lows:** two or three touches at the same level. Everyone sees them, so stops gather just above and below.
+- **Previous day/week high and low:** many traders watch these.
+- **Session highs and lows:** the edges of the Asia range (lesson 5).
+- **Obvious swing highs/lows:** a level from which price once turned sharply.
+
+### Sweep
+
+**A sweep is when price goes beyond liquidity, takes it, then comes back.** "Back" means the body closes again inside the old boundary.
+
+### Inducement
+
+**Inducement is a small, easy swing that sits before a larger zone and tempts traders to enter early.** Price takes it, then moves to the real zone. Do not treat it as a rule; it is an observation.
+
+## How it looks on a chart
+
+<Chart
+  id="smc-liq-01"
+  height={440}
+  caption="XAUUSD H1 (illustrative synthetic data) — the same high is touched three times (equal highs) and buy stops gather above. One bar runs beyond them and closes back below: a sweep. Then price falls."
+/>
+
+<Steps>
+
+### Step 1: Find the obvious level
+
+Equal highs/lows, the previous day's edges.
+
+### Step 2: Label above and below
+
+Which is BSL, which is SSL.
+
+### Step 3: Wait for the sweep
+
+The wick goes past the boundary and the body comes back inside.
+
+### Step 4: Watch what follows
+
+Does structure break (the CHoCH from lesson 1)? This is what separates a sweep from a breakout.
+
+</Steps>
+
+## Failed example: the "sweep" that was a real breakout
+
+<Chart
+  id="smc-liq-02"
+  height={440}
+  caption="XAUUSD H1 (illustrative synthetic data) — the same picture as the previous chart, but the sell fails. Buyers did not give up; price closes above the high and the stop is hit."
+/>
+
+The picture is identical; the difference is in the next bars. After the sweep, structure did not break down (no CHoCH). Instead price closed above the high again. Selling on the sweep alone produces this loss.
+
+The rule: **a sweep alone is not a signal; a sweep plus a break of structure is the start of one.**
+
+## Common mistakes
+
+| Mistake                              | Why it hurts              | Fix                           |
+| :----------------------------------- | :------------------------ | :---------------------------- |
+| Calling every wick a sweep           | Signals everywhere        | Need an obvious level         |
+| Entering on the sweep itself         | A breakout looks the same | Wait for the CHoCH after it   |
+| Forgetting the higher-timeframe bias | Trading against the flow  | HTF bias first                |
+| Marking every small equal high       | Too much noise            | Higher-timeframe levels first |
+
+<Callout type="warning">
+  A stop hunt is not a "conspiracy"; it is market mechanics: where stops gather,
+  trading is also easy. Do not trade as if someone is targeting you; describe
+  what the chart did.
+</Callout>
+
+## Summary
+
+<KeyTakeaways>
+
+- BSL sits above highs, SSL below lows.
+- Liquidity gathers at equal highs/lows, previous-day levels and session edges.
+- Sweep = going beyond the boundary and the body closing back inside.
+- A sweep alone is not a signal; a break of structure must follow.
+
+</KeyTakeaways>
+
+## Practice task
+
+On XAUUSD H1, mark five equal highs/lows from last week. For each, write down whether a sweep happened, whether a CHoCH followed, and where price went.
+
+## Quiz
+
+1. Where do BSL and SSL sit?
+2. How do you tell a sweep from a breakout?
+3. Why do stops gather at equal highs?
+4. Why is a sweep alone not a reason to enter?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** BSL above swing highs; SSL below swing lows.
+
+**2.** In a sweep the body returns inside the boundary and structure breaks afterwards; in a breakout the body closes beyond it.
+
+**3.** Everyone sees them, so stops are placed just above and below.
+
+**4.** The same picture can be a breakout; the structure that follows tells them apart.
+
+</details>
+
+## Next steps
+
+- Chapter overview: [SMC / ICT in Depth](/en/learn/19-smc-ict/00-overview).
+- Previous lesson: [Market Structure](/en/learn/19-smc-ict/01-market-structure).
+- Next lesson: [Order Block and FVG](/en/learn/19-smc-ict/03-order-block-fvg).
+
+<Disclaimer>
+  This article is for educational purposes only and is not financial advice. No
+  trading methodology guarantees profit. Forex and gold trading carry
+  significant financial risk, and you can lose all of your capital. Practise on
+  a demo account before trading with real money.
+</Disclaimer>

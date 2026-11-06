@@ -78,9 +78,10 @@ export const dictionaries = {
         "13-gold-xauusd": "Gold (XAUUSD)",
         "14-trading-plan-system": "Trading Plan & System",
         "15-backtesting-journal": "Backtesting & Journal",
-        "16-advanced": "Advanced Concepts",
+        "16-trading-methodologies": "Trading Methodologies",
         "17-case-studies-trade-reviews": "Case Studies & Trade Reviews",
         "18-notes-library": "Notes Library",
+        "19-smc-ict": "SMC / ICT in Depth",
       },
     },
     patterns: {
@@ -289,9 +290,10 @@ export const dictionaries = {
         "13-gold-xauusd": "গোল্ড (XAUUSD)",
         "14-trading-plan-system": "ট্রেডিং প্ল্যান ও সিস্টেম",
         "15-backtesting-journal": "ব্যাকটেস্টিং ও জার্নাল",
-        "16-advanced": "অ্যাডভান্সড কনসেপ্টস",
+        "16-trading-methodologies": "ট্রেডিং মেথডোলজি",
         "17-case-studies-trade-reviews": "কেস স্টাডিজ",
         "18-notes-library": "নোটস লাইব্রেরি",
+        "19-smc-ict": "SMC / ICT গভীরে",
       },
     },
     patterns: {

@@ -35,6 +35,7 @@ Next.js 16.4 (App Router), React 19.3, TS, Tailwind v4, fumadocs (core/mdx/ui), 
 - Pattern pages: docs/PATTERN_ARTICLE_PLAN.md (18-section field-guide template, charts `{id}-win-01`/`{id}-fail-01`, no win-rate stats). Chart generator: scripts/chartgen/patgen.py + p_{id}.py (`PYTHONIOENCODING=utf8 python p_hammer.py`; asserts OHLC + trade outcome). Check: `node scripts/chartgen/mdxcheck.mjs <mdx files>` (compile, links, chart ids, duplicate links)
 - No numbered list inside <details> (Prettier breaks MDX)
 - Charts: synthetic vs real must be labelled honestly
+- Ch19 `19-smc-ict` = SMC/ICT deep-dive (overview + 8 lessons, BN+EN); charts via scripts/chartgen/smc_series.py (`smc-*` ids, H1 synthetic). Ch16 `06-smc-ict` stays the overview-level lesson
 - Read node_modules/next/dist/docs before using unsure Next APIs
 
 @AGENTS.md

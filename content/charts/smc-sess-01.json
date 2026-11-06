@@ -1,0 +1,267 @@
+{
+  "id": "smc-sess-01",
+  "title": {
+    "en": "One day by session: Asia range, London move, New York continuation",
+    "bn": "দিনের session ধরে: Asia range, London move, New York ধারা"
+  },
+  "symbol": "XAUUSD",
+  "timeframe": "H1",
+  "mode": "synthetic",
+  "type": "concept",
+  "bias": "bearish",
+  "outcome": null,
+  "tags": [
+    "XAUUSD",
+    "smc",
+    "sessions",
+    "kill-zone"
+  ],
+  "module": "19-smc-ict",
+  "lessonSlugs": [
+    "05-sessions-kill-zones"
+  ],
+  "caption": {
+    "en": "XAUUSD H1 (synthetic): a narrow Asia range, a London push above its high that reverses and breaks the low, then a New York continuation. Bar 0 is the start of the Asia session; the bands are illustrative.",
+    "bn": "XAUUSD H1 (কাল্পনিক): সংকীর্ণ Asia range, London-এ high-এর ওপরে push, উল্টে low ভাঙা, তারপর New York-এ ধারা চলে। Bar 0 = Asia session-এর শুরু; band গুলো উদাহরণমাত্র।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data (incl. synthetic tick volume), not a real market record.",
+    "bn": "শিক্ষামূলক কাল্পনিক ডেটা (tick volume-ও কাল্পনিক), বাস্তব মার্কেটের রেকর্ড নয়।"
+  },
+  "updatedAt": "2026-11-07T18:00:00Z",
+  "annotations": [
+    {
+      "type": "zone",
+      "from": {
+        "i": 0,
+        "price": 2340
+      },
+      "to": {
+        "i": 7,
+        "price": 2336
+      },
+      "label": "Asia range",
+      "color": "#64748b"
+    },
+    {
+      "type": "zone",
+      "from": {
+        "i": 8,
+        "price": 2345
+      },
+      "to": {
+        "i": 14,
+        "price": 2307
+      },
+      "label": "London KZ",
+      "color": "#f5b301"
+    },
+    {
+      "type": "zone",
+      "from": {
+        "i": 15,
+        "price": 2345
+      },
+      "to": {
+        "i": 20,
+        "price": 2307
+      },
+      "label": "NY KZ",
+      "color": "#3b82f6"
+    },
+    {
+      "type": "marker",
+      "i": 9,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Asia high swept"
+    },
+    {
+      "type": "marker",
+      "i": 11,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Asia low broken"
+    }
+  ],
+  "explanation": {
+    "en": "Sessions differ in liquidity: Asia often builds the range, London and New York take its highs and lows. Kill zones are the windows where this is most often looked for.",
+    "bn": "Session-ভেদে liquidity আলাদা: Asia প্রায়ই range বানায়, London ও New York তার high-low নেয়। Kill zone হলো সেই সময়-জানালা যেখানে এটা সবচেয়ে বেশি খোঁজা হয়।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Mark the Asia range first, then watch who takes which side",
+      "bn": "আগে Asia range আঁকুন, তারপর দেখুন কে কোন দিক নেয়"
+    }
+  ],
+  "candles": [
+    {
+      "i": 0,
+      "o": 2338,
+      "h": 2339.5,
+      "l": 2337,
+      "c": 2338.5
+    },
+    {
+      "i": 1,
+      "o": 2338.5,
+      "h": 2339.5,
+      "l": 2336,
+      "c": 2337
+    },
+    {
+      "i": 2,
+      "o": 2337,
+      "h": 2340,
+      "l": 2336,
+      "c": 2339
+    },
+    {
+      "i": 3,
+      "o": 2339,
+      "h": 2340,
+      "l": 2336.5,
+      "c": 2337.5
+    },
+    {
+      "i": 4,
+      "o": 2337.5,
+      "h": 2339.8,
+      "l": 2336.5,
+      "c": 2338.8
+    },
+    {
+      "i": 5,
+      "o": 2338.8,
+      "h": 2339.8,
+      "l": 2336.2,
+      "c": 2337.2
+    },
+    {
+      "i": 6,
+      "o": 2337.2,
+      "h": 2339.4,
+      "l": 2336.2,
+      "c": 2338.4
+    },
+    {
+      "i": 7,
+      "o": 2338.4,
+      "h": 2339.4,
+      "l": 2337,
+      "c": 2338
+    },
+    {
+      "i": 8,
+      "o": 2338,
+      "h": 2343.0,
+      "l": 2337.5,
+      "c": 2341.5
+    },
+    {
+      "i": 9,
+      "o": 2341.5,
+      "h": 2345,
+      "l": 2341.0,
+      "c": 2344
+    },
+    {
+      "i": 10,
+      "o": 2344,
+      "h": 2344.5,
+      "l": 2338.5,
+      "c": 2339.5
+    },
+    {
+      "i": 11,
+      "o": 2339.5,
+      "h": 2340.0,
+      "l": 2333.5,
+      "c": 2334.5
+    },
+    {
+      "i": 12,
+      "o": 2334.5,
+      "h": 2335.0,
+      "l": 2330,
+      "c": 2331
+    },
+    {
+      "i": 13,
+      "o": 2331,
+      "h": 2334,
+      "l": 2330.5,
+      "c": 2333
+    },
+    {
+      "i": 14,
+      "o": 2333,
+      "h": 2333.5,
+      "l": 2327,
+      "c": 2328
+    },
+    {
+      "i": 15,
+      "o": 2328,
+      "h": 2331,
+      "l": 2327.5,
+      "c": 2330
+    },
+    {
+      "i": 16,
+      "o": 2330,
+      "h": 2330.5,
+      "l": 2323,
+      "c": 2324
+    },
+    {
+      "i": 17,
+      "o": 2324,
+      "h": 2324.5,
+      "l": 2318,
+      "c": 2319
+    },
+    {
+      "i": 18,
+      "o": 2319,
+      "h": 2322,
+      "l": 2318.5,
+      "c": 2321
+    },
+    {
+      "i": 19,
+      "o": 2321,
+      "h": 2321.5,
+      "l": 2313,
+      "c": 2314
+    },
+    {
+      "i": 20,
+      "o": 2314,
+      "h": 2317,
+      "l": 2313.5,
+      "c": 2316
+    },
+    {
+      "i": 21,
+      "o": 2316,
+      "h": 2316.5,
+      "l": 2309,
+      "c": 2310
+    },
+    {
+      "i": 22,
+      "o": 2310,
+      "h": 2313,
+      "l": 2309.5,
+      "c": 2312
+    },
+    {
+      "i": 23,
+      "o": 2312,
+      "h": 2312.5,
+      "l": 2307,
+      "c": 2308
+    }
+  ]
+}

@@ -4,8 +4,8 @@ import { i18n } from "@/lib/i18n";
 export default createI18nMiddleware(i18n);
 
 export const config = {
-  // Metadata files (sitemap/robots) must stay locale-less, so skip them here.
+  // Metadata files (sitemap/robots/manifest/sw) must stay locale-less, so skip them here.
   matcher: [
-    "/((?!api|_next/static|_next/image|favicon.ico|images|sitemap.xml|robots.txt).*)",
+    "/((?!api|_next/static|_next/image|favicon.ico|images|sitemap.xml|robots.txt|manifest.webmanifest|sw.js|offline.html|icons).*)",
   ],
 };

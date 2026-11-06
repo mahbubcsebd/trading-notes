@@ -1,0 +1,154 @@
+---
+title: "SMC Market Structure: কোন ভাঙা BOS, কোনটা CHoCH"
+description: "SMC-তে swing, internal ও external structure, BOS আর CHoCH কোন নিয়মে গোনা হয়, আর wick-এর ভাঙা কেন গোনা হয় না: chart ও ব্যর্থ উদাহরণসহ।"
+level: intermediate
+tags: [smc, ict, bos, choch, market-structure, swing]
+instruments: [XAUUSD]
+timeframes: [H1, H4]
+status: done
+updated: 2026-11-07
+---
+
+# SMC Market Structure: কোন ভাঙা BOS, কোনটা CHoCH
+
+দুজন trader একই chart-এ একজন বলছেন "BOS হয়েছে", আরেকজন "এটা তো শুধু wick"। দুজনেই নিজের মতো সঠিক, কারণ নিয়ম ঠিক করা নেই। এই পাঠে একটি নির্দিষ্ট নিয়ম বেছে নেওয়া হবে, যাতে আপনার chart-এ প্রতিবার একই উত্তর আসে।
+
+## এই পাঠে আপনি যা পারবেন
+
+- Swing high ও swing low একই নিয়মে চিহ্নিত করতে পারবেন।
+- Internal ও external structure আলাদা করতে পারবেন।
+- BOS আর CHoCH কখন গোনা হবে তা নিয়ম ধরে বলতে পারবেন।
+- Wick-এর ভাঙা কেন আলাদা ঘটনা, তা বুঝবেন।
+
+## কেন গুরুত্বপূর্ণ
+
+পরের সব ধাপ (zone, entry) structure-এর ওপর দাঁড়ায়। Structure ভুল পড়লে দিক ভুল, আর বাকি সবকিছু সেই ভুলের ওপর দাঁড়ায়। Swing আর BOS-এর প্রাথমিক ধারণা [Market Structure অধ্যায়ে](/bn/learn/03-market-structure/03-break-of-structure) আছে। এখানে SMC-র নিয়মটি ঠিক করা হচ্ছে।
+
+## মূল ধারণা
+
+**Swing high হলো এমন একটি candle, যার high দুই পাশের candle-গুলোর high-এর চেয়ে বেশি।** Swing low উল্টো। এটি সবচেয়ে সরল সংজ্ঞা; কোনো কোনো শিক্ষক পাশে দুটি বা তিনটি candle চান।
+
+তুলনা: পাহাড়ি রাস্তার বাঁক। বাঁকগুলো পরপর কোন দিকে উঠছে, সেটাই রাস্তার দিক।
+
+### BOS ও CHoCH
+
+- **BOS (Break of Structure):** trend-এর দিকে আগের swing ভাঙা। Uptrend-এ আগের swing high-এর ওপরে close। Trend চলছে।
+- **CHoCH (Change of Character):** trend-এর বিপরীতে প্রথম ভাঙা। Uptrend-এ শেষ higher low-এর নিচে close। Trend বদলাতে পারে।
+
+**এই series-এর নিয়ম: ভাঙা মানে candle body-র close swing-এর বাইরে।** শুধু wick ছুঁলে সেটি ভাঙা নয়; সেটি পরের পাঠের sweep-এর প্রার্থী।
+
+### Internal ও external structure
+
+- **External:** বড় swing, যেগুলো range-এর সীমা বানায়।
+- **Internal:** সেই range-এর ভেতরের ছোট swing।
+
+Internal CHoCH অনেক বেশি আসে, আর অনেক বেশি ভুল দেয়। External structure দিক ঠিক করে; internal structure entry-র সময় ঠিক করে।
+
+### Protected low ও weak high
+
+Uptrend-এ যে higher low থেকে নতুন high তৈরি হয়ে BOS ঘটেছে, সেটি **protected low**। সেটি ভাঙলেই CHoCH। আগের ছোট low গুলো ভাঙলে এখনো trend অক্ষত থাকতে পারে।
+
+## Chart-এ কেমন দেখায়
+
+<Chart
+  id="smc-ms-01"
+  height={460}
+  caption="XAUUSD H1 (শিক্ষামূলক কাল্পনিক ডেটা) — প্রতিটি নতুন high আগের high-এর ওপরে close দিয়ে BOS পায়। Last HL-এর নিচে প্রথম close হলো CHoCH।"
+/>
+
+<Steps>
+
+### ধাপ ১: Swing চিহ্নিত করুন
+
+প্রতিটি swing high ও low-তে ছোট চিহ্ন দিন (HH, HL, LH, LL)।
+
+### ধাপ ২: Trend ঠিক করুন
+
+HH আর HL পরপর থাকলে uptrend।
+
+### ধাপ ৩: BOS খুঁজুন
+
+আগের swing high-এর ওপরে **close** হলে BOS লিখুন।
+
+### ধাপ ৪: Protected low বসান
+
+BOS-এর কারণ হওয়া higher low-তে একটি রেখা টানুন।
+
+### ধাপ ৫: CHoCH-এর অপেক্ষা
+
+ওই রেখার নিচে **close** হলে CHoCH। তার আগে trend বদলেছে বলবেন না।
+
+</Steps>
+
+## ব্যর্থ উদাহরণ: wick-এর ভাঙা
+
+<Chart
+  id="smc-ms-02"
+  height={420}
+  caption="XAUUSD H1 (শিক্ষামূলক কাল্পনিক ডেটা) — একটি candle-এর wick আগের high ছাড়ায়, কিন্তু close নিচে। BOS হয়নি; দাম নেমে যায়।"
+/>
+
+যিনি wick দেখে BOS ধরেছিলেন, তিনি buy করেছেন। দাম ফিরে এসে নিচে গেছে। নিয়ম "close" হলে এই ফাঁদ এড়ানো যায়, যদিও এতে entry কিছুটা দেরিতে আসে। সেটাই খরচ।
+
+## সাধারণ ভুল
+
+| ভুল                     | কেন সমস্যা                     | সমাধান                       |
+| :---------------------- | :----------------------------- | :--------------------------- |
+| Wick-কে BOS ধরা         | Sweep ও breakout এক হয়ে যায়  | Body close চাই               |
+| প্রতিটি ছোট swing গোনা  | Internal noise, অনেক ভুল CHoCH | আগে external structure       |
+| CHoCH দেখেই উল্টো trade | এটি সতর্কতা, নিশ্চয়তা নয়     | নিশ্চিতকরণ ও zone-এর অপেক্ষা |
+| একটি timeframe দেখা     | বড় trend-এর উল্টোদিকে প্রবেশ  | H4/D1-এ bias, H1-এ entry     |
+
+<Callout type="tip">
+  প্রতিদিন একই timeframe-এ একই নিয়মে চিহ্ন দিন। এক মাস পরে নিজের chart-এ দেখুন
+  কতবার CHoCH-এর পর trend আসলেই বদলেছে।
+</Callout>
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- BOS trend চালু রাখে; CHoCH প্রথম সতর্কতা।
+- নিয়ম: body close swing-এর বাইরে; wick নয়।
+- External structure দিক দেয়; internal structure সময় দেয়।
+- Protected low ভাঙলেই CHoCH, তার আগে নয়।
+- CHoCH reversal-এর নিশ্চয়তা নয়।
+
+</KeyTakeaways>
+
+## অনুশীলন
+
+TradingView-এ XAUUSD H1 খুলুন, শেষ ১০০টি candle-এ সব swing চিহ্নিত করুন। প্রতিটি BOS ও CHoCH লিখুন, আর একটি wick-ভাঙার উদাহরণ আলাদা করে রাখুন।
+
+## কুইজ
+
+1. BOS আর CHoCH-এর পার্থক্য কী?
+2. এই series-এ কোন ভাঙা গোনা হয়?
+3. External আর internal structure কী কাজে লাগে?
+4. Protected low কী?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** BOS trend-এর দিকে ভাঙা (trend চলছে); CHoCH trend-এর বিপরীতে প্রথম ভাঙা (বদলাতে পারে)।
+
+**২.** Candle body-র close swing-এর বাইরে; শুধু wick নয়।
+
+**৩.** External দিক ঠিক করে; internal entry-র সময় ঠিক করে।
+
+**৪.** যে higher low থেকে BOS ঘটেছে; সেটি ভাঙলে CHoCH।
+
+</details>
+
+## পরের ধাপ
+
+- অধ্যায়ের পরিচিতি: [SMC / ICT গভীরে](/bn/learn/19-smc-ict/00-overview)।
+- পরের পাঠ: [Liquidity ও Sweep](/bn/learn/19-smc-ict/02-liquidity-sweeps)।
+- সম্পর্কিত: [Swing High ও Swing Low](/bn/learn/03-market-structure/01-swing-high-low)।
+
+<Disclaimer>
+  এই লেখাটি শুধুমাত্র শিক্ষামূলক উদ্দেশ্যে। এটি কোনো financial advice নয়। কোনো
+  trading পদ্ধতিই নিশ্চিত লাভ দেয় না। Forex ও Gold trading-এ উল্লেখযোগ্য আর্থিক
+  ঝুঁকি রয়েছে এবং আপনি আপনার বিনিয়োগের পুরোটাই হারাতে পারেন। Real money দিয়ে
+  trade করার আগে demo account-এ যথেষ্ট অনুশীলন করুন।
+</Disclaimer>

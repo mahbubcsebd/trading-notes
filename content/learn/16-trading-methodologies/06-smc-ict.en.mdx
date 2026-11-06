@@ -1,0 +1,401 @@
+---
+title: "SMC / ICT: Liquidity and Institutional Price Delivery — A Plain Guide"
+description: "What SMC and ICT are: how liquidity, sweep, BOS, CHoCH, FVG and order block fit into one sequence, what is unproven, and honest limits, on an XAUUSD chart."
+level: advanced
+tags: [smc, ict, liquidity, sweep, choch, fvg, order-block, methodology]
+instruments: [XAUUSD]
+timeframes: [M15, H1, H4, D1]
+status: done
+sources:
+  - type: blog
+    title: "Support and Resistance (Investopedia)"
+    url: "https://www.investopedia.com/terms/s/support.asp"
+  - type: blog
+    title: "Wyckoff Method (Investopedia)"
+    url: "https://www.investopedia.com/terms/w/wyckoffmethod.asp"
+  - type: other
+    title: "Park & Irwin (2007), What Do We Know About the Profitability of Technical Analysis? (Journal of Economic Surveys)"
+    url: "https://doi.org/10.1111/j.1467-6419.2007.00519.x"
+updated: 2026-11-07
+---
+
+# SMC / ICT: Liquidity and Institutional Price Delivery
+
+After watching SMC videos, many people look for "smart money" in every gap and every wick. The result: signals everywhere, confidence nowhere. In this lesson you will learn the terms arranged in a **sequence**, and also which claims are not proven.
+
+## At a glance
+
+<MethodCard
+  lang="en"
+  name="SMC / ICT"
+  origin="ICT: Michael J. Huddleston (online teaching, 2010s); SMC is the broader name"
+  reads="Price + Liquidity narrative"
+  question="Where is liquidity resting, and where will price deliver next?"
+  timeframes="Entry M1–H1, bias H4–D1"
+  difficulty="advanced"
+  subjectivity="high"
+/>
+
+## What you will learn
+
+- Define **liquidity, sweep, BOS, CHoCH, FVG and order block**.
+- Arrange these terms into **one entry sequence**.
+- Recognise the mistake of using them without context.
+- Say honestly which SMC claims are supported and which are not.
+- Understand how SMC is similar to and different from Wyckoff.
+
+## History and origin
+
+- **ICT:** Michael J. Huddleston, known as the "Inner Circle Trader", spread this terminology through online videos and courses in the 2010s. Most of the terms come from his teaching.
+- **SMC (Smart Money Concepts):** a broader, informal name. It is a community built from ICT's ideas plus explanations and additions by many other teachers. Not every teacher uses the same definitions.
+- **Older roots:** stop hunts, supply-demand zones, Wyckoff's spring: many SMC ideas are new names for earlier ideas. There is nothing wrong with that, but it is also worth knowing that they are not "new discoveries".
+
+The names and definitions in this lesson are one common version. Teachers disagree on every term; where it matters, this is said.
+
+## Core philosophy
+
+**SMC's question: where is liquidity resting, and where will price deliver next?**
+
+The idea is this: large institutions come in with huge orders. Filling such large orders needs plenty of opposite orders. Those orders sit beyond clear swing highs and lows (where ordinary traders place stops). So price goes there first, fills the orders, and then moves in the real direction.
+
+An analogy: before Eid a big trader wants to buy all the goods. But buying all at once makes the price jump. So he first pushes the price down a little, takes the goods cheaply from frightened sellers, and then raises the price.
+
+<Callout type="warning">
+  **"Smart money deliberately hunts retail stops"**: this claim is at the centre
+  of SMC, but an ordinary trader cannot verify it directly. It is an explanatory
+  story. On the chart you can see price go beyond stops and return; you cannot
+  see that "someone is doing it on purpose".
+</Callout>
+
+## Core concepts
+
+Each concept connects to an earlier lesson. Here are seven, through the methodology lens.
+
+### 1. Liquidity: BSL and SSL
+
+**Liquidity is the price area where many pending orders and stops are resting.** Two kinds:
+
+- **BSL (Buy-side liquidity):** above a swing high. Short traders' stops and breakout buyers' orders are here.
+- **SSL (Sell-side liquidity):** below a swing low. Long traders' stops and breakout sellers' orders are here.
+
+In particular **equal highs / equal lows** (two almost equal highs or lows) are treated as clear liquidity. Details: [Liquidity and stop hunts](/en/learn/03-market-structure/04-liquidity-stop-hunts).
+
+An analogy: two almost equally high embankments. Everyone knows water is stored beyond them, so all eyes are there.
+
+### 2. Sweep
+
+**A sweep is price touching or slightly breaking a liquidity area and then returning.** A wick that touches a swing low and closes above is an SSL sweep.
+
+It is very close to Price Action's false break or Wyckoff's spring. The condition is the same: **it must return**. If it does not, it is not a sweep but a real breakout.
+
+### 3. BOS and CHoCH
+
+- **BOS (Break of Structure):** breaking a swing in the direction of the current trend. In an uptrend, a close above the previous swing high. The trend continues.
+- **CHoCH (Change of Character):** the first structure break against the trend. In an uptrend, a close below the previous higher low. The trend may change. Many teachers call this an **MSS (Market Structure Shift)**.
+
+Details: [Break of structure](/en/learn/03-market-structure/03-break-of-structure). Which swing you pick differs from trader to trader: this is where subjectivity is highest.
+
+### 4. Fair Value Gap (FVG)
+
+**An FVG is a three-candle pattern where there is a gap between the first candle's high and the third candle's low (in the bullish case).** The big middle candle moved so fast that there was no two-way trading in that area. It is also called an imbalance.
+
+The idea: price tends to return and "fill" that gap later. It is a tendency, not a rule.
+
+An analogy: a pothole in the middle of the road. Cars drove around it, but everyone knows it will need repair one day.
+
+<CandleDiagram
+  title="Bullish FVG"
+  candles={[
+    { o: 10, h: 12, l: 9.5, c: 11.5, label: "Candle 1: high 12" },
+    { o: 11.5, h: 18, l: 11, c: 17.5, note: "Fast move" },
+    { o: 17.5, h: 19, l: 15, c: 18.5, label: "Candle 3: low 15" },
+    { o: 18.5, h: 18.8, l: 14.5, c: 15.5, note: "Back into the gap" },
+    { o: 15.5, h: 20, l: 15, c: 19.5 },
+  ]}
+  levels={[
+    { price: 12, label: "FVG bottom", tone: "support" },
+    { price: 15, label: "FVG top", tone: "support" },
+  ]}
+  caption="Between candle 1's high (12) and candle 3's low (15), the area 12–15 is empty: the FVG. Price later returned into the gap, held, and rose."
+/>
+
+### 5. Order Block (OB)
+
+**An order block is the last opposite-direction candle just before a big move.** A bullish OB: the last bearish candle before a big rise. The idea: institutions filled orders in that candle, so there may be a reaction when price returns there.
+
+The honest truth: the OB definition has the most disagreement. Some take the whole candle (with wicks), some only the body; some take several candles before the big move. For a fuller lesson see [Supply and demand](/en/learn/05-support-resistance/03-supply-demand), an older idea close to the OB.
+
+### 6. Premium and discount
+
+**In a dealing range (from the recent swing low to the high), the half above the midline is premium and the half below is discount.** The rule: with a bullish bias buy in discount, with a bearish bias sell in premium.
+
+An analogy: buy below the market's average price, sell above it.
+
+### 7. Session and bias
+
+SMC teachers usually concentrate on specific times of day (the early part of the London and New York sessions, called "killzones"), because liquidity and volatility are higher then. The exact times differ between teachers. In Gold, session timing really does matter, because moves pick up at the London and New York opens.
+
+**Bias** means deciding direction from a higher timeframe (H4/D1): is up or down more likely today. On the lower timeframe you only look for entries in that direction.
+
+### Everything in one sequence
+
+SMC's terms are not separate signals. A complete bullish sequence:
+
+| Step | Event                                      | Meaning                            |
+| :--- | :----------------------------------------- | :--------------------------------- |
+| 1    | Bias: bullish on the higher timeframe      | Direction set                      |
+| 2    | SSL sweep (touch the swing low and return) | The liquidity below has been taken |
+| 3    | CHoCH / BOS upward                         | Structure changed / broke upward   |
+| 4    | The rise leaves an FVG or OB               | The entry area is created          |
+| 5    | Entry when price returns to that FVG/OB    | Buying in discount                 |
+| 6    | Stop below the sweep low or OB; target BSL | Target = the liquidity above       |
+
+<DiagramRow>
+  <CandleDiagram
+    title="With context"
+    verdict="good"
+    verdictLabel="Sequence complete"
+    candles={[
+      { o: 16, h: 16.5, l: 13.5, c: 14, dim: true },
+      { o: 14, h: 14.5, l: 10, c: 14.2, label: "SSL sweep" },
+      { o: 14.2, h: 19, l: 14, c: 18.5, note: "CHoCH + FVG" },
+      { o: 18.5, h: 19.2, l: 16.5, c: 17, label: "Back into FVG" },
+      { o: 17, h: 21, l: 16.8, c: 20.6 },
+    ]}
+    levels={[
+      { price: 13, label: "Sweep low (under the stops)", tone: "support" },
+    ]}
+    caption="Sweep, CHoCH, FVG, then a return to the FVG: each step stands on the one before."
+  />
+  <CandleDiagram
+    title="Without context"
+    verdict="bad"
+    verdictLabel="Just a gap"
+    candles={[
+      { o: 20, h: 20.5, l: 17.5, c: 18, dim: true },
+      { o: 18, h: 18.5, l: 15.5, c: 16, dim: true },
+      { o: 16, h: 19, l: 15.8, c: 18.6, label: "Bounce, FVG" },
+      { o: 18.6, h: 18.8, l: 16.8, c: 17, label: "Back into FVG" },
+      { o: 17, h: 17.2, l: 13, c: 13.5, note: "Downtrend returns" },
+    ]}
+    caption="A small bounce inside a downtrend left a gap. There is no sweep and no high was broken. An FVG alone says nothing."
+  />
+</DiagramRow>
+
+## Reading the shared chart
+
+Now the same XAUUSD H4 chart from the chapter, through SMC's eyes. (The range is about 2296–2344, the same as in earlier lessons.)
+
+<Chart
+  id="meth-smc-shared"
+  height={520}
+  caption="XAUUSD H4 (educational synthetic data) — The sell-side liquidity below the range is swept; a bullish BOS leaves an FVG and price returns to it; at the top the buy-side liquidity is swept, then a bearish CHoCH follows."
+/>
+
+<Steps>
+
+### Step 1: SSL sweep
+
+The range's low was 2296. One candle drops to **2287** (touching the stops resting under the range low) and then closes at 2304, inside. The sell-side liquidity has been taken. In Wyckoff's language, this is the spring.
+
+### Step 2: BOS upward
+
+A few candles later price breaks the range ceiling (2344) and closes at **2346**. The structure above has broken: a bullish BOS.
+
+### Step 3: FVG and OB
+
+The fast move in the BOS candle left a gap: **2335 to 2344**. Below, the last bearish candle before the big rise after the sweep: the **OB, about 2301–2313**.
+
+### Step 4: Back into the FVG
+
+Price falls to 2336, inside the FVG, then rises again. A chance to enter in discount.
+
+### Step 5: BSL sweep
+
+At the top price touches **2487**, above the 2474 high, but closes at 2467. The buy-side liquidity has been taken.
+
+### Step 6: CHoCH
+
+Some candles later price breaks the earlier higher low (2418) and closes at **2415**: a bearish CHoCH. The structure has changed to the opposite direction.
+
+</Steps>
+
+<Callout type="note">
+  **Subjectivity shows up right here.** In step 6 I used the 2418 swing low.
+  Someone who uses a smaller swing low (about 2434) gets the CHoCH one candle
+  earlier, at a higher price. Both are "right", because the definition is not
+  fixed.
+</Callout>
+
+## Basic trade logic
+
+| Part      | Rule (common form)                             | On the shared chart (synthetic)            |
+| :-------- | :--------------------------------------------- | :----------------------------------------- |
+| Bias      | Direction on the higher timeframe              | Bullish after the sweep                    |
+| Setup     | Sweep → CHoCH/BOS → FVG or OB                  | 2287 sweep, 2346 BOS, FVG 2335–2344        |
+| Entry     | When price returns to the FVG/OB (limit order) | 2340 (middle of the FVG)                   |
+| Stop loss | Below the OB or below the sweep low            | 2299 (below the OB); wide alternative 2285 |
+| Target    | The liquidity above (an old swing high)        | 2403, then 2454                            |
+
+The arithmetic: risk 2340 − 2299 = 41, reward at 2403 is 63, a ratio of about **1:1.5**; reward at 2454 is 114, about **1:2.8**. With the stop below the sweep low (2285) the risk is 55 and the ratio at 2403 is about 1:1.1. The honest truth: the tight stop gives a good ratio, but it is easier to get hit.
+
+An EURUSD H1 example (synthetic), the full sequence:
+
+<Chart
+  id="smc-sweep-choch-fvg-win-01"
+  height={460}
+  caption="EURUSD H1 (educational synthetic data) — A low is swept (wick 1.0893), price breaks the last lower high 1.0950 (CHoCH) and leaves an FVG. Buy at 1.0950 on the pullback, stop below the sweep low at 1.0888, target 1.1074 (2R)."
+/>
+
+<Callout type="warning">
+  There is no SMC entry without a stop loss. A limit order in the FVG assumes
+  price will return; if it does not return there is no trade, and if it returns
+  and breaks down the stop is hit. Position size: [Risk per
+  trade](/en/learn/08-risk-management/01-risk-per-trade).
+</Callout>
+
+## Strengths
+
+- **A specific entry zone and a small stop.** An FVG or OB can give a good ratio.
+- **There is a sequence.** Bias → sweep → structure → zone works like a checklist.
+- **The liquidity idea is useful.** Stops gather beyond swing highs and lows; that awareness helps in any method.
+- **Fits Wyckoff and Price Action.** Spring = SSL sweep, SOS = BOS, LPS = return to the FVG. Knowing one makes the other easier.
+
+## Weaknesses and limits
+
+- **High subjectivity.** Which swing, which candle is the OB, how small an FVG to accept: there are no fixed rules. See the CHoCH example above. This is why it is "high".
+- **Hindsight is easy.** On an old chart it is easy to find a sweep, a CHoCH and an FVG; something always fits. Live, you do not know which is real.
+- **Too many terms.** Several names for the same thing (CHoCH/MSS, OB/supply-demand). Hard to learn and contradictory.
+- **The ideas do not always work.** An entry on an FVG without context fails (example below).
+- **Little independent evidence.** Most of the knowledge comes from ICT's and followers' videos and courses. For this writing no peer-reviewed research was found testing a specific SMC setup. What exists is general discussion of the older ideas (stop clusters, supply-demand).
+
+**Evidence status:** general research on technical analysis is mixed (Park and Irwin, 2007). No independent, large-scale backtest-based evidence for specific SMC setups was found. **No method guarantees profit.** Verify it in your own backtest.
+
+Here is a failed example. An entry on just an FVG, without context:
+
+<Chart
+  id="smc-fvg-no-context-fail-01"
+  height={460}
+  caption="EURUSD H1 (educational synthetic data) — A bounce inside a downtrend creates a gap. A trader buys on the pullback at 1.0952, but no low was swept and no lower high was broken. The downtrend returns and the stop at 1.0920 is hit (loss 1R)."
+/>
+
+The lesson: **an FVG alone is not a signal.** Without the earlier sequence (a sweep, a structure break), a gap is just a gap.
+
+## Who it suits
+
+| Suits you if you…                                    | Does not suit you if you…                   |
+| :--------------------------------------------------- | :------------------------------------------ |
+| Have learned Price Action and market structure first | Are a complete beginner                     |
+| Can tolerate ambiguity and multiple readings         | Want clear, mechanical rules                |
+| Can give time to the London/NY sessions intraday     | Cannot check the chart more than once a day |
+| Keep discipline for a small stop and a good ratio    | Tend to move your stop                      |
+
+## Combining with other methods
+
+- **SMC + Wyckoff:** the most natural. Two languages for the same events. Wyckoff gives the big picture (which phase), SMC the fine detail of the entry (which FVG).
+- **SMC + Price Action:** bias and structure are part of Price Action itself. If that base is not firm, SMC floats.
+- **SMC + Volume Profile:** after a sweep, price returning to the Value Area makes the meaning clearer.
+
+**What not to mix:** a pile of indicators with SMC. Indicators arrive late, while SMC looks for fine entry spots; the time scales differ. More important: **do not use all SMC terms at once.** Start with one sequence (sweep → CHoCH → FVG).
+
+## Deep dive later
+
+This lesson is an overview. The detail is in a separate chapter: [SMC / ICT in Depth](/en/learn/19-smc-ict/00-overview). It covers structure, liquidity, order blocks and FVGs, premium/discount and OTE, sessions and kill zones, Power of 3, the entry model, and limits and risk, each in its own lesson with charts and failed examples.
+
+## How to start
+
+<Steps>
+
+### Step 1: Structure first
+
+Get comfortable marking swing highs/lows (the earlier lessons). Without that the rest floats.
+
+### Step 2: Only one sequence
+
+Pick one sequence: SSL sweep → bullish CHoCH → return to the FVG. Forget the other terms for now.
+
+### Step 3: Write 20 examples
+
+Look for the sequence on XAUUSD H1/H4. Write each result: it worked, it failed, or the sequence was not complete.
+
+### Step 4: Replay, label first
+
+Cover the right side of the chart and advance one candle at a time. Each time place your label first, then look at the next candle. You will catch hindsight bias.
+
+### Step 5: Write the rules and backtest
+
+Write the rules with entry, stop and target as numbers. [Backtest](/en/learn/15-backtesting-journal/01-how-to-backtest) on at least 50 examples.
+
+</Steps>
+
+## Common mistakes
+
+| Mistake                                     | Why it is a problem                           | Fix                                              |
+| :------------------------------------------ | :-------------------------------------------- | :----------------------------------------------- |
+| Entering on every gap as an FVG             | A gap without context means nothing           | A sweep and a structure break must come first    |
+| Jumping to a lower timeframe without bias   | Trading against the flow                      | Set direction on H4/D1 first                     |
+| Using all the terms at once                 | A crowd of signals, indecision                | Start with one sequence                          |
+| Leaving a limit order without a stop        | A big loss if price does not return or breaks | A stop with every order                          |
+| Taking "smart money is doing it" as certain | It is an assumption, not proven               | Describe the chart's events; do not guess intent |
+
+## Summary
+
+<KeyTakeaways>
+
+- SMC infers from where liquidity rests where price will deliver next.
+- The terms work in a sequence: bias → sweep → BOS/CHoCH → FVG/OB → entry.
+- Spring = SSL sweep, SOS = BOS, LPS = return to the FVG: almost the same events as Wyckoff.
+- Subjectivity is high: the definitions of swing, OB and CHoCH differ between teachers.
+- Little independent evidence; an FVG without context fails. No guaranteed profit.
+
+</KeyTakeaways>
+
+## Quiz
+
+1. What is SMC's core question?
+2. Where do BSL and SSL sit?
+3. What is the difference between BOS and CHoCH?
+4. What is an FVG, and why is it not enough alone?
+5. Why is SMC's subjectivity "high"?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** Where liquidity is resting, and where price will deliver next.
+
+**2.** BSL above swing highs; SSL below swing lows.
+
+**3.** A BOS breaks a swing in the direction of the current trend (the trend continues); a CHoCH is the first structure break against the trend (it may change).
+
+**4.** The gap in a three-candle pattern where fast movement left no two-way trading. It is not enough alone because without a sweep and a structure break, a gap is just a gap.
+
+**5.** There are no fixed rules for which swing, which candle is the OB, or which move is a CHoCH, so two traders reach different decisions on the same chart.
+
+</details>
+
+## Next steps
+
+- Chapter comparison: [Trading Methodologies: the eight approaches](/en/learn/16-trading-methodologies/00-overview).
+- Previous lesson: [Volume Profile](/en/learn/16-trading-methodologies/05-volume-profile).
+- Next lesson: [Elliott Wave](/en/learn/16-trading-methodologies/07-elliott-wave).
+- Related: [Wyckoff Method](/en/learn/16-trading-methodologies/03-wyckoff-method), [Price Action](/en/learn/16-trading-methodologies/01-price-action).
+
+### Sources
+
+- <ExternalLink href="https://www.investopedia.com/terms/w/wyckoffmethod.asp">
+    Wyckoff Method (Investopedia)
+  </ExternalLink>
+- <ExternalLink href="https://www.investopedia.com/terms/s/support.asp">
+    Support and Resistance (Investopedia)
+  </ExternalLink>
+- <ExternalLink href="https://doi.org/10.1111/j.1467-6419.2007.00519.x">
+    Park & Irwin (2007), What Do We Know About the Profitability of Technical
+    Analysis?
+  </ExternalLink>
+
+<Disclaimer>
+  This article is for educational purposes only and is not financial advice. No
+  trading methodology guarantees profit. Forex and gold trading carry
+  significant financial risk, and you can lose all of your capital. Practise on
+  a demo account before trading with real money.
+</Disclaimer>

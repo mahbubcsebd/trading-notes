@@ -16,9 +16,9 @@
     "choch",
     "fvg"
   ],
-  "module": "16-advanced",
+  "module": "16-trading-methodologies",
   "lessonSlugs": [
-    "01-smart-money-concepts-ict-basics"
+    "06-smc-ict"
   ],
   "caption": {
     "en": "A low is swept (wick 1.0893), price breaks the last lower high at 1.0950 (CHoCH) and leaves a fair value gap. Buy the pullback at 1.0950, stop under the sweep low, target 2R.",

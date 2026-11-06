@@ -15,9 +15,9 @@
     "moving-average",
     "whipsaw"
   ],
-  "module": "16-advanced",
+  "module": "15-backtesting-journal",
   "lessonSlugs": [
-    "05-automation"
+    "06-automation"
   ],
   "caption": {
     "en": "A coded rule: buy when the 8-period average crosses above the 21-period average, exit on the opposite cross. It follows the trend well but gives small losses in the range at the end. Illustration only, not a recommended strategy.",

@@ -1,0 +1,359 @@
+---
+title: "Volume Profile: Where the Market Agreed on Price — A Plain Guide"
+description: "What Volume Profile and Market Profile are: POC, Value Area, VAH-VAL, HVN-LVN, acceptance vs failed break, and the limits of volume in Forex, on an XAUUSD chart."
+level: intermediate
+tags: [volume-profile, market-profile, poc, value-area, vah, val, methodology]
+instruments: [XAUUSD]
+timeframes: [M5, M15, H1]
+status: done
+sources:
+  - type: blog
+    title: "Volume Profile (Investopedia)"
+    url: "https://www.investopedia.com/terms/v/volume-analysis.asp"
+  - type: other
+    title: "Market profile (Wikipedia)"
+    url: "https://en.wikipedia.org/wiki/Market_profile"
+  - type: other
+    title: "Park & Irwin (2007), What Do We Know About the Profitability of Technical Analysis? (Journal of Economic Surveys)"
+    url: "https://doi.org/10.1111/j.1467-6419.2007.00519.x"
+updated: 2026-11-07
+---
+
+# Volume Profile: Where the Market Agreed on Price
+
+An ordinary chart tells you **when** price was what. Volume Profile asks the opposite question: **at which price** did the most trading happen? Where there was a lot of trading, buyers and sellers agreed: that is the "fair price". Where there was little, price crossed in a hurry.
+
+## At a glance
+
+<MethodCard
+  lang="en"
+  name="Volume Profile"
+  origin="Market Profile: J. Peter Steidlmayer, CBOT, 1980s"
+  reads="Price + Volume"
+  question="At which prices did the market agree, and where did it cross quickly?"
+  timeframes="Intraday session, M5 to H1"
+  difficulty="intermediate"
+  subjectivity="low"
+  needsVolume
+/>
+
+## What you will learn
+
+- Say how Volume Profile differs from ordinary volume bars.
+- Recognise **POC, Value Area, VAH, VAL, HVN and LVN**.
+- Tell Market Profile (TPO) and Volume Profile apart.
+- Read **acceptance** versus a **failed break**.
+- Know the limits of volume in Forex and Gold, and this method's honest weaknesses.
+
+## History and origin
+
+- **Market Profile:** J. Peter Steidlmayer built this idea while working at the Chicago Board of Trade (CBOT). It spread widely in the 1980s. The core idea: the distribution of price is roughly bell-shaped, and more time is spent near its centre.
+- **TPO:** the original Market Profile counts time. For each 30-minute period one letter (A, B, C…) is placed, and the letters are stacked by price level. This unit is called a **TPO (Time Price Opportunity)**.
+- **Volume Profile:** the later form. Instead of letters it counts the **amount traded** at each price. Most charting software today offers this one.
+
+In this lesson "Volume Profile" is the main term; where Market Profile differs, it is stated clearly.
+
+## Core philosophy
+
+**Volume Profile's question: at which prices did the market agree, and where did it cross quickly?**
+
+The belief is this: where a lot was traded, many people took positions. When price returns to that level they will react. Where almost nothing was traded, there is no one to hold price, so it crosses fast.
+
+An analogy: in a Dhaka market, which shop has the biggest crowd? That shop's price becomes the market's "going price". In an empty lane, whatever price a shop calls, nobody pays it much attention.
+
+<Callout type="note">
+  Volume Profile does not give **direction**. It tells you which prices matter.
+  Whether price goes up or down is decided by your other analysis or price
+  action.
+</Callout>
+
+## Core concepts
+
+### 1. Profile vs ordinary volume bars
+
+An ordinary volume bar sits on the **time** axis: one under each candle. Volume Profile sits on the **price** axis, as a horizontal histogram beside the chart. It shows as a curve how much traded at each price level.
+
+An analogy: a year's rainfall month by month (ordinary volume) versus how much rain fell in each area in total (profile).
+
+### 2. POC (Point of Control)
+
+**The POC is the price at which the most trading happened.** It is the longest bar on the profile.
+
+It is treated as the market's "magnet": even when price moves far away it often returns toward the POC. This is a tendency, not a rule.
+
+### 3. Value Area, VAH and VAL
+
+**The Value Area is the price range within which about 70% of the total trading happened.** It is usually built around the POC. Its upper edge is **VAH (Value Area High)**, its lower edge **VAL (Value Area Low)**.
+
+70% is a common setting (close to one standard deviation of a bell curve). In some software the setting can be changed.
+
+An analogy: the marks within which 70% of a class falls are the "normal range". Those outside are the exceptions.
+
+### 4. HVN and LVN
+
+- **HVN (High Volume Node):** a high part of the profile. Price stops and wanders here; it behaves like support/resistance.
+- **LVN (Low Volume Node):** a dip in the profile. Price crosses here quickly; no one holds it.
+
+An analogy: an HVN is a paddy-field bund where water gets held. An LVN is a gap in the bund, through which water rushes.
+
+Use: price may stop at an HVN, so it suits a target or a caution. Price moves fast through an LVN, so after crossing an LVN you can aim as far as the next HVN.
+
+### 5. Market Profile (TPO) vs Volume Profile
+
+| Point          | Market Profile (TPO)              | Volume Profile                      |
+| :------------- | :-------------------------------- | :---------------------------------- |
+| What it counts | Time (how often at each price)    | Amount traded                       |
+| Needs volume?  | No, only price and time           | Yes                                 |
+| In Forex       | Usable, since no volume is needed | Depends on tick volume, approximate |
+| Display        | A bell shape of letters           | A horizontal histogram              |
+
+Because spot Forex and Gold have no actual volume, a TPO-based Market Profile is sometimes more reliable.
+
+### 6. Acceptance vs rejection
+
+**Acceptance means price goes outside the Value Area, stays there and builds new trading. Rejection (a failed break) means it goes outside and returns inside.**
+
+- **Acceptance:** price rises above VAH and builds a new range there. The market has accepted the new "fair price". The Value Area shifts up.
+- **Failed break:** price rose above VAH but came back. The market did not accept the new price. A price that returns often heads to the opposite edge of the Value Area.
+
+Some teachers attach a fixed rule to this (an "80% rule"). This lesson has no reliable, independent evidence for it, so it is not treated as a rule; check it in your own backtest.
+
+### 7. Which period's profile?
+
+- **Session profile:** new every day, such as the London or New York session. The main choice of intraday traders.
+- **Fixed range profile:** a range you choose, such as one range or one trend leg.
+- **Composite:** a profile of many days combined, to find the big HVNs.
+
+The previous session's POC, VAH and VAL are reference levels for the next day.
+
+<Callout type="warning">
+  **The limit of volume in Forex and Gold.** Spot Forex and spot Gold have no
+  central exchange. The volume in MT4/MT5 is really **tick volume**: how many
+  times price changed on your broker's server. So every price's value in a
+  Volume Profile is approximate. Alternatives: a volume profile built from Gold
+  futures (CME GC), or a TPO-based Market Profile (which works without volume).
+  A different broker can give a different profile.
+</Callout>
+
+## Reading the shared chart
+
+The same XAUUSD H4 chart from the chapter. The profile is taken over the range period (bar 17 to 44). The volume is synthetic tick volume.
+
+<Chart
+  id="meth-vp-shared"
+  height={520}
+  caption="XAUUSD H4 (educational synthetic data) — Range profile: POC 2313, Value Area 2302–2330. The fast rally above left a low-volume area (LVN). Tick volume (synthetic) below."
+/>
+
+<Steps>
+
+### Step 1: The range's profile
+
+Between bars 17 and 44 price moved in 2296–2344. In this period's profile the most trading is near **2313** (POC), and about 70% of trading is between **2302 and 2330** (VAL and VAH). This is the market's "fair" area.
+
+### Step 2: A break below, then back inside
+
+Near the end of the range one candle drops to 2287, below the VAL (2302), but closes at 2304, back **inside the Value Area**. A failed break: the market did not accept the lower prices.
+
+### Step 3: Acceptance above
+
+Price later breaks VAH and the range ceiling and closes at 2346, and does not come back. New trading builds at the higher prices. This is acceptance: the Value Area is moving up.
+
+### Step 4: The LVN: a hollow left by the fast rally
+
+Between 2380 and 2405 price rose quickly. The volume of these bars may look big in the lower pane, but each bar is spread across many prices. So the trading at each **price** is small, and that area is thin on the profile (LVN). No one held it. If price returns to this area in future it is more likely to cross it quickly.
+
+</Steps>
+
+<Callout type="tip">
+  On one chart we saw two kinds of break: a failed break below (it went back
+  inside) and acceptance above (it stayed). You cannot tell the difference in
+  advance; that is the central lesson of this method. So rushing in before the
+  return is risky.
+</Callout>
+
+## Basic trade logic
+
+Two common Volume Profile trade types:
+
+- **Failed break (mean reversion):** after going outside the Value Area and returning, try to ride to the opposite edge.
+- **Acceptance (breakout):** if price stays outside, follow it toward the new Value Area.
+
+On the failed break in the shared chart:
+
+| Part      | Rule (common form)                                    | On the shared chart (synthetic) |
+| :-------- | :---------------------------------------------------- | :------------------------------ |
+| Setup     | Goes below VAL and returns inside the Value Area      | From 2287 to a close at 2304    |
+| Entry     | After confirmation of the return inside               | About 2305                      |
+| Stop loss | Below the extreme of the failed break                 | 2285                            |
+| Target    | The opposite edge of the Value Area (VAH), POC midway | VAH 2330, POC partial 2313      |
+
+The arithmetic: risk 2305 − 2285 = 20, reward to VAH 2330 − 2305 = 25. The ratio is about **1:1.25**. The honest truth: this setup's ratio is not large; if price only reaches the POC the reward is smaller still (8). That is why many combine it with a signal from the bigger picture (such as Wyckoff's spring).
+
+An EURUSD H1 example (synthetic), a clean failed break:
+
+<Chart
+  id="vp-failed-break-win-01"
+  height={440}
+  caption="EURUSD H1 (educational synthetic data) — First session's profile: POC 1.0930, VAH 1.0945, VAL 1.0920. Price rises above VAH and returns inside; sell at 1.0944, stop 1.0960, target VAL 1.0920 (risk 16 pips, reward 24 pips)."
+/>
+
+<Callout type="warning">
+  There is no Volume Profile entry without a stop loss. "It will go back into
+  the Value Area" is an assumption. Position size: [Risk per
+  trade](/en/learn/08-risk-management/01-risk-per-trade).
+</Callout>
+
+## Strengths
+
+- **Levels based on trading.** A measurable answer to where support-resistance is; not an eyeball guess.
+- **Low subjectivity.** The software computes POC, VAH and VAL; two traders get the same numbers (with the same settings).
+- **Clear invalidation.** The extreme of the failed break, or VAH if acceptance happens.
+- **Complements Price Action.** Helps choose which zones matter more.
+
+## Weaknesses and limits
+
+- **A level does not give direction.** The profile does not say whether price will stop at the POC or VAH or break through. You must decide direction another way.
+- **Subjectivity is low, but not zero.** The calculation is mechanical, but which period's profile, which timeframe, 70% or another value: that choice is yours. Hence "low".
+- **Tick volume is approximate.** In spot Forex and Gold the volume at each price is not real. A different broker gives a different profile.
+- **It changes.** Until the session ends the profile keeps changing. The current session's POC can shift midway.
+- **Acceptance vs failed break cannot be known in advance.** It is only clear afterwards. Entries are therefore risky.
+
+**Evidence status:** there are many practitioner books on Market Profile, but little independent, large-scale research. General research on technical analysis is mixed (Park and Irwin, 2007). **No method guarantees profit.** Verify it in your own backtest.
+
+Here is a failed example. The same levels, but this time price stayed above VAH (acceptance) and the fade sell hit its stop:
+
+<Chart
+  id="vp-acceptance-fail-01"
+  height={440}
+  caption="EURUSD H1 (educational synthetic data) — The same POC 1.0930, VAH 1.0945, VAL 1.0920. This time price stays above VAH and builds a new range. The fade sell at 1.0944 hits the stop at 1.0960 (loss 1R)."
+/>
+
+The lesson: selling at VAH in advance, without waiting for the return inside, is a trap in acceptance. Confirmation (a close inside) comes first.
+
+## Who it suits
+
+| Suits you if you…                               | Does not suit you if you…            |
+| :---------------------------------------------- | :----------------------------------- |
+| Trade intraday (M5–H1)                          | Look only at D1/W1 for the long term |
+| Have futures volume or a TPO profile            | Have only spot Forex tick volume     |
+| Like objective levels                           | Want a direct direction signal       |
+| Want to sharpen level selection in Price Action | Cannot run a profile in any software |
+
+## Combining with other methods
+
+- **Volume Profile + Price Action:** the simplest. Price Action gives direction and candles; the profile says which zone is real.
+- **Volume Profile + Wyckoff:** Wyckoff's long range shows up as a big HVN on the profile. A spring matches a break below the Value Area and a return.
+- **Volume Profile + VSA:** VSA's bar signals mean more at an HVN.
+- **Volume Profile + VWAP:** both are about "fair price". See [Volume and VWAP](/en/learn/07-technical-indicators/06-volume-vwap).
+
+**What not to mix:** session, weekly and monthly profiles on one chart, plus ten more indicators. The levels multiply until you see "levels" everywhere, and none of them matters.
+
+## Deep dive later
+
+This lesson is an overview. A separate series could cover:
+
+- The full form of TPO and Market Profile (initial balance, single prints, profile shapes)
+- Profile shapes (D, P, b, B) and what they mean
+- Composite profiles and multi-day balance
+- Applying it to Gold with futures volume
+
+**Sub-series suggestion:** yes, later. Reason: adding TPO and profile shapes would pass 3,000 words. The decision is yours.
+
+## How to start
+
+<Steps>
+
+### Step 1: Turn on a profile
+
+In your platform turn on a session volume profile (or TPO). Know whether it is tick or real volume.
+
+### Step 2: Write three numbers
+
+For each of the last 20 days write the POC, VAH and VAL.
+
+### Step 3: The next day's behaviour
+
+What did price do the next day on touching the earlier VAH or VAL? A failed break, acceptance, or nothing? Write 20 events.
+
+### Step 4: Watch the LVNs
+
+On which days did price enter an LVN and cross it fast? How often?
+
+### Step 5: Write the rules and backtest
+
+Write the failed-break rules (entry, stop, target). [Backtest](/en/learn/15-backtesting-journal/01-how-to-backtest) on at least 50 examples.
+
+</Steps>
+
+## Common mistakes
+
+| Mistake                                         | Why it is a problem             | Fix                                             |
+| :---------------------------------------------- | :------------------------------ | :---------------------------------------------- |
+| Treating POC or VAH as sure support/resistance  | A level does not give direction | Use a confirmation candle and a stop            |
+| Treating tick volume as real volume             | The profile differs by broker   | Consider futures volume or TPO                  |
+| Fading during acceptance                        | If price stays, value shifts    | Enter after the close back inside               |
+| Treating the current session's profile as final | The profile changes all day     | Use the previous session's numbers as reference |
+| Many profiles at once                           | Levels everywhere, indecision   | One session profile plus one composite, at most |
+
+## Summary
+
+<KeyTakeaways>
+
+- Volume Profile shows trading on the price axis: where the market agreed and where it did not.
+- The POC is the price of the most trading; the Value Area holds about 70% of trading (VAH-VAL).
+- Price stops at an HVN and crosses an LVN quickly.
+- Staying outside the Value Area is acceptance, returning is a failed break; you cannot know in advance.
+- Volume in spot Forex/Gold is tick-based; a level gives no direction. No guaranteed profit.
+
+</KeyTakeaways>
+
+## Quiz
+
+1. What is Volume Profile's core question?
+2. What are the POC and the Value Area?
+3. How does price behave at an HVN and an LVN?
+4. What is the difference between acceptance and a failed break?
+5. Why is Market Profile (TPO) sometimes more reliable in Forex?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** At which prices did the market agree, and where did it cross quickly.
+
+**2.** The POC is the price with the most trading. The Value Area is the range within which about 70% of the total trading happened.
+
+**3.** At an HVN price stops and wanders; at an LVN it crosses quickly.
+
+**4.** In acceptance price stays outside the Value Area and builds new trading; in a failed break it goes outside and returns inside.
+
+**5.** TPO counts time, not volume. Since spot Forex has no actual volume, it is less approximate than tick volume.
+
+</details>
+
+## Next steps
+
+- Chapter comparison: [Trading Methodologies: the eight approaches](/en/learn/16-trading-methodologies/00-overview).
+- Previous lesson: [Volume Spread Analysis](/en/learn/16-trading-methodologies/04-volume-spread-analysis).
+- Next lesson: [SMC / ICT](/en/learn/16-trading-methodologies/06-smc-ict).
+- Related: [Fake breakout](/en/learn/06-trend-chart-patterns/04-fake-breakout), [Wyckoff Method](/en/learn/16-trading-methodologies/03-wyckoff-method).
+
+### Sources
+
+- <ExternalLink href="https://www.investopedia.com/terms/v/volume-analysis.asp">
+    Volume Profile (Investopedia)
+  </ExternalLink>
+- <ExternalLink href="https://en.wikipedia.org/wiki/Market_profile">
+    Market profile (Wikipedia)
+  </ExternalLink>
+- <ExternalLink href="https://doi.org/10.1111/j.1467-6419.2007.00519.x">
+    Park & Irwin (2007), What Do We Know About the Profitability of Technical
+    Analysis?
+  </ExternalLink>
+
+<Disclaimer>
+  This article is for educational purposes only and is not financial advice. No
+  trading methodology guarantees profit. Forex and gold trading carry
+  significant financial risk, and you can lose all of your capital. Practise on
+  a demo account before trading with real money.
+</Disclaimer>

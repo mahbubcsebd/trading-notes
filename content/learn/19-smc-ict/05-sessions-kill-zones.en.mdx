@@ -1,0 +1,154 @@
+---
+title: "Sessions and Kill Zones: When in the Day to Look for SMC/ICT"
+description: "The role of the Asia, London and New York sessions, what ICT's kill zones are, converting to Bangladesh time, and why time is a filter, not a signal: with a failed example."
+level: advanced
+tags: [smc, ict, sessions, kill-zone, asia-range, london, new-york]
+instruments: [XAUUSD]
+timeframes: [M15, H1]
+status: done
+updated: 2026-11-07
+---
+
+# Sessions and Kill Zones: When in the Day to Look for SMC/ICT
+
+The same setup works in the morning and not in the afternoon. The reason is that who is in the market, and how much they trade, changes through the day. ICT put this timing at the centre of the teaching. This lesson shows what to look for at which time, and how to use time as a filter.
+
+## What you will be able to do
+
+- Describe the role of the three sessions.
+- Understand what a kill zone is and why it exists.
+- Draw an Asia range.
+- Convert times to your own time zone (Bangladesh).
+
+## Why it matters
+
+Liquidity is taken most when participation rises. Without knowing those hours, you will watch the chart for hours when nothing happens, or when something happens and you are asleep. For gold, the London and New York overlap is especially active, a general observation.
+
+## Core idea
+
+### The three sessions
+
+- **Asia:** usually quiet, builds a narrow range. In the ICT picture, this range's high and low are the next liquidity.
+- **London:** often the first big move; takes one side of the Asia range, then shows the direction of the day.
+- **New York:** may continue or reverse London's move. News is also heavier here.
+
+Analogy: a day at the market. Quiet at dawn, then the crowd gathers, busiest around noon.
+
+### Kill zone
+
+**A kill zone is a time window set by ICT in which sweeps and large moves are most often looked for.** ICT teaching commonly cites (in New York time):
+
+| Zone        | New York time |
+| :---------- | :------------ |
+| Asia        | 20:00–00:00   |
+| London      | 02:00–05:00   |
+| New York AM | 07:00–10:00   |
+
+These times differ a little by teacher, and the hours shift when daylight saving time (DST) changes. Verify them yourself; do not memorise them. To convert to Bangladesh time (UTC+6), work out the difference from New York (UTC−5 in winter, UTC−4 in summer).
+
+## How it looks on a chart
+
+<Chart
+  id="smc-sess-01"
+  height={460}
+  caption="XAUUSD H1 (illustrative synthetic data) — a narrow Asia range; in London a push above the range high that reverses and breaks the low; New York continues the move. Bar 0 = Asia start; the bands are illustrative."
+/>
+
+<Steps>
+
+### Step 1: Draw the Asia range
+
+Two lines at the session's high and low.
+
+### Step 2: Watch the London kill zone
+
+Which side of the range is taken?
+
+### Step 3: Wait for the sweep
+
+By the lesson 2 rule: does the body come back inside?
+
+### Step 4: Check structure
+
+Does the CHoCH from lesson 1 appear?
+
+### Step 5: Continuation or reversal in New York
+
+Decide by whether London's move is continuing or has stopped.
+
+</Steps>
+
+## Failed example: the day that did not reverse
+
+<Chart
+  id="smc-sess-02"
+  height={460}
+  caption="XAUUSD H1 (illustrative synthetic data) — the same Asia range, but London breaks the high and keeps going. Selling a 'sweep' would have failed all day."
+/>
+
+A move above the Asia high in the London kill zone is not always a sweep. Here the body closed above, never came back inside, and the Asia low was never touched. The time was "right" but there was no signal.
+
+The rule: **a kill zone tells you when to look, not which way to trade.**
+
+## Common mistakes
+
+| Mistake                            | Why it hurts                  | Fix                         |
+| :--------------------------------- | :---------------------------- | :-------------------------- |
+| Treating the kill zone as a signal | Right time, wrong setup       | Need a sweep plus structure |
+| Forgetting DST                     | Wrong hours, missed setup     | Verify the times            |
+| Trading every session              | Impatience and overtrading    | Pick your own 2–3 hours     |
+| Mixing up broker time and UTC      | Asia range in the wrong place | Match the chart's time zone |
+
+<Callout type="tip">
+  Pick one window that fits your life (for example the first two hours of
+  London) and watch only that for a few months. Trying to catch every hour tends
+  to give worse results; this is common experience, not proven.
+</Callout>
+
+## Summary
+
+<KeyTakeaways>
+
+- Asia builds the range; London and New York take its high and low.
+- Kill zone = ICT's time window (London 02:00–05:00, NY AM 07:00–10:00, New York time).
+- Times vary by teacher and by DST; verify them.
+- Time is a filter, not a signal; no entry without a sweep and structure.
+
+</KeyTakeaways>
+
+## Practice task
+
+On XAUUSD H1 for the last 10 days, draw the Asia range. Each day, write down which side London took, whether it came back, and where price finished.
+
+## Quiz
+
+1. What is the Asia session usually like?
+2. What is a kill zone?
+3. Why is a kill zone alone not a signal?
+4. What do you do when DST changes?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** Quiet, building a narrow range.
+
+**2.** A time window set by ICT in which sweeps and large moves are most often looked for.
+
+**3.** If there is no sweep or structure break, there is no setup even at the right time.
+
+**4.** Recalculate the difference between New York and your own time and shift the window.
+
+</details>
+
+## Next steps
+
+- Chapter overview: [SMC / ICT in Depth](/en/learn/19-smc-ict/00-overview).
+- Previous lesson: [Premium, Discount and OTE](/en/learn/19-smc-ict/04-premium-discount).
+- Next lesson: [Power of 3](/en/learn/19-smc-ict/06-power-of-3).
+
+<Disclaimer>
+  This article is for educational purposes only and is not financial advice. No
+  trading methodology guarantees profit. Forex and gold trading carry
+  significant financial risk, and you can lose all of your capital. Practise on
+  a demo account before trading with real money.
+</Disclaimer>

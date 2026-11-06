@@ -1,0 +1,148 @@
+---
+title: "SMC / ICT in Depth: From Liquidity to Entry Models (Chapter Overview)"
+description: "What SMC and ICT are, how they differ, and a step-by-step path through structure, liquidity, OB/FVG, sessions and entry models, with honest limits."
+level: advanced
+tags: [smc, ict, overview, liquidity, market-structure, methodology]
+instruments: [XAUUSD]
+timeframes: [M15, H1, H4, D1]
+status: done
+updated: 2026-11-07
+---
+
+# SMC / ICT in Depth: From Liquidity to Entry Models
+
+In SMC videos everything looks perfect: a sweep, then a CHoCH, then an FVG, then profit. Open your own chart and the same pattern appears everywhere, and none of it works. The reason: the terms were learned one by one, but the **order** and the **context** were not.
+
+This chapter fills that gap: each idea gets its own lesson, then everything is combined into one entry model, and the chapter ends with honest limits.
+
+## What SMC and ICT are
+
+**ICT** (Inner Circle Trader) is the teaching of Michael J. Huddleston, where most of the terms and models come from. **SMC** (Smart Money Concepts) is the simplified, community-built version of those ideas.
+
+|                 | SMC                           | ICT                                       |
+| :-------------- | :---------------------------- | :---------------------------------------- |
+| Main focus      | Structure, liquidity, OB, FVG | Time (sessions, kill zones), daily models |
+| Scope           | Small, simple                 | Larger, more terms and models             |
+| In this chapter | Lessons 1–4                   | Lessons 5–7                               |
+
+They are one family, so they are taught in sequence rather than apart. SMC is the base; ICT adds time and models on top.
+
+The one question of this chapter: **Where is liquidity resting, who takes it, and where does price go afterwards?**
+
+## Why this chapter
+
+- The SMC/ICT lesson in the [Methodologies chapter](/en/learn/16-trading-methodologies/06-smc-ict) is a one-page introduction. Here each idea gets its own lesson, with charts.
+- The basics of structure, liquidity and premium/discount are in the [Market Structure chapter](/en/learn/03-market-structure/00-overview). Here they are read by SMC/ICT rules, not repeated.
+- SMC is highly subjective. Without the sequence, every gap becomes an entry.
+
+## What you will be able to do
+
+- Mark swings, BOS and CHoCH by a fixed rule.
+- Recognise liquidity types and tell a sweep from a real breakout.
+- Pick the relevant zone among many order blocks and FVGs.
+- Draw a dealing range, premium/discount and the OTE zone.
+- Read the day's pattern using sessions and kill zones.
+- Write a complete entry model with stop and target.
+- Test the limits of SMC in your own backtest.
+
+## Reading order
+
+|  #  | Lesson                                                                      | Main question                             | Level        |
+| :-: | :-------------------------------------------------------------------------- | :---------------------------------------- | :----------- |
+|  1  | [Market Structure: BOS and CHoCH](/en/learn/19-smc-ict/01-market-structure) | Which break counts?                       | intermediate |
+|  2  | [Liquidity and Sweeps](/en/learn/19-smc-ict/02-liquidity-sweeps)            | Where do stops rest, when are they taken? | intermediate |
+|  3  | [Order Block and FVG](/en/learn/19-smc-ict/03-order-block-fvg)              | Which zone is relevant?                   | advanced     |
+|  4  | [Premium, Discount and OTE](/en/learn/19-smc-ict/04-premium-discount)       | At what price do I enter?                 | advanced     |
+|  5  | [Sessions and Kill Zones](/en/learn/19-smc-ict/05-sessions-kill-zones)      | When do I look?                           | advanced     |
+|  6  | [Power of 3](/en/learn/19-smc-ict/06-power-of-3)                            | What is the day's pattern?                | advanced     |
+|  7  | [Entry Model](/en/learn/19-smc-ict/07-entry-models)                         | What is the full sequence?                | advanced     |
+|  8  | [Limits and Risk](/en/learn/19-smc-ict/08-risk-and-limits)                  | Where does it fail?                       | advanced     |
+
+## How the lessons connect
+
+<Steps>
+
+### Step 1: Bias
+
+Read structure on a higher timeframe and decide the direction (lesson 1).
+
+### Step 2: Liquidity
+
+Mark where stops rest and check whether a sweep has happened (lesson 2).
+
+### Step 3: Zone
+
+If structure breaks after the sweep, look for an OB/FVG and check where it sits in premium/discount (lessons 3–4).
+
+### Step 4: Time
+
+Check whether the zone lines up with a session and kill zone (lessons 5–6).
+
+### Step 5: Entry and risk
+
+Write the rules, place the stop and target (lessons 7–8).
+
+</Steps>
+
+## Shared chart: the whole story in one place
+
+The examples in this chapter are mostly XAUUSD H1. The chart below is the same H4 path from the [Methodologies chapter](/en/learn/16-trading-methodologies/00-overview), where all the ideas appear together.
+
+<Chart
+  id="meth-smc-shared"
+  height={500}
+  caption="XAUUSD H4 (illustrative synthetic data) — SSL sweep, BOS and FVG, return to the FVG, then a BSL sweep and CHoCH at the top. Each label is covered in detail in one lesson of this chapter."
+/>
+
+<Callout type="warning">
+  All charts in this chapter are **illustrative synthetic data**, not a real
+  market record. Real XAUUSD examples have not been added yet
+  (`NEEDS_REAL_EXAMPLE`).
+</Callout>
+
+## What is not in this chapter
+
+- Basic explanation of structure, liquidity and premium/discount: the Market Structure chapter (linked above).
+- Supply/demand zones: [Support & Resistance](/en/learn/05-support-resistance/03-supply-demand).
+- Position sizing: [Risk Management](/en/learn/08-risk-management/02-position-sizing).
+- Overlap with Wyckoff: [Wyckoff Method](/en/learn/16-trading-methodologies/03-wyckoff-method).
+
+## How to study
+
+- Read in order; lesson 3 is hard without lessons 1–2.
+- After each lesson, find at least three examples on your own chart, including failures.
+- Start with one timeframe (H1) and one instrument.
+- Everything on a demo account.
+
+<Checklist
+  id="smc-ict-prereq"
+  items={[
+    "I can identify swing highs and swing lows",
+    "I know the difference between a trend and a range",
+    "I understand stop loss and risk per trade",
+    "I can read candle bodies and wicks",
+  ]}
+/>
+
+## Summary
+
+<KeyTakeaways>
+
+- ICT is the source; SMC is its simplified, community version.
+- What works is the **sequence** and the **context**, not the terms: bias → liquidity → structure → zone → time → risk.
+- SMC is highly subjective, with little independent evidence.
+- Every lesson has a failed example; do not skip them.
+
+</KeyTakeaways>
+
+## Next steps
+
+- First lesson: [Market Structure: BOS and CHoCH](/en/learn/19-smc-ict/01-market-structure).
+- If you need the basics first: [BOS and CHoCH (basics)](/en/learn/03-market-structure/03-break-of-structure).
+
+<Disclaimer>
+  This article is for educational purposes only and is not financial advice. No
+  trading methodology guarantees profit. Forex and gold trading carry
+  significant financial risk, and you can lose all of your capital. Practise on
+  a demo account before trading with real money.
+</Disclaimer>

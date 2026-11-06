@@ -15,9 +15,9 @@
     "overfitting",
     "out-of-sample"
   ],
-  "module": "16-advanced",
+  "module": "15-backtesting-journal",
   "lessonSlugs": [
-    "05-automation"
+    "06-automation"
   ],
   "caption": {
     "en": "Hypothetical: the rule was tuned until the first 30 trades looked excellent. On the next 20 unseen trades the curve gives back about 1,130 of its 1,782 gain.",

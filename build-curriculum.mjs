@@ -99,7 +99,7 @@ const curriculum = {
   '15-backtesting-journal': [
     'Performance metrics forward testing'
   ],
-  '16-advanced': [
+  '16-trading-methodologies': [
     'Smart Money Concepts ICT basics',
     'Volume profile market profile',
     'Wyckoff basics',

@@ -1,0 +1,267 @@
+---
+title: "Trading Methodology: আটটি পদ্ধতি, এক chart (চ্যাপ্টার পরিচিতি)"
+description: "Price Action, Indicator, Wyckoff, VSA, Volume Profile, SMC/ICT, Elliott Wave ও Harmonic: একই XAUUSD chart-এ পাশাপাশি তুলনা, আর নিজের পদ্ধতি বেছে নেওয়ার উপায়।"
+level: intermediate
+tags:
+  [
+    methodology,
+    price-action,
+    indicators,
+    wyckoff,
+    vsa,
+    volume-profile,
+    smc,
+    ict,
+    elliott-wave,
+    harmonic,
+    overview,
+  ]
+instruments: [XAUUSD]
+timeframes: [H4]
+status: done
+updated: 2026-11-07
+---
+
+# Trading Methodology: আটটি পদ্ধতি, এক chart
+
+একই chart আটজন trader-কে দিন। একজন বলবেন "range breakout", আরেকজন "spring", তৃতীয়জন "wave 3 শুরু"। কেউ দেখবেন RSI, কেউ volume-এর বার, কেউ liquidity sweep। **কেউ ভুল বলছেন না। প্রত্যেকে মার্কেটকে আলাদা প্রশ্ন করছেন।** এই অধ্যায় সেই আটটি প্রশ্ন পাশাপাশি রাখে।
+
+## এই অধ্যায় পড়ে আপনি যা পারবেন
+
+- আটটি জনপ্রিয় **trading methodology**-র মূল প্রশ্ন এক লাইনে বলতে পারবেন।
+- কোন পদ্ধতি **কী data** পড়ে (শুধু দাম, দাম + volume, নাকি indicator), আলাদা করতে পারবেন।
+- পদ্ধতিগুলোর **সম্পর্ক ও মিল** চিনতে পারবেন (যেমন Wyckoff থেকে VSA)।
+- Forex ও Gold-এ **volume-এর সীমা** বুঝতে পারবেন।
+- নিজের সময়, মেজাজ আর style অনুযায়ী **একটি পদ্ধতি বেছে** শেখা শুরু করতে পারবেন।
+
+## এত পদ্ধতি কেন আছে
+
+**Methodology হলো chart পড়ার একটি নির্দিষ্ট কাঠামো: কী দেখবেন, কোন ক্রমে দেখবেন, আর কখন trade নেবেন।**
+
+একটি সহজ তুলনা। ঢাকার একই রাস্তা চারজন মানুষ চারভাবে দেখেন। ট্রাফিক পুলিশ গাড়ির ভিড় দেখেন। দোকানদার দেখেন কত মানুষ হাঁটছে। রিকশাচালক দেখেন কোন গলিতে ফাঁকা। নগর পরিকল্পনাবিদ দেখেন দশ বছরে রাস্তা কীভাবে বদলেছে। রাস্তা একটাই, প্রশ্ন আলাদা।
+
+Trading-এও তাই:
+
+- কেউ জানতে চান **দাম এখন কোন দিকে চলছে** (Price Action)।
+- কেউ চান **সূত্র দিয়ে মাপা সংকেত** (Indicator)।
+- কেউ জানতে চান **বড় player-রা জমাচ্ছে না ছাড়ছে** (Wyckoff, VSA)।
+- কেউ চান **কোন দামে সবচেয়ে বেশি লেনদেন** হয়েছে (Volume Profile)।
+- কেউ খোঁজেন **stop কোথায় জমে আছে** (SMC/ICT)।
+- কেউ খোঁজেন **ভিড়ের মনস্তত্ত্বের ঢেউ** (Elliott Wave) বা **অনুপাতের জ্যামিতি** (Harmonic)।
+
+প্রতিটি পদ্ধতি একটি **মডেল**। কোনোটিই মার্কেটের সম্পূর্ণ সত্য নয়।
+
+## Shared chart: পুরো অধ্যায়ের এক chart
+
+<Chart
+  id="meth-shared-base"
+  height={480}
+  caption="XAUUSD H4 (শিক্ষামূলক কাল্পনিক ডেটা, tick volume-ও কাল্পনিক) — downtrend, লম্বা range, ধাপে ধাপে তীব্র rally, high-এর ওপরে একটি spike, তারপর পতন। এই অধ্যায়ের প্রতিটি পাঠ এই একই chart নিজের পদ্ধতিতে পড়বে।"
+/>
+
+এই chart-এ ইচ্ছে করে সব ধরনের ঘটনা রাখা হয়েছে: trend, range, false break, শক্ত breakout, pullback আর reversal। প্রতিটি পাঠ দেখাবে **ওই পদ্ধতি এই chart-এর কোথায় কী দেখে।** কোনো পদ্ধতি পরিষ্কার কিছু না পেলে পাঠে সেটাই সৎভাবে বলা হবে।
+
+<Callout type="note">
+  সৎ কথা: রেপোতে এখনো real XAUUSD OHLC data নেই। তাই shared chart কাল্পনিক।
+  বাস্তব data পাওয়া গেলে একই কাঠামোয় real chart বসানো হবে।
+</Callout>
+
+## এক লাইনে আটটি পদ্ধতি
+
+| পদ্ধতি          | chart-কে যে প্রশ্ন করে                                    |
+| :-------------- | :-------------------------------------------------------- |
+| Price Action    | দাম কোন level-এ কী আচরণ করছে, structure কোন দিকে?         |
+| Indicator-Based | সূত্রে মাপা momentum ও trend কী বলছে?                     |
+| Wyckoff         | বড় player-রা কি accumulate করছে না distribute করছে?      |
+| VSA             | এই bar-এর spread, close আর volume কি শক্তি না দুর্বলতা?   |
+| Volume Profile  | কোন দামে মার্কেট একমত হয়েছে, কোথায় দ্রুত পার হয়েছে?    |
+| SMC / ICT       | Liquidity কোথায় জমে আছে, দাম এরপর কোথায় deliver হবে?    |
+| Elliott Wave    | ভিড়ের ঢেউয়ের কোন ধাপে আছি, count কোথায় বাতিল?          |
+| Harmonic        | দামের swing-গুলো কি নির্দিষ্ট Fibonacci অনুপাত মেনে চলছে? |
+
+## Master তুলনা
+
+তিনটি ছোট টেবিলে ভাগ করা হলো, যাতে মোবাইলেও পড়া যায়। প্রতিটি মান পরের পাঠগুলোর "এক নজরে" কার্ডের সাথে মিলে।
+
+### ভিত্তি: কী পড়ে, কোথা থেকে এসেছে
+
+| পদ্ধতি          | মূল ফোকাস                          | উৎপত্তি                                                                  | Data needed      |
+| :-------------- | :--------------------------------- | :----------------------------------------------------------------------- | :--------------- |
+| Price Action    | Price movement ও candlestick       | একক প্রতিষ্ঠাতা নেই; Dow Theory ও ক্লাসিক chart reading থেকে             | শুধু দাম         |
+| Indicator-Based | Mathematical indicator             | নানা জন (যেমন RSI ও ATR: J. Welles Wilder, 1978)                         | Indicator        |
+| Wyckoff         | Accumulation ও distribution        | Richard D. Wyckoff, বিংশ শতকের শুরু                                      | দাম + volume     |
+| VSA             | Volume ও price-এর সম্পর্ক          | Tom Williams, Wyckoff-এর ধারণা থেকে                                      | দাম + volume     |
+| Volume Profile  | কোন দামে কত লেনদেন                 | Market Profile: J. Peter Steidlmayer, CBOT, ১৯৮০-এর দশক                  | দাম + volume     |
+| SMC / ICT       | Liquidity ও institutional delivery | ICT: Michael J. Huddleston (অনলাইন শিক্ষা, ২০১০-এর দশক); SMC বৃহত্তর নাম | শুধু দাম         |
+| Elliott Wave    | Market cycle ও wave                | Ralph Nelson Elliott, ১৯৩০-এর দশক                                        | শুধু দাম         |
+| Harmonic        | Fibonacci-ভিত্তিক pattern          | H.M. Gartley (1935); পরে Larry Pesavento, Scott Carney                   | শুধু দাম (ratio) |
+
+### ব্যবহার: কোথায়, কত কঠিন
+
+| পদ্ধতি          | Typical timeframe            | Subjectivity | Learning curve |
+| :-------------- | :--------------------------- | :----------- | :------------- |
+| Price Action    | সব timeframe (M15 থেকে D1)   | medium       | beginner       |
+| Indicator-Based | সব timeframe                 | low          | beginner       |
+| Wyckoff         | H4, D1, W1                   | medium       | intermediate   |
+| VSA             | H1 থেকে D1                   | medium       | intermediate   |
+| Volume Profile  | Intraday session, M5 থেকে H1 | low          | intermediate   |
+| SMC / ICT       | Entry M1–H1, bias H4–D1      | high         | advanced       |
+| Elliott Wave    | H4, D1, W1                   | high         | advanced       |
+| Harmonic        | H1, H4, D1                   | medium       | intermediate   |
+
+### লাভ-ক্ষতি: শক্তি, দুর্বলতা, Gold-এ সতর্কতা
+
+| পদ্ধতি          | Main strength                            | Main weakness                                 | Forex/Gold caveat                              |
+| :-------------- | :--------------------------------------- | :-------------------------------------------- | :--------------------------------------------- |
+| Price Action    | যেকোনো market-এ চলে, বাড়তি data লাগে না | বিচারনির্ভর, নিয়ম লিখে backtest কঠিন         | Low timeframe-এ spread ও news spike            |
+| Indicator-Based | নিয়ম স্পষ্ট, backtest সহজ               | দেরিতে সংকেত, range-এ whipsaw, overfitting    | Volume indicator tick volume ব্যবহার করে       |
+| Wyckoff         | Range-কে পরিকল্পিত campaign হিসেবে পড়া  | পরে দেখে লেবেল বসানো সহজ, live-এ কঠিন         | Tick volume, প্রকৃত volume নয়                 |
+| VSA             | প্রতিটি bar-এ supply/demand-এর খুঁটিনাটি | Background ছাড়া একক bar-এর সংকেত দুর্বল      | Tick volume-এর ওপর সবচেয়ে বেশি নির্ভরশীল      |
+| Volume Profile  | লেনদেনের ভিত্তিতে বস্তুনিষ্ঠ level       | Level দিক বলে না                              | Tick volume; Gold futures (CME GC) ভালো বিকল্প |
+| SMC / ICT       | নির্দিষ্ট entry zone, ছোট stop           | অনেক পরিভাষা, hindsight, স্বাধীন প্রমাণ কম    | Session (London/NY) সময় গুরুত্বপূর্ণ          |
+| Elliott Wave    | বড় চিত্র ও স্পষ্ট invalidation          | একই chart-এ একাধিক বৈধ count                  | বিশেষ কিছু নয়                                 |
+| Harmonic        | আগে থেকে ঠিক করা zone ও stop             | বৈধ pattern কম, ratio-র tolerance নিয়ে মতভেদ | News-এ Gold প্রায়ই D point ছাড়িয়ে যায়      |
+
+Subjectivity মানে, একই chart দেখে দুজন অভিজ্ঞ trader কতটা ভিন্ন সিদ্ধান্তে পৌঁছাতে পারেন। "Low" মানে নিয়ম প্রায় যান্ত্রিক। "High" মানে ব্যাখ্যার জায়গা অনেক।
+
+## কে কী পড়ে: চারটি দল
+
+| দল                            | পদ্ধতি                               | কী লাগে                                 |
+| :---------------------------- | :----------------------------------- | :-------------------------------------- |
+| শুধু দাম                      | Price Action, Elliott Wave, Harmonic | Candle chart, swing, Fibonacci          |
+| দাম + liquidity-র গল্প        | SMC / ICT                            | Swing high/low, stop কোথায় জমে         |
+| দাম + volume                  | Wyckoff, VSA, Volume Profile         | Volume data (Forex-এ সীমিত, নিচে দেখুন) |
+| দাম/volume থেকে গাণিতিক হিসাব | Indicator-Based                      | সূত্র ও setting                         |
+
+এই দলভাগ একটি জরুরি কথা বলে: **volume-নির্ভর তিনটি পদ্ধতি spot Forex ও Gold-এ সবচেয়ে বেশি সীমায় পড়ে।**
+
+## পদ্ধতিগুলোর সম্পর্ক
+
+এরা একে অপরের থেকে আলাদা দ্বীপ নয়। অনেক ধারণা এক জায়গা থেকে আরেক জায়গায় গেছে:
+
+- **Wyckoff → VSA:** Tom Williams Wyckoff-এর ধারণা থেকে VSA গড়েছেন। VSA বলতে গেলে Wyckoff-এর bar-স্তরের রূপ।
+- **Wyckoff ↔ SMC:** Wyckoff-এর spring দেখতে SMC-র sell-side liquidity sweep-এর মতো। নাম আলাদা, ঘটনা প্রায় এক।
+- **Price Action → সবার ভিত্তি:** [Swing high ও swing low](/bn/learn/03-market-structure/01-swing-high-low), [support ও resistance](/bn/learn/05-support-resistance/01-levels-vs-zones) ছাড়া বাকি সাতটির কোনোটিই চলে না।
+- **Fibonacci → Elliott ও Harmonic:** দুটিই [Fibonacci](/bn/learn/05-support-resistance/05-fibonacci-basics) অনুপাত ব্যবহার করে। Elliott wave-এর দৈর্ঘ্য মাপে, Harmonic pattern-এর বিন্দু।
+- **Volume Profile ↔ Wyckoff:** Wyckoff-এর লম্বা range সাধারণত profile-এ high-volume এলাকা হিসেবে দেখা দেয়।
+
+## Forex ও Gold-এ volume-এর সীমা
+
+<Callout type="warning">
+  Spot Forex ও spot Gold-এর কোনো কেন্দ্রীয় exchange নেই। তাই MT4/MT5-এর volume
+  আসলে **tick volume**: আপনার broker-এর server-এ দাম কতবার বদলেছে, তার হিসাব।
+  এটি প্রকৃত লেনদেনের পরিমাণ নয়, শুধু একটি আনুমানিক ইঙ্গিত।
+</Callout>
+
+যা করতে পারেন:
+
+- **Gold futures (CME-র GC contract)**-এর volume দেখুন। Exchange-traded বলে এর volume প্রকৃত লেনদেনের রেকর্ড।
+- Broker-এর tick volume-কে **আনুমানিক** ধরুন। বড় পার্থক্য (যেমন হঠাৎ তিনগুণ) দেখুন, ছোট পার্থক্য নয়।
+- আলাদা broker-এ tick volume আলাদা হতে পারে। একটি broker-এর data-কে "মার্কেটের volume" বলবেন না।
+
+## কোন পদ্ধতি আপনার জন্য
+
+কোনো পদ্ধতি "সেরা" নয়। প্রশ্ন হলো, কোনটি **আপনার** সময় ও মেজাজের সাথে মেলে।
+
+<Steps>
+
+### ধাপ ১: সময় কতটুকু?
+
+দিনে এক ঘণ্টার কম সময় পেলে H4/D1-ভিত্তিক পদ্ধতি বাস্তবসম্মত: Price Action, Wyckoff, Elliott, Indicator। সারাদিন screen-এ থাকলে intraday পদ্ধতি (Volume Profile, SMC/ICT entry) সম্ভব।
+
+### ধাপ ২: নিয়ম পছন্দ, নাকি বিচার?
+
+স্পষ্ট নিয়ম ও backtest পছন্দ করলে Indicator-Based বা Volume Profile। বিচার করে পড়তে স্বচ্ছন্দ হলে Price Action, Wyckoff, SMC।
+
+### ধাপ ৩: অনিশ্চয়তা কতটা সহ্য হয়?
+
+High-subjectivity পদ্ধতি (SMC/ICT, Elliott) একই chart-এ একাধিক ব্যাখ্যা দেয়। দ্বিধায় অস্থির হলে low/medium subjectivity দিয়ে শুরু করুন।
+
+### ধাপ ৪: আপনার market-এ data আছে?
+
+শুধু spot Gold/Forex chart থাকলে volume-নির্ভর পদ্ধতির সংকেতকে সহায়ক ধরুন, প্রমাণ নয়।
+
+### ধাপ ৫: একটি বেছে ৫০টি উদাহরণ
+
+একটি পদ্ধতি বেছে নিন। অন্তত ৫০টি ঐতিহাসিক উদাহরণ লিখে [backtest](/bn/learn/15-backtesting-journal/01-how-to-backtest) করুন। তারপর সিদ্ধান্ত নিন।
+
+</Steps>
+
+## সাধারণ ভুল: methodology hopping
+
+এই সপ্তাহে SMC, পরের সপ্তাহে Elliott, তার পরের সপ্তাহে Harmonic। প্রতিটি পদ্ধতিতে কয়েকটি loss হলেই "এটা কাজ করে না" বলে বদল। এর নাম **methodology hopping**।
+
+সমস্যা দুটি:
+
+- **কোনো পদ্ধতির পর্যাপ্ত নমুনা হয় না।** দশটি trade থেকে কোনো পদ্ধতির ভালো-মন্দ বোঝা যায় না।
+- **অনেক পদ্ধতি একসাথে মেশালে সংকেত পরস্পরবিরোধী হয়।** RSI বলে sell, Wyckoff বলে spring, Elliott বলে wave 3। শেষে আপনি যেটা চান সেটাই বেছে নেন। একে বলে confirmation bias।
+
+<Callout type="tip">
+  নিয়ম: একটি **মূল** পদ্ধতি, সর্বোচ্চ একটি **সহায়ক** পদ্ধতি। সহায়ক পদ্ধতির
+  কাজ শুধু একটি নির্দিষ্ট প্রশ্নের উত্তর দেওয়া, যেমন "এই level-এ volume কেমন?"
+</Callout>
+
+## পড়ার ক্রম
+
+| #   | পাঠ                                                                                      | মূল প্রশ্ন                            | কঠিনতা       |
+| :-- | :--------------------------------------------------------------------------------------- | :------------------------------------ | :----------- |
+| ১   | [Price Action](/bn/learn/16-trading-methodologies/01-price-action)                       | দাম level-এ কী আচরণ করছে?             | beginner     |
+| ২   | [Indicator-Based Trading](/bn/learn/16-trading-methodologies/02-indicator-based-trading) | সূত্রে মাপা সংকেত কী বলছে?            | beginner     |
+| ৩   | [Wyckoff Method](/bn/learn/16-trading-methodologies/03-wyckoff-method)                   | বড় player জমাচ্ছে না ছাড়ছে?         | intermediate |
+| ৪   | [Volume Spread Analysis](/bn/learn/16-trading-methodologies/04-volume-spread-analysis)   | এই bar শক্তি না দুর্বলতা?             | intermediate |
+| ৫   | [Volume Profile](/bn/learn/16-trading-methodologies/05-volume-profile)                   | কোন দামে মার্কেট একমত?                | intermediate |
+| ৬   | [SMC / ICT](/bn/learn/16-trading-methodologies/06-smc-ict)                               | Liquidity কোথায়, দাম কোথায় যাবে?    | advanced     |
+| ৭   | [Elliott Wave](/bn/learn/16-trading-methodologies/07-elliott-wave)                       | ঢেউয়ের কোন ধাপে, count কোথায় বাতিল? | advanced     |
+| ৮   | [Harmonic Patterns](/bn/learn/16-trading-methodologies/08-harmonic-patterns)             | Swing-গুলো কি Fibonacci অনুপাত মানছে? | intermediate |
+
+ক্রমের যুক্তি: Price Action সবার ভিত্তি। Wyckoff আসে VSA ও SMC-র আগে, কারণ দুটিই Wyckoff-এর ধারণার কাছাকাছি। Elliott ও Harmonic শেষে, কারণ এরা সবচেয়ে নিয়ম-ভারী।
+
+## Chart-এর রঙের নিয়ম
+
+এই অধ্যায়ের সব chart একই রঙের ভাষা ব্যবহার করে:
+
+| উপাদান                          | রঙ                    |
+| :------------------------------ | :-------------------- |
+| Bullish zone, demand, target    | সবুজ                  |
+| Bearish zone, supply, stop loss | লাল                   |
+| Range / consolidation           | ধূসর zone             |
+| Fibonacci, POC, মূল highlight   | সোনালি                |
+| Entry, FVG                      | নীল                   |
+| Volume ও indicator              | দামের নিচে আলাদা pane |
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- প্রতিটি methodology মার্কেটকে আলাদা প্রশ্ন করে; কোনোটি "সেরা" নয়।
+- চার দল: শুধু দাম, দাম + liquidity, দাম + volume, আর indicator।
+- Spot Forex ও Gold-এ volume মানে tick volume, প্রকৃত volume নয়।
+- একটি মূল পদ্ধতি, সর্বোচ্চ একটি সহায়ক; বারবার বদলাবেন না।
+- যেকোনো পদ্ধতি নিজের backtest-এ যাচাই করুন।
+
+</KeyTakeaways>
+
+## নিজেকে যাচাই করুন
+
+<Checklist
+  id="ch16-overview-check"
+  items={[
+    "আমি swing high/low ও support/resistance চিনতে পারি",
+    "আমি জানি tick volume প্রকৃত volume নয়",
+    "আমি অন্তত ৫০টি উদাহরণ দিয়ে একটি পদ্ধতি backtest করতে রাজি",
+    "আমার trade-এ সবসময় stop loss থাকে",
+  ]}
+/>
+
+## পরের ধাপ
+
+- প্রথম পাঠ: [Price Action](/bn/learn/16-trading-methodologies/01-price-action)।
+- আগের অধ্যায়: [Backtesting ও Journal](/bn/learn/15-backtesting-journal/00-overview)।
+- পরের অধ্যায়: [Case Studies](/bn/learn/17-case-studies-trade-reviews/00-overview)।
+
+<Disclaimer>
+  এই লেখাটি শুধুমাত্র শিক্ষামূলক উদ্দেশ্যে। এটি কোনো financial advice নয়। কোনো
+  trading পদ্ধতিই নিশ্চিত লাভ দেয় না। Forex ও Gold trading-এ উল্লেখযোগ্য আর্থিক
+  ঝুঁকি রয়েছে এবং আপনি আপনার বিনিয়োগের পুরোটাই হারাতে পারেন। Real money দিয়ে
+  trade করার আগে demo account-এ যথেষ্ট অনুশীলন করুন।
+</Disclaimer>

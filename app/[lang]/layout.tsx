@@ -9,6 +9,7 @@ import { RootProvider } from "fumadocs-ui/provider";
 import "fumadocs-ui/style.css";
 import { Header } from "@/components/layout/Header";
 import { Footer } from "@/components/layout/Footer";
+import { RegisterServiceWorker } from "@/components/layout/RegisterServiceWorker";
 import "../globals.css";
 import { i18n } from "@/lib/i18n";
 
@@ -42,7 +43,7 @@ const jetbrainsMono = JetBrains_Mono({
   display: "swap",
 });
 
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { SITE_NAME, SITE_URL, isIndexable } from "@/lib/seo";
 
 export const metadata: Metadata = {
@@ -55,6 +56,16 @@ export const metadata: Metadata = {
     "Personal trading notes and structured learning for Forex and Gold (XAUUSD) — Bengali & English.",
   robots: isIndexable ? "index,follow" : "noindex,nofollow",
   openGraph: { siteName: SITE_NAME, type: "website" },
+  applicationName: SITE_NAME,
+  appleWebApp: { capable: true, title: SITE_NAME, statusBarStyle: "black-translucent" },
+  icons: { apple: "/icons/apple-touch-icon.png" },
+};
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: "(prefers-color-scheme: dark)", color: "#0c1120" },
+    { media: "(prefers-color-scheme: light)", color: "#f4f6fa" },
+  ],
 };
 
 export default async function RootLayout({ children, params }) {
@@ -75,6 +86,7 @@ export default async function RootLayout({ children, params }) {
             <Header lang={lang} />
             <main className="flex-1">{children}</main>
             <Footer lang={lang} />
+            <RegisterServiceWorker />
           </RootProvider>
         </ThemeProvider>
       </body>

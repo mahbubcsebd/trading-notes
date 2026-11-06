@@ -1,0 +1,247 @@
+{
+  "id": "smc-sess-02",
+  "title": {
+    "en": "The day that did not reverse",
+    "bn": "যে দিনে দাম উল্টোয়নি"
+  },
+  "symbol": "XAUUSD",
+  "timeframe": "H1",
+  "mode": "synthetic",
+  "type": "concept",
+  "bias": "bullish",
+  "outcome": null,
+  "tags": [
+    "XAUUSD",
+    "smc",
+    "sessions",
+    "failure"
+  ],
+  "module": "19-smc-ict",
+  "lessonSlugs": [
+    "05-sessions-kill-zones"
+  ],
+  "caption": {
+    "en": "XAUUSD H1 (synthetic): the same Asia range, but London breaks the high and keeps going. Selling the 'sweep' in the London kill zone would fail all day.",
+    "bn": "XAUUSD H1 (কাল্পনিক): একই Asia range, কিন্তু London high ভেঙে চলতেই থাকে। London kill zone-এ 'sweep' ভেবে sell করলে সারাদিন ব্যর্থ হত।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data (incl. synthetic tick volume), not a real market record.",
+    "bn": "শিক্ষামূলক কাল্পনিক ডেটা (tick volume-ও কাল্পনিক), বাস্তব মার্কেটের রেকর্ড নয়।"
+  },
+  "updatedAt": "2026-11-07T18:00:00Z",
+  "annotations": [
+    {
+      "type": "zone",
+      "from": {
+        "i": 0,
+        "price": 2340
+      },
+      "to": {
+        "i": 7,
+        "price": 2336
+      },
+      "label": "Asia range",
+      "color": "#64748b"
+    },
+    {
+      "type": "zone",
+      "from": {
+        "i": 8,
+        "price": 2365
+      },
+      "to": {
+        "i": 14,
+        "price": 2336
+      },
+      "label": "London KZ",
+      "color": "#f5b301"
+    },
+    {
+      "type": "marker",
+      "i": 9,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Closes above: no sweep"
+    }
+  ],
+  "explanation": {
+    "en": "A kill zone says when to look, not which way to trade. Without a return inside the Asia range and a structure break, there is no sweep.",
+    "bn": "Kill zone বলে কখন দেখবেন, কোন দিকে trade করবেন তা নয়। Asia range-এর ভেতরে ফেরা ও structure ভাঙা না হলে sweep নেই।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Time of day is a filter, not a signal",
+      "bn": "দিনের সময় একটি filter, সংকেত নয়"
+    }
+  ],
+  "candles": [
+    {
+      "i": 0,
+      "o": 2338,
+      "h": 2339.5,
+      "l": 2337,
+      "c": 2338.5
+    },
+    {
+      "i": 1,
+      "o": 2338.5,
+      "h": 2339.5,
+      "l": 2336,
+      "c": 2337
+    },
+    {
+      "i": 2,
+      "o": 2337,
+      "h": 2340,
+      "l": 2336,
+      "c": 2339
+    },
+    {
+      "i": 3,
+      "o": 2339,
+      "h": 2340,
+      "l": 2336.5,
+      "c": 2337.5
+    },
+    {
+      "i": 4,
+      "o": 2337.5,
+      "h": 2339.8,
+      "l": 2336.5,
+      "c": 2338.8
+    },
+    {
+      "i": 5,
+      "o": 2338.8,
+      "h": 2339.8,
+      "l": 2336.2,
+      "c": 2337.2
+    },
+    {
+      "i": 6,
+      "o": 2337.2,
+      "h": 2339.4,
+      "l": 2336.2,
+      "c": 2338.4
+    },
+    {
+      "i": 7,
+      "o": 2338.4,
+      "h": 2339.4,
+      "l": 2337,
+      "c": 2338
+    },
+    {
+      "i": 8,
+      "o": 2338,
+      "h": 2343.0,
+      "l": 2337.5,
+      "c": 2341.5
+    },
+    {
+      "i": 9,
+      "o": 2341.5,
+      "h": 2345,
+      "l": 2341.0,
+      "c": 2344
+    },
+    {
+      "i": 10,
+      "o": 2344,
+      "h": 2345,
+      "l": 2341.5,
+      "c": 2342.5
+    },
+    {
+      "i": 11,
+      "o": 2342.5,
+      "h": 2347,
+      "l": 2342.0,
+      "c": 2346
+    },
+    {
+      "i": 12,
+      "o": 2346,
+      "h": 2350,
+      "l": 2345.5,
+      "c": 2349
+    },
+    {
+      "i": 13,
+      "o": 2349,
+      "h": 2350,
+      "l": 2346,
+      "c": 2347
+    },
+    {
+      "i": 14,
+      "o": 2347,
+      "h": 2352,
+      "l": 2346.5,
+      "c": 2351
+    },
+    {
+      "i": 15,
+      "o": 2351,
+      "h": 2355,
+      "l": 2350.5,
+      "c": 2354
+    },
+    {
+      "i": 16,
+      "o": 2354,
+      "h": 2355,
+      "l": 2351,
+      "c": 2352
+    },
+    {
+      "i": 17,
+      "o": 2352,
+      "h": 2357,
+      "l": 2351.5,
+      "c": 2356
+    },
+    {
+      "i": 18,
+      "o": 2356,
+      "h": 2360,
+      "l": 2355.5,
+      "c": 2359
+    },
+    {
+      "i": 19,
+      "o": 2359,
+      "h": 2360,
+      "l": 2356,
+      "c": 2357
+    },
+    {
+      "i": 20,
+      "o": 2357,
+      "h": 2362,
+      "l": 2356.5,
+      "c": 2361
+    },
+    {
+      "i": 21,
+      "o": 2361,
+      "h": 2364,
+      "l": 2360.5,
+      "c": 2363
+    },
+    {
+      "i": 22,
+      "o": 2363,
+      "h": 2364,
+      "l": 2359,
+      "c": 2360
+    },
+    {
+      "i": 23,
+      "o": 2360,
+      "h": 2365,
+      "l": 2359.5,
+      "c": 2364
+    }
+  ]
+}

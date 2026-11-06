@@ -1,0 +1,348 @@
+---
+title: "Harmonic Patterns: Patterns Drawn with Fibonacci Ratios — A Plain Guide"
+description: "What Harmonic Patterns are: the X-A-B-C-D structure, Gartley, Bat, Butterfly and Crab ratios, the PRZ, disagreement on tolerance and honest limits, on an XAUUSD chart."
+level: intermediate
+tags: [harmonic, gartley, bat, butterfly, crab, fibonacci, methodology]
+instruments: [XAUUSD]
+timeframes: [H1, H4, D1]
+status: done
+sources:
+  - type: blog
+    title: "Gartley Pattern (Investopedia)"
+    url: "https://www.investopedia.com/terms/g/gartley.asp"
+  - type: other
+    title: "Harmonic pattern (Wikipedia)"
+    url: "https://en.wikipedia.org/wiki/Harmonic_pattern"
+  - type: other
+    title: "Park & Irwin (2007), What Do We Know About the Profitability of Technical Analysis? (Journal of Economic Surveys)"
+    url: "https://doi.org/10.1111/j.1467-6419.2007.00519.x"
+updated: 2026-11-07
+---
+
+# Harmonic Patterns: Patterns Drawn with Fibonacci Ratios
+
+A trader says, "This pattern is exactly a Gartley." You ask, "How do you know?" They say, "I measured every swing." Here it is not an eyeball judgment but a **measurement of ratios**. That is the special thing about Harmonic Patterns: it is not enough for the shape to look good; the numbers must match.
+
+## At a glance
+
+<MethodCard
+  lang="en"
+  name="Harmonic Patterns"
+  origin="H.M. Gartley (1935); later Larry Pesavento, Scott Carney"
+  reads="Price"
+  question="Are the swings following specific Fibonacci ratios?"
+  timeframes="H1, H4, D1"
+  difficulty="intermediate"
+  subjectivity="medium"
+/>
+
+## What you will learn
+
+- Explain the five-point X-A-B-C-D structure.
+- Tell apart the ratios of Gartley, Bat, Butterfly and Crab.
+- Understand what the PRZ (Potential Reversal Zone) is and why.
+- Measure when a pattern is valid and when it is not.
+- Know the disagreement about ratio tolerance and the method's honest limits.
+
+## History and origin
+
+- **H.M. Gartley:** in his 1935 book _Profits in the Stock Market_ he described a chart pattern of a specific shape. It later became known as the "Gartley pattern".
+- **Larry Pesavento:** in the 1990s he gave numerical definitions of patterns using Fibonacci ratios. The ratio-based approach starts here.
+- **Scott Carney:** in the 2000s he popularised the method under the name "Harmonic Trading" and added new patterns such as the Bat and the Crab.
+- **Disagreement in the ratio lists.** Limits differ slightly by teacher and book. This lesson uses one common version.
+
+## Core philosophy
+
+**Harmonic's question: are the price swings following specific Fibonacci ratios?**
+
+The idea is this: certain ratios keep returning in markets (0.618, 0.786 and so on). So if several swings together line up in the right ratios, the last point (D) is an area where price may turn. Because the numbers are known beforehand, you plan before D arrives.
+
+An analogy: a tailor's measurements. All the measurements are written down before the cloth is cut. If the measurements do not match, no cutting. A Harmonic trader likewise does not trade when the measurements fail.
+
+<Callout type="warning">
+  Matching ratios does not mean price will turn. Harmonic is a **planning
+  framework**: where to look, and where it is proven wrong. Not a guarantee of a
+  turn.
+</Callout>
+
+## Core concepts
+
+### 1. The X-A-B-C-D structure
+
+A harmonic pattern is made of five points and four legs:
+
+- **XA:** the first big move.
+- **AB:** retraces part of XA.
+- **BC:** retraces part of AB.
+- **CD:** the final move, which goes to a specific ratio relative to XA. **D is the possible entry point.**
+
+**Bullish pattern:** the last move (CD) falls, and D is a chance to buy. **Bearish pattern:** the reverse, selling at D.
+
+<CandleDiagram
+  title="Bullish X-A-B-C-D"
+  candles={[
+    { o: 10, h: 10.5, l: 9.5, c: 10, label: "X" },
+    { o: 10, h: 18, l: 9.8, c: 17.5, label: "A" },
+    { o: 17.5, h: 17.8, l: 13, c: 13.5, label: "B" },
+    { o: 13.5, h: 16.5, l: 13.2, c: 16, label: "C" },
+    { o: 16, h: 16.2, l: 11.8, c: 12, label: "D" },
+    { o: 12, h: 16, l: 11.5, c: 15.5, note: "Turns up" },
+  ]}
+  caption="Rises from X to A, falls to B, rises again to C, then falls to D. The expectation is a turn up at D. Each leg is measured against a specific ratio."
+/>
+
+### 2. Fibonacci ratios
+
+The ratios used in Harmonic come from the [Fibonacci](/en/learn/05-support-resistance/05-fibonacci-basics) sequence: 0.382, 0.5, 0.618, 0.786, 0.886, and as extensions 1.272 and 1.618.
+
+A **retracement** is how much of the earlier move is taken back, for example B retracing 0.618 of XA. An **extension** is going beyond the earlier move, for example D reaching 1.272 times XA.
+
+### 3. Four popular patterns
+
+| Pattern   | B (of XA)   | D (of XA)           | Feature                             |
+| :-------- | :---------- | :------------------ | :---------------------------------- |
+| Gartley   | 0.618       | 0.786 (retracement) | The oldest; D does not touch X      |
+| Bat       | 0.382–0.50  | 0.886 (retracement) | D very close to X, deep retracement |
+| Butterfly | 0.786       | 1.272 (extension)   | D goes beyond X                     |
+| Crab      | 0.382–0.618 | 1.618 (extension)   | D far out, the deepest extension    |
+
+**Disagreement:** these numbers are one common version. Teachers and books differ on the limits for B and C, and even slightly on D. Write down which version you are using first.
+
+One more common condition: C usually retraces 0.382 to 0.886 of AB. If C goes beyond A, none of these four patterns is valid.
+
+### 4. PRZ: the potential reversal zone
+
+**The PRZ (Potential Reversal Zone) is the area near D where several ratios fall together.** For example XA's 0.786 and a projection of BC, both at almost the same price.
+
+A single ratio on its own is weak; when several ratios match, that area gets more weight. But "more weight" does not mean certainty.
+
+### 5. Tolerance: how much "match" is acceptable?
+
+On a real chart the ratio is never exactly 0.618; it is 0.60 or 0.64. How far is acceptable? **There is no consensus.** Some allow ±3%, some ±5%, some more.
+
+An analogy: is an inch either way fine in a tailor's measurement? Maybe on a shirt, not on a wedding sherwani.
+
+The effect: widening the tolerance increases the number of valid patterns but lowers their quality. Narrowing it makes patterns rare. This choice is yours, and this is where subjectivity enters.
+
+### 6. The trade structure
+
+A Harmonic trade has a fixed form:
+
+- **Entry:** at D (in the PRZ), after the pattern is complete.
+- **Stop:** where the pattern is invalidated: usually just beyond X.
+- **Target:** the 0.382 or 0.618 retracement of the AD move, then more.
+
+The advantage: every number is known beforehand. The disadvantage: when the pattern breaks (X breaks) the whole logic ends.
+
+## Reading the shared chart
+
+The same XAUUSD H4 chart from the chapter. Through Harmonic's eyes, the **closest** X-A-B-C-D is examined.
+
+<Chart
+  id="meth-harm-shared"
+  height={520}
+  caption="XAUUSD H4 (educational synthetic data) — The closest X-A-B-C-D near the top: B retraces only 0.31 of XA, outside Gartley (0.618) and Bat (0.382–0.50). C also goes beyond A. No valid pattern."
+/>
+
+<Steps>
+
+### Step 1: X and A
+
+The wave 2 low of **2336** is taken as X, and the wave 3 high of **2454** as A. XA = 118.
+
+### Step 2: Measuring B
+
+Falling from A to B at **2418**. AB = 36. 36 ÷ 118 ≈ **0.31**. A Gartley wants 0.618, a Bat wants 0.382–0.50. 0.31 is in neither range.
+
+### Step 3: Measuring C
+
+From B it rises to **2487**, which is above A (2454). In these four patterns C does not go beyond A. This too breaks a validity condition.
+
+### Step 4: The decision
+
+Harmonic's honest answer: **there is no valid pattern on this chart.** No trade. And saying "it nearly matches" and widening the tolerance means manufacturing a pattern.
+
+</Steps>
+
+<Callout type="note">
+  Harmonic found nothing on this chart, and that is correct. The chapter's rule:
+  a method that finds nothing clear says so. Valid patterns in Harmonic are
+  relatively rare.
+</Callout>
+
+## Basic trade logic
+
+Since the shared chart has no pattern, here is a valid example. XAUUSD H1 (synthetic), a bullish Gartley:
+
+<Chart
+  id="meth-harm-ex-01"
+  height={460}
+  caption="XAUUSD H1 (educational synthetic data) — B = 0.618 of XA, C = 0.618 of AB, D = 0.786 of XA (2317.1), CD = 1.44 times BC. Buy near D, stop below X, target 0.618 of AD."
+/>
+
+| Part      | Rule (common form)                             | In the example (synthetic) |
+| :-------- | :--------------------------------------------- | :------------------------- |
+| Setup     | X-A-B-C-D with all ratios matching             | X 2300, A 2380, D 2317.1   |
+| Entry     | At D (in the PRZ)                              | About 2318.6               |
+| Stop loss | Just beyond X (the pattern invalidation price) | 2296                       |
+| Target    | The 0.618 retracement of the AD move           | About 2356                 |
+
+The arithmetic: risk 2318.6 − 2296 = 22.6, reward 2356 − 2318.6 ≈ 37.4, a ratio of about **1:1.65**.
+
+<Callout type="warning">
+  There is no Harmonic entry without a stop loss. The moment X breaks, the
+  pattern is invalid. "It will turn at D" is an assumption. Position size: [Risk
+  per trade](/en/learn/08-risk-management/01-risk-per-trade).
+</Callout>
+
+## Strengths
+
+- **Every number is known in advance.** Entry, stop and target are fixed before price reaches D.
+- **A clear invalidation price.** When X breaks the pattern is over; the stop is easy to set.
+- **Specific rules.** Not "the shape looks good" but "the numbers must match". That brings some objectivity.
+- **A language for planning.** You can write down in advance what you will do at D.
+
+## Weaknesses and limits
+
+- **Few valid patterns.** Most swings do not match any pattern. Widening the tolerance to make them match turns it into "manufacturing" patterns.
+- **Disagreement on tolerance.** How much ratio deviation is acceptable is not fixed. This is where subjectivity (medium) lies.
+- **Perfect ratios are not a reason to turn.** See the failed example. The market does not know Fibonacci ratios.
+- **Hindsight.** It is easy to find an X-A-B-C-D on an old chart; live, among many swings, it is hard to know which one is X.
+- **A caution for Gold.** Around news, Gold often runs past point D. So be careful before and after big news.
+
+**Evidence status:** there is very little independent, large-scale research on harmonic patterns. Most of the knowledge is in practitioners' books and courses. General research on technical analysis is mixed (Park and Irwin, 2007). **No method guarantees profit.** Verify it in your own backtest.
+
+Here is a failed example. A textbook-perfect Bat, yet price did not turn:
+
+<Chart
+  id="meth-harm-fail-01"
+  height={460}
+  caption="XAUUSD H1 (educational synthetic data) — Textbook Bat ratios (B = 0.5, D = 0.886), sell at D (2410.9), but the buying does not stop; price breaks X and the stop at 2424.0 is hit."
+/>
+
+The arithmetic: sell at about 2409.4, stop 2424, risk about 14.6, loss 1R. The target was about 2367, a possible reward of about 2.9R. The lesson: even with a good possible ratio and a small stop, some trades fail, and perfect ratios do not prevent that. The context here was a strong uptrend.
+
+## Who it suits
+
+| Suits you if you…                          | Does not suit you if you…      |
+| :----------------------------------------- | :----------------------------- |
+| Are comfortable with numbers and measuring | Find measuring a hassle        |
+| Can plan ahead and wait                    | Want to trade all the time     |
+| Work on H1–D1                              | Scalp on M1–M5                 |
+| Have learned Fibonacci first               | Have not learned Fibonacci yet |
+
+## Combining with other methods
+
+- **Harmonic + Price Action:** enter after candle confirmation at D (such as a rejection wick). The ratios give the area, the candle gives the timing.
+- **Harmonic + Elliott:** both use Fibonacci; Elliott measures wave lengths, Harmonic the points of a pattern. When the same area matches from both sides, attention rises.
+- **Harmonic + Volume Profile or support/resistance:** if D falls near a known level the PRZ means more.
+
+**What not to mix:** ten pattern scanners and twenty indicators on one chart. A scanner shows many "patterns", most built on loose tolerance. Know your automatic scanner's tolerance.
+
+## Deep dive later
+
+This lesson is an overview. A separate series could cover:
+
+- The full pattern list (Shark, Cypher, 5-0, three drives and so on)
+- BC projection and the PRZ in detail
+- A full rule list for both bullish and bearish
+- Using a pattern scanner and its limits
+
+**Sub-series suggestion:** not needed right now. This lesson is close to 2,500 words, and the core is four patterns and a structure. If readers ask, we can look again. The decision is yours.
+
+## How to start
+
+<Steps>
+
+### Step 1: The Fibonacci tool
+
+Open the Fibonacci retracement and extension tools in your platform. Get to know 0.382, 0.5, 0.618, 0.786.
+
+### Step 2: Only the Gartley
+
+Learn just one pattern: the Gartley. B = 0.618, D = 0.786. The others later.
+
+### Step 3: Measure 20 examples
+
+Find 20 places on XAUUSD H4 that look like a Gartley. Measure each and write down: how many are actually valid?
+
+### Step 4: Fix your tolerance
+
+Write your tolerance (such as ±5%). After fixing it, how many survived?
+
+### Step 5: Write the rules and backtest
+
+Entry at D, stop beyond X, target 0.618: write the rules and [backtest](/en/learn/15-backtesting-journal/01-how-to-backtest) on at least 30 valid examples.
+
+</Steps>
+
+## Common mistakes
+
+| Mistake                                         | Why it is a problem                                 | Fix                                     |
+| :---------------------------------------------- | :-------------------------------------------------- | :-------------------------------------- |
+| Accepting a pattern because "it nearly matches" | Tolerance quietly widens, a pattern is manufactured | Write the tolerance first, then measure |
+| Entering before D                               | The pattern is not even complete                    | If D is not complete, wait              |
+| Holding on after X breaks                       | The pattern is invalid, the logic is over           | A stop beyond X; exit when it breaks    |
+| Ignoring context (against a strong trend)       | A perfect ratio does not stop a trend               | Check the higher timeframe's direction  |
+| Blindly trusting scanner results                | Loose tolerance makes many fake patterns            | Measure and verify yourself             |
+
+## Summary
+
+<KeyTakeaways>
+
+- A harmonic pattern is a five-point X-A-B-C-D structure, each leg measured against a specific Fibonacci ratio.
+- Gartley, Bat, Butterfly and Crab have different B and D ratios; C usually does not go beyond A.
+- Entry at D, stop beyond X: every number is known in advance.
+- There is disagreement on tolerance; widening it manufactures patterns.
+- Valid patterns are rare (none on the shared chart); perfect ratios do not guarantee a turn. No guaranteed profit.
+
+</KeyTakeaways>
+
+## Quiz
+
+1. How many points make up a harmonic pattern, and which is the entry point?
+2. What are the B and D ratios of the Gartley and the Bat?
+3. What is the PRZ?
+4. What problem does widening the tolerance cause?
+5. Why can a trade fail even with perfect ratios?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** Five points (X, A, B, C, D); entry is usually at D.
+
+**2.** Gartley: B = 0.618 of XA, D = 0.786 of XA. Bat: B = 0.382–0.50, D = 0.886.
+
+**3.** The area near D where several ratios fall together and price may turn.
+
+**4.** More patterns count as valid, but their quality falls; in the end a pattern is "manufactured".
+
+**5.** The market does not know Fibonacci ratios. Matching ratios may raise the chance of a turn, not make it certain; a strong trend can break it.
+
+</details>
+
+## Next steps
+
+- Chapter comparison: [Trading Methodologies: the eight approaches](/en/learn/16-trading-methodologies/00-overview).
+- Previous lesson: [Elliott Wave](/en/learn/16-trading-methodologies/07-elliott-wave).
+- Related: [Price Action](/en/learn/16-trading-methodologies/01-price-action), [Backtest](/en/learn/15-backtesting-journal/01-how-to-backtest).
+
+### Sources
+
+- <ExternalLink href="https://www.investopedia.com/terms/g/gartley.asp">
+    Gartley Pattern (Investopedia)
+  </ExternalLink>
+- <ExternalLink href="https://en.wikipedia.org/wiki/Harmonic_pattern">
+    Harmonic pattern (Wikipedia)
+  </ExternalLink>
+- <ExternalLink href="https://doi.org/10.1111/j.1467-6419.2007.00519.x">
+    Park & Irwin (2007), What Do We Know About the Profitability of Technical
+    Analysis?
+  </ExternalLink>
+
+<Disclaimer>
+  This article is for educational purposes only and is not financial advice. No
+  trading methodology guarantees profit. Forex and gold trading carry
+  significant financial risk, and you can lose all of your capital. Practise on
+  a demo account before trading with real money.
+</Disclaimer>
