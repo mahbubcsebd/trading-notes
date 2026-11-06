@@ -1,0 +1,183 @@
+{
+  "id": "bullish-harami-fail-01",
+  "title": {
+    "en": "Bullish Harami With the Target Past the Mother Candle",
+    "bn": "Mother candle-এর ওপারে target-সহ bullish harami"
+  },
+  "symbol": "XAUUSD",
+  "timeframe": "D1",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bullish",
+  "outcome": "loss",
+  "tags": [
+    "bullish-harami",
+    "harami",
+    "candlestick",
+    "fail",
+    "target",
+    "pattern"
+  ],
+  "module": "patterns",
+  "lessonSlugs": [],
+  "caption": {
+    "en": "Illustrative synthetic XAUUSD D1: after a huge bearish day, a small harami forms low inside its body. The long fills above the harami high, rallies right up to the mother candle's open, is rejected there, and falls back through the stop. The 2R target lay beyond that obstacle.",
+    "bn": "শিক্ষামূলক কাল্পনিক XAUUSD D1: একটি বিশাল bearish দিনের পর তার body-র নিচের দিকে ছোট harami। Harami high-এর উপরে long fill হয়, দাম ঠিক mother candle-এর open পর্যন্ত ওঠে, সেখানে প্রত্যাখ্যাত হয়, তারপর stop ভেঙে নামে। 2R target ছিল সেই বাধার ওপারে।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data, not a real market record.",
+    "bn": "শিক্ষামূলক কাল্পনিক ডেটা, বাস্তব মার্কেটের রেকর্ড নয়।"
+  },
+  "updatedAt": "2026-11-06T12:00:00Z",
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 2386.0,
+      "label": "Mother open (obstacle)",
+      "color": "#3b82f6",
+      "style": "dashed"
+    },
+    {
+      "type": "marker",
+      "i": 5,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Mother"
+    },
+    {
+      "type": "marker",
+      "i": 6,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Harami"
+    },
+    {
+      "type": "hline",
+      "price": 2358.2,
+      "label": "Entry (baby high)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 2336.0,
+      "label": "Stop",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 2402.6,
+      "label": "Target 2R",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candle 5 is a huge bearish mother candle. Candle 6 is a small harami near its low. The buy stop above the harami high fills on candle 7. But the mother's open sits only about 1.2R above the entry, while the 2R target lies beyond it. Candle 8 rallies into the mother's open, candle 9 is rejected, and price returns through the stop.",
+    "bn": "৫ নম্বর বিশাল bearish mother candle। ৬ নম্বর তার low-এর কাছে ছোট harami। Harami high-এর উপরের buy stop ৭ নম্বরে fill হয়। কিন্তু mother-এর open entry-র মাত্র প্রায় 1.2R উপরে, আর 2R target তার ওপারে। ৮ নম্বর mother-এর open পর্যন্ত ওঠে, ৯ নম্বর প্রত্যাখ্যাত হয়, দাম stop ভেঙে ফেরে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "The mother candle's open is the first wall above a bullish harami",
+      "bn": "Bullish harami-র উপরের প্রথম দেয়াল mother candle-এর open"
+    }
+  ],
+  "entry": 2358.2,
+  "stopLoss": 2336.0,
+  "takeProfit": 2402.6,
+  "rr": "1:2.0",
+  "candles": [
+    {
+      "i": 0,
+      "o": 2440.0,
+      "h": 2449.85,
+      "l": 2416.05,
+      "c": 2426.0
+    },
+    {
+      "i": 1,
+      "o": 2426.0,
+      "h": 2433.16,
+      "l": 2402.11,
+      "c": 2408.0
+    },
+    {
+      "i": 2,
+      "o": 2408.0,
+      "h": 2418.34,
+      "l": 2403.39,
+      "c": 2414.0
+    },
+    {
+      "i": 3,
+      "o": 2414.0,
+      "h": 2423.17,
+      "l": 2390.86,
+      "c": 2398.0
+    },
+    {
+      "i": 4,
+      "o": 2398.0,
+      "h": 2405.19,
+      "l": 2378.84,
+      "c": 2386.0
+    },
+    {
+      "i": 5,
+      "o": 2386.0,
+      "h": 2389.0,
+      "l": 2340.0,
+      "c": 2342.0
+    },
+    {
+      "i": 6,
+      "o": 2342.0,
+      "h": 2357.2,
+      "l": 2341.0,
+      "c": 2355.2
+    },
+    {
+      "i": 7,
+      "o": 2355.2,
+      "h": 2366.2,
+      "l": 2353.2,
+      "c": 2364.2
+    },
+    {
+      "i": 8,
+      "o": 2364.2,
+      "h": 2384.0,
+      "l": 2361.2,
+      "c": 2374.2
+    },
+    {
+      "i": 9,
+      "o": 2374.2,
+      "h": 2375.2,
+      "l": 2356.2,
+      "c": 2358.2
+    },
+    {
+      "i": 10,
+      "o": 2358.2,
+      "h": 2363.03,
+      "l": 2339.25,
+      "c": 2344.2
+    },
+    {
+      "i": 11,
+      "o": 2344.2,
+      "h": 2351.46,
+      "l": 2320.56,
+      "c": 2328.2
+    },
+    {
+      "i": 12,
+      "o": 2328.2,
+      "h": 2332.92,
+      "l": 2312.12,
+      "c": 2316.2
+    }
+  ]
+}

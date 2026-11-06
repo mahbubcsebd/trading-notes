@@ -1,0 +1,182 @@
+{
+  "id": "mtf-topdown-01",
+  "title": {
+    "en": "Top-down: H4 zone, H1 CHoCH",
+    "bn": "Top-down: H4 zone, H1 CHoCH"
+  },
+  "symbol": "XAUUSD",
+  "timeframe": "H1",
+  "mode": "synthetic",
+  "type": "concept",
+  "bias": "bullish",
+  "outcome": null,
+  "tags": [
+    "mtfa",
+    "top-down",
+    "choch"
+  ],
+  "module": "03-market-structure",
+  "lessonSlugs": [
+    "05-multi-timeframe-analysis"
+  ],
+  "caption": {
+    "en": "Price pulls back into an H4 demand level, then an H1 CHoCH confirms the turn.",
+    "bn": "Price H4 demand level-এ নেমে এল, তারপর H1 CHoCH ঘুরে যাওয়ার সংকেত দিল।"
+  },
+  "notes": {
+    "en": "Synthetic teaching data.",
+    "bn": "শিক্ষামূলক কাল্পনিক data।"
+  },
+  "updatedAt": "2026-11-05T10:00:00Z",
+  "candles": [
+    {
+      "i": 0,
+      "o": 2372,
+      "h": 2374,
+      "l": 2364,
+      "c": 2366
+    },
+    {
+      "i": 1,
+      "o": 2366,
+      "h": 2368,
+      "l": 2358,
+      "c": 2360
+    },
+    {
+      "i": 2,
+      "o": 2360,
+      "h": 2366,
+      "l": 2357,
+      "c": 2364
+    },
+    {
+      "i": 3,
+      "o": 2364,
+      "h": 2365,
+      "l": 2352,
+      "c": 2354
+    },
+    {
+      "i": 4,
+      "o": 2354,
+      "h": 2356,
+      "l": 2345,
+      "c": 2348
+    },
+    {
+      "i": 5,
+      "o": 2348,
+      "h": 2356,
+      "l": 2347,
+      "c": 2354
+    },
+    {
+      "i": 6,
+      "o": 2354,
+      "h": 2355,
+      "l": 2340,
+      "c": 2342
+    },
+    {
+      "i": 7,
+      "o": 2342,
+      "h": 2344,
+      "l": 2336,
+      "c": 2338
+    },
+    {
+      "i": 8,
+      "o": 2338,
+      "h": 2346,
+      "l": 2337,
+      "c": 2344
+    },
+    {
+      "i": 9,
+      "o": 2344,
+      "h": 2352,
+      "l": 2342,
+      "c": 2350
+    },
+    {
+      "i": 10,
+      "o": 2350,
+      "h": 2358,
+      "l": 2349,
+      "c": 2357
+    },
+    {
+      "i": 11,
+      "o": 2357,
+      "h": 2358,
+      "l": 2348,
+      "c": 2350
+    },
+    {
+      "i": 12,
+      "o": 2350,
+      "h": 2354,
+      "l": 2347,
+      "c": 2353
+    },
+    {
+      "i": 13,
+      "o": 2353,
+      "h": 2364,
+      "l": 2352,
+      "c": 2362
+    }
+  ],
+  "annotations": [
+    {
+      "type": "marker",
+      "i": 7,
+      "position": "belowBar",
+      "shape": "circle",
+      "text": "LL at H4 level"
+    },
+    {
+      "type": "marker",
+      "i": 10,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "CHoCH ↑"
+    },
+    {
+      "type": "marker",
+      "i": 12,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "HL / entry"
+    },
+    {
+      "type": "hline",
+      "price": 2340,
+      "label": "H4 demand (top)",
+      "color": "#14b8a6",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 2356,
+      "label": "CHoCH level",
+      "color": "#f5b301",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "H4 gives the level and bias. H1 gives the trigger. Entry waits for CHoCH and a higher low.",
+    "bn": "H4 level ও bias দেয়। H1 trigger দেয়। CHoCH ও higher low-এর পর entry।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Higher timeframe sets bias; lower timeframe sets entry.",
+      "bn": "Higher timeframe bias ঠিক করে; lower timeframe entry।"
+    }
+  ],
+  "entry": 2353,
+  "stopLoss": 2345,
+  "takeProfit": 2372,
+  "rr": "2.4"
+}

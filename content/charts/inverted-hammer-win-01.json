@@ -1,0 +1,280 @@
+{
+  "id": "inverted-hammer-win-01",
+  "title": {
+    "en": "Inverted Hammer at Support, Long on a Close Above Its High",
+    "bn": "Support-এ inverted hammer, high-এর উপরে close-এ long"
+  },
+  "symbol": "EURUSD",
+  "timeframe": "D1",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bullish",
+  "outcome": "win",
+  "tags": [
+    "inverted-hammer",
+    "candlestick",
+    "support",
+    "confirmation",
+    "pattern"
+  ],
+  "module": "patterns",
+  "lessonSlugs": [],
+  "caption": {
+    "en": "Illustrative synthetic EURUSD D1: price falls back to a support that held once and prints an inverted hammer. The next candle closes above the inverted hammer high; the long is taken on that close. Price rallies to 2R.",
+    "bn": "শিক্ষামূলক কাল্পনিক EURUSD D1: দাম আগে একবার ধরে রাখা support-এ ফিরে একটি inverted hammer দেয়। পরের candle inverted hammer-এর high-এর উপরে close করে; সেই close-এ long। দাম 2R পর্যন্ত ওঠে।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data, not a real market record.",
+    "bn": "শিক্ষামূলক কাল্পনিক ডেটা, বাস্তব মার্কেটের রেকর্ড নয়।"
+  },
+  "updatedAt": "2026-11-06T12:00:00Z",
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 1.0854,
+      "label": "Support",
+      "color": "#3b82f6",
+      "style": "dashed"
+    },
+    {
+      "type": "marker",
+      "i": 4,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "1st touch"
+    },
+    {
+      "type": "marker",
+      "i": 15,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Inverted hammer"
+    },
+    {
+      "type": "marker",
+      "i": 16,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Close above high"
+    },
+    {
+      "type": "hline",
+      "price": 1.0924,
+      "label": "Entry (confirming close)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.085,
+      "label": "Stop",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.1072,
+      "label": "Target 2R",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candle 4 marks support. Candles 10-14 fall back to it. Candle 15 is an inverted hammer: small body at the bottom, upper wick about five times the body, almost no lower wick. Candle 16 closes above its high, the confirmation. Long on that close, stop under the inverted hammer low; price reaches 2R.",
+    "bn": "৪ নম্বর candle support চিহ্নিত করে। ১০-১৪ নম্বর আবার সেখানে নামে। ১৫ নম্বর inverted hammer: নিচে ছোট body, উপরের wick body-র প্রায় পাঁচ গুণ, নিচে wick প্রায় নেই। ১৬ নম্বর তার high-এর উপরে close করে, এটাই confirmation। সেই close-এ long, stop inverted hammer-এর low-এর নিচে; দাম 2R পর্যন্ত যায়।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "The upper wick shows buyers tried; the next close shows they won",
+      "bn": "উপরের wick দেখায় buyers চেষ্টা করেছে; পরের close দেখায় তারা জিতেছে"
+    }
+  ],
+  "entry": 1.0924,
+  "stopLoss": 1.085,
+  "takeProfit": 1.1072,
+  "rr": "1:2.0",
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.105,
+      "h": 1.10713,
+      "l": 1.09865,
+      "c": 1.101
+    },
+    {
+      "i": 1,
+      "o": 1.101,
+      "h": 1.10439,
+      "l": 1.09281,
+      "c": 1.0955
+    },
+    {
+      "i": 2,
+      "o": 1.0955,
+      "h": 1.09655,
+      "l": 1.09053,
+      "c": 1.0925
+    },
+    {
+      "i": 3,
+      "o": 1.0925,
+      "h": 1.09525,
+      "l": 1.08587,
+      "c": 1.088
+    },
+    {
+      "i": 4,
+      "o": 1.088,
+      "h": 1.0895,
+      "l": 1.0854,
+      "c": 1.0894
+    },
+    {
+      "i": 5,
+      "o": 1.0894,
+      "h": 1.09791,
+      "l": 1.08663,
+      "c": 1.0954
+    },
+    {
+      "i": 6,
+      "o": 1.0954,
+      "h": 1.10182,
+      "l": 1.09285,
+      "c": 1.0999
+    },
+    {
+      "i": 7,
+      "o": 1.0999,
+      "h": 1.10108,
+      "l": 1.09677,
+      "c": 1.0979
+    },
+    {
+      "i": 8,
+      "o": 1.0979,
+      "h": 1.10598,
+      "l": 1.09537,
+      "c": 1.1034
+    },
+    {
+      "i": 9,
+      "o": 1.1034,
+      "h": 1.10861,
+      "l": 1.10191,
+      "c": 1.1074
+    },
+    {
+      "i": 10,
+      "o": 1.1074,
+      "h": 1.10882,
+      "l": 1.10024,
+      "c": 1.1029
+    },
+    {
+      "i": 11,
+      "o": 1.1029,
+      "h": 1.10459,
+      "l": 1.09518,
+      "c": 1.0974
+    },
+    {
+      "i": 12,
+      "o": 1.0974,
+      "h": 1.09894,
+      "l": 1.09169,
+      "c": 1.0934
+    },
+    {
+      "i": 13,
+      "o": 1.0934,
+      "h": 1.0947,
+      "l": 1.08797,
+      "c": 1.0899
+    },
+    {
+      "i": 14,
+      "o": 1.0899,
+      "h": 1.0907,
+      "l": 1.086,
+      "c": 1.0866
+    },
+    {
+      "i": 15,
+      "o": 1.0866,
+      "h": 1.0916,
+      "l": 1.086,
+      "c": 1.0876
+    },
+    {
+      "i": 16,
+      "o": 1.0876,
+      "h": 1.093,
+      "l": 1.0872,
+      "c": 1.0924
+    },
+    {
+      "i": 17,
+      "o": 1.0924,
+      "h": 1.09618,
+      "l": 1.09121,
+      "c": 1.0954
+    },
+    {
+      "i": 18,
+      "o": 1.0954,
+      "h": 1.0962,
+      "l": 1.09322,
+      "c": 1.0939
+    },
+    {
+      "i": 19,
+      "o": 1.0939,
+      "h": 1.09892,
+      "l": 1.093,
+      "c": 1.0979
+    },
+    {
+      "i": 20,
+      "o": 1.0979,
+      "h": 1.1028,
+      "l": 1.09674,
+      "c": 1.1014
+    },
+    {
+      "i": 21,
+      "o": 1.1014,
+      "h": 1.10188,
+      "l": 1.09995,
+      "c": 1.1004
+    },
+    {
+      "i": 22,
+      "o": 1.1004,
+      "h": 1.10653,
+      "l": 1.09867,
+      "c": 1.1049
+    },
+    {
+      "i": 23,
+      "o": 1.1049,
+      "h": 1.10892,
+      "l": 1.10411,
+      "c": 1.1079
+    },
+    {
+      "i": 24,
+      "o": 1.1079,
+      "h": 1.11145,
+      "l": 1.10672,
+      "c": 1.1104
+    },
+    {
+      "i": 25,
+      "o": 1.1104,
+      "h": 1.11339,
+      "l": 1.10979,
+      "c": 1.1124
+    }
+  ]
+}

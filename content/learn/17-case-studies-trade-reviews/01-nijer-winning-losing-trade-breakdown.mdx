@@ -1,14 +1,195 @@
 ---
-title: "Nijer winning losing trade breakdown"
-description: "Detailed notes on Nijer winning losing trade breakdown"
-status: draft
-updated: 2026-10-10
+title: "নিজের Winning ও Losing Trade Breakdown: ফল নয়, process বিচার"
+description: "একটি trade-কে পাঁচ ধাপে ভেঙে process আর ফল আলাদা করে বিচার করার পদ্ধতি; ভালো process-এর loss ও খারাপ process-এর win কেন সমান গুরুত্বপূর্ণ শিক্ষা — দুটি chart সহ।"
+level: intermediate
+tags: [case-study, trade-review, process, journal, breakdown]
+instruments: [EURUSD]
+timeframes: [H1]
+status: done
+sources:
+  - type: blog
+    title: "Trading Plan - Investopedia"
+    url: "https://www.investopedia.com/articles/trading/06/tradingplan.asp"
+updated: 2026-11-05
 ---
 
-# Nijer winning losing trade breakdown
+# নিজের Winning ও Losing Trade Breakdown: ফল নয়, process বিচার
 
-<div className="rounded-xl border border-border bg-card p-6 text-center text-muted-foreground my-8">
-  <p className="text-3xl mb-4">🚧</p>
-  <p className="font-semibold text-foreground">Coming in Phase 2</p>
-  <p className="text-sm mt-1">This module is under construction.</p>
-</div>
+একটি trade জিতলে আমরা ভাবি "ঠিক করেছি", হারলে "ভুল করেছি"। কিন্তু পাশা ফেলে ছয় পড়লে সিদ্ধান্ত ভালো হয়ে যায় না। এই পাঠে শিখবেন একটি trade-কে ভেঙে **process** (সিদ্ধান্ত) আর **outcome** (ফল) আলাদা করে বিচার করতে।
+
+## এই লেখা পড়ে আপনি যা পারবেন
+
+- Trade-কে **পাঁচ ধাপে** ভেঙে দেখতে পারবেন।
+- **চার ঘরের ছক** (ভালো/খারাপ process × জেতা/হারা) ব্যবহার করতে পারবেন।
+- **ভাগ্য ও দক্ষতা** আলাদা করতে পারবেন।
+
+## কেন এটি জরুরি
+
+- **ফল দেখে শিখলে ভুল অভ্যাস পুরস্কৃত হয়।** [Discipline](/bn/learn/12-trading-psychology/01-discipline) বজায় রাখতে process-ই মাপার জিনিস।
+- **Loss-এর ভয় কমে।** ভালো process-এর loss দুঃখজনক, ভুল নয়।
+- **[Review](/bn/learn/15-backtesting-journal/04-reviewing-trades)-এর কাঁচামাল।** ভাঙা ডেটা ছাড়া ভাগ করা যায় না।
+
+পূর্বশর্ত: [Journal Template](/bn/learn/15-backtesting-journal/03-journal-template)।
+
+## Breakdown কী
+
+**Trade breakdown হলো একটি trade-এর প্রতিটি সিদ্ধান্ত-ধাপ আলাদা করে লিখে প্রতিটি ধাপে নিয়ম মানা হয়েছে কি না যাচাই করা।**
+
+| ধাপ           | প্রশ্ন                                       |
+| :------------ | :------------------------------------------- |
+| ১. Context    | বড় ছবি কী ছিল? Plan-এর বাজার-অবস্থা মিলেছে? |
+| ২. Setup      | Setup-এর সব শর্ত পূরণ হয়েছিল?               |
+| ৩. Entry      | নিয়ম-মাফিক জায়গা ও সময়ে ঢুকেছি?           |
+| ৪. Management | চলাকালীন কিছু বদলেছি (stop, target, size)?   |
+| ৫. Exit       | Plan-এর stop/target-এ বেরিয়েছি, নাকি আবেগে? |
+
+প্রতিটি ধাপে "হ্যাঁ/না"। সব "হ্যাঁ" মানে **ভালো process**।
+
+## চার ঘরের ছক
+
+| ফল \ Process | ভালো process                  | খারাপ process                        |
+| :----------- | :---------------------------- | :----------------------------------- |
+| জেতা         | প্রাপ্য জয়, পুনরাবৃত্তি করুন | **ভাগ্য**, নিয়ম-ভাঙা হিসেবে লগ করুন |
+| হারা         | **স্বাভাবিক খরচ**, ঠিক আছে    | শিক্ষা, ভুলটি ঠিক করুন               |
+
+সবচেয়ে বিপজ্জনক ঘর: **খারাপ process, জেতা**। এটি ভুল অভ্যাসকে আত্মবিশ্বাসে রূপ দেয়।
+
+## Chart-এ কেমন দেখায়
+
+<Chart
+  id="case-good-process-loss-01"
+  height={460}
+  caption="EURUSD H1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — সব নিয়ম মিলেছিল: breakout close, retest, stop 30 pip, ঝুঁকি 1%। ক্ষণিক নামা 1.0932 পর্যন্ত গিয়ে stop ছুঁল; তারপর দাম ওপরে উঠে গেল। -1R।"
+/>
+
+Stop ছোঁয়ার পর দাম উঠেছে, তাই মন বলে "stop খুব কাছে ছিল"। কিন্তু stop-এর দূরত্ব plan-এর অংশ, আর আগে থেকে ঠিক।
+
+## ধাপে ধাপে: breakdown লেখা
+
+<Steps>
+
+### ধাপ ১: Trade বন্ধ হওয়ার পর, ফল দেখার আবেগ কমলে লিখুন
+
+কমপক্ষে কয়েক ঘণ্টা পরে। আবেগ থাকলে ভাগ করা ঝাপসা হয়।
+
+### ধাপ ২: পাঁচ ধাপের ছক পূরণ
+
+Entry-র আগে তোলা screenshot (বা [checklist](/bn/learn/14-trading-plan-system/03-pre-trade-checklist)) দেখে প্রতিটি ধাপে হ্যাঁ/না।
+
+### ধাপ ৩: Process রায় দিন
+
+সব "হ্যাঁ" = ভালো। একটি "না" = খারাপ। সূক্ষ্ম রায় নয়।
+
+### ধাপ ৪: চার ঘরের কোনটি?
+
+ফলের সঙ্গে মিলিয়ে ঘর ঠিক করুন।
+
+### ধাপ ৫: একটি করণীয়
+
+খারাপ process হলে কোন ধাপ ভেঙেছিল, সেটি পরের trade-এর লক্ষ্য। ভালো process-এর loss হলে করণীয় নেই, শুধু লগ।
+
+</Steps>
+
+## উদাহরণ ১: ভালো process, loss (কাল্পনিক)
+
+- **Context/Setup:** Resistance 1.0960 ভেঙে close, retest।
+- **Entry/Management/Exit:** Buy 1.0968, stop 1.0938, target 1.1028। কিছু বদলাননি। Stop-এ বেরিয়েছেন।
+- **ফল:** -1R; তারপর দাম target ছাড়িয়েও উঠেছে।
+- **রায়:** ভালো process, loss। ঘর: **স্বাভাবিক খরচ**।
+- **শিক্ষা:** Stop সরালে বা entry বদলালে এই loss "শিক্ষা" হতো না। নিয়ম মানাটাই জয়।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়।)
+
+## উদাহরণ ২: খারাপ process, জয় (কাল্পনিক)
+
+<Chart
+  id="case-bad-process-win-01"
+  height={460}
+  caption="EURUSD H1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — নিয়ম 'retest-এ buy'। Trader breakout candle ধরে 1.1000-এ ঢুকলেন; এবার দাম target 1.1060 পর্যন্ত গেল। +2R, কিন্তু process ভাঙা।"
+/>
+
+- **কী ঘটল:** Retest-এর অপেক্ষা সইল না; breakout candle-এই buy।
+- **ফল:** +2R।
+- **রায়:** Entry ধাপে "না"। ঘর: **ভাগ্য**।
+- **কেন বিপজ্জনক:** পরের বার একই কাজ করলে সম্ভবত stop খাবেন (আগের পাঠে দেখেছেন)। জয় ভুল অভ্যাসকে "প্রমাণিত" মনে করায়।
+- **শিক্ষা:** এই জয় journal-এ `Rule break` tag-সহ লিখুন। আনন্দ করুন, কিন্তু অভ্যাসে নয়।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়।)
+
+## সাধারণ ভুল
+
+| ভুল                              | কেন হয়           | কী করবেন                        |
+| :------------------------------- | :---------------- | :------------------------------ |
+| শুধু হারা trade বিশ্লেষণ         | হারের কষ্ট        | জেতাগুলোও ভাঙুন                 |
+| ফল দেখে process-এর রায়          | Hindsight bias    | আগের screenshot/checklist দেখুন |
+| ভালো-process loss-এ নিয়ম বদলানো | কষ্ট কমানোর তাড়া | ২০টি trade-এর আগে বদল নয়       |
+| একসঙ্গে বহু করণীয়               | সব ঠিক করার ইচ্ছা | একটি করণীয়                     |
+| লিখে না রাখা                     | মনে থাকবে ভাবা    | breakdown-এর ছক journal-এ রাখুন |
+
+## Pro tips
+
+<Callout type="tip">
+  প্রতি সপ্তাহে চার ঘরের প্রতিটিতে কতগুলো trade, গুনুন। "খারাপ process, জেতা"
+  ঘরটি যত ছোট, আপনার discipline তত শক্ত।
+</Callout>
+
+<Callout type="note">
+  Process-এর রায় সৎ থাকতে হলে নিয়মগুলো [আগে
+  লেখা](/bn/learn/14-trading-plan-system/02-entry-exit-risk-rules-ek-page-e)
+  থাকা দরকার। যা লেখা নেই, তা ভাঙা হয়েছে কি না বিচার করা যায় না।
+</Callout>
+
+## কখন এটা কাজ করে না
+
+- **নিয়ম অস্পষ্ট হলে:** process রায় ব্যক্তিনির্ভর হয়ে যায়।
+- **খুব কম trade থাকলে:** চার ঘরের ধরন দেখা যায় না।
+- **আবেগের তীব্র মুহূর্তে:** ফল ও আবেগ রায়কে বিকৃত করে; একটু অপেক্ষা করুন।
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- পাঁচ ধাপ: context, setup, entry, management, exit।
+- চার ঘর: ভালো/খারাপ process × জেতা/হারা।
+- সবচেয়ে বিপজ্জনক ঘর: খারাপ process, জেতা।
+- ভালো process-এর loss স্বাভাবিক খরচ।
+
+</KeyTakeaways>
+
+## অনুশীলন
+
+আপনার গত পাঁচটি trade (জেতা ও হারা মিলিয়ে) পাঁচ ধাপে ভাঙুন। প্রতিটি কোন ঘরে পড়ল? কোন ঘরে সবচেয়ে বেশি?
+
+## কুইজ
+
+1. Process আর outcome-এর পার্থক্য কী?
+2. কোন ঘরটি সবচেয়ে বিপজ্জনক এবং কেন?
+3. ভালো process-এর loss-এ কী করবেন?
+4. Breakdown কখন লিখবেন?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** Process সিদ্ধান্ত নেওয়ার পদ্ধতি; outcome ফল, যাতে ভাগ্যও থাকে।
+
+**২.** খারাপ process, জেতা। এটি ভুল অভ্যাসকে নিরাপদ মনে করায়।
+
+**৩.** লগ করুন, নিয়ম বদলাবেন না। এটি স্বাভাবিক খরচ।
+
+**৪.** Trade বন্ধ হওয়ার কয়েক ঘণ্টা পরে, আবেগ কমলে।
+
+</details>
+
+## পরের ধাপ
+
+- আগে: [Automation](/bn/learn/16-advanced/05-automation)।
+- পরে: [Gold Move বিশ্লেষণ](/bn/learn/17-case-studies-trade-reviews/02-famous-gold-move-analysis)।
+- সম্পর্কিত: [Pre-Trade Checklist](/bn/learn/14-trading-plan-system/03-pre-trade-checklist)।
+
+### সূত্র
+
+- <ExternalLink href="https://www.investopedia.com/articles/trading/06/tradingplan.asp">
+    Trading Plan, Investopedia
+  </ExternalLink>
+
+<Disclaimer />

@@ -1,0 +1,244 @@
+---
+title: "Swing High ও Swing Low: chart-এর বাঁকগুলো চিনুন"
+description: "Swing High ও Swing Low কী, chart-এ কীভাবে চিনবেন, কোনটি বড় আর কোনটি noise, এবং stop-loss বসাতে কীভাবে কাজে লাগাবেন।"
+level: beginner
+tags: [swing-high, swing-low, market-structure, fractal, pivot]
+instruments: [EURUSD]
+timeframes: [H1, H4, D1]
+status: done
+sources:
+  - type: blog
+    title: "Swing High/Low - LuxAlgo Library"
+    url: "https://www.luxalgo.com/library/concept/swing-high-low/"
+  - type: blog
+    title: "Strong vs Weak Swings - LuxAlgo Library"
+    url: "https://www.luxalgo.com/library/concept/strong-vs-weak-swings/"
+  - type: blog
+    title: "Swing High and Swing Low: Trend Trading Guide - TradingSim"
+    url: "https://tradingsim.com/blog/swing-high"
+  - type: blog
+    title: "Trading Swing Highs and Swing Lows - MindMathMoney"
+    url: "https://www.mindmathmoney.com/articles/trading-swing-highs-and-swing-lows-an-essential-guide-for-traders"
+  - type: blog
+    title: "Fractals - Swing Highs, Swing Lows - Linn Software"
+    url: "https://www.linnsoft.com/techind/fractals-swing-highs-swing-lows"
+  - type: blog
+    title: "Market structure - CrossTrade Learn"
+    url: "https://crosstrade.io/learn/price-action/market-structure"
+updated: 2026-11-05
+---
+
+# Swing High ও Swing Low: chart-এর বাঁকগুলো চিনুন
+
+আপনি chart খুলে দেখলেন price উঠছে। কিন্তু কোথা থেকে উঠছে, কোথায় এসে থামছে, আর কোন জায়গায় stop-loss বসালে নিরাপদ? উত্তরটা লুকিয়ে আছে chart-এর **বাঁকগুলোতে**। এই বাঁকগুলোর নামই Swing High ও Swing Low। পরের প্রায় প্রতিটি lesson-এ (trend, BOS, support/resistance) এগুলো লাগবে, তাই এখানেই ভিত গেঁথে নিন।
+
+## এই লেখা পড়ে আপনি যা পারবেন
+
+- যেকোনো chart-এ Swing High ও Swing Low **চিনতে পারবেন**।
+- নিজে নিজে **৫ candle-এর টেস্ট** দিয়ে যাচাই করতে পারবেন।
+- বড় (Major) আর ছোট (Minor) swing **আলাদা করতে পারবেন**।
+- Stop-loss ঠিক করতে swing point **ব্যবহার করতে পারবেন**।
+
+## কেন এটি জরুরি
+
+- **Trend** বোঝার জন্য আপনাকে high-low-এর ক্রম দেখতে হয়। high-low মানেই swing point।
+- **Support ও Resistance** আসলে পুরোনো swing-এর জায়গা।
+- **Stop-loss** সাধারণত কোনো swing-এর ওপারে বসে। ভুল swing বাছলে stop বারবার লাগবে।
+
+swing না চিনলে এগুলোর কোনোটাই ঠিকভাবে করা যায় না।
+
+## Swing High ও Swing Low কী?
+
+**Swing High হলো এমন একটি candle, যার high (সর্বোচ্চ দাম) দুই পাশের candle-গুলোর high-এর চেয়ে উঁচু।** Swing Low হলো তার উল্টো: যে candle-এর low দুই পাশের candle-এর low-এর চেয়ে নিচু।
+
+পাহাড়ি পথে হাঁটার কথা ভাবুন। যে জায়গায় উঠা শেষ হয়ে নামা শুরু হয়, সেটা **চূড়া** (Swing High)। যেখানে নামা শেষ হয়ে আবার ওঠা শুরু হয়, সেটা **খাদ** (Swing Low)।
+
+প্রযুক্তিগতভাবে এই বাঁকগুলোকে Pivot High/Low বা Fractal-ও বলা হয়। তাই কোনো platform-এ ভিন্ন নাম দেখলে ঘাবড়াবেন না।
+
+## chart-এ কেমন দেখায়
+
+নিচের chart-এ **SH** চিহ্ন দেওয়া candle-গুলো Swing High, আর **SL** চিহ্ন দেওয়াগুলো Swing Low।
+
+<Chart
+  id="swing-points-01"
+  height={420}
+  caption="EURUSD H1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — SH ও SL চিহ্নিত বাঁকগুলো"
+/>
+
+লক্ষ্য করুন, প্রতিটি SH-এর দুই পাশেই নিচু candle, আর প্রতিটি SL-এর দুই পাশেই উঁচু candle। এছাড়া এখানে SH আর SL পালা করে এসেছে। price এক দিকে চললেও এই ছন্দ বজায় থাকে।
+
+## ধাপে ধাপে: swing চেনার পদ্ধতি
+
+সহজ পদ্ধতি ৫-candle টেস্ট (Bill Williams-এর Fractal নামেও পরিচিত):
+
+<Steps>
+
+### ধাপ ১: একটি candle বেছে নিন
+
+chart-এ যে candle-কে চূড়া বা খাদ মনে হচ্ছে, সেটা মাঝে ধরুন।
+
+### ধাপ ২: দুই পাশে ২টি করে candle গুনুন
+
+বাঁয়ে ২টি এবং ডানে ২টি। মোট ৫টি candle।
+
+### ধাপ ৩: high (বা low) তুলনা করুন
+
+মাঝের candle-এর high যদি বাকি ৪টির সবার high-এর চেয়ে বেশি হয়, এটি Swing High। low যদি সবার চেয়ে কম হয়, এটি Swing Low।
+
+### ধাপ ৪: ডানের ২টি candle বন্ধ হওয়া পর্যন্ত অপেক্ষা করুন
+
+এটি সবচেয়ে গুরুত্বপূর্ণ ধাপ। swing **তখনই নিশ্চিত**, যখন ডানের candle-গুলো close হয়ে গেছে।
+
+### ধাপ ৫: চিহ্ন দিন
+
+tool দিয়ে SH/SL লিখে রাখুন। বড় swing-গুলো আলাদা রঙে রাখতে পারেন।
+
+</Steps>
+
+<Callout type="note">
+  ২টির জায়গায় ৩, ৫ বা ১০টি candle নিলে swing কম আসে কিন্তু বেশি গুরুত্বপূর্ণ
+  হয়। সংখ্যাটি কোনো আইন নয়, বেছে নেওয়ার বিষয়। বিভিন্ন উৎসে এ নিয়ে সামান্য
+  ভিন্ন মত আছে, তাই একটি সংখ্যা বেছে নিন এবং সব জায়গায় সেটাই মানুন।
+</Callout>
+
+## বড় (Major) বনাম ছোট (Minor) swing
+
+একই chart-এ অনেক ছোট ছোট বাঁক থাকে। সবগুলো ধরলে chart noise-এ ভরে যায়।
+
+<Chart
+  id="swing-major-minor-01"
+  height={420}
+  caption="EURUSD H1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — তীর = major swing, ছোট বিন্দু = minor swing (noise)"
+/>
+
+|                         | minor swing                 | major swing                     |
+| :---------------------- | :-------------------------- | :------------------------------ |
+| **আকার**                | ছোট, কয়েকটি candle-এর বাঁক | বড়, অনেক candle-এর ওপর বিস্তৃত |
+| **কাজ**                 | noise, ছোট pullback         | trend-এর structure তৈরি করে     |
+| **timeframe**           | lower frame-এ বেশি          | higher frame-এ স্পষ্ট           |
+| **stop-loss-এ ব্যবহার** | সাধারণত ঝুঁকিপূর্ণ          | তুলনামূলক নির্ভরযোগ্য           |
+
+একটি ব্যবহারিক নিয়ম: প্রথমে **higher timeframe-এ** (H4, D1) major swing চিহ্নিত করুন। তারপর lower frame-এ নামুন। এর বিস্তারিত দেখুন [Multi-Timeframe Analysis](/bn/learn/03-market-structure/05-multi-timeframe-analysis) lesson-এ।
+
+## শক্তিশালী ও দুর্বল swing
+
+কিছু শিক্ষক (বিশেষ করে Smart Money Concepts-এর আলোচনায়) swing-কে শক্তিশালী ও দুর্বলে ভাগ করেন। ধারণাটি সহজ:
+
+- যে Swing Low থেকে price উঠে আগের high ভাঙতে পেরেছে, সেটি **শক্তিশালী** (সে তার কাজ করেছে)।
+- যে Swing Low থেকে price উঠেও high ভাঙতে পারেনি, সেটি **দুর্বল**।
+
+<Callout type="warning">
+  এই শক্তিশালী/দুর্বল শ্রেণিবিভাগ কোনো আনুষ্ঠানিক বা স্বীকৃত মানদণ্ড নয়। শিক্ষক
+  ও ইন্ডিকেটরভেদে সংজ্ঞা আলাদা। এটিকে buy/sell signal ভাববেন না; এটি শুধু
+  structure বোঝার একটি দৃষ্টিভঙ্গি। আরও দেখুন [Break of
+  Structure](/bn/learn/03-market-structure/03-break-of-structure)।
+</Callout>
+
+## swing দিয়ে stop-loss বসানো (ঝুঁকি ব্যবস্থাপনা)
+
+buy trade-এ সাধারণ নিয়ম: stop-loss বসান **সাম্প্রতিক major Swing Low-এর সামান্য নিচে**। sell trade-এ major Swing High-এর সামান্য ওপরে। কারণ price ওই বাঁক ভাঙলে আপনার trade-এর ধারণাটাই ভুল প্রমাণিত হয়।
+
+"সামান্য নিচে" মানে spread ও wick-এর জন্য একটু জায়গা রাখা। ঠিক কতটুকু, তা নির্ভর করে instrument ও timeframe-এর ওপর। এটি নিয়ে বিস্তারিত পাবেন [Stop Loss Placement](/bn/learn/10-trade-management-execution/01-stop-loss-placement) lesson-এ। আর কত lot নেবেন, তা ঠিক করতে লাগবে [Position Sizing](/bn/learn/08-risk-management/02-position-sizing)।
+
+## বাস্তব উদাহরণ
+
+<Callout type="note">
+  **এই lesson-এর উদাহরণ কাল্পনিক।** আমরা এখনো এই lesson-এর জন্য যাচাই করা real
+  OHLC data যোগ করিনি। এই কারণে উপরের দুটি chart শিক্ষামূলক কাল্পনিক data-এ
+  তৈরি। নিজের chart-এ একই পদ্ধতি চালিয়ে দেখুন, নিচের অনুশীলন সেটাই করতে বলেছে।
+</Callout>
+
+**উদাহরণস্বরূপ (কাল্পনিক trade):** উপরের প্রথম chart-এ আপনি ১১ নম্বর candle-এর পর একটি buy নিতে চান। কাছের Swing Low ১১ নম্বরেই। এখানে stop-loss ঠিক তার নিচে। price যদি এই low-এর নিচে নামে, আপনার ধারণা ভুল ছিল এবং loss সীমিত থাকে।
+
+## ব্যর্থ উদাহরণ: ছোট swing-এ ভরসা (কাল্পনিক/শিক্ষামূলক)
+
+**কী দেখা যাচ্ছিল:** দ্বিতীয় chart-এ ১৭ নম্বরের কাছে একটি ছোট Swing Low আছে।
+
+**সিদ্ধান্ত:** কেউ এটিকে support ধরে buy নিলেন এবং এর ঠিক নিচে stop বসালেন।
+
+**ফল:** price বড় একটি নিম্নগতির মধ্যে ছিল। ছোট low ভাঙতে সময় লাগল না, stop লাগল। আসল খাদ ছিল আরও নিচে (২৫ নম্বরের কাছে)।
+
+**শিক্ষা:** minor swing আপনাকে প্রতারিত করতে পারে। কোনো swing-কে support বা stop-এর ভিত্তি করার আগে জিজ্ঞেস করুন: এটি কি higher timeframeেও major?
+
+## সাধারণ ভুল
+
+| ভুল                                    | কেন হয়                         | কী করবেন                                       |
+| :------------------------------------- | :------------------------------ | :--------------------------------------------- |
+| swing নিশ্চিত হওয়ার আগেই চিহ্ন দেওয়া | তাড়াহুড়ো                      | ডানের candle close হওয়া পর্যন্ত অপেক্ষা       |
+| প্রতিটি ছোট বাঁককে swing ধরা           | noise আর structure আলাদা না করা | আগে higher frame-এ major swing খুঁজুন          |
+| candle-এর body আর wick গুলিয়ে ফেলা    | কখনো close, কখনো high দেখা      | একটি পদ্ধতি ঠিক করুন, সাধারণত wick-এর high/low |
+| শুধু বাঁক দেখে trade নেওয়া            | swing = signal ভাবা             | swing একটি মানচিত্র, signal নয়                |
+| swing-এর ঠিক ওপর-নিচে stop             | জায়গা না রাখা                  | spread ও wick-এর জন্য বাফার রাখুন              |
+
+## প্রো টিপস
+
+<Callout type="tip">
+  chart-এ প্রথমে শুধু major swing-গুলো চিহ্নিত করুন, তারপর chart থেকে সরে এসে
+  (zoom out) দেখুন গল্পটা বোঝা যায় কিনা। বোঝা না গেলে হয়তো বেশি swing ধরেছেন।
+</Callout>
+
+<Callout type="tip">
+  swing কখনো আগে থেকে "ধরা" যায় না; ডানের candle close হওয়ার পরই নিশ্চিত হয়।
+  এই বিলম্ব সব swing-ভিত্তিক পদ্ধতির স্বাভাবিক সীমাবদ্ধতা। backtest করার সময় এই
+  কথা মনে রাখুন, নইলে ফলাফল বাস্তবের চেয়ে ভালো দেখাবে।
+</Callout>
+
+## কখন এটা কাজ করে না
+
+- **range বাজারে:** price একই সীমায় ওঠানামা করে, swing অনেক হলেও কোনোটিই বিশেষ নয়।
+- **খুব ছোট timeframe-এ (M1–M5):** noise এত বেশি যে বেশিরভাগ swing অর্থহীন।
+- **বড় news-এর মুহূর্তে:** price লাফ দিলে swing ঠিকঠাক তৈরি হয় না।
+- **একা ব্যবহার করলে:** swing দিক বলে না, শুধু জায়গা বলে।
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- Swing High = যে candle-এর high দুই পাশের চেয়ে উঁচু; Swing Low = যার low দুই পাশের চেয়ে নিচু।
+- ৫-candle টেস্ট সহজ পদ্ধতি; ডানের candle close না হওয়া পর্যন্ত swing নিশ্চিত নয়।
+- higher timeframe-এ major swing আগে খুঁজুন; minor swing noise।
+- Stop-loss বসে major swing-এর সামান্য ওপারে।
+- swing একটি মানচিত্র; এটি একা কোনো signal নয়।
+
+</KeyTakeaways>
+
+## অনুশীলন
+
+TradingView-এ EUR/USD-এর D1 chart খুলুন। শেষ ৬ মাসে ৫-candle টেস্ট দিয়ে অন্তত ৪টি Swing High ও ৪টি Swing Low চিহ্নিত করুন। তারপর H1 chart-এ একই সময়ের দিকে তাকিয়ে দেখুন কতগুলো ছোট swing বাড়তি আসছে। লিখে রাখুন: D1-এর কোন swing-গুলো H1-এও বড় দেখায়?
+
+## কুইজ
+
+1. একটি candle-কে Swing High ধরতে তার high কেমন হতে হবে?
+2. ৫-candle টেস্টে swing কখন নিশ্চিত হয়?
+3. ছোট timeframe-এ বেশি noise swing আসে কেন, আর তাতে কী করবেন?
+4. buy trade-এ সাধারণত stop-loss কোথায় বসে?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** দুই পাশের (বাঁয়ের ও ডানের) candle-গুলোর high-এর চেয়ে বেশি।
+
+**২.** ডানের ২টি candle close হওয়ার পর।
+
+**৩.** ছোট frame-এ ছোট ছোট ওঠানামা বেশি হয়। আগে higher frame-এর major swing চিহ্নিত করে সেগুলোকে প্রাধান্য দিন।
+
+**৪.** সাম্প্রতিক major Swing Low-এর সামান্য নিচে।
+
+</details>
+
+## পরের ধাপ
+
+- আগে: [Reading a Chart](/bn/learn/01-foundations/06-reading-a-chart)।
+- পরে: [Trend, Range ও HH/HL](/bn/learn/03-market-structure/02-trend-range-hhhl), তারপর [Break of Structure](/bn/learn/03-market-structure/03-break-of-structure)।
+- ঝুঁকি: [Stop Loss Placement](/bn/learn/10-trade-management-execution/01-stop-loss-placement)।
+
+### সূত্র
+
+- [Swing High/Low, LuxAlgo](https://www.luxalgo.com/library/concept/swing-high-low/)
+- [Strong vs Weak Swings, LuxAlgo](https://www.luxalgo.com/library/concept/strong-vs-weak-swings/)
+- [Swing High and Swing Low, TradingSim](https://tradingsim.com/blog/swing-high)
+- [Trading Swing Highs and Swing Lows, MindMathMoney](https://www.mindmathmoney.com/articles/trading-swing-highs-and-swing-lows-an-essential-guide-for-traders)
+- [Fractals, Linn Software](https://www.linnsoft.com/techind/fractals-swing-highs-swing-lows)
+- [Market structure, CrossTrade](https://crosstrade.io/learn/price-action/market-structure)
+
+<Disclaimer />

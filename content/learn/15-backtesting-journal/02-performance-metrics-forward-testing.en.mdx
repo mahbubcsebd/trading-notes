@@ -1,0 +1,193 @@
+---
+title: "Performance Metrics and Forward Testing: Measuring and Checking the Result"
+description: "How to work out win rate, expectancy, profit factor and max drawdown, and why a backtest result has to be checked in a forward test, with two equity charts."
+level: intermediate
+tags: [metrics, expectancy, profit-factor, drawdown, forward-testing]
+instruments: [ACCOUNT]
+timeframes: [per-trade]
+status: done
+sources:
+  - type: blog
+    title: "Backtesting - Investopedia"
+    url: "https://www.investopedia.com/terms/b/backtesting.asp"
+updated: 2026-11-06
+---
+
+# Performance Metrics and Forward Testing: Measuring and Checking the Result
+
+If an exam sheet says only "pass", you learn nothing. You need to see the marks, the result by subject, and the comparison with the earlier exam. It is the same for a backtest result: just "it made a profit" is not enough.
+
+## What you will be able to do
+
+- **Work out win rate, expectancy, profit factor and max drawdown.**
+- **Understand what forward testing is and why.**
+- **Read the gap** between the backtest and forward results.
+
+## Why it matters
+
+- **Win rate alone misleads.** A profit is possible with 45% wins, and a loss with 70%.
+- **Without knowing the drawdown, patience runs out.** If you know it beforehand, you will not drop the plan in a bad period.
+- **Confidence in a backtest comes from a forward test.**
+
+Prerequisites: [How to Backtest](/en/learn/15-backtesting-journal/01-how-to-backtest) and [Expectancy](/en/learn/08-risk-management/07-expectancy).
+
+## The main measures
+
+**Performance metrics are a few numbers worked out from the list of trades that say how profitable and how risky the rules are.**
+
+| Measure               | Calculation                                           | Example with 40 trades (imaginary) |
+| :-------------------- | :---------------------------------------------------- | :--------------------------------- |
+| Win rate              | winning trades ÷ total trades                         | 18 ÷ 40 = 45%                      |
+| Average win / loss    | in R                                                  | +2R / -1R                          |
+| Expectancy            | (win rate × average win) − (loss rate × average loss) | (0.45 × 2) − (0.55 × 1) = +0.35R   |
+| Profit factor         | total profit ÷ total loss                             | 36R ÷ 22R ≈ 1.64                   |
+| Max drawdown          | the biggest fall from a peak (%)                      | about 2.0% (in this sequence)      |
+| Longest losing streak | the longest run of losses                             | 2                                  |
+
+Expectancy is how many R you can expect per trade on average. If it is positive, the rules have a chance of surviving, but with a small sample the number is unstable.
+
+## What it looks like on a chart
+
+<Chart
+  id="metrics-backtest-equity-01"
+  height={440}
+  caption="ACCOUNT, per trade (educational, imaginary example): 40 trades, 1% risk: 18 at +2R, 22 at -1R. A net of +14R, expectancy +0.35R. About 11,449 from 10,000."
+/>
+
+Even with a 45% win rate the curve rose, because the winning trades are twice the losing ones.
+
+## Step by step: working out the metrics
+
+<Steps>
+
+### Step 1: Write all trades in R
+
+Not money, but R. For example: +2, -1, -1, +2. Comparison gets easy.
+
+### Step 2: Count the wins and losses
+
+Win rate = wins ÷ total. It says nothing alone; look at it with the next step.
+
+### Step 3: Average win and average loss
+
+In R. Then put them into the expectancy formula.
+
+### Step 4: Draw the equity curve
+
+The account after each trade. The biggest fall from a peak is the max drawdown.
+
+### Step 5: Run a forward test
+
+After the backtest, new trades by the same rules in a new, unseen market (demo or live at a small risk). Put the results side by side and compare.
+
+</Steps>
+
+## What is forward testing
+
+**Forward testing means running the rules chosen in the backtest in a new, unseen market and looking at the result.** It catches the mistake of arranging rules by looking at the past (overfitting).
+
+- **Demo account:** no risk, but the execution is not real.
+- **Small live:** minimal risk, but with the real spread and slippage.
+
+## Example 1: when it works (synthetic)
+
+- **Backtest:** 40 trades, net +14R, max drawdown about 2%.
+- **Forward:** by the same rules, 15 trades in the next few weeks, net +4R.
+- **Result:** the pace is lower than the backtest, but in the same direction.
+- **Lesson:** when the two results point the same way, confidence rises. Do not expect an exact match.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Example 2: when it fails (synthetic)
+
+<Chart
+  id="metrics-forward-equity-01"
+  height={380}
+  caption="ACCOUNT, per trade (educational, imaginary example): 15 forward trades by the same rules: 5 wins, 10 losses, a net of 0R. Flat compared with the backtest's +14R."
+/>
+
+- **What happened:** the backtest was +14R, but in forward, 15 trades gave a net of 0R.
+- **Why it may have failed:** the rules were overfit to the past, the market changed, or the sample is still small (15).
+- **What to do:** cut the risk, collect more trades, and look for a hidden bias in the backtest. Do not hurry to change the rules.
+- **Lesson:** a gap is a signal for investigation, not for panic.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Common mistakes
+
+| Mistake                       | Why it happens             | What to do                                  |
+| :---------------------------- | :------------------------- | :------------------------------------------ |
+| Looking only at win rate      | It is easy and attractive  | Look at expectancy and profit factor too    |
+| Ignoring drawdown             | Eyes only on profit        | Know the max drawdown and the losing streak |
+| A decision on a small sample  | Hurry                      | More trades, at different times             |
+| Skipping the forward test     | Confidence in the backtest | Check at least at a small risk              |
+| Changing the rules in forward | Seeing a bad result        | A new version, forward again                |
+
+## Pro tips
+
+<Callout type="tip">
+  If you know the backtest's max drawdown, prepare yourself mentally for one and
+  a half to two times that live. The real drawdown is often deeper than the
+  backtest's (a general guide, not a certainty).
+</Callout>
+
+<Callout type="note">
+  The numbers in this lesson are imaginary. To work them out on your own data,
+  use the R column of the
+  [journal](/en/learn/15-backtesting-journal/03-journal-template).
+</Callout>
+
+## When this does not work
+
+- **If trade sizes are unequal:** if it can't be measured in R, comparison may be wrong. Keep the risk fixed each time.
+- **If the sample is very small:** the numbers cannot be separated from luck.
+- **If the type of market changes:** the old metrics do not apply to the new market.
+
+## Summary
+
+<KeyTakeaways>
+
+- Win rate alone is not enough; look at expectancy, profit factor and max drawdown.
+- Write all trades in R.
+- A forward test checks the extra confidence from a backtest.
+- If there is a gap, investigate, do not hurry.
+
+</KeyTakeaways>
+
+## Practice
+
+Write your 20 backtest trades in R and work out the win rate, average win/loss, expectancy and the longest losing streak.
+
+## Quiz
+
+1. If 18 of 40 win, what is the win rate?
+2. What does expectancy say?
+3. Why is a forward test needed?
+4. If the forward result is weaker than the backtest, what do you do first?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** 18 ÷ 40 = 45%.
+
+**2.** How many R you can expect per trade on average.
+
+**3.** To see whether the rules hold in an unseen market, and to catch overfitting.
+
+**4.** Collect more data and look for bias in the backtest. Do not hurry to change the rules.
+
+</details>
+
+## Next steps
+
+- Before: [How to Backtest](/en/learn/15-backtesting-journal/01-how-to-backtest).
+- After: [Journal Template](/en/learn/15-backtesting-journal/03-journal-template).
+- Related: [Drawdown Rules](/en/learn/08-risk-management/04-drawdown-rules).
+
+### Sources
+
+- <ExternalLink href="https://www.investopedia.com/terms/b/backtesting.asp">
+    Backtesting, Investopedia
+  </ExternalLink>
+
+<Disclaimer />

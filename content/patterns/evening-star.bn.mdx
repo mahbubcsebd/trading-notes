@@ -1,42 +1,293 @@
 ---
-title: "ইভনিং স্টার (Evening Star)"
-description: "এটি একটি ৩-ক্যান্ডেল বিয়ারিশ রিভার্সাল প্যাটার্ন: একটি শক্তিশালী বুলিশ ক্যান্ডেল, একটি ছোট ক্যান্ডেল এবং শেষে একটি বৃহৎ বিয়ারিশ ক্যান্ডেল যা আপট্রেন্ড সমাপ্তির সংকেত দেয়।"
+title: "Evening Star: তিন candle-এ দিন শেষ হয়ে সন্ধ্যা নামার গল্প"
+description: "Evening star কীভাবে চিনবেন, morning star-এর উল্টো ছবি, evening doji star, Forex-এ gap ছাড়া নিয়ম, আর কেন weekend gap stop টপকে যেতে পারে — entry, stop ও chart সহ।"
 type: bearish
-category: "ইভনিং স্টার"
-winrate: "71% - 76%"
-riskReward: "1:3 to 1:5"
-maxRisk: "1% - 2%"
-bestLocation: "HTF Resistance / 4H Supply Zone / Liquidity Sweep"
-chartId: "evening-star-01"
-tags: [bearish, pattern, candlestick]
+category: three-candle
+level: intermediate
+candleCount: 3
+signal: reversal
+chartId: evening-star-win-01
+tags: [pattern, candlestick, evening-star, three-candle, reversal]
+status: done
+sources:
+  - type: book
+    title: "Japanese Candlestick Charting Techniques - Steve Nison"
+    note: "Evening star, evening doji star"
+  - type: blog
+    title: "Evening Star - Investopedia"
+    url: "https://www.investopedia.com/terms/e/eveningstar.asp"
+updated: 2026-11-06
 ---
 
-<div className="flex gap-6 items-end my-8 p-8 bg-zinc-950 border border-border/50 rounded-2xl w-max relative overflow-hidden">
-  <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:20px_20px]"></div>
-  <div className="relative z-10 flex gap-6">
-    <Candle color="bull" bodyH="h-14" topW="h-3" botW="h-2" offset="mt-6" />
-    <Candle color="neutral" bodyH="h-2" topW="h-4" botW="h-4" offset="mt-2" />
-    <Candle color="bear" bodyH="h-16" topW="h-2" botW="h-2" offset="mt-6" />
-  </div>
-</div>
+শুক্রবার রাতে নিখুঁত evening star সম্পূর্ণ হলো, short নিলেন, stop বসালেন। সোমবার সকালে chart খুলে দেখলেন দাম আপনার stop-এর অনেক উপরে open করেছে। Stop কাজ করেছে, কিন্তু আপনার দামে নয়। লোকসান 1R নয়, তার বেশি। এই পাতা [Morning Star](/bn/patterns/morning-star)-এর mirror; তিন candle-এর নিয়ম, penetration আর gap-এর ব্যাখ্যা সেখানে বিস্তারিত। এখানে শুধু যা আলাদা, আর stop-এর একটি সীমা।
 
-## Market Psychology & প্রাতিষ্ঠানিক অর্ডার ফ্লো
-বায়াররা মার্কেটকে সর্বোচ্চ লেভেলে ঠেলে নিয়ে যাওয়ার পর দ্বিতীয় ক্যান্ডেলে গতি হারিয়ে ফেলে (Inability to push higher)। প্রাতিষ্ঠানিক সেলাররা বুঝতে পারে যে রিটেইল বাই অর্ডার শুকিয়ে গেছে, ফলে তৃতীয় ক্যান্ডেলে তারা বিশাল সেলিং ভলিউম নিয়ে প্রবেশ করে এবং প্রথম ক্যান্ডেলের ৫০% এর বেশি নিচে ক্লোজ করায়। এটি নিশ্চিত ডাউনট্রেন্ডের সূচনা।
+## এক নজরে
 
-## ক্যান্ডেল অ্যানাটমির ৫টি অপরিহার্য শর্ত
-1. **Preceding Trend:** প্যাটার্নটির পূর্বে অবশ্যই স্পষ্ট আপট্রেন্ড বা পুলব্যাক থাকতে হবে।
-2. **Candle 1 (Bullish Expansion):** দীর্ঘ বডির সবুজ ক্যান্ডেল যা আপট্রেন্ডের ধারাবাহিকতা দেখায়।
-3. **Candle 2 (The Star):** ছোট বডির স্পিনিং টপ বা ডোজি ক্যান্ডেল যা বায়ারদের ক্লান্তি ও সিদ্ধান্তহীনতা প্রমাণ করে।
-4. **Candle 3 (Bearish Obliteration):** লাল ক্যান্ডেল যা প্রথম সবুজ ক্যান্ডেলের বডির অন্তত ৫০% নিচে গিয়ে ক্লোজ হতে হবে।
-5. **Volume Surge:** তৃতীয় ক্যান্ডেলের ভলিউম স্পষ্টতই প্রথম দুটি ক্যান্ডেলের তুলনায় বেশি হতে হবে।
+| বিষয়                | Evening Star                                                                                                                                                |
+| :------------------- | :---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| ধরন                  | Bearish reversal, তিন candle                                                                                                                                |
+| কোথায় খুঁজবেন       | Uptrend-এর চূড়ায়, চিহ্নিত resistance-এ                                                                                                                    |
+| চেনার মূল চিহ্ন      | ১: লম্বা bullish; ২: ছোট body-র star, ১-এর close-এর কাছে বা উপরে; ৩: লম্বা bearish, ১-এর body-র মাঝের নিচে close                                            |
+| Confirmation         | তৃতীয় candle; প্রথম body-র 50%-এর নিচে close                                                                                                               |
+| Stop                 | Star-এর high-এর উপরে (তিনটির সবচেয়ে উঁচু high), spread-সহ buffer                                                                                           |
+| বাতিল (invalidation) | Star-এর high-এর উপরে close                                                                                                                                  |
+| দেখতে একই রকম        | [Bearish Engulfing](/bn/patterns/bearish-engulfing), [Dark Cloud Cover](/bn/patterns/dark-cloud-cover), [Three Inside Down](/bn/patterns/three-inside-down) |
+| বিপরীত pattern       | Morning Star                                                                                                                                                |
 
-## লাভজনক ট্রেড নেওয়ার ৩টি প্রমাণিত কৌশল (Execution Blueprint)
-**কৌশল ১ (৫০% ফিবোনাচি রিটেস্ট - সেরা পছন্দ):** তৃতীয় ক্যান্ডেলটির ৫০% রিট্রেসমেন্টে Sell Limit বসান। স্টপ লস স্টার ক্যান্ডেলের হাই এর উপরে রাখুন। R:R ১:৩ বা তার বেশি।
-**কৌশল ২ (ক্যান্ডেল ৩ ক্লোজ এন্ট্রি):** তৃতীয় ক্যান্ডেলটি ক্লোজ হওয়ার সাথে সাথেই মার্কেট সেল এক্সিকিউট করুন।
-**কৌশল ৩ (M15 CHoCH স্নাইপার এন্ট্রি):** H4 এ প্যাটার্ন নিশ্চিত হলে M15 টাইমফ্রেমে শিফট করে Change of Character দেখে সেল দিন (টাইট স্টপ লস ১০-১৫ পিপ্স)।
+## এই লেখা পড়ে আপনি যা পারবেন
 
-## কোথায় সফল হবে বনাম কোথায় ফাঁদে পড়বেন
-- ✅ **A+ হাই-প্রোবাবিলিটি সেটআপ:** ডেইলি বা ৪-ঘণ্টা সাপ্লাই জোন, এশিয়ান হাই লিকুইডিটি সুইপ, এবং RSI বিয়ারিশ ডাইভারজেন্স।
-- ❌ **লস খাওয়ার ট্র্যাপ (Avoid):** রেঞ্জের মাঝখানে গঠিত হলে অথবা হাই-ইমপ্যাক্ট নিউজের ঠিক ৫ মিনিট পূর্বে।
+- Evening star আর evening doji star **চিনতে** পারবেন।
+- Resistance-এর উপরে star-এর উঁকি কেন **ভুয়া breakout-এর ছবি**, ব্যাখ্যা করতে পারবেন।
+- **Weekend gap-এর ঝুঁকি** বুঝে শুক্রবারের setup নিয়ে সিদ্ধান্ত নিতে পারবেন।
 
-> ⚠️ **প্রো মানি ম্যানেজমেন্ট ও সাইকোলজি টিপ:** কখনোই দ্বিতীয় ক্যান্ডেল দেখে আগেভাগে সেল করবেন না। তৃতীয় ক্যান্ডেলটি ক্লোজ হওয়া পর্যন্ত অপেক্ষা করাই পেশাদার ট্রেডারের পরিচয়। সর্বোচ্চ ১% থেকে ২% ঝুঁকি নিয়ে প্রতিটি ট্রেডে নির্ধারিত স্টপ লস ব্যবহার করুন।
+## কেন জরুরি
+
+- **Top-এ doji বেশি অর্থবহ।** Nison-এর পর্যবেক্ষণ অনুযায়ী evening doji star শক্ত signal, কারণ top-এ doji-র ওজন বেশি।
+- **Star প্রায়ই resistance-এর ওপারে উঁকি দেয়।** তৃতীয় candle সেই উঁকিকে ভুয়া breakout-এ পরিণত করে।
+- **Stop গ্যারান্টি নয়।** Stop একটি order, যা পরের পাওয়া দামে fill হয়। Weekend বা বড় news-এ সেই দাম অনেক খারাপ হতে পারে। বিস্তারিত: [Slippage ও Spread Widening](/bn/learn/10-trade-management-execution/04-slippage-requote-spread-widening)।
+
+পূর্বশর্ত: Morning Star পাতা (উপরে link)।
+
+## Evening Star কী
+
+**Evening star হলো তিন candle-এর pattern: uptrend-এ একটি লম্বা bullish candle, তারপর একটি ছোট body-র star, তারপর একটি লম্বা bearish candle, যা প্রথম body-র মাঝের নিচে close করে।** Star doji হলে সেটা **evening doji star**।
+
+<CandleDiagram
+  title="Evening doji star"
+  candles={[
+    { o: 40, h: 46, l: 39, c: 45, dim: true },
+    { o: 45, h: 59, l: 44, c: 58, label: "১", note: "লম্বা সবুজ" },
+    {
+      o: 58,
+      h: 63,
+      l: 56.5,
+      c: 58.1,
+      label: "doji star",
+      note: "level-এর উপরে উঁকি",
+    },
+    { o: 58.1, h: 58.5, l: 47, c: 48, label: "৩", note: "১-এর মাঝের নিচে" },
+  ]}
+  levels={[{ price: 60, label: "পুরোনো high", tone: "resistance" }]}
+  caption="লম্বা সবুজ candle, পুরোনো high-এর উপরে উঁকি দেওয়া doji, তারপর প্রথম body-র অনেক নিচে close করা লাল candle।"
+/>
+
+### চেনার নিয়ম
+
+| নিয়ম                                                       | বাধ্যতামূলক? | কেন                                  |
+| :---------------------------------------------------------- | :----------- | :----------------------------------- |
+| আগে uptrend, প্রথম candle লম্বা bullish                     | হ্যাঁ        | Buyers-এর শেষ জোরালো ধাক্কা          |
+| দ্বিতীয় candle-এর body ছোট, প্রথম close-এর কাছে বা উপরে    | হ্যাঁ        | Momentum থামার ছবি                   |
+| তৃতীয় candle লম্বা bearish, প্রথম body-র 50%-এর নিচে close | হ্যাঁ        | Sellers-এর জয়                       |
+| চিহ্নিত resistance-এ                                        | হ্যাঁ        | Level ছাড়া এটা uptrend-এর মাঝের dip |
+| Star doji (evening doji star), resistance-এর উপরে উঁকি      | না           | আরও স্পষ্ট ছবি                       |
+
+## শক্তিশালী বনাম দুর্বল evening star
+
+<DiagramRow>
+  <CandleDiagram
+    title="শক্তিশালী"
+    verdict="good"
+    verdictLabel="trade-যোগ্য"
+    candles={[
+      { o: 40, h: 46, l: 39, c: 45, dim: true },
+      { o: 45, h: 57, l: 44, c: 56 },
+      { o: 56, h: 60, l: 55, c: 56.1 },
+      { o: 56.1, h: 56.5, l: 46, c: 47, label: "~75% গভীর" },
+    ]}
+    levels={[{ price: 58, label: "পুরোনো high", tone: "resistance" }]}
+    caption="Doji star পুরোনো high-এর উপরে উঁকি দেয়, তৃতীয় candle প্রথম body-র প্রায় তিন-চতুর্থাংশ নামে।"
+  />
+  <CandleDiagram
+    title="দুর্বল"
+    verdict="bad"
+    verdictLabel="এড়িয়ে চলুন"
+    candles={[
+      { o: 30, h: 36, l: 29, c: 35, dim: true },
+      { o: 35, h: 43, l: 34, c: 42, dim: true },
+      { o: 42, h: 52, l: 41, c: 51 },
+      { o: 51, h: 54, l: 50, c: 52 },
+      { o: 52, h: 52.5, l: 45.5, c: 46, label: "সবে 50%" },
+    ]}
+    caption="টানা rally-র মাঝে, কোনো level নেই, তৃতীয় candle সবে মাঝের নিচে।"
+  />
+</DiagramRow>
+
+| মান যাচাই     | শক্তিশালী                                    | দুর্বল                          |
+| :------------ | :------------------------------------------- | :------------------------------ |
+| জায়গা        | চিহ্নিত পুরোনো high, star তার উপরে উঁকি দেয় | Uptrend-এর মাঝে, level ছাড়া    |
+| Star          | Doji বা খুব ছোট                              | মাঝারি body                     |
+| তৃতীয় candle | প্রথম body-র 60-75% বা বেশি                  | সবে 50%                         |
+| সময়          | সপ্তাহের মাঝে, বড় news ছাড়া                | শুক্রবারের close, weekend সামনে |
+
+## Candle-এর ভেতরের গল্প
+
+Morning star-এর গল্পই উল্টো দিকে। একটি প্রচলিত ব্যাখ্যা: প্রথম candle-এ buyers জোরে তোলে। Star-এ দাম resistance-এর উপরে উঁকি দেয়, কিন্তু ছোট body-তে close: buyers থেমেছে। তৃতীয় candle-এ sellers প্রথম candle-এর অর্ধেকের বেশি ফিরিয়ে নেয়। Star-এর সময় যারা breakout ভেবে কিনেছিল, তারা লোকসানে।
+
+<Callout type="note">
+  এটি একটি প্রচলিত ব্যাখ্যা, প্রমাণিত ঘটনা নয়। Chart দেখে কে কিনেছে বা বেচেছে,
+  তা জানা যায় না।
+</Callout>
+
+## কোথায় কাজ করে, কোথায় করে না
+
+<Compare
+  leftLabel="যেখানে evening star-এর ওজন বেশি"
+  rightLabel="যেখানে evening star প্রায়ই ফাঁদ"
+  left="- চিহ্নিত পুরোনো high বা supply zone-এ
+- Star resistance-এর উপরে উঁকি দিয়ে ফিরলে
+- Star doji হলে
+- তৃতীয় candle প্রথম body-র 60%+ নামলে"
+  right="- টানা uptrend-এর মাঝে, কোনো level ছাড়া
+- ঠিক নিচে ঊর্ধ্বমুখী moving average বা higher low
+- তৃতীয় candle সবে 50%-এ
+- শুক্রবারের close-এ, বড় weekend ঝুঁকির সামনে"
+/>
+
+## 24 ঘণ্টার বাজারে gap
+
+<Callout type="note">
+  Morning star-এর মতোই: Forex-এ star-এর আগে-পরে gap প্রায় হয় না, তাই star-এর
+  body প্রথম candle-এর close-এর কাছে বা উপরে, আর star-এর high প্রথম high-এর উপরে
+  হলে ভালো। **কিন্তু একটি ব্যতিক্রম আছে: weekend।** Forex বাজার শুক্রবার বন্ধ
+  হয়ে সোমবার (বাংলাদেশ সময় ভোরে) খোলে। এর মাঝে বড় খবর এলে সোমবারের open
+  শুক্রবারের close থেকে অনেক দূরে হতে পারে।
+</Callout>
+
+## ধাপে ধাপে: evening star trade
+
+পুরো ধাপ Morning Star পাতায় আছে, উল্টো দিকে। শুধু যা আলাদা:
+
+<Steps>
+
+### ধাপ ১: Entry ও stop
+
+তৃতীয় candle-এর close-এ sell, বা তার low-এর নিচে sell stop। Stop star-এর high-এর উপরে, [spread](/bn/learn/01-foundations/04-spread-commission-swap)-সহ।
+
+### ধাপ ২: নিচের বাধা
+
+আগের swing low, higher low, ঊর্ধ্বমুখী moving average। সবচেয়ে কাছেরটা পর্যন্ত [risk reward](/bn/learn/08-risk-management/03-risk-reward) অন্তত 1:1.5।
+
+### ধাপ ৩: শুক্রবার হলে আলাদা ভাবনা
+
+Pattern শুক্রবারের close-এ সম্পূর্ণ হলে তিনটি পথ: (ক) size কমিয়ে ঢোকা, যাতে gap হলেও লোকসান সামলানো যায়; (খ) সোমবারের open দেখে তারপর ঢোকা; (গ) trade বাদ। পূর্ণ size-এ ঢুকে "stop তো আছে" ভাবা চতুর্থ পথ, আর সবচেয়ে খারাপ।
+
+</Steps>
+
+### Trade-এর আগে checklist
+
+<Checklist
+  id="pattern-evening-star-pretrade-bn"
+  items={[
+    "Evening star আসার আগেই resistance চিহ্নিত ছিল, আর star সেই level-এ?",
+    "আকার নিয়ম মানছে (লম্বা সবুজ, ছোট star, তৃতীয় candle প্রথম body-র 50%-এর নিচে)?",
+    "তিনটি candle-ই বন্ধ হয়েছে, আর weekend বা বড় news-এর gap ঝুঁকি মেপেছেন?",
+    "সবচেয়ে কাছের বাধা পর্যন্ত risk reward অন্তত 1:1.5?",
+    "Higher timeframe-এর trend বা level trade-এর বিপরীতে নেই?",
+  ]}
+/>
+
+একটি ঘরও খালি থাকলে trade বাদ দিন।
+
+## উদাহরণ ১: যখন কাজ করে (কাল্পনিক)
+
+<Chart
+  id="evening-star-win-01"
+  height={420}
+  caption="USDJPY D1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — পুরোনো high-এ evening doji star, তৃতীয় candle-এর close-এ short।"
+/>
+
+- **কী দেখা যাচ্ছিল:** ৫ নম্বর candle 149.43-এ পুরোনো high রেখে গেছে। ৬-১০ নম্বর প্রায় 147.78 পর্যন্ত নামে, ১১-১৪ নম্বর আবার ওঠে।
+- **Evening star:** ১৫ নম্বর লম্বা সবুজ (148.88 থেকে 149.37)। ১৬ নম্বর doji (149.37 থেকে 149.365), high 149.53, পুরোনো high-এর উপরে। ১৭ নম্বর 149.027-এ close: প্রথম body-র প্রায় 70%।
+- **সিদ্ধান্ত:** তৃতীয় close-এ sell 149.027। Stop 149.59 (star high-এর উপরে), ঝুঁকি প্রায় 56 pip। Target 147.901 (2R); swing low পর্যন্ত জায়গা প্রায় 2.2R। দিনটা সপ্তাহের মাঝে।
+- **ফল:** ২৪ নম্বর candle target ছোঁয়।
+- **শিক্ষা:** Level-এর উপরে doji star, গভীর তৃতীয় candle, আর নিচে খোলা জায়গা।
+
+<TradeSetup
+  direction="short"
+  pair="USDJPY"
+  entry={149.027}
+  stop={149.59}
+  target={147.901}
+/>
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়। সব evening star জেতে না, আর কোনো ফল গ্যারান্টি নয়।)
+
+## উদাহরণ ২: যখন ফাঁদ হয় (কাল্পনিক)
+
+<Chart
+  id="evening-star-fail-01"
+  height={420}
+  caption="EURUSD D1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — শুক্রবারে সম্পূর্ণ evening star, সোমবার stop-এর ওপারে gap, লোকসান প্রায় 1.4R।"
+/>
+
+- **কী দেখা যাচ্ছিল:** ০-৬ নম্বর candle 1.0800 থেকে প্রায় 1.0943 পর্যন্ত rally। কোনো চিহ্নিত resistance ছিল না।
+- **Evening star:** ৭ নম্বর (বুধবার) লম্বা সবুজ, 1.0943 থেকে 1.0991। ৮ নম্বর (বৃহস্পতিবার) ছোট star, high 1.1005। ৯ নম্বর (শুক্রবার) 1.09612-এ close: প্রথম body-র প্রায় 62%।
+- **সিদ্ধান্ত:** শুক্রবারের close-এ পূর্ণ size-এ sell 1.09612, stop 1.1011, ঝুঁকি প্রায় 50 pip।
+- **কী হলো:** Weekend-এ খবরে বাজার নড়ে। ১০ নম্বর (সোমবার) 1.1029-এ open করে, stop-এর 18 pip উপরে। Stop প্রথম পাওয়া দামে fill হয়: লোকসান প্রায় 1.36R।
+- **কেন ব্যর্থ:** চিহ্নিত resistance ছিল না (প্রথম ঘর), আর weekend-এর gap ঝুঁকি মাপা হয়নি (তৃতীয় ঘর)। Pattern-টা আকারে নিখুঁত ছিল।
+
+**শিক্ষা:** Stop একটি order, গ্যারান্টি নয়। শুক্রবারের setup-এ size কমান বা সোমবারের অপেক্ষা করুন।
+
+## সাধারণ ভুল
+
+| ভুল                                  | কেন হয়                       | কী করবেন                         |
+| :----------------------------------- | :---------------------------- | :------------------------------- |
+| Stop-কে নিশ্চিত সর্বোচ্চ লোকসান ভাবা | Order কীভাবে fill হয় না জানা | Gap ও slippage হিসাবে রাখুন      |
+| শুক্রবারের close-এ পূর্ণ size        | Weekend ঝুঁকি না ভাবা         | Size কমান বা সোমবারের open দেখুন |
+| Uptrend-এর মাঝে level ছাড়া short    | তিন candle-এর আকারে মুগ্ধ     | শুধু চিহ্নিত resistance-এ        |
+| Stop তৃতীয় candle-এর high-এ         | ছোট stop-এর লোভ               | Star-এর high-এর উপরে             |
+
+## Pro tips
+
+<Callout type="tip">
+  আপনার broker weekend-এ কী করে, জেনে রাখুন। অনেক broker শুক্রবার বিকেলে margin
+  বাড়ায়, আর সোমবার open-এর প্রথম কয়েক মিনিট spread অনেক চওড়া থাকে।
+  বিস্তারিত: [Trading Sessions](/bn/learn/01-foundations/05-trading-sessions)।
+</Callout>
+
+<Callout type="warning">
+  সপ্তাহের মাঝেও বড় news (rate decision, NFP) gap বা বড় slippage আনতে পারে।
+  Pattern যত নিখুঁতই হোক, বড় release-এর আগে খোলা trade-এর ঝুঁকি আলাদা করে
+  ভাবুন। বিস্তারিত: [News Trade
+  Avoid](/bn/learn/11-fundamental-intermarket-analysis/06-news-trade-avoid-korbo)।
+</Callout>
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- Evening star = লম্বা সবুজ candle, ছোট star, তারপর লম্বা লাল candle যা প্রথম body-র 50%-এর নিচে close করে।
+- Star resistance-এর উপরে উঁকি দিয়ে ফিরলে, আর doji হলে, signal সবচেয়ে পরিষ্কার।
+- Entry তৃতীয় close-এ, stop star-এর high-এর উপরে।
+- Stop গ্যারান্টি নয়: weekend আর বড় news-এর gap ঝুঁকি size দিয়ে সামলান।
+
+</KeyTakeaways>
+
+## অনুশীলন ও নিজের backtest
+
+TradingView-এ USDJPY D1 বা EURUSD D1 খুলুন। অন্তত ২০টি evening star খুঁজুন। প্রতিটির জন্য লিখুন: তারিখ ও সপ্তাহের দিন, resistance-এ ছিল কি না, doji star কি না, তৃতীয় candle-এর penetration %, ফল (R)। আলাদা করে দেখুন, শুক্রবারে সম্পূর্ণ হওয়া setup-গুলোর পর সোমবারের open কত দূরে ছিল। অন্তত ৩০টি নমুনা ছাড়া সিদ্ধান্ত নেবেন না।
+
+## কুইজ
+
+1. Evening doji star কেন সাধারণ evening star-এর চেয়ে শক্ত ধরা হয়?
+2. Stop 1.1011, আর সোমবার দাম 1.1029-এ open করল। Short-এর stop কোথায় fill হবে?
+3. শুক্রবারের close-এ নিখুঁত evening star। তিনটি যুক্তিসঙ্গত পথ কী?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** Top-এ doji বেশি অর্থবহ (Nison-এর পর্যবেক্ষণ), আর doji star buyers-এর থেমে যাওয়াকে আরও স্পষ্ট দেখায়।
+
+**২.** প্রায় 1.1029-এ, অর্থাৎ প্রথম পাওয়া দামে। Stop order দাম গ্যারান্টি দেয় না।
+
+**৩.** Size কমিয়ে ঢোকা, সোমবারের open দেখে ঢোকা, বা trade বাদ।
+
+</details>
+
+## পরের ধাপ
+
+- পুরো walk-through: [Morning Star](/bn/patterns/morning-star)।
+- Stop কেন নড়ে: [Slippage ও Spread Widening](/bn/learn/10-trade-management-execution/04-slippage-requote-spread-widening)।
+- একই পরিবারের pattern: [Bearish Engulfing](/bn/patterns/bearish-engulfing), [Three Inside Down](/bn/patterns/three-inside-down), [Shooting Star](/bn/patterns/shooting-star)।
+
+<Disclaimer />

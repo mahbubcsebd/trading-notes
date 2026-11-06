@@ -1,34 +1,295 @@
 ---
-title: Bearish Engulfing
-description: একটি বড় বিয়ারিশ ক্যান্ডেল পূর্ববর্তী ছোট বুলিশ ক্যান্ডেলকে সম্পূর্ণ ঢেকে ফেলে। এটি ডাউনট্রেন্ড রিভার্সালের সংকেত দেয়।
-tags: [reversal, bearish]
+title: "Bearish Engulfing: এক candle-এ buyers-এর সব লাভ মুছে দেওয়া"
+description: "Bearish engulfing কীভাবে চিনবেন, তিন রূপ (top, trend continuation, outside bar), follow-through ও time stop, entry, stop, target — জেতা ও হারা chart সহ।"
+type: bearish
+category: two-candle
+level: beginner
+candleCount: 2
+signal: reversal
+chartId: bearish-engulfing-win-01
+tags: [pattern, candlestick, bearish-engulfing, engulfing, reversal]
+status: done
+sources:
+  - type: book
+    title: "Japanese Candlestick Charting Techniques - Steve Nison"
+    note: "Engulfing patterns, dark cloud cover-এর সঙ্গে তুলনা"
+  - type: book
+    title: "Encyclopedia of Candlestick Charts - Thomas Bulkowski"
+    note: "Engulfing pattern-এর আচরণ; ফলাফল বাজার ও সময়ভেদে বদলায়"
+  - type: blog
+    title: "Bearish Engulfing Pattern - Investopedia"
+    url: "https://www.investopedia.com/terms/b/bearishengulfingp.asp"
+updated: 2026-11-06
 ---
 
-<div className="flex gap-6 items-end my-8 p-8 bg-zinc-950 border border-border/50 rounded-2xl w-max relative overflow-hidden">
-  <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:20px_20px]"></div>
-  <div className="relative z-10 flex gap-6">
-    <Candle color="bull" bodyH="h-8" topW="h-4" botW="h-4" offset="mt-4" />
-    <Candle color="bear" bodyH="h-16" topW="h-2" botW="h-2" offset="mt-2" />
-  </div>
-</div>
+সঠিক জায়গায় নিখুঁত bearish engulfing, আপনি short নিলেন। তারপর ছয় candle দাম কোথাও যায় না, entry-র আশেপাশে ঘোরে। "আরেকটু অপেক্ষা করি", আর হঠাৎ দাম উঠে পুরো stop নিয়ে যায়। Pattern ঠিক ছিল, কিন্তু চলতে না পারা trade-ও একটা তথ্য। এটা [Bullish Engulfing](/bn/patterns/bullish-engulfing)-এর mirror page; নিয়ম, মানের তিন প্রশ্ন আর gap-এর ব্যাখ্যা সেখানে বিস্তারিত। এখানে শুধু যা আলাদা।
 
-## Market Psychology (মার্কেট সাইকোলজি)
-বায়াররা মার্কেট উপরে নিয়ে যাচ্ছিল, কিন্তু হঠাৎ প্রাতিষ্ঠানিক সেলাররা (Institutions) বিশাল ভলিউম নিয়ে মার্কেটে প্রবেশ করে। লাল ক্যান্ডেলটি আগের সবুজ ক্যান্ডেলকে পুরোপুরি গিলে ফেলার মানে হলো বায়ারদের সব বাই-অর্ডার শেষ এবং স্মার্ট মানি মার্কেট নিজেদের নিয়ন্ত্রণে নিয়ে নিয়েছে।
+## এক নজরে
 
-## ক্যান্ডেল অ্যানাটমির ৫টি অপরিহার্য শর্ত
-1. **Preceding Trend:** প্যাটার্নটি অবশ্যই একটি চলমান আপট্রেন্ডের শীর্ষে অথবা হায়ার টাইমফ্রেমের রেজিস্ট্যান্স টেস্ট করার পর গঠিত হতে হবে।
-2. **Candle 1 (Bullish Exhaustion):** প্রথম ক্যান্ডেলটি ছোট বডির বুলিশ ক্যান্ডেল হবে, যা ক্রেতাদের শক্তির অপচয় নির্দেশ করে।
-3. **Candle 2 (The Engulfing Slam):** দ্বিতীয় ক্যান্ডেলটির রিয়েল বডি পূর্ববর্তী ক্যান্ডেলের বডিকে সম্পূর্ণরূপে গ্রাস (Engulf) করবে।
-4. **Wick Ratio:** বিয়ারিশ ক্যান্ডেলটির নিচের উইক খুব ছোট বা নগণ্য হতে হবে (৮০% রিয়েল বডি ক্লোজ)।
-5. **Volume Spike:** এনগালফিং ক্যান্ডেলে পূর্ববর্তী ৩-৫টি ক্যান্ডেলের চেয়ে লক্ষণীয়ভাবে বেশি ভলিউম থাকবে।
+| বিষয়                | Bearish Engulfing                                                                                 |
+| :------------------- | :------------------------------------------------------------------------------------------------ |
+| ধরন                  | Bearish reversal বা continuation trigger, দুই candle                                              |
+| কোথায় খুঁজবেন       | Uptrend-এর চূড়ায় resistance-এ, বা downtrend-এর pullback শেষে ভাঙা support-এ                     |
+| চেনার মূল চিহ্ন      | দ্বিতীয় (লাল) candle-এর body প্রথম (সবুজ) candle-এর body পুরো ঢাকে                               |
+| Confirmation         | Engulfing-এর close; চাইলে পরের candle engulfing-এর মাঝামাঝি বা low-এর নিচে close (follow-through) |
+| Stop                 | দুই candle-এর উঁচু high-এর উপরে, spread-সহ buffer                                                 |
+| বাতিল (invalidation) | Engulfing-এর high-এর উপরে body close; বা ৫-৬ candle কোনো follow-through নেই (time stop)           |
+| দেখতে একই রকম        | [Dark Cloud Cover](/bn/patterns/dark-cloud-cover), [Outside Bar](/bn/patterns/outside-bar)        |
+| বিপরীত pattern       | Bullish Engulfing                                                                                 |
 
-## লাভজনক ট্রেড নেওয়ার ৩টি কৌশল (Execution Blueprint)
-- **কৌশল ১ (৫০% ফিবোনাচি রিটেস্ট - সেরা পছন্দ):** বিয়ারিশ ক্যান্ডেলের ৫০% রিট্রেসমেন্টে Sell Limit বসান। স্টপ লস হাই এর ৫-১০ পিপ্স উপরে বাফার সহ রাখুন। রিস্ক-টু-রিওয়ার্ড অনুপাত ১:৩ থেকে ১:৫ পর্যন্ত পাওয়া যায়।
-- **কৌশল ২ (ক্যান্ডেল ক্লোজ এন্ট্রি):** ক্যান্ডেলটি ক্লোজ হওয়ার সাথে সাথে মার্কেট সেল এন্ট্রি নিন। ট্রেড মিস হওয়ার কোনো ভয় থাকে না।
-- **কৌশল ৩ (M15 CHoCH স্নাইপার এন্ট্রি):** H4 এ বিয়ারিশ এনগালফিং দেখে M15 টাইমফ্রেমে যান। সেখানে Change of Character (CHoCH) হলে M15 অর্ডার ব্লকের রিটেস্টে সেল দিন (১০-১৫ পিপ্স টাইট স্টপ লস)।
+## এই লেখা পড়ে আপনি যা পারবেন
 
-## কোথায় সফল হবে বনাম কোথায় ফাঁদে পড়বেন
-- ✅ **A+ হাই প্রোবাবিলিটি:** ডেইলি/৪-ঘণ্টা সাপ্লাই জোন, সুইং হাই লিকুইডিটি সুইপ (BSL Grab), লন্ডন/নিউ ইয়র্ক সেশন ওপেন, RSI বিয়ারিশ ডাইভারজেন্স।
-- ❌ **লস খাওয়ার ট্র্যাপ:** রেঞ্জের মাঝখানে (No Man's Land), শক্তিশালী বুলিশ ট্রেন্ডের মাঝপথে, হাই-ইমপ্যাক্ট নিউজের (CPI, NFP) ঠিক ৫ মিনিট আগে।
+- Bearish engulfing-এর **তিন রূপ চিনতে** পারবেন: top-এ reversal, trend continuation, outside bar।
+- Follow-through কী আর কখন অপেক্ষা করবেন, **ঠিক করতে পারবেন**।
+- **Time stop** দিয়ে না-চলা trade থেকে আগেই বেরোতে পারবেন।
 
-> ⚠️ **প্রো মানি ম্যানেজমেন্ট টিপ:** কখনোই এক ট্রেডে মোট মূলধনের ১-২% এর বেশি ঝুঁকি নেবেন না। স্টপ লস সবসময় ক্যান্ডেলের হাই থেকে ব্রোকারের স্প্রেড বাফার দিয়ে বসাবেন।
+## কেন জরুরি
+
+- **Continuation-এর সবচেয়ে পরিষ্কার trigger-গুলোর একটি।** Downtrend-এ pullback ভাঙা support-এ উঠে bearish engulfing দিলে আপনি trend-এর দিকে trade করছেন।
+- **Dark cloud cover-এর শক্ত রূপ।** Dark cloud cover আগের body-র মাঝের নিচে close করে; bearish engulfing পুরো body-র নিচে। বিস্তারিত তুলনা নিচে।
+- **চলতে না পারা trade-ও তথ্য।** Engulfing-এর পর দ্রুত move না এলে momentum-এর ধারণা দুর্বল।
+
+পূর্বশর্ত: Bullish Engulfing পাতা (উপরে link) আর [Role Reversal](/bn/learn/05-support-resistance/02-role-reversal)।
+
+## Bearish Engulfing কী
+
+**Bearish engulfing হলো দুই candle-এর pattern, যেখানে একটি bullish candle-এর পরে আসা bearish candle-এর body আগের body পুরোটা ঢেকে ফেলে।** Buyers আগের candle-এ যা জিতেছিল, sellers এক candle-এ তার সবটা আর আরও বেশি নিয়ে যায়।
+
+<CandleDiagram
+  title="Bearish engulfing: নিয়ম"
+  candles={[
+    { o: 40, h: 46, l: 39, c: 45, dim: true },
+    { o: 45, h: 51, l: 44, c: 50, dim: true },
+    { o: 50, h: 54, l: 49, c: 53, label: "১", note: "bullish body" },
+    { o: 53, h: 54, l: 44, c: 45, label: "২", note: "body পুরো ঢাকে" },
+  ]}
+  caption="দ্বিতীয় candle-এর body (53 থেকে 45) প্রথম candle-এর body (50 থেকে 53) পুরো ঢাকে। Forex-এ দ্বিতীয় open সাধারণত প্রথম close-এর সমান।"
+/>
+
+### তিন রূপ
+
+| রূপ                       | কোথায়                                                            | মন্তব্য                                                         |
+| :------------------------ | :---------------------------------------------------------------- | :-------------------------------------------------------------- |
+| **Top-এ reversal**        | লম্বা rally-র পর higher timeframe resistance-এ                    | বইয়ের প্রচলিত ব্যবহার; trend-এর বিপরীতে, তাই জায়গা মাপুন      |
+| **Trend continuation**    | Downtrend-এ pullback ভাঙা support-এ উঠলে                          | সাধারণত সবচেয়ে পরিষ্কার, কারণ trade trend-এর দিকে              |
+| **Outside bar engulfing** | দ্বিতীয় candle body আর wick দুটোই ঢাকে (higher high + lower low) | প্রায়ই আগের high-এর উপরে liquidity sweep থাকে; অনেকে শক্ত ধরেন |
+
+মানের তিন প্রশ্ন একই, শুধু উল্টো দিকে: প্রথম body স্পষ্ট? দ্বিতীয় candle range-এর **নিচের** এক-তৃতীয়াংশে close? Body অন্তত দেড় গুণ?
+
+## শক্তিশালী বনাম দুর্বল bearish engulfing
+
+<DiagramRow>
+  <CandleDiagram
+    title="শক্তিশালী"
+    verdict="good"
+    verdictLabel="trade-যোগ্য"
+    candles={[
+      { o: 40, h: 45, l: 39, c: 44, dim: true },
+      { o: 44, h: 50, l: 43, c: 49 },
+      { o: 49, h: 50.5, l: 37, c: 37.5, label: "৩ প্রশ্নই পাস" },
+    ]}
+    levels={[{ price: 50, label: "ভাঙা support", tone: "resistance" }]}
+    caption="Downtrend-এর pullback ভাঙা support-এ, close প্রায় low-এ, body দ্বিগুণের বেশি।"
+  />
+  <CandleDiagram
+    title="দুর্বল"
+    verdict="bad"
+    verdictLabel="এড়িয়ে চলুন"
+    candles={[
+      { o: 50, h: 52, l: 48, c: 51, dim: true },
+      { o: 51, h: 52, l: 49, c: 50, dim: true },
+      { o: 50, h: 51, l: 49.5, c: 50.6 },
+      { o: 50.6, h: 51, l: 49.4, c: 49.9, label: "range-এর মাঝে" },
+    ]}
+    caption="ছোট candle-এর range-এ আরেকটি ছোট candle সামান্য ঢাকে। কোনো level নেই।"
+  />
+</DiagramRow>
+
+### Dark cloud cover-এর সঙ্গে তফাত
+
+| Pattern               | দ্বিতীয় candle-এর close                      | শক্তি                |
+| :-------------------- | :-------------------------------------------- | :------------------- |
+| **Bearish Engulfing** | প্রথম candle-এর open-এর নিচে (পুরো body ঢাকে) | বেশি                 |
+| **Dark Cloud Cover**  | প্রথম body-র মাঝের নিচে, কিন্তু open-এর উপরে  | কম; আধা উল্টে দেওয়া |
+
+## Candle-এর ভেতরের গল্প
+
+Bullish engulfing-এর গল্পই উল্টো দিকে। একটি প্রচলিত ব্যাখ্যা: প্রথম candle-এ buyers এগিয়ে। দ্বিতীয় candle আগের close-এর কাছে খোলে, buyers আবার তুলতে চায়, পারে না। Sellers পুরো candle জেতে, আগের open-এর নিচে close করে। আগের candle-এ যারা কিনেছিল, সবাই লোকসানে।
+
+<Callout type="note">
+  এটি একটি প্রচলিত ব্যাখ্যা, প্রমাণিত ঘটনা নয়। Chart দেখে কে কিনেছে বা বেচেছে,
+  তা জানা যায় না।
+</Callout>
+
+## কোথায় কাজ করে, কোথায় করে না
+
+<Compare
+  leftLabel="যেখানে bearish engulfing-এর ওজন বেশি"
+  rightLabel="যেখানে bearish engulfing প্রায়ই ফাঁদ"
+  left="- Downtrend-এ pullback শেষে ভাঙা support-এ (continuation)
+- লম্বা rally-র পর higher timeframe resistance-এ
+- তিন প্রশ্নই পাস করলে
+- পরের candle follow-through দিলে
+- নিচে swing low পর্যন্ত যথেষ্ট জায়গা থাকলে"
+  right="- Range-এর মাঝখানে, কোনো level ছাড়া
+- ছোট candle-এর engulfing, আশেপাশের গড়ের তুলনায় ছোট
+- শক্তিশালী uptrend-এর মাঝে ছোট high-এ
+- M1-M5-এর মতো ছোট timeframe-এ signal হিসেবে
+- Entry-র পর ৫-৬ candle কোনো move না এলে"
+/>
+
+## 24 ঘণ্টার বাজারে gap
+
+<Callout type="note">
+  Bullish engulfing-এর মতোই: Forex-এ দ্বিতীয় candle প্রায় সবসময় আগের close-এ
+  open করে, তাই ঢাকার কাজটা পুরোটাই close করে। Close প্রথম open-এর কতটা নিচে আর
+  নিজের range-এর কোথায়, সেটাই শক্তির মাপ।
+</Callout>
+
+## ধাপে ধাপে: bearish engulfing trade
+
+Context, মান যাচাই, size আর target-এর পুরো ধাপ Bullish Engulfing পাতায় আছে, উল্টো দিকে। শুধু যা আলাদা:
+
+<Steps>
+
+### ধাপ ১: রূপ ঠিক করুন
+
+Continuation (trend-এর দিকে) না top-এ reversal (trend-এর বিপরীতে)? Reversal হলে নিচের কাছের support পর্যন্ত জায়গা বেশি সাবধানে মাপুন।
+
+### ধাপ ২: Entry আর confirmation
+
+| Entry                      | কোথায়                                                      | সুবিধা              | অসুবিধা                     |
+| :------------------------- | :---------------------------------------------------------- | :------------------ | :-------------------------- |
+| **Close entry**            | Engulfing বন্ধ হতেই sell                                    | মিস হয় না          | Confirmation নেই            |
+| **50% retest**             | Engulfing body-র মাঝামাঝি sell limit                        | Stop ছোট, R:R ভালো  | দাম না ফিরলে মিস            |
+| **Follow-through**         | পরের candle engulfing-এর মাঝামাঝি বা low-এর নিচে close করলে | দুর্বল signal ছাঁটে | Entry নিচে, R:R কম          |
+| **ছোট TF structure break** | M15/M5-এ শেষ higher low ভাঙলে                               | Stop ছোট            | বেশি জটিল, ভুয়া break বেশি |
+
+### ধাপ ৩: Stop আর time stop
+
+Stop দুই candle-এর উঁচু high-এর উপরে, [spread](/bn/learn/01-foundations/04-spread-commission-swap)-সহ। আর একটি **time stop** লিখে রাখুন: entry-র পর আপনার timeframe-এ ৫-৬ candle-এ দাম কোথাও না গেলে breakeven-এর কাছে বা ছোট লোকসানে বেরিয়ে যান। "৫-৬ candle" কাজ চালানোর মাপ, পরিসংখ্যান নয়।
+
+</Steps>
+
+### Trade-এর আগে checklist
+
+<Checklist
+  id="pattern-bearish-engulfing-pretrade-bn"
+  items={[
+    "Engulfing আসার আগেই resistance বা ভাঙা support চিহ্নিত ছিল, আর এটা সেই level-এ?",
+    "নিয়ম আর মান পাস করছে (body পুরো ঢাকে, প্রথম body স্পষ্ট, close নিচের এক-তৃতীয়াংশে)?",
+    "দুটি candle-ই বন্ধ হয়েছে, আর time stop কত candle, লিখে রেখেছেন?",
+    "নিচের swing low বা support পর্যন্ত risk reward অন্তত 1:1.5?",
+    "Higher timeframe-এর trend বা level trade-এর বিপরীতে নেই?",
+  ]}
+/>
+
+একটি ঘরও খালি থাকলে trade বাদ দিন।
+
+## উদাহরণ ১: যখন কাজ করে (কাল্পনিক)
+
+<Chart
+  id="bearish-engulfing-win-01"
+  height={420}
+  caption="USDJPY D1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — floor ভাঙার পর pullback পুরোনো floor-এ, সেখানে bearish engulfing, close-এ short।"
+/>
+
+- **কী দেখা যাচ্ছিল:** ০-৬ নম্বর candle প্রায় 151.83-এর floor-এর উপরে range-এ। ৭ নম্বর floor ভাঙে, ১২ নম্বর 149.71-এ swing low বানায়। ১৩-১৭ নম্বর পুরোনো floor-এ ফেরে।
+- **Engulfing:** ১৭ নম্বর ছোট bullish (151.708 থেকে 151.848)। ১৮ নম্বর 151.848-এ open, 151.308-এ close: body 54 pip, আগেরটার প্রায় চার গুণ, close low-এর মাত্র 4 pip উপরে।
+- **সিদ্ধান্ত:** Close-এ sell 151.308। Stop 151.948 (দুই candle-এর high-এর উপরে), ঝুঁকি 64 pip। Target 150.028 (2R); swing low পর্যন্ত জায়গা প্রায় 2.5R।
+- **ফল:** ১৯ নম্বর নিচে follow-through দেয়। ২৫ নম্বর candle target ছোঁয়।
+- **শিক্ষা:** Trend-এর দিকে, ভাঙা level-এ, শক্তিশালী মান, আর দ্রুত follow-through।
+
+<TradeSetup
+  direction="short"
+  pair="USDJPY"
+  entry={151.308}
+  stop={151.948}
+  target={150.028}
+/>
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়। সব bearish engulfing জেতে না, আর কোনো ফল গ্যারান্টি নয়।)
+
+## উদাহরণ ২: যখন ফাঁদ হয় (কাল্পনিক)
+
+<Chart
+  id="bearish-engulfing-fail-01"
+  height={420}
+  caption="XAUUSD H4 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — সঠিক bearish engulfing, কিন্তু ছয় candle কোনো follow-through নেই। Time stop না মানায় পুরো stop।"
+/>
+
+- **কী দেখা যাচ্ছিল:** ০-৭ নম্বর candle 2360 থেকে প্রায় 2412 পর্যন্ত rally।
+- **Engulfing:** ৭ নম্বর ছোট bullish (2405 থেকে 2410)। ৮ নম্বর 2410-এ open, 2393-এ close: body $17, তিন গুণের বেশি, close low-এর কাছে। আকারে ঠিক।
+- **সিদ্ধান্ত:** Close-এ sell 2393.00, stop 2414.64, ঝুঁকি $21.64, target 2349.72।
+- **কী হলো:** ৯-১৪ নম্বর candle 2390 থেকে 2394-এর মধ্যে পাশাপাশি চলে। ১৪ নম্বরে time stop মানলে প্রায় 2394-এ, মাত্র $1 লোকসানে বেরোনো যেত। ধরে রাখায় ১৫-১৬ নম্বর উঠে পুরো stop নেয়।
+- **কেন ব্যর্থ:** Momentum-এর ধারণা ছিল, কিন্তু momentum আসেনি। Checklist-এর তৃতীয় ঘরে time stop লেখা থাকলে লোকসান প্রায় শূন্য হতো।
+
+**শিক্ষা:** Engulfing-এর পর ৫-৬ candle-এ follow-through না এলে breakeven-এর কাছে বেরিয়ে যান। না-চলা trade-ও একটা উত্তর।
+
+## সাধারণ ভুল
+
+| ভুল                                     | কেন হয়                          | কী করবেন                                          |
+| :-------------------------------------- | :------------------------------- | :------------------------------------------------ |
+| না-চলা trade আশায় ধরে রাখা             | "আরেকটু অপেক্ষা"                 | Entry-র আগেই time stop লিখুন                      |
+| Uptrend-এর মাঝে প্রতিটি engulfing short | Trend উপেক্ষা                    | Continuation রূপ বা বড় resistance-এ reversal     |
+| Stop শুধু দ্বিতীয় candle-এর high-এ     | প্রথম candle-এর high ভুলে যাওয়া | দুই candle-এর উঁচু high-এর উপরে                   |
+| ছোট TF-এ engulfing-কে signal ধরা        | Noise, spread, commission        | Signal H1 বা বড় TF-এ; ছোট TF শুধু entry timing-এ |
+
+## Pro tips
+
+<Callout type="tip">
+  Outside bar engulfing-এ দ্বিতীয় candle আগের high-এর উপরে গিয়ে নিচে close
+  করে। আগের high-এর উপরে যাদের buy stop ছিল, তাদের order কেটে sellers ভালো দাম
+  পায়। এই liquidity sweep-এর ছবি থাকলে অনেকে signal-কে শক্ত ধরেন। বিস্তারিত:
+  [Liquidity ও Stop
+  Hunt](/bn/learn/03-market-structure/04-liquidity-stop-hunts)।
+</Callout>
+
+<Callout type="warning">
+  "Bearish engulfing-এর win rate ৬৫%" জাতীয় সংখ্যা যাচাই ছাড়া মানবেন না।
+  জায়গা, trend আর timeframe ফল পুরো বদলে দেয়। নিজের backtest-ই একমাত্র
+  বিশ্বাসযোগ্য সংখ্যা।
+</Callout>
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- Bearish engulfing = bullish candle-এর পরে bearish candle, যার body আগের body পুরো ঢাকে।
+- তিন রূপ: top-এ reversal, trend continuation (সাধারণত সবচেয়ে পরিষ্কার), outside bar।
+- Stop দুই candle-এর উঁচু high-এর উপরে; entry-র আগেই time stop লিখুন।
+- Dark cloud cover-এর চেয়ে শক্ত, কারণ close আগের পুরো body-র নিচে।
+
+</KeyTakeaways>
+
+## অনুশীলন ও নিজের backtest
+
+TradingView-এ USDJPY D1 বা XAUUSD H4 খুলুন। অন্তত ২০টি bearish engulfing খুঁজুন। প্রতিটির জন্য লিখুন: তারিখ, রূপ (reversal / continuation / outside bar), তিন প্রশ্নের ফল, entry-র পর প্রথম ৬ candle-এ সর্বোচ্চ কত R move এসেছিল, ফল (R)। এরপর দেখুন, ৬ candle-এ 0.5R-এর কম move-এর trade-গুলো শেষে কী হয়েছে: এটাই আপনার time stop-এর প্রমাণ। অন্তত ৩০টি নমুনা ছাড়া সিদ্ধান্ত নেবেন না।
+
+## কুইজ
+
+1. Bearish engulfing আর dark cloud cover-এর মূল তফাত কী?
+2. Wick-ও ঢাকতে হবে কি?
+3. Entry-র পর ছয় candle দাম entry-র আশেপাশে ঘুরছে। কী করবেন?
+4. কোন রূপ সাধারণত সবচেয়ে পরিষ্কার, আর কেন?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** Bearish engulfing প্রথম candle-এর open-এর নিচে close করে, পুরো body ঢাকে। Dark cloud cover শুধু প্রথম body-র মাঝের নিচে close করে।
+
+**২.** না। প্রচলিত সংজ্ঞায় শুধু body। Wick-ও ঢাকলে সেটা outside bar engulfing, যাকে অনেকে শক্ত ধরেন, কিন্তু বাধ্যতামূলক নয়।
+
+**৩.** Time stop: breakeven-এর কাছে বা ছোট লোকসানে বেরিয়ে যান। Momentum-এর ধারণা কাজ করছে না।
+
+**৪.** Trend continuation: downtrend-এর pullback ভাঙা support-এ। কারণ trade trend-এর দিকে।
+
+</details>
+
+## পরের ধাপ
+
+- পুরো walk-through: [Bullish Engulfing](/bn/patterns/bullish-engulfing)।
+- কখন বেরোবেন: [Trade কখন exit করবো](/bn/learn/10-trade-management-execution/05-trade-kokhon-exit-korbo)।
+- একই পরিবারের pattern: [Dark Cloud Cover](/bn/patterns/dark-cloud-cover), [Evening Star](/bn/patterns/evening-star), [Bearish Harami](/bn/patterns/bearish-harami)।
+
+<Disclaimer />

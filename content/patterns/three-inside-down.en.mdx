@@ -1,0 +1,281 @@
+---
+title: "Three Inside Down: a bearish harami followed by a confirmed reversal"
+description: "How to spot three inside down, the mirror of three inside up, the third candle below the mother's open, entry, and why your stop buffer must allow for spread and rollover, with charts."
+type: bearish
+category: three-candle
+level: intermediate
+candleCount: 3
+signal: reversal
+chartId: three-inside-down-win-01
+tags: [pattern, candlestick, three-inside-down, harami, three-candle]
+status: done
+sources:
+  - type: book
+    title: "Candlestick Charting Explained - Gregory L. Morris"
+    note: "Three inside up / down"
+  - type: blog
+    title: "Three Inside Up/Down - Investopedia"
+    url: "https://www.investopedia.com/terms/t/three-inside-updown.asp"
+updated: 2026-11-06
+---
+
+A perfect three inside down at an old high, so you go short with the stop just 1 pip above the mother's high. At night, during the daily rollover, the spread suddenly widens several times over, and a thin spike takes the stop. In the morning you see price heading straight for your target. The idea was right; the buffer was not there. This page is the mirror of [Three Inside Up](/en/patterns/three-inside-up); the detailed rules are there.
+
+## At a glance
+
+| Item          | Three Inside Down                                                                                                |
+| :------------ | :--------------------------------------------------------------------------------------------------------------- |
+| Type          | Bearish reversal, three candles (bearish harami + confirmation)                                                  |
+| Where to look | At the top of an uptrend, at a marked resistance                                                                 |
+| Key features  | 1: long bullish mother; 2: a small candle inside the mother's body; 3: bearish, closing below the mother's open  |
+| Confirmation  | The third candle is the confirmation                                                                             |
+| Stop          | Above the mother's high, with spread and an adequate buffer                                                      |
+| Invalidation  | A close above the mother's high                                                                                  |
+| Look-alikes   | [Bearish Harami](/en/patterns/bearish-harami) (the first two candles), [Evening Star](/en/patterns/evening-star) |
+| Opposite      | Three Inside Up                                                                                                  |
+
+## What you will be able to do
+
+- **Explain** the difference between three inside down and a bearish harami.
+- **Read** the mother's open as the **first broken obstacle**.
+- **Set** the stop buffer with **spread and rollover** in mind.
+
+## Why it matters
+
+- **A confirmed bearish harami.** When the third candle closes below the mother's open, everyone who bought during the mother is losing.
+- **A short's stop fills on the ask.** Charts usually show the bid. A short closes at the ask, which is bid + spread. When spreads widen, a stop can be hit at a price the chart never shows.
+- **The rollover hour is different.** At brokers' end-of-day rollover liquidity thins and spreads often jump. More in [Spread, Commission and Swap](/en/learn/01-foundations/04-spread-commission-swap).
+
+Prerequisite: the Three Inside Up page (linked above).
+
+## What is three inside down
+
+**Three inside down is a three-candle pattern: a long bullish candle, a small candle inside its body (a bearish harami), then a bearish candle that closes below the first candle's open.**
+
+<CandleDiagram
+  title="From bearish harami to three inside down"
+  candles={[
+    { o: 40, h: 46, l: 39, c: 45, dim: true },
+    { o: 45, h: 58, l: 44, c: 57, label: "1 mother" },
+    { o: 57, h: 57.5, l: 51, c: 51.5, label: "2 harami" },
+    {
+      o: 51.5,
+      h: 52,
+      l: 42,
+      c: 43,
+      label: "3",
+      note: "below the mother open (45)",
+    },
+  ]}
+  caption="The first two candles are a bearish harami. The third closes below the mother's open, confirming the harami."
+/>
+
+### Identification rules
+
+| Rule                                                      | Required?          | Why                                            |
+| :-------------------------------------------------------- | :----------------- | :--------------------------------------------- |
+| An uptrend before it; the mother long and bullish         | Yes                | The harami's foundation                        |
+| The second candle's body inside the mother's body         | Yes                | This is the harami                             |
+| The third candle bearish, closing below the mother's open | Yes                | This is the "down": the first obstacle broken  |
+| At a marked resistance                                    | Yes                | Without a level it is a dip inside an uptrend  |
+| Obstacles below at least 1.5R away                        | No (but important) | The entry is late, so there is less room below |
+
+## Strong vs weak three inside down
+
+<DiagramRow>
+  <CandleDiagram
+    title="Strong"
+    verdict="good"
+    verdictLabel="tradeable"
+    candles={[
+      { o: 40, h: 46, l: 39, c: 45, dim: true },
+      { o: 45, h: 56, l: 44, c: 55 },
+      { o: 55, h: 55.5, l: 51, c: 51.5 },
+      { o: 51.5, h: 52, l: 42.5, c: 43, label: "open space below" },
+    ]}
+    levels={[{ price: 56, label: "old high", tone: "resistance" }]}
+    caption="A mother at the old high, a small harami, and a third candle clearly below the mother's open."
+  />
+  <CandleDiagram
+    title="Weak"
+    verdict="bad"
+    verdictLabel="avoid"
+    candles={[
+      { o: 40, h: 46, l: 39, c: 45, dim: true },
+      { o: 45, h: 54, l: 44, c: 53 },
+      { o: 53, h: 53.5, l: 50, c: 50.5 },
+      { o: 50.5, h: 51, l: 44, c: 44.6, label: "at support" },
+    ]}
+    levels={[{ price: 44, label: "daily demand", tone: "support" }]}
+    caption="The third candle only just below the mother's open, right on a daily demand zone."
+  />
+</DiagramRow>
+
+| Quality check   | Strong                                        | Weak                                     |
+| :-------------- | :-------------------------------------------- | :--------------------------------------- |
+| Location        | At a marked old high or supply                | Mid-uptrend, no level                    |
+| Third candle    | Clearly below the mother's open, near its low | Just below, with a long lower wick       |
+| Obstacles below | Swing low or zone at least 1.5R away          | Daily demand or a higher low within 1.5R |
+
+## The story inside the candle
+
+The three inside up story in reverse. One common interpretation: in the mother buyers lift hard, in the harami they stop, and in the third candle sellers wipe out the mother's gains entirely. The exits of those who bought during the mother add to the decline that follows.
+
+<Callout type="note">
+  This is a common interpretation, not a proven fact. A chart does not show who
+  bought or sold.
+</Callout>
+
+## Where it works and where it does not
+
+<Compare
+  leftLabel="Where three inside down carries weight"
+  rightLabel="Where three inside down is often a trap"
+  left="- At a marked old high or supply zone
+- When the third candle closes clearly below the mother's open
+- At the top of a downtrend pullback, in the trend direction
+- With enough room down to the swing low"
+  right="- Right above a daily or weekly demand zone
+- Mid-uptrend with no level
+- With the stop right on the mother's high, no buffer
+- With a very tight stop ahead of rollover or big news"
+/>
+
+## Gaps in a 24-hour market
+
+<Callout type="note">
+  As with three inside up: no gap is needed, and the second candle starts from
+  the mother's close. Instead of gaps, Forex's real risk here is **spread**: it
+  widens suddenly at the daily rollover, the weekend open and big news.
+</Callout>
+
+## Step by step: trading three inside down
+
+The full steps are on the Three Inside Up page, reversed. Only what differs:
+
+<Steps>
+
+### Step 1: Entry
+
+Sell at the third candle's close, or with a sell limit on a retest of the mother's open.
+
+### Step 2: Calculate the stop buffer
+
+Stop = mother's high + **normal spread + extra buffer**. A working rule: a buffer of at least two to three times the normal spread, and more for trades that will be held through rollover. This is not a statistic; set it from your own broker's rollover spread.
+
+### Step 3: Size and R:R
+
+A bigger buffer means a wider stop, so calculate [position size](/en/learn/08-risk-management/02-position-sizing) from that distance. Keep the [risk reward](/en/learn/08-risk-management/03-risk-reward) to the swing low below at least 1:1.5.
+
+</Steps>
+
+### Pre-trade checklist
+
+<Checklist
+  id="pattern-three-inside-down-pretrade-en"
+  items={[
+    "Was resistance marked before the pattern, and did the mother stop there?",
+    "Does the shape pass the rules (long green mother, small harami inside, third closing below the mother's open)?",
+    "Have all three candles closed, and does your stop buffer allow for spread and rollover?",
+    "Is the risk reward to the nearest obstacle below at least 1:1.5?",
+    "Is there no demand zone one timeframe up right below?",
+  ]}
+/>
+
+If any box stays empty, skip the trade.
+
+## Example 1: when it works (illustrative)
+
+<Chart
+  id="three-inside-down-win-01"
+  height={420}
+  caption="USDJPY H1 (illustrative, synthetic) — three inside down at an old high; short at the third close."
+/>
+
+- **What was visible:** Candle 5 left an old high near 149.54. Candles 6-11 fell to about 148.38, and 12-14 rallied again.
+- **The pattern:** Candle 15 was the mother: 149.18 to 149.51. Candle 16 was the harami: 149.51 to 149.378. Candle 17 closed at 149.15, below the mother's 149.18 open.
+- **Decision:** Sell at the third close at 149.15. Stop 149.57 (4 pips above the mother's high): 42 pips of risk. Target 148.414, just above the swing low, about 1.8R.
+- **Result:** Candle 26 reached the target.
+- **Lesson:** A level, a harami, the mother's open broken, and a target set before the real obstacle.
+
+<TradeSetup
+  direction="short"
+  pair="USDJPY"
+  entry={149.15}
+  stop={149.57}
+  target={148.414}
+/>
+
+(Illustrative example, not a real trade. Not every three inside down wins, and no result is guaranteed.)
+
+## Example 2: when it is a trap (illustrative)
+
+<Chart
+  id="three-inside-down-fail-01"
+  height={420}
+  caption="EURUSD H1 (illustrative, synthetic) — a valid three inside down, but the stop sits only 1 pip above the mother's high. A rollover spike takes it, then price falls."
+/>
+
+- **What was visible:** Candle 5 left an old high near 1.0964. Candles 14-16 formed a three inside down there: mother 1.0943 to 1.0961 (high 1.0963), harami closing at 1.09538, third closing at 1.0940.
+- **Decision:** Sell at the third close at 1.0940. Stop 1.0964, only 1 pip above the mother's high: 24 pips of risk.
+- **What happened:** Candle 18 was the daily rollover hour. The spread widened and a thin spike to 1.09655 took the stop. Then price kept falling; a stop with about 6 pips of buffer (1.0969) would have survived, and candle 24 reached that stop's 2R target.
+- **Why it failed:** The pattern and location were right; the buffer did not allow for spread and rollover. The third checklist box would have caught it.
+
+**Lesson:** Put the spread into the stop buffer, especially around rollover. A small stop is not a skill.
+
+## Common mistakes
+
+| Mistake                                                  | Why it happens                    | What to do instead                              |
+| :------------------------------------------------------- | :-------------------------------- | :---------------------------------------------- |
+| Placing a short's stop from the bid chart                | Not knowing about the ask         | Add the spread when placing the stop            |
+| A tight stop on a trade held through rollover            | Not knowing rollover spreads      | Widen the buffer or cut size before rollover    |
+| Calling a break of the mother's middle three inside down | Mixing up the rules               | A close below the mother's **open** is required |
+| Shorting right above a demand zone                       | Not checking the higher timeframe | Draw the zones one timeframe up first           |
+
+## Pro tips
+
+<Callout type="tip">
+  Check your broker's rollover spread yourself once: note the spread before and
+  after rollover for a few nights. That number tells you how big the buffer
+  should be on trades that hold through rollover.
+</Callout>
+
+## Summary
+
+<KeyTakeaways>
+
+- Three inside down = a long green mother, a small harami inside, then a red candle closing below the mother's open.
+- It is a confirmed bearish harami; enter at the third close or on a retest of the mother's open.
+- Stop above the mother's high, with a buffer for spread and rollover.
+- Measure obstacles below in advance, including higher-timeframe demand zones.
+
+</KeyTakeaways>
+
+## Practice and your own backtest
+
+Open USDJPY H1 or EURUSD H1 in TradingView. Find at least 20 three inside downs. For each, log: date and time, whether it was at resistance, how far below the mother's open the third candle closed, whether the trade ran through rollover, the stop buffer, and result (R). Then compare the same trades with a 1-2 pip buffer and a larger buffer. Do not draw conclusions from fewer than 30 samples.
+
+## Quiz
+
+1. What is the difference between three inside down and a bearish harami?
+2. At which price does a short trade close, bid or ask?
+3. What do you do with the stop on a trade that will run through rollover?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** A bearish harami is a two-candle pause. In three inside down the third candle closes below the mother's open and confirms the harami.
+
+**2.** At the ask. Charts usually show the bid, so a short's stop needs the spread added.
+
+**3.** Widen the buffer (and cut size to match), or reduce size before rollover. Do not keep a buffer of only 1-2 pips.
+
+</details>
+
+## Next steps
+
+- Full walk-through: [Three Inside Up](/en/patterns/three-inside-up).
+- Where and how far to put the stop: [Stop Loss Placement](/en/learn/10-trade-management-execution/01-stop-loss-placement).
+- Same family: [Bearish Harami](/en/patterns/bearish-harami), [Evening Star](/en/patterns/evening-star), [Bearish Engulfing](/en/patterns/bearish-engulfing).
+
+<Disclaimer />

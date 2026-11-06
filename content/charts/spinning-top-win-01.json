@@ -1,0 +1,301 @@
+{
+  "id": "spinning-top-win-01",
+  "title": {
+    "en": "Spinning Top at an Old High, Short on Confirmation",
+    "bn": "পুরোনো high-এ spinning top, confirmation-এর পর short"
+  },
+  "symbol": "USDJPY",
+  "timeframe": "H1",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bearish",
+  "outcome": "win",
+  "tags": [
+    "spinning-top",
+    "candlestick",
+    "indecision",
+    "resistance",
+    "pattern"
+  ],
+  "module": "patterns",
+  "lessonSlugs": [],
+  "caption": {
+    "en": "Illustrative synthetic USDJPY H1: price rallies back to an old high and prints a spinning top. The next candle closes below the spinning top low, which fills a sell stop. Price falls to 2R.",
+    "bn": "শিক্ষামূলক কাল্পনিক USDJPY H1: দাম আবার পুরোনো high-এ ফিরে একটি spinning top দেয়। পরের candle spinning top-এর low-এর নিচে close করে, sell stop fill হয়। দাম 2R পর্যন্ত নামে।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data, not a real market record.",
+    "bn": "শিক্ষামূলক কাল্পনিক ডেটা, বাস্তব মার্কেটের রেকর্ড নয়।"
+  },
+  "updatedAt": "2026-11-06T12:00:00Z",
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 152.016,
+      "label": "Old high (resistance)",
+      "color": "#3b82f6",
+      "style": "dashed"
+    },
+    {
+      "type": "marker",
+      "i": 18,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Spinning top"
+    },
+    {
+      "type": "marker",
+      "i": 19,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Confirmation"
+    },
+    {
+      "type": "hline",
+      "price": 151.81,
+      "label": "Entry (low break)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 152.16,
+      "label": "Stop",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 151.11,
+      "label": "Target 2R",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candles 0-5 leave an old high. Candles 12-17 rally back into it. Candle 18 is a spinning top: a small body with wicks on both sides, right under the level. Candle 19 breaks and closes below its low, filling the sell stop. The stop sits above the spinning top high and the old high; price reaches 2R.",
+    "bn": "০-৫ নম্বর candle একটি পুরোনো high রেখে যায়। ১২-১৭ নম্বর আবার সেখানে ওঠে। ১৮ নম্বর spinning top: ছোট body, দুই দিকে wick, ঠিক level-এর নিচে। ১৯ নম্বর তার low ভেঙে নিচে close করে, sell stop fill হয়। Stop spinning top-এর high আর পুরোনো high-এর উপরে; দাম 2R পর্যন্ত নামে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "A spinning top at a level is a question; the next candle is the answer",
+      "bn": "Level-এ spinning top একটি প্রশ্ন; পরের candle তার উত্তর"
+    }
+  ],
+  "entry": 151.81,
+  "stopLoss": 152.16,
+  "takeProfit": 151.11,
+  "rr": "1:2.0",
+  "candles": [
+    {
+      "i": 0,
+      "o": 151.2,
+      "h": 151.389,
+      "l": 151.146,
+      "c": 151.34
+    },
+    {
+      "i": 1,
+      "o": 151.34,
+      "h": 151.604,
+      "l": 151.235,
+      "c": 151.52
+    },
+    {
+      "i": 2,
+      "o": 151.52,
+      "h": 151.555,
+      "l": 151.425,
+      "c": 151.46
+    },
+    {
+      "i": 3,
+      "o": 151.46,
+      "h": 151.687,
+      "l": 151.36,
+      "c": 151.62
+    },
+    {
+      "i": 4,
+      "o": 151.62,
+      "h": 151.892,
+      "l": 151.501,
+      "c": 151.82
+    },
+    {
+      "i": 5,
+      "o": 151.82,
+      "h": 152.016,
+      "l": 151.769,
+      "c": 151.94
+    },
+    {
+      "i": 6,
+      "o": 151.94,
+      "h": 152.022,
+      "l": 151.713,
+      "c": 151.79
+    },
+    {
+      "i": 7,
+      "o": 151.79,
+      "h": 151.876,
+      "l": 151.482,
+      "c": 151.61
+    },
+    {
+      "i": 8,
+      "o": 151.61,
+      "h": 151.654,
+      "l": 151.469,
+      "c": 151.51
+    },
+    {
+      "i": 9,
+      "o": 151.51,
+      "h": 151.611,
+      "l": 151.299,
+      "c": 151.37
+    },
+    {
+      "i": 10,
+      "o": 151.37,
+      "h": 151.492,
+      "l": 151.323,
+      "c": 151.45
+    },
+    {
+      "i": 11,
+      "o": 151.45,
+      "h": 151.491,
+      "l": 151.335,
+      "c": 151.39
+    },
+    {
+      "i": 12,
+      "o": 151.39,
+      "h": 151.615,
+      "l": 151.324,
+      "c": 151.55
+    },
+    {
+      "i": 13,
+      "o": 151.55,
+      "h": 151.742,
+      "l": 151.48,
+      "c": 151.67
+    },
+    {
+      "i": 14,
+      "o": 151.67,
+      "h": 151.975,
+      "l": 151.554,
+      "c": 151.85
+    },
+    {
+      "i": 15,
+      "o": 151.85,
+      "h": 151.887,
+      "l": 151.766,
+      "c": 151.8
+    },
+    {
+      "i": 16,
+      "o": 151.8,
+      "h": 152.035,
+      "l": 151.697,
+      "c": 151.94
+    },
+    {
+      "i": 17,
+      "o": 151.94,
+      "h": 151.984,
+      "l": 151.91,
+      "c": 151.96
+    },
+    {
+      "i": 18,
+      "o": 151.96,
+      "h": 152.1,
+      "l": 151.83,
+      "c": 151.93
+    },
+    {
+      "i": 19,
+      "o": 151.93,
+      "h": 151.96,
+      "l": 151.73,
+      "c": 151.76
+    },
+    {
+      "i": 20,
+      "o": 151.76,
+      "h": 151.831,
+      "l": 151.556,
+      "c": 151.62
+    },
+    {
+      "i": 21,
+      "o": 151.62,
+      "h": 151.66,
+      "l": 151.465,
+      "c": 151.52
+    },
+    {
+      "i": 22,
+      "o": 151.52,
+      "h": 151.62,
+      "l": 151.488,
+      "c": 151.58
+    },
+    {
+      "i": 23,
+      "o": 151.58,
+      "h": 151.656,
+      "l": 151.343,
+      "c": 151.4
+    },
+    {
+      "i": 24,
+      "o": 151.4,
+      "h": 151.439,
+      "l": 151.232,
+      "c": 151.28
+    },
+    {
+      "i": 25,
+      "o": 151.28,
+      "h": 151.319,
+      "l": 151.16,
+      "c": 151.2
+    },
+    {
+      "i": 26,
+      "o": 151.2,
+      "h": 151.286,
+      "l": 151.162,
+      "c": 151.25
+    },
+    {
+      "i": 27,
+      "o": 151.25,
+      "h": 151.332,
+      "l": 151.007,
+      "c": 151.09
+    },
+    {
+      "i": 28,
+      "o": 151.09,
+      "h": 151.166,
+      "l": 150.881,
+      "c": 150.95
+    },
+    {
+      "i": 29,
+      "o": 150.95,
+      "h": 150.993,
+      "l": 150.811,
+      "c": 150.85
+    }
+  ]
+}

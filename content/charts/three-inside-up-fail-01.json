@@ -1,0 +1,247 @@
+{
+  "id": "three-inside-up-fail-01",
+  "title": {
+    "en": "Three Inside Up Under a Daily Supply Zone",
+    "bn": "Daily supply zone-এর নিচে three inside up"
+  },
+  "symbol": "GBPUSD",
+  "timeframe": "H4",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bullish",
+  "outcome": "loss",
+  "tags": [
+    "three-inside-up",
+    "harami",
+    "candlestick",
+    "three-candle",
+    "fail",
+    "higher-timeframe",
+    "pattern"
+  ],
+  "module": "patterns",
+  "lessonSlugs": [],
+  "caption": {
+    "en": "Illustrative synthetic GBPUSD H4: a clean three inside up forms after a drop, but a daily supply zone that already rejected price sits just under 1.5R above the entry. The long rallies into the zone, is rejected again, and the stop goes.",
+    "bn": "শিক্ষামূলক কাল্পনিক GBPUSD H4: পতনের পর একটি পরিষ্কার three inside up, কিন্তু একটি daily supply zone, যা আগেই দাম ফিরিয়ে দিয়েছে, entry থেকে 1.5R-এর সামান্য কম দূরে। Long zone পর্যন্ত ওঠে, আবার প্রত্যাখ্যাত হয়, stop যায়।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data, not a real market record.",
+    "bn": "শিক্ষামূলক কাল্পনিক ডেটা, বাস্তব মার্কেটের রেকর্ড নয়।"
+  },
+  "updatedAt": "2026-11-06T12:00:00Z",
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 1.29292,
+      "label": "Daily supply (top)",
+      "color": "#3b82f6",
+      "style": "dotted"
+    },
+    {
+      "type": "hline",
+      "price": 1.28992,
+      "label": "Daily supply (bottom)",
+      "color": "#3b82f6",
+      "style": "dashed"
+    },
+    {
+      "type": "marker",
+      "i": 9,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Mother"
+    },
+    {
+      "type": "marker",
+      "i": 10,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Harami"
+    },
+    {
+      "type": "marker",
+      "i": 11,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "3rd"
+    },
+    {
+      "type": "marker",
+      "i": 14,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Rejected"
+    },
+    {
+      "type": "hline",
+      "price": 1.284,
+      "label": "Entry (3rd close)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.28,
+      "label": "Stop",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.292,
+      "label": "Target 2R",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candles 0-5 rally into a daily supply zone and are rejected there. After a drop, candles 9-11 form a clean three inside up on H4. But the daily zone sits just under 1.5R above the entry, and the 2R target lies inside it. Candle 13 reaches the zone, candle 14 is rejected, and price falls through the stop.",
+    "bn": "০-৫ নম্বর candle একটি daily supply zone পর্যন্ত উঠে প্রত্যাখ্যাত হয়। পতনের পর ৯-১১ নম্বর H4-এ পরিষ্কার three inside up। কিন্তু daily zone entry থেকে 1.5R-এর সামান্য কম দূরে, আর 2R target তার ভেতরে। ১৩ নম্বর zone-এ পৌঁছায়, ১৪ নম্বর প্রত্যাখ্যাত হয়, দাম stop ভেঙে নামে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Check the higher timeframe: a daily zone overhead caps the trade",
+      "bn": "Higher timeframe দেখুন: মাথার উপরের daily zone trade আটকে দেয়"
+    }
+  ],
+  "entry": 1.284,
+  "stopLoss": 1.28,
+  "takeProfit": 1.292,
+  "rr": "1:2.0",
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.28,
+      "h": 1.2849,
+      "l": 1.27815,
+      "c": 1.283
+    },
+    {
+      "i": 1,
+      "o": 1.283,
+      "h": 1.28674,
+      "l": 1.28179,
+      "c": 1.2855
+    },
+    {
+      "i": 2,
+      "o": 1.2855,
+      "h": 1.28607,
+      "l": 1.2841,
+      "c": 1.2847
+    },
+    {
+      "i": 3,
+      "o": 1.2847,
+      "h": 1.28886,
+      "l": 1.28307,
+      "c": 1.2875
+    },
+    {
+      "i": 4,
+      "o": 1.2875,
+      "h": 1.29052,
+      "l": 1.28677,
+      "c": 1.2895
+    },
+    {
+      "i": 5,
+      "o": 1.2895,
+      "h": 1.29032,
+      "l": 1.2875,
+      "c": 1.2879
+    },
+    {
+      "i": 6,
+      "o": 1.2879,
+      "h": 1.28845,
+      "l": 1.28537,
+      "c": 1.2864
+    },
+    {
+      "i": 7,
+      "o": 1.2864,
+      "h": 1.28709,
+      "l": 1.28357,
+      "c": 1.2846
+    },
+    {
+      "i": 8,
+      "o": 1.2846,
+      "h": 1.28525,
+      "l": 1.28288,
+      "c": 1.2836
+    },
+    {
+      "i": 9,
+      "o": 1.2836,
+      "h": 1.2839,
+      "l": 1.2806,
+      "c": 1.2808
+    },
+    {
+      "i": 10,
+      "o": 1.2808,
+      "h": 1.28226,
+      "l": 1.2805,
+      "c": 1.28206
+    },
+    {
+      "i": 11,
+      "o": 1.28206,
+      "h": 1.2842,
+      "l": 1.28186,
+      "c": 1.284
+    },
+    {
+      "i": 12,
+      "o": 1.284,
+      "h": 1.2862,
+      "l": 1.2836,
+      "c": 1.2858
+    },
+    {
+      "i": 13,
+      "o": 1.2858,
+      "h": 1.29052,
+      "l": 1.2855,
+      "c": 1.28952
+    },
+    {
+      "i": 14,
+      "o": 1.28952,
+      "h": 1.28972,
+      "l": 1.28652,
+      "c": 1.28682
+    },
+    {
+      "i": 15,
+      "o": 1.28682,
+      "h": 1.28779,
+      "l": 1.28355,
+      "c": 1.28432
+    },
+    {
+      "i": 16,
+      "o": 1.28432,
+      "h": 1.28518,
+      "l": 1.28141,
+      "c": 1.28232
+    },
+    {
+      "i": 17,
+      "o": 1.28232,
+      "h": 1.28322,
+      "l": 1.282,
+      "c": 1.28282
+    },
+    {
+      "i": 18,
+      "o": 1.28282,
+      "h": 1.2841,
+      "l": 1.27872,
+      "c": 1.28002
+    }
+  ]
+}

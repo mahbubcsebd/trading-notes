@@ -2,12 +2,22 @@
   "title": "TradeNotes Curriculum",
   "pages": [
     "01-foundations",
-    "02-market-structure",
-    "03-candlesticks",
-    "04-support-resistance",
-    "05-risk-management",
-    "06-trading-psychology",
-    "07-gold-xauusd",
-    "08-backtesting-journal"
+    "02-broker-platform-setup",
+    "03-market-structure",
+    "04-candlesticks",
+    "05-support-resistance",
+    "06-trend-chart-patterns",
+    "07-technical-indicators",
+    "08-risk-management",
+    "09-price-action-entries-strategies",
+    "10-trade-management-execution",
+    "11-fundamental-intermarket-analysis",
+    "12-trading-psychology",
+    "13-gold-xauusd",
+    "14-trading-plan-system",
+    "15-backtesting-journal",
+    "16-advanced",
+    "17-case-studies-trade-reviews",
+    "18-notes-library"
   ]
 }

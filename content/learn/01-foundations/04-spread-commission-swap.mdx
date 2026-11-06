@@ -1,42 +1,180 @@
 ---
-title: "Spread, Commission & Swap"
-description: "ট্রেডিংয়ের খরচসমূহ: স্প্রেড, কমিশন এবং সোয়াপ কী?"
+title: "Spread, Commission ও Swap: trading-এর তিন খরচ"
+description: "Bid-Ask spread, commission ও overnight swap কীভাবে কাজ করে, প্রতি trade-এর মোট খরচ কীভাবে হিসাব করবেন, আর ছোট target-এ খরচ কীভাবে লাভ খেয়ে ফেলে — chart ও গণনা সহ।"
 level: beginner
-tags: [costs, spread, commission, swap]
-status: published
-updated: "2026-10-11"
+tags: [spread, commission, swap, trading-costs, bid-ask]
+instruments: [EURUSD]
+timeframes: [H1]
+status: done
+sources:
+  - type: blog
+    title: "Bid and Ask - Investopedia"
+    url: "https://www.investopedia.com/terms/b/bid-and-ask.asp"
+updated: 2026-11-05
 ---
 
-# Spread, Commission & Swap
+# Spread, Commission ও Swap: trading-এর তিন খরচ
 
-ট্রেড করার জন্য ব্রোকাররা যে চার্জ বা ফি নিয়ে থাকে, সেগুলো মূলত এই ৩টি মাধ্যমে নেওয়া হয়। এগুলো বোঝা গুরুত্বপূর্ণ কারণ এটি আপনার ট্রেডের লাভ-ক্ষতিকে সরাসরি প্রভাবিত করে।
+দোকানে একটি জিনিস আপনি কেনেন একদামে, ফেরত দিতে গেলে পান কম দামে। সেই ফাঁকটাই দোকানির আয়। Forex-এ এই ফাঁকের নাম **spread**। এটি, সঙ্গে commission আর swap, মিলে আপনার প্রতিটি trade-এর নীরব খরচ।
 
-## ১. Spread (স্প্রেড)
+## এই লেখা পড়ে আপনি যা পারবেন
 
-যেকোনো কারেন্সি পেয়ারের দুটি প্রাইস থাকে:
-- **Bid Price:** যে দামে আপনি সেল (Sell) করতে পারবেন।
-- **Ask Price:** যে দামে আপনি বাই (Buy) করতে পারবেন।
+- **Bid, ask ও spread** চিনতে পারবেন।
+- **Commission ও swap** কীভাবে কাজ করে, বুঝবেন।
+- একটি trade-এর **মোট খরচ** বের করতে পারবেন।
+- খরচ কখন **কৌশলকে অকার্যকর** করে, ধরতে পারবেন।
 
-**Spread** হলো এই Bid এবং Ask প্রাইসের মধ্যকার পার্থক্য (Difference)। এটি ব্রোকারের মূল আয়।
-- উদাহরণস্বরূপ, যদি EUR/USD এর Bid price 1.1050 এবং Ask price 1.1052 হয়, তবে স্প্রেড হলো **২ পিপ**।
-- আপনি যখনই একটি ট্রেড ওপেন করবেন, সেটি সবসময় স্প্রেডের কারণে সামান্য লস (-$০.২০ বা -$২) দিয়ে শুরু হবে।
+## কেন এটি জরুরি
 
-## ২. Commission (কমিশন)
+- **খরচ নিশ্চিত, লাভ নিশ্চিত নয়।** প্রতিটি trade খরচ দিয়ে শুরু হয়।
+- **ছোট target-এ খরচের ভাগ বড়।** Scalping-এ এটি সবচেয়ে বেশি।
+- **[Backtest](/bn/learn/15-backtesting-journal/01-how-to-backtest)-এ খরচ বাদ দিলে ফল মিথ্যা।**
 
-অনেক ব্রোকার (বিশেষ করে ECN বা Zero Spread অ্যাকাউন্টগুলোতে) স্প্রেড খুব কম বা শূন্য (0) রাখে। কিন্তু এর বদলে তারা প্রতি লট ট্রেড করার জন্য একটি ফিক্সড ফি কেটে নেয়।
-- উদাহরণ: একটি স্ট্যান্ডার্ড লট (1.00) ট্রেড করার জন্য ব্রোকার হয়তো $৬ বা $৭ কমিশন চার্জ করতে পারে।
+পূর্বশর্ত: [Pips, Lots, Leverage ও Margin](/bn/learn/01-foundations/03-pips-lots-leverage-margin)।
 
-## ৩. Swap / Rollover (সোয়াপ)
+## তিন খরচ
 
-ফরেক্স মার্কেটে যদি আপনি কোনো ট্রেড একদিনের বেশি সময় ধরে (Overnight) হোল্ড করে রাখেন, তবে ব্রোকার আপনার অ্যাকাউন্টে একটি ছোট চার্জ যোগ করে বা কেটে নেয়। একে **Swap** বা Rollover fee বলে।
-- এটি নির্ভর করে আপনি যে দুটি কারেন্সি ট্রেড করছেন, তাদের দেশের সেন্ট্রাল ব্যাংকের সুদের হারের (Interest Rate) পার্থক্যের উপর।
-- আপনি যদি বেশি সুদের হারের কারেন্সি কেনেন এবং কম সুদের হারের কারেন্সি বিক্রি করেন, তবে আপনি Swap **পাবেন** (Positive Swap)।
-- বিপরীত ক্ষেত্রে আপনার অ্যাকাউন্ট থেকে Swap **কেটে নেওয়া হবে** (Negative Swap)।
+**Spread** = ask − bid। আপনি buy করেন ask-এ, sell করেন bid-এ।
 
-**Islamic/Swap-Free Account:** মুসলিম ট্রেডারদের জন্য অনেক ব্রোকার ইসলামিক বা সোয়াপ-ফ্রি অ্যাকাউন্টের সুবিধা দেয়, যেখানে রাত পার হলেও কোনো সোয়াপ চার্জ কাটা বা দেওয়া হয় না।
+| খরচ             | কী                                                           | কখন দেন                                    |
+| :-------------- | :----------------------------------------------------------- | :----------------------------------------- |
+| Spread          | Bid ও Ask-এর ফাঁক                                            | Trade খোলার মুহূর্তে, অন্তর্নিহিত          |
+| Commission      | Broker-এর নির্দিষ্ট ফি (প্রতি lot, প্রতি দিকে বা round turn) | Account প্রকার অনুযায়ী (সব account-এ নেই) |
+| Swap (rollover) | Position রাতারাতি ধরে রাখার সুদের পার্থক্য                   | নির্দিষ্ট সময় পেরোলে প্রতিদিন             |
+
+- **Swap** ধনাত্মক বা ঋণাত্মক হতে পারে (জোড়ার দুই মুদ্রার সুদের হারের পার্থক্য ও দিক অনুযায়ী)। অনেক broker সপ্তাহের একটি দিনে (প্রায়ই বুধবার) তিন দিনের swap নেয়; নিজের broker-এর নিয়ম দেখুন।
+- কিছু broker **swap-free** (ইসলামি) account দেয়, তবে অন্য ফি থাকতে পারে।
+- **Spread** খবরের সময় ও দিনের শেষে (rollover) বাড়তে পারে।
+
+## Chart-এ কেমন দেখায়
+
+<Chart
+  id="spread-entry-cost-01"
+  height={420}
+  caption="EURUSD (শিক্ষামূলক, কাল্পনিক উদাহরণ) — Bid 1.0900, Ask 1.0902, spread 2 pip। Buy খোলে ask-এ (1.0902); সঙ্গে সঙ্গে বন্ধ করলে bid-এ (1.0900), অর্থাৎ বাজার না নড়েই -2 pip।"
+/>
+
+তাই breakeven-এও দামকে অন্তত spread-এর সমান নড়তে হয়।
+
+## ধাপে ধাপে: মোট খরচ বের করা
+
+<Steps>
+
+### ধাপ ১: Spread pip-এ
+
+Platform থেকে bid ও ask দেখে বিয়োগ। যেমন 1.2 pip।
+
+### ধাপ ২: টাকায় রূপান্তর
+
+0.10 lot-এ প্রতি pip ≈ 1 USD। Spread-খরচ ≈ 1.2 USD।
+
+### ধাপ ৩: Commission যোগ
+
+Broker-এর ফি-তালিকা দেখে। উদাহরণ (কাল্পনিক): 0.10 lot round turn-এ 0.70 USD।
+
+### ধাপ ৪: Swap (যদি রাত পার হয়)
+
+Platform-এর swap-টেবিল দেখুন। উদাহরণ (কাল্পনিক): প্রতি রাতে -0.30 USD।
+
+### ধাপ ৫: Stop ও target-এর সঙ্গে তুলনা
+
+মোট খরচ target-এর কত শতাংশ? বেশি হলে ছোট target ছাড়ুন।
+
+</Steps>
+
+## উদাহরণ ১: যখন কাজ করে (কাল্পনিক)
+
+- **Trade:** EURUSD, 0.10 lot, target 50 pip, stop 30 pip, spread 1.2 pip।
+- **খরচ:** Spread ≈ 1.2 USD + commission 0.70 USD = প্রায় 1.9 USD।
+- **ফল:** Target ছুঁলে gross +50 USD, নিট প্রায় +48 USD। খরচ target-এর প্রায় ৪%।
+- **শিক্ষা:** বড় target-এ খরচ ক্ষুদ্র ভগ্নাংশ।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়।)
+
+## উদাহরণ ২: যখন ব্যর্থ হয় (কাল্পনিক)
+
+- **Trade:** Scalper, 1.0 lot, target 5 pip, stop 5 pip, spread 2 pip, commission 7 USD round turn।
+- **খরচ:** Spread = 2 × 10 = 20 USD, commission 7 USD, মোট 27 USD।
+- **ফল:** Target ছুঁলে gross +50 USD, নিট +23 USD। Stop লাগলে gross −50, নিট −77 USD। খরচ target-এর ৫৪%।
+- **কেন সমস্যা:** জেতা trade-এর লাভ কমে, হারা trade-এর ক্ষতি বাড়ে। Breakeven win rate ৫০% থেকে বেড়ে প্রায় ৭৭ ÷ (23 + 77) = ৭৭% (গণনা: ক্ষতি ÷ (লাভ + ক্ষতি))।
+- **শিক্ষা:** খরচ ধরে হিসাব না করলে "বেশি trade = বেশি আয়" ধারণা ভুল।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়।)
+
+## সাধারণ ভুল
+
+| ভুল                                | কেন হয়                  | কী করবেন                      |
+| :--------------------------------- | :----------------------- | :---------------------------- |
+| শুধু spread দেখা, commission ভোলা  | "Raw spread" শব্দ দেখে   | মোট খরচ (spread + commission) |
+| খবরের সময় spread উপেক্ষা          | সাধারণ spread ধরে নেওয়া | সময়ভেদে spread দেখুন         |
+| Swap না দেখে সপ্তাহব্যাপী ধরে রাখা | ছোট সংখ্যা মনে হয়       | দীর্ঘ trade-এ swap গুনুন      |
+| কম spread-কে একমাত্র মানদণ্ড ধরা   | বিজ্ঞাপন                 | execution ও নিয়ন্ত্রণও দেখুন |
+| Backtest-এ খরচ বাদ                 | সরলীকরণ                  | প্রতি trade-এ খরচ বিয়োগ      |
+
+## Pro tips
+
+<Callout type="tip">
+  প্রতিটি strategy-র জন্য লিখুন: "গড় target ÷ মোট খরচ"। অনুপাত ১০ গুণের কম হলে
+  খরচ বড় সমস্যা।
+</Callout>
+
+<Callout type="note">
+  Rollover (দিনের শেষ) ও বড় খবরের সময় spread হঠাৎ বাড়ে। এ সময় tight stop
+  ঝুঁকিপূর্ণ। বিস্তারিত: [Slippage ও Spread
+  প্রসারণ](/bn/learn/10-trade-management-execution/04-slippage-requote-spread-widening)।
+</Callout>
+
+## কখন এটা কাজ করে না
+
+- **Broker-ভেদে ফি-ধরন ভিন্ন:** এখানকার সংখ্যা উদাহরণ; নিজের broker-এর তালিকা দেখুন।
+- **Index, gold, crypto-তে:** খরচের কাঠামো ভিন্ন (contract spec ও overnight ফি)।
+- **দীর্ঘ-মেয়াদি position-এ:** swap মূল খরচ হয়ে উঠতে পারে।
+
+## সারসংক্ষেপ
 
 <KeyTakeaways>
-- ট্রেডিংয়ে এন্ট্রি নেওয়ার সাথে সাথেই ট্রেড লসে শুরু হওয়ার কারণ হলো **Spread**।
-- ডে ট্রেডারদের (Day Traders) জন্য স্প্রেড এবং কমিশন খুবই গুরুত্বপূর্ণ, কারণ তারা অনেক ট্রেড করেন।
-- সুইং ট্রেডারদের (Swing Traders) সোয়াপ রেটের দিকে খেয়াল রাখা উচিত, কারণ তারা কয়েকদিন বা সপ্তাহ ধরে ট্রেড হোল্ড করেন।
+
+- Spread = ask − bid; buy ask-এ, sell bid-এ।
+- Commission ও swap আলাদা খরচ।
+- খরচ target-এর যত বড় অংশ, strategy তত দুর্বল।
+- Backtest-এ খরচ অবশ্যই ধরুন।
+
 </KeyTakeaways>
+
+## অনুশীলন
+
+আপনার broker/demo-র EURUSD-এর বর্তমান spread লিখুন, 0.10 lot-এর spread-খরচ টাকায় বের করুন, তারপর 20 pip target-এ খরচ কত শতাংশ, গণনা করুন।
+
+## কুইজ
+
+1. Buy কোন দামে খোলে, ask না bid?
+2. Swap ধনাত্মক হতে পারে কি?
+3. 2 pip spread-এ 10 pip target-এ খরচ কত শতাংশ?
+4. খবরের সময় spread কী করে?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** Ask-এ।
+
+**২.** হ্যাঁ, দিক ও সুদের পার্থক্যের ওপর নির্ভর করে।
+
+**৩.** 20%।
+
+**৪.** প্রায়ই বাড়ে।
+
+</details>
+
+## পরের ধাপ
+
+- আগে: [Pips, Lots, Leverage ও Margin](/bn/learn/01-foundations/03-pips-lots-leverage-margin)।
+- পরে: [Trading Sessions](/bn/learn/01-foundations/05-trading-sessions)।
+- সম্পর্কিত: [Broker কীভাবে বাছবেন](/bn/learn/02-broker-platform-setup/01-broker-kivabe-choose-korbo)।
+
+### সূত্র
+
+- <ExternalLink href="https://www.investopedia.com/terms/b/bid-and-ask.asp">
+    Bid and Ask, Investopedia
+  </ExternalLink>
+
+<Disclaimer />

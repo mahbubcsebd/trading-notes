@@ -1,0 +1,276 @@
+{
+  "id": "fib-retracement-hold-01",
+  "title": {
+    "en": "Fibonacci 61.8% Holds With Confluence",
+    "bn": "Fibonacci 61.8%-এ confluence সহ টিকে গেল"
+  },
+  "symbol": "EURUSD",
+  "timeframe": "H4",
+  "mode": "synthetic",
+  "type": "trade-setup",
+  "bias": "bullish",
+  "outcome": "win",
+  "tags": [
+    "fibonacci",
+    "retracement",
+    "confluence"
+  ],
+  "module": "05-support-resistance",
+  "lessonSlugs": [
+    "05-fibonacci-basics"
+  ],
+  "caption": {
+    "en": "Swing low (1.0800) to swing high (1.0960). Price pulls back in small steps to the 61.8% level, which also sits on an old high, rejects with a lower wick, and continues up.",
+    "bn": "Swing low (1.0800) থেকে swing high (1.0960)। দাম ধীরে নেমে 61.8% level-এ আসে, যেখানে পুরনো high-ও আছে, lower wick নিয়ে ফিরে উপরে যায়।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data.",
+    "bn": "এটি শিক্ষামূলক কাল্পনিক ডেটা।"
+  },
+  "updatedAt": "2026-11-05T21:00:00Z",
+  "entry": 1.0873,
+  "stopLoss": 1.0844,
+  "takeProfit": 1.096,
+  "rr": "1:3",
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.085,
+      "h": 1.0856,
+      "l": 1.0826,
+      "c": 1.0832
+    },
+    {
+      "i": 1,
+      "o": 1.0832,
+      "h": 1.0838,
+      "l": 1.0808,
+      "c": 1.0814
+    },
+    {
+      "i": 2,
+      "o": 1.0814,
+      "h": 1.0822,
+      "l": 1.08,
+      "c": 1.0818
+    },
+    {
+      "i": 3,
+      "o": 1.0818,
+      "h": 1.0856,
+      "l": 1.0814,
+      "c": 1.085
+    },
+    {
+      "i": 4,
+      "o": 1.085,
+      "h": 1.0888,
+      "l": 1.0846,
+      "c": 1.0884
+    },
+    {
+      "i": 5,
+      "o": 1.0884,
+      "h": 1.0912,
+      "l": 1.0878,
+      "c": 1.0906
+    },
+    {
+      "i": 6,
+      "o": 1.0906,
+      "h": 1.0938,
+      "l": 1.09,
+      "c": 1.0932
+    },
+    {
+      "i": 7,
+      "o": 1.0932,
+      "h": 1.096,
+      "l": 1.0926,
+      "c": 1.0952
+    },
+    {
+      "i": 8,
+      "o": 1.0952,
+      "h": 1.0956,
+      "l": 1.0924,
+      "c": 1.093
+    },
+    {
+      "i": 9,
+      "o": 1.093,
+      "h": 1.0934,
+      "l": 1.0902,
+      "c": 1.0908
+    },
+    {
+      "i": 10,
+      "o": 1.0908,
+      "h": 1.0914,
+      "l": 1.0884,
+      "c": 1.089
+    },
+    {
+      "i": 11,
+      "o": 1.089,
+      "h": 1.0896,
+      "l": 1.087,
+      "c": 1.0876
+    },
+    {
+      "i": 12,
+      "o": 1.0876,
+      "h": 1.0882,
+      "l": 1.0858,
+      "c": 1.0864
+    },
+    {
+      "i": 13,
+      "o": 1.0864,
+      "h": 1.0872,
+      "l": 1.0852,
+      "c": 1.087
+    },
+    {
+      "i": 14,
+      "o": 1.087,
+      "h": 1.0884,
+      "l": 1.0866,
+      "c": 1.088
+    },
+    {
+      "i": 15,
+      "o": 1.088,
+      "h": 1.091,
+      "l": 1.0876,
+      "c": 1.0904
+    },
+    {
+      "i": 16,
+      "o": 1.0904,
+      "h": 1.0936,
+      "l": 1.09,
+      "c": 1.093
+    },
+    {
+      "i": 17,
+      "o": 1.093,
+      "h": 1.0964,
+      "l": 1.0926,
+      "c": 1.0958
+    },
+    {
+      "i": 18,
+      "o": 1.0958,
+      "h": 1.0972,
+      "l": 1.095,
+      "c": 1.0966
+    },
+    {
+      "i": 19,
+      "o": 1.0966,
+      "h": 1.099,
+      "l": 1.096,
+      "c": 1.0984
+    }
+  ],
+  "annotations": [
+    {
+      "type": "trendline",
+      "from": {
+        "i": 2,
+        "price": 1.08
+      },
+      "to": {
+        "i": 7,
+        "price": 1.096
+      },
+      "label": "Impulse leg",
+      "color": "#38bdf8",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.0899,
+      "label": "Fib 0.382",
+      "color": "#a78bfa",
+      "style": "dotted"
+    },
+    {
+      "type": "hline",
+      "price": 1.088,
+      "label": "Fib 0.5",
+      "color": "#a78bfa",
+      "style": "dotted"
+    },
+    {
+      "type": "hline",
+      "price": 1.0861,
+      "label": "Fib 0.618",
+      "color": "#f5b301",
+      "style": "dotted"
+    },
+    {
+      "type": "hline",
+      "price": 1.0834,
+      "label": "Fib 0.786",
+      "color": "#a78bfa",
+      "style": "dotted"
+    },
+    {
+      "type": "zone",
+      "from": {
+        "price": 1.0868,
+        "i": 11
+      },
+      "to": {
+        "price": 1.0852,
+        "i": 19
+      },
+      "label": "Old high + 61.8%",
+      "color": "#f5b301"
+    },
+    {
+      "type": "marker",
+      "i": 2,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Swing low"
+    },
+    {
+      "type": "marker",
+      "i": 7,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Swing high"
+    },
+    {
+      "type": "marker",
+      "i": 13,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Rejection"
+    },
+    {
+      "type": "hline",
+      "price": 1.0873,
+      "label": "Buy entry",
+      "color": "#22c55e",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.0844,
+      "label": "Stop",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.096,
+      "label": "Target (swing high)",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ]
+}

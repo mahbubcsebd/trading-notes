@@ -1,0 +1,351 @@
+{
+  "id": "review-by-setup-01",
+  "title": {
+    "en": "20 Trades Sorted by Setup",
+    "bn": "Setup অনুযায়ী ২০টি trade"
+  },
+  "symbol": "EURUSD",
+  "timeframe": "H1",
+  "mode": "synthetic",
+  "type": "concept",
+  "bias": "neutral",
+  "outcome": "neutral",
+  "tags": [
+    "review",
+    "setup-tags"
+  ],
+  "module": "15-backtesting-journal",
+  "lessonSlugs": [
+    "04-reviewing-trades"
+  ],
+  "caption": {
+    "en": "Hypothetical 20 trades, 1% risk, two setups tagged A and B. A: 6 wins, 4 losses, +8R. B: 2 wins, 8 losses, -4R. Combined +4R hides a weak setup.",
+    "bn": "১% ঝুঁকিতে ২০টি কাল্পনিক trade, দুটি setup A ও B tag করা। A: ৬ জেতা ৪ হারা, +8R। B: ২ জেতা ৮ হারা, -4R। মিলিত +4R একটি দুর্বল setup লুকিয়ে রাখে।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data.",
+    "bn": "এটি শিক্ষামূলক কাল্পনিক ডেটা।"
+  },
+  "explanation": {
+    "en": "Totals hide which setup works; sorting by tag shows it.",
+    "bn": "মোট ফল কোন setup কাজ করছে লুকিয়ে রাখে; tag অনুযায়ী ভাগ করলে ধরা পড়ে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Review by tag, not only by total",
+      "bn": "শুধু মোট নয়, tag ধরে review করুন"
+    }
+  ],
+  "updatedAt": "2026-11-05T22:00:00Z",
+  "candles": [
+    {
+      "i": 0,
+      "o": 10000.0,
+      "h": 10222.0,
+      "l": 9978.0,
+      "c": 10200.0,
+      "v": 0
+    },
+    {
+      "i": 1,
+      "o": 10200.0,
+      "h": 10212.2,
+      "l": 10085.8,
+      "c": 10098.0,
+      "v": 0
+    },
+    {
+      "i": 2,
+      "o": 10098.0,
+      "h": 10110.1,
+      "l": 9984.92,
+      "c": 9997.02,
+      "v": 0
+    },
+    {
+      "i": 3,
+      "o": 9997.02,
+      "h": 10009.02,
+      "l": 9885.05,
+      "c": 9897.05,
+      "v": 0
+    },
+    {
+      "i": 4,
+      "o": 9897.05,
+      "h": 10116.78,
+      "l": 9875.26,
+      "c": 10094.99,
+      "v": 0
+    },
+    {
+      "i": 5,
+      "o": 10094.99,
+      "h": 10319.08,
+      "l": 10072.8,
+      "c": 10296.89,
+      "v": 0
+    },
+    {
+      "i": 6,
+      "o": 10296.89,
+      "h": 10525.42,
+      "l": 10274.3,
+      "c": 10502.83,
+      "v": 0
+    },
+    {
+      "i": 7,
+      "o": 10502.83,
+      "h": 10515.33,
+      "l": 10385.3,
+      "c": 10397.8,
+      "v": 0
+    },
+    {
+      "i": 8,
+      "o": 10397.8,
+      "h": 10410.2,
+      "l": 10281.42,
+      "c": 10293.82,
+      "v": 0
+    },
+    {
+      "i": 9,
+      "o": 10293.82,
+      "h": 10306.11,
+      "l": 10178.59,
+      "c": 10190.88,
+      "v": 0
+    },
+    {
+      "i": 10,
+      "o": 10190.88,
+      "h": 10417.08,
+      "l": 10168.5,
+      "c": 10394.7,
+      "v": 0
+    },
+    {
+      "i": 11,
+      "o": 10394.7,
+      "h": 10407.1,
+      "l": 10278.35,
+      "c": 10290.75,
+      "v": 0
+    },
+    {
+      "i": 12,
+      "o": 10290.75,
+      "h": 10303.04,
+      "l": 10175.55,
+      "c": 10187.84,
+      "v": 0
+    },
+    {
+      "i": 13,
+      "o": 10187.84,
+      "h": 10413.98,
+      "l": 10165.46,
+      "c": 10391.6,
+      "v": 0
+    },
+    {
+      "i": 14,
+      "o": 10391.6,
+      "h": 10622.21,
+      "l": 10368.82,
+      "c": 10599.43,
+      "v": 0
+    },
+    {
+      "i": 15,
+      "o": 10599.43,
+      "h": 10612.03,
+      "l": 10480.84,
+      "c": 10493.44,
+      "v": 0
+    },
+    {
+      "i": 16,
+      "o": 10493.44,
+      "h": 10505.93,
+      "l": 10376.02,
+      "c": 10388.51,
+      "v": 0
+    },
+    {
+      "i": 17,
+      "o": 10388.51,
+      "h": 10400.9,
+      "l": 10272.23,
+      "c": 10284.62,
+      "v": 0
+    },
+    {
+      "i": 18,
+      "o": 10284.62,
+      "h": 10512.88,
+      "l": 10262.05,
+      "c": 10490.31,
+      "v": 0
+    },
+    {
+      "i": 19,
+      "o": 10490.31,
+      "h": 10502.8,
+      "l": 10372.92,
+      "c": 10385.41,
+      "v": 0
+    }
+  ],
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 10000,
+      "label": "Start 10,000",
+      "color": "#3b82f6",
+      "style": "dotted"
+    },
+    {
+      "type": "marker",
+      "i": 0,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "A"
+    },
+    {
+      "type": "marker",
+      "i": 1,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "B"
+    },
+    {
+      "type": "marker",
+      "i": 2,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "A"
+    },
+    {
+      "type": "marker",
+      "i": 3,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "B"
+    },
+    {
+      "type": "marker",
+      "i": 4,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "A"
+    },
+    {
+      "type": "marker",
+      "i": 5,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "B"
+    },
+    {
+      "type": "marker",
+      "i": 6,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "A"
+    },
+    {
+      "type": "marker",
+      "i": 7,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "B"
+    },
+    {
+      "type": "marker",
+      "i": 8,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "A"
+    },
+    {
+      "type": "marker",
+      "i": 9,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "B"
+    },
+    {
+      "type": "marker",
+      "i": 10,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "A"
+    },
+    {
+      "type": "marker",
+      "i": 11,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "B"
+    },
+    {
+      "type": "marker",
+      "i": 12,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "A"
+    },
+    {
+      "type": "marker",
+      "i": 13,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "B"
+    },
+    {
+      "type": "marker",
+      "i": 14,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "A"
+    },
+    {
+      "type": "marker",
+      "i": 15,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "B"
+    },
+    {
+      "type": "marker",
+      "i": 16,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "A"
+    },
+    {
+      "type": "marker",
+      "i": 17,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "B"
+    },
+    {
+      "type": "marker",
+      "i": 18,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "A"
+    },
+    {
+      "type": "marker",
+      "i": 19,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "B"
+    }
+  ]
+}

@@ -1,0 +1,176 @@
+---
+title: "Gold Risk and Lot Size: Working Out the Lot From the Stop"
+description: "The formula for setting the risk in money and working out the lot size from the dollar distance of the stop in gold, with examples, common mistakes and a chart."
+level: beginner
+tags: [gold, risk, lot-size, position-sizing, stop-loss]
+instruments: [XAUUSD]
+timeframes: [H1]
+status: done
+sources:
+  - type: blog
+    title: "Position Sizing - Investopedia"
+    url: "https://www.investopedia.com/terms/p/positionsizing.asp"
+updated: 2026-11-06
+---
+
+# Gold Risk and Lot Size: Working Out the Lot From the Stop
+
+If you set the lot first and then place the stop, the risk goes by guesswork. Work it the other way: first the risk, then the stop, and last the lot. In gold this order matters even more.
+
+## What you will be able to do
+
+- **Work out the lot size** from the stop's dollar distance.
+- **Understand why** to keep the lot small.
+- **Know what to do** when the account is small.
+
+## Why it matters
+
+- **The value of each $1 move in gold is big.** By the [contract spec](/en/learn/13-gold-xauusd/02-gold-contract-spec-pip-value), on 1 lot $1 = about $100.
+- **The stop is often bigger in dollars than in forex.** So the lot is smaller for the same risk.
+- **A wrong lot multiplies the risk several times.**
+
+Prerequisites: [Risk per Trade](/en/learn/08-risk-management/01-risk-per-trade) and [Position Sizing](/en/learn/08-risk-management/02-position-sizing).
+
+## The formula
+
+**Lot = risk in money ÷ (stop distance in $ × 100)**
+
+Here 100 is taken for 1 lot = 100 ounces. If your broker differs, put in that number.
+
+| Step                 | Example (imaginary) |
+| :------------------- | :------------------ |
+| Account              | $5,000              |
+| Risk (1%)            | $50                 |
+| Stop distance        | $8                  |
+| Lot = 50 ÷ (8 × 100) | 0.0625              |
+| Rounded down         | **0.06 lot**        |
+
+Round down, not up, so that the risk does not pass the limit. If the stop is hit on 0.06 lot, the loss is 8 × 6 = $48.
+
+## What it looks like on a chart
+
+<Chart
+  id="gold-lot-risk-01"
+  height={440}
+  caption="Imaginary XAUUSD H1: stop $8 below, target $16 above (1:2). The lot comes from the stop distance."
+/>
+
+Here, with 0.06 lot, hitting the target gives a profit of 16 × 6 = $96, and hitting the stop a loss of $48 (without spread).
+
+## Step by step: working out the lot
+
+<Steps>
+
+### Step 1: Set the risk in money
+
+1% of the account, or the limit in your plan.
+
+### Step 2: Place the stop from the chart
+
+By looking at structure or [ATR](/en/learn/13-gold-xauusd/09-gold-typical-atr), not by looking at the lot.
+
+### Step 3: Measure the distance in dollars
+
+The difference from entry to stop.
+
+### Step 4: Put it in the formula, round down
+
+To your broker's lot step (for example 0.01).
+
+### Step 5: If the risk is over on the minimum lot, drop the trade
+
+If the risk is above the limit even at 0.01 lot, do not shrink the stop. Leave the trade.
+
+</Steps>
+
+## Example 1: when it works (synthetic)
+
+- **Set in advance:** risk $50, stop $8, lot 0.06.
+- **Result:** if the stop is hit, the loss is $48, within the limit.
+- **Lesson:** stop first, lot after, and the risk stays under control.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Example 2: when it fails (synthetic)
+
+- **What was done:** a rule of "always 0.50 lot" on a $5,000 account.
+- **What happened:** when an $8 stop is hit, the loss is 8 × 50 = $400, which is 8%. In three losses, 24%.
+- **Why it failed:** the lot was not matched to the stop distance.
+- **Lesson:** not a fixed lot, but a fixed risk.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Common mistakes
+
+| Mistake                         | Why it happens                   | What to do                                    |
+| :------------------------------ | :------------------------------- | :-------------------------------------------- |
+| Using a fixed lot               | Simplicity                       | The formula every time                        |
+| Fitting the stop to the lot     | Wanting a big lot                | Stop from the chart, lot from the calculation |
+| Rounding up                     | Thinking the difference is small | Always round down                             |
+| Leaving out spread and slippage | Keeping the math simple          | Keep a small buffer                           |
+
+## Pro tips
+
+<Callout type="tip">
+  Put the formula in Excel or notes: give it risk $ and stop $ and it returns
+  the lot. A 10-second job before a trade.
+</Callout>
+
+<Callout type="warning">
+  Gold is hard on a small account. On 0.01 lot ($1 ≈ $1), an $8 stop means $8
+  risk. On a $200 account that is 4%, far above the limit.
+</Callout>
+
+## When this does not work
+
+- **If the account currency is not USD:** add the conversion.
+- **With a gap or slippage:** the real loss can be more than the calculation.
+- **If the broker's contract size is different:** change the 100 in the formula.
+
+## Summary
+
+<KeyTakeaways>
+
+- First risk, then stop, last lot.
+- Lot = risk ÷ (stop $ × 100), rounded down.
+- On a small account, gold's minimum lot alone can be a big risk.
+- Not a fixed lot, but a fixed risk.
+
+</KeyTakeaways>
+
+## Practice
+
+Take your account size and work out the money for 1% risk. Work out the lot for stops of $5, $8 and $12. In which does even 0.01 lot go over the limit?
+
+## Quiz
+
+1. What is the formula for the lot?
+2. With $100 risk and a $10 stop, what is the lot?
+3. Why round the lot down?
+4. What do you do if the risk is over the limit even at 0.01 lot?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** Risk ÷ (stop $ × 100).
+
+**2.** 100 ÷ (10 × 100) = 0.10 lot.
+
+**3.** So that the risk does not pass the limit.
+
+**4.** Leave the trade.
+
+</details>
+
+## Next steps
+
+- Before: [Spread and Slippage](/en/learn/13-gold-xauusd/07-spread-slippage).
+- After: [Gold ATR](/en/learn/13-gold-xauusd/09-gold-typical-atr).
+
+### Sources
+
+- <ExternalLink href="https://www.investopedia.com/terms/p/positionsizing.asp">
+    Position Sizing, Investopedia
+  </ExternalLink>
+
+<Disclaimer />

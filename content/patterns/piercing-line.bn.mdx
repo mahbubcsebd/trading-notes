@@ -1,0 +1,344 @@
+---
+title: "Piercing Line: লাল body-র অর্ধেকের বেশি ফিরিয়ে নেওয়া bullish পাল্টা আঘাত"
+description: "Piercing line কীভাবে চিনবেন, কেন 50%-এর বেশি penetration জরুরি, engulfing ও thrusting থেকে তফাত, Forex-এ gap ছাড়া নিয়ম, entry, stop, target — chart সহ।"
+type: bullish
+category: two-candle
+level: intermediate
+candleCount: 2
+signal: reversal
+chartId: piercing-line-win-01
+tags: [pattern, candlestick, piercing-line, reversal, support]
+status: done
+sources:
+  - type: book
+    title: "Japanese Candlestick Charting Techniques - Steve Nison"
+    note: "Piercing pattern; on-neck, in-neck ও thrusting"
+  - type: blog
+    title: "Piercing Pattern - Investopedia"
+    url: "https://www.investopedia.com/terms/p/piercingpattern.asp"
+updated: 2026-11-06
+---
+
+টানা লাল candle-এর পর একটা সবুজ candle এল, আগের লাল candle-এর অর্ধেকের একটু বেশি ফিরিয়ে নিল। "Piercing line, buy!" কিন্তু পরের দিনই নতুন low। সমস্যা নিয়মে নয়, গভীরতায় আর জায়গায়। সবুজ close লাল body-র কতটা ভেতরে ঢুকেছে, সেটাই এই pattern-এর আসল মাপ।
+
+## এক নজরে
+
+| বিষয়                | Piercing Line                                                                                             |
+| :------------------- | :-------------------------------------------------------------------------------------------------------- |
+| ধরন                  | Bullish reversal, দুই candle                                                                              |
+| কোথায় খুঁজবেন       | Downtrend বা pullback-এর শেষে, চিহ্নিত support-এ                                                          |
+| চেনার মূল চিহ্ন      | লম্বা লাল candle-এর পর সবুজ candle, যা লাল body-র মাঝের (50%) উপরে কিন্তু তার open-এর নিচে close করে      |
+| Confirmation         | পরের candle piercing candle-এর high ভাঙা বা তার উপরে close                                                |
+| Stop                 | দুই candle-এর নিচু low-এর নিচে, spread-সহ buffer                                                          |
+| বাতিল (invalidation) | Pattern-এর low-এর নিচে close                                                                              |
+| দেখতে একই রকম        | [Bullish Engulfing](/bn/patterns/bullish-engulfing), thrusting / in-neck / on-neck (bearish continuation) |
+| বিপরীত pattern       | [Dark Cloud Cover](/bn/patterns/dark-cloud-cover)                                                         |
+
+## এই লেখা পড়ে আপনি যা পারবেন
+
+- Piercing line-এর **penetration (গভীরতা) মাপতে** পারবেন।
+- একই রকম দেখতে thrusting বা in-neck থেকে **আলাদা করতে** পারবেন, যেগুলো উল্টো অর্থ দেয়।
+- Forex-এ gap ছাড়া এই pattern **কীভাবে পড়বেন**, জানবেন।
+- Entry, stop ও target **ধাপে ধাপে বসাতে** পারবেন।
+
+## কেন জরুরি
+
+- **Engulfing-এর ছোট ভাই।** পুরো লাল body ঢাকতে না পারলেও অর্ধেকের বেশি ফিরিয়ে নেওয়া মানে buyers গুরুত্বপূর্ণ জয় পেয়েছে।
+- **50% রেখাটাই বিভাজন।** Nison-এর মতে মাঝের নিচে close হলে (thrusting, in-neck, on-neck) সেটা বরং downtrend চলার ইঙ্গিত। একই আকার, উল্টো অর্থ, তফাত কয়েক pip।
+- **Forex-এ সংজ্ঞা বদলায়।** মূল সংজ্ঞায় gap লাগে, যা 24 ঘণ্টার বাজারে প্রায় হয় না।
+
+পূর্বশর্ত: [Two Candle Patterns](/bn/learn/04-candlesticks/03-two-candle-patterns) এবং [Levels vs Zones](/bn/learn/05-support-resistance/01-levels-vs-zones)।
+
+## Piercing Line কী
+
+**Piercing line হলো দুই candle-এর pattern: downtrend-এ একটি লম্বা bearish candle, তারপর একটি bullish candle, যা আগের body-র মাঝের উপরে কিন্তু আগের open-এর নিচে close করে।** নামটা এসেছে "ভেদ করা" থেকে: সবুজ candle লাল body-র ভেতরে ঢুকে যায়।
+
+দুই দেশের সীমান্ত ভাবুন। Sellers অনেকটা এলাকা দখল করেছিল। Buyers পাল্টা আক্রমণে অর্ধেকের বেশি এলাকা ফিরিয়ে নিল, পুরোটা নয়। যুদ্ধ শেষ হয়নি, কিন্তু পাল্লা ঘুরেছে।
+
+<CandleDiagram
+  title="Piercing line: 50% নিয়ম"
+  candles={[
+    { o: 64, h: 65, l: 58, c: 59, dim: true },
+    { o: 59, h: 60, l: 54, c: 55, dim: true },
+    { o: 55, h: 56, l: 41, c: 42, label: "১", note: "লম্বা লাল body" },
+    {
+      o: 42,
+      h: 52,
+      l: 39,
+      c: 51.5,
+      label: "২",
+      note: "মাঝের (48.5) উপরে close",
+    },
+  ]}
+  levels={[{ price: 48.5, label: "লাল body-র 50%", tone: "neutral" }]}
+  caption="প্রথম body 55 থেকে 42, মাঝ 48.5। দ্বিতীয় candle 51.5-এ close করে: মাঝের উপরে, কিন্তু 55-এর নিচে।"
+/>
+
+### চেনার নিয়ম
+
+| নিয়ম                                                   | বাধ্যতামূলক?      | কেন                                            |
+| :------------------------------------------------------ | :---------------- | :--------------------------------------------- |
+| আগে downtrend, প্রথম candle লম্বা bearish               | হ্যাঁ             | ছোট লাল candle ফিরিয়ে নেওয়া কম প্রমাণ        |
+| দ্বিতীয় candle bullish, প্রথম body-র 50%-এর উপরে close | হ্যাঁ             | এটাই "piercing"; নিচে হলে thrusting বা in-neck |
+| দ্বিতীয় close প্রথম open-এর নিচে                       | হ্যাঁ             | উপরে হলে সেটা bullish engulfing                |
+| চিহ্নিত support-এ                                       | হ্যাঁ             | Level ছাড়া এটা শুধু downtrend-এর ছোট bounce   |
+| Penetration 60-75% বা বেশি                              | না (কিন্তু জরুরি) | যত গভীর, তত শক্ত; ঠিক 50%-এর গায়ে দুর্বল      |
+
+## শক্তিশালী বনাম দুর্বল piercing line
+
+<DiagramRow>
+  <CandleDiagram
+    title="শক্তিশালী"
+    verdict="good"
+    verdictLabel="trade-যোগ্য"
+    candles={[
+      { o: 60, h: 61, l: 55, c: 56, dim: true },
+      { o: 56, h: 57, l: 43, c: 44 },
+      { o: 44, h: 54, l: 41, c: 53, label: "~75% গভীর" },
+    ]}
+    levels={[{ price: 43, label: "support", tone: "support" }]}
+    caption="Support-এ, লাল body-র প্রায় তিন-চতুর্থাংশ ফিরিয়ে নেওয়া।"
+  />
+  <CandleDiagram
+    title="দুর্বল"
+    verdict="bad"
+    verdictLabel="এড়িয়ে চলুন"
+    candles={[
+      { o: 80, h: 81, l: 70, c: 71, dim: true },
+      { o: 71, h: 72, l: 61, c: 62, dim: true },
+      { o: 62, h: 63, l: 48, c: 49 },
+      { o: 49, h: 56.5, l: 47, c: 56, label: "সবে 50%" },
+    ]}
+    caption="টানা বড় লাল candle-এর পর, কোনো level নেই, close ঠিক মাঝের গায়ে।"
+  />
+</DiagramRow>
+
+| মান যাচাই                | শক্তিশালী                          | দুর্বল                               |
+| :----------------------- | :--------------------------------- | :----------------------------------- |
+| Penetration              | লাল body-র 60-75% বা বেশি          | ঠিক 50%-এর গায়ে                     |
+| জায়গা                   | চিহ্নিত support বা demand zone-এ   | Downtrend-এর মাঝে, level ছাড়া       |
+| আগের momentum            | ধীর হয়ে আসা downtrend বা pullback | টানা বড় লাল candle, momentum তুঙ্গে |
+| দ্বিতীয় candle-এর close | নিজের high-এর কাছে                 | লম্বা upper wick-এর নিচে             |
+
+### দেখতে একই রকম, অর্থ আলাদা
+
+| Pattern               | দ্বিতীয় candle-এর close                             | অর্থ                                |
+| :-------------------- | :--------------------------------------------------- | :---------------------------------- |
+| **Bullish Engulfing** | প্রথম open-এর উপরে (পুরো body ঢাকে)                  | Piercing-এর চেয়ে শক্ত reversal     |
+| **Piercing Line**     | প্রথম body-র 50%-এর উপরে, open-এর নিচে               | Bullish reversal                    |
+| **Thrusting**         | প্রথম body-র ভেতরে, কিন্তু 50%-এর নিচে               | Nison: সাধারণত bearish continuation |
+| **In-neck / On-neck** | প্রথম candle-এর close-এর সামান্য উপরে বা low-এর কাছে | Nison: bearish continuation         |
+
+<Callout type="note">
+  Thrusting, in-neck আর on-neck-কে Nison downtrend চলার ইঙ্গিত হিসেবে
+  দেখিয়েছেন। এগুলো মুখস্থ করার দরকার নেই। মনে রাখুন: **লাল body-র মাঝের নিচে
+  close হলে piercing নয়, buy-এর কারণও নয়।**
+</Callout>
+
+## Candle-এর ভেতরের গল্প
+
+Support-এ একটি piercing line-এর একটি প্রচলিত ব্যাখ্যা:
+
+1. **প্রথম candle: sellers পুরো নিয়ন্ত্রণে।** লম্বা লাল candle, low-এর কাছে close। Downtrend চলছে বলে মনে হয়।
+2. **দ্বিতীয় candle নিচে শুরু।** দাম প্রথমে আরও নামে, support-এর নিচে উঁকি দেয়।
+3. **Buyers জোরে ফেরায়।** Support-এ buy order আসে, দাম উঠে লাল body-র অর্ধেকের বেশি পার হয়ে close করে।
+
+ফল: আগের candle-এ শেষের দিকে যারা sell করেছিল, তারা লোকসানে। কিন্তু buyers পুরো লাল body ফিরিয়ে নিতে পারেনি, তাই engulfing-এর চেয়ে একটু দুর্বল, আর পরের candle-এর confirmation বেশি জরুরি।
+
+<Callout type="note">
+  এটি একটি প্রচলিত ব্যাখ্যা, প্রমাণিত ঘটনা নয়। Chart দেখে কে কিনেছে বা বেচেছে,
+  তা জানা যায় না।
+</Callout>
+
+## কোথায় কাজ করে, কোথায় করে না
+
+<Compare
+  leftLabel="যেখানে piercing line-এর ওজন বেশি"
+  rightLabel="যেখানে piercing line প্রায়ই ফাঁদ"
+  left="- চিহ্নিত support বা demand zone-এ
+- Uptrend-এর pullback শেষে, trend-এর দিকে
+- Penetration 60-75% বা বেশি হলে
+- দ্বিতীয় candle support-এর নিচে নেমে ফিরে এলে
+- পরের candle piercing-এর high ভাঙলে"
+  right="- টানা বড় লাল candle-এর momentum-এর মাঝে
+- কোনো level ছাড়া downtrend-এর মাঝ পথে
+- Close ঠিক 50%-এর গায়ে বা নিচে
+- লম্বা upper wick-এর নিচে close করলে
+- ঠিক উপরে lower high বা resistance থাকলে"
+/>
+
+## 24 ঘণ্টার বাজারে gap
+
+<Callout type="note">
+  Nison-এর মূল সংজ্ঞায় দ্বিতীয় candle প্রথমটার low-এর নিচে gap দিয়ে open করে।
+  24 ঘণ্টার Forex-এ এটা প্রায় হয় না; দ্বিতীয় open সাধারণত প্রথম close-এর
+  সমান। বাস্তব নিয়ম: **দ্বিতীয় candle প্রথম close-এর কাছে open করে, প্রথমে আরও
+  নামে (low প্রথম low-এর নিচে হলে ভালো), তারপর প্রথম body-র 50%-এর উপরে close
+  করে।** Gap-এর কাজটা নিচের wick করে।
+</Callout>
+
+## ধাপে ধাপে: piercing line trade
+
+<Steps>
+
+### ধাপ ১: আগে level
+
+Support বা demand zone আগেই আঁকুন। Downtrend কতটা জোরালো, দেখুন: টানা বড় লাল candle হলে সাবধান।
+
+### ধাপ ২: দুটি candle বন্ধ হওয়ার অপেক্ষা
+
+চলমান সবুজ candle শেষ মিনিটে 50%-এর নিচে ফিরে যেতে পারে। শুধু বন্ধ candle মাপুন।
+
+### ধাপ ৩: Penetration মাপুন
+
+প্রথম body-র মাঝ = (open + close) ÷ 2। দ্বিতীয় close কোথায়? Penetration % = (দ্বিতীয় close − প্রথম close) ÷ (প্রথম open − প্রথম close)। 50%-এর নিচে হলে বাদ, 60%-এর নিচে হলে সতর্ক।
+
+### ধাপ ৪: Entry-র ধরন
+
+| Entry                          | কোথায়                                         | সুবিধা                 | অসুবিধা                 |
+| :----------------------------- | :--------------------------------------------- | :--------------------- | :---------------------- |
+| **High break** (প্রচলিত)       | Piercing candle-এর high-এর একটু উপরে buy stop  | Buyers এগোলে তবেই ঢোকা | Entry একটু উপরে         |
+| **Close entry**                | Piercing candle বন্ধ হতেই buy                  | Entry কাছে             | Confirmation নেই        |
+| **Pattern high-এর উপরে close** | পরের candle প্রথম candle-এর open-এর উপরে close | সবচেয়ে নিশ্চিত        | Entry অনেক উপরে, R:R কম |
+
+### ধাপ ৫: Stop বসান
+
+দুই candle-এর নিচু low-এর নিচে, আর support-এর নিচেও, [spread](/bn/learn/01-foundations/04-spread-commission-swap) ও buffer-সহ।
+
+### ধাপ ৬: Size ও target
+
+[Position size](/bn/learn/08-risk-management/02-position-sizing) entry থেকে stop-এর দূরত্ব দিয়ে, ঝুঁকি ১%-এর বেশি নয়। প্রথম বাধা প্রায়ই প্রথম candle-এর open; তার পরে আগের swing high। সেখানে পর্যন্ত [risk reward](/bn/learn/08-risk-management/03-risk-reward) অন্তত 1:1.5।
+
+### ধাপ ৭: পরিচালনা
+
+দাম আবার লাল body-র মাঝের নিচে টানা close করলে ধারণা দুর্বল। Pattern-এর low-এর নিচে close হলে ধারণা ভুল।
+
+</Steps>
+
+### Trade-এর আগে checklist
+
+<Checklist
+  id="pattern-piercing-line-pretrade-bn"
+  items={[
+    "Piercing line আসার আগেই support চিহ্নিত ছিল, আর এটা সেই level-এ বসেছে?",
+    "আকার নিয়ম মানছে (লম্বা লাল candle, সবুজ close 50%-এর উপরে কিন্তু লাল open-এর নিচে)?",
+    "দুটি candle-ই বন্ধ হয়েছে, আর penetration অন্তত 60%?",
+    "আগের swing high পর্যন্ত risk reward অন্তত 1:1.5?",
+    "Higher timeframe-এর trend বা level trade-এর বিপরীতে নেই?",
+  ]}
+/>
+
+একটি ঘরও খালি থাকলে trade বাদ দিন।
+
+## উদাহরণ ১: যখন কাজ করে (কাল্পনিক)
+
+<Chart
+  id="piercing-line-win-01"
+  height={420}
+  caption="EURUSD H1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — একবার পরীক্ষিত support-এ গভীর piercing line, high ভাঙলে long।"
+/>
+
+- **কী দেখা যাচ্ছিল:** ৪ নম্বর candle 1.0834-এ support চিহ্নিত করেছে। ৫-৯ নম্বর প্রায় 1.0946 পর্যন্ত ওঠে, ১০-১৪ নম্বর আবার নামে।
+- **Piercing line:** ১৫ নম্বর লম্বা লাল (1.0864 থেকে 1.0837, body 27 pip)। ১৬ নম্বর 1.0837-এ open, 1.0828 পর্যন্ত নেমে support-এর নিচে উঁকি দেয়, তারপর 1.08573-এ close: লাল body-র প্রায় 75%।
+- **সিদ্ধান্ত:** Buy stop 1.08593 (piercing high-এর একটু উপরে)। Stop 1.0825 (pattern low-এর নিচে), ঝুঁকি প্রায় 34 pip। Target 1.09279 (2R); swing high পর্যন্ত জায়গা প্রায় 2.5R।
+- **ফল:** ১৭ নম্বর high ভেঙে order fill করে। ২৩ নম্বর candle target ছোঁয়।
+- **শিক্ষা:** তাজা level, গভীর penetration, support-এর নিচে wick, আর confirmation-এ entry।
+
+<TradeSetup
+  direction="long"
+  pair="EURUSD"
+  entry={1.08593}
+  stop={1.0825}
+  target={1.09279}
+/>
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়। সব piercing line জেতে না, আর কোনো ফল গ্যারান্টি নয়।)
+
+## উদাহরণ ২: যখন ফাঁদ হয় (কাল্পনিক)
+
+<Chart
+  id="piercing-line-fail-01"
+  height={420}
+  caption="GBPUSD D1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — টানা বড় লাল দিনের পর সবে-50% piercing line, কোনো support নেই। Close-এ buy, তারপর stop।"
+/>
+
+- **কী দেখা যাচ্ছিল:** ০-৫ নম্বর candle 1.2850 থেকে 1.2540 পর্যন্ত টানা বড় লাল দিন। নিচে কোনো চিহ্নিত support নেই।
+- **Piercing line:** ৫ নম্বর লাল (1.2610 থেকে 1.2540, body 70 pip)। ৬ নম্বর 1.25764-এ close: লাল body-র মাত্র প্রায় 52%।
+- **ভুল সিদ্ধান্ত:** "নিয়ম মেনেছে।" Close-এ buy 1.25764, stop 1.2522, ঝুঁকি প্রায় 54 pip।
+- **কী হলো:** ৭ নম্বর আবার নিচে ঘোরে, ৮ নম্বর stop ভাঙে।
+- **কেন ব্যর্থ:** Level ছিল না, momentum তুঙ্গে, আর penetration সবে 50%। Checklist-এর প্রথম আর তৃতীয় ঘরেই trade বাদ পড়ত।
+
+**শিক্ষা:** শক্তিশালী momentum-এর বিপরীতে সবে-50% piercing line মূলত বিরতি। Stop আগে বসানো ছিল বলে লোকসান 1R-এ আটকেছে।
+
+## সাধারণ ভুল
+
+| ভুল                                          | কেন হয়                              | কী করবেন                            |
+| :------------------------------------------- | :----------------------------------- | :---------------------------------- |
+| 50%-এর গায়ে close-কে piercing ধরা           | চোখে মাপা                            | হিসাব করে penetration % বের করুন    |
+| Thrusting-কে piercing ভেবে buy               | মাঝের নিচে close উপেক্ষা             | মাঝের নিচে close = buy-এর কারণ নয়  |
+| বড় momentum-এর মাঝে buy                     | প্রতিটি সবুজ candle-কে reversal ভাবা | Momentum ধীর হলে আর level-এ তবেই    |
+| Target প্রথম candle-এর open-এর ওপারে না ভেবে | প্রথম বাধা ভুলে যাওয়া               | প্রথম open প্রায়ই প্রথম resistance |
+
+## Pro tips
+
+<Callout type="tip">
+  Piercing line-এর পর দাম প্রথম candle-এর open পার হয়ে close করলে দুই candle
+  মিলে প্রায় bullish engulfing-এর শক্তি পায়। চলমান trade-এ সেই মুহূর্তে stop
+  break-even-এ আনার কথা ভাবতে পারেন।
+</Callout>
+
+<Callout type="tip">
+  Higher timeframe-এ দেখুন: H1-এর piercing line প্রায়ই H4-এ একটি hammer বা
+  লম্বা নিচের wick-ওয়ালা candle। H4-এর ছবি পরিষ্কার হলে signal আরও
+  বিশ্বাসযোগ্য। বিস্তারিত: [Multi-Timeframe
+  Analysis](/bn/learn/03-market-structure/05-multi-timeframe-analysis)।
+</Callout>
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- Piercing line = লম্বা লাল candle-এর পর সবুজ candle, যা লাল body-র 50%-এর উপরে কিন্তু লাল open-এর নিচে close করে।
+- 50% রেখাই বিভাজন: নিচে close হলে thrusting বা in-neck, buy-এর কারণ নয়।
+- যত গভীর penetration (60-75%+), তত শক্ত; শক্তিশালী momentum-এর মাঝে সবে-50% দুর্বল।
+- Forex-এ gap-এর কাজ নিচের wick করে; entry high break-এ, stop pattern low-এর নিচে।
+
+</KeyTakeaways>
+
+## অনুশীলন ও নিজের backtest
+
+TradingView-এ EURUSD H1 বা GBPUSD D1 খুলুন। অন্তত ২০টি piercing line খুঁজুন। প্রতিটির জন্য একটি সারি লিখুন:
+
+| তারিখ | Support-এ? | Penetration % | আগের ৫ candle-এ momentum | Entry ধরন | ফল (R) |
+| :---- | :--------- | :------------ | :----------------------- | :-------- | :----- |
+|       |            |               |                          |           |        |
+
+এরপর penetration 50-60% আর 60%+ দুই দলে ভাগ করে গড় R তুলনা করুন। অন্তত ৩০টি নমুনা ছাড়া সিদ্ধান্ত নেবেন না।
+
+## কুইজ
+
+1. প্রথম candle-এর open 1.1050, close 1.1000। দ্বিতীয় candle 1.1022-এ close করল। এটা কি piercing line?
+2. দ্বিতীয় candle 1.1055-এ close করলে pattern-এর নাম কী?
+3. Forex-এ gap না থাকলে piercing line-এর কোন অংশ gap-এর কাজ করে?
+4. উদাহরণ ২-এর trade checklist-এর কোন ঘরে বাদ পড়ত?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** না। মাঝ 1.1025; 1.1022 মাঝের নিচে, তাই এটা thrusting ধরনের, piercing নয়।
+
+**২.** Bullish engulfing, কারণ close প্রথম candle-এর open-এর উপরে।
+
+**৩.** দ্বিতীয় candle-এর নিচের wick: প্রথমে প্রথম close-এর নিচে নেমে তারপর উপরে ফেরা।
+
+**৪.** প্রথম ঘর (কোনো support ছিল না) আর তৃতীয় ঘর (penetration মাত্র 52%, 60%-এর নিচে)।
+
+</details>
+
+## পরের ধাপ
+
+- আগে: [Two Candle Patterns](/bn/learn/04-candlesticks/03-two-candle-patterns)।
+- শক্ত রূপ: [Bullish Engulfing lesson](/bn/learn/04-candlesticks/04-bullish-engulfing)।
+- একই পরিবারের pattern: [Dark Cloud Cover](/bn/patterns/dark-cloud-cover), [Bullish Engulfing](/bn/patterns/bullish-engulfing), [Morning Star](/bn/patterns/morning-star)।
+
+<Disclaimer />

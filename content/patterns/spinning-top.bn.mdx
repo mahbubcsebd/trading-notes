@@ -1,0 +1,350 @@
+---
+title: "Spinning Top: ছোট body-র candle, যখন trend দম নেয়"
+description: "Spinning top কীভাবে চিনবেন, কখন এটা reversal-এর সতর্কসংকেত আর কখন শুধু বিরতি, confirmation-এর পর entry, stop ও target — জেতা ও হারা chart example সহ।"
+type: neutral
+category: momentum-indecision
+level: beginner
+candleCount: 1
+signal: indecision
+chartId: spinning-top-win-01
+tags: [pattern, candlestick, spinning-top, indecision]
+status: done
+sources:
+  - type: book
+    title: "Japanese Candlestick Charting Techniques - Steve Nison"
+    note: "Spinning tops, high-wave candles"
+  - type: blog
+    title: "Spinning Top Candlestick - Investopedia"
+    url: "https://www.investopedia.com/terms/s/spinning-top.asp"
+updated: 2026-11-06
+---
+
+Uptrend চলছে, প্রতিটি candle সবুজ। হঠাৎ একটি ছোট body-র candle আসে, উপরে-নিচে দুই দিকেই wick। "Trend শেষ!" ভেবে অনেকে sell করেন, আর পরের দিন trend আবার উপরে ছোটে। Spinning top আসলে কোনো উত্তর নয়, একটি প্রশ্ন। উত্তর দেয় এর জায়গা আর পরের candle।
+
+## এক নজরে
+
+| বিষয়                | Spinning Top                                                                         |
+| :------------------- | :----------------------------------------------------------------------------------- |
+| ধরন                  | Neutral, indecision candle, একটি candle                                              |
+| কোথায় খুঁজবেন       | লম্বা move-এর শেষে, চিহ্নিত support বা resistance-এ                                  |
+| চেনার মূল চিহ্ন      | ছোট body, উপরে ও নিচে দুই দিকেই body-র চেয়ে লম্বা wick                              |
+| Confirmation         | পরের candle spinning top-এর low-এর নিচে (top-এ) বা high-এর উপরে (bottom-এ) close করা |
+| Stop                 | Spinning top-এর বিপরীত প্রান্তের বাইরে, spread-সহ buffer                             |
+| বাতিল (invalidation) | Confirmation-এর বদলে trend-এর দিকে spinning top-এর প্রান্ত ভেঙে close                |
+| দেখতে একই রকম        | [Doji](/bn/patterns/doji), high-wave candle, [Hammer](/bn/patterns/hammer)           |
+| বিপরীত pattern       | [Marubozu](/bn/patterns/marubozu) (বড় body, wick নেই)                               |
+
+## এই লেখা পড়ে আপনি যা পারবেন
+
+- Spinning top আর doji, hammer বা সাধারণ ছোট candle-এর তফাত **মেপে বলতে পারবেন**।
+- কোন spinning top সতর্কসংকেত আর কোনটা শুধু noise, তা **জায়গা দেখে আলাদা করতে পারবেন**।
+- একা spinning top-এ না ঢুকে **confirmation candle-এর পর entry বসাতে পারবেন**।
+- চলমান trade-এ spinning top দেখে **stop বা partial নিয়ে সিদ্ধান্ত নিতে পারবেন**।
+
+## কেন জরুরি
+
+- **Momentum কমার প্রথম চিহ্ন।** বড় বড় candle-এর পর হঠাৎ ছোট body মানে যে পক্ষ জিতছিল, তারা এই candle-এ জিততে পারেনি।
+- **একা trade করলে ক্ষতি।** Spinning top দিক বলে না। Trend-এর ভেতরে এটা প্রায়ই শুধু এক candle-এর বিশ্রাম।
+- **চলমান trade-এর জন্য দরকারি।** নতুন entry না নিলেও, আপনার trade-এর target-এর কাছে spinning top এলে profit রক্ষা নিয়ে ভাবার সময়।
+
+পূর্বশর্ত: [Anatomy of a Candle](/bn/learn/04-candlesticks/01-anatomy-of-a-candle) এবং [Candle Context](/bn/learn/04-candlesticks/05-candle-context)।
+
+## Spinning Top কী
+
+**Spinning top হলো এমন একটি candle, যার body ছোট আর উপরে ও নিচে দুই দিকেই body-র চেয়ে লম্বা wick।** নামটা এসেছে লাটিম থেকে: মাঝখানে ছোট মোটা অংশ, দুই দিকে সরু দণ্ড। লাটিম ঘোরে, কিন্তু কোথাও যায় না।
+
+একটা দর কষাকষি ভাবুন। ক্রেতা দাম বাড়াতে চেয়েছে, বিক্রেতা কমাতে চেয়েছে। দুজনেই কিছুক্ষণ এগিয়েছে, কিন্তু দিনশেষে দাম প্রায় শুরুর জায়গাতেই। কেউ জেতেনি।
+
+<CandleDiagram
+  title="Spinning top: রং যা-ই হোক"
+  candles={[
+    { o: 40, h: 46, l: 38, c: 45, dim: true },
+    { o: 45, h: 53, l: 44, c: 52, dim: true },
+    {
+      o: 52,
+      h: 60,
+      l: 45,
+      c: 53.5,
+      label: "সবুজ",
+      note: "ছোট body, দুই দিকে wick",
+    },
+    { o: 53.5, h: 56, l: 50, c: 55, dim: true },
+    { o: 55, h: 62, l: 47, c: 53.5, label: "লাল", note: "অর্থ একই" },
+  ]}
+  caption="Spinning top সবুজ বা লাল দুটোই হতে পারে। Body-র রং নয়, body ছোট আর দুই দিকে wick, এটাই মূল কথা।"
+/>
+
+### চেনার নিয়ম
+
+| নিয়ম                                              | বাধ্যতামূলক?          | কেন                                                   |
+| :------------------------------------------------- | :-------------------- | :---------------------------------------------------- |
+| Body ছোট, পুরো range-এর মোটামুটি এক-তৃতীয়াংশের কম | হ্যাঁ                 | বড় body মানে এক পক্ষ জিতেছে, সিদ্ধান্তহীনতা নয়      |
+| উপরের ও নিচের দুই wick-ই body-র চেয়ে লম্বা        | হ্যাঁ                 | এক দিকে লম্বা wick হলে সেটা hammer বা shooting star   |
+| Candle বন্ধ হয়েছে                                 | হ্যাঁ                 | চলমান candle শেষে বড় body বানাতে পারে                |
+| আগের candle-গুলো স্পষ্ট বড় (move-এর পর)           | না (কিন্তু খুব জরুরি) | বড় candle-এর পর ছোট body-ই "momentum কমছে" কথাটা বলে |
+| দুই wick মোটামুটি সমান                             | না                    | সমান হলে পরিষ্কার; অসমান হলেও spinning top হতে পারে   |
+
+Nison একটি কাছের রূপও দেখিয়েছেন: **high-wave candle**, যার wick খুব লম্বা। এটা আরও বেশি টানাপোড়েন দেখায়, কিন্তু trade-এর নিয়ম একই: confirmation ছাড়া নয়।
+
+## শক্তিশালী বনাম দুর্বল spinning top
+
+<DiagramRow>
+  <CandleDiagram
+    title="অর্থবহ"
+    verdict="good"
+    verdictLabel="নজর দিন"
+    candles={[
+      { o: 40, h: 47, l: 39, c: 46, dim: true },
+      { o: 46, h: 54, l: 45, c: 53, dim: true },
+      { o: 53, h: 61, l: 52, c: 60, dim: true },
+      { o: 60, h: 66, l: 55, c: 59, label: "level-এ" },
+      { o: 59, h: 60, l: 51, c: 52, dim: true },
+    ]}
+    levels={[{ price: 64, label: "পুরোনো high", tone: "resistance" }]}
+    caption="বড় candle-এর rally-র পর resistance-এ, পরের candle low ভেঙে নিচে close।"
+  />
+  <CandleDiagram
+    title="অর্থহীন"
+    verdict="bad"
+    verdictLabel="এড়িয়ে চলুন"
+    candles={[
+      { o: 50, h: 53, l: 48, c: 52, dim: true },
+      { o: 52, h: 54, l: 49, c: 50, dim: true },
+      { o: 50, h: 54, l: 47, c: 50.5, label: "range-এর মাঝে" },
+      { o: 50.5, h: 53, l: 48, c: 52, dim: true },
+      { o: 52, h: 54, l: 49, c: 49.5, dim: true },
+    ]}
+    caption="ছোট candle-এর range-এ আরেকটি ছোট candle। নতুন কোনো তথ্য নেই।"
+  />
+</DiagramRow>
+
+| মান যাচাই    | অর্থবহ                                     | অর্থহীন                              |
+| :----------- | :----------------------------------------- | :----------------------------------- |
+| আগে কী ছিল   | বড় body-র স্পষ্ট move                     | এমনিতেই ছোট ছোট candle               |
+| কোথায়       | চিহ্নিত support বা resistance-এর গায়ে     | Range-এর মাঝখানে বা trend-এর মাঝ পথে |
+| পরের candle  | Spinning top-এর প্রান্ত ভেঙে বিপরীতে close | আবার trend-এর দিকে বা আরও ছোট candle |
+| সামনে জায়গা | পরের level পর্যন্ত অন্তত 2R                | পরের level খুব কাছে                  |
+
+<Callout type="note">
+  "Body range-এর এক-তৃতীয়াংশের কম" আমার কাজ চালানোর মাপ, কোনো আদর্শ সংজ্ঞা নয়।
+  বিভিন্ন বইয়ে মাপ আলাদা। নিজের backtest-এ একটি মাপ বেছে নিন, সব chart-এ সেটাই
+  রাখুন।
+</Callout>
+
+### দেখতে একই রকম, অর্থ আলাদা
+
+| Pattern               | আকার                                       | তফাত                                       |
+| :-------------------- | :----------------------------------------- | :----------------------------------------- |
+| **Spinning Top**      | ছোট body, দুই দিকে body-র চেয়ে লম্বা wick | সিদ্ধান্তহীনতা, কিছুটা body আছে            |
+| **Doji**              | Body প্রায় শূন্য, open ≈ close            | আরও নিখুঁত সমতা; একই নিয়মে পড়া হয়       |
+| **Hammer**            | ছোট body উপরে, শুধু নিচে লম্বা wick        | এক দিকের rejection, support-এ bullish অর্থ |
+| **ছোট সাধারণ candle** | ছোট body, wick-ও ছোট                       | শুধু শান্ত বাজার; টানাপোড়েনের প্রমাণ নেই  |
+
+## Candle-এর ভেতরের গল্প
+
+Uptrend-এর শেষে resistance-এ একটি spinning top সময় ধরে পড়লে একটি প্রচলিত ব্যাখ্যা এরকম:
+
+1. **Buyers উপরে নেয়।** আগের মতো দাম open থেকে উপরে ওঠে, resistance-এর ওপারে উঁকি দেয়।
+2. **Sellers ফিরিয়ে দেয়, আরও নিচে নামায়।** উপরে sell order আসে, দাম open-এর নিচেও নেমে যায়।
+3. **Buyers আবার কিছুটা তোলে, কিন্তু জেতে না।** Close প্রায় open-এর কাছে। যে buyers আগের candle-গুলোয় অনায়াসে জিতছিল, এবার তারা পারেনি।
+
+ফল: momentum থেমেছে, দিক এখনো ঠিক হয়নি। পরের candle যদি spinning top-এর low ভেঙে নিচে close করে, তখন sellers প্রথম জয় পেল। যদি high ভেঙে উপরে যায়, buyers আবার নিয়ন্ত্রণে।
+
+<Callout type="note">
+  এটি একটি প্রচলিত ব্যাখ্যা, প্রমাণিত ঘটনা নয়। Chart দেখে কে কিনেছে বা বেচেছে,
+  তা জানা যায় না। আমরা শুধু দামের আচরণ দেখি।
+</Callout>
+
+## কোথায় কাজ করে, কোথায় করে না
+
+<Compare
+  leftLabel="যেখানে spinning top-এ নজর দেবেন"
+  rightLabel="যেখানে spinning top প্রায়ই noise"
+  left="- বড় candle-এর লম্বা move-এর পর
+- চিহ্নিত পুরোনো high, low বা supply-demand zone-এ
+- Higher timeframe-এর level-এর গায়ে
+- আপনার চলমান trade-এর target-এর কাছে
+- পরের candle confirmation দিলে"
+  right="- শক্তিশালী trend-এর মাঝ পথে, কোনো level ছাড়া
+- Range-এর মাঝখানে
+- Asian session-এর শান্ত বাজারে, যখন সব candle-ই ছোট
+- বড় news-এর ঠিক আগে, যখন সবাই অপেক্ষা করছে
+- পরের candle trend-এর দিকেই close করলে"
+/>
+
+## ধাপে ধাপে: spinning top trade
+
+<Steps>
+
+### ধাপ ১: আগে move আর level
+
+স্পষ্ট move চলছে কি না আর সামনে কোনো চিহ্নিত level আছে কি না, আগে দেখুন। দুটো না থাকলে spinning top শুধু একটি ছোট candle।
+
+### ধাপ ২: Candle বন্ধ হওয়ার অপেক্ষা
+
+চলমান candle-কে spinning top ধরবেন না। শেষ মিনিটে এটা বড় body বানাতে পারে।
+
+### ধাপ ৩: মাপুন
+
+Body পুরো range-এর এক-তৃতীয়াংশের কম? দুই দিকের wick-ই body-র চেয়ে লম্বা? আগের candle-গুলো স্পষ্ট বড় ছিল?
+
+### ধাপ ৪: Confirmation-এর অপেক্ষা ও entry
+
+Spinning top নিজে entry দেয় না। Resistance-এ হলে পরের candle-কে এর low-এর নিচে close করতে হবে।
+
+| Entry                     | কোথায়                                     | সুবিধা                          | অসুবিধা                          |
+| :------------------------ | :----------------------------------------- | :------------------------------ | :------------------------------- |
+| **Low break** (প্রচলিত)   | Spinning top-এর low-এর একটু নিচে sell stop | দাম নিজে দিক দেখালে তবেই ঢোকা   | শুধু wick-এ fill হয়ে ফিরতে পারে |
+| **Confirmation close**    | Confirmation candle বন্ধ হলে market sell   | Close দেখে ঢোকা, ভুয়া break কম | Entry নিচে, stop বড়             |
+| **Spinning top-এ সরাসরি** | Candle বন্ধ হতেই sell                      | সবচেয়ে ভালো দাম                | দিক জানা নেই, প্রায়ই trend চলে  |
+
+নতুনদের জন্য confirmation close সবচেয়ে নিরাপদ: wick-এ fill হয়ে ফিরে আসার ফাঁদ কম।
+
+### ধাপ ৫: Stop বসান
+
+Spinning top-এর high-এর উপরে, আর level-এর উপরেও, [spread](/bn/learn/01-foundations/04-spread-commission-swap) ও কয়েক pip buffer-সহ। Spinning top-এর range বড় হলে stop বড় হবে; তখন size কমান।
+
+### ধাপ ৬: Size ও target
+
+Entry থেকে stop-এর দূরত্ব দিয়ে [position size](/bn/learn/08-risk-management/02-position-sizing) বের করুন, ঝুঁকি account-এর ১%-এর বেশি নয়। Target পরের support-এর ঠিক আগে। সেখানে পর্যন্ত [risk reward](/bn/learn/08-risk-management/03-risk-reward) অন্তত 1:1.5 না হলে বাদ দিন।
+
+### ধাপ ৭: পরিচালনা
+
+দাম আবার spinning top-এর high-এর উপরে close করলে ধারণা ভুল, বেরিয়ে যান। চলমান long trade-এ target-এর কাছে spinning top এলে [partial close](/bn/learn/10-trade-management-execution/02-take-profit-partial-close) বা stop break-even-এ আনার কথা ভাবুন।
+
+</Steps>
+
+### Trade-এর আগে checklist
+
+<Checklist
+  id="pattern-spinning-top-pretrade-bn"
+  items={[
+    "Spinning top আসার আগেই level চিহ্নিত ছিল, আর এটা সেই level-এর গায়ে বসেছে?",
+    "আকার নিয়ম মানছে (ছোট body, দুই দিকের wick body-র চেয়ে লম্বা, আগের candle-গুলো বড়)?",
+    "Spinning top আর confirmation candle দুটোই বন্ধ হয়েছে?",
+    "পরের level পর্যন্ত risk reward অন্তত 1:1.5?",
+    "Higher timeframe-এর কোনো level trade-এর ঠিক সামনে নেই?",
+  ]}
+/>
+
+একটি ঘরও খালি থাকলে trade বাদ দিন।
+
+## উদাহরণ ১: যখন কাজ করে (কাল্পনিক)
+
+<Chart
+  id="spinning-top-win-01"
+  height={420}
+  caption="USDJPY H1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — পুরোনো high-এ spinning top, পরের candle low ভাঙলে short।"
+/>
+
+- **কী দেখা যাচ্ছিল:** ০-৫ নম্বর candle প্রায় 152.02-এ একটি পুরোনো high রেখে গেছে। ৬-১১ নম্বর নেমে, ১২-১৭ নম্বর আবার সেই high-এর নিচে ফিরে এসেছে।
+- **Spinning top:** ১৮ নম্বর 151.96-এ open, 151.93-এ close। Body মাত্র 3 pip, high 152.10, low 151.83: দুই দিকে 13-14 pip wick। High পুরোনো high-এর ওপারে উঁকি দিয়ে ফিরেছে।
+- **সিদ্ধান্ত:** Sell stop 151.81 (low-এর 2 pip নিচে)। Stop 152.16 (spinning top-এর high আর পুরোনো high দুটোরই উপরে), ঝুঁকি 35 pip। Target 151.11, অর্থাৎ 2R।
+- **ফল:** ১৯ নম্বর low ভেঙে 151.76-এ close করে, order fill হয়। এরপর lower high-এ দাম নামে, ২৭ নম্বর candle target ছোঁয়।
+- **শিক্ষা:** Move ছিল, level ছিল, আর entry এসেছে দাম নিজে নিচে close করার পর। Spinning top শুধু সতর্ক করেছিল।
+
+<TradeSetup
+  direction="short"
+  pair="USDJPY"
+  entry={151.81}
+  stop={152.16}
+  target={151.11}
+/>
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়। সব spinning top reversal আনে না, আর কোনো ফল গ্যারান্টি নয়।)
+
+## উদাহরণ ২: যখন ফাঁদ হয় (কাল্পনিক)
+
+<Chart
+  id="spinning-top-fail-01"
+  height={420}
+  caption="EURUSD D1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — শক্তিশালী uptrend-এর মাঝে, কোনো level ছাড়া spinning top। Wick-এ fill, তারপর stop।"
+/>
+
+- **কী দেখা যাচ্ছিল:** ০-৮ নম্বর candle 1.0700 থেকে প্রায় 1.0864 পর্যন্ত পরিষ্কার uptrend, higher high আর higher low। উপরে কোনো পুরোনো high নেই।
+- **Spinning top:** ৯ নম্বর 1.0864-এ open, 1.0868-এ close। Body 4 pip, দুই দিকে প্রায় 18-20 pip wick। আকারে নিখুঁত।
+- **ভুল সিদ্ধান্ত:** "Trend থেমে গেছে।" Sell stop 1.0843, stop 1.0892, ঝুঁকি 49 pip, target 1.0745।
+- **কী হলো:** ১০ নম্বর candle-এর wick 1.0843 ছুঁয়ে order fill করে, কিন্তু candle আবার open-এর কাছে close করে। ১১ নম্বর বড় bullish candle stop ভাঙে।
+- **কেন ব্যর্থ:** কোনো level ছিল না, আর confirmation close-ও আসেনি; শুধু wick-এ fill। Checklist-এর প্রথম আর তৃতীয় ঘরেই trade বাদ পড়ত।
+
+**শিক্ষা:** শক্তিশালী trend-এর ভেতরে spinning top সাধারণত শুধু এক candle-এর বিশ্রাম। Stop আগে বসানো ছিল বলে লোকসান 1R-এ আটকেছে।
+
+## সাধারণ ভুল
+
+| ভুল                                      | কেন হয়                     | কী করবেন                                             |
+| :--------------------------------------- | :-------------------------- | :--------------------------------------------------- |
+| Spinning top দেখেই trend-এর বিপরীতে ঢোকা | "Trend শেষ" ধারণা           | পরের candle-এর confirmation close-এর অপেক্ষা করুন    |
+| যেকোনো ছোট candle-কে spinning top ধরা    | Wick মাপা হয় না            | দুই wick-ই body-র চেয়ে লম্বা কি না মাপুন            |
+| Candle-এর রং দেখে bullish বা bearish ধরা | রং-কে বেশি গুরুত্ব          | রং নয়, জায়গা আর পরের candle দেখুন                  |
+| Range-এর মাঝে spinning top trade করা     | সব candle-কে signal মনে করা | শুধু level-এর গায়ে আর move-এর পর গুনুন              |
+| Stop spinning top-এর ভেতরে রাখা          | ছোট stop-এর লোভ             | Stop high-এর উপরে আর level-এর ওপারে, size কমিয়ে নিন |
+| চলমান profit-এ spinning top উপেক্ষা করা  | "আরও যাবে" আশা              | Target-এর কাছে হলে partial বা break-even ভাবুন       |
+
+## Pro tips
+
+<Callout type="tip">
+  Spinning top-কে একটি candle হিসেবে না দেখে higher timeframe-এ দেখুন। H1-এর
+  কয়েকটি বড় candle আর একটি spinning top মিলে H4-এ প্রায়ই একটি shooting star
+  বা hammer দাঁড়ায়। তখন ছবিটা আরও পরিষ্কার।
+</Callout>
+
+<Callout type="tip">
+  টানা কয়েকটি spinning top বা doji পরপর এলে বাজার শক্তি জমাচ্ছে। এর পরে প্রায়ই
+  বড় breakout আসে। দিক না জেনে আগে ঢোকার চেয়ে [Range
+  Breakout](/bn/learn/06-trend-chart-patterns/03-range-breakout)-এর নিয়মে
+  অপেক্ষা করুন।
+</Callout>
+
+<Callout type="warning">
+  "Spinning top মানেই reversal" জাতীয় কথা মানবেন না। Trend-এর ভেতরে এটা প্রায়ই
+  শুধু বিরতি। জায়গা আর confirmation ছাড়া এটা trade signal নয়।
+</Callout>
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- Spinning top = ছোট body, উপরে-নিচে দুই দিকে body-র চেয়ে লম্বা wick; রং গুরুত্বপূর্ণ নয়।
+- এটা সিদ্ধান্তহীনতা দেখায়, দিক নয়। একা trade signal নয়।
+- লম্বা move-এর পর চিহ্নিত level-এ এলে নজর দিন; trend বা range-এর মাঝে প্রায়ই noise।
+- Entry শুধু confirmation-এর পর; stop spinning top আর level দুটোরই ওপারে।
+
+</KeyTakeaways>
+
+## অনুশীলন ও নিজের backtest
+
+TradingView-এ USDJPY H1 বা EURUSD D1 খুলুন। অন্তত ২০টি spinning top খুঁজুন, যেগুলো স্পষ্ট move-এর পর এসেছে। প্রতিটির জন্য একটি সারি লিখুন:
+
+| তারিখ | Level-এ ছিল? | আগের move কত candle? | পরের candle confirm করেছে? | Entry ধরন | ফল (R) |
+| :---- | :----------- | :------------------- | :------------------------- | :-------- | :----- |
+|       |              |                      |                            |           |        |
+
+এরপর "level-এ" আর "level ছাড়া" দুই দলে ভাগ করে গড় R তুলনা করুন। কতগুলো spinning top-এর পর trend আবার একই দিকে চলেছে, সেটাও গুনুন। অন্তত ৩০টি নমুনা ছাড়া সিদ্ধান্ত নেবেন না।
+
+## কুইজ
+
+1. একটি candle-এর body ছোট, নিচে লম্বা wick, কিন্তু উপরে প্রায় কোনো wick নেই। এটি কি spinning top?
+2. শক্তিশালী uptrend-এর মাঝখানে, কোনো level ছাড়া একটি লাল spinning top। এখন কী করবেন?
+3. Spinning top-এর low ভাঙার sell stop আর confirmation close entry-র মূল তফাত কী?
+4. উদাহরণ ২-এর trade checklist-এর কোন ঘরে বাদ পড়ত?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** না। এক দিকে লম্বা wick আর অন্য দিকে প্রায় নেই, এটা hammer বা hanging man-এর আকার। Spinning top-এ দুই দিকেই wick body-র চেয়ে লম্বা।
+
+**২.** নতুন short নয়। লাল রং কিছু বলে না। Level নেই, তাই এটা সম্ভবত বিরতি। চলমান long থাকলে stop নিয়ে ভাবতে পারেন, কিন্তু trend-এর বিপরীতে ঢোকার কারণ নেই।
+
+**৩.** Sell stop দ্রুত ঢোকে, কিন্তু শুধু একটি wick-এ fill হয়ে ফিরতে পারে। Confirmation close-এ entry নিচে আর stop বড়, কিন্তু ভুয়া break-এর ফাঁদ কম।
+
+**৪.** প্রথম ঘর (কোনো level ছিল না) আর তৃতীয় ঘর (confirmation candle নিচে close করেনি)।
+
+</details>
+
+## পরের ধাপ
+
+- আগে: [Anatomy of a Candle](/bn/learn/04-candlesticks/01-anatomy-of-a-candle)।
+- Signal কোথায় অর্থবহ: [Confirmation vs Trigger](/bn/learn/09-price-action-entries-strategies/04-confirmation-vs-trigger)।
+- একই পরিবারের pattern: [Doji](/bn/patterns/doji), [Long-Legged Doji](/bn/patterns/long-legged-doji), [Marubozu](/bn/patterns/marubozu)।
+
+<Disclaimer />

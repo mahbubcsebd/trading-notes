@@ -1,0 +1,188 @@
+---
+title: "When to Exit: No Closing a Trade Without a Written Reason"
+description: "Exit by target, stop, invalidation and time rules, and the cost of closing early out of fear, with four types of exit and two charts."
+level: intermediate
+tags: [exit, trade-management, invalidation, time-stop, discipline]
+instruments: [EURUSD]
+timeframes: [H1]
+status: done
+sources:
+  - type: blog
+    title: "Exit Strategy - Investopedia"
+    url: "https://www.investopedia.com/terms/e/exitstrategy.asp"
+  - type: blog
+    title: "Trading Plan - Investopedia"
+    url: "https://www.investopedia.com/articles/trading/06/tradingplan.asp"
+updated: 2026-11-06
+---
+
+# When to Exit: No Closing a Trade Without a Written Reason
+
+Everyone knows the reason for an entry. But ask, "Why did you close this trade?" Many will say, "I got scared." This lesson is to change that answer.
+
+## What you will be able to do
+
+- **Recognize** the four types of exit rule.
+- **Write a rule for leaving before the stop** when the idea is proved wrong.
+- **Tell the difference** between a fear exit and a rule exit.
+
+## Why it matters
+
+- **Emotion is strongest at the exit.** Greed in profit, hope in loss.
+- **A rule-based exit makes results comparable.** You can write it in the [journal](/en/learn/12-trading-psychology/05-journaling-habit) with the reason.
+- **There are ways out besides the stop.** Sometimes the idea ends first.
+
+Prerequisites: [Stop Loss Placement](/en/learn/10-trade-management-execution/01-stop-loss-placement) and [Break of Structure](/en/learn/03-market-structure/03-break-of-structure).
+
+## What is an exit
+
+**An exit is the decision to close a trade that has one written reason: the profit target was met, the stop was hit, the idea was proved wrong, or time ran out.**
+
+Think of a train ticket. There is a destination (target), an emergency exit for an accident (stop), a station to get off if the route changes (invalidation), and a timetable (time stop). You cannot get off at just any station.
+
+| Exit type    | Reason                                            | Example                              |
+| :----------- | :------------------------------------------------ | :----------------------------------- |
+| Target       | The planned profit is met                         | The target or the trail is hit       |
+| Stop         | The maximum loss limit                            | The stop order is hit                |
+| Invalidation | The reason for the trade is gone, before the stop | A candle closes below the higher low |
+| Time stop    | The move did not come even in the set time        | Close after N candles                |
+
+## What it looks like on a chart
+
+<Chart
+  id="exit-invalidation-01"
+  height={440}
+  caption="EURUSD H1 (educational, imaginary example): buy at 1.0900, higher low 1.0870, planned stop 1.0840. When a candle closes below 1.0870 (about 1.0867), the trader exits. Later price reaches the stop level too."
+/>
+
+The exit point comes before the stop. The base of the idea (the higher low) has broken, so there is no more waiting.
+
+## Step by step: writing the exit rules
+
+<Steps>
+
+### Step 1: Write the reason for the trade in one sentence
+
+For example: "The pullback has ended above the higher low." When this reason ends, you exit.
+
+### Step 2: Set the invalidation price
+
+The price at which the reason is proved wrong. Usually a level of the [structure](/en/learn/03-market-structure/01-swing-high-low). Write down also whether it is by a close or by a wick.
+
+### Step 3: Keep the target and the stop
+
+If invalidation happens, exit. If not, let it run to the target or the stop.
+
+### Step 4: Set a time limit (optional)
+
+For example, if the move has not come within 20 candles, close. Capital cannot be tied up.
+
+### Step 5: Write the reason for the exit in your journal
+
+Target, stop, invalidation, time, or fear? If you have to write the last one, a rule was broken.
+
+</Steps>
+
+## Example 1: when it works (synthetic)
+
+- **Set in advance:** risk 1%, stop 1.0840, invalidation 1.0870 (close-based).
+- **Result:** a candle closed below 1.0870 at about 1.0867. The exit was at a loss of about 33 pips, before the planned stop (60 pips).
+- **Lesson:** when the idea is wrong, you do not have to wait for the whole stop. The rule was written first.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Example 2: when it fails (synthetic)
+
+<Chart
+  id="exit-fear-early-01"
+  height={440}
+  caption="EURUSD H1 (educational, imaginary example): buy at 1.0900, stop 1.0870, target 1.0990. At +12 pips the trader closes out of fear. The plan had no exit rule. Later price reaches the target at 1.0990."
+/>
+
+- **What was visible:** price rose a little and stopped, and the trader was nervous.
+- **Result:** closed with a profit of +12 pips. Later it touched the target (the planned +90 pips).
+- **Why it failed:** the exit came from emotion. There was no invalidation, no stop hit, and no target.
+- **Lesson:** a small win, but the math of the plan was broken. If it happens again and again, the [Expectancy](/en/learn/08-risk-management/07-expectancy) is ruined.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Common mistakes
+
+| Mistake                              | Why it happens             | What to do                                    |
+| :----------------------------------- | :------------------------- | :-------------------------------------------- |
+| Closing early out of fear            | Fear of losing profit      | Keep a rule for partial close or trail        |
+| Holding after invalidation           | Hoping "it will come back" | Exit by the written rule                      |
+| Not writing the reason for each exit | Laziness                   | One word for the reason in the journal        |
+| Mixing up stop and exit              | Unclear rules              | Write separate definitions for the four types |
+
+## Pro tips
+
+<Callout type="tip">
+  Before an exit, ask yourself: "Is the reason for this exit in my written
+  plan?" If not, the exit is probably emotional.
+</Callout>
+
+<Callout type="note">
+  An invalidation exit gives a smaller loss than the stop, but not always.
+  Sometimes price touches the invalidation and goes back. Look at the result of
+  this trade-off over a long sample.
+</Callout>
+
+## When this does not work
+
+- **If the invalidation is unclear:** the decision goes back to guesswork.
+- **If price touches the level on wicks again and again:** choose a close-based rule.
+- **In a fast market:** the exit price can also be worse than planned ([Slippage](/en/learn/10-trade-management-execution/04-slippage-requote-spread-widening)).
+- **If the time limit is very short:** even good trades are cut.
+
+## Summary
+
+<KeyTakeaways>
+
+- Four types of exit: target, stop, invalidation, time.
+- When the idea is proved wrong you can leave before the stop, but write the rule first.
+- A fear exit is not a rule exit.
+- Write the reason for each exit in your journal.
+
+</KeyTakeaways>
+
+## Practice
+
+Write the reason for the exit of your last five trades: target, stop, invalidation, time, or emotion? If there was an emotional exit, think about which rule would have made the result different.
+
+## Quiz
+
+1. What are the four written reasons for an exit?
+2. When does an invalidation exit happen?
+3. How can you recognize a fear exit?
+4. Why write the reason for the exit in the journal?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** Target, stop, invalidation, time.
+
+**2.** When the reason behind the trade breaks, before the stop is hit.
+
+**3.** No reason in the written plan matches it.
+
+**4.** It can be analyzed later, and emotional exits are caught by counting.
+
+</details>
+
+## Next steps
+
+- Before: [Slippage, Requote and Spread Widening](/en/learn/10-trade-management-execution/04-slippage-requote-spread-widening).
+- After: [Fundamental and Intermarket Analysis](/en/learn/11-fundamental-intermarket-analysis/01-central-bank-interest-rate-inflation).
+- Related: [Trading Plan Template](/en/learn/14-trading-plan-system/01-trading-plan-template).
+
+### Sources
+
+- <ExternalLink href="https://www.investopedia.com/terms/e/exitstrategy.asp">
+    Exit Strategy, Investopedia
+  </ExternalLink>
+- <ExternalLink href="https://www.investopedia.com/articles/trading/06/tradingplan.asp">
+    Trading Plan, Investopedia
+  </ExternalLink>
+
+<Disclaimer />

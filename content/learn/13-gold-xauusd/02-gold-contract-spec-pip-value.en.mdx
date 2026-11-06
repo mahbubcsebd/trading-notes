@@ -1,0 +1,181 @@
+---
+title: "Gold Contract Spec and Pip Value: How Much Money Is a $1 Move"
+description: "XAUUSD's contract size, lot, the value of a pip/point, working out profit and loss for each $1 move, and how it differs from forex."
+level: beginner
+tags: [gold, xauusd, contract-spec, lot, pip-value, point]
+instruments: [XAUUSD]
+timeframes: [H1]
+status: done
+sources:
+  - type: blog
+    title: "Pip - Investopedia"
+    url: "https://www.investopedia.com/terms/p/pip.asp"
+updated: 2026-11-06
+---
+
+# Gold Contract Spec and Pip Value: How Much Money Is a $1 Move
+
+You are used to hearing "10 pips" on EURUSD. On gold, the word "pip" means different things at different brokers. So first see how much leaves your account for each $1 move.
+
+## What you will be able to do
+
+- **State the contract size** of gold.
+- **Work out the value of each $1 move** for a given lot.
+- **Avoid the confusion** between pip and point.
+
+## Why it matters
+
+- **A wrong calculation makes risk ten times bigger.** If you get the definition of a pip wrong, the stop amount is wrong.
+- **Lot size stands on it.** [Gold Risk and Lot Size](/en/learn/13-gold-xauusd/08-gold-risk-lot-size) uses these numbers.
+- **It differs by broker.** The same lot may not be equal everywhere.
+
+Prerequisites: [Position Sizing](/en/learn/08-risk-management/02-position-sizing).
+
+## What is a contract spec
+
+**A contract spec is a list of how much of the asset one lot holds, the smallest step of the price, and the value of that step.**
+
+Think of a kind of weight measure. One lot means a fixed weight. If you know that weight, you know how much is lost when the price moves one dollar.
+
+At most brokers the rule is like this (check it with your broker):
+
+| Item                        | Usual value     |
+| :-------------------------- | :-------------- |
+| 1.00 lot                    | 100 troy ounces |
+| 0.10 lot                    | 10 ounces       |
+| 0.01 lot                    | 1 ounce         |
+| Price moves $1, on 1.00 lot | about $100      |
+| Price moves $1, on 0.01 lot | about $1        |
+
+Formula: **profit or loss = change in price ($) × number of ounces**.
+
+## Pip vs point
+
+In forex, the definition of a pip is almost universal. In gold it is not. Some brokers count 0.10 as one pip, and some count 0.01 as one point. So **when you hear "10 pips", confirm how many dollars it means from your broker's spec.**
+
+A safe habit: when you say stop or target, say it **in dollars**. "Stop $8 away" is never unclear.
+
+## What it looks like on a chart
+
+<Chart
+  id="gold-lot-risk-01"
+  height={440}
+  caption="Imaginary XAUUSD H1: the stop is $8 below entry, the target $16 above. On 0.10 lot, each $1 is about $10."
+/>
+
+In this trade the distance to the stop is $8. With 0.10 lot (10 ounces), if the stop is hit the loss is about $80, and if the target is hit the profit is about $160 (imaginary calculation, without spread).
+
+## Step by step: checking your own broker's spec
+
+<Steps>
+
+### Step 1: Open XAUUSD on the platform
+
+In Market Watch, right-click the symbol and look at the Specification.
+
+### Step 2: Find the contract size
+
+It will usually show "100", which means 100 ounces.
+
+### Step 3: Look at the minimum lot and step
+
+See whether it is 0.01. On a small account this matters.
+
+### Step 4: Check with a small calculation
+
+On demo, open 0.01 lot and see how much the account changes when price moves $1.
+
+</Steps>
+
+## Example 1: when it works (synthetic)
+
+- **Set in advance:** 0.05 lot, stop $6 away.
+- **Calculation:** 0.05 lot = 5 ounces. Loss = 6 × 5 = $30.
+- **Result:** if the stop is hit, exactly $30 is lost, matching the earlier calculation.
+- **Lesson:** if you know the spec, you know the risk in money beforehand.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Example 2: when it fails (synthetic)
+
+- **What was assumed:** "A gold pip and a EURUSD pip are the same", so out of habit with EURUSD lots, 1.00 lot was opened.
+- **What happened:** the stop was $5 away. On one lot $1 = $100, so when the stop was hit about $500 went.
+- **Why it failed:** a forex habit was applied to gold.
+- **Lesson:** when the instrument changes, look at the value of the lot again.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Common mistakes
+
+| Mistake                            | Why it happens                    | What to do                                                           |
+| :--------------------------------- | :-------------------------------- | :------------------------------------------------------------------- |
+| Mixing up pip and point            | The definition differs by broker  | Say everything in dollars                                            |
+| Using the forex lot habit          | Habit                             | Work out the value of each $1 first                                  |
+| Assuming without checking the spec | Thinking all brokers are the same | Open the Specification and look                                      |
+| Not counting the spread            | Mind on profit and loss           | See the [Spread lesson](/en/learn/13-gold-xauusd/07-spread-slippage) |
+
+## Pro tips
+
+<Callout type="tip">
+  Make a small table: lot, ounces, value of each $1, and the loss if the stop is
+  $5/$8/$10. Look it up instead of working it out every time.
+</Callout>
+
+<Callout type="warning">
+  Do not assume that at every broker 1 lot = 100 ounces. At some brokers it
+  differs. Confirm from your own spec.
+</Callout>
+
+## When this does not work
+
+- **If the account currency is not USD:** the conversion rate comes into the calculation, and the value changes slightly.
+- **If the spec differs for CFD or futures:** look at the spec of your own product.
+- **Leverage and margin calculations:** that is a separate topic, not in this lesson.
+
+## Summary
+
+<KeyTakeaways>
+
+- At most brokers 1 lot = 100 ounces, so a $1 move is about $100.
+- Profit or loss = change in price × number of ounces.
+- The value of a pip differs by broker, so say it in dollars.
+- Check the spec on your own platform.
+
+</KeyTakeaways>
+
+## Practice
+
+On your demo account, open the Specification of XAUUSD. Write down the contract size, minimum lot and lot step. Then work out the loss for a $5 stop on 0.01 lot.
+
+## Quiz
+
+1. How many ounces is 0.10 lot?
+2. On 0.20 lot, how much money changes when price moves $3?
+3. What is the problem with the word pip in gold?
+4. On 1.00 lot, what is the loss if a $5 stop is hit?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** 10 ounces.
+
+**2.** 0.20 lot = 20 ounces. 3 × 20 = $60.
+
+**3.** The definition differs by broker, so it is safe to say it in dollars.
+
+**4.** 5 × 100 = $500.
+
+</details>
+
+## Next steps
+
+- Before: [Why Gold Moves](/en/learn/13-gold-xauusd/01-why-gold-moves).
+- After: [DXY and US Yields](/en/learn/13-gold-xauusd/03-dxy-us-yields).
+
+### Sources
+
+- <ExternalLink href="https://www.investopedia.com/terms/p/pip.asp">
+    Pip, Investopedia
+  </ExternalLink>
+
+<Disclaimer />

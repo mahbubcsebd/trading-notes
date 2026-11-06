@@ -1,0 +1,191 @@
+---
+title: "Elliott Wave: Counting Rules, the Usable Part and the Limits"
+description: "The five-wave impulse and the A-B-C correction, the three inviolable rules, setting risk with the invalidation level of a wave count, and why a count is subjective, with two charts."
+level: advanced
+tags: [elliott-wave, impulse, correction, invalidation, wave-count]
+instruments: [EURUSD]
+timeframes: [H1]
+status: done
+sources:
+  - type: blog
+    title: "Elliott Wave Theory - Investopedia"
+    url: "https://www.investopedia.com/terms/e/elliottwavetheory.asp"
+updated: 2026-11-06
+---
+
+# Elliott Wave: Counting Rules, the Usable Part and the Limits
+
+There is a common joke that if you show the same chart to ten Elliott followers, you will get twelve wave counts. There is truth in the joke: Elliott is subjective. Still, it has one part that is really useful: **a clear invalidation level**. This lesson centers on that.
+
+## What you will be able to do
+
+- **Recognize the five-wave impulse and the A-B-C correction.**
+- **Check a count** with **three inviolable rules**.
+- **Work out the stop and target** from a count.
+- **Accept honestly the limit** of being subjective.
+
+## Why it matters
+
+- **A popular language for the wave shape of the market.** To follow other traders' talk you need to know the words.
+- **Useful for risk.** The clarity of "if this price breaks, the count is wrong" gives the stop a reason.
+- **A link to [Fibonacci](/en/learn/05-support-resistance/05-fibonacci-basics) and [trend structure](/en/learn/03-market-structure/02-trend-range-hhhl).**
+
+Prerequisites: [Wyckoff Basics](/en/learn/16-advanced/03-wyckoff-basics) and [Swing High-Low](/en/learn/03-market-structure/01-swing-high-low).
+
+## What is Elliott Wave
+
+**Elliott Wave is a theory that says a trend advances in five waves (impulse) and is corrected in three waves (A-B-C correction).**
+
+| Wave    | Direction                    | In short                            |
+| :------ | :--------------------------- | :---------------------------------- |
+| 1, 3, 5 | With the trend               | Impulse; 3 is usually the strongest |
+| 2, 4    | Against the trend            | Correction                          |
+| A, B, C | Correction after the impulse | A down, B up, C down                |
+
+## Three inviolable rules (for the impulse)
+
+1. **Wave 2 never goes past the starting point of wave 1** (it never retraces more than 100%).
+2. **Wave 3 is never the shortest of 1, 3 and 5.**
+3. **Wave 4 never enters the top of wave 1** (no overlap), in an ordinary impulse.
+
+If any rule is broken, the count is wrong. This is the theory's own "test".
+
+## What it looks like on a chart
+
+<Chart
+  id="elliott-impulse-01"
+  height={480}
+  caption="EURUSD H1 (educational, imaginary example): waves 1 to 5 up, then A-B-C down. Wave 1 = 100 pips, wave 3 = 160 pips (the biggest), wave 5 = 90 pips; the low of wave 4 (1.0947) is above the top of wave 1 (1.0900). Buy at 1.0853 at the end of wave 2, stop 1.0795 below the start of wave 1."
+/>
+
+All three rules matched. Buy at the end of wave 2, because the stop is small (58 pips) and wave 3 is likely to be big.
+
+## Step by step: from a count to a trade
+
+<Steps>
+
+### Step 1: Find a clear wave 1
+
+A clean push. If it is unclear, do not count.
+
+### Step 2: Look at wave 2
+
+Whether it went past the start of wave 1. If it did, the count is over.
+
+### Step 3: Entry and stop
+
+At the end of wave 2, or after its correction. The stop **just below** the start of wave 1, because that is the invalidation.
+
+### Step 4: Target
+
+At least 2R. A Fibonacci projection (such as multiples of the length of wave 1) is an extra guide, not a certainty.
+
+### Step 5: If a rule breaks, get out at once
+
+If wave 2 or wave 4 breaks a rule, the count is cancelled. Do not hold on saying "let me count another way".
+
+</Steps>
+
+## Example 1: when it works (synthetic)
+
+- **What there was:** wave 1: 1.0800 to 1.0900. Wave 2 came down to 1.0850 (50% retraced), above the start.
+- **While running:** buy 1.0853, stop 1.0795, target 1.0969 (2R).
+- **Result:** wave 3 rose as far as 1.1010, the target was hit, +2R. Later waves 4, 5 and A-B-C formed.
+- **Lesson:** from the count we got one clear stop. If the count is right, profit; if it is wrong, the loss is limited.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Example 2: when it fails (synthetic)
+
+<Chart
+  id="elliott-invalid-01"
+  height={440}
+  caption="EURUSD H1 (educational, imaginary example): the same start, but price pierces the start of wave 1 at 1.0800 and falls. The count is cancelled; the stop at 1.0795 was hit."
+/>
+
+- **What happened:** the same start, buy at 1.0853. But price pierced the start of wave 1 and fell.
+- **Result:** the stop at 1.0795 was hit, -1R.
+- **Why it failed:** wave 2 retraced more than 100% of wave 1, which breaks rule 1. The count was wrong at the root.
+- **Lesson:** a wrong count is normal. Because there was a stop, the loss was held at 1R. With the mindset "let me count again", moving the stop would have increased the loss.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Common mistakes
+
+| Mistake                                | Why it happens             | What to do                           |
+| :------------------------------------- | :------------------------- | :----------------------------------- |
+| Placing a pretty count by looking back | Hindsight bias             | Wait live and then check the count   |
+| Holding the count after a rule breaks  | Attachment to the idea     | Rule broken = get out                |
+| Mixing several degrees at once         | Looking at every wave      | One timeframe, one count             |
+| Treating a count as a forecast         | Wanting certainty          | Count = plan, not certainty          |
+| Elliott with no stop                   | "I know where the wave is" | The stop just below the invalidation |
+
+## Pro tips
+
+<Callout type="tip">
+  Write an alternative count too: "if this is not wave 2, then what?" With two
+  alternatives, the risk of sitting and believing in just one falls.
+</Callout>
+
+<Callout type="note">
+  Before making Elliott your main strategy, run your own
+  [backtest](/en/learn/15-backtesting-journal/01-how-to-backtest). Because it is
+  subjective, results can differ by user. This writing is educational, not proof
+  of effectiveness.
+</Callout>
+
+## When this does not work
+
+- **If the waves are unclear:** if you count by force, everything fits.
+- **On a small timeframe:** more noise, and both breaking and following the rules can be supported by reasoning.
+- **In a complex correction:** flat, zigzag, triangle, double three and other classes take separate effort to learn.
+- **On a news shock:** the count is useless in a moment.
+
+## Summary
+
+<KeyTakeaways>
+
+- The impulse is five waves, the correction is three waves (A-B-C).
+- The three rules: wave 2 does not pass the start, wave 3 is not the shortest, wave 4 does not enter wave 1.
+- The real job of a count: a clear invalidation level and stop.
+- A count is subjective; if a rule breaks, get out.
+
+</KeyTakeaways>
+
+## Practice
+
+On an old D1 chart, mark an impulse and check the three rules. Then ask someone else (or yourself a week later) to count the same chart. How closely do the two counts match?
+
+## Quiz
+
+1. How many waves are there in an impulse, and how many in a correction?
+2. What does it mean if wave 4 enters the top of wave 1?
+3. Where does the stop go from a count?
+4. What is Elliott's biggest limit?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** Five in an impulse, three in a correction (A-B-C).
+
+**2.** A rule of the ordinary impulse is broken, so the count is probably wrong.
+
+**3.** Just below the start of wave 1 (the invalidation).
+
+**4.** Subjectivity: different counts are possible on the same chart.
+
+</details>
+
+## Next steps
+
+- Before: [Wyckoff Basics](/en/learn/16-advanced/03-wyckoff-basics).
+- After: [Automation](/en/learn/16-advanced/05-automation).
+- Related: [Fibonacci Basics](/en/learn/05-support-resistance/05-fibonacci-basics).
+
+### Sources
+
+- <ExternalLink href="https://www.investopedia.com/terms/e/elliottwavetheory.asp">
+    Elliott Wave Theory, Investopedia
+  </ExternalLink>
+
+<Disclaimer />

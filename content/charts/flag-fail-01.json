@@ -1,0 +1,328 @@
+{
+  "symbol": "EURUSD",
+  "timeframe": "H4",
+  "mode": "synthetic",
+  "module": "06-trend-chart-patterns",
+  "lessonSlugs": [
+    "02-continuation-patterns"
+  ],
+  "notes": {
+    "en": "Illustrative synthetic data.",
+    "bn": "এটি শিক্ষামূলক কাল্পনিক ডেটা।"
+  },
+  "updatedAt": "2026-11-05T21:00:00Z",
+  "type": "trade-setup",
+  "id": "flag-fail-01",
+  "title": {
+    "en": "Flag That Fails",
+    "bn": "যে flag ব্যর্থ হলো"
+  },
+  "bias": "bullish",
+  "outcome": "loss",
+  "tags": [
+    "flag",
+    "failed-setup",
+    "continuation"
+  ],
+  "caption": {
+    "en": "Same pole, but the 'flag' retraces 61% over ten candles. Candle 18 pokes above the top with a small body; buy triggers at 1.0899, candle 19 reverses and stops out at 1.0854.",
+    "bn": "একই pole, কিন্তু 'flag' দশটি candle ধরে 61% নেমে আসে। ১৮ নম্বর candle ছোট body নিয়ে ওপরে উঁকি দেয়; 1.0899-এ buy trigger হয়, ১৯ নম্বর candle উল্টে 1.0854-এ stop কাটে।"
+  },
+  "annotations": [
+    {
+      "type": "trendline",
+      "from": {
+        "i": 8,
+        "price": 1.0968
+      },
+      "to": {
+        "i": 17,
+        "price": 1.0884
+      },
+      "color": "#3b82f6",
+      "label": "Flag top"
+    },
+    {
+      "type": "trendline",
+      "from": {
+        "i": 10,
+        "price": 1.0905
+      },
+      "to": {
+        "i": 17,
+        "price": 1.0861
+      },
+      "color": "#3b82f6",
+      "label": "Flag bottom"
+    },
+    {
+      "type": "marker",
+      "i": 8,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Pole top"
+    },
+    {
+      "type": "marker",
+      "i": 17,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "61% retrace"
+    },
+    {
+      "type": "marker",
+      "i": 18,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Weak break"
+    },
+    {
+      "type": "marker",
+      "i": 19,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Stopped out"
+    },
+    {
+      "type": "hline",
+      "price": 1.0899,
+      "label": "Buy entry",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.0854,
+      "label": "Stop",
+      "color": "#ef4444",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Retracement of 98 pips out of a 160-pip pole is 61%, and the pause lasted ten candles. That is not a pause, it is a reversal in slow motion. The break candle had a small body and no follow-through. Planned loss: 45 pips.",
+    "bn": "160 pip-এর pole থেকে 98 pip ফেরত মানে 61%, আর বিরতি চলল দশটি candle। এটি বিরতি নয়, ধীরগতির reversal। Break candle-এর body ছোট, কোনো গতি নেই। পরিকল্পিত ক্ষতি: 45 pip।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "A deep, long, sloppy pause is a warning, not a flag",
+      "bn": "গভীর, দীর্ঘ, এলোমেলো বিরতি flag নয়, সতর্কতা"
+    },
+    {
+      "en": "Small-body break with no follow-through = skip it",
+      "bn": "ছোট body-র break, গতি নেই = ছেড়ে দিন"
+    }
+  ],
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.0792,
+      "h": 1.0806,
+      "l": 1.0786,
+      "c": 1.08
+    },
+    {
+      "i": 1,
+      "o": 1.08,
+      "h": 1.0828,
+      "l": 1.0792,
+      "c": 1.082
+    },
+    {
+      "i": 2,
+      "o": 1.082,
+      "h": 1.085,
+      "l": 1.081,
+      "c": 1.084
+    },
+    {
+      "i": 3,
+      "o": 1.084,
+      "h": 1.0866,
+      "l": 1.0834,
+      "c": 1.086
+    },
+    {
+      "i": 4,
+      "o": 1.086,
+      "h": 1.0888,
+      "l": 1.0852,
+      "c": 1.088
+    },
+    {
+      "i": 5,
+      "o": 1.088,
+      "h": 1.091,
+      "l": 1.087,
+      "c": 1.09
+    },
+    {
+      "i": 6,
+      "o": 1.09,
+      "h": 1.0926,
+      "l": 1.0894,
+      "c": 1.092
+    },
+    {
+      "i": 7,
+      "o": 1.092,
+      "h": 1.0948,
+      "l": 1.0912,
+      "c": 1.094
+    },
+    {
+      "i": 8,
+      "o": 1.094,
+      "h": 1.0968,
+      "l": 1.093,
+      "c": 1.096
+    },
+    {
+      "i": 9,
+      "o": 1.096,
+      "h": 1.096,
+      "l": 1.0919,
+      "c": 1.0925
+    },
+    {
+      "i": 10,
+      "o": 1.0925,
+      "h": 1.0933,
+      "l": 1.0907,
+      "c": 1.0915
+    },
+    {
+      "i": 11,
+      "o": 1.0915,
+      "h": 1.0925,
+      "l": 1.089,
+      "c": 1.09
+    },
+    {
+      "i": 12,
+      "o": 1.09,
+      "h": 1.0911,
+      "l": 1.0894,
+      "c": 1.0905
+    },
+    {
+      "i": 13,
+      "o": 1.0905,
+      "h": 1.0913,
+      "l": 1.0877,
+      "c": 1.0885
+    },
+    {
+      "i": 14,
+      "o": 1.0885,
+      "h": 1.09,
+      "l": 1.0875,
+      "c": 1.089
+    },
+    {
+      "i": 15,
+      "o": 1.089,
+      "h": 1.0896,
+      "l": 1.0864,
+      "c": 1.087
+    },
+    {
+      "i": 16,
+      "o": 1.087,
+      "h": 1.0884,
+      "l": 1.0862,
+      "c": 1.0876
+    },
+    {
+      "i": 17,
+      "o": 1.0876,
+      "h": 1.0884,
+      "l": 1.0861,
+      "c": 1.0868
+    },
+    {
+      "i": 18,
+      "o": 1.0868,
+      "h": 1.0897,
+      "l": 1.0868,
+      "c": 1.0892
+    },
+    {
+      "i": 19,
+      "o": 1.0892,
+      "h": 1.0904,
+      "l": 1.0846,
+      "c": 1.0858
+    },
+    {
+      "i": 20,
+      "o": 1.0858,
+      "h": 1.0868,
+      "l": 1.083,
+      "c": 1.084
+    },
+    {
+      "i": 21,
+      "o": 1.084,
+      "h": 1.0846,
+      "l": 1.0825,
+      "c": 1.0831
+    },
+    {
+      "i": 22,
+      "o": 1.0831,
+      "h": 1.0839,
+      "l": 1.0814,
+      "c": 1.0822
+    },
+    {
+      "i": 23,
+      "o": 1.0822,
+      "h": 1.0832,
+      "l": 1.0801,
+      "c": 1.0811
+    },
+    {
+      "i": 24,
+      "o": 1.0811,
+      "h": 1.0817,
+      "l": 1.0794,
+      "c": 1.08
+    },
+    {
+      "i": 25,
+      "o": 1.08,
+      "h": 1.0808,
+      "l": 1.0782,
+      "c": 1.079
+    },
+    {
+      "i": 26,
+      "o": 1.079,
+      "h": 1.08,
+      "l": 1.077,
+      "c": 1.078
+    },
+    {
+      "i": 27,
+      "o": 1.078,
+      "h": 1.0786,
+      "l": 1.0764,
+      "c": 1.077
+    },
+    {
+      "i": 28,
+      "o": 1.077,
+      "h": 1.0778,
+      "l": 1.0752,
+      "c": 1.076
+    },
+    {
+      "i": 29,
+      "o": 1.076,
+      "h": 1.077,
+      "l": 1.0745,
+      "c": 1.075
+    }
+  ],
+  "entry": 1.0899
+}

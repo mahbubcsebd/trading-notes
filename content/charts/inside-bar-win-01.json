@@ -1,0 +1,210 @@
+{
+  "id": "inside-bar-win-01",
+  "title": {
+    "en": "Inside Bar in an Uptrend, Break of the Inside Bar High",
+    "bn": "Uptrend-এ inside bar, inside bar-এর high ভাঙলে entry"
+  },
+  "symbol": "GBPUSD",
+  "timeframe": "D1",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bullish",
+  "outcome": "win",
+  "tags": [
+    "inside-bar",
+    "price-action",
+    "continuation",
+    "trend",
+    "pattern"
+  ],
+  "module": "patterns",
+  "lessonSlugs": [],
+  "caption": {
+    "en": "Illustrative synthetic GBPUSD D1: in a steady uptrend, a strong bullish mother bar is followed by a smaller bar entirely inside its range. The next day breaks the inside bar's high, filling a buy stop in the trend direction; price reaches 2R.",
+    "bn": "শিক্ষামূলক কাল্পনিক GBPUSD D1: একটানা uptrend-এ একটি শক্তিশালী bullish mother bar, তারপর একটি ছোট bar পুরোটা তার range-এর ভেতরে। পরের দিন inside bar-এর high ভাঙে, trend-এর দিকে buy stop fill হয়; দাম 2R পর্যন্ত যায়।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data, not a real market record.",
+    "bn": "শিক্ষামূলক কাল্পনিক ডেটা, বাস্তব মার্কেটের রেকর্ড নয়।"
+  },
+  "updatedAt": "2026-11-06T12:00:00Z",
+  "annotations": [
+    {
+      "type": "marker",
+      "i": 7,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Mother bar"
+    },
+    {
+      "type": "marker",
+      "i": 8,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Inside bar"
+    },
+    {
+      "type": "hline",
+      "price": 1.2727,
+      "label": "Mother high",
+      "color": "#3b82f6",
+      "style": "dotted"
+    },
+    {
+      "type": "hline",
+      "price": 1.2649,
+      "label": "Mother low",
+      "color": "#3b82f6",
+      "style": "dotted"
+    },
+    {
+      "type": "hline",
+      "price": 1.2724,
+      "label": "Entry (IB high break)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.2677,
+      "label": "Stop",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.2818,
+      "label": "Target 2R",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candles 0-6 are an uptrend. Candle 7 is a large bullish mother bar. Candle 8's high and low both sit inside candle 7's range: an inside bar, a pause after the push. Candle 9 breaks the inside bar high and fills the buy stop; the stop sits below the inside bar low.",
+    "bn": "০-৬ নম্বর candle uptrend। ৭ নম্বর বড় bullish mother bar। ৮ নম্বরের high আর low দুটোই ৭ নম্বরের range-এর ভেতরে: inside bar, ধাক্কার পরের বিরতি। ৯ নম্বর inside bar-এর high ভেঙে buy stop fill করে; stop inside bar-এর low-এর নিচে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "An inside bar in a trend is a pause; trade the break in the trend direction",
+      "bn": "Trend-এ inside bar একটি বিরতি; trend-এর দিকের break-এ trade"
+    }
+  ],
+  "entry": 1.2724,
+  "stopLoss": 1.2677,
+  "takeProfit": 1.2818,
+  "rr": "1:2.0",
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.25,
+      "h": 1.25637,
+      "l": 1.24808,
+      "c": 1.254
+    },
+    {
+      "i": 1,
+      "o": 1.254,
+      "h": 1.25819,
+      "l": 1.25287,
+      "c": 1.257
+    },
+    {
+      "i": 2,
+      "o": 1.257,
+      "h": 1.2581,
+      "l": 1.25482,
+      "c": 1.2555
+    },
+    {
+      "i": 3,
+      "o": 1.2555,
+      "h": 1.26192,
+      "l": 1.25401,
+      "c": 1.26
+    },
+    {
+      "i": 4,
+      "o": 1.26,
+      "h": 1.26505,
+      "l": 1.25878,
+      "c": 1.2635
+    },
+    {
+      "i": 5,
+      "o": 1.2635,
+      "h": 1.26469,
+      "l": 1.26037,
+      "c": 1.2615
+    },
+    {
+      "i": 6,
+      "o": 1.2615,
+      "h": 1.26787,
+      "l": 1.25932,
+      "c": 1.2655
+    },
+    {
+      "i": 7,
+      "o": 1.2655,
+      "h": 1.2727,
+      "l": 1.2649,
+      "c": 1.2721
+    },
+    {
+      "i": 8,
+      "o": 1.2721,
+      "h": 1.2721,
+      "l": 1.2683,
+      "c": 1.2703
+    },
+    {
+      "i": 9,
+      "o": 1.2703,
+      "h": 1.2746,
+      "l": 1.2699,
+      "c": 1.2742
+    },
+    {
+      "i": 10,
+      "o": 1.2742,
+      "h": 1.27925,
+      "l": 1.27281,
+      "c": 1.2777
+    },
+    {
+      "i": 11,
+      "o": 1.2777,
+      "h": 1.27818,
+      "l": 1.27585,
+      "c": 1.2765
+    },
+    {
+      "i": 12,
+      "o": 1.2765,
+      "h": 1.28178,
+      "l": 1.27561,
+      "c": 1.2805
+    },
+    {
+      "i": 13,
+      "o": 1.2805,
+      "h": 1.28417,
+      "l": 1.27952,
+      "c": 1.2835
+    },
+    {
+      "i": 14,
+      "o": 1.2835,
+      "h": 1.2839,
+      "l": 1.28203,
+      "c": 1.2825
+    },
+    {
+      "i": 15,
+      "o": 1.2825,
+      "h": 1.28733,
+      "l": 1.28157,
+      "c": 1.2863
+    }
+  ]
+}

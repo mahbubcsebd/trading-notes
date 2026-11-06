@@ -1,19 +1,243 @@
 ---
-title: "Single Candle Patterns"
-description: "Doji, hammer, shooting star - single candle signals"
+title: "Single Candle Patterns: আকার নয়, আকার + জায়গা পড়ুন"
+description: "Doji, hammer, hanging man, inverted hammer, shooting star ও marubozu কীভাবে চিনবেন, কখন কাজ করে, কখন ফাঁদ হয় — chart example ও stop-loss সহ।"
 level: beginner
-tags: []
-status: draft
-updated: 2026-10-10
+tags: [candlestick, doji, hammer, shooting-star, marubozu]
+instruments: [EURUSD]
+timeframes: [H1, H4]
+status: done
+sources:
+  - type: blog
+    title: "Candlestick Chart - Investopedia"
+    url: "https://www.investopedia.com/terms/c/candlestick.asp"
+  - type: blog
+    title: "Hammer Candlestick - Investopedia"
+    url: "https://www.investopedia.com/terms/h/hammer.asp"
+  - type: blog
+    title: "Doji - Investopedia"
+    url: "https://www.investopedia.com/terms/d/doji.asp"
+  - type: blog
+    title: "Shooting Star - Investopedia"
+    url: "https://www.investopedia.com/terms/s/shootingstar.asp"
+  - type: book
+    title: "Japanese Candlestick Charting Techniques - Steve Nison"
+    url: ""
+    note: "Hammer, hanging man, shooting star অধ্যায়"
+updated: 2026-11-05
 ---
 
-# Single Candle Patterns
+# Single Candle Patterns: আকার নয়, আকার + জায়গা পড়ুন
+
+Chart-এ একটা সুন্দর hammer দেখে আপনি buy করলেন। দাম আরও নেমে stop লাগিয়ে দিল। পরদিন একই আকারের আরেকটা candle দেখে ছেড়ে দিলেন, আর সেটাই ছিল সত্যিকারের reversal। দুটো candle দেখতে হুবহু এক ছিল। তফাত ছিল শুধু একটা জিনিসে: কোথায় তৈরি হয়েছে।
+
+## এই লেখা পড়ে আপনি যা পারবেন
+
+- ছয়টি single candle pattern (doji, hammer, hanging man, inverted hammer, shooting star, marubozu) **চিনতে পারবেন**।
+- একই আকারের candle-এর নাম **trend অনুযায়ী কেন বদলায়** তা বলতে পারবেন।
+- Pattern, confirmation ও stop-loss নিয়ে একটি সহজ **পড়ার পদ্ধতি ব্যবহার করতে পারবেন**।
+- যে জায়গায় এই pattern ফাঁদ হয়, সেটা **এড়াতে পারবেন**।
+
+## কেন এটি জরুরি
+
+- **এগুলোই সবচেয়ে বেশি চোখে পড়ে।** Chart-এ সবচেয়ে সহজে ধরা পড়ে বলে নতুন trader-রা সবার আগে এগুলোর পেছনেই ছোটেন।
+- **নামের পেছনে ছুটলে লোকসান হয়।** "Hammer দেখলেই buy" ধরনের নিয়ম জায়গা না দেখলে কাজ করে না।
+- **এগুলো দিয়ে stop-loss বসানো যায়।** Pattern-এর wick-ই বলে দেয় আপনার ধারণা ভুল প্রমাণ হলে দাম কোথায় যাবে।
+
+পূর্বশর্ত: [Anatomy of a Candle](/bn/learn/04-candlesticks/01-anatomy-of-a-candle) (body, wick, open, close)। Trend চেনার জন্য দেখে নিন [Trend ও Range](/bn/learn/03-market-structure/02-trend-range-hhhl)।
+
+## Single candle pattern কী
+
+**Single candle pattern হলো একটিমাত্র candle-এর আকার, যা দেখে বোঝা যায় ওই সময়ে কোন পক্ষ জিতেছে বা কে ফিরে গেছে।**
+
+এটাকে ডাক্তারের এক নজরের মতো ভাবুন। রোগীর মুখের রং দেখে ডাক্তার একটা সন্দেহ করেন, কিন্তু ওষুধ দেন না। আগে ইতিহাস জানেন, পরীক্ষা করান। Candle-এর আকারও একটি সন্দেহ মাত্র। Trend আর জায়গা হলো রোগীর ইতিহাস।
+
+সূত্র মনে রাখুন:
+
+**Pattern = আকার + জায়গা (trend ও level) + confirmation।**
+
+তিনটির একটি বাদ গেলে সেটা এখনো pattern নয়, শুধু একটা আকার।
+
+## চারটি মৌলিক আকার
+
+প্রথমে শুধু আকারগুলো চিনুন। এখানে "লম্বা" মানে প্রচলিত rule of thumb: wick, body-র অন্তত দ্বিগুণ। এটা কঠোর নিয়ম নয়, বই ও প্ল্যাটফর্মভেদে সামান্য বদলায়।
+
+| আকার                     | দেখতে কেমন                                      | বলে কী                                   |
+| :----------------------- | :---------------------------------------------- | :--------------------------------------- |
+| **Doji**                 | open ≈ close, body প্রায় নেই                   | দ্বিধা, কোনো পক্ষই জেতেনি                |
+| **Marubozu**             | wick নেই বা খুব ছোট, বড় body                   | একপক্ষ শুরু থেকে শেষ পর্যন্ত নিয়ন্ত্রণে |
+| **Hammer-আকার**          | ছোট body উপরে, লম্বা lower wick, ছোট upper wick | নিচে গিয়ে buyer ফিরিয়ে এনেছে           |
+| **Inverted-hammer-আকার** | ছোট body নিচে, লম্বা upper wick, ছোট lower wick | উপরে গিয়ে seller ফিরিয়ে এনেছে          |
+
+চারটি আকার, অথচ pattern ছয়টি। বাকি দুটি কোথায়? এখানেই মূল কৌশল।
+
+## একই আকার, দুই নাম: trend ঠিক করে
+
+Hammer-আকার আর inverted-hammer-আকারের প্রতিটির নাম নির্ভর করে তার **আগের trend**-এর ওপর।
+
+| আকার                                    | Downtrend-এর পরে                                | Uptrend-এর পরে                                |
+| :-------------------------------------- | :---------------------------------------------- | :-------------------------------------------- |
+| লম্বা lower wick (hammer-আকার)          | **Hammer** (সম্ভাব্য bullish reversal)          | **Hanging man** (সম্ভাব্য bearish reversal)   |
+| লম্বা upper wick (inverted-hammer-আকার) | **Inverted hammer** (সম্ভাব্য bullish reversal) | **Shooting star** (সম্ভাব্য bearish reversal) |
+
+মানে আপনাকে আকারের চারটি নাম মুখস্থ করতে হবে না। দুটি আকার চিনুন, তারপর প্রশ্ন করুন: "আগে কোন দিকে যাচ্ছিল?"
+
+<Callout type="note">
+  Doji ও marubozu-র নাম trend-এর ওপর নির্ভর করে না। তবে তাদের অর্থ জায়গা
+  অনুযায়ী বদলায়। Support-এ doji এক কথা, ফাঁকা জায়গায় আরেক কথা।
+</Callout>
+
+## Chart-এ কেমন দেখায়
+
+<Chart
+  id="single-candle-hammer-01"
+  height={420}
+  caption="EURUSD H4 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — Downtrend support-এ পৌঁছে hammer তৈরি করে, পরের candle তার high-এর উপরে close করে"
+/>
+
+৩টি জিনিস একসঙ্গে মিলেছে:
+
+1. **আকার:** ১০ নম্বর candle-এ lower wick body-র কয়েকগুণ, upper wick প্রায় নেই।
+2. **জায়গা:** দাম আগে একবার এই support থেকে ফিরেছে, ঠিক সেখানেই hammer।
+3. **Confirmation:** পরের candle hammer-এর high-এর উপরে close করেছে।
+
+## ধাপে ধাপে: single candle pattern পড়ার পদ্ধতি
+
+<Steps>
+
+### ধাপ ১: আগে trend দেখুন
+
+শেষ ৮-১০টি candle কোন দিকে গেছে? Trend না থাকলে reversal pattern বলে কিছু নেই।
+
+### ধাপ ২: একটি জায়গা খুঁজুন
+
+কাছে কি কোনো [support বা resistance](/bn/learn/05-support-resistance/01-levels-vs-zones) আছে? Pattern সেই জায়গার উপর বা কাছে না হলে সন্দেহ বাড়ান।
+
+### ধাপ ৩: আকার মাপুন
+
+Wick কি body-র অন্তত দ্বিগুণ? Candle কি আশপাশের candle-এর তুলনায় ছোট নয়? ছোট ছোট candle-এর মধ্যে মাপা wick অর্থহীন।
+
+### ধাপ ৪: Candle close হওয়ার অপেক্ষা করুন
+
+চলমান candle প্রতি সেকেন্ডে বদলায়। শেষ না হওয়া পর্যন্ত নাম দেবেন না।
+
+### ধাপ ৫: Confirmation চান
+
+Bullish pattern-এর পরে পরের candle যদি pattern-এর high-এর উপরে close না করে, ধরে নিন সংকেত দুর্বল। Bearish হলে low-এর নিচে।
+
+### ধাপ ৬: Stop আগে ঠিক করুন
+
+Stop বসবে pattern-এর wick-এর বাইরে (hammer-এ low-এর সামান্য নিচে, shooting star-এ high-এর সামান্য উপরে)। Stop কত pip দূরে, সেটা দেখেই [position size](/bn/learn/08-risk-management/02-position-sizing) ঠিক করুন, উল্টোটা নয়। আরও দেখুন [Stop Loss Placement](/bn/learn/10-trade-management-execution/01-stop-loss-placement)।
+
+</Steps>
+
+## উদাহরণ ১: যখন কাজ করে (কাল্পনিক)
+
+উপরের chart-টিই দেখুন।
+
+- **কী দেখা যাচ্ছিল:** দীর্ঘ downtrend, দাম 1.0750 support-এ আগেও ফিরেছে। ১০ নম্বর candle support-এর নিচে নেমে high-এর কাছে close করল।
+- **সিদ্ধান্ত:** আকার, জায়গা, দুটোই মিলছে। কিন্তু entry এখনই নয়। পরের candle-এর অপেক্ষা।
+- **Confirmation:** ১১ নম্বর candle hammer-এর high-এর (1.0752) উপরে close করল। এখানে buy, stop wick-এর low (1.0702) থেকে সামান্য নিচে 1.0695-এ।
+- **ফল:** দাম ধাপে ধাপে উঠল।
+- **শিক্ষা:** Stop-এর দূরত্ব প্রায় 55 pip। সেই অনুযায়ী ছোট size নিতে হয়েছে। Wick যত লম্বা, stop তত দূরে, size তত ছোট।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়, কোনো ফলই গ্যারান্টি নয়।)
+
+## উদাহরণ ২: যখন ফাঁদ হয় (কাল্পনিক)
+
+<Chart
+  id="single-candle-star-fail-01"
+  height={420}
+  caption="EURUSD H4 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — স্থির uptrend-এ shooting star, কাছে কোনো resistance নেই, দাম তার high ভেঙে এগিয়ে যায়"
+/>
+
+- **কী দেখা যাচ্ছিল:** টানা bullish candle, তারপর ৬ নম্বরে লম্বা upper wick। পাঠ্যবইয়ের shooting star।
+- **ভুল সিদ্ধান্ত:** "Uptrend-এর শেষে shooting star, sell করি।" ৭ নম্বর candle star-এর low (1.0938) ভাঙায় sell trigger হলো।
+- **কী হলো:** পরের candle star-এর high-এর (1.0990) উপরে close করল। Stop (1.0995) লাগল।
+- **কেন ব্যর্থ:** আকার ঠিক ছিল, কিন্তু জায়গা ছিল না। কাছাকাছি কোনো resistance ছিল না, trend স্থির ছিল। Wick ছিল শুধু একটা ক্ষণিক প্রতিরোধ।
+
+**শিক্ষা:** জায়গা ছাড়া shooting star শুধু একটা আকার। এই লোকসান ছোট ছিল, কারণ stop আগে ঠিক করা ছিল।
+
+## সাধারণ ভুল
+
+| ভুল                                 | কেন হয়                              | কী করবেন                               |
+| :---------------------------------- | :----------------------------------- | :------------------------------------- |
+| আকার দেখেই entry                    | নাম পরিচিত, দেখতে সহজ                | আগে trend ও level দেখুন                |
+| Confirmation ছাড়া entry            | তাড়াহুড়ো, মিস করার ভয়             | পরের candle-এর close পর্যন্ত থামুন     |
+| Hammer আর hanging man গুলিয়ে ফেলা  | আকার এক                              | আগে trend দেখুন, তারপর নাম দিন         |
+| Doji দেখলেই reversal ধরা            | Doji-র মানে দ্বিধা, উল্টো যাত্রা নয় | Doji-র পরের candle কোন দিকে যায় দেখুন |
+| ছোট timeframe-এর pattern-কে বড় ধরা | সব candle সমান মনে হয়               | H1, H4, D1 পছন্দ করুন; M1-M5 এড়ান     |
+| Wick-এর ভেতরে stop বসানো            | ছোট stop ভালো লাগে                   | Stop wick-এর বাইরে, size ছোট করুন      |
+
+## Pro tips
+
+<Callout type="tip">
+  একই জায়গায় দুই-তিনটি pattern পরপর এলে গুরুত্ব বাড়ে। একটি pattern একা এলে
+  সন্দেহ রাখুন।
+</Callout>
+
+<Callout type="tip">
+  Marubozu-কে শুধু শক্তির চিহ্ন ভাববেন না। বড় trend-এর শেষে একটি অতি-বড়
+  marubozu অনেক সময় exhaustion হয়। জায়গা দেখুন।
+</Callout>
+
+<Callout type="warning">
+  "Hammer = buy", "shooting star = sell" ধরনের স্থির নিয়ম বাজারে কাজ করে না।
+  কোনো pattern-এর সাফল্যের হার নিয়ে কেউ গ্যারান্টি দিলে সতর্ক হোন।
+</Callout>
+
+## কখন এটা কাজ করে না
+
+- **Trend না থাকলে (range বা choppy বাজারে):** Reversal-এর জন্য আগে কিছু একটা চলতে হয়।
+- **Level ছাড়া ফাঁকা জায়গায়:** উদাহরণ ২-এর মতো।
+- **ছোট timeframe বা কম liquidity-তে:** আকার প্রায় এলোমেলো।
+- **বড় news-এর সময়:** wick কৃত্রিমভাবে লম্বা হয়, সেটা বাজারের স্বাভাবিক মত নয়।
+- **খুব ছোট candle-এ:** চারপাশের candle-এর চেয়ে ছোট হলে "লম্বা" wick আসলে কিছু নয়।
+
+## সারসংক্ষেপ
 
 <KeyTakeaways>
-- এই lesson টি এখনো লেখা হয়নি।
-- পরবর্তীতে বিস্তারিত যোগ করা হবে।
+
+- Pattern = আকার + জায়গা + confirmation। একটি বাদ গেলে সেটা শুধু আকার।
+- দুটি আকার (লম্বা lower wick, লম্বা upper wick) trend অনুযায়ী চারটি নাম পায়: hammer, hanging man, inverted hammer, shooting star।
+- Doji দ্বিধা, marubozu নিয়ন্ত্রণ। কোনোটিই একা reversal নয়।
+- Stop বসবে wick-এর বাইরে; stop-এর দূরত্ব দেখে size ঠিক করুন।
+
 </KeyTakeaways>
 
-## Introduction
+## অনুশীলন
 
-*এই section টি draft আছে। শীঘ্রই বিস্তারিত content যোগ করা হবে।*
+TradingView-এ EUR/USD-এর H4 chart খুলুন। শেষ ২ মাসে লম্বা wick-যুক্ত ৫টি candle খুঁজুন। প্রতিটির জন্য লিখুন: আগের trend, কাছে কোনো level ছিল কি না, পরের candle কী করল, আর আপনি তখন কোথায় stop বসাতেন। ৫টির মধ্যে কতটি তিনটি শর্তই মিলিয়েছিল, গুনে দেখুন।
+
+## কুইজ
+
+1. একই আকারের candle uptrend-এর পরে এলে সেটিকে কী বলে, আর downtrend-এর পরে?
+2. Shooting star দেখলে আগে কোন দুটি জিনিস দেখা উচিত?
+3. Doji কী নির্দেশ করে?
+4. Hammer-এর stop কোথায় বসে?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** লম্বা lower wick হলে: uptrend-এর পরে hanging man, downtrend-এর পরে hammer।
+
+**২.** আগের trend উপরমুখী কি না, আর কাছে resistance আছে কি না।
+
+**৩.** দ্বিধা। Open ও close প্রায় সমান, কোনো পক্ষই জেতেনি। একা এটি reversal নয়।
+
+**৪.** Hammer-এর low-এর সামান্য নিচে। Wick-এর ভেতরে নয়।
+
+</details>
+
+## পরের ধাপ
+
+- আগে: [Anatomy of a Candle](/bn/learn/04-candlesticks/01-anatomy-of-a-candle)।
+- পরে: [Two Candle Patterns](/bn/learn/04-candlesticks/03-two-candle-patterns)।
+- জায়গা বোঝা: [Candle Context](/bn/learn/04-candlesticks/05-candle-context)।
+
+### সূত্র
+
+- [Hammer, Investopedia](https://www.investopedia.com/terms/h/hammer.asp)
+- [Doji, Investopedia](https://www.investopedia.com/terms/d/doji.asp)
+- [Shooting Star, Investopedia](https://www.investopedia.com/terms/s/shootingstar.asp)
+
+<Disclaimer />

@@ -1,3 +1,11 @@
 {
-  "title": "Advanced"
+  "title": "Advanced",
+  "pages": [
+    "00-overview",
+    "01-smart-money-concepts-ict-basics",
+    "02-volume-profile-market-profile",
+    "03-wyckoff-basics",
+    "04-elliott-wave",
+    "05-automation"
+  ]
 }

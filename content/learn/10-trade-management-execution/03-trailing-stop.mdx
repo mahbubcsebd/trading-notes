@@ -1,14 +1,186 @@
 ---
-title: "Trailing stop"
-description: "Detailed notes on Trailing stop"
-status: draft
-updated: 2026-10-10
+title: "Trailing Stop: চলমান লাভ রক্ষার নিয়ম"
+description: "Trailing stop কী, structure ও ATR দিয়ে কীভাবে সরাবেন, কেন খুব কাছের trail আগেই বের করে দেয় — একই trade-এর দুই ধরনের chart সহ।"
+level: intermediate
+tags: [trailing-stop, trade-management, structure, atr, exit]
+instruments: [EURUSD]
+timeframes: [H1]
+status: done
+sources:
+  - type: blog
+    title: "Trailing Stop - Investopedia"
+    url: "https://www.investopedia.com/terms/t/trailingstop.asp"
+  - type: blog
+    title: "Trailing Stop - BabyPips"
+    url: "https://www.babypips.com/learn/forex/trailing-stop"
+updated: 2026-11-05
 ---
 
-# Trailing stop
+# Trailing Stop: চলমান লাভ রক্ষার নিয়ম
 
-<div className="rounded-xl border border-border bg-card p-6 text-center text-muted-foreground my-8">
-  <p className="text-3xl mb-4">🚧</p>
-  <p className="font-semibold text-foreground">Coming in Phase 2</p>
-  <p className="text-sm mt-1">This module is under construction.</p>
-</div>
+Trade ভালো চলছে, লাভ বাড়ছে। এখন দুটি ভয়: আগে বেরিয়ে বড় চাল হারানো, অথবা বেশি অপেক্ষায় লাভ ফেরত দেওয়া। Trailing stop এই দুইয়ের মাঝের রাস্তা।
+
+## এই লেখা পড়ে আপনি যা পারবেন
+
+- Trailing stop **কীভাবে কাজ করে তা বলতে পারবেন**।
+- Structure দিয়ে **stop সরাতে পারবেন**।
+- খুব কাছের trail-এর **ক্ষতি বুঝে নিজের দূরত্ব ঠিক করতে পারবেন**।
+
+## কেন এটি জরুরি
+
+- **লাভ রক্ষা ও চাল চালানো একসঙ্গে।** Stop ওপরে ওঠে, trade চলতে থাকে।
+- **আগে লেখা নিয়ম আবেগ কমায়।** "এবার বের হই" ভাবনা নিয়মে বদলে যায়।
+- **ভুল trail দাম খরচ করে।** খুব কাছে হলে চাল ছাড়েন, খুব দূরে হলে লাভ ফেরত দেন।
+
+পূর্বশর্ত: [Take Profit ও Partial Close](/bn/learn/10-trade-management-execution/02-take-profit-partial-close) এবং [ATR](/bn/learn/07-technical-indicators/04-atr-stop-size)।
+
+## Trailing Stop কী
+
+**Trailing stop হলো এমন stop, যা দাম লাভের দিকে গেলে সঙ্গে সঙ্গে সরে, কিন্তু উল্টো দিকে কখনো সরে না।**
+
+ভাবুন সিঁড়ি ওঠা। প্রতি ধাপে পা রাখার আগের ধাপ আপনার নিরাপদ জায়গা। পিছলে গেলে আগের ধাপে থামেন, একেবারে নিচে নয়।
+
+| পদ্ধতি          | কীভাবে সরে                        | সুবিধা                  |
+| :-------------- | :-------------------------------- | :---------------------- |
+| Structure trail | প্রতিটি নতুন higher low-এর নিচে   | চালের গঠন মেনে চলে      |
+| ATR trail       | সর্বোচ্চ দামের নিচে ATR-এর গুণিতক | বাজারের গতির সঙ্গে মেলে |
+| Moving average  | MA-এর নিচে close হলে              | সহজ, trend-ভিত্তিক      |
+
+## Chart-এ কেমন দেখায়
+
+<Chart
+  id="trail-structure-win-01"
+  height={440}
+  caption="EURUSD H1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — Buy 1.0900, শুরুর stop 1.0870। প্রতিটি higher low-এর পর stop ওপরে ওঠে (লাল ধাপ-রেখা)। Trailing stop লাগলে প্রায় 64 pip লাভে exit।"
+/>
+
+লাল রেখাটি সিঁড়ির মতো ওপরে উঠেছে, কখনো নামেনি।
+
+## ধাপে ধাপে: structure trail
+
+<Steps>
+
+### ধাপ ১: শুরুর stop বসান
+
+[Structure-এর ওপারে](/bn/learn/10-trade-management-execution/01-stop-loss-placement)। Trailing শুরু হয় লাভে যাওয়ার পর।
+
+### ধাপ ২: নতুন higher low-এর অপেক্ষা
+
+দাম ওপরে গিয়ে pullback করে নতুন [higher low](/bn/learn/03-market-structure/02-trend-range-hhhl) তৈরি করুক।
+
+### ধাপ ৩: Stop সরান
+
+নতুন higher low-এর সামান্য নিচে। Buffer রাখুন, noise ও spread-এর জন্য।
+
+### ধাপ ৪: কখনো পিছনে নয়
+
+Stop শুধু লাভের দিকে সরে। দাম নামলেও stop নামবে না।
+
+### ধাপ ৫: Stop লাগলে বের হন
+
+লাভে বের হওয়াই নিয়ম। "আরেকটু" ভাবনা নয়।
+
+</Steps>
+
+## উদাহরণ ১: যখন কাজ করে (কাল্পনিক)
+
+- **আগে থেকে ঠিক:** ঝুঁকি 1%, শুরুর stop 30 pip।
+- **ফল:** দুটি higher low-এর নিচে stop উঠেছে। দাম উঁচুতে গিয়ে নেমে stop ছুঁয়েছে, প্রায় 64 pip (2R-এর বেশি) লাভ।
+- **শিক্ষা:** Structure trail স্বাভাবিক pullback সহ্য করেছে, আসল ভাঙনে বের করেছে।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়।)
+
+## উদাহরণ ২: যখন ব্যর্থ হয় (কাল্পনিক)
+
+<Chart
+  id="trail-tight-fail-01"
+  height={440}
+  caption="EURUSD H1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — একই trade ও একই candle, কিন্তু stop সর্বোচ্চ দামের মাত্র 12 pip নিচে trail করে। স্বাভাবিক pullback-এ প্রায় 44 pip লাভে বের হয়, তারপর trend আরও উঠে।"
+/>
+
+- **কী দেখা যাচ্ছিল:** একই চাল, একই entry।
+- **ফল:** ছোট pullback-এ কাছের trail লেগে exit, লাভ প্রায় 44 pip।
+- **কেন ব্যর্থ:** Trail স্বাভাবিক pullback-এর চেয়ে সংকীর্ণ ছিল।
+- **শিক্ষা:** লাভ নিরাপদ, কিন্তু চালের বড় অংশ হাতছাড়া।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়।)
+
+## সাধারণ ভুল
+
+| ভুল                          | কেন হয়              | কী করবেন                                |
+| :--------------------------- | :------------------- | :-------------------------------------- |
+| প্রতি candle-এর নিচে trail   | লাভ বাঁচানোর তাড়া   | structure বা ATR-এর গুণিতক ব্যবহার করুন |
+| লাভে যাওয়ার আগেই trail শুরু | ভয়                  | আগে শুরুর stop-এর নিয়ম মানুন           |
+| Trail পিছনে সরানো            | লাভ ছাড়তে না চাওয়া | stop শুধু একদিকে সরে                    |
+| Trade-এর মাঝে পদ্ধতি বদলানো  | অনিশ্চয়তা           | আগে বাছুন, শেষ পর্যন্ত মানুন            |
+
+## Pro tips
+
+<Callout type="tip">
+  Trail-এর দূরত্ব ঠিক করুন সাম্প্রতিক pullback-এর আকার দেখে। সাধারণ pullback যত
+  pip, trail তার চেয়ে বেশি হওয়া উচিত।
+</Callout>
+
+<Callout type="note">
+  Trailing stop আর partial close একসঙ্গে ব্যবহার করা যায়: অর্ধেক আগে বন্ধ,
+  বাকিটা trail।
+</Callout>
+
+## কখন এটা কাজ করে না
+
+- **Range বাজারে:** trend নেই, trail বারবার কাটে।
+- **দ্রুত চালে gap হলে:** stop-এর দামে fill না-ও হতে পারে ([Slippage](/bn/learn/10-trade-management-execution/04-slippage-requote-spread-widening))।
+- **খুব সংক্ষিপ্ত trail হলে:** শুধু noise-এ বের হন।
+- **Trend শেষ হলে:** লাভ ফেরত যায়, তাই target-ও রাখুন।
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- Trailing stop লাভের দিকে সরে, কখনো পিছনে নয়।
+- Structure বা ATR দিয়ে trail করুন, প্রতি candle-এর নিচে নয়।
+- খুব কাছের trail চাল ছাড়ায়, খুব দূরের লাভ ফেরত দেয়।
+- Trail-এর নিয়ম trade-এর আগে লিখুন।
+
+</KeyTakeaways>
+
+## অনুশীলন
+
+একটি trend বেছে নিন। প্রতিটি higher low-এর নিচে একটি trailing stop আঁকুন এবং ATR-ভিত্তিক trail আঁকুন। কোনটি কোথায় বের করত, ফল তুলনা করুন।
+
+## কুইজ
+
+1. Trailing stop কোন দিকে সরে?
+2. খুব কাছের trail-এর ক্ষতি কী?
+3. Structure trail-এ stop কোথায় যায়?
+4. Range বাজারে trailing কেন ভালো কাজ করে না?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** শুধু লাভের দিকে।
+
+**২.** স্বাভাবিক pullback-এ বের হয়ে চালের বেশিরভাগ ছেড়ে যায়।
+
+**৩.** নতুন higher low-এর সামান্য নিচে।
+
+**৪.** Trend নেই, দাম উঠানামা করে বারবার trail কেটে দেয়।
+
+</details>
+
+## পরের ধাপ
+
+- আগে: [Take Profit ও Partial Close](/bn/learn/10-trade-management-execution/02-take-profit-partial-close)।
+- পরে: [Slippage, Requote ও Spread Widening](/bn/learn/10-trade-management-execution/04-slippage-requote-spread-widening)।
+- সম্পর্কিত: [Moving Average](/bn/learn/07-technical-indicators/01-moving-averages-crossover)।
+
+### সূত্র
+
+- <ExternalLink href="https://www.investopedia.com/terms/t/trailingstop.asp">
+    Trailing Stop, Investopedia
+  </ExternalLink>
+- <ExternalLink href="https://www.babypips.com/learn/forex/trailing-stop">
+    Trailing Stop, BabyPips
+  </ExternalLink>
+
+<Disclaimer />

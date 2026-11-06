@@ -1,9 +1,12 @@
 {
   "title": "Trading Psychology",
   "pages": [
+    "00-overview",
     "01-discipline",
-    "02-fomo-revenge-trading",
-    "03-journaling-habit",
-    "04-routine"
+    "02-overtrading",
+    "03-accepting-losses",
+    "04-fomo-revenge-trading",
+    "05-journaling-habit",
+    "06-routine"
   ]
 }

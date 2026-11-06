@@ -1,11 +1,13 @@
 {
   "title": "Foundations",
   "pages": [
+    "00-overview",
     "01-what-is-forex",
     "02-market-participants",
     "03-pips-lots-leverage-margin",
     "04-spread-commission-swap",
     "05-trading-sessions",
-    "06-reading-a-chart"
+    "06-reading-a-chart",
+    "07-types-of-trading-platforms-tools"
   ]
 }

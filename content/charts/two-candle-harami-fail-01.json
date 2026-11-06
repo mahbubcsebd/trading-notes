@@ -1,0 +1,72 @@
+{
+  "id": "two-candle-harami-fail-01",
+  "title": {
+    "en": "Bullish Harami in a Strong Downtrend That Failed",
+    "bn": "জোরালো downtrend-এ bullish harami যা ব্যর্থ হলো"
+  },
+  "symbol": "EURUSD",
+  "timeframe": "H4",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bullish",
+  "outcome": "loss",
+  "tags": ["harami", "candlestick", "two-candle", "failure"],
+  "module": "04-candlesticks",
+  "lessonSlugs": ["03-two-candle-patterns"],
+  "caption": {
+    "en": "A bullish harami forms mid-downtrend with no support nearby. Price closes above it, then collapses through its low.",
+    "bn": "কাছে কোনো support ছাড়া downtrend-এর মাঝখানে bullish harami। দাম এর উপরে close করে, তারপর low ভেঙে নেমে যায়।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data.",
+    "bn": "এটি শিক্ষামূলক কাল্পনিক ডেটা।"
+  },
+  "updatedAt": "2026-11-05T12:00:00Z",
+  "annotations": [
+    {
+      "type": "marker",
+      "i": 6,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Bullish harami"
+    },
+    {
+      "type": "hline",
+      "price": 1.081,
+      "label": "Buy entry",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.077,
+      "label": "Stop (harami low-এর নিচে)",
+      "color": "#ef4444",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candle 6 sits inside candle 5's body, which signals a pause. Candle 7 closes above the harami and tempts a buy. Candle 8 reverses hard and hits the stop; the downtrend resumes.",
+    "bn": "৬ নম্বর candle ৫ নম্বরের body-র ভেতরে, অর্থাৎ বিরতি। ৭ নম্বর candle harami-র উপরে close করে buy-এর লোভ দেখায়। ৮ নম্বর candle তীব্রভাবে উল্টে stop লাগিয়ে দেয়; downtrend আবার চলতে থাকে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "A harami is a pause, not a reversal",
+      "bn": "Harami বিরতি, উল্টো যাত্রা নয়"
+    }
+  ],
+  "candles": [
+    { "i": 0, "o": 1.095, "h": 1.096, "l": 1.092, "c": 1.093 },
+    { "i": 1, "o": 1.093, "h": 1.0938, "l": 1.0895, "c": 1.0902 },
+    { "i": 2, "o": 1.0902, "h": 1.091, "l": 1.087, "c": 1.0878 },
+    { "i": 3, "o": 1.0878, "h": 1.0885, "l": 1.084, "c": 1.0848 },
+    { "i": 4, "o": 1.0848, "h": 1.0855, "l": 1.081, "c": 1.0818 },
+    { "i": 5, "o": 1.0818, "h": 1.0825, "l": 1.0765, "c": 1.077 },
+    { "i": 6, "o": 1.0785, "h": 1.08, "l": 1.0778, "c": 1.0795 },
+    { "i": 7, "o": 1.0795, "h": 1.0812, "l": 1.079, "c": 1.0808 },
+    { "i": 8, "o": 1.0808, "h": 1.0812, "l": 1.076, "c": 1.0765 },
+    { "i": 9, "o": 1.0765, "h": 1.077, "l": 1.0725, "c": 1.073 },
+    { "i": 10, "o": 1.073, "h": 1.0738, "l": 1.069, "c": 1.0695 },
+    { "i": 11, "o": 1.0695, "h": 1.0702, "l": 1.066, "c": 1.0668 }
+  ]
+}

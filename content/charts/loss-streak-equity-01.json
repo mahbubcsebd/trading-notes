@@ -1,0 +1,148 @@
+{
+  "id": "loss-streak-equity-01",
+  "title": {
+    "en": "Five Losses, Still on Plan",
+    "bn": "পাঁচটি লোকসান, তবু plan-এ"
+  },
+  "symbol": "ACCOUNT",
+  "timeframe": "per trade",
+  "mode": "synthetic",
+  "type": "concept",
+  "bias": "neutral",
+  "outcome": "win",
+  "tags": [
+    "losing-streak",
+    "acceptance",
+    "expectancy"
+  ],
+  "module": "12-trading-psychology",
+  "lessonSlugs": [
+    "03-accepting-losses"
+  ],
+  "caption": {
+    "en": "1% risk per trade, 1:2 reward. Five losses in a row cost 5%, and the next eight trades win back to a profit (hypothetical sequence).",
+    "bn": "প্রতি trade-এ 1% ঝুঁকি, 1:2 reward। টানা পাঁচ লোকসানে 5% যায়, পরের আটটি trade-এ আবার লাভে ফেরে (কাল্পনিক ক্রম)।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data.",
+    "bn": "এটি শিক্ষামূলক কাল্পনিক ডেটা।"
+  },
+  "explanation": {
+    "en": "A loss is a normal cost when each trade risks a small fixed amount.",
+    "bn": "প্রতি trade-এ ছোট নির্দিষ্ট ঝুঁকি থাকলে লোকসান স্বাভাবিক খরচ।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Losses are the cost of doing business",
+      "bn": "লোকসান ব্যবসার স্বাভাবিক খরচ"
+    }
+  ],
+  "updatedAt": "2026-11-05T22:00:00Z",
+  "candles": [
+    {
+      "i": 0,
+      "o": 10000.0,
+      "h": 10012.0,
+      "l": 9888.0,
+      "c": 9900.0,
+      "v": 0
+    },
+    {
+      "i": 1,
+      "o": 9900.0,
+      "h": 9911.9,
+      "l": 9789.1,
+      "c": 9801.0,
+      "v": 0
+    },
+    {
+      "i": 2,
+      "o": 9801.0,
+      "h": 9812.8,
+      "l": 9691.19,
+      "c": 9702.99,
+      "v": 0
+    },
+    {
+      "i": 3,
+      "o": 9702.99,
+      "h": 9714.69,
+      "l": 9594.26,
+      "c": 9605.96,
+      "v": 0
+    },
+    {
+      "i": 4,
+      "o": 9605.96,
+      "h": 9617.57,
+      "l": 9498.29,
+      "c": 9509.9,
+      "v": 0
+    },
+    {
+      "i": 5,
+      "o": 9509.9,
+      "h": 9721.12,
+      "l": 9488.88,
+      "c": 9700.1,
+      "v": 0
+    },
+    {
+      "i": 6,
+      "o": 9700.1,
+      "h": 9915.5,
+      "l": 9678.7,
+      "c": 9894.1,
+      "v": 0
+    },
+    {
+      "i": 7,
+      "o": 9894.1,
+      "h": 9905.99,
+      "l": 9783.27,
+      "c": 9795.16,
+      "v": 0
+    },
+    {
+      "i": 8,
+      "o": 9795.16,
+      "h": 10012.65,
+      "l": 9773.57,
+      "c": 9991.06,
+      "v": 0
+    },
+    {
+      "i": 9,
+      "o": 9991.06,
+      "h": 10212.86,
+      "l": 9969.08,
+      "c": 10190.88,
+      "v": 0
+    },
+    {
+      "i": 10,
+      "o": 10190.88,
+      "h": 10203.07,
+      "l": 10076.78,
+      "c": 10088.97,
+      "v": 0
+    },
+    {
+      "i": 11,
+      "o": 10088.97,
+      "h": 10312.93,
+      "l": 10066.79,
+      "c": 10290.75,
+      "v": 0
+    }
+  ],
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 10000,
+      "label": "Start 10,000",
+      "color": "#3b82f6",
+      "style": "dotted"
+    }
+  ]
+}

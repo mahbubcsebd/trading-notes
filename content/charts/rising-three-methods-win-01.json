@@ -1,0 +1,245 @@
+{
+  "id": "rising-three-methods-win-01",
+  "title": {
+    "en": "Rising Three Methods in an Uptrend, Entry at the Fifth Close",
+    "bn": "Uptrend-এ rising three methods, পঞ্চম close-এ entry"
+  },
+  "symbol": "GBPUSD",
+  "timeframe": "D1",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bullish",
+  "outcome": "win",
+  "tags": [
+    "rising-three-methods",
+    "candlestick",
+    "continuation",
+    "trend",
+    "pattern"
+  ],
+  "module": "patterns",
+  "lessonSlugs": [],
+  "caption": {
+    "en": "Illustrative synthetic GBPUSD D1: in an uptrend, a long bullish day is followed by three small bearish days that stay in the upper half of its range, then a long bullish day closing above the first one's close. Long at that close, stop under the pullback; price reaches 2R.",
+    "bn": "শিক্ষামূলক কাল্পনিক GBPUSD D1: uptrend-এ একটি লম্বা bullish দিন, তারপর তিনটি ছোট bearish দিন তার range-এর উপরের অর্ধেকে থাকে, তারপর একটি লম্বা bullish দিন প্রথমটার close-এর উপরে close করে। সেই close-এ long, stop pullback-এর নিচে; দাম 2R পর্যন্ত যায়।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data, not a real market record.",
+    "bn": "শিক্ষামূলক কাল্পনিক ডেটা, বাস্তব মার্কেটের রেকর্ড নয়।"
+  },
+  "updatedAt": "2026-11-06T12:00:00Z",
+  "annotations": [
+    {
+      "type": "marker",
+      "i": 6,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "1"
+    },
+    {
+      "type": "marker",
+      "i": 8,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Pause"
+    },
+    {
+      "type": "marker",
+      "i": 10,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "5"
+    },
+    {
+      "type": "hline",
+      "price": 1.2794,
+      "label": "Candle 1 close",
+      "color": "#3b82f6",
+      "style": "dotted"
+    },
+    {
+      "type": "hline",
+      "price": 1.283,
+      "label": "Entry (5th close)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.2746,
+      "label": "Stop",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.2998,
+      "label": "Target 2R",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candles 0-5 are an uptrend. Candle 6 is a long bullish candle. Candles 7-9 are three small bearish candles that never go below the middle of candle 6: a calm pause, not selling pressure. Candle 10 is a long bullish candle that closes above candle 6's close. Long at that close, stop under the pullback low.",
+    "bn": "০-৫ নম্বর candle uptrend। ৬ নম্বর লম্বা bullish candle। ৭-৯ নম্বর তিনটি ছোট bearish candle, ৬ নম্বরের মাঝের নিচে কখনো যায় না: শান্ত বিরতি, selling চাপ নয়। ১০ নম্বর লম্বা bullish candle, ৬ নম্বরের close-এর উপরে close করে। সেই close-এ long, stop pullback-এর low-এর নিচে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "A shallow, quiet pause inside a strong candle, then the trend resumes",
+      "bn": "শক্তিশালী candle-এর ভেতরে অগভীর, শান্ত বিরতি, তারপর trend আবার চলে"
+    }
+  ],
+  "entry": 1.283,
+  "stopLoss": 1.2746,
+  "takeProfit": 1.2998,
+  "rr": "1:2.0",
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.26,
+      "h": 1.26455,
+      "l": 1.25893,
+      "c": 1.2635
+    },
+    {
+      "i": 1,
+      "o": 1.2635,
+      "h": 1.26406,
+      "l": 1.2615,
+      "c": 1.2623
+    },
+    {
+      "i": 2,
+      "o": 1.2623,
+      "h": 1.26764,
+      "l": 1.26086,
+      "c": 1.2663
+    },
+    {
+      "i": 3,
+      "o": 1.2663,
+      "h": 1.27111,
+      "l": 1.26534,
+      "c": 1.2693
+    },
+    {
+      "i": 4,
+      "o": 1.2693,
+      "h": 1.27014,
+      "l": 1.26681,
+      "c": 1.2678
+    },
+    {
+      "i": 5,
+      "o": 1.2678,
+      "h": 1.27302,
+      "l": 1.26672,
+      "c": 1.2716
+    },
+    {
+      "i": 6,
+      "o": 1.2716,
+      "h": 1.2798,
+      "l": 1.2712,
+      "c": 1.2794
+    },
+    {
+      "i": 7,
+      "o": 1.2794,
+      "h": 1.2798,
+      "l": 1.2776,
+      "c": 1.278
+    },
+    {
+      "i": 8,
+      "o": 1.278,
+      "h": 1.2784,
+      "l": 1.2764,
+      "c": 1.2768
+    },
+    {
+      "i": 9,
+      "o": 1.2768,
+      "h": 1.2772,
+      "l": 1.2754,
+      "c": 1.2758
+    },
+    {
+      "i": 10,
+      "o": 1.2758,
+      "h": 1.2834,
+      "l": 1.2755,
+      "c": 1.283
+    },
+    {
+      "i": 11,
+      "o": 1.283,
+      "h": 1.284,
+      "l": 1.2818,
+      "c": 1.2834
+    },
+    {
+      "i": 12,
+      "o": 1.2834,
+      "h": 1.28769,
+      "l": 1.28197,
+      "c": 1.2869
+    },
+    {
+      "i": 13,
+      "o": 1.2869,
+      "h": 1.28745,
+      "l": 1.28505,
+      "c": 1.2855
+    },
+    {
+      "i": 14,
+      "o": 1.2855,
+      "h": 1.29057,
+      "l": 1.28375,
+      "c": 1.2897
+    },
+    {
+      "i": 15,
+      "o": 1.2897,
+      "h": 1.29393,
+      "l": 1.28831,
+      "c": 1.2927
+    },
+    {
+      "i": 16,
+      "o": 1.2927,
+      "h": 1.29326,
+      "l": 1.29088,
+      "c": 1.2915
+    },
+    {
+      "i": 17,
+      "o": 1.2915,
+      "h": 1.29664,
+      "l": 1.29037,
+      "c": 1.2953
+    },
+    {
+      "i": 18,
+      "o": 1.2953,
+      "h": 1.29878,
+      "l": 1.29463,
+      "c": 1.2981
+    },
+    {
+      "i": 19,
+      "o": 1.2981,
+      "h": 1.30181,
+      "l": 1.29724,
+      "c": 1.3011
+    },
+    {
+      "i": 20,
+      "o": 1.3011,
+      "h": 1.30442,
+      "l": 1.30037,
+      "c": 1.3036
+    }
+  ]
+}

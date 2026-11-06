@@ -1,0 +1,194 @@
+---
+title: "Lot Size, Margin Call and Stop-out: The Numbers That Protect Your Account"
+description: "What balance, equity, used margin, free margin and margin level are, when a margin call and stop-out happen, and how oversized lots push an account towards its limits — with a chart and worked numbers."
+level: beginner
+tags: [lot-size, margin, margin-call, stop-out, equity, margin-level]
+instruments: [ACCOUNT]
+timeframes: [per-trade]
+status: done
+sources:
+  - type: blog
+    title: "Margin Call - Investopedia"
+    url: "https://www.investopedia.com/terms/m/margincall.asp"
+updated: 2026-11-06
+---
+
+# Lot Size, Margin Call and Stop-out: The Numbers That Protect Your Account
+
+When the fuel gauge on your dashboard turns red, you head to a petrol station. A trading account has a gauge too: the **margin level**. You need to know what happens before it turns red, and how to stay well away from that point.
+
+## What you will be able to do
+
+- **Explain** balance, equity, margin and margin level.
+- **State** what a margin call and a stop-out are.
+- **Calculate** the limits for your own account.
+- **Understand** the danger of oversized lots.
+
+## Why it matters
+
+- **A stop-out closes your positions by force.** You lose control.
+- **Not knowing the margin maths causes panic.** An unexpected warning leads to bad decisions.
+- **It applies [lots and leverage](/en/learn/01-foundations/03-pips-lots-leverage-margin) and [Position Sizing](/en/learn/08-risk-management/02-position-sizing) directly.**
+
+Prerequisites: [Order Types](/en/learn/02-broker-platform-setup/04-order-types).
+
+## Key terms
+
+| Term         | Meaning                                                   |
+| :----------- | :-------------------------------------------------------- |
+| Balance      | The money in your account, including closed trades        |
+| Equity       | Balance + the current profit/loss of open positions       |
+| Used margin  | The deposit locked up to hold open positions              |
+| Free margin  | Equity − used margin; your capacity to open new positions |
+| Margin level | **(Equity ÷ used margin) × 100%**                         |
+
+## Margin call and stop-out
+
+- **Margin call:** When the margin level falls below a set limit (for example 100%), the broker warns you or blocks new positions.
+- **Stop-out:** If it falls further (for example 50%), the broker starts **closing your positions by force**, usually starting with the one making the biggest loss.
+
+**The limits differ by broker and account type.** The 100%/50% in this lesson are only examples. Check your own broker's terms.
+
+## Calculation (synthetic example)
+
+Account 1,000 USD, used margin on open positions 400 USD.
+
+- At the start, margin level = 1,000 ÷ 400 = **250%**.
+- If equity falls to 400 = **100%** (the margin call limit).
+- If equity falls to 200 = **50%** (the stop-out limit).
+
+Used margin is not always fixed (it changes as positions grow or shrink), but this is the idea.
+
+## What it looks like on a chart
+
+<Chart
+  id="margin-call-stopout-01"
+  height={440}
+  caption="ACCOUNT, per trade (educational, synthetic example) — a 1,000 account with 400 used margin. Example limits: margin call at equity 400, stop-out at equity 200. Eight oversized losing trades take equity past both."
+/>
+
+Each candle is one trade. On the sixth trade equity drops below 400 (margin call), and on the eighth below 200 (stop-out). Look at the size of the losses: this is what oversized lots look like.
+
+## Step by step: calculating your own limits
+
+<Steps>
+
+### Step 1: Find your broker's terms
+
+What are the margin call and stop-out levels?
+
+### Step 2: Calculate used margin
+
+With the margin formula. If you open several positions at once, add them up.
+
+### Step 3: Work out the equity at margin call
+
+Used margin × the limit. For example, 400 × 100% = 400.
+
+### Step 4: Check the distance
+
+How far is your equity from that level? If it is too close, reduce your lot size.
+
+### Step 5: Stick to your risk %
+
+At 1% per trade, you will almost never touch the margin limits. ([Risk per Trade](/en/learn/08-risk-management/01-risk-per-trade))
+
+</Steps>
+
+## Example 1: when it works (synthetic)
+
+- **Account:** 1,000 USD, 1% risk per trade (10 USD), small lots.
+- **During trading:** Six losses in a row: the account is at about 940 (slightly less). Used margin is only 40, margin level 2,000%+.
+- **Result:** Nowhere near a margin call. A clear head for the next setup.
+- **Lesson:** With small risk, margin is simply not a problem.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Example 2: when it fails (synthetic)
+
+- **Account:** 1,000 USD, used margin 400, oversized risk on every trade.
+- **During trading:** Eight losing trades (the chart above): equity 1,000 → 172.
+- **Result:** A margin call warning on the sixth trade, a stop-out on the eighth; positions closed by force.
+- **Why it failed:** The lot size was set by "as big as possible", not by risk. Just a few losses finished the account.
+- **Lesson:** The margin limit is not a safety net; it is the last line. The risk rules should have stopped things well before.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Common mistakes
+
+| Mistake                                     | Why it happens              | What to do                                                                            |
+| :------------------------------------------ | :-------------------------- | :------------------------------------------------------------------------------------ |
+| Thinking of margin as a "cost"              | Confusing terms             | It is a deposit                                                                       |
+| Choosing the lot size from free margin      | "I can open this many lots" | Set the lot size by risk %                                                            |
+| Not knowing the margin call/stop-out levels | Not reading the terms       | Write down the levels for each broker                                                 |
+| Opening new positions as losses grow        | Trying to win it back       | [Rules for stopping](/en/learn/14-trading-plan-system/05-kokhon-trading-bondho-korbo) |
+| Ignoring weekend gaps                       | Assuming the stop will work | Reduce risk before holidays                                                           |
+
+## Pro tips
+
+<Callout type="tip">
+  At the start of each day, check: what is the margin level? If it is below
+  500%, limit new positions that day. (A suggested personal rule, not a
+  requirement.)
+</Callout>
+
+<Callout type="warning">
+  A stop-out can happen even with a stop loss in place, especially with big gaps
+  or in fast markets. In some regions and with some brokers there is no negative
+  balance protection. Know your broker's policy. This is educational material.
+</Callout>
+
+## When this does not work
+
+- **Formulas differ by broker:** Some brokers calculate margin or stop-out differently.
+- **With hedged positions or special accounts:** The margin calculation can differ.
+- **In an account in another currency:** Exchange rates come into play.
+
+## Summary
+
+<KeyTakeaways>
+
+- Margin level = (equity ÷ used margin) × 100%.
+- A margin call is a warning; a stop-out closes positions by force.
+- The limits differ by broker.
+- If you keep to your risk %, these limits never come close.
+
+</KeyTakeaways>
+
+## Practice
+
+Look at the balance, equity and used margin on your demo or live account and calculate the margin level. Then work out at what equity a margin call would happen (using your broker's limit).
+
+## Quiz
+
+1. How is the margin level calculated?
+2. What is the difference between a margin call and a stop-out?
+3. With 2,000 equity and 500 used margin, what is the margin level?
+4. Why are margin problems rare with small risk?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** (Equity ÷ used margin) × 100%.
+
+**2.** A margin call is a warning/block on new positions; a stop-out closes positions by force.
+
+**3.** 2,000 ÷ 500 × 100 = 400%.
+
+**4.** Small losses don't push equity close to the limit.
+
+</details>
+
+## Next steps
+
+- Previous: [Order Types](/en/learn/02-broker-platform-setup/04-order-types).
+- Next: [Retail Forex in Bangladesh: Rules and Tax](/en/learn/02-broker-platform-setup/06-bangladesh-e-retail-forex-niyom-ar-tax).
+- Related: [Drawdown Rules](/en/learn/08-risk-management/04-drawdown-rules).
+
+### Sources
+
+- <ExternalLink href="https://www.investopedia.com/terms/m/margincall.asp">
+    Margin Call, Investopedia
+  </ExternalLink>
+
+<Disclaimer />

@@ -1,36 +1,193 @@
 ---
-title: "Margin Call & Stop Out"
-description: "মার্জিন লেভেল কী এবং কখন ব্রোকার আপনার ট্রেড স্বয়ংক্রিয়ভাবে ক্লোজ করে দেয়?"
+title: "Lot Size, Margin Call ও Stop-out: account বাঁচানোর সংখ্যা"
+description: "Balance, equity, used margin, free margin ও margin level কী, margin call ও stop-out কখন হয়, আর অতি-বড় lot কীভাবে account-কে সীমার দিকে ঠেলে — একটি chart ও গণনা সহ।"
 level: beginner
-tags: [margin, stop-out, leverage]
-status: published
-updated: "2026-10-11"
+tags: [lot-size, margin, margin-call, stop-out, equity, margin-level]
+instruments: [ACCOUNT]
+timeframes: [per-trade]
+status: done
+sources:
+  - type: blog
+    title: "Margin Call - Investopedia"
+    url: "https://www.investopedia.com/terms/m/margincall.asp"
+updated: 2026-11-05
 ---
 
-# Margin Call এবং Stop Out
+# Lot Size, Margin Call ও Stop-out: account বাঁচানোর সংখ্যা
 
-ফরেক্সে বড় লট সাইজ নিয়ে ট্রেড করার সবচেয়ে বড় বিপদ হলো Margin Call এবং Stop Out। এগুলো বুঝতে হলে কিছু বেসিক টার্ম আবার মনে করতে হবে।
+গাড়ির ড্যাশবোর্ডে ফুয়েল গেজ লাল হলে আপনি পেট্রোল পাম্পে যান। Trading account-এরও একটি গেজ আছে: **margin level**। সেটি লাল হওয়ার আগেই জানা দরকার কী ঘটে এবং কীভাবে সেখান থেকে দূরে থাকবেন।
 
-- **Margin:** ট্রেড ওপেন রাখার জন্য ব্রোকার যে পরিমাণ ব্যালেন্স হোল্ড করে রাখে।
-- **Free Margin:** ট্রেড ওপেন করার পর অবশিষ্ট ব্যালেন্স।
-- **Equity:** আপনার মূল ব্যালেন্স + বর্তমান ট্রেডের প্রফিট (বা - বর্তমান ট্রেডের লস)।
+## এই লেখা পড়ে আপনি যা পারবেন
 
-## Margin Level (%)
-মার্জিন লেভেল হলো আপনার Equity এবং Used Margin এর অনুপাত (শতাংশে)। এটি আপনার অ্যাকাউন্টের "স্বাস্থ্য" নির্দেশ করে।
-> **Margin Level = (Equity / Used Margin) x 100**
+- **Balance, equity, margin ও margin level** ব্যাখ্যা করতে পারবেন।
+- **Margin call ও stop-out** কী, বলতে পারবেন।
+- **নিজের account-এ** সীমা হিসাব করতে পারবেন।
+- **অতি-বড় lot**-এর বিপদ বুঝবেন।
 
-- মার্জিন লেভেল ১০০% এর বেশি থাকা মানে আপনার অ্যাকাউন্ট নিরাপদ।
-- মার্জিন লেভেল ১০০% এর নিচে নেমে গেলে আপনি নতুন কোনো ট্রেড ওপেন করতে পারবেন না।
+## কেন এটি জরুরি
 
-## Margin Call কী?
-যখন আপনার ট্রেড লসে যেতে যেতে Margin Level একটি নির্দিষ্ট মাত্রায় (যেমন ৮০% বা ১০০%, যা ব্রোকার ভেদে ভিন্ন হয়) নেমে আসে, তখন ব্রোকার আপনাকে একটি সতর্কবার্তা পাঠায়। এটিকেই **Margin Call** বলে।
-এর মানে হলো: আপনার অ্যাকাউন্টে পর্যাপ্ত ফান্ড নেই। হয় আপনাকে নতুন ফান্ড ডিপোজিট করতে হবে, অথবা কিছু ট্রেড ক্লোজ করে দিতে হবে।
+- **Stop-out হলে position জোর করে বন্ধ হয়।** আপনার নিয়ন্ত্রণ থাকে না।
+- **Margin হিসাব না জানলে আতঙ্ক।** অপ্রত্যাশিত সতর্কবার্তায় ভুল সিদ্ধান্ত।
+- **[Lot ও leverage](/bn/learn/01-foundations/03-pips-lots-leverage-margin) ও [Position Sizing](/bn/learn/08-risk-management/02-position-sizing)-এর সরাসরি প্রয়োগ।**
 
-## Stop Out কী?
-মার্জিন কল পাওয়ার পরও যদি আপনি ফান্ড ডিপোজিট না করেন এবং ট্রেড আরও লসে যেতে থাকে, তবে Margin Level যখন অত্যন্ত নিচে (যেমন ৫০% বা ২০%) চলে আসে, তখন ব্রোকার আপনার অ্যাকাউন্ট জিরো (বা মাইনাস) হওয়া থেকে বাঁচাতে **স্বয়ংক্রিয়ভাবে আপনার সবচেয়ে বড় লসে থাকা ট্রেডগুলো ক্লোজ করতে শুরু করে**। একেই **Stop Out** বা Margin Closeout বলে।
+পূর্বশর্ত: [Order Types](/bn/learn/02-broker-platform-setup/04-order-types)।
+
+## মূল শব্দ
+
+| শব্দ         | অর্থ                                             |
+| :----------- | :----------------------------------------------- |
+| Balance      | বন্ধ trade-সহ আপনার account-এর টাকা              |
+| Equity       | Balance + খোলা position-এর বর্তমান লাভ/ক্ষতি     |
+| Used margin  | খোলা position ধরে রাখতে আটকে থাকা জামানত         |
+| Free margin  | Equity − used margin; নতুন position খোলার ক্ষমতা |
+| Margin level | **(Equity ÷ used margin) × 100%**                |
+
+## Margin call ও stop-out
+
+- **Margin call:** margin level একটি নির্দিষ্ট সীমার (যেমন 100%) নিচে নামলে broker সতর্ক করে বা নতুন position আটকায়।
+- **Stop-out:** আরও নিচে নামলে (যেমন 50%) broker আপনার position **জোর করে বন্ধ** করা শুরু করে, সাধারণত সবচেয়ে বেশি ক্ষতিতে থাকা থেকে।
+
+**সীমাগুলো broker ও account-প্রকার ভেদে আলাদা।** এই পাঠের 100%/50% শুধু উদাহরণ। নিজের broker-এর শর্তাবলী দেখুন।
+
+## গণনা (কাল্পনিক উদাহরণ)
+
+Account 1,000 USD, খোলা position-এ used margin 400 USD।
+
+- শুরুতে margin level = 1,000 ÷ 400 = **250%**।
+- Equity 400-এ নামলে = **100%** (margin call সীমা)।
+- Equity 200-এ নামলে = **50%** (stop-out সীমা)।
+
+Used margin সব সময় স্থির নয় (position বাড়লে-কমলে বদলায়), তবে ধারণাটি এমনই।
+
+## Chart-এ কেমন দেখায়
+
+<Chart
+  id="margin-call-stopout-01"
+  height={440}
+  caption="ACCOUNT, প্রতি trade (শিক্ষামূলক, কাল্পনিক উদাহরণ) — 1,000 account, used margin 400। উদাহরণ সীমা: margin call equity 400, stop-out equity 200। আটটি অতি-বড় losing trade equity-কে দুটিই পার করায়।"
+/>
+
+প্রতিটি candle এক trade। ষষ্ঠ trade-এ equity 400-এর নিচে (margin call), অষ্টম trade-এ 200-এর নিচে (stop-out)। ক্ষতির আকার দেখুন, অতি-বড় lot-এর চেহারা।
+
+## ধাপে ধাপে: নিজের সীমা হিসাব
+
+<Steps>
+
+### ধাপ ১: Broker-এর শর্তাবলী খুঁজুন
+
+Margin call ও stop-out স্তর কত?
+
+### ধাপ ২: Used margin হিসাব
+
+Margin সূত্র দিয়ে। কয়েকটি position একসঙ্গে খুললে যোগ করুন।
+
+### ধাপ ৩: Margin call-এর equity বের করুন
+
+Used margin × সীমা। যেমন 400 × 100% = 400।
+
+### ধাপ ৪: দূরত্ব দেখুন
+
+Equity থেকে সেই স্তর কতটা দূরে? যদি বেশি কাছে, lot কমান।
+
+### ধাপ ৫: ঝুঁকি-% মেনে চলুন
+
+প্রতি trade 1% হলে margin সীমা প্রায় কখনো ছোঁয়া হবে না। ([Risk per Trade](/bn/learn/08-risk-management/01-risk-per-trade))
+
+</Steps>
+
+## উদাহরণ ১: যখন কাজ করে (কাল্পনিক)
+
+- **Account:** 1,000 USD, প্রতি trade-এ 1% ঝুঁকি (10 USD), ছোট lot।
+- **চলাকালীন:** পরপর ছয়টি loss: account প্রায় 940-এ (সামান্য কম)। Used margin মাত্র 40, margin level 2,000%+।
+- **ফল:** Margin call-এর ধারেকাছেও নয়। পরের setup-এর জন্য মাথা ঠান্ডা।
+- **শিক্ষা:** ছোট ঝুঁকি মানে margin কোনো সমস্যাই নয়।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়।)
+
+## উদাহরণ ২: যখন ব্যর্থ হয় (কাল্পনিক)
+
+- **Account:** 1,000 USD, used margin 400, প্রতি trade-এ অতি-বড় ঝুঁকি।
+- **চলাকালীন:** আটটি losing trade (উপরের chart): equity 1,000 → 172।
+- **ফল:** ষষ্ঠ trade-এ margin call সতর্কবার্তা, অষ্টমে stop-out; position জোর করে বন্ধ।
+- **কেন ব্যর্থ:** Lot ঝুঁকির হিসাবে নয়, "যত বড় সম্ভব"-র হিসাবে। মাত্র কয়েকটি loss-এই account শেষ।
+- **শিক্ষা:** Margin-সীমা নিরাপত্তা-জাল নয়, শেষ সীমা। এর আগেই ঝুঁকি-নিয়মে থামা উচিত ছিল।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়।)
+
+## সাধারণ ভুল
+
+| ভুল                                  | কেন হয়                  | কী করবেন                                                                       |
+| :----------------------------------- | :----------------------- | :----------------------------------------------------------------------------- |
+| Margin-কে "খরচ" ভাবা                 | শব্দ বিভ্রান্তি          | এটি জামানত                                                                     |
+| Free margin দেখে lot বাছা            | "এত lot খুলতে পারি"      | ঝুঁকি-% দিয়ে lot                                                              |
+| Margin call/stop-out স্তর না জানা    | শর্তাবলী না পড়া         | broker-ভেদে স্তর লিখে রাখুন                                                    |
+| Loss বাড়ার সঙ্গে নতুন position খোলা | পুষিয়ে নেওয়ার চেষ্টা   | [থামার নিয়ম](/bn/learn/14-trading-plan-system/05-kokhon-trading-bondho-korbo) |
+| Weekend gap উপেক্ষা                  | ধরে নেওয়া stop কাজ করবে | ছুটির আগে ঝুঁকি কমান                                                           |
+
+## Pro tips
+
+<Callout type="tip">
+  প্রতিদিন শুরুতে দেখুন: margin level কত? 500%-এর নিচে নামলে সেই দিনের নতুন
+  position সীমিত করুন। (একটি ব্যক্তিগত নিয়মের প্রস্তাব, বিধান নয়)
+</Callout>
+
+<Callout type="warning">
+  Stop-out তখনও হতে পারে যখন আপনার stop loss বসানো, বিশেষ করে বড় gap বা দ্রুত
+  বাজারে। কিছু অঞ্চলে ও broker-এ negative balance-এর সুরক্ষা নেই। নিজের
+  broker-এর নীতি জানুন। এটি শিক্ষামূলক লেখা।
+</Callout>
+
+## কখন এটা কাজ করে না
+
+- **Broker-ভেদে ভিন্ন সূত্র:** কিছু broker margin বা stop-out অন্যভাবে গণে।
+- **Hedged position বা বিশেষ account-এ:** margin গণনা ভিন্ন হতে পারে।
+- **ভিন্ন মুদ্রার account-এ:** রূপান্তর হার এসে যায়।
+
+## সারসংক্ষেপ
 
 <KeyTakeaways>
-- সঠিক Risk Management (যেমন প্রতিটি ট্রেডে অ্যাকাউন্টের ১-২% রিস্ক নেওয়া) অনুসরণ করলে আপনি জীবনেও Margin Call খাবেন না।
-- মাত্রাতিরিক্ত বড় Lot Size ব্যবহার করাই হলো Stop Out হওয়ার মূল কারণ।
-- Stop Loss (SL) ব্যবহার করলে আপনার অ্যাকাউন্ট কখনোই Stop Out লেভেলে পৌঁছাবে না।
+
+- Margin level = (equity ÷ used margin) × 100%।
+- Margin call সতর্কবার্তা, stop-out জোর করে বন্ধ।
+- সীমা broker-ভেদে আলাদা।
+- ঝুঁকি-% মানলে এই সীমা কখনো কাছে আসে না।
+
 </KeyTakeaways>
+
+## অনুশীলন
+
+আপনার demo/live account-এর balance, equity ও used margin দেখে margin level হিসাব করুন। তারপর কত equity-তে margin call হবে, বের করুন (broker-এর সীমা অনুযায়ী)।
+
+## কুইজ
+
+1. Margin level কীভাবে হিসাব হয়?
+2. Margin call ও stop-out-এর পার্থক্য কী?
+3. 2,000 equity, 500 used margin হলে margin level কত?
+4. ছোট ঝুঁকিতে margin সমস্যা কম কেন?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** (Equity ÷ used margin) × 100%।
+
+**২.** Margin call সতর্কবার্তা/নতুন position বাধা; stop-out position জোর করে বন্ধ করা।
+
+**৩.** 2,000 ÷ 500 × 100 = 400%।
+
+**৪.** ছোট ক্ষতি equity-কে সীমার কাছে নিয়ে যায় না।
+
+</details>
+
+## পরের ধাপ
+
+- আগে: [Order Types](/bn/learn/02-broker-platform-setup/04-order-types)।
+- পরে: [Bangladesh-এ retail forex: নিয়ম ও কর](/bn/learn/02-broker-platform-setup/06-bangladesh-e-retail-forex-niyom-ar-tax)।
+- সম্পর্কিত: [Drawdown Rules](/bn/learn/08-risk-management/04-drawdown-rules)।
+
+### সূত্র
+
+- <ExternalLink href="https://www.investopedia.com/terms/m/margincall.asp">
+    Margin Call, Investopedia
+  </ExternalLink>
+
+<Disclaimer />

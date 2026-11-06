@@ -1,42 +1,334 @@
 ---
-title: "Morning Star"
-description: "A 3-candle bullish reversal pattern signaling the definitive conclusion of a downtrend and the start of an institutional advance."
+title: "Morning Star: three candles that tell the story of night turning into dawn"
+description: "How to spot a morning star, the three-candle rule, the morning doji star, the no-gap Forex definition, entry and stop, and why a falling moving average above is an obstacle too, with charts."
 type: bullish
-category: "Morning Star"
-winrate: "72% - 76%"
-riskReward: "1:3 to 1:5"
-maxRisk: "1% - 2%"
-bestLocation: "Daily/H4 Support Floor / Demand Zone / Post-Liquidity Sweep"
-chartId: "morning-star-01"
-tags: [pattern, candlestick, morning-star]
+category: three-candle
+level: intermediate
+candleCount: 3
+signal: reversal
+chartId: morning-star-win-01
+tags: [pattern, candlestick, morning-star, three-candle, reversal]
+status: done
+sources:
+  - type: book
+    title: "Japanese Candlestick Charting Techniques - Steve Nison"
+    note: "Morning star, morning doji star, abandoned baby"
+  - type: blog
+    title: "Morning Star - Investopedia"
+    url: "https://www.investopedia.com/terms/m/morningstar.asp"
+updated: 2026-11-06
 ---
 
-<div className="flex gap-6 items-end my-8 p-8 bg-zinc-950 border border-border/50 rounded-2xl w-max relative overflow-hidden">
-  <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:20px_20px]"></div>
-  <div className="relative z-10 flex gap-6">
-    <Candle color="bear" bodyH="h-16" topW="h-2" botW="h-2" offset="mt-2" />
-    <Candle color="neutral" bodyH="h-2" topW="h-4" botW="h-4" offset="mt-20" /> 
-    <Candle color="bull" bodyH="h-14" topW="h-3" botW="h-2" offset="mt-6" />
-  </div>
-</div>
+A long red candle, then a tiny candle, then a long green one. A textbook morning star. You buy, price rises a little, then stops exactly at the moving average it has been trading under for twenty days. The three-candle story is lovely, but the rest of the chart tells a story too.
 
-## Market Psychology & Institutional Order Flow
-Bears control Candle 1 completely. On Candle 2, downside momentum abruptly stalls into a tight indecision range. On Candle 3, institutional buyers step in aggressively, thrusting the close well above the 50% midpoint of Candle 1. Trapped short sellers are forced into stop-loss buybacks, fueling the rally.
+## At a glance
 
-## 5 Strict Anatomy & Recognition Rules
-1. **Prior Downtrend:** Must emerge after a sustained downtrend at key support.
-2. **Candle 1 (Bearish Impulse):** Long red candle representing the final wave of selling.
-3. **Candle 2 (The Star):** Small-bodied candle or Doji highlighting seller deceleration.
-4. **Candle 3 (Bullish Surge):** Strong green candle closing decisively above the 50% mark of Candle 1.
-5. **Volume Expansion:** Noticeable expansion in buyer volume on Candle 3.
+| Item          | Morning Star                                                                                                                                      |
+| :------------ | :------------------------------------------------------------------------------------------------------------------------------------------------ |
+| Type          | Bullish reversal, three candles                                                                                                                   |
+| Where to look | At the end of a downtrend, at a marked support                                                                                                    |
+| Key features  | 1: long bearish; 2: a small-body "star" (often a doji) near or below 1's close; 3: long bullish, closing above the middle of 1's body             |
+| Confirmation  | The third candle is the confirmation; it must close above 50% of the first body                                                                   |
+| Stop          | Below the star's low (the lowest of the three), plus spread and a buffer                                                                          |
+| Invalidation  | A close below the star's low                                                                                                                      |
+| Look-alikes   | [Bullish Engulfing](/en/patterns/bullish-engulfing), [Piercing Line](/en/patterns/piercing-line), [Three Inside Up](/en/patterns/three-inside-up) |
+| Opposite      | [Evening Star](/en/patterns/evening-star)                                                                                                         |
 
-## 3 Proven Trade Execution Strategies
-**Strategy 1 (50% Equilibrium Retest - Pro Choice):** Measure Candle 3 and place a Buy Limit at the 50% Fibonacci retracement level with Stop Loss below the star low.
-**Strategy 2 (Candle 3 Close Market Buy):** Buy immediately upon the close of Candle 3.
-**Strategy 3 (M15 Sniper Entry):** Drop to M15, wait for a Change of Character (CHoCH), and enter on the retest of the Bullish Order Block.
+## What you will be able to do
 
-## Where It Works vs Where It Fails
-- ✅ **A+ High Probability Setups:** Daily demand zone, Sell-Side Liquidity sweep, and Bullish RSI divergence.
-- ❌ **Low Probability Traps (AVOID):** Appearing without HTF support alignment or mid-range consolidation.
+- **Explain** the role of each of the morning star's three candles.
+- **Know** how to measure the pattern without gaps in Forex.
+- **Place** an entry at the third candle's close and a stop below the star.
+- **Measure** dynamic obstacles such as moving averages.
 
-> ⚠️ **Pro Risk Management & Mindset Rule:** If the middle star candle is a Doji (Morning Doji Star), the reversal probability jumps significantly. Always limit risk to 1%–2% per trade and maintain a predefined Stop Loss.
+## Why it matters
+
+- **The whole reversal story in one place.** Sellers in the first candle, stalling in the second, buyers in the third. More information than a doji or an engulfing.
+- **Confirmation is built in.** The third candle is itself the proof, so there is less waiting for separate confirmation.
+- **The stop is usually wide.** The stop goes below the star and the entry at the third close, so the distance is large. Judging R:R matters.
+
+Prerequisites: the [Doji](/en/patterns/doji) page and [Candle Context](/en/learn/04-candlesticks/05-candle-context).
+
+## What is a morning star
+
+**A morning star is a three-candle pattern: a long bearish candle in a downtrend, then a small-body candle (the star), then a long bullish candle that closes above the middle of the first candle's body.** The name comes from the morning star: the star you see at the end of the night, just before the sun rises.
+
+<CandleDiagram
+  title="Morning star and morning doji star"
+  candles={[
+    { o: 64, h: 65, l: 58, c: 59, dim: true },
+    { o: 59, h: 60, l: 45, c: 46, label: "1", note: "long red" },
+    { o: 46, h: 48, l: 42, c: 45, label: "2 star", note: "small body" },
+    { o: 45, h: 57, l: 44.5, c: 56, label: "3", note: "above 1's middle" },
+    { o: 59, h: 60, l: 45, c: 46, label: "1" },
+    { o: 46, h: 49, l: 43, c: 46.1, label: "doji star" },
+    { o: 46.1, h: 57, l: 45.5, c: 56, label: "3" },
+  ]}
+  caption="Left: a plain morning star. Right: a morning doji star (the star is a doji). Nison treats the doji star as stronger."
+/>
+
+### Identification rules
+
+| Rule                                                                   | Required? | Why                                               |
+| :--------------------------------------------------------------------- | :-------- | :------------------------------------------------ |
+| A downtrend before it; the first candle long and bearish               | Yes       | Sellers' last strong push                         |
+| The second candle's body small, near or below the first close          | Yes       | The picture of momentum stalling                  |
+| The third candle long and bullish, closing above 50% of the first body | Yes       | Buyers' win; below the middle it is weak          |
+| At a marked support                                                    | Yes       | Without a level it is a bounce inside a downtrend |
+| The star is a doji (morning doji star)                                 | No        | A clearer indecision                              |
+
+## Strong vs weak morning star
+
+<DiagramRow>
+  <CandleDiagram
+    title="Strong"
+    verdict="good"
+    verdictLabel="tradeable"
+    candles={[
+      { o: 64, h: 65, l: 58, c: 59, dim: true },
+      { o: 59, h: 60, l: 47, c: 48 },
+      { o: 48, h: 50, l: 44, c: 48.2 },
+      { o: 48.2, h: 57.5, l: 47.5, c: 57, label: "~75% deep" },
+    ]}
+    levels={[{ price: 46, label: "support", tone: "support" }]}
+    caption="A doji star below support, and the third candle takes back about three quarters of the first body."
+  />
+  <CandleDiagram
+    title="Weak"
+    verdict="bad"
+    verdictLabel="avoid"
+    candles={[
+      { o: 70, h: 71, l: 64, c: 65, dim: true },
+      { o: 65, h: 66, l: 52, c: 53 },
+      { o: 53, h: 55, l: 51, c: 54 },
+      { o: 54, h: 60, l: 53.5, c: 59.5, label: "under the MA" },
+    ]}
+    levels={[{ price: 62, label: "falling MA", tone: "resistance" }]}
+    caption="No level, and a falling moving average right above. An obstacle before the target."
+  />
+</DiagramRow>
+
+| Quality check  | Strong                                        | Weak                               |
+| :------------- | :-------------------------------------------- | :--------------------------------- |
+| Location       | A marked support, with the star peeking below | Mid-downtrend, no level            |
+| Star           | A doji or very small                          | A medium body                      |
+| Third candle   | 60-75% or more of the first body              | Barely 50%                         |
+| Obstacle above | Swing high or MA at least 1.5R away           | Falling MA or lower high within 1R |
+
+### Same look, different meaning
+
+| Pattern               | Shape                                                  | Difference                                       |
+| :-------------------- | :----------------------------------------------------- | :----------------------------------------------- |
+| **Morning Star**      | Long red, small star, long green                       | The full three-candle story                      |
+| **Abandoned Baby**    | Gaps on both sides of the star (wicks do not touch)    | Rare, especially in Forex; the extreme form      |
+| **Bullish Engulfing** | Two candles; the second body covers the first          | No star in the middle                            |
+| **Three Inside Up**   | A harami, then a third candle closing above the mother | The second candle is inside the first, not below |
+
+## The story inside the candle
+
+One common interpretation of a morning star at support:
+
+1. **First candle: sellers push hard.** A long red candle, one more strong push of the downtrend.
+2. **The star: stalling.** Price falls a little further (often below support) but closes with a small body. Sellers can no longer push down as before.
+3. **Third candle: buyers attack.** A long green candle takes back more than half of the first candle.
+
+The result: across three candles control passes from sellers to buyers. But higher-timeframe obstacles (MAs, lower highs) are outside this story and have to be measured separately.
+
+<Callout type="note">
+  This is a common interpretation, not a proven fact. A chart does not show who
+  bought or sold.
+</Callout>
+
+## Where it works and where it does not
+
+<Compare
+  leftLabel="Where a morning star carries weight"
+  rightLabel="Where a morning star is often a trap"
+  left="- At a marked support or demand zone
+- When the star peeks below support and returns
+- When the star is a doji
+- When the third candle takes back 60%+ of the first body
+- With enough room to the swing high or MA above"
+  right="- Mid-downtrend, no support
+- With a falling moving average or lower high right above
+- When the third candle barely closes at 50%
+- On small timeframes, where three-candle shapes are very common"
+/>
+
+## Gaps in a 24-hour market
+
+<Callout type="note">
+  Nison's original definition has the star gapping below the first candle and
+  the third candle gapping above the star. In Forex these gaps hardly occur. The
+  practical rule: **the star's body sits near or below the first candle's close,
+  ideally with the star's low below the first low; the third candle starts from
+  the star's close and closes above 50% of the first body.** The abandoned baby
+  (full gaps on both sides) is practically never seen in Forex.
+</Callout>
+
+## Step by step: trading a morning star
+
+<Steps>
+
+### Step 1: Level and obstacles first
+
+Draw support in advance. Look for obstacles above: the prior swing high, lower highs, and the moving average you use. Write down how far away they are.
+
+### Step 2: Wait for all three candles to close
+
+The third candle is the confirmation. While live, it can still fall back below 50%.
+
+### Step 3: Measure
+
+Is the first candle long? Is the star's body small? What percentage of the first body did the third candle take back? (The same calculation as the piercing line.)
+
+### Step 4: Entry type
+
+| Entry                         | Where                                     | Pro                            | Con                           |
+| :---------------------------- | :---------------------------------------- | :----------------------------- | :---------------------------- |
+| **Third close** (standard)    | Buy as the third candle closes            | Confirmation is in the pattern | Wide stop                     |
+| **Third candle's high break** | Buy stop above the third candle's high    | More certain                   | Higher entry, smaller R:R     |
+| **50% retest**                | Buy limit at the middle of the third body | Smaller stop                   | Missed if price never returns |
+
+### Step 5: Place the stop
+
+Below the star's low, plus the [spread](/en/learn/01-foundations/04-spread-commission-swap) and a buffer.
+
+### Step 6: Size and target
+
+[Position size](/en/learn/08-risk-management/02-position-sizing) from the entry-to-stop distance, risking no more than 1%. Target before the nearest obstacle, the swing high **or the moving average**, whichever comes first. [Risk reward](/en/learn/08-risk-management/03-risk-reward) at least 1:1.5.
+
+### Step 7: Manage
+
+Repeated closes below the middle of the first candle's body mean the idea is weakening. A close below the star's low means it is wrong.
+
+</Steps>
+
+### Pre-trade checklist
+
+<Checklist
+  id="pattern-morning-star-pretrade-en"
+  items={[
+    "Was support marked before the morning star, and is the star at that level?",
+    "Does the shape pass the rules (long red, small star, third candle above 50% of the first body)?",
+    "Have all three candles closed?",
+    "Is the risk reward to the nearest obstacle (swing high, lower high or moving average) at least 1:1.5?",
+    "Is the higher-timeframe trend or level not against the trade?",
+  ]}
+/>
+
+If any box stays empty, skip the trade.
+
+## Example 1: when it works (illustrative)
+
+<Chart
+  id="morning-star-win-01"
+  height={420}
+  caption="GBPUSD H1 (illustrative, synthetic) — a morning doji star at a once-tested support; long at the third candle's close."
+/>
+
+- **What was visible:** Candle 4 marked support near 1.2679. Candles 5-9 rallied to about 1.2773, and 10-13 fell back.
+- **The morning star:** Candle 14 was a long red candle (1.2707 to 1.2683). Candle 15 was a doji (1.2683 to 1.26835) with a low of 1.2673, below support. Candle 16 was a long green candle closing at 1.27003: about 72% of the first body.
+- **Decision:** Buy at the third close at 1.27003. Stop 1.2669 (4 pips below the star's low): about 31 pips of risk. Target 1.27629 (2R); room to the swing high was about 2.3R.
+- **Result:** Candle 24 reached the target.
+- **Lesson:** A fresh level, a doji star below it, a deep third candle, and open space above.
+
+<TradeSetup
+  direction="long"
+  pair="GBPUSD"
+  entry={1.27003}
+  stop={1.2669}
+  target={1.27629}
+/>
+
+(Illustrative example, not a real trade. Not every morning star wins, and no result is guaranteed.)
+
+## Example 2: when it is a trap (illustrative)
+
+<Chart
+  id="morning-star-fail-01"
+  height={420}
+  caption="XAUUSD D1 (illustrative, synthetic) — a morning star with no support under a falling SMA 10. The long runs straight into the SMA and is rejected."
+/>
+
+- **What was visible:** Candles 0-19 fell from 2480 to about 2390, slowing into a grind at the end. Price stayed below its falling 10-day SMA throughout. No marked support below.
+- **The morning star:** Candle 20 was a long red candle (2390 to 2370). Candle 21 was a small star (2370 to 2371) with a low of 2364. Candle 22 closed at 2383: 65% of the first body.
+- **The wrong decision:** Buy at the third close at 2383, stop 2361: $22 of risk, target 2427 (2R). But the SMA was at about 2388.50, only $5.50 above the entry: 0.25R.
+- **What happened:** Candle 23 rose to the SMA (2390), candle 24 turned back from there, and candle 25 broke the stop.
+- **Why it failed:** No support, and the nearest obstacle (the falling SMA) was far inside 1.5R. The first and fourth checklist boxes would have filtered it out.
+
+**Lesson:** A falling average right above the entry is an obstacle too. Because the stop was set in advance, the loss stayed at 1R.
+
+## Common mistakes
+
+| Mistake                                         | Why it happens                    | What to do instead                                   |
+| :---------------------------------------------- | :-------------------------------- | :--------------------------------------------------- |
+| Trading on the three candles alone              | Ignoring the rest of the chart    | Measure the level and obstacles above first          |
+| Buying when the third candle barely reaches 50% | Measuring by eye                  | Calculate the penetration %; be careful below 60%    |
+| Stop at the third candle's low                  | Wanting a small stop              | Below the star's low                                 |
+| Not treating a moving average as an obstacle    | Only looking at horizontal levels | Check whether your MA sits before the target         |
+| Waiting for an abandoned baby                   | Stock examples from books         | It hardly happens in Forex; a morning star is enough |
+
+## Pro tips
+
+<Callout type="tip">
+  If the morning star's stop feels too wide, consider a limit order at the
+  middle of the third candle's body. A small pullback often follows the third
+  candle; if it does not, you miss the trade, but the R:R is much better.
+</Callout>
+
+<Callout type="tip">
+  More on moving averages: [Moving Averages and
+  Crossovers](/en/learn/07-technical-indicators/01-moving-averages-crossover).
+  Which MA you use matters less; what matters is using the same one on every
+  chart and checking whether it sits before your target.
+</Callout>
+
+## Summary
+
+<KeyTakeaways>
+
+- Morning star = a long red candle, a small star, then a long green candle closing above 50% of the first body.
+- A doji star (morning doji star) is stronger; in Forex, without gaps, the star's body sits near or below the first close.
+- Enter at the third close, stop below the star's low; the stop is wide, so R:R matters.
+- Measure the nearest obstacle: swing high, lower high, or a falling moving average.
+
+</KeyTakeaways>
+
+## Practice and your own backtest
+
+Open GBPUSD H1 or XAUUSD D1 in TradingView and add a moving average (for example 20 or 50). Find at least 20 morning stars. Log one row each:
+
+| Date | At support? | Doji star? | Third candle penetration % | R to nearest obstacle (MA or high) | Result (R) |
+| :--- | :---------- | :--------- | :------------------------- | :--------------------------------- | :--------- |
+|      |             |            |                            |                                    |            |
+
+Then split into "MA more than 1.5R away" and "within 1.5R" and compare the average R. Do not draw conclusions from fewer than 30 samples.
+
+## Quiz
+
+1. What is the role of each of the morning star's three candles?
+2. The third candle takes back only 40% of the first body. Is it a morning star?
+3. With no gap before the star in Forex, what do you look for?
+4. Which checklist boxes would have filtered out the trade in Example 2?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** First: sellers' strong push. Second (the star): stalling. Third: buyers' win, taking back more than half of the first body.
+
+**2.** No. The third candle must close above 50% of the first body.
+
+**3.** The star's body near or below the first candle's close, ideally with the star's low below the first low.
+
+**4.** The first box (no support) and the fourth box (the SMA only 0.25R away).
+
+</details>
+
+## Next steps
+
+- Before this: [Doji](/en/patterns/doji).
+- When a signal becomes a trade: [Confirmation vs Trigger](/en/learn/09-price-action-entries-strategies/04-confirmation-vs-trigger).
+- Same family: [Evening Star](/en/patterns/evening-star), [Three Inside Up](/en/patterns/three-inside-up), [Piercing Line](/en/patterns/piercing-line).
+
+<Disclaimer />

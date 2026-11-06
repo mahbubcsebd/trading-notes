@@ -1,3 +1,11 @@
 {
-  "title": "Notes Library"
+  "title": "Notes Library",
+  "pages": [
+    "00-overview",
+    "01-book-notes",
+    "02-video-notes",
+    "03-cheat-sheets",
+    "04-mistakes-log",
+    "05-weekly-review"
+  ]
 }

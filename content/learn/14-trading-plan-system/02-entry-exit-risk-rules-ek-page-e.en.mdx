@@ -1,0 +1,182 @@
+---
+title: "Entry, Exit and Risk Rules: Rules With Numbers on One Page"
+description: "How to write entry, stop, target and risk rules so they can be measured, and what happens when one rule is dropped, with two charts."
+level: beginner
+tags: [trading-plan, entry-rules, exit-rules, risk-rules, system]
+instruments: [EURUSD]
+timeframes: [H1]
+status: done
+sources:
+  - type: blog
+    title: "Trading Plan - Investopedia"
+    url: "https://www.investopedia.com/articles/trading/06/tradingplan.asp"
+updated: 2026-11-06
+---
+
+# Entry, Exit and Risk Rules: Rules With Numbers on One Page
+
+"Enter at a good place, exit at the right place." It sounds nice, but which place is good? In this lesson you will learn to turn a vague wish into numbers and conditions.
+
+## What you will be able to do
+
+- **Write entry, exit and risk** rules separately.
+- **Break a rule into yes/no conditions.**
+- **Check** whether a trade **followed the rules**.
+
+## Why it matters
+
+- **Vague rules are easy to break.** It is easy to enter by saying "it almost matched".
+- **Results can be compared.** Trades taken by the same rules are the ones fit for measuring [expectancy](/en/learn/08-risk-management/07-expectancy).
+- **The risk is fixed in advance.** If you set the lot after placing the stop, the loss stays as planned.
+
+Prerequisites: [Trading Plan Template](/en/learn/14-trading-plan-system/01-trading-plan-template) and [Stop Loss Placement](/en/learn/10-trade-management-execution/01-stop-loss-placement).
+
+## Three groups of rules
+
+**Entry rules say when you enter, exit rules say when you leave, and risk rules say how much you are willing to lose.** Written together, the three define a trade completely.
+
+| Group | Question                     | Kind of rule (imaginary example)                                                  |
+| :---- | :--------------------------- | :-------------------------------------------------------------------------------- |
+| Entry | Have all the conditions met? | H1 close above resistance; price has retested; a bullish rejection candle         |
+| Exit  | Where wrong, where profit?   | Stop 5 pips below the retest low; target 2R; no moving the stop before the target |
+| Risk  | How much risk?               | 1% of the account; lot = risk in money ÷ stop pip value                           |
+
+The test for writing a rule: **can someone else look at your chart and say "yes" or "no"?** If so, the rule is good.
+
+## What it looks like on a chart
+
+<Chart
+  id="plan-rule-trade-win-01"
+  height={440}
+  caption="EURUSD H1 (educational, imaginary example): rules: H1 close above resistance, buy on the retest, stop 30 pips below, target 2R. Since everything matched, entry at 1.0968."
+/>
+
+Notice that before the entry three prices were known: entry, stop, target. Nothing new had to be decided while the trade ran.
+
+## Step by step: writing the rules
+
+<Steps>
+
+### Step 1: Count the entry conditions
+
+Three to four yes/no conditions. If not all are "yes", do not enter. This is the job of the [Entry Model Checklist](/en/learn/09-price-action-entries-strategies/05-entry-model-checklist).
+
+### Step 2: The stop rule
+
+Based on what: swing low, retest low, ATR. Write "below what" and not "how many pips".
+
+### Step 3: The target rule
+
+A fixed R (such as 2R) or the next level. Following [Risk Reward](/en/learn/08-risk-management/03-risk-reward), write the minimum ratio.
+
+### Step 4: The lot formula
+
+Risk in money ÷ (stop pips × pip value). From [Position Sizing](/en/learn/08-risk-management/02-position-sizing).
+
+### Step 5: Forbidden acts
+
+Moving the stop farther away, raising size, entering outside the plan. Write them in three lines.
+
+</Steps>
+
+## Example 1: when it works (synthetic)
+
+- **Rules:** H1 close above 1.0960, buy on the retest, stop 30 pips, target 2R.
+- **While running:** after the breakout price came down and touched 1.0960. A rejection candle formed. Buy 1.0968, stop 1.0938, target 1.1028.
+- **Result:** the target was hit, +2R.
+- **Lesson:** all three prices were set in advance. The win was due not to luck but to a repeatable process.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Example 2: when it fails (synthetic)
+
+<Chart
+  id="plan-rule-broken-loss-01"
+  height={440}
+  caption="EURUSD H1 (educational, imaginary example): the rule is 'buy on the retest'. The trader entered on the breakout candle at 1.1000; price returned to the old resistance and touched the stop."
+/>
+
+- **What was visible:** the same setup. But the wait for the retest was not tolerated, and the buy was on the breakout candle itself.
+- **Result:** buy 1.1000, the stop at 1.0970 was hit, -1R.
+- **Why it failed:** with one condition (the retest) dropped, the entry moved away from the level. A normal pullback alone touched the stop.
+- **Lesson:** even if the setup is right, dropping one rule changes the result. This loss is not "the market's fault". It is "the result of breaking a rule".
+
+(Synthetic educational example. This is not a real trade.)
+
+## Common mistakes
+
+| Mistake                             | Why it happens               | What to do                       |
+| :---------------------------------- | :--------------------------- | :------------------------------- |
+| Entering on "almost matched"        | Fear of missing a chance     | If not all are yes, skip         |
+| Not writing the reason for the stop | Placing it by counting pips  | Write "below what"               |
+| Setting the target by the mood      | Greed                        | Write a fixed R or a level first |
+| Putting in the lot by guess         | The math feels like a bother | Write the formula down           |
+| Changing the rules after a loss     | Emotion                      | No change before 20 trades       |
+
+## Pro tips
+
+<Callout type="tip">
+  Take a screenshot before the trade, with entry, stop and target. Later match
+  whether the rules were followed. This is a key ingredient of the
+  [journal](/en/learn/12-trading-psychology/05-journaling-habit).
+</Callout>
+
+<Callout type="note">
+  Before adding a new rule, ask: if it had been there for the last 20 trades,
+  would the result have changed? If you do not know the answer, it is a guess.
+</Callout>
+
+## When this does not work
+
+- **If you write the rules carefully but do not test the setup:** a wrong rule that is written down is still wrong.
+- **At the moment of news:** if price jumps, entry and stop may not be at the written prices ([slippage](/en/learn/10-trade-management-execution/04-slippage-requote-spread-widening)).
+- **If there are too many rules:** more than ten conditions almost never match together, so no trade happens at all.
+
+## Summary
+
+<KeyTakeaways>
+
+- Write rules in three groups: entry, exit and risk.
+- Each rule should be measurable by yes/no or a number.
+- Dropping even one rule changes the result.
+- Entry, stop and target are known before the trade.
+
+</KeyTakeaways>
+
+## Practice
+
+For your favorite setup, write the rules in the three groups. Apply them to the last three charts: can you say yes/no to each condition?
+
+## Quiz
+
+1. How do you test whether a rule is good?
+2. If two of the three entry conditions match, what do you do?
+3. Why write "below what" in the stop rule?
+4. What was the cause of the loss above?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** If someone else can look at the chart and say yes/no, the rule is good.
+
+**2.** Do not enter. All conditions must be "yes".
+
+**3.** Because the market changes. If there is a reason (swing low, retest low), the stop stays meaningful.
+
+**4.** Entering on the breakout candle without waiting for the retest, which is breaking the rule.
+
+</details>
+
+## Next steps
+
+- Before: [Trading Plan Template](/en/learn/14-trading-plan-system/01-trading-plan-template).
+- After: [Pre-Trade Checklist](/en/learn/14-trading-plan-system/03-pre-trade-checklist).
+- Related: [Risk per Trade](/en/learn/08-risk-management/01-risk-per-trade).
+
+### Sources
+
+- <ExternalLink href="https://www.investopedia.com/articles/trading/06/tradingplan.asp">
+    Trading Plan, Investopedia
+  </ExternalLink>
+
+<Disclaimer />

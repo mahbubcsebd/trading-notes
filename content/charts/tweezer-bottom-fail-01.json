@@ -1,0 +1,211 @@
+{
+  "id": "tweezer-bottom-fail-01",
+  "title": {
+    "en": "Tweezer Bottom Mid-Downtrend Gets Swept",
+    "bn": "Downtrend-এর মাঝে tweezer bottom, পরে sweep"
+  },
+  "symbol": "GBPUSD",
+  "timeframe": "H1",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bullish",
+  "outcome": "loss",
+  "tags": [
+    "tweezer-bottom",
+    "tweezer",
+    "candlestick",
+    "fail",
+    "liquidity",
+    "pattern"
+  ],
+  "module": "patterns",
+  "lessonSlugs": [],
+  "caption": {
+    "en": "Illustrative synthetic GBPUSD H1: in a steady downtrend with no support, two candles print matching lows. Bought on the high break, the trade fails when price sweeps below the equal lows, where stops were resting, and keeps falling.",
+    "bn": "শিক্ষামূলক কাল্পনিক GBPUSD H1: কোনো support ছাড়া একটানা downtrend-এ দুটি candle একই low দেয়। High ভাঙলে buy, কিন্তু দাম সমান low-গুলোর নিচে, যেখানে stop জমা ছিল, sweep করে নামতে থাকে।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data, not a real market record.",
+    "bn": "শিক্ষামূলক কাল্পনিক ডেটা, বাস্তব মার্কেটের রেকর্ড নয়।"
+  },
+  "updatedAt": "2026-11-06T12:00:00Z",
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 1.2656,
+      "label": "Equal lows (stops below)",
+      "color": "#3b82f6",
+      "style": "dotted"
+    },
+    {
+      "type": "marker",
+      "i": 7,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Tweezer A"
+    },
+    {
+      "type": "marker",
+      "i": 8,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Tweezer B"
+    },
+    {
+      "type": "marker",
+      "i": 11,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Sweep"
+    },
+    {
+      "type": "hline",
+      "price": 1.2676,
+      "label": "Entry (high break)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.2651,
+      "label": "Stop",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.2726,
+      "label": "Target 2R",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candles 0-6 are a steady downtrend. Candles 7 and 8 print matching lows, but no marked support lies there. Buyers enter on the break of candle 8's high. Equal lows are where many stops sit; candle 11 runs below them, takes the stop and the downtrend continues.",
+    "bn": "০-৬ নম্বর candle একটানা downtrend। ৭ ও ৮ নম্বর একই low দেয়, কিন্তু সেখানে কোনো চিহ্নিত support নেই। ৮ নম্বরের high ভাঙলে buyers ঢোকে। সমান low-এর নিচে অনেকের stop থাকে; ১১ নম্বর তার নিচে নেমে stop নেয়, downtrend চলতে থাকে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Equal lows without a real level are a magnet for stops, not support",
+      "bn": "আসল level ছাড়া সমান low stop-এর চুম্বক, support নয়"
+    }
+  ],
+  "entry": 1.2676,
+  "stopLoss": 1.2651,
+  "takeProfit": 1.2726,
+  "rr": "1:2.0",
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.275,
+      "h": 1.27568,
+      "l": 1.27241,
+      "c": 1.2732
+    },
+    {
+      "i": 1,
+      "o": 1.2732,
+      "h": 1.27415,
+      "l": 1.27288,
+      "c": 1.2738
+    },
+    {
+      "i": 2,
+      "o": 1.2738,
+      "h": 1.27458,
+      "l": 1.27095,
+      "c": 1.2718
+    },
+    {
+      "i": 3,
+      "o": 1.2718,
+      "h": 1.27239,
+      "l": 1.26977,
+      "c": 1.2703
+    },
+    {
+      "i": 4,
+      "o": 1.2703,
+      "h": 1.27112,
+      "l": 1.26999,
+      "c": 1.2708
+    },
+    {
+      "i": 5,
+      "o": 1.2708,
+      "h": 1.2716,
+      "l": 1.2676,
+      "c": 1.2686
+    },
+    {
+      "i": 6,
+      "o": 1.2686,
+      "h": 1.26941,
+      "l": 1.26619,
+      "c": 1.267
+    },
+    {
+      "i": 7,
+      "o": 1.267,
+      "h": 1.2673,
+      "l": 1.2656,
+      "c": 1.2659
+    },
+    {
+      "i": 8,
+      "o": 1.2659,
+      "h": 1.2674,
+      "l": 1.2657,
+      "c": 1.2672
+    },
+    {
+      "i": 9,
+      "o": 1.2672,
+      "h": 1.268,
+      "l": 1.2669,
+      "c": 1.2677
+    },
+    {
+      "i": 10,
+      "o": 1.2677,
+      "h": 1.2679,
+      "l": 1.2661,
+      "c": 1.2663
+    },
+    {
+      "i": 11,
+      "o": 1.2663,
+      "h": 1.2665,
+      "l": 1.2644,
+      "c": 1.2648
+    },
+    {
+      "i": 12,
+      "o": 1.2648,
+      "h": 1.26533,
+      "l": 1.26205,
+      "c": 1.2628
+    },
+    {
+      "i": 13,
+      "o": 1.2628,
+      "h": 1.26346,
+      "l": 1.26086,
+      "c": 1.2614
+    },
+    {
+      "i": 14,
+      "o": 1.2614,
+      "h": 1.26221,
+      "l": 1.2611,
+      "c": 1.2619
+    },
+    {
+      "i": 15,
+      "o": 1.2619,
+      "h": 1.26238,
+      "l": 1.2592,
+      "c": 1.2601
+    }
+  ]
+}

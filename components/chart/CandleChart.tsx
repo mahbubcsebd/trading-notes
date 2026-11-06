@@ -1,8 +1,36 @@
-'use client';
+"use client";
 
-import React, { useState, useRef, useEffect, useMemo } from 'react';
-import { Candle, Annotation, LocalizedField, getLocalizedText } from '@/lib/chart-types';
-import { Eye, EyeOff, Play, Pause, SkipForward, SkipBack, RotateCcw, Maximize2, Minimize2, Download, Copy, Check } from 'lucide-react';
+import React, { useState, useRef, useEffect, useMemo } from "react";
+import {
+  Candle,
+  Annotation,
+  LocalizedField,
+  IndicatorSeries,
+  IndicatorPane,
+  getLocalizedText,
+} from "@/lib/chart-types";
+import {
+  OverlayLines,
+  IndicatorLegend,
+  IndicatorPaneLayer,
+} from "./IndicatorLayers";
+
+const PANE_HEIGHT = 120;
+const LEGEND_COLORS = ["#38bdf8", "#f59e0b", "#a78bfa", "#f472b6"];
+import {
+  Eye,
+  EyeOff,
+  Play,
+  Pause,
+  SkipForward,
+  SkipBack,
+  RotateCcw,
+  Maximize2,
+  Minimize2,
+  Download,
+  Copy,
+  Check,
+} from "lucide-react";
 
 interface CandleChartProps {
   id?: string;
@@ -10,6 +38,8 @@ interface CandleChartProps {
   timeframe?: string;
   candles: Candle[];
   annotations?: Annotation[];
+  overlays?: IndicatorSeries[];
+  pane?: IndicatorPane;
   height?: number;
   caption?: LocalizedField;
   showControls?: boolean;
@@ -17,15 +47,17 @@ interface CandleChartProps {
 }
 
 export function CandleChart({
-  id = 'chart',
-  symbol = 'XAUUSD',
-  timeframe = 'H4',
+  id = "chart",
+  symbol = "XAUUSD",
+  timeframe = "H4",
   candles = [],
   annotations = [],
+  overlays = [],
+  pane,
   height = 420,
   caption,
   showControls = true,
-  className = '',
+  className = "",
 }: CandleChartProps) {
   const containerRef = useRef<HTMLDivElement>(null);
   const svgRef = useRef<SVGSVGElement>(null);
@@ -34,7 +66,9 @@ export function CandleChart({
   const [isReplaying, setIsReplaying] = useState(false);
   const [replayIndex, setReplayIndex] = useState(candles.length);
   const [hoveredCandle, setHoveredCandle] = useState<Candle | null>(null);
-  const [hoveredPos, setHoveredPos] = useState<{ x: number; y: number } | null>(null);
+  const [hoveredPos, setHoveredPos] = useState<{ x: number; y: number } | null>(
+    null,
+  );
 
   // Set replay limit when candles change
   useEffect(() => {
@@ -85,11 +119,26 @@ export function CandleChart({
       if (c.h > max) max = c.h;
     });
 
-    // Also consider hline annotations in scale
+    // Overlay lines widen the scale so they never clip
+    overlays.forEach((s) => {
+      s.values.slice(0, activeCandles.length).forEach((v) => {
+        if (v === null || v === undefined || Number.isNaN(v)) return;
+        if (v < min) min = v;
+        if (v > max) max = v;
+      });
+    });
+
+    // Also consider hline and trendline annotations in scale
     activeAnnotations.forEach((a) => {
-      if (a.type === 'hline' && a.price !== undefined) {
+      if (a.type === "hline" && a.price !== undefined) {
         if (a.price < min) min = a.price;
         if (a.price > max) max = a.price;
+      }
+      if (a.type === "trendline" && a.from && a.to) {
+        if (a.from.price < min) min = a.from.price;
+        if (a.from.price > max) max = a.from.price;
+        if (a.to.price < min) min = a.to.price;
+        if (a.to.price > max) max = a.to.price;
       }
     });
 
@@ -104,20 +153,25 @@ export function CandleChart({
       max: max + padding,
       range: max - min + padding * 2,
     };
-  }, [activeCandles, activeAnnotations]);
+  }, [activeCandles, activeAnnotations, overlays]);
 
   const chartWidth = 800;
-  const chartHeight = isFullscreen ? 600 : height;
+  const baseHeight = isFullscreen ? 600 : height;
+  const paneExtra = pane ? PANE_HEIGHT : 0;
+  const chartHeight = baseHeight + paneExtra;
   const rightAxisWidth = 65;
   const plotWidth = chartWidth - rightAxisWidth;
-  const plotHeight = chartHeight - 35;
+  const plotHeight = baseHeight - 35;
 
   const candleCount = candles.length;
   const step = plotWidth / (candleCount + 1);
   const candleWidth = Math.max(4, Math.min(18, step * 0.7));
 
   const getY = (price: number) => {
-    return plotHeight - ((price - chartMetrics.min) / chartMetrics.range) * plotHeight;
+    return (
+      plotHeight -
+      ((price - chartMetrics.min) / chartMetrics.range) * plotHeight
+    );
   };
 
   const getPriceAtY = (y: number) => {
@@ -141,24 +195,26 @@ export function CandleChart({
 
     // Clone the SVG so we can augment attributes cleanly without affecting DOM
     const clone = svgEl.cloneNode(true) as SVGSVGElement;
-    clone.setAttribute('xmlns', 'http://www.w3.org/2000/svg');
-    clone.setAttribute('width', chartWidth.toString());
-    clone.setAttribute('height', chartHeight.toString());
+    clone.setAttribute("xmlns", "http://www.w3.org/2000/svg");
+    clone.setAttribute("width", chartWidth.toString());
+    clone.setAttribute("height", chartHeight.toString());
 
     const svgData = new XMLSerializer().serializeToString(clone);
-    const canvas = document.createElement('canvas');
+    const canvas = document.createElement("canvas");
     const scale = 2; // High-DPI 2x retina export
     canvas.width = chartWidth * scale;
     canvas.height = chartHeight * scale;
-    const ctx = canvas.getContext('2d');
+    const ctx = canvas.getContext("2d");
     if (!ctx) return;
 
-    const svgBlob = new Blob([svgData], { type: 'image/svg+xml;charset=utf-8' });
+    const svgBlob = new Blob([svgData], {
+      type: "image/svg+xml;charset=utf-8",
+    });
     const blobURL = window.URL.createObjectURL(svgBlob);
 
     const renderAndDownload = (sourceImg: HTMLImageElement) => {
       // Background matching dark theme
-      ctx.fillStyle = '#0b0f19';
+      ctx.fillStyle = "#0b0f19";
       ctx.fillRect(0, 0, canvas.width, canvas.height);
 
       // Draw chart
@@ -170,9 +226,9 @@ export function CandleChart({
       } catch (e) {}
 
       // Trigger download
-      const a = document.createElement('a');
+      const a = document.createElement("a");
       a.download = `${id || symbol}-${timeframe}-chart.png`;
-      a.href = canvas.toDataURL('image/png');
+      a.href = canvas.toDataURL("image/png");
       a.click();
     };
 
@@ -187,7 +243,9 @@ export function CandleChart({
       fallbackImg.onload = () => {
         renderAndDownload(fallbackImg);
       };
-      fallbackImg.src = 'data:image/svg+xml;base64,' + btoa(unescape(encodeURIComponent(svgData)));
+      fallbackImg.src =
+        "data:image/svg+xml;base64," +
+        btoa(unescape(encodeURIComponent(svgData)));
     };
 
     img.src = blobURL;
@@ -223,37 +281,48 @@ export function CandleChart({
   return (
     <div
       ref={containerRef}
-      className={`rounded-2xl border border-border/80 bg-card/95 shadow-xl overflow-hidden flex flex-col ${
-        isFullscreen ? 'fixed inset-4 z-50 bg-background/98 border-gold/40' : ''
+      className={`border-border bg-card/95 flex flex-col overflow-hidden rounded-2xl border ${
+        isFullscreen ? "bg-background/98 border-gold/40 fixed inset-4 z-50" : ""
       } ${className}`}
     >
       {/* Top Header Bar & OHLC Legend */}
-      <div className="px-4 py-3 border-b border-border/70 bg-panel/40 flex flex-wrap items-center justify-between gap-3 text-xs">
+      <div className="border-border/70 bg-panel/40 flex flex-wrap items-center justify-between gap-3 border-b px-4 py-3 text-xs">
         {/* Symbol, Timeframe & Current Values */}
         <div className="flex items-center gap-3">
           <div className="flex items-center gap-1.5 font-mono">
-            <span className="font-bold text-sm text-foreground">{symbol}</span>
-            <span className="px-1.5 py-0.5 rounded bg-muted text-[10px] text-gold font-semibold">
+            <span className="text-foreground text-sm font-bold">{symbol}</span>
+            <span className="bg-muted text-gold rounded px-1.5 py-0.5 text-[10px] font-semibold">
               {timeframe}
             </span>
           </div>
 
           {displayedCandle && (
-            <div className="hidden sm:flex items-center gap-2.5 font-mono text-[11px]">
+            <div className="hidden items-center gap-2.5 font-mono text-[11px] sm:flex">
               <span className="text-muted-foreground">
-                O: <strong className="text-foreground">{displayedCandle.o.toFixed(2)}</strong>
+                O:{" "}
+                <strong className="text-foreground">
+                  {displayedCandle.o.toFixed(2)}
+                </strong>
               </span>
               <span className="text-muted-foreground">
-                H: <strong className="text-foreground">{displayedCandle.h.toFixed(2)}</strong>
+                H:{" "}
+                <strong className="text-foreground">
+                  {displayedCandle.h.toFixed(2)}
+                </strong>
               </span>
               <span className="text-muted-foreground">
-                L: <strong className="text-foreground">{displayedCandle.l.toFixed(2)}</strong>
+                L:{" "}
+                <strong className="text-foreground">
+                  {displayedCandle.l.toFixed(2)}
+                </strong>
               </span>
               <span className="text-muted-foreground">
-                C:{' '}
+                C:{" "}
                 <strong
                   className={
-                    displayedCandle.c >= displayedCandle.o ? 'text-emerald-400' : 'text-rose-400'
+                    displayedCandle.c >= displayedCandle.o
+                      ? "text-up"
+                      : "text-down"
                   }
                 >
                   {displayedCandle.c.toFixed(2)}
@@ -269,14 +338,18 @@ export function CandleChart({
             {/* Annotation toggle */}
             <button
               onClick={() => setShowAnnotations(!showAnnotations)}
-              title={showAnnotations ? 'Hide annotations' : 'Show annotations'}
-              className={`px-2.5 py-1 rounded-lg text-xs font-medium border flex items-center gap-1.5 transition-all ${
+              title={showAnnotations ? "Hide annotations" : "Show annotations"}
+              className={`flex items-center gap-1.5 rounded-lg border px-2.5 py-1 text-xs font-medium transition-all ${
                 showAnnotations
-                  ? 'bg-gold/10 text-gold border-gold/30'
-                  : 'bg-muted/40 text-muted-foreground border-border/60 hover:text-foreground'
+                  ? "bg-gold/10 text-gold border-gold/30"
+                  : "bg-muted/40 text-muted-foreground border-border/60 hover:text-foreground"
               }`}
             >
-              {showAnnotations ? <Eye className="w-3.5 h-3.5" /> : <EyeOff className="w-3.5 h-3.5" />}
+              {showAnnotations ? (
+                <Eye className="h-3.5 w-3.5" />
+              ) : (
+                <EyeOff className="h-3.5 w-3.5" />
+              )}
               <span className="hidden sm:inline">Notes</span>
             </button>
 
@@ -284,28 +357,32 @@ export function CandleChart({
             <button
               onClick={handleDownloadPng}
               title="Download PNG"
-              className="p-1.5 rounded-lg border border-border/60 text-muted-foreground hover:text-foreground hover:bg-muted/40 transition-colors"
+              className="border-border/60 text-muted-foreground hover:text-foreground hover:bg-muted/40 rounded-lg border p-1.5 transition-colors"
             >
-              <Download className="w-3.5 h-3.5" />
+              <Download className="h-3.5 w-3.5" />
             </button>
 
             {/* Fullscreen toggle */}
             <button
               onClick={() => setIsFullscreen(!isFullscreen)}
-              title={isFullscreen ? 'Exit fullscreen' : 'Fullscreen'}
-              className="p-1.5 rounded-lg border border-border/60 text-muted-foreground hover:text-foreground hover:bg-muted/40 transition-colors"
+              title={isFullscreen ? "Exit fullscreen" : "Fullscreen"}
+              className="border-border/60 text-muted-foreground hover:text-foreground hover:bg-muted/40 rounded-lg border p-1.5 transition-colors"
             >
-              {isFullscreen ? <Minimize2 className="w-3.5 h-3.5" /> : <Maximize2 className="w-3.5 h-3.5" />}
+              {isFullscreen ? (
+                <Minimize2 className="h-3.5 w-3.5" />
+              ) : (
+                <Maximize2 className="h-3.5 w-3.5" />
+              )}
             </button>
           </div>
         )}
       </div>
 
       {/* SVG Chart Main Viewport */}
-      <div className="relative flex-1 bg-background/50 overflow-hidden select-none">
+      <div className="bg-background/50 relative flex-1 overflow-hidden select-none">
         <svg
           ref={svgRef}
-          className="w-full h-full cursor-crosshair"
+          className="h-full w-full cursor-crosshair"
           viewBox={`0 0 ${chartWidth} ${chartHeight}`}
           preserveAspectRatio="none"
           onMouseMove={handleMouseMove}
@@ -338,13 +415,16 @@ export function CandleChart({
 
           {/* Zones */}
           {activeAnnotations
-            .filter((a) => a.type === 'zone' && a.from && a.to)
+            .filter((a) => a.type === "zone" && a.from && a.to)
             .map((a, idx) => {
               const y1 = getY(Math.max(a.from!.price, a.to!.price));
               const y2 = getY(Math.min(a.from!.price, a.to!.price));
               const x1 = Math.max(0, (a.from!.i ?? 0) * step);
-              const x2 = Math.min(plotWidth, ((a.to!.i ?? candleCount - 1) + 1) * step);
-              const color = a.color || '#22c55e';
+              const x2 = Math.min(
+                plotWidth,
+                ((a.to!.i ?? candleCount - 1) + 1) * step,
+              );
+              const color = a.color || "#22c55e";
               return (
                 <g key={`zone-${idx}`}>
                   <rect
@@ -375,10 +455,10 @@ export function CandleChart({
 
           {/* Horizontal Level Lines */}
           {activeAnnotations
-            .filter((a) => a.type === 'hline' && a.price !== undefined)
+            .filter((a) => a.type === "hline" && a.price !== undefined)
             .map((a, idx) => {
               const y = getY(a.price!);
-              const color = a.color || '#d4af37';
+              const color = a.color || "#d4af37";
               return (
                 <g key={`hline-${idx}`}>
                   <line
@@ -388,7 +468,13 @@ export function CandleChart({
                     y2={y}
                     stroke={color}
                     strokeWidth="1.2"
-                    strokeDasharray={a.style === 'dashed' ? '4 3' : a.style === 'dotted' ? '2 2' : undefined}
+                    strokeDasharray={
+                      a.style === "dashed"
+                        ? "4 3"
+                        : a.style === "dotted"
+                          ? "2 2"
+                          : undefined
+                    }
                     strokeOpacity="0.85"
                   />
                   {/* Label pill on the line */}
@@ -415,6 +501,48 @@ export function CandleChart({
               );
             })}
 
+          {/* Trendlines */}
+          {activeAnnotations
+            .filter((a) => a.type === "trendline" && a.from && a.to)
+            .map((a, idx) => {
+              const x1 = ((a.from!.i ?? 0) + 1) * step;
+              const y1 = getY(a.from!.price);
+              const x2 = ((a.to!.i ?? 0) + 1) * step;
+              const y2 = getY(a.to!.price);
+              const color = a.color || "#3b82f6";
+              return (
+                <g key={`trendline-${idx}`}>
+                  <line
+                    x1={x1}
+                    y1={y1}
+                    x2={x2}
+                    y2={y2}
+                    stroke={color}
+                    strokeWidth="2"
+                    strokeDasharray={
+                      a.style === "dashed"
+                        ? "4 3"
+                        : a.style === "dotted"
+                          ? "2 2"
+                          : undefined
+                    }
+                    strokeOpacity="0.9"
+                  />
+                  {a.label && (
+                    <text
+                      x={(x1 + x2) / 2}
+                      y={(y1 + y2) / 2 - 8}
+                      fill={color}
+                      textAnchor="middle"
+                      className="font-mono text-[10px] font-bold"
+                    >
+                      {a.label}
+                    </text>
+                  )}
+                </g>
+              );
+            })}
+
           {/* Candles */}
           {activeCandles.map((c, i) => {
             const x = (i + 1) * step;
@@ -426,7 +554,7 @@ export function CandleChart({
 
             const bodyTop = Math.min(openY, closeY);
             const bodyHeight = Math.max(1.8, Math.abs(closeY - openY));
-            const color = isBull ? '#22c55e' : '#ef4444';
+            const color = isBull ? "#22c55e" : "#ef4444";
 
             return (
               <g key={`candle-${i}`}>
@@ -454,16 +582,32 @@ export function CandleChart({
             );
           })}
 
+          {/* Indicator overlays (MA, bands, VWAP) */}
+          {overlays.length > 0 && (
+            <OverlayLines
+              overlays={overlays}
+              count={activeCandles.length}
+              xOf={(i) => (i + 1) * step}
+              yOf={getY}
+            />
+          )}
+          <IndicatorLegend
+            items={overlays.map((s, idx) => ({
+              label: s.label,
+              color: s.color || LEGEND_COLORS[idx % LEGEND_COLORS.length],
+            }))}
+          />
+
           {/* Markers & Text Annotations */}
           {activeAnnotations
-            .filter((a) => a.type === 'marker' && a.i !== undefined)
+            .filter((a) => a.type === "marker" && a.i !== undefined)
             .map((a, idx) => {
               const candle = activeCandles[a.i!];
               if (!candle) return null;
               const x = (a.i! + 1) * step;
-              const isAbove = a.position === 'aboveBar';
+              const isAbove = a.position === "aboveBar";
               const y = isAbove ? getY(candle.h) - 16 : getY(candle.l) + 16;
-              const color = a.color || (isAbove ? '#ef4444' : '#22c55e');
+              const color = a.color || (isAbove ? "#ef4444" : "#22c55e");
 
               return (
                 <g key={`marker-${idx}`} className="animate-fade-in">
@@ -493,7 +637,7 @@ export function CandleChart({
 
           {/* Free Text Annotations */}
           {activeAnnotations
-            .filter((a) => a.type === 'text' && a.p)
+            .filter((a) => a.type === "text" && a.p)
             .map((a, idx) => {
               const x = ((a.p!.i ?? 0) + 1) * step;
               const y = getY(a.p!.price);
@@ -551,6 +695,20 @@ export function CandleChart({
             </g>
           )}
 
+          {/* Indicator sub-pane (RSI, MACD, ATR) */}
+          {pane && (
+            <IndicatorPaneLayer
+              pane={pane}
+              count={activeCandles.length}
+              top={baseHeight}
+              height={PANE_HEIGHT}
+              plotWidth={plotWidth}
+              axisWidth={rightAxisWidth}
+              xOf={(i) => (i + 1) * step}
+              barWidth={candleWidth * 0.8}
+            />
+          )}
+
           {/* Axis Separator Line */}
           <line
             x1={plotWidth}
@@ -564,34 +722,42 @@ export function CandleChart({
 
       {/* Bottom Replay Toolbar */}
       {showControls && (
-        <div className="px-4 py-2.5 border-t border-border/70 bg-panel/30 flex flex-wrap items-center justify-between gap-3 text-xs">
+        <div className="border-border/70 bg-panel/30 flex flex-wrap items-center justify-between gap-3 border-t px-4 py-2.5 text-xs">
           {/* Replay Controls */}
           <div className="flex items-center gap-2">
-            <span className="text-[11px] font-mono text-muted-foreground mr-1">Replay:</span>
+            <span className="text-muted-foreground mr-1 font-mono text-[11px]">
+              Replay:
+            </span>
             <button
               onClick={() => setIsReplaying(!isReplaying)}
-              title={isReplaying ? 'Pause replay' : 'Play replay'}
-              className="p-1.5 rounded-lg bg-gold text-black hover:bg-gold/90 transition-colors font-semibold"
+              title={isReplaying ? "Pause replay" : "Play replay"}
+              className="bg-gold hover:bg-gold/90 rounded-lg p-1.5 font-semibold text-black transition-colors"
             >
-              {isReplaying ? <Pause className="w-3.5 h-3.5" /> : <Play className="w-3.5 h-3.5" />}
+              {isReplaying ? (
+                <Pause className="h-3.5 w-3.5" />
+              ) : (
+                <Play className="h-3.5 w-3.5" />
+              )}
             </button>
 
             <button
               onClick={() => setReplayIndex((prev) => Math.max(1, prev - 1))}
               disabled={replayIndex <= 1}
               title="Previous candle"
-              className="p-1.5 rounded-lg border border-border/60 text-muted-foreground hover:text-foreground disabled:opacity-40 transition-colors"
+              className="border-border/60 text-muted-foreground hover:text-foreground rounded-lg border p-1.5 transition-colors disabled:opacity-40"
             >
-              <SkipBack className="w-3.5 h-3.5" />
+              <SkipBack className="h-3.5 w-3.5" />
             </button>
 
             <button
-              onClick={() => setReplayIndex((prev) => Math.min(candles.length, prev + 1))}
+              onClick={() =>
+                setReplayIndex((prev) => Math.min(candles.length, prev + 1))
+              }
               disabled={replayIndex >= candles.length}
               title="Next candle"
-              className="p-1.5 rounded-lg border border-border/60 text-muted-foreground hover:text-foreground disabled:opacity-40 transition-colors"
+              className="border-border/60 text-muted-foreground hover:text-foreground rounded-lg border p-1.5 transition-colors disabled:opacity-40"
             >
-              <SkipForward className="w-3.5 h-3.5" />
+              <SkipForward className="h-3.5 w-3.5" />
             </button>
 
             <button
@@ -600,26 +766,27 @@ export function CandleChart({
                 setReplayIndex(candles.length);
               }}
               title="Reset to full chart"
-              className="p-1.5 rounded-lg border border-border/60 text-muted-foreground hover:text-foreground transition-colors"
+              className="border-border/60 text-muted-foreground hover:text-foreground rounded-lg border p-1.5 transition-colors"
             >
-              <RotateCcw className="w-3.5 h-3.5" />
+              <RotateCcw className="h-3.5 w-3.5" />
             </button>
           </div>
 
           {/* Candle Step Slider */}
-          <div className="flex items-center gap-2 flex-1 max-w-xs">
+          <div className="flex max-w-xs flex-1 items-center gap-2">
             <input
               type="range"
               min="1"
               max={candles.length}
               value={replayIndex}
+              aria-label="Replay position"
               onChange={(e) => {
                 setIsReplaying(false);
                 setReplayIndex(Number(e.target.value));
               }}
-              className="w-full accent-gold h-1.5 bg-muted rounded-lg cursor-pointer"
+              className="accent-gold bg-muted h-1.5 w-full cursor-pointer rounded-lg"
             />
-            <span className="font-mono text-[11px] text-muted-foreground shrink-0">
+            <span className="text-muted-foreground shrink-0 font-mono text-[11px]">
               {replayIndex}/{candles.length}
             </span>
           </div>
@@ -628,8 +795,8 @@ export function CandleChart({
 
       {/* Caption footer if provided */}
       {caption && (
-        <div className="px-4 py-2 border-t border-border/40 bg-panel/10 text-xs text-muted-foreground">
-          {typeof caption === 'string' ? caption : getLocalizedText(caption)}
+        <div className="border-border/40 bg-panel/10 text-muted-foreground border-t px-4 py-2 text-xs">
+          {typeof caption === "string" ? caption : getLocalizedText(caption)}
         </div>
       )}
     </div>

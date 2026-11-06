@@ -1,0 +1,265 @@
+{
+  "id": "dark-cloud-cover-win-01",
+  "title": {
+    "en": "Deep Dark Cloud Cover at an Old High, Short on the Low Break",
+    "bn": "পুরোনো high-এ গভীর dark cloud cover, low ভাঙলে short"
+  },
+  "symbol": "XAUUSD",
+  "timeframe": "H1",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bearish",
+  "outcome": "win",
+  "tags": [
+    "dark-cloud-cover",
+    "candlestick",
+    "resistance",
+    "pattern"
+  ],
+  "module": "patterns",
+  "lessonSlugs": [],
+  "caption": {
+    "en": "Illustrative synthetic XAUUSD H1: a long green candle runs up to an old high, then a red candle pokes above the level and closes about 70% down into the green body. The next candle breaks the dark cloud low; price falls to 2R.",
+    "bn": "শিক্ষামূলক কাল্পনিক XAUUSD H1: একটি লম্বা সবুজ candle পুরোনো high পর্যন্ত ওঠে, তারপর একটি লাল candle level-এর উপরে উঁকি দিয়ে সবুজ body-র প্রায় 70% পর্যন্ত নেমে close করে। পরের candle dark cloud-এর low ভাঙে; দাম 2R পর্যন্ত নামে।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data, not a real market record.",
+    "bn": "শিক্ষামূলক কাল্পনিক ডেটা, বাস্তব মার্কেটের রেকর্ড নয়।"
+  },
+  "updatedAt": "2026-11-06T12:00:00Z",
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 2354.44,
+      "label": "Old high (resistance)",
+      "color": "#3b82f6",
+      "style": "dashed"
+    },
+    {
+      "type": "marker",
+      "i": 17,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Dark cloud cover"
+    },
+    {
+      "type": "hline",
+      "price": 2349.14,
+      "label": "Entry (low break)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 2359.94,
+      "label": "Stop",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 2327.54,
+      "label": "Target 2R",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candle 5 makes the old high. Candle 16 is a long green candle that closes just above it. Candle 17 opens at that close, wicks above the old high, then closes about 70% down into candle 16's body, but above its open: a dark cloud cover. Candle 18 breaks its low and fills the sell stop.",
+    "bn": "৫ নম্বর candle পুরোনো high বানায়। ১৬ নম্বর একটি লম্বা সবুজ candle, close তার সামান্য উপরে। ১৭ নম্বর তার close-এ open করে, পুরোনো high-এর উপরে wick দেয়, তারপর ১৬ নম্বরের body-র প্রায় 70% পর্যন্ত নেমে close করে, কিন্তু তার open-এর উপরে: dark cloud cover। ১৮ নম্বর তার low ভেঙে sell stop fill করে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "The deeper the red close into the green body, the stronger the signal",
+      "bn": "লাল close সবুজ body-র যত গভীরে, signal তত শক্ত"
+    }
+  ],
+  "entry": 2349.14,
+  "stopLoss": 2359.94,
+  "takeProfit": 2327.54,
+  "rr": "1:2.0",
+  "candles": [
+    {
+      "i": 0,
+      "o": 2330.0,
+      "h": 2338.89,
+      "l": 2326.24,
+      "c": 2335.0
+    },
+    {
+      "i": 1,
+      "o": 2335.0,
+      "h": 2345.59,
+      "l": 2330.7,
+      "c": 2341.0
+    },
+    {
+      "i": 2,
+      "o": 2341.0,
+      "h": 2343.73,
+      "l": 2336.21,
+      "c": 2339.0
+    },
+    {
+      "i": 3,
+      "o": 2339.0,
+      "h": 2350.13,
+      "l": 2333.05,
+      "c": 2346.0
+    },
+    {
+      "i": 4,
+      "o": 2346.0,
+      "h": 2353.44,
+      "l": 2341.63,
+      "c": 2350.0
+    },
+    {
+      "i": 5,
+      "o": 2350.0,
+      "h": 2354.44,
+      "l": 2347.0,
+      "c": 2349.44
+    },
+    {
+      "i": 6,
+      "o": 2349.44,
+      "h": 2353.87,
+      "l": 2338.47,
+      "c": 2343.44
+    },
+    {
+      "i": 7,
+      "o": 2343.44,
+      "h": 2350.24,
+      "l": 2329.93,
+      "c": 2335.44
+    },
+    {
+      "i": 8,
+      "o": 2335.44,
+      "h": 2340.23,
+      "l": 2326.55,
+      "c": 2330.44
+    },
+    {
+      "i": 9,
+      "o": 2330.44,
+      "h": 2334.96,
+      "l": 2328.04,
+      "c": 2332.44
+    },
+    {
+      "i": 10,
+      "o": 2332.44,
+      "h": 2336.82,
+      "l": 2321.32,
+      "c": 2326.44
+    },
+    {
+      "i": 11,
+      "o": 2326.44,
+      "h": 2336.18,
+      "l": 2323.03,
+      "c": 2331.44
+    },
+    {
+      "i": 12,
+      "o": 2331.44,
+      "h": 2342.07,
+      "l": 2327.24,
+      "c": 2337.44
+    },
+    {
+      "i": 13,
+      "o": 2337.44,
+      "h": 2344.51,
+      "l": 2333.11,
+      "c": 2341.44
+    },
+    {
+      "i": 14,
+      "o": 2341.44,
+      "h": 2349.84,
+      "l": 2336.84,
+      "c": 2346.44
+    },
+    {
+      "i": 15,
+      "o": 2346.44,
+      "h": 2350.44,
+      "l": 2344.94,
+      "c": 2347.44
+    },
+    {
+      "i": 16,
+      "o": 2347.44,
+      "h": 2356.44,
+      "l": 2346.44,
+      "c": 2356.44
+    },
+    {
+      "i": 17,
+      "o": 2356.44,
+      "h": 2358.44,
+      "l": 2349.64,
+      "c": 2350.14
+    },
+    {
+      "i": 18,
+      "o": 2350.14,
+      "h": 2351.14,
+      "l": 2345.14,
+      "c": 2346.14
+    },
+    {
+      "i": 19,
+      "o": 2346.14,
+      "h": 2349.11,
+      "l": 2338.25,
+      "c": 2341.14
+    },
+    {
+      "i": 20,
+      "o": 2341.14,
+      "h": 2345.45,
+      "l": 2338.52,
+      "c": 2343.14
+    },
+    {
+      "i": 21,
+      "o": 2343.14,
+      "h": 2347.24,
+      "l": 2333.44,
+      "c": 2337.14
+    },
+    {
+      "i": 22,
+      "o": 2337.14,
+      "h": 2340.35,
+      "l": 2329.93,
+      "c": 2333.14
+    },
+    {
+      "i": 23,
+      "o": 2333.14,
+      "h": 2336.34,
+      "l": 2330.75,
+      "c": 2334.14
+    },
+    {
+      "i": 24,
+      "o": 2334.14,
+      "h": 2337.49,
+      "l": 2324.14,
+      "c": 2328.14
+    },
+    {
+      "i": 25,
+      "o": 2328.14,
+      "h": 2331.43,
+      "l": 2319.19,
+      "c": 2323.14
+    }
+  ]
+}

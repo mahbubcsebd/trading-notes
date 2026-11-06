@@ -1,0 +1,175 @@
+---
+title: "Spread ও Slippage in Gold: লুকানো খরচের হিসাব"
+description: "Gold-এ spread ও slippage কী, কখন বাড়ে, এবং entry-র আগেই খরচ হিসাবে ধরার উপায় — slippage-এর দুটি chart সহ।"
+level: beginner
+tags: [gold, spread, slippage, execution, cost]
+instruments: [XAUUSD]
+timeframes: [M5]
+status: done
+sources:
+  - type: blog
+    title: "Slippage - Investopedia"
+    url: "https://www.investopedia.com/terms/s/slippage.asp"
+updated: 2026-11-05
+---
+
+# Spread ও Slippage in Gold: লুকানো খরচের হিসাব
+
+Trade খুলতেই account কিছুটা লাল। ক্ষতি তো হয়নি? এটি spread। আর stop-এ বন্ধ হলো অপ্রত্যাশিত দামে? এটি slippage। দুটিই gold-এ বড় হতে পারে।
+
+## এই লেখা পড়ে আপনি যা পারবেন
+
+- **Spread ও slippage-এর পার্থক্য** বলতে পারবেন।
+- **কখন এরা বাড়ে**, চিনতে পারবেন।
+- **খরচকে stop ও target-এর হিসাবে** ধরতে পারবেন।
+
+## কেন এটি জরুরি
+
+- **Gold-এ দাম বড়, তাই spread-এর ডলার-অঙ্কও বড়।**
+- **ছোট stop-এ খরচ অনুপাতে বিশাল।** Spread stop-এর বড় অংশ খেয়ে নিতে পারে।
+- **খবর ও কম তরলতায় বাড়ে।** [News Events](/bn/learn/13-gold-xauusd/06-news-events)-এর সঙ্গে সরাসরি যুক্ত।
+
+পূর্বশর্ত: [Slippage ও Execution](/bn/learn/10-trade-management-execution/04-slippage-requote-spread-widening)।
+
+## Spread ও Slippage কী
+
+**Spread হলো কেনা (ask) ও বেচা (bid) দামের পার্থক্য, যা trade খোলার সঙ্গে সঙ্গে খরচ হিসেবে ধরা হয়। Slippage হলো আপনার চাওয়া দাম ও বাস্তবে পাওয়া দামের পার্থক্য।**
+
+ভাবুন মুদ্রা বিনিময়ের কাউন্টারে। কেনার দাম বেশি, বেচার দাম কম। মাঝের ফাঁকটাই দোকানদারের আয়। Trade খোলামাত্র আপনি সেই ফাঁকের এক পাশে।
+
+| বিষয়    | কী                          | কখন বেশি                      |
+| :------- | :-------------------------- | :---------------------------- |
+| Spread   | ask ও bid-এর পার্থক্য       | খবর, session-এর শেষ, কম তরলতা |
+| Slippage | চাওয়া ও পাওয়া দামের ফারাক | দ্রুত বাজার, খবর, stop order  |
+
+## Chart-এ কেমন দেখায়
+
+<Chart
+  id="slippage-news-loss-01"
+  height={420}
+  caption="কাল্পনিক EURUSD — stop 1.0870, খবরের candle তা টপকে প্রায় 1.0842-এ fill; লোকসান 30-এর বদলে প্রায় 58 pip।"
+/>
+
+<Chart
+  id="slippage-limit-entry-01"
+  height={420}
+  caption="কাল্পনিক EURUSD — 1.0905 retest-এ limit order, ঝুঁকি 57-এর বদলে 30 pip।"
+/>
+
+(এই দুটি chart আগের অধ্যায়ের forex উদাহরণ। Gold-এ একই ধারণা, তবে ডলার-অঙ্ক বড়।)
+
+## ধাপে ধাপে: খরচ হিসাবে ধরা
+
+<Steps>
+
+### ধাপ ১: নিজের broker-এর সাধারণ spread লিখুন
+
+শান্ত সময়ে কত, ব্যস্ত সময়ে কত — দুটি সংখ্যা।
+
+### ধাপ ২: Stop-এর সঙ্গে তুলনা করুন
+
+Spread যদি stop-এর বড় অংশ (যেমন ২০% বা বেশি) হয়, trade-এর খরচ বেশি।
+
+### ধাপ ৩: খবরের সময় এড়ান বা limit ব্যবহার করুন
+
+Market order খবরের সময় খারাপ দামে ভরে। Limit order দাম নিয়ন্ত্রণ করে, তবে ভরার নিশ্চয়তা দেয় না।
+
+### ধাপ ৪: Risk হিসাবে slippage-এর জায়গা রাখুন
+
+পরিকল্পনা ছোট slippage ধরে নিয়ে করুন। খবরে এর চেয়ে বেশি হতে পারে।
+
+</Steps>
+
+## উদাহরণ ১: যখন কাজ করে (কাল্পনিক)
+
+- **আগে থেকে ঠিক:** Spread কাল্পনিক $0.30, stop $6।
+- **হিসাব:** Spread stop-এর ৫%, গ্রহণযোগ্য।
+- **ফল:** Trade নিয়মমতো, খরচ হিসাবের মধ্যে।
+- **শিক্ষা:** খরচ আগে জানলে stop ও target বাস্তবসম্মত হয়।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়।)
+
+## উদাহরণ ২: যখন ব্যর্থ হয় (কাল্পনিক)
+
+- **আগে থেকে ঠিক:** Spread কাল্পনিক $0.30, stop মাত্র $1.5।
+- **হিসাব:** Spread stop-এর ২০%। ব্যস্ত সময়ে spread বাড়লে আরও বেশি।
+- **ঘটল কী:** Entry-র সঙ্গে সঙ্গে প্রায় এক-পঞ্চমাংশ ঝুঁকি খরচ। সামান্য নড়াচড়ায় stop খেল।
+- **কেন ব্যর্থ:** খরচ stop-এর অনুপাতে অনেক বড় ছিল।
+- **শিক্ষা:** খুব ছোট stop-এ খরচ খেয়ে ফেলে। Stop-এর মাপ ATR থেকে ঠিক করুন।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়।)
+
+## সাধারণ ভুল
+
+| ভুল                   | কেন হয়         | কী করবেন                |
+| :-------------------- | :-------------- | :---------------------- |
+| Spread উপেক্ষা        | বিজ্ঞাপনের "কম" | নিজের platform-এ মাপুন  |
+| খবরে market order     | তাড়াহুড়ো      | বাইরে থাকুন বা retest-এ |
+| খুব ছোট stop          | কম ঝুঁকির ভ্রম  | Spread অনুপাত যাচাই     |
+| Session-এর শেষে trade | সুযোগ ভাবা      | তরলতা কম, spread বড়    |
+
+## Pro tips
+
+<Callout type="tip">
+  এক সপ্তাহ spread লিখুন: সকাল, দুপুর, রাত। নিজের broker-এর গড় ও সর্বোচ্চ জানা
+  থাকলে খরচ নিয়ে অবাক হবেন না।
+</Callout>
+
+<Callout type="warning">
+  কম spread সবসময় ভালো নয়। কিছু broker-এ spread কম কিন্তু commission আছে। মোট
+  খরচ তুলনা করুন।
+</Callout>
+
+## কখন এটা কাজ করে না
+
+- **Broker-এর ধরন ভেদে:** fixed বা variable spread-এর আচরণ আলাদা।
+- **খুব বড় position-এ:** আকারের কারণে বাড়তি slippage।
+- **বাজার বন্ধ থাকার পর খোলা:** gap হলে stop কাজ নাও করতে পারে।
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- Spread entry-র মুহূর্তের খরচ, slippage চাওয়া ও পাওয়া দামের ফারাক।
+- খবরে ও কম তরলতায় দুটিই বাড়ে।
+- Stop ছোট হলে spread-এর অনুপাত বড় হয়।
+- খরচ trade-এর আগেই হিসাবে ধরুন।
+
+</KeyTakeaways>
+
+## অনুশীলন
+
+আপনার broker-এ XAUUSD-এর spread তিনটি আলাদা সময়ে লিখুন: শান্ত, London খোলা, কোনো খবরের সময়। প্রতিটির জন্য $5 stop-এর কত শতাংশ, হিসাব করুন।
+
+## কুইজ
+
+1. Spread ও slippage-এর পার্থক্য কী?
+2. কখন spread বাড়ে?
+3. খুব ছোট stop-এ spread-এর সমস্যা কী?
+4. Limit order কী দেয়, কী দেয় না?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** Spread ask-bid ফারাক। Slippage চাওয়া ও পাওয়া দামের ফারাক।
+
+**২.** খবর, কম তরলতা ও session-এর শেষে।
+
+**৩.** Stop-এর বড় অংশ খরচেই চলে যায়।
+
+**৪.** দামের নিয়ন্ত্রণ দেয়, ভরার নিশ্চয়তা দেয় না।
+
+</details>
+
+## পরের ধাপ
+
+- আগে: [News Events](/bn/learn/13-gold-xauusd/06-news-events)।
+- পরে: [Gold Risk ও Lot Size](/bn/learn/13-gold-xauusd/08-gold-risk-lot-size)।
+
+### সূত্র
+
+- <ExternalLink href="https://www.investopedia.com/terms/s/slippage.asp">
+    Slippage, Investopedia
+  </ExternalLink>
+
+<Disclaimer />

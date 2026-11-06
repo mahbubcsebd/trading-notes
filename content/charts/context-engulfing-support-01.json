@@ -1,0 +1,78 @@
+{
+  "id": "context-engulfing-support-01",
+  "title": {
+    "en": "Bullish Engulfing at Support",
+    "bn": "Support-এ bullish engulfing"
+  },
+  "symbol": "EURUSD",
+  "timeframe": "H4",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bullish",
+  "outcome": "win",
+  "tags": ["candle-context", "engulfing", "support"],
+  "module": "04-candlesticks",
+  "lessonSlugs": ["05-candle-context"],
+  "caption": {
+    "en": "Price tests support twice. The second test prints a bullish engulfing, and the next candle confirms.",
+    "bn": "দাম দুবার support ছোঁয়। দ্বিতীয়বারে bullish engulfing তৈরি হয়, পরের candle তা নিশ্চিত করে।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data.",
+    "bn": "এটি শিক্ষামূলক কাল্পনিক ডেটা।"
+  },
+  "updatedAt": "2026-11-05T14:00:00Z",
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 1.07,
+      "label": "Support",
+      "color": "#22c55e",
+      "style": "solid"
+    },
+    {
+      "type": "marker",
+      "i": 7,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Engulfing"
+    },
+    {
+      "type": "hline",
+      "price": 1.0772,
+      "label": "Buy entry",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.069,
+      "label": "Stop",
+      "color": "#ef4444",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candle 7 engulfs candle 6 right on a level that already held once. Candle 8 closes above the engulfing high, which confirms the buyers.",
+    "bn": "৭ নম্বর candle ঠিক সেই level-এ ৬ নম্বরকে engulf করে যা আগে একবার টিকেছে। ৮ নম্বর candle engulfing-এর high-এর উপরে close করে ক্রেতাদের নিশ্চিত করে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Same shape, right place: the level is what gives the candle meaning",
+      "bn": "একই আকার, সঠিক জায়গা: level-ই candle-কে অর্থ দেয়"
+    }
+  ],
+  "candles": [
+    { "i": 0, "o": 1.078, "h": 1.079, "l": 1.0745, "c": 1.0752 },
+    { "i": 1, "o": 1.0752, "h": 1.0758, "l": 1.07, "c": 1.0708 },
+    { "i": 2, "o": 1.0708, "h": 1.074, "l": 1.0698, "c": 1.0735 },
+    { "i": 3, "o": 1.0735, "h": 1.0765, "l": 1.073, "c": 1.076 },
+    { "i": 4, "o": 1.076, "h": 1.077, "l": 1.0735, "c": 1.0742 },
+    { "i": 5, "o": 1.0742, "h": 1.0748, "l": 1.0715, "c": 1.072 },
+    { "i": 6, "o": 1.072, "h": 1.0725, "l": 1.07, "c": 1.0705 },
+    { "i": 7, "o": 1.0702, "h": 1.0742, "l": 1.0696, "c": 1.0738 },
+    { "i": 8, "o": 1.0738, "h": 1.0775, "l": 1.0734, "c": 1.077 },
+    { "i": 9, "o": 1.077, "h": 1.08, "l": 1.0765, "c": 1.0795 },
+    { "i": 10, "o": 1.0795, "h": 1.082, "l": 1.079, "c": 1.0815 }
+  ]
+}

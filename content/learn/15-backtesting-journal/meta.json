@@ -1,9 +1,11 @@
 {
   "title": "Backtesting & Journal",
   "pages": [
+    "00-overview",
     "01-how-to-backtest",
-    "02-journal-template",
-    "03-reviewing-trades",
-    "04-building-a-plan"
+    "02-performance-metrics-forward-testing",
+    "03-journal-template",
+    "04-reviewing-trades",
+    "05-building-a-plan"
   ]
 }

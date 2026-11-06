@@ -1,3 +1,11 @@
 {
-  "title": "Trade Management Execution"
+  "title": "Trade Management Execution",
+  "pages": [
+    "00-overview",
+    "01-stop-loss-placement",
+    "02-take-profit-partial-close",
+    "03-trailing-stop",
+    "04-slippage-requote-spread-widening",
+    "05-trade-kokhon-exit-korbo"
+  ]
 }

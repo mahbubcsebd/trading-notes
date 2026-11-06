@@ -1,0 +1,189 @@
+{
+  "id": "hanging-man-fail-01",
+  "title": {
+    "en": "Hanging Man Shorted Without Confirmation",
+    "bn": "Confirmation ছাড়া hanging man-এ short"
+  },
+  "symbol": "USDJPY",
+  "timeframe": "H1",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bearish",
+  "outcome": "loss",
+  "tags": [
+    "hanging-man",
+    "candlestick",
+    "fail",
+    "confirmation",
+    "pattern"
+  ],
+  "module": "patterns",
+  "lessonSlugs": [],
+  "caption": {
+    "en": "Illustrative synthetic USDJPY H1: a hanging man forms in a steady uptrend and is shorted at its close. The next candle closes above the hanging man's body instead of below it, and the uptrend carries on through the stop.",
+    "bn": "শিক্ষামূলক কাল্পনিক USDJPY H1: একটানা uptrend-এ একটি hanging man, তার close-এই short। পরের candle body-র নিচে নয়, উপরে close করে, আর uptrend stop ভেঙে এগিয়ে যায়।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data, not a real market record.",
+    "bn": "শিক্ষামূলক কাল্পনিক ডেটা, বাস্তব মার্কেটের রেকর্ড নয়।"
+  },
+  "updatedAt": "2026-11-06T12:00:00Z",
+  "annotations": [
+    {
+      "type": "marker",
+      "i": 9,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Hanging man"
+    },
+    {
+      "type": "marker",
+      "i": 10,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Closes above body"
+    },
+    {
+      "type": "hline",
+      "price": 154.155,
+      "label": "Entry (at its close)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 154.215,
+      "label": "Stop",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 154.035,
+      "label": "Target 2R",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candles 0-8 are a steady uptrend with no marked resistance. Candle 9 has the hanging man shape and the trader sells its close. Candle 10 closes above the hanging man body, the opposite of a confirmation. The same candle breaks the stop above the hanging man high, and the trend carries on.",
+    "bn": "০-৮ নম্বর candle একটানা uptrend, কোনো চিহ্নিত resistance নেই। ৯ নম্বরের আকার hanging man, trader তার close-এই sell করেন। ১০ নম্বর hanging man-এর body-র উপরে close করে, confirmation-এর ঠিক উল্টো। একই candle hanging man-এর high-এর উপরের stop ভাঙে, trend এগিয়ে চলে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "No bearish close below the body, no trade",
+      "bn": "Body-র নিচে bearish close নেই, trade নেই"
+    }
+  ],
+  "entry": 154.155,
+  "stopLoss": 154.215,
+  "takeProfit": 154.035,
+  "rr": "1:2.0",
+  "candles": [
+    {
+      "i": 0,
+      "o": 153.4,
+      "h": 153.567,
+      "l": 153.336,
+      "c": 153.52
+    },
+    {
+      "i": 1,
+      "o": 153.52,
+      "h": 153.668,
+      "l": 153.477,
+      "c": 153.6
+    },
+    {
+      "i": 2,
+      "o": 153.6,
+      "h": 153.637,
+      "l": 153.504,
+      "c": 153.55
+    },
+    {
+      "i": 3,
+      "o": 153.55,
+      "h": 153.788,
+      "l": 153.473,
+      "c": 153.69
+    },
+    {
+      "i": 4,
+      "o": 153.69,
+      "h": 153.868,
+      "l": 153.616,
+      "c": 153.79
+    },
+    {
+      "i": 5,
+      "o": 153.79,
+      "h": 153.835,
+      "l": 153.695,
+      "c": 153.73
+    },
+    {
+      "i": 6,
+      "o": 153.73,
+      "h": 153.915,
+      "l": 153.661,
+      "c": 153.85
+    },
+    {
+      "i": 7,
+      "o": 153.85,
+      "h": 153.978,
+      "l": 153.811,
+      "c": 153.94
+    },
+    {
+      "i": 8,
+      "o": 153.94,
+      "h": 154.135,
+      "l": 153.892,
+      "c": 154.05
+    },
+    {
+      "i": 9,
+      "o": 154.05,
+      "h": 154.175,
+      "l": 153.83,
+      "c": 154.155
+    },
+    {
+      "i": 10,
+      "o": 154.155,
+      "h": 154.245,
+      "l": 154.125,
+      "c": 154.215
+    },
+    {
+      "i": 11,
+      "o": 154.215,
+      "h": 154.372,
+      "l": 154.176,
+      "c": 154.315
+    },
+    {
+      "i": 12,
+      "o": 154.315,
+      "h": 154.497,
+      "l": 154.251,
+      "c": 154.435
+    },
+    {
+      "i": 13,
+      "o": 154.435,
+      "h": 154.471,
+      "l": 154.361,
+      "c": 154.395
+    },
+    {
+      "i": 14,
+      "o": 154.395,
+      "h": 154.587,
+      "l": 154.354,
+      "c": 154.535
+    }
+  ]
+}

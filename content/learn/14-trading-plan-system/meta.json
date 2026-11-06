@@ -1,3 +1,11 @@
 {
-  "title": "Trading Plan System"
+  "title": "Trading Plan System",
+  "pages": [
+    "00-overview",
+    "01-trading-plan-template",
+    "02-entry-exit-risk-rules-ek-page-e",
+    "03-pre-trade-checklist",
+    "04-daily-weekly-routine",
+    "05-kokhon-trading-bondho-korbo"
+  ]
 }

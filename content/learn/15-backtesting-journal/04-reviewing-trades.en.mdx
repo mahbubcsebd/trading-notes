@@ -1,0 +1,175 @@
+---
+title: "Reviewing Trades: Splitting the Data to Find Weak Spots"
+description: "How to split the journal data by setup, tag, session and plan-following to find weaknesses, and why the total result can hide a weak setup, with a chart."
+level: intermediate
+tags: [review, journal, setup-tags, analysis, improvement]
+instruments: [ACCOUNT]
+timeframes: [per-trade]
+status: done
+sources:
+  - type: blog
+    title: "Trading Plan - Investopedia"
+    url: "https://www.investopedia.com/articles/trading/06/tradingplan.asp"
+updated: 2026-11-06
+---
+
+# Reviewing Trades: Splitting the Data to Find Weak Spots
+
+A total of 60 marks in an exam can mean 90 in some subjects and 30 in others. The total does not tell you which subject to study. In trading too, the total result averages everything and hides it. A review means looking at the parts.
+
+## What you will be able to do
+
+- **Split the journal four ways** and look.
+- **Single out one weak setup.**
+- **Get one action** out of the review.
+
+## Why it matters
+
+- **The total result teaches the wrong thing.** One good setup can cover the loss of a bad setup.
+- **Improvement happens when it is specific.** Not "I'll do better", but "stop setup B" works.
+- **It is the base of the next lesson.** [Plan v2](/en/learn/15-backtesting-journal/05-building-a-plan) comes from this review.
+
+Prerequisites: [Journal Template](/en/learn/15-backtesting-journal/03-journal-template).
+
+## What is a review
+
+**A trade review is splitting the journal data by different views and looking at the result of each part separately, so you can see where there is profit and where there is loss.**
+
+| Way to split         | Question                                   | What to look at               |
+| :------------------- | :----------------------------------------- | :---------------------------- |
+| By setup             | Which setup is working?                    | Average R per setup           |
+| By tag               | Which mistake is most expensive?           | Total R per tag               |
+| By session/time      | At what time is the result good?           | London vs New York, and so on |
+| Plan followed vs not | How is the result when I follow the rules? | Total R of the two groups     |
+
+## What it looks like on a chart
+
+<Chart
+  id="review-by-setup-01"
+  height={440}
+  caption="ACCOUNT, per trade (educational, imaginary example): 20 trades, two setups A and B. A: 6 wins 4 losses, +8R. B: 2 wins 8 losses, -4R. The combined +4R hides a weak setup."
+/>
+
+The combined curve is rising, so everything seems fine. But B averages -0.4R per trade, and A +0.8R.
+
+## Step by step: doing a review
+
+<Steps>
+
+### Step 1: Pick a period
+
+For example the last 20 trades, or a month. No decisions on a very small slice.
+
+### Step 2: Split by setup
+
+For each setup, the number of trades, win rate, average R. The formulas of [Metrics](/en/learn/15-backtesting-journal/02-performance-metrics-forward-testing).
+
+### Step 3: Split by tag
+
+How many R went to each mistake tag. Find the most expensive tag.
+
+### Step 4: Separate the plan-followed group
+
+Trades with the `Plan` tag against the rest. If the gap is big, the problem is breaking the rules, not the strategy.
+
+### Step 5: Write one action
+
+Just one. For example: "Setup B off for now, focus on A". In the next lesson this goes into the plan.
+
+</Steps>
+
+## Example 1: when it works (synthetic)
+
+- **Data:** 20 trades, two setups, combined +4R.
+- **Review:** A: +8R in 10, B: -4R in 10.
+- **Decision:** doubt about B. To find the reason you will look at B's 10 screenshots again, but for now keep running only A.
+- **Lesson:** splitting showed that the source of the loss was separate. You would not have known from the total.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Example 2: when it fails (synthetic)
+
+- **What happened:** the trader was happy to see the month's total of +4R. They did not split it.
+- **Result:** next month they raised the risk on setup B because "everything is going fine". They lost another 4R.
+- **Why it failed:** the total result had hidden a weak setup.
+- **Lesson:** even when the result is good, split and look. Weakness hides in a good month.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Common mistakes
+
+| Mistake                                         | Why it happens            | What to do                                  |
+| :---------------------------------------------- | :------------------------ | :------------------------------------------ |
+| Looking only at the total result                | It is easy                | Split and look                              |
+| Deciding on very few trades                     | Impatience                | At least a few dozen, be patient            |
+| Changing many things at once                    | Wanting to fix everything | One at a time                               |
+| Skipping the review in a good month             | Being happy               | In both good and bad months                 |
+| Too much trust in a small group after splitting | A surprising result       | Be careful if each group has too few trades |
+
+## Pro tips
+
+<Callout type="tip">
+  Before deciding from a small group after splitting (such as 10 trades), ask
+  yourself: could this be luck? If in doubt, do not close that setup. Cut the
+  risk and add data.
+</Callout>
+
+<Callout type="note">
+  "Under what condition did I lose" is a better question than "why did I lose".
+  When the condition is specific, it can be turned into a rule.
+</Callout>
+
+## When this does not work
+
+- **If the data is not enough:** splitting leaves even fewer trades per group, and the numbers are unstable.
+- **If the tags are dishonest:** if you give tags afterward by looking at the result, the analysis is meaningless.
+- **If market conditions change:** the result of old data does not apply to the new period.
+
+## Summary
+
+<KeyTakeaways>
+
+- The total result hides weak parts; split by setup, tag, time and plan-following.
+- Trust in the result of a small group is limited.
+- One action each time.
+- Review in a good month too.
+
+</KeyTakeaways>
+
+## Practice
+
+Split your latest 20 trades by setup and tag. Write the number of trades and the average R for each group, and get one action.
+
+## Quiz
+
+1. Why can the total result mislead?
+2. In how many ways can a review be split?
+3. What caution applies to the result of a small group?
+4. How many changes should be made at once?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** A good setup can cover the loss of a weak setup.
+
+**2.** Setup, tag, session/time, plan followed vs not.
+
+**3.** It could be luck; cut the risk and add data.
+
+**4.** One.
+
+</details>
+
+## Next steps
+
+- Before: [Journal Template](/en/learn/15-backtesting-journal/03-journal-template).
+- After: [Building a Plan](/en/learn/15-backtesting-journal/05-building-a-plan).
+- Related: [Journaling Habit](/en/learn/12-trading-psychology/05-journaling-habit).
+
+### Sources
+
+- <ExternalLink href="https://www.investopedia.com/articles/trading/06/tradingplan.asp">
+    Trading Plan, Investopedia
+  </ExternalLink>
+
+<Disclaimer />

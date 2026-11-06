@@ -1,0 +1,143 @@
+{
+  "id": "single-candle-star-fail-01",
+  "title": {
+    "en": "Shooting Star in a Strong Uptrend That Failed",
+    "bn": "জোরালো uptrend-এ shooting star যা ব্যর্থ হলো"
+  },
+  "symbol": "EURUSD",
+  "timeframe": "H4",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bearish",
+  "outcome": "loss",
+  "tags": [
+    "shooting-star",
+    "candlestick",
+    "failure"
+  ],
+  "module": "04-candlesticks",
+  "lessonSlugs": [
+    "02-single-candle-patterns"
+  ],
+  "caption": {
+    "en": "A shooting star appears in a steady uptrend with no resistance nearby. Price takes out its high.",
+    "bn": "কাছাকাছি কোনো resistance ছাড়া স্থির uptrend-এ shooting star। দাম তার high ভেঙে এগিয়ে যায়।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data.",
+    "bn": "এটি শিক্ষামূলক কাল্পনিক ডেটা।"
+  },
+  "updatedAt": "2026-11-05T12:00:00Z",
+  "annotations": [
+    {
+      "type": "marker",
+      "i": 6,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Shooting star"
+    },
+    {
+      "type": "hline",
+      "price": 1.0938,
+      "label": "Sell entry (star low)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.0995,
+      "label": "Stop (star high-এর উপরে)",
+      "color": "#ef4444",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candle 7 triggers the sell, then candle 8 closes above the star high. The stop is hit; the trend never paused.",
+    "bn": "৭ নম্বর candle sell trigger করে, তারপর ৮ নম্বর candle star-এর high-এর উপরে close করে। Stop লাগে; trend থামেইনি।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "A pattern without a level is just a shape",
+      "bn": "জায়গা ছাড়া pattern শুধু একটি আকার"
+    }
+  ],
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.08,
+      "h": 1.0825,
+      "l": 1.0795,
+      "c": 1.082
+    },
+    {
+      "i": 1,
+      "o": 1.082,
+      "h": 1.085,
+      "l": 1.0815,
+      "c": 1.0845
+    },
+    {
+      "i": 2,
+      "o": 1.0845,
+      "h": 1.087,
+      "l": 1.084,
+      "c": 1.0865
+    },
+    {
+      "i": 3,
+      "o": 1.0865,
+      "h": 1.0895,
+      "l": 1.086,
+      "c": 1.089
+    },
+    {
+      "i": 4,
+      "o": 1.089,
+      "h": 1.092,
+      "l": 1.0885,
+      "c": 1.0915
+    },
+    {
+      "i": 5,
+      "o": 1.0915,
+      "h": 1.0945,
+      "l": 1.091,
+      "c": 1.094
+    },
+    {
+      "i": 6,
+      "o": 1.094,
+      "h": 1.099,
+      "l": 1.0938,
+      "c": 1.0944
+    },
+    {
+      "i": 7,
+      "o": 1.0944,
+      "h": 1.0975,
+      "l": 1.0932,
+      "c": 1.097
+    },
+    {
+      "i": 8,
+      "o": 1.097,
+      "h": 1.1005,
+      "l": 1.0965,
+      "c": 1.1
+    },
+    {
+      "i": 9,
+      "o": 1.1,
+      "h": 1.103,
+      "l": 1.0995,
+      "c": 1.1025
+    },
+    {
+      "i": 10,
+      "o": 1.1025,
+      "h": 1.1055,
+      "l": 1.102,
+      "c": 1.105
+    }
+  ]
+}

@@ -1,0 +1,273 @@
+{
+  "id": "gravestone-doji-win-01",
+  "title": {
+    "en": "Gravestone Doji Pierces an Old High, Short on Confirmation",
+    "bn": "পুরোনো high ভেদ করে ফেরা gravestone doji, confirmation-এর পর short"
+  },
+  "symbol": "GBPUSD",
+  "timeframe": "H1",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bearish",
+  "outcome": "win",
+  "tags": [
+    "gravestone-doji",
+    "doji",
+    "candlestick",
+    "resistance",
+    "pattern"
+  ],
+  "module": "patterns",
+  "lessonSlugs": [],
+  "caption": {
+    "en": "Illustrative synthetic GBPUSD H1: price rallies back to an old high and prints a gravestone doji whose upper wick pokes above the level. The next candle closes below it, filling a sell stop. Price falls to 2R.",
+    "bn": "শিক্ষামূলক কাল্পনিক GBPUSD H1: দাম আবার পুরোনো high-এ ফিরে একটি gravestone doji দেয়, যার উপরের wick level-এর ওপারে উঁকি দেয়। পরের candle তার নিচে close করে sell stop fill করে। দাম 2R পর্যন্ত নামে।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data, not a real market record.",
+    "bn": "শিক্ষামূলক কাল্পনিক ডেটা, বাস্তব মার্কেটের রেকর্ড নয়।"
+  },
+  "updatedAt": "2026-11-06T12:00:00Z",
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 1.2723,
+      "label": "Old high (resistance)",
+      "color": "#3b82f6",
+      "style": "dashed"
+    },
+    {
+      "type": "marker",
+      "i": 5,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Old high"
+    },
+    {
+      "type": "marker",
+      "i": 16,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Gravestone doji"
+    },
+    {
+      "type": "hline",
+      "price": 1.2714,
+      "label": "Entry (low break)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.2748,
+      "label": "Stop",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.2646,
+      "label": "Target 2R",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candle 5 makes the old high. Candles 11-15 rally back under it. Candle 16 is a gravestone doji: open, low and close almost equal, a long upper wick above the old high. Candle 17 closes below its low and fills the sell stop. The stop sits above the wick high; price reaches 2R.",
+    "bn": "৫ নম্বর candle পুরোনো high বানায়। ১১-১৫ নম্বর তার নিচে ফিরে আসে। ১৬ নম্বর gravestone doji: open, low আর close প্রায় সমান, পুরোনো high-এর উপরে লম্বা উপরের wick। ১৭ নম্বর তার low-এর নিচে close করে sell stop fill করে। Stop wick-এর high-এর উপরে; দাম 2R পর্যন্ত নামে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "The long upper wick is the rejection; the next close confirms it",
+      "bn": "লম্বা উপরের wick-ই rejection; পরের close তা নিশ্চিত করে"
+    }
+  ],
+  "entry": 1.2714,
+  "stopLoss": 1.2748,
+  "takeProfit": 1.2646,
+  "rr": "1:2.0",
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.265,
+      "h": 1.26668,
+      "l": 1.26448,
+      "c": 1.2662
+    },
+    {
+      "i": 1,
+      "o": 1.2662,
+      "h": 1.26876,
+      "l": 1.26558,
+      "c": 1.2678
+    },
+    {
+      "i": 2,
+      "o": 1.2678,
+      "h": 1.26958,
+      "l": 1.26706,
+      "c": 1.2688
+    },
+    {
+      "i": 3,
+      "o": 1.2688,
+      "h": 1.27169,
+      "l": 1.2679,
+      "c": 1.2706
+    },
+    {
+      "i": 4,
+      "o": 1.2706,
+      "h": 1.27202,
+      "l": 1.27016,
+      "c": 1.2714
+    },
+    {
+      "i": 5,
+      "o": 1.2714,
+      "h": 1.2723,
+      "l": 1.2706,
+      "c": 1.2711
+    },
+    {
+      "i": 6,
+      "o": 1.2711,
+      "h": 1.27201,
+      "l": 1.26874,
+      "c": 1.2695
+    },
+    {
+      "i": 7,
+      "o": 1.2695,
+      "h": 1.27049,
+      "l": 1.26613,
+      "c": 1.2675
+    },
+    {
+      "i": 8,
+      "o": 1.2675,
+      "h": 1.26804,
+      "l": 1.2655,
+      "c": 1.2663
+    },
+    {
+      "i": 9,
+      "o": 1.2663,
+      "h": 1.2674,
+      "l": 1.26596,
+      "c": 1.2669
+    },
+    {
+      "i": 10,
+      "o": 1.2669,
+      "h": 1.26794,
+      "l": 1.26477,
+      "c": 1.2655
+    },
+    {
+      "i": 11,
+      "o": 1.2655,
+      "h": 1.2674,
+      "l": 1.26492,
+      "c": 1.2667
+    },
+    {
+      "i": 12,
+      "o": 1.2667,
+      "h": 1.26903,
+      "l": 1.26562,
+      "c": 1.2682
+    },
+    {
+      "i": 13,
+      "o": 1.2682,
+      "h": 1.26974,
+      "l": 1.26751,
+      "c": 1.2692
+    },
+    {
+      "i": 14,
+      "o": 1.2692,
+      "h": 1.27152,
+      "l": 1.26823,
+      "c": 1.2706
+    },
+    {
+      "i": 15,
+      "o": 1.2706,
+      "h": 1.272,
+      "l": 1.2702,
+      "c": 1.2717
+    },
+    {
+      "i": 16,
+      "o": 1.2717,
+      "h": 1.2743,
+      "l": 1.2716,
+      "c": 1.27165
+    },
+    {
+      "i": 17,
+      "o": 1.27165,
+      "h": 1.27195,
+      "l": 1.2704,
+      "c": 1.2707
+    },
+    {
+      "i": 18,
+      "o": 1.2707,
+      "h": 1.27135,
+      "l": 1.26874,
+      "c": 1.2693
+    },
+    {
+      "i": 19,
+      "o": 1.2693,
+      "h": 1.27024,
+      "l": 1.26895,
+      "c": 1.2699
+    },
+    {
+      "i": 20,
+      "o": 1.2699,
+      "h": 1.27054,
+      "l": 1.26723,
+      "c": 1.2681
+    },
+    {
+      "i": 21,
+      "o": 1.2681,
+      "h": 1.26873,
+      "l": 1.26646,
+      "c": 1.2669
+    },
+    {
+      "i": 22,
+      "o": 1.2669,
+      "h": 1.26771,
+      "l": 1.26662,
+      "c": 1.2674
+    },
+    {
+      "i": 23,
+      "o": 1.2674,
+      "h": 1.26837,
+      "l": 1.26487,
+      "c": 1.2654
+    },
+    {
+      "i": 24,
+      "o": 1.2654,
+      "h": 1.26585,
+      "l": 1.264,
+      "c": 1.2644
+    },
+    {
+      "i": 25,
+      "o": 1.2644,
+      "h": 1.26488,
+      "l": 1.26226,
+      "c": 1.263
+    }
+  ]
+}

@@ -1,42 +1,365 @@
 ---
-title: "হ্যামার (Hammer / Pin Bar)"
-description: "একটি ছোট বডি এবং দীর্ঘ লোয়ার শ্যাডোযুক্ত বুলিশ রিভার্সাল ক্যান্ডেল যা নিচের প্রাইস রিজেকশন নির্দেশ করে।"
+title: "Hammer: support-এ sellers হেরে যাওয়ার এক candle-এর গল্প"
+description: "Hammer candle কীভাবে চিনবেন, কখন শক্তিশালী আর কখন ফাঁদ, entry, stop ও target কোথায় বসাবেন — জেতা ও হারা chart example সহ।"
 type: bullish
-category: "হ্যামার (Hammer / Pin Bar)"
-winrate: "68% - 72%"
-riskReward: "1:3 to 1:4"
-maxRisk: "1%"
-bestLocation: "Major Support Floor / Demand Zone / Swing Low Liquidity Sweep"
-chartId: "hammer-01"
-tags: [pattern, candlestick, hammer]
+category: rejection
+level: beginner
+candleCount: 1
+signal: reversal
+chartId: hammer-win-01
+tags: [pattern, candlestick, hammer, reversal]
+status: done
+sources:
+  - type: book
+    title: "Japanese Candlestick Charting Techniques - Steve Nison"
+    note: "Hammer ও Hanging Man অধ্যায়"
+  - type: blog
+    title: "Hammer Candlestick - Investopedia"
+    url: "https://www.investopedia.com/terms/h/hammer.asp"
+updated: 2026-11-06
 ---
 
-<div className="flex gap-6 items-end my-8 p-8 bg-zinc-950 border border-border/50 rounded-2xl w-max relative overflow-hidden">
-  <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:20px_20px]"></div>
-  <div className="relative z-10 flex gap-6">
-    <Candle color="bear" bodyH="h-10" topW="h-2" botW="h-2" offset="mt-2" />
-    <Candle color="bear" bodyH="h-8" topW="h-2" botW="h-4" offset="mt-8" />
-    <Candle color="bull" bodyH="h-4" topW="h-2" botW="h-12" offset="mt-12" />
-  </div>
-</div>
+দাম টানা নামছে। হঠাৎ একটা candle আরও নিচে নামল, তারপর পুরোটা ফিরে এসে উপরে close করল। অনেকে এটা দেখেই buy করেন, আর পরের দুই candle-এ stop খান। Hammer আসলেই শক্তিশালী সংকেত, কিন্তু শুধু সঠিক জায়গায়। এই গাইডে শিখবেন সেই জায়গা আর সেই নিয়মগুলো।
 
-## Market Psychology & প্রাতিষ্ঠানিক অর্ডার ফ্লো
-সেশনের শুরুতে সেলাররা প্রবল শক্তিতে প্রাইস অনেক নিচে নামিয়ে ফেলে। কিন্তু সেশন শেষ হওয়ার আগে প্রাতিষ্ঠানিক বায়াররা একচেটিয়া আক্রমণ চালায় এবং প্রাইসকে ওপেনিং প্রাইসের কাছে বা তার ওপরে তুলে নিয়ে ক্লোজ করে। দীর্ঘ নিচের উইকটি প্রমাণ করে যে নিচের সব প্রাইস সেলারদের থেকে বায়াররা ছিনিয়ে নিয়েছে।
+## এক নজরে
 
-## ক্যান্ডেল অ্যানাটমির ৫টি অপরিহার্য শর্ত
-1. **Support Location:** এটি অবশ্যই একটি দীর্ঘ ডাউনট্রেন্ডের পর প্রধান সাপোর্টে গঠিত হতে হবে।
-2. **Lower Wick Length:** নিচের উইকটি রিয়েল বডির আকারের কমপক্ষে ২ থেকে ৩ গুণ দীর্ঘ হতে হবে।
-3. **Upper Wick:** উপরের দিকে কোনো উইক থাকবে না অথবা সর্বোচ্চ ৫-১০% নগণ্য উইক থাকতে পারে।
-4. **Body Position:** রিয়েল বডি ক্যান্ডেলের শীর্ষভাগের ২০-৩০% রেঞ্জে অবস্থান করবে।
-5. **Confirmation Bar:** পরবর্তী ক্যান্ডেল হ্যামারের হাই পার হয়ে বুলিশ গতি নিয়ে ক্লোজ হতে হবে।
+| বিষয়                | Hammer                                                                              |
+| :------------------- | :---------------------------------------------------------------------------------- |
+| ধরন                  | Bullish reversal, একটি candle                                                       |
+| কোথায় খুঁজবেন       | Downtrend বা pullback-এর শেষে, support বা demand zone-এ                             |
+| চেনার মূল চিহ্ন      | লম্বা lower wick (body-র অন্তত দুই গুণ), ছোট body উপরের দিকে, প্রায় upper wick নেই |
+| Confirmation         | পরের candle hammer-এর high-এর উপরে যাওয়া বা close করা                              |
+| Stop                 | Hammer-এর low-এর নিচে, spread-সহ buffer                                             |
+| বাতিল (invalidation) | Hammer-এর low-এর নিচে close                                                         |
+| দেখতে একই রকম        | Hanging Man (একই আকার, uptrend-এর শীর্ষে), Dragonfly Doji                           |
+| বিপরীত pattern       | Shooting Star                                                                       |
 
-## লাভজনক ট্রেড নেওয়ার ৩টি প্রমাণিত কৌশল (Execution Blueprint)
-**কৌশল ১ (হ্যামার হাই ব্রেকআউট):** হ্যামারের হাই অতিক্রম করার সাথে সাথে Buy Stop দিয়ে এন্ট্রি নিন। স্টপ লস উইকের নিচে।
-**কৌশল ২ (৫০% উইক রিটেস্ট লিমিট):** হ্যামারের লম্বা উইকের ৫০% রিট্রেসমেন্টে Buy Limit বসান (সুপার হাই R:R ১:৪+)।
-**কৌশল ৩ (M15 লিকুইডিটি সুইপ এন্ট্রি):** H4 হ্যামারের উইকের শেষ মাথায় M15 এ লিকুইডিটি সুইপ দেখে স্নাইপার বাই দিন।
+## এই লেখা পড়ে আপনি যা পারবেন
 
-## কোথায় সফল হবে বনাম কোথায় ফাঁদে পড়বেন
-- ✅ **A+ হাই-প্রোবাবিলিটি সেটআপ:** ডেইলি সাপোর্ট জোন, বিগত দিনের লো সুইপ, এবং RSI ওভারসোল্ড রিভার্সাল।
-- ❌ **লস খাওয়ার ট্র্যাপ (Avoid):** রেজিস্ট্যান্সের কাছে গঠিত হলে (তখন এটি হ্যাংগিং ম্যান) বা সাইডওয়েজ মার্কেটের মাঝে।
+- তিনটি মাপ দিয়ে hammer **নির্ভুলভাবে চিনতে পারবেন**।
+- শক্তিশালী আর দুর্বল hammer-এর তফাত **বলতে পারবেন**।
+- Hammer আর hanging man-এর পার্থক্য **ব্যাখ্যা করতে পারবেন**।
+- Entry, stop ও target **ধাপে ধাপে বসাতে পারবেন**।
+- কোন hammer এড়িয়ে চলবেন, তা **আগে থেকে ধরতে পারবেন**।
 
-> ⚠️ **প্রো মানি ম্যানেজমেন্ট ও সাইকোলজি টিপ:** হ্যামারের রঙ সবুজ হলে তা লাল হ্যামারের চেয়ে বেশি কার্যকর, তবে সবচেয়ে গুরুত্বপূর্ণ বিষয় হলো এর দীর্ঘ রিজেকশন উইক। সর্বোচ্চ ১% থেকে ২% ঝুঁকি নিয়ে প্রতিটি ট্রেডে নির্ধারিত স্টপ লস ব্যবহার করুন।
+## কেন জরুরি
+
+- **সবচেয়ে বেশি দেখা যায়।** প্রায় প্রতিটি chart-এ, প্রতিটি timeframe-এ hammer আসে। তাই ভুল পড়লে ভুলও আসে বারবার।
+- **Stop পরিষ্কার।** Hammer-এর low একটি স্পষ্ট জায়গা দেয়, যার নিচে গেলে ধারণা ভুল প্রমাণিত। ঝুঁকি আগে থেকে মাপা যায়।
+- **একা যথেষ্ট নয়।** ফাঁকা জায়গার hammer প্রায়ই trend-এর মাঝের ছোট বিরতি মাত্র। জায়গা চিনতে না পারলে এই pattern টাকা খায়।
+
+পূর্বশর্ত: [Anatomy of a Candle](/bn/learn/04-candlesticks/01-anatomy-of-a-candle) (body ও wick কী) এবং [Single Candle Patterns](/bn/learn/04-candlesticks/02-single-candle-patterns)।
+
+## Hammer কী
+
+**Hammer হলো এমন একটি candle, যার নিচে লম্বা wick, উপরের দিকে ছোট body, আর downtrend-এর পর support-এ তৈরি হয়।**
+
+একটা বল জোরে মেঝেতে ছুড়লে কী হয়? যত জোরে নামে, তত জোরে ফেরে। Hammer-এর লম্বা lower wick হলো সেই নামা। Close উপরে হওয়া মানে বলটা মেঝে ছুঁয়ে ফিরে এসেছে। মেঝে না থাকলে, অর্থাৎ support না থাকলে, বল ফেরে না, নামতেই থাকে।
+
+<CandleDiagram
+  title="Textbook hammer"
+  candles={[
+    { o: 100, h: 101, l: 93, c: 94, dim: true },
+    { o: 94, h: 95, l: 87, c: 88, dim: true },
+    { o: 88, h: 89, l: 80, c: 81, dim: true },
+    { o: 81, h: 84, l: 66, c: 83, label: "Hammer", note: "close উপরে" },
+  ]}
+  levels={[{ price: 70, label: "support", tone: "support" }]}
+  caption="Downtrend-এর পর hammer: দাম support-এর নিচে নেমে আবার উপরে ফিরেছে, body range-এর উপরের অংশে।"
+/>
+
+### চেনার নিয়ম
+
+| নিয়ম                               | বাধ্যতামূলক?                 | কেন                                      |
+| :---------------------------------- | :--------------------------- | :--------------------------------------- |
+| আগে downtrend বা pullback           | হ্যাঁ                        | নামার পর ফেরা না হলে "reversal" হয় না   |
+| Lower wick body-র অন্তত ২ গুণ       | হ্যাঁ                        | নিচে প্রত্যাখ্যান কতটা জোরালো, তার মাপ   |
+| Body range-এর উপরের এক-তৃতীয়াংশে   | হ্যাঁ                        | Close উপরে মানে buyers শেষ কথা বলেছে     |
+| Upper wick নেই বা খুব ছোট           | হ্যাঁ                        | বড় upper wick মানে উপরেও বিক্রি এসেছে   |
+| Body-র রং সবুজ                      | না                           | সবুজ হলে একটু শক্তিশালী, লাল হলেও hammer |
+| Support, demand বা আগের swing low-এ | না (কিন্তু প্রায় অপরিহার্য) | জায়গাই সংকেতের ওজন ঠিক করে              |
+
+"দুই গুণ" নিয়মটি candlestick সাহিত্যে প্রচলিত মাপ (Steve Nison)। এটা পরিসংখ্যান নয়, সংজ্ঞা।
+
+## শক্তিশালী বনাম দুর্বল hammer
+
+নিয়ম মিললেই সব hammer সমান নয়। নিচের দুটি দেখুন।
+
+<DiagramRow>
+  <CandleDiagram
+    title="শক্তিশালী"
+    verdict="good"
+    verdictLabel="trade-যোগ্য"
+    candles={[
+      { o: 60, h: 61, l: 52, c: 53, dim: true },
+      { o: 53, h: 54, l: 46, c: 47, dim: true },
+      { o: 47, h: 50, l: 28, c: 49, label: "lower wick ≈ ৯× body" },
+    ]}
+    caption="লম্বা lower wick, close প্রায় high-এ, আগের candle-গুলোর চেয়ে range বড়।"
+  />
+  <CandleDiagram
+    title="দুর্বল"
+    verdict="bad"
+    verdictLabel="এড়িয়ে চলুন"
+    candles={[
+      { o: 60, h: 61, l: 52, c: 53, dim: true },
+      { o: 53, h: 54, l: 46, c: 47, dim: true },
+      { o: 47, h: 52, l: 43, c: 48, label: "lower wick = upper wick" },
+    ]}
+    caption="Lower wick ছোট, upper wick সমান বড়। এটি hammer নয়, সিদ্ধান্তহীনতা।"
+  />
+</DiagramRow>
+
+| মান যাচাই  | শক্তিশালী                               | দুর্বল                      |
+| :--------- | :-------------------------------------- | :-------------------------- |
+| Lower wick | Body-র ৩ গুণ বা বেশি                    | ঠিক ২ গুণ বা কম             |
+| Close      | Range-এর উপরের ২৫%-এর মধ্যে             | Range-এর মাঝামাঝি           |
+| আকার       | আগের ৫-১০টি candle-এর চেয়ে বড় range   | আশেপাশের candle-এর মতোই ছোট |
+| Low কোথায় | Support বা আগের low সামান্য ভেঙে ফিরেছে | কোনো level-এর ধারেকাছে নয়  |
+
+<Callout type="note">
+  "৩ গুণ" ও "উপরের ২৫%" আমার কাজ চালানোর মাপ, যাচাই-করা পরিসংখ্যান নয়। নিজের
+  backtest-এ পরীক্ষা করে নিজের সীমা ঠিক করুন, তারপর প্রতিটি chart-এ একই মাপ
+  রাখুন।
+</Callout>
+
+### দেখতে একই রকম, অর্থ আলাদা
+
+<DiagramRow>
+  <CandleDiagram
+    title="Hammer"
+    candles={[
+      { o: 60, h: 61, l: 53, c: 54, dim: true },
+      { o: 54, h: 55, l: 47, c: 48, dim: true },
+      { o: 47, h: 50, l: 32, c: 49, label: "downtrend-এর পর" },
+    ]}
+  />
+  <CandleDiagram
+    title="Hanging Man"
+    candles={[
+      { o: 40, h: 47, l: 39, c: 46, dim: true },
+      { o: 46, h: 53, l: 45, c: 52, dim: true },
+      { o: 53, h: 56, l: 38, c: 55, label: "uptrend-এর পর" },
+    ]}
+  />
+</DiagramRow>
+
+| Pattern             | আকার                                  | কোথায়            | অর্থ                                          |
+| :------------------ | :------------------------------------ | :---------------- | :-------------------------------------------- |
+| **Hammer**          | লম্বা lower wick, body উপরে           | Downtrend-এর পর   | নিচে sellers ব্যর্থ, bullish সংকেত            |
+| **Hanging Man**     | হুবহু একই                             | Uptrend-এর শীর্ষে | উপরে থেকেও sellers দাম নামাতে পেরেছে, সতর্কতা |
+| **Dragonfly Doji**  | Open = close = high, লম্বা lower wick | যেকোনো জায়গায়   | Body নেই, সিদ্ধান্ত আরও অনিশ্চিত              |
+| **Inverted Hammer** | লম্বা **upper** wick, body নিচে       | Downtrend-এর পর   | উপরে চেষ্টা হয়েছে, confirmation বেশি লাগে    |
+
+**আকার একই হলেও আগে কী ঘটেছে, তা দিয়েই নাম ঠিক হয়।** তাই hammer চিনতে প্রথমে candle নয়, তার আগের ১০-২০টি candle দেখুন।
+
+## Candle-এর ভেতরের গল্প
+
+একটি hammer candle সময় ধরে ভাঙলে এমন একটি সাধারণ ব্যাখ্যা পাওয়া যায়:
+
+1. **Open-এর পর sellers চাপ দেয়।** Downtrend চলছে, তাই শুরুতে বিক্রির চাপই স্বাভাবিক। দাম অনেকটা নেমে যায়।
+2. **নিচে নতুন buyers আসে।** দাম support-এ বা আগের low-এর নিচে পৌঁছায়। সেখানে যারা অপেক্ষায় ছিল, তারা কেনে। অনেক seller-এর [stop loss](/bn/learn/10-trade-management-execution/01-stop-loss-placement) আগের low-এর নিচে থাকে; সেগুলো কাটলে তা-ও buy order হয়ে যায়।
+3. **Close-এর আগে দাম প্রায় পুরোটা ফেরে।** যারা নিচে sell করেছিল, তারা এখন লোকসানে। কেউ কেউ বেরিয়ে যেতে কেনে, যা দামকে আরও তোলে।
+
+ফল: candle-এর শেষে দাম শুরুর জায়গার কাছে। Sellers পুরো সময় পেয়েও দাম ধরে রাখতে পারেনি। এটাই hammer-এর বার্তা।
+
+<Callout type="note">
+  এটি একটি প্রচলিত ব্যাখ্যা, প্রমাণিত ঘটনা নয়। Chart দেখে কে কিনেছে, তা জানা
+  যায় না। আমরা শুধু দামের আচরণ দেখি।
+</Callout>
+
+## কোথায় কাজ করে, কোথায় করে না
+
+<Compare
+  leftLabel="যেখানে hammer-এর ওজন বেশি"
+  rightLabel="যেখানে hammer প্রায় অর্থহীন"
+  left="- আগে অন্তত একবার ধরে রাখা support-এ
+- Higher timeframe-এর demand zone-এ
+- আগের swing low সামান্য ভেঙে ফিরে আসা (liquidity sweep)
+- Uptrend-এর ভেতরে pullback-এর শেষে
+- London বা New York session-এ, স্বাভাবিক volatility-তে"
+  right="- কোনো level ছাড়া ফাঁকা জায়গায়
+- টানা বড় বড় bearish candle-এর মাঝখানে
+- Range-এর মাঝামাঝি, যেখানে দাম এমনিতেই দুদিকে দোলে
+- বড় news-এর মুহূর্তে, যখন wick কৃত্রিমভাবে লম্বা হয়
+- খুব ছোট timeframe-এ (M1-M5), যেখানে noise বেশি"
+/>
+
+জায়গা চেনার বিস্তারিত: [Support ও Resistance](/bn/learn/05-support-resistance/01-levels-vs-zones) এবং [Candle Context](/bn/learn/04-candlesticks/05-candle-context)।
+
+## ধাপে ধাপে: hammer trade
+
+<Steps>
+
+### ধাপ ১: আগে জায়গা
+
+Chart-এ support, demand zone বা আগের swing low আগে থেকে চিহ্নিত করুন। Hammer আসার পর level খুঁজবেন না, তাহলে যেকোনো জায়গাকেই level মনে হবে।
+
+### ধাপ ২: Candle বন্ধ হওয়ার অপেক্ষা
+
+চলমান candle-কে hammer মনে হতে পারে, কিন্তু শেষ মিনিটে দাম নেমে গেলে এটা সাধারণ bearish candle হয়ে যায়। শুধু বন্ধ হওয়া candle গুনুন।
+
+### ধাপ ৩: তিন মাপে যাচাই
+
+Lower wick body-র অন্তত ২ গুণ? Close range-এর উপরের এক-তৃতীয়াংশে? Upper wick ছোট? একটি "না" হলেও এটি hammer নয়।
+
+### ধাপ ৪: Entry-র ধরন বেছে নিন
+
+| Entry                    | কোথায়                                     | সুবিধা                  | অসুবিধা                     |
+| :----------------------- | :----------------------------------------- | :---------------------- | :-------------------------- |
+| **High break** (প্রচলিত) | Hammer-এর high-এর একটু উপরে buy stop       | দাম নিজে দিক প্রমাণ করে | Entry একটু দেরিতে, stop বড় |
+| **Close entry**          | Hammer বন্ধ হতেই market buy                | সেরা দাম                | Confirmation নেই            |
+| **50% retest**           | Hammer-এর পুরো range-এর মাঝামাঝি buy limit | Stop ছোট, R:R ভালো      | দাম না ফিরলে trade মিস      |
+
+নতুনদের জন্য high break সবচেয়ে সহজ, কারণ পরের candle না উঠলে trade-ই হয় না।
+
+### ধাপ ৫: Stop বসান
+
+Hammer-এর low-এর নিচে। Buffer-এ অন্তত [spread](/bn/learn/01-foundations/04-spread-commission-swap) ও কয়েক pip যোগ করুন, কারণ low-টাই এখন সবার চোখে পড়া জায়গা।
+
+### ধাপ ৬: Size ও target
+
+Entry থেকে stop-এর দূরত্ব মেপে [position size](/bn/learn/08-risk-management/02-position-sizing) বের করুন, যেন লোকসান account-এর ১%-এর বেশি না হয়। Target রাখুন কাছের resistance বা আগের swing high-এর ঠিক আগে। Target-এ [risk reward](/bn/learn/08-risk-management/03-risk-reward) অন্তত 1:1.5 না হলে trade বাদ দিন।
+
+### ধাপ ৭: পরিচালনা
+
+দাম 1R লাভে গেলে stop break-even-এ আনার কথা ভাবতে পারেন। Hammer-এর low-এর নিচে candle close হলে ধারণা ভুল, অপেক্ষা না করে বেরিয়ে যান।
+
+</Steps>
+
+### Trade-এর আগে checklist
+
+<Checklist
+  id="pattern-hammer-pretrade-bn"
+  items={[
+    "Hammer আসার আগেই level (support, demand বা swing low) চিহ্নিত ছিল?",
+    "আকার সব নিয়ম মানছে (lower wick ≥ body-র ২ গুণ, close উপরের এক-তৃতীয়াংশে, upper wick ছোট)?",
+    "Candle বন্ধ হয়েছে?",
+    "কাছের resistance পর্যন্ত risk reward অন্তত 1:1.5?",
+    "Entry-র ঠিক উপরে higher timeframe-এর কোনো resistance নেই?",
+  ]}
+/>
+
+একটি ঘরও খালি থাকলে trade বাদ দিন।
+
+## উদাহরণ ১: যখন কাজ করে (কাল্পনিক)
+
+<Chart
+  id="hammer-win-01"
+  height={420}
+  caption="GBPUSD H4 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — একবার ধরে রাখা support-এ hammer, পরের candle hammer high ভাঙে।"
+/>
+
+- **কী দেখা যাচ্ছিল:** ৫ নম্বর candle 1.2700-এ support তৈরি করেছে। ১১ থেকে ১৮ নম্বর lower high বানিয়ে আবার সেখানে নেমেছে।
+- **Hammer:** ১৯ নম্বর 1.2716-এ open, 1.2668 পর্যন্ত নেমে 1.2732-এ close। Range 69 pip, body 16 pip, lower wick 48 pip: body-র তিন গুণ। Upper wick মাত্র 5 pip। Low support-এর ৩২ pip নিচে গিয়ে ফিরেছে।
+- **সিদ্ধান্ত:** Buy stop 1.2739 (hammer high-এর ২ pip উপরে)। Stop 1.2660 (low-এর ৮ pip নিচে), ঝুঁকি 79 pip। Target 1.2897, অর্থাৎ 2R।
+- **ফল:** ২০ নম্বর candle hammer high ভেঙে entry fill করে। এরপর দাম আর stop-এর কাছে যায়নি। ৩০ নম্বর candle target ছোঁয়।
+- **শিক্ষা:** Level আগে থেকে ছিল, আকার নিয়ম মেনেছে, আর পরের candle দিক প্রমাণ করেছে। তিনটিই মিলেছে।
+
+<TradeSetup
+  direction="long"
+  pair="GBPUSD"
+  entry={1.2739}
+  stop={1.266}
+  target={1.2897}
+/>
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়। সব hammer জেতে না, আর কোনো ফল গ্যারান্টি নয়।)
+
+## উদাহরণ ২: যখন ফাঁদ হয় (কাল্পনিক)
+
+<Chart
+  id="hammer-fail-01"
+  height={420}
+  caption="GBPUSD H4 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — momentum drop-এর মাঝে ফাঁকা জায়গায় hammer। Entry fill হয়, তারপর stop।"
+/>
+
+- **কী দেখা যাচ্ছিল:** ৫ থেকে ৯ নম্বর পাঁচটি বড় bearish candle। নিচে কোনো চিহ্নিত support নেই।
+- **Hammer:** ১০ নম্বর আকারে নিখুঁত: range 52 pip, lower wick 38 pip, body 10 pip, upper wick 4 pip।
+- **ভুল সিদ্ধান্ত:** "আকার মিলেছে।" Buy stop 1.2708, stop 1.2646, ঝুঁকি 62 pip।
+- **কী হলো:** ১১ নম্বর candle-এর wick 1.2713 ছুঁয়ে entry fill করল, কিন্তু candle-টি 1.2696-এ, hammer-এর close-এর নিচে বন্ধ হলো। ১৩ নম্বর stop ভাঙল। দাম প্রায় 1.2580-এ গিয়ে আসল support পেল।
+- **কেন ব্যর্থ:** নিচে কোনো level ছিল না, আর আগের candle-গুলো দেখাচ্ছিল sellers অনেক শক্তিশালী। একটি candle-এর প্রত্যাখ্যান পাঁচটি বড় candle-এর momentum উল্টাতে পারেনি।
+
+**শিক্ষা:** ভুল জায়গায় নিখুঁত আকারও ভুল trade। Stop আগে বসানো ছিল বলে লোকসান 1R-এ, অর্থাৎ 62 pip-এ, আটকেছে।
+
+## সাধারণ ভুল
+
+| ভুল                                   | কেন হয়                         | কী করবেন                                                 |
+| :------------------------------------ | :------------------------------ | :------------------------------------------------------- |
+| যেকোনো লম্বা lower wick-কে hammer ধরা | চোখ আকার দেখে, নিয়ম মাপে না    | তিন মাপ (wick ২×, close উপরে, upper wick ছোট) যাচাই করুন |
+| আগের trend না দেখা                    | Candle একা দেখা                 | আগের ১০-২০ candle দেখুন; uptrend-এ এটা hanging man       |
+| চলমান candle-এ entry                  | সুযোগ মিস হওয়ার ভয়            | Candle বন্ধ হওয়া পর্যন্ত অপেক্ষা করুন                   |
+| Stop ঠিক hammer low-এ রাখা            | ছোট stop-এর লোভ                 | Low-এর নিচে spread ও buffer যোগ করুন                     |
+| Momentum drop-এর মাঝে buy             | "অনেক নেমেছে, এবার উঠবে" ধারণা  | আগে level, তারপর hammer                                  |
+| Target ছাড়া trade                    | Pattern-এর ওপর অতিরিক্ত বিশ্বাস | কাছের resistance দেখে R:R মেপে তারপর ঢুকুন               |
+
+## Pro tips
+
+<Callout type="tip">
+  Hammer-এর low যদি আগের swing low সামান্য ভেঙে ফিরে আসে, তাহলে নিচে জমে থাকা
+  stop-গুলো কেটে যাওয়ার পর দাম ফিরেছে। একে [liquidity
+  sweep](/bn/learn/03-market-structure/04-liquidity-stop-hunts) বলে, আর এটি
+  hammer-এর ওজন বাড়ায়। উদাহরণ ১ ঠিক এমন।
+</Callout>
+
+<Callout type="tip">
+  H1-এ hammer দেখলে H4 বা Daily খুলুন। বড় timeframe-এ দাম যদি resistance-এর ঠিক
+  নিচে থাকে, ছোট hammer-এর target সেই দেয়ালে আটকাবে। [Multi-timeframe
+  analysis](/bn/learn/03-market-structure/05-multi-timeframe-analysis) দেখুন।
+</Callout>
+
+<Callout type="warning">
+  "Hammer-এর win rate ৭০%" জাতীয় সংখ্যা যাচাই ছাড়া মানবেন না। ফল নির্ভর করে
+  বাজার, timeframe, জায়গা ও আপনি কীভাবে গুনছেন তার ওপর। নিজের backtest-ই
+  একমাত্র বিশ্বাসযোগ্য সংখ্যা।
+</Callout>
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- Hammer = downtrend-এর পর লম্বা lower wick (body-র অন্তত ২ গুণ), ছোট body উপরে, upper wick প্রায় নেই।
+- একই আকার uptrend-এর শীর্ষে হলে তা hanging man। আগের trend দিয়েই নাম ঠিক হয়।
+- আগে level, তারপর আকার, তারপর trigger (hammer high ভাঙা)।
+- Stop hammer low-এর নিচে, buffer-সহ। Stop দেখে size ঠিক করুন।
+- ফাঁকা জায়গার নিখুঁত hammer-ও ফাঁদ হতে পারে।
+
+</KeyTakeaways>
+
+## অনুশীলন ও নিজের backtest
+
+TradingView-এ GBPUSD বা EURUSD-এর H4 chart খুলুন। গত ৬ মাসে অন্তত ২০টি hammer খুঁজুন। প্রতিটির জন্য একটি সারি লিখুন:
+
+| তারিখ | Level ছিল? | Wick/body অনুপাত | Close range-এর কোথায় | High ভেঙেছে? | ফল (R) |
+| :---- | :--------- | :--------------- | :-------------------- | :----------- | :----- |
+|       |            |                  |                       |              |        |
+
+এরপর দুই দলে ভাগ করুন: "level ছিল" আর "level ছিল না"। দুই দলের গড় R তুলনা করুন। কোনো সিদ্ধান্তে যাওয়ার আগে অন্তত ৩০টি নমুনা নিন। পদ্ধতি: [How to Backtest](/bn/learn/15-backtesting-journal/01-how-to-backtest)।
+
+## কুইজ
+
+1. একটি candle-এর lower wick body-র তিন গুণ, close range-এর উপরে। আগের ১৫টি candle uptrend। এটি কী?
+2. Hammer-এর পর পরের candle hammer-এর low-এর নিচে close করল। এখন কী করবেন?
+3. High break entry আর 50% retest entry-র মূল তফাত কী?
+4. উদাহরণ ২-এর hammer আকারে নিখুঁত হয়েও কেন ব্যর্থ হলো?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** Hanging man। আকার hammer-এর মতো, কিন্তু uptrend-এর শীর্ষে। নাম ঠিক হয় আগের trend দিয়ে।
+
+**২.** Pattern বাতিল। Trade-এ থাকলে বেরিয়ে যান, না থাকলে ঢুকবেন না।
+
+**৩.** High break-এ দাম আগে দিক প্রমাণ করে, কিন্তু stop বড় হয়। 50% retest-এ stop ছোট ও R:R ভালো, কিন্তু দাম না ফিরলে trade মিস হয়।
+
+**৪.** নিচে কোনো level ছিল না, আর আগের পাঁচটি বড় bearish candle-এর momentum একটি candle উল্টাতে পারেনি।
+
+</details>
+
+## পরের ধাপ
+
+- আগে: [Single Candle Patterns](/bn/learn/04-candlesticks/02-single-candle-patterns)।
+- জায়গা চেনা: [Candle Context](/bn/learn/04-candlesticks/05-candle-context)।
+- একই পরিবারের pattern: [Hanging Man](/bn/patterns/hanging-man), [Inverted Hammer](/bn/patterns/inverted-hammer), [Shooting Star](/bn/patterns/shooting-star)।
+
+<Disclaimer />

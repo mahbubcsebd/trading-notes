@@ -1,0 +1,210 @@
+---
+title: "Risk:Reward Ratio: The Math of Surviving With a Low Win Rate"
+description: "What Risk:Reward is, how to find the break-even win rate, the difference between a 1:3 and a 1:0.4 trade, and the steps to check the ratio before entry, with charts."
+level: beginner
+tags: [risk-management, risk-reward, rr, win-rate, target]
+instruments: [EURUSD]
+timeframes: [H1, H4]
+status: done
+sources:
+  - type: blog
+    title: "Risk/Reward Ratio - Investopedia"
+    url: "https://www.investopedia.com/terms/r/riskrewardratio.asp"
+  - type: blog
+    title: "Risk-Reward Ratio - BabyPips"
+    url: "https://www.babypips.com/learn/forex/risk-reward-ratio"
+updated: 2026-11-06
+---
+
+# Risk:Reward Ratio: The Math of Surviving With a Low Win Rate
+
+You won seven of ten trades, yet the account fell. Someone else won four of ten and made a profit. This is not luck. It is a game of ratios.
+
+## What you will be able to do
+
+- **Calculate** the Risk:Reward ratio.
+- **Find the break-even win rate** for any ratio.
+- **Check before entry** whether a trade is worth taking.
+- **Explain from a chart** why a high win rate does not guarantee profit.
+
+## Why it matters
+
+- **Win rate alone tells you nothing.** The result comes from the size of wins and the size of losses, not just the number of wins.
+- **A good ratio leaves room for mistakes.** You can survive even losing more than half your trades.
+- **A bad ratio forces you to be perfect.** Then one mistake costs the whole week.
+
+Prerequisites: [Risk per Trade](/en/learn/08-risk-management/01-risk-per-trade) and [Position Sizing](/en/learn/08-risk-management/02-position-sizing).
+
+## What is Risk:Reward
+
+**The Risk:Reward ratio compares the possible loss and the possible profit on one trade. Risk is the distance from entry to stop. Reward is the distance from entry to target.**
+
+Think of cricket. Risking a wicket for 1 run off 6 balls is not the same as taking a chance on a six off 6 balls. The ratio is how big the prize is compared to the risk.
+
+(Example) With a stop of 30 pips and a target of 90 pips, the ratio is 1:3. That is 1 unit of risk for 3 units of possible profit.
+
+## Break-even win rate
+
+The win rate at which your profit and loss are equal:
+
+**Break-even win rate = 1 ÷ (1 + R)**, where R is reward ÷ risk.
+
+| Ratio | R   | Break-even win rate |
+| :---- | :-- | :------------------ |
+| 1:0.5 | 0.5 | about 67%           |
+| 1:1   | 1   | 50%                 |
+| 1:2   | 2   | about 33%           |
+| 1:3   | 3   | 25%                 |
+
+This is before counting spread and commission. With costs, the numbers rise slightly.
+
+**Remember:** a good ratio does not make profit certain. The farther the target, the lower the chance of reaching it. So you must think about ratio and win rate together.
+
+## What it looks like on a chart
+
+<Chart
+  id="rr-1to3-win-01"
+  height={440}
+  caption="EURUSD H4 (educational, imaginary example): buy at 1.0900 on candle 38. Stop 1.0870 (30 pips), target 1.0990 (90 pips), ratio 1:3."
+/>
+
+Both the stop and the target are drawn on the chart in advance. This is the habit: before entry, look at the distance in both directions.
+
+## Step by step: checking the ratio before a trade
+
+<Steps>
+
+### Step 1: Place the stop by looking at structure
+
+The place for the stop is decided on the chart, not by the ratio. Below the [Swing Low](/en/learn/03-market-structure/01-swing-high-low) or outside the ATR.
+
+### Step 2: Find the target at the nearest barrier
+
+Where is the next [resistance](/en/learn/05-support-resistance/01-levels-vs-zones) or swing high? That is the realistic target.
+
+### Step 3: Measure the distance
+
+With a stop of 30 pips and a target of 90 pips, the ratio is 1:3.
+
+### Step 4: Decide
+
+If the ratio is below the minimum in your plan (for example 1:2), skip the trade. Do not move the stop, and do not stretch the target.
+
+### Step 5: Set the size
+
+Work out the lot with the risk in money fixed. The ratio makes the decision, and the size keeps the risk fixed.
+
+</Steps>
+
+## Example 1: when it works (synthetic)
+
+The chart above:
+
+- **Set in advance:** risk 1% (100), stop 30 pips, target 90 pips.
+- **Result:** price dipped but did not touch the stop, and went past the target. Profit about 300.
+- **Lesson:** one win paid for three losses. Even with a 25% win rate the account would have survived.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Example 2: when it fails (synthetic)
+
+<Chart
+  id="rr-low-rr-fail-01"
+  height={440}
+  caption="EURUSD H1 (educational, imaginary example): buy at 1.0890 on candle 36, target only 12 pips away (1.0912), stop 30 pips away (1.0860). Ratio 1:0.4. The target is hit, but the next stop-out wipes out much of it."
+/>
+
+- **What was visible:** the trader wants "quick profit", so the target is close.
+- **Result:** this trade wins 12 pips. On the next trade the stop is hit and 30 pips are lost.
+- **Calculation:** at 1:0.4 the break-even win rate is about 71%. One loss wipes out about two and a half wins.
+- **Why it was wrong:** wins come often, which feels good, but when you look at the result the numbers do not add up.
+- **Lesson:** "winning a lot" does not mean "in profit".
+
+(Synthetic educational example. This is not a real trade.)
+
+## Common mistakes
+
+| Mistake                                  | Why it happens        | What to do                              |
+| :--------------------------------------- | :-------------------- | :-------------------------------------- |
+| Pulling the stop closer to fix the ratio | To show a good ratio  | Stop from structure, then the ratio     |
+| Target at an unrealistic distance        | Greed for more profit | Look at the nearest resistance or swing |
+| Looking only at win rate                 | It is an easy metric  | Ratio and win rate together             |
+| Leaving out spread and costs             | They seem small       | Add the cost on both sides              |
+| Changing the ratio during the trade      | Emotion               | Follow the rules in the plan            |
+
+## Pro tips
+
+<Callout type="tip">
+  Write a minimum ratio in your plan (for example 1:1.5). Then skipping a trade
+  below it is a mechanical rule, and you do not have to think about the
+  decision.
+</Callout>
+
+<Callout type="tip">
+  Scalping has small targets, so it needs a very high win rate and costs play a
+  big part. It is easier to practice on a medium timeframe at first.
+</Callout>
+
+<Callout type="warning">
+  A ratio that looks good on paper does not make a good trade. If the target
+  passes a big resistance on the way, that ratio is imaginary.
+</Callout>
+
+## When this does not work
+
+- **When the target cannot really be reached:** because of barriers, a big ratio exists only on paper.
+- **When there is slippage in a fast market:** the actual risk is bigger than planned.
+- **When you use partial close and trailing:** the resulting ratio is no longer one fixed number (details in [Trade Management](/en/learn/10-trade-management-execution/02-take-profit-partial-close)).
+- **When the sample is very small:** a win rate from ten trades means nothing.
+
+## Summary
+
+<KeyTakeaways>
+
+- Ratio = possible profit ÷ possible risk. Measure it before entry.
+- Break-even win rate = 1 ÷ (1 + R). At 1:2 it is about 33%.
+- The stop comes from structure. Do not move it to make the ratio look better.
+- A high win rate cannot save a bad ratio.
+
+</KeyTakeaways>
+
+## Practice
+
+Take your last 10 trades (or demo trades). Write the risk and reward of each in pips and work out the ratio. Then use the win rate and the average ratio to see whether you are above or below break-even.
+
+## Quiz
+
+1. With a stop of 25 pips and a target of 75 pips, what is the ratio?
+2. What is the break-even win rate at 1:2?
+3. If the win rate is 70% but the ratio is 1:0.4, what usually happens?
+4. Why is pulling the stop closer to improve the ratio wrong?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** 1:3.
+
+**2.** About 33%.
+
+**3.** The break-even at 1:0.4 is about 71%, so even with a 70% win rate you are more likely not to be in profit.
+
+**4.** A stop that is too close gets cut by normal noise. The ratio looks good on paper, but the win rate falls.
+
+</details>
+
+## Next steps
+
+- Before: [Position Sizing](/en/learn/08-risk-management/02-position-sizing).
+- After: [Drawdown Rules](/en/learn/08-risk-management/04-drawdown-rules).
+- Related: [Expectancy](/en/learn/08-risk-management/07-expectancy).
+
+### Sources
+
+- <ExternalLink href="https://www.investopedia.com/terms/r/riskrewardratio.asp">
+    Risk/Reward Ratio, Investopedia
+  </ExternalLink>
+- <ExternalLink href="https://www.babypips.com/learn/forex/risk-reward-ratio">
+    Risk-Reward Ratio, BabyPips
+  </ExternalLink>
+
+<Disclaimer />

@@ -1,41 +1,302 @@
 ---
-title: "হ্যাংগিং ম্যান (Hanging Man)"
-description: "আপট্রেন্ডের শীর্ষে গঠিত একটি বিয়ারিশ রিভার্সাল ক্যান্ডেল যার বডি ছোট কিন্তু নিচের উইক দীর্ঘ, যা বায়ারদের দুর্বলতা নির্দেশ করে।"
+title: "Hanging Man: uptrend-এর চূড়ায় hammer-এর আকার, কিন্তু সতর্কসংকেত"
+description: "Hanging man কীভাবে চিনবেন, hammer-এর সঙ্গে তফাত শুধু জায়গায়, কেন body-র নিচে bearish confirmation ছাড়া এটা trade নয় — entry, stop, target ও chart example সহ।"
 type: bearish
-category: "হ্যাংগিং ম্যান"
-winrate: "65% - 70%"
-riskReward: "1:2.5 to 1:4"
-maxRisk: "1%"
-bestLocation: "Overextended Uptrend Peak / Major Resistance"
-chartId: "hanging-man-01"
-tags: [bearish, pattern, candlestick]
+category: rejection
+level: intermediate
+candleCount: 1
+signal: reversal
+chartId: hanging-man-win-01
+tags: [pattern, candlestick, hanging-man, reversal, resistance]
+status: done
+sources:
+  - type: book
+    title: "Japanese Candlestick Charting Techniques - Steve Nison"
+    note: "Hammer ও hanging man, hanging man-এর bearish confirmation"
+  - type: blog
+    title: "Hanging Man Candlestick - Investopedia"
+    url: "https://www.investopedia.com/terms/h/hangingman.asp"
+updated: 2026-11-06
 ---
 
-<div className="flex gap-6 items-end my-8 p-8 bg-zinc-950 border border-border/50 rounded-2xl w-max relative overflow-hidden">
-  <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:20px_20px]"></div>
-  <div className="relative z-10 flex gap-6">
-    <Candle color="bull" bodyH="h-10" topW="h-2" botW="h-2" offset="mt-6" />
-    <Candle color="bear" bodyH="h-4" topW="h-2" botW="h-12" offset="mt-2" />
-  </div>
-</div>
+Uptrend-এর চূড়ায় একটি candle: উপরে ছোট body, নিচে লম্বা wick। দেখতে ঠিক [Hammer](/bn/patterns/hammer)-এর মতো, তাই অনেকে buy করেন। আবার কেউ "hanging man!" বলে সঙ্গে সঙ্গে sell করেন, আর trend উপরে চলতে থাকে। দুটোই ভুল। Hanging man-এর অর্থ পুরোটা নির্ভর করে পরের candle-এর ওপর। এটা hammer-এর mirror page, তাই এখানে শুধু যা আলাদা, তা-ই বিস্তারিত।
 
-## Market Psychology & প্রাতিষ্ঠানিক অর্ডার ফ্লো
-আপট্রেন্ডের শীর্ষে গঠিত হওয়া সত্ত্বেও সেলাররা সেশনের মধ্যে দামকে অনেক নিচে নামিয়ে আনতে পেরেছিল। যদিও বায়াররা আবার কিছুটা ওপরে ক্লোজ করায়, এটি প্রমাণ করে যে শীর্ষ লেভেলে সেলারদের প্রচণ্ড সেল-অর্ডার বিদ্যমান। পরবর্তী ক্যান্ডেল এই লো ব্রেক করলেই বায়াররা প্যানিক সেলে বাধ্য হয়।
+## এক নজরে
 
-## ক্যান্ডেল অ্যানাটমির ৫টি অপরিহার্য শর্ত
-1. **Uptrend Context:** প্যাটার্নটি অবশ্যই একটি শক্তিশালী আপট্রেন্ডের শীর্ষে গঠিত হতে হবে।
-2. **Lower Shadow:** নিচের উইকটি রিয়েল বডির আকারের কমপক্ষে ২ গুণ দীর্ঘ হতে হবে।
-3. **Upper Shadow:** উপরের দিকে কোনো উইক থাকবে না বা খুব নগণ্য উইক থাকবে।
-4. **Body Size:** ক্যান্ডেলটির বডি ছোট এবং রেঞ্জের শীর্ষে থাকবে (লাল বা সবুজ উভয়ই হতে পারে, তবে লাল বেশি শক্তিশালী)।
-5. **Confirmation Candle:** পরবর্তী ক্যান্ডেলটি অবশ্যই হ্যাংগিং ম্যানের লো এর নিচে ক্লোজ হতে হবে।
+| বিষয়                | Hanging Man                                                                          |
+| :------------------- | :----------------------------------------------------------------------------------- |
+| ধরন                  | Bearish reversal সতর্কসংকেত, একটি candle                                             |
+| কোথায় খুঁজবেন       | Uptrend-এর চূড়ায়, চিহ্নিত resistance-এ                                             |
+| চেনার মূল চিহ্ন      | উপরে ছোট body, নিচে body-র অন্তত দুই গুণ লম্বা wick, উপরে wick প্রায় নেই            |
+| Confirmation         | পরের candle hanging man-এর **body-র নিচে** close করা (Nison-এর মূল শর্ত)             |
+| Stop                 | Hanging man-এর high-এর উপরে, spread-সহ buffer                                        |
+| বাতিল (invalidation) | Hanging man-এর high-এর উপরে close                                                    |
+| দেখতে একই রকম        | Hammer (একই আকার, downtrend-এর তলায়), [Dragonfly Doji](/bn/patterns/dragonfly-doji) |
+| বিপরীত pattern       | [Shooting Star](/bn/patterns/shooting-star) (চূড়ায় উপরের লম্বা wick)               |
 
-## লাভজনক ট্রেড নেওয়ার ৩টি প্রমাণিত কৌশল (Execution Blueprint)
-**কৌশল ১ (লো ব্রেক সেল এন্ট্রি):** হ্যাংগিং ম্যানের লো ব্রেক হলে সেল দিন, স্টপ লস হাই এর উপরে রাখুন।
-**কৌশল ২ (পরবর্তী ক্যান্ডেল ক্লোজ কনফার্মেশন):** পরবর্তী বিয়ারিশ ক্যান্ডেল নিশ্চিত হওয়ার পর মার্কেট সেল দিন।
-**কৌশল ৩ (৫০% রিটেস্ট এন্ট্রি):** হ্যাংগিং ম্যানের উইকের মাঝামাঝি রিটেস্টে Sell Limit সেট করুন।
+## এই লেখা পড়ে আপনি যা পারবেন
 
-## কোথায় সফল হবে বনাম কোথায় ফাঁদে পড়বেন
-- ✅ **A+ হাই-প্রোবাবিলিটি সেটআপ:** ওভারবট RSI লেভেল (> ৭০), ডেইলি সাপ্লাই জোন, এবং ট্রিপল টপ প্যাটার্ন।
-- ❌ **লস খাওয়ার ট্র্যাপ (Avoid):** বুলিশ ট্রেন্ডের শুরুতে বা সাপোর্ট লেভেলে গঠিত হলে (সেখানে এটি হ্যামার হিসেবে কাজ করবে)।
+- একই আকার কেন hammer আর hanging man দুটোই হতে পারে, তা **জায়গা দেখে বলতে পারবেন**।
+- Hanging man-এর পর **bearish confirmation কী, মেপে চিনতে পারবেন**।
+- Confirmation close-এ entry আর high-এর উপরে stop **বসাতে পারবেন**।
 
-> ⚠️ **প্রো মানি ম্যানেজমেন্ট ও সাইকোলজি টিপ:** হ্যাংগিং ম্যান দেখতে হ্যামারের মতো হলেও এর লোকেশন রেজিস্ট্যান্সে হওয়াটাই একে মারাত্মক বিয়ারিশ প্যাটার্ন বানায়। সর্বোচ্চ ১% থেকে ২% ঝুঁকি নিয়ে প্রতিটি ট্রেডে নির্ধারিত স্টপ লস ব্যবহার করুন।
+## কেন জরুরি
+
+- **একই আকার, দুই নাম।** Candle-এর আকার নিজে কিছু বলে না; trend-এর কোথায় এসেছে, সেটাই নাম ঠিক করে। এটাই [Candle Context](/bn/learn/04-candlesticks/05-candle-context)-এর সবচেয়ে পরিষ্কার উদাহরণ।
+- **Confirmation-ই সব।** Nison লিখেছেন hanging man-এর পর bearish confirmation, বিশেষ করে body-র নিচে close, hammer-এর চেয়েও বেশি জরুরি।
+- **দুই দিকের ফাঁদ।** চূড়ায় buy করলে ফাঁদ, আবার confirmation ছাড়া sell করলেও ফাঁদ।
+
+পূর্বশর্ত: Hammer পাতা (উপরে link) আর [Single Candle Patterns](/bn/learn/04-candlesticks/02-single-candle-patterns)।
+
+## Hanging Man কী
+
+**Hanging man হলো uptrend-এর চূড়ায় আসা এমন একটি candle, যার body ছোট আর candle-এর উপরের দিকে, আর নিচের wick body-র অন্তত দুই গুণ লম্বা।** নামটা এসেছে ঝুলন্ত মানুষের ছবি থেকে: মাথা (body) উপরে, পা (wick) নিচে ঝুলছে।
+
+একটা উঁচু দেয়ালে দাঁড়িয়ে থাকা মানুষ ভাবুন, যে হঠাৎ পিছলে নিচে ঝুলে পড়ল, তারপর কোনোমতে আবার উঠে এল। সে এখনো উপরে, কিন্তু সবাই দেখে ফেলেছে সে পড়তে পারে।
+
+<CandleDiagram
+  title="একই আকার, দুই জায়গা"
+  candles={[
+    { o: 62, h: 63, l: 56, c: 57, dim: true },
+    { o: 57, h: 58, l: 51, c: 52, dim: true },
+    {
+      o: 50,
+      h: 52.5,
+      l: 41,
+      c: 52,
+      label: "Hammer",
+      note: "downtrend-এর তলায়",
+    },
+    { o: 52, h: 60, l: 51, c: 59, dim: true },
+    { o: 59, h: 66, l: 58, c: 65, dim: true },
+    {
+      o: 65,
+      h: 67.5,
+      l: 56,
+      c: 67,
+      label: "Hanging man",
+      note: "uptrend-এর চূড়ায়",
+    },
+  ]}
+  caption="দুটো candle-এর আকার হুবহু এক। বাঁ দিকেরটা downtrend-এর তলায় (hammer), ডান দিকেরটা uptrend-এর চূড়ায় (hanging man)।"
+/>
+
+### চেনার নিয়ম
+
+| নিয়ম                                          | বাধ্যতামূলক?          | কেন                                         |
+| :--------------------------------------------- | :-------------------- | :------------------------------------------ |
+| ছোট body candle-এর উপরের অংশে                  | হ্যাঁ                 | Body মাঝখানে হলে সেটা spinning top          |
+| নিচের wick body-র অন্তত দুই গুণ                | হ্যাঁ                 | ছোট wick-এ "নিচে নামতে পেরেছিল" গল্প নেই    |
+| উপরে wick নেই বা খুব ছোট                       | হ্যাঁ                 | উপরে লম্বা wick হলে অন্য আকার               |
+| আগে স্পষ্ট uptrend, চিহ্নিত resistance-এর কাছে | হ্যাঁ                 | এটাই hammer থেকে তফাত                       |
+| পরের candle body-র নিচে close                  | হ্যাঁ (trade-এর জন্য) | Confirmation ছাড়া hanging man শুধু সতর্কতা |
+
+Body-র রং (সবুজ বা লাল) নিয়মে নেই। কেউ কেউ লাল body-কে একটু বেশি bearish ধরেন, কিন্তু confirmation-এর চেয়ে সেটা অনেক কম গুরুত্বপূর্ণ।
+
+## শক্তিশালী বনাম দুর্বল hanging man
+
+<DiagramRow>
+  <CandleDiagram
+    title="শক্তিশালী"
+    verdict="good"
+    verdictLabel="trade-যোগ্য"
+    candles={[
+      { o: 44, h: 51, l: 43, c: 50, dim: true },
+      { o: 50, h: 57, l: 49, c: 56, dim: true },
+      { o: 56, h: 58.5, l: 47, c: 58, label: "resistance-এ" },
+      { o: 57.5, h: 58, l: 50, c: 51, label: "body-র নিচে close" },
+    ]}
+    levels={[{ price: 59, label: "পুরোনো high", tone: "resistance" }]}
+    caption="পুরোনো high-এর ঠিক নিচে hanging man, পরের candle body-র অনেক নিচে close।"
+  />
+  <CandleDiagram
+    title="দুর্বল"
+    verdict="bad"
+    verdictLabel="এড়িয়ে চলুন"
+    candles={[
+      { o: 40, h: 46, l: 39, c: 45, dim: true },
+      { o: 45, h: 51, l: 44, c: 50, dim: true },
+      { o: 50, h: 52.5, l: 45, c: 52, label: "level নেই" },
+      { o: 52, h: 57, l: 51.5, c: 56.5, label: "উপরে close" },
+    ]}
+    caption="একটানা uptrend-এর মাঝে, কোনো level ছাড়া; পরের candle body-র উপরে close করে।"
+  />
+</DiagramRow>
+
+| মান যাচাই   | শক্তিশালী                             | দুর্বল                             |
+| :---------- | :------------------------------------ | :--------------------------------- |
+| কোথায়      | চিহ্নিত পুরোনো high বা supply zone-এ  | Trend-এর মাঝ পথে, কোনো level ছাড়া |
+| নিচের wick  | Body-র ৩-৫ গুণ, আশেপাশের range-এর মতো | ঠিক দুই গুণ বা তার কম              |
+| পরের candle | Body-র স্পষ্টভাবে নিচে close          | Body-র উপরে বা ভেতরে close         |
+| নিচে জায়গা | কাছের support পর্যন্ত অন্তত 1.5R      | কাছের higher low খুব কাছে          |
+
+## Candle-এর ভেতরের গল্প
+
+একটি প্রচলিত ব্যাখ্যা: uptrend-এ buyers নিয়ন্ত্রণে। এই candle-এ হঠাৎ sellers দাম অনেক নিচে নামাতে পেরেছে, যা আগের candle-গুলোয় পারেনি। Buyers শেষে দাম ফিরিয়ে উপরে close করেছে, তাই আকারটা "শক্তিশালী" দেখায়। কিন্তু খবরটা হলো: **sellers জেগেছে।** পরের candle body-র নিচে close করলে বোঝা যায়, শেষে যারা কিনেছিল তারা এখন লোকসানে, আর তাদের বেরোনোর চাপ নতুন selling-এ যোগ হতে পারে।
+
+<Callout type="note">
+  এটি একটি প্রচলিত ব্যাখ্যা, প্রমাণিত ঘটনা নয়। Chart দেখে কে কিনেছে বা বেচেছে,
+  তা জানা যায় না।
+</Callout>
+
+## কোথায় কাজ করে, কোথায় করে না
+
+<Compare
+  leftLabel="যেখানে hanging man-এর ওজন বেশি"
+  rightLabel="যেখানে hanging man প্রায়ই ফাঁদ"
+  left="- লম্বা uptrend-এর পর চিহ্নিত পুরোনো high-এ
+- Higher timeframe-এর supply zone-এ
+- পরের candle body-র স্পষ্টভাবে নিচে close করলে
+- নিচে কাছের support পর্যন্ত যথেষ্ট জায়গা থাকলে"
+  right="- একটানা uptrend-এর মাঝে, কোনো level ছাড়া
+- পরের candle body-র উপরে close করলে
+- নিচের wick ছোট, আশেপাশের candle-এর মতোই
+- Hanging man-এর close-এই, confirmation ছাড়া sell করলে"
+/>
+
+## ধাপে ধাপে: hanging man trade
+
+Context, size আর target-এর পুরো ধাপগুলো Hammer পাতায় আছে; এখানে দিক উল্টো। শুধু যা আলাদা:
+
+<Steps>
+
+### ধাপ ১: Confirmation-এর মাপ
+
+পরের candle-কে hanging man-এর **body-র নিচে** close করতে হবে, শুধু low-এর নিচে wick দিলে নয়। যত নিচে close, তত পরিষ্কার।
+
+### ধাপ ২: Entry
+
+| Entry                            | কোথায়                                  | সুবিধা                  | অসুবিধা                             |
+| :------------------------------- | :-------------------------------------- | :---------------------- | :---------------------------------- |
+| **Confirmation close** (প্রচলিত) | পরের candle body-র নিচে close করলে sell | Nison-এর শর্ত মেনে ঢোকা | Entry নিচে, stop একটু বড়           |
+| **Low break**                    | Hanging man-এর low-এর নিচে sell stop    | Momentum নিশ্চিত        | Stop পুরো candle-এর ওপারে, বড়      |
+| **Hanging man-এর close-এ**       | Candle বন্ধ হতেই sell                   | ছোট stop                | Confirmation নেই; প্রায়ই trend চলে |
+
+### ধাপ ৩: Stop
+
+Hanging man-এর high-এর উপরে, [spread](/bn/learn/01-foundations/04-spread-commission-swap) ও buffer-সহ। Hammer-এর উল্টো: এখানে stop ছোট wick-এর দিকে, তাই confirmation close-এ ঢুকলে stop সাধারণত সামলানো যায়।
+
+### ধাপ ৪: R:R
+
+নিচের কাছের support বা higher low পর্যন্ত [risk reward](/bn/learn/08-risk-management/03-risk-reward) অন্তত 1:1.5 না হলে বাদ দিন।
+
+</Steps>
+
+### Trade-এর আগে checklist
+
+<Checklist
+  id="pattern-hanging-man-pretrade-bn"
+  items={[
+    "Hanging man আসার আগেই resistance চিহ্নিত ছিল, আর এটা uptrend-এর চূড়ায় সেই level-এ?",
+    "আকার নিয়ম মানছে (উপরে ছোট body, নিচের wick body-র অন্তত দুই গুণ)?",
+    "পরের candle বন্ধ হয়েছে আর hanging man-এর body-র নিচে close করেছে?",
+    "নিচের কাছের support পর্যন্ত risk reward অন্তত 1:1.5?",
+    "Higher timeframe-এর কোনো level trade-এর ঠিক সামনে নেই?",
+  ]}
+/>
+
+একটি ঘরও খালি থাকলে trade বাদ দিন।
+
+## উদাহরণ ১: যখন কাজ করে (কাল্পনিক)
+
+<Chart
+  id="hanging-man-win-01"
+  height={420}
+  caption="XAUUSD H4 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — পুরোনো high-এর নিচে hanging man, পরের candle body-র নিচে close করলে short।"
+/>
+
+- **কী দেখা যাচ্ছিল:** ৫ নম্বর candle 2449.92-এ পুরোনো high রেখে গেছে। ৬-১০ নম্বর প্রায় 2398 পর্যন্ত নামে, ১১-১৫ নম্বর আবার high-এর নিচে ওঠে।
+- **Hanging man:** ১৬ নম্বর 2445.92-এ open, 2448.52-এ close, high 2449.12। নিচের wick 2429.92 পর্যন্ত, প্রায় $16, body-র ছয় গুণ।
+- **Confirmation:** ১৭ নম্বর 2439.42-এ close করে, body-র প্রায় $6.50 নিচে।
+- **সিদ্ধান্ত:** সেই close-এ sell 2439.42। Stop 2451.62 (hanging man high আর পুরোনো high দুটোরই উপরে), ঝুঁকি $12.20। Target 2415.02 (2R); আগের pullback low প্রায় 2398, তাই জায়গা যথেষ্ট।
+- **ফল:** ১৯ নম্বর candle target ছোঁয়।
+- **শিক্ষা:** Level, আকার, আর body-র নিচে স্পষ্ট close: তিনটিই মিলেছে।
+
+<TradeSetup
+  direction="short"
+  pair="XAUUSD"
+  entry={2439.42}
+  stop={2451.62}
+  target={2415.02}
+/>
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়। সব hanging man reversal আনে না, আর কোনো ফল গ্যারান্টি নয়।)
+
+## উদাহরণ ২: যখন ফাঁদ হয় (কাল্পনিক)
+
+<Chart
+  id="hanging-man-fail-01"
+  height={420}
+  caption="USDJPY H1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — একটানা uptrend-এ hanging man-এর close-এই short, confirmation আসেনি, stop।"
+/>
+
+- **কী দেখা যাচ্ছিল:** ০-৮ নম্বর candle 153.40 থেকে 154.05 পর্যন্ত একটানা uptrend। উপরে কোনো চিহ্নিত resistance নেই।
+- **Hanging man:** ৯ নম্বর 154.050-এ open, 154.155-এ close, high 154.175, low 153.830। আকারে ঠিক আছে।
+- **ভুল সিদ্ধান্ত:** "Hanging man, এখনই sell।" Candle-এর close-এ sell 154.155, stop 154.215, ঝুঁকি মাত্র 6 pip। ছোট stop দেখে আকর্ষণীয় মনে হয়েছিল।
+- **কী হলো:** ১০ নম্বর body-র নিচে নয়, উপরে 154.215-এ close করে, আর একই candle stop ছুঁয়ে দেয়। Trend এগিয়ে চলে।
+- **কেন ব্যর্থ:** Level ছিল না, আর confirmation-এর অপেক্ষা হয়নি। Checklist-এর প্রথম আর তৃতীয় ঘরে trade বাদ পড়ত।
+
+**শিক্ষা:** Body-র নিচে bearish close নেই, trade নেই। ছোট stop কোনো edge নয়।
+
+## সাধারণ ভুল
+
+| ভুল                                     | কেন হয়                    | কী করবেন                                   |
+| :-------------------------------------- | :------------------------- | :----------------------------------------- |
+| চূড়ায় hammer-এর আকার দেখে buy         | আকার দেখে নাম দেওয়া       | আগে trend-এর কোথায়, তারপর নাম             |
+| Hanging man-এর close-এই sell            | ছোট stop-এর লোভ            | পরের candle body-র নিচে close করার অপেক্ষা |
+| Low-এর নিচে wick-কে confirmation ধরা    | Wick আর close গুলিয়ে ফেলা | শুধু body-র নিচে close গুনুন               |
+| Trend-এর মাঝে প্রতিটি hanging man short | Level না দেখা              | শুধু চিহ্নিত resistance-এ                  |
+
+## Pro tips
+
+<Callout type="tip">
+  Hanging man-এর পরের candle যদি gap বা বড় bearish body দিয়ে body-র অনেক নিচে
+  close করে, সেটা সবচেয়ে পরিষ্কার confirmation। Forex-এ gap কম হয়, তাই body-র
+  নিচে close-এর দূরত্বই আসল মাপ।
+</Callout>
+
+<Callout type="tip">
+  চলমান long trade-এ চূড়ায় hanging man এলে নতুন short না নিয়েও stop hanging
+  man-এর low-এর নিচে তুলে আনতে পারেন। Confirmation এলে বেরিয়ে যাবেন, না এলে
+  trade চলবে।
+</Callout>
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- Hanging man = hammer-এর আকার, কিন্তু uptrend-এর চূড়ায়; নাম ঠিক করে জায়গা।
+- এটা সতর্কসংকেত, signal নয়: পরের candle body-র নিচে close না করলে trade নেই।
+- Entry confirmation close-এ, stop hanging man-এর high-এর উপরে।
+- নিচের কাছের support পর্যন্ত অন্তত 1.5R না থাকলে বাদ।
+
+</KeyTakeaways>
+
+## অনুশীলন ও নিজের backtest
+
+TradingView-এ XAUUSD H4 বা USDJPY H1 খুলুন। অন্তত ২০টি hanging man খুঁজুন। প্রতিটির জন্য লিখুন: তারিখ, resistance-এ ছিল কি না, পরের candle body-র নিচে close করেছে কি না, entry ধরন, কাছের support পর্যন্ত কত R, ফল (R)। এরপর "confirmation এসেছে" আর "আসেনি" দুই দলে ভাগ করে দেখুন, confirmation ছাড়া short নিলে ফল কী হতো। অন্তত ৩০টি নমুনা ছাড়া সিদ্ধান্ত নেবেন না।
+
+## কুইজ
+
+1. একই আকারের candle কখন hammer আর কখন hanging man?
+2. Hanging man-এর পরের candle low-এর নিচে wick দিল, কিন্তু body-র ভেতরে close করল। এটা কি confirmation?
+3. উদাহরণ ২-এর trade checklist-এর কোন ঘরে বাদ পড়ত?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** Downtrend-এর তলায় এলে hammer, uptrend-এর চূড়ায় এলে hanging man। আকার এক, জায়গা আলাদা।
+
+**২.** না। Confirmation মানে body-র নিচে close। শুধু wick দেখায় চেষ্টা হয়েছিল, কিন্তু sellers জেতেনি।
+
+**৩.** প্রথম ঘর (কোনো চিহ্নিত resistance ছিল না) আর তৃতীয় ঘর (পরের candle body-র উপরে close করেছে)।
+
+</details>
+
+## পরের ধাপ
+
+- পুরো walk-through: [Hammer](/bn/patterns/hammer)।
+- জায়গা কেন নাম ঠিক করে: [Candle Context](/bn/learn/04-candlesticks/05-candle-context)।
+- একই পরিবারের pattern: [Shooting Star](/bn/patterns/shooting-star), [Inverted Hammer](/bn/patterns/inverted-hammer), [Dragonfly Doji](/bn/patterns/dragonfly-doji)।
+
+<Disclaimer />

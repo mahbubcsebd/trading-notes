@@ -1,0 +1,194 @@
+---
+title: "Writing Your Own Strategy: Your Rules on One Page"
+description: "What a strategy is, which rules to write down, why one win or one loss proves nothing, and the steps to build a one-page strategy card, with charts."
+level: intermediate
+tags: [strategy, rules, price-action, entry, plan]
+instruments: [EURUSD]
+timeframes: [H4]
+status: done
+sources:
+  - type: blog
+    title: "Trading Strategy - Investopedia"
+    url: "https://www.investopedia.com/terms/t/trading-strategy.asp"
+  - type: blog
+    title: "Trading Plan - Investopedia"
+    url: "https://www.investopedia.com/articles/trading/06/tradingplan.asp"
+updated: 2026-11-06
+---
+
+# Writing Your Own Strategy: Your Rules on One Page
+
+Saying "I trade price action" says nothing. Where do you enter? When do you exit? How much risk? If you cannot write it down, it is not a strategy. It is a habit.
+
+## What you will be able to do
+
+- **Name the necessary parts** of a strategy.
+- **Write your rules** on a one-page card.
+- **Explain** why judging a strategy by one win or one loss is wrong.
+
+## Why it matters
+
+- **Without rules there is nothing to test.** A backtest needs written rules.
+- **Emotion changes the rules.** A written card brings you back under pressure.
+- **You can catch the same mistake.** When a rule is broken, you can see it.
+
+Prerequisites: [Entry Model Checklist](/en/learn/09-price-action-entries-strategies/05-entry-model-checklist) and [Expectancy](/en/learn/08-risk-management/07-expectancy).
+
+## What is a strategy
+
+**A strategy is a set of written rules that says when you take a trade, how you handle risk, when you exit and when you do not trade.**
+
+Think of a cooking recipe. "I cook well" is not a recipe. With ingredients, amounts, times and steps, someone else can make it again. Your strategy must be repeatable too.
+
+| Part            | Question                                       |
+| :-------------- | :--------------------------------------------- |
+| Market and time | Which pair, which timeframe, which session?    |
+| Direction       | When to buy, when to sell, when to do nothing? |
+| Entry           | What are the setup, confirmation and trigger?  |
+| Stop            | Where, and based on what?                      |
+| Target          | Where, and what is the minimum ratio?          |
+| Risk            | How much per trade and per day?                |
+| Exclusions      | When do you not trade (news, range)?           |
+
+## What it looks like on a chart
+
+<Chart
+  id="strategy-sample-win-01"
+  height={440}
+  caption="EURUSD H4 (educational, imaginary example): rules: H4 uptrend, pullback to the last higher low, a bullish trigger candle, stop below the low, 1:3 target. This sample followed every rule and won. Buy 1.0935, stop 1.0905, target 1.1025."
+/>
+
+The rules here are short: trend, pullback, trigger, stop, target. The answer to each is known in advance.
+
+## Step by step: build a strategy card
+
+<Steps>
+
+### Step 1: Pick one pair and one timeframe
+
+Start with one pair. With more, the sample gets scattered.
+
+### Step 2: Write the entry rules
+
+Separate [setup, confirmation and trigger](/en/learn/09-price-action-entries-strategies/04-confirmation-vs-trigger). "If it feels right" cannot be written.
+
+### Step 3: Write the stop and target rules
+
+The stop beyond the structure, the target before the next barrier, and write the minimum [ratio](/en/learn/08-risk-management/03-risk-reward).
+
+### Step 4: Write the risk rules
+
+Write the [risk per trade](/en/learn/08-risk-management/01-risk-per-trade) and the [daily limit](/en/learn/08-risk-management/05-daily-weekly-limits).
+
+### Step 5: Write "when not"
+
+During news, in a range market, when the limit is passed. This part is the one most often forgotten.
+
+### Step 6: Build up a sample
+
+Do not call a strategy good or bad until at least many trades (demo or backtest) have piled up. The method for testing: [How to Backtest](/en/learn/15-backtesting-journal/01-how-to-backtest).
+
+</Steps>
+
+## Example 1: when it works (synthetic)
+
+- **Set in advance:** risk 1%, stop 30 pips, target 90 pips (1:3).
+- **Result:** the trade followed every rule, and price touched the target.
+- **Lesson:** one win is not proof. It is just one sample.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Example 2: when it fails (synthetic)
+
+<Chart
+  id="strategy-sample-loss-01"
+  height={440}
+  caption="EURUSD H4 (educational, imaginary example): same strategy, same rules, same entry at 1.0935. This time the higher low broke and the stop at 1.0905 was hit."
+/>
+
+- **What was visible:** every box of the rules was green.
+- **Result:** the higher low broke and the stop was hit. The loss is 1% (as planned).
+- **Why it failed:** there is no mistake. This is a normal loss of the strategy.
+- **Lesson:** losing while following the rules is not a mistake. Winning while breaking the rules is.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Common mistakes
+
+| Mistake                                | Why it happens            | What to do                               |
+| :------------------------------------- | :------------------------ | :--------------------------------------- |
+| Vague rules ("if it feels right")      | Laziness in writing       | Write rules that can be answered yes/no  |
+| Changing the strategy after two losses | Emotion over the result   | Keep it until you have many samples      |
+| Many strategies at once                | Wanting to try everything | One strategy, one pair                   |
+| Not writing "when not"                 | Thinking only about entry | Make the exclusion rules a separate part |
+
+## Pro tips
+
+<Callout type="tip">
+  If you cannot fit the rules of your strategy on one page, it is too complex.
+  If it does not fit on one page, you will not remember it under pressure.
+</Callout>
+
+<Callout type="warning">
+  Copying someone else's strategy does not copy their situation. Test it on your
+  own time, risk tolerance and sample.
+</Callout>
+
+## When this does not work
+
+- **When the sample is small:** in ten trades the result can be luck too.
+- **When the market's character changes:** going from trend to range, the old rules can weaken.
+- **When the rules are not followed:** a written strategy stays on paper.
+- **When costs are left out:** spread and commission can ruin the result.
+
+## Summary
+
+<KeyTakeaways>
+
+- A strategy means written rules: market, entry, stop, target, risk and "when not".
+- One win or one loss does not prove a strategy.
+- Losing while following the rules is normal. Winning while breaking them is dangerous.
+- A one-page card brings you back under pressure.
+
+</KeyTakeaways>
+
+## Practice
+
+Write a one-page card for your strategy: pair, timeframe, entry, stop, target, risk, "when not". Then apply it to the last month of charts and count how many trades there would have been and what the result was.
+
+## Quiz
+
+1. What are the essential parts of a strategy?
+2. Why is it wrong to call a strategy good after one win?
+3. Why do you have to write "when not to trade"?
+4. What do you do if you lose while following the rules?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** Market and time, entry, stop, target, risk, when not.
+
+**2.** One result can be luck too. You need many samples.
+
+**3.** To avoid the market's bad conditions. Otherwise the same mistake happens again and again.
+
+**4.** Write it in your journal and move on. Look at many samples before changing the rules.
+
+</details>
+
+## Next steps
+
+- Before: [Entry Model Checklist](/en/learn/09-price-action-entries-strategies/05-entry-model-checklist).
+- After: [Trade Management and Execution](/en/learn/10-trade-management-execution/01-stop-loss-placement).
+- Related: [Trading Plan Template](/en/learn/14-trading-plan-system/01-trading-plan-template).
+
+### Sources
+
+- <ExternalLink href="https://www.investopedia.com/terms/t/trading-strategy.asp">
+    Trading Strategy, Investopedia
+  </ExternalLink>
+- <ExternalLink href="https://www.investopedia.com/articles/trading/06/tradingplan.asp">
+    Trading Plan, Investopedia
+  </ExternalLink>
+
+<Disclaimer />

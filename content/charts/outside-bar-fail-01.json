@@ -1,0 +1,196 @@
+{
+  "id": "outside-bar-fail-01",
+  "title": {
+    "en": "Outside Bar With a Mid-Range Close in a Choppy Market",
+    "bn": "এলোমেলো বাজারে মাঝখানে close করা outside bar"
+  },
+  "symbol": "EURUSD",
+  "timeframe": "D1",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bullish",
+  "outcome": "loss",
+  "tags": [
+    "outside-bar",
+    "price-action",
+    "fail",
+    "chop",
+    "pattern"
+  ],
+  "module": "patterns",
+  "lessonSlugs": [],
+  "caption": {
+    "en": "Illustrative synthetic EURUSD D1: in a wide, choppy range, a candle takes out both the previous high and low but closes near the middle of its own range. Bought on the high break, the trade is caught in two-sided volatility and stopped out below the outside bar low.",
+    "bn": "শিক্ষামূলক কাল্পনিক EURUSD D1: চওড়া, এলোমেলো range-এ একটি candle আগের high আর low দুটোই ভাঙে, কিন্তু নিজের range-এর মাঝখানে close করে। High ভাঙলে buy, দুই দিকের volatility-তে আটকে outside bar-এর low-এর নিচে stop।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data, not a real market record.",
+    "bn": "শিক্ষামূলক কাল্পনিক ডেটা, বাস্তব মার্কেটের রেকর্ড নয়।"
+  },
+  "updatedAt": "2026-11-06T12:00:00Z",
+  "annotations": [
+    {
+      "type": "marker",
+      "i": 8,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Previous bar"
+    },
+    {
+      "type": "marker",
+      "i": 9,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Outside bar (mid close)"
+    },
+    {
+      "type": "hline",
+      "price": 1.0848,
+      "label": "Entry (high break)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.0743,
+      "label": "Stop",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.1058,
+      "label": "Target 2R",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candles 0-7 swing up and down in a wide range with no trend. Candle 9 covers candle 8's whole range, but closes only a little above the middle of its own range: both sides were active and neither won. Candle 10 spikes above the high, fills the buy stop and closes back in the middle. The range swings down and breaks the outside bar low.",
+    "bn": "০-৭ নম্বর candle কোনো trend ছাড়া চওড়া range-এ ওঠানামা করে। ৯ নম্বর ৮ নম্বরের পুরো range ঢাকে, কিন্তু নিজের range-এর মাঝের সামান্য উপরে close করে: দুই পক্ষই সক্রিয়, কেউ জেতেনি। ১০ নম্বর high-এর উপরে spike দিয়ে buy stop fill করে, আবার মাঝখানে close করে। Range নিচে ঘুরে outside bar-এর low ভাঙে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "An outside bar that closes in the middle shows two-sided volatility, not a winner",
+      "bn": "মাঝখানে close করা outside bar দুই দিকের volatility দেখায়, বিজয়ী নয়"
+    }
+  ],
+  "entry": 1.0848,
+  "stopLoss": 1.0743,
+  "takeProfit": 1.1058,
+  "rr": "1:2.0",
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.08,
+      "h": 1.08479,
+      "l": 1.07782,
+      "c": 1.0835
+    },
+    {
+      "i": 1,
+      "o": 1.0835,
+      "h": 1.0858,
+      "l": 1.07796,
+      "c": 1.0795
+    },
+    {
+      "i": 2,
+      "o": 1.0795,
+      "h": 1.08377,
+      "l": 1.07785,
+      "c": 1.0825
+    },
+    {
+      "i": 3,
+      "o": 1.0825,
+      "h": 1.08409,
+      "l": 1.07733,
+      "c": 1.079
+    },
+    {
+      "i": 4,
+      "o": 1.079,
+      "h": 1.08531,
+      "l": 1.07642,
+      "c": 1.083
+    },
+    {
+      "i": 5,
+      "o": 1.083,
+      "h": 1.08452,
+      "l": 1.07803,
+      "c": 1.08
+    },
+    {
+      "i": 6,
+      "o": 1.08,
+      "h": 1.0835,
+      "l": 1.07834,
+      "c": 1.0825
+    },
+    {
+      "i": 7,
+      "o": 1.0825,
+      "h": 1.08385,
+      "l": 1.07792,
+      "c": 1.0797
+    },
+    {
+      "i": 8,
+      "o": 1.0797,
+      "h": 1.0815,
+      "l": 1.0777,
+      "c": 1.0791
+    },
+    {
+      "i": 9,
+      "o": 1.0791,
+      "h": 1.0845,
+      "l": 1.0749,
+      "c": 1.0799
+    },
+    {
+      "i": 10,
+      "o": 1.0799,
+      "h": 1.0856,
+      "l": 1.0789,
+      "c": 1.0803
+    },
+    {
+      "i": 11,
+      "o": 1.0803,
+      "h": 1.0809,
+      "l": 1.0763,
+      "c": 1.0768
+    },
+    {
+      "i": 12,
+      "o": 1.0768,
+      "h": 1.07832,
+      "l": 1.07139,
+      "c": 1.0733
+    },
+    {
+      "i": 13,
+      "o": 1.0733,
+      "h": 1.07427,
+      "l": 1.06976,
+      "c": 1.0708
+    },
+    {
+      "i": 14,
+      "o": 1.0708,
+      "h": 1.07249,
+      "l": 1.07005,
+      "c": 1.0718
+    },
+    {
+      "i": 15,
+      "o": 1.0718,
+      "h": 1.07302,
+      "l": 1.06738,
+      "c": 1.0688
+    }
+  ]
+}

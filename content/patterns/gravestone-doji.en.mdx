@@ -1,0 +1,305 @@
+---
+title: "Gravestone Doji: a full round trip up, and buyers fail at resistance"
+description: "How to spot a gravestone doji, the mirror of the dragonfly, why it is bearish at resistance and when it traps you against a trend, with entry, stop and charts."
+type: bearish
+category: momentum-indecision
+level: beginner
+candleCount: 1
+signal: reversal
+chartId: gravestone-doji-win-01
+tags: [pattern, candlestick, gravestone-doji, doji, resistance]
+status: done
+sources:
+  - type: book
+    title: "Japanese Candlestick Charting Techniques - Steve Nison"
+    note: "Gravestone doji, doji at tops"
+  - type: blog
+    title: "Gravestone Doji - Investopedia"
+    url: "https://www.investopedia.com/terms/g/gravestone-doji.asp"
+updated: 2026-11-06
+---
+
+Price breaks an old high and runs, so you buy the breakout. Before the candle closes, price falls all the way back and closes right at the open, leaving a long wick on top. That is a gravestone doji: every higher price was rejected. It is the exact mirror of the [Dragonfly Doji](/en/patterns/dragonfly-doji), so this page details only what differs.
+
+## At a glance
+
+| Item          | Gravestone Doji                                                                                    |
+| :------------ | :------------------------------------------------------------------------------------------------- |
+| Type          | Bearish reversal lean (at resistance), one candle                                                  |
+| Where to look | At the end of an uptrend or pullback, at a marked resistance                                       |
+| Key features  | Open ≈ close ≈ low, a long upper wick only, almost no lower wick                                   |
+| Confirmation  | Next candle closes below the gravestone low                                                        |
+| Stop          | Above the high of the long wick, plus spread and a buffer                                          |
+| Invalidation  | A close above the wick high                                                                        |
+| Look-alikes   | [Shooting Star](/en/patterns/shooting-star), [Inverted Hammer](/en/patterns/inverted-hammer), Doji |
+| Opposite      | Dragonfly Doji (long lower wick only)                                                              |
+
+## What you will be able to do
+
+- **Measure** the difference between a gravestone doji and a shooting star.
+- **Recognise** a gravestone at resistance as the picture of a false breakout.
+- **Judge** when a gravestone short against a strong uptrend is a trap, by measuring the nearest support.
+
+## Why it matters
+
+- **A false breakout in one candle.** A wick above resistance and a close back below it means breakout buyers got trapped. More in [Fake Breakout](/en/learn/06-trend-chart-patterns/04-fake-breakout).
+- **Dojis matter more at tops.** Nison's observation: a doji after an uptrend carries more weight, and the gravestone is the clearest form of that top doji.
+- **A counter-trend signal.** Without room to the nearest support, even a perfect gravestone loses.
+
+Prerequisites: the [Doji](/en/patterns/doji) page and [Support Resistance Role Reversal](/en/learn/05-support-resistance/02-role-reversal).
+
+## What is a gravestone doji
+
+**A gravestone doji is a doji whose open, close and low are at almost the same price, with a long upper wick.** It looks like an upside-down "T", or a gravestone: a flat base on the ground and an upright stone above.
+
+Think of throwing a ball straight up. However hard you throw, it lands back in your hand. Buyers lifted price far up but could not hold it.
+
+<CandleDiagram
+  title="Gravestone doji vs shooting star"
+  candles={[
+    { o: 40, h: 46, l: 39, c: 45, dim: true },
+    { o: 45, h: 51, l: 44, c: 50, dim: true },
+    {
+      o: 50,
+      h: 65,
+      l: 49.8,
+      c: 50.1,
+      label: "Gravestone",
+      note: "no body, open ≈ close ≈ low",
+    },
+    { o: 50, h: 52, l: 47, c: 48, dim: true },
+    {
+      o: 50,
+      h: 64,
+      l: 49.5,
+      c: 48.5,
+      label: "Shooting star",
+      note: "small body",
+    },
+  ]}
+  caption="Both have a long upper wick. A gravestone has almost no body; a shooting star has a small but visible one."
+/>
+
+### Identification rules
+
+| Rule                                                      | Required?               | Why                                                        |
+| :-------------------------------------------------------- | :---------------------- | :--------------------------------------------------------- |
+| Open and close almost equal                               | Yes                     | A visible body makes it a shooting star or inverted hammer |
+| Open and close near the candle low (almost no lower wick) | Yes                     | A lower wick moves it toward a long-legged doji            |
+| Upper wick clearly long                                   | Yes                     | A short wick carries no rejection story                    |
+| Candle has closed                                         | Yes                     | A live candle can climb back and close higher              |
+| At a marked resistance, after a move up                   | No (but very important) | This gives the bearish meaning                             |
+
+## Strong vs weak gravestone doji
+
+<DiagramRow>
+  <CandleDiagram
+    title="Strong"
+    verdict="good"
+    verdictLabel="tradeable"
+    candles={[
+      { o: 40, h: 46, l: 39, c: 45, dim: true },
+      { o: 45, h: 51, l: 44, c: 50, dim: true },
+      { o: 50, h: 63, l: 49.7, c: 49.9, label: "pierces resistance, returns" },
+      { o: 50, h: 50.5, l: 43, c: 44, dim: true },
+    ]}
+    levels={[{ price: 56, label: "old high", tone: "resistance" }]}
+    caption="At an old high after a rally, wick above the level, next candle closes below the low."
+  />
+  <CandleDiagram
+    title="Weak"
+    verdict="bad"
+    verdictLabel="avoid"
+    candles={[
+      { o: 40, h: 47, l: 39.5, c: 46, dim: true },
+      { o: 46, h: 53, l: 45.5, c: 52, dim: true },
+      { o: 52, h: 53, l: 47, c: 48, dim: true },
+      { o: 48, h: 55, l: 47.8, c: 48.1, label: "minor high" },
+      { o: 48.1, h: 50, l: 46, c: 49.5, dim: true },
+    ]}
+    levels={[{ price: 46.5, label: "higher low", tone: "support" }]}
+    caption="At a minor high in a strong uptrend. A higher low sits just below; no room for a target."
+  />
+</DiagramRow>
+
+| Quality check    | Strong                                 | Weak                                |
+| :--------------- | :------------------------------------- | :---------------------------------- |
+| What came before | A rally or the upper end of a pullback | Halfway through a strong uptrend    |
+| Where            | At a marked old high or supply zone    | At a minor, unmarked high           |
+| Wick             | Goes beyond the level and returns      | Touches no level                    |
+| Room below       | At least 1.5R to the nearest support   | Higher low or support within 1-1.2R |
+
+### Same look, different meaning
+
+| Pattern             | Shape                                                 | Difference                                    |
+| :------------------ | :---------------------------------------------------- | :-------------------------------------------- |
+| **Gravestone Doji** | No body, open ≈ close ≈ low, long upper wick          | Full rejection; bearish lean at resistance    |
+| **Shooting Star**   | Small body at the bottom, long upper wick             | Nearly the same story, slightly less complete |
+| **Inverted Hammer** | Shooting star shape, but at the bottom of a downtrend | Same shape, opposite location, bullish lean   |
+
+## The story inside the candle
+
+The dragonfly story in reverse. One common interpretation: buyers lift price from the open, resistance breaks, breakout buyers join and shorts' buy stops fire. Large sell orders arrive up there and price drops all the way back to close at the open. Those who bought higher are now losing. A close below the low next candle gives sellers their first clear win.
+
+<Callout type="note">
+  This is a common interpretation, not a proven fact. A chart does not show
+  whose stop was hit or who sold.
+</Callout>
+
+## Where it works and where it does not
+
+<Compare
+  leftLabel="Where a gravestone carries weight"
+  rightLabel="Where a gravestone is often a trap"
+  left="- At a marked old high or supply zone after a rally
+- When the wick pierces resistance and closes back below
+- At the end of a pullback inside a downtrend, in the trend direction
+- When there is enough room to the nearest support below"
+  right="- At a minor, unmarked high inside a strong uptrend
+- With a higher low or support right below
+- At the bottom of a downtrend (then it acts like an inverted hammer)
+- On a news spike, where the wick is thin liquidity"
+/>
+
+## Step by step: trading a gravestone doji
+
+The full steps are on the Dragonfly Doji page (linked at the top); here everything runs the other way. Only what differs:
+
+<Steps>
+
+### Step 1: Check the trend direction
+
+If the higher timeframe is in a strong uptrend, a gravestone short is a counter-trend trade. Then consider it only at a major, marked resistance.
+
+### Step 2: Find the nearest support below
+
+The last higher low, a broken resistance (now support), a round number. Measure the distance from entry to there.
+
+### Step 3: Entry and stop
+
+Sell stop just below the gravestone low, or sell once the confirming candle closes. Stop above the wick high, plus the [spread](/en/learn/01-foundations/04-spread-commission-swap). The wick is long, so cut size.
+
+### Step 4: Check R:R
+
+If the [risk reward](/en/learn/08-risk-management/03-risk-reward) to the nearest support is below 1:1.5, skip it, however perfect the shape.
+
+</Steps>
+
+### Pre-trade checklist
+
+<Checklist
+  id="pattern-gravestone-doji-pretrade-en"
+  items={[
+    "Was resistance marked before the gravestone, and did price rally up into it?",
+    "Does the shape pass the rules (open ≈ close ≈ low, long upper wick)?",
+    "Have both the gravestone and the confirming candle closed?",
+    "Is the risk reward to the nearest support at least 1:1.5?",
+    "Is the higher-timeframe trend or level not against the trade?",
+  ]}
+/>
+
+If any box stays empty, skip the trade.
+
+## Example 1: when it works (illustrative)
+
+<Chart
+  id="gravestone-doji-win-01"
+  height={420}
+  caption="GBPUSD H1 (illustrative, synthetic) — a gravestone doji pierces an old high and returns; short when the next candle breaks its low."
+/>
+
+- **What was visible:** Candle 5 left an old high at 1.2723. Candles 6-10 fell to about 1.2648, and 11-15 rallied back under the high.
+- **The gravestone:** Candle 16 opened at 1.2717, closed at 1.27165, low 1.2716. The upper wick reached 1.2743, 20 pips beyond the old high, and was fully given back.
+- **Decision:** Sell stop at 1.2714 (2 pips below the low). Stop at 1.2748 (5 pips above the wick high): 34 pips of risk. Target 1.2646 (2R), near the earlier pullback low at 1.2648; room to there was about 1.95R.
+- **Result:** Candle 17 closed at 1.2707 and filled the order. Candle 24 reached the target.
+- **Lesson:** A marked level, a wick beyond it, a confirming close and enough room below: all four lined up.
+
+<TradeSetup
+  direction="short"
+  pair="GBPUSD"
+  entry={1.2714}
+  stop={1.2748}
+  target={1.2646}
+/>
+
+(Illustrative example, not a real trade. Not every gravestone doji wins, and no result is guaranteed.)
+
+## Example 2: when it is a trap (illustrative)
+
+<Chart
+  id="gravestone-doji-fail-01"
+  height={420}
+  caption="XAUUSD H1 (illustrative, synthetic) — a gravestone at a minor high in a strong uptrend; stopped out even after confirmation."
+/>
+
+- **What was visible:** Candles 0-7 were a strong uptrend from 2300 to about 2337. Candles 8-10 left a higher low at 2318.82.
+- **The gravestone:** Candle 14 opened at 2337.00, closed at 2336.80, low 2336.60, high 2349.00. A perfect shape.
+- **The wrong decision:** Candle 15 closed at 2334.60 and filled the sell stop at 2336.10. Stop 2350.50: $14.40 of risk, target 2307.30 (2R). But the higher low at 2318.82 was only about 1.2R away, and the target lay far beyond that support.
+- **What happened:** Candle 16 stalled, 17 climbed again and 18 broke the stop.
+- **Why it failed:** Counter-trend, at a minor unmarked high, with the nearest support inside 1.5R. The first, fourth and fifth checklist boxes would have filtered it out.
+
+**Lesson:** A counter-trend signal needs room to the nearest support. Because the stop was set in advance, the loss stayed at 1R.
+
+## Common mistakes
+
+| Mistake                                       | Why it happens                  | What to do instead                                     |
+| :-------------------------------------------- | :------------------------------ | :----------------------------------------------------- |
+| Shorting every gravestone in a strong uptrend | "Gravestone = bearish" by heart | Only at marked resistance, after measuring support     |
+| Mixing up shooting star and gravestone        | Body not measured               | Visible body = shooting star; nearly none = gravestone |
+| Stop in the middle of the wick                | Fear of a wide stop             | Stop above the wick high; cut size                     |
+| Shorting a gravestone at a downtrend bottom   | Ignoring location               | At a bottom this shape acts like an inverted hammer    |
+
+## Pro tips
+
+<Callout type="tip">
+  When the gravestone wick goes above a clear old high and returns, it pictures
+  trapped breakout buyers. A confirming candle at such a place gives the
+  cleanest setup.
+</Callout>
+
+<Callout type="warning">
+  Shorting every rejection candle against a strong trend is one of the most
+  expensive beginner habits. Learn pullback trades in the trend direction first:
+  [Trend Continuation vs
+  Reversal](/en/learn/09-price-action-entries-strategies/02-trend-continuation-vs-reversal).
+</Callout>
+
+## Summary
+
+<KeyTakeaways>
+
+- Gravestone doji = open ≈ close ≈ low with a long upper wick; the mirror of the dragonfly.
+- At a marked resistance after a rally, with the wick beyond the level, it shows buyers failing.
+- Enter after confirmation; stop above the wick high, with reduced size.
+- Against the trend, skip it unless there is at least 1.5R to the nearest support.
+
+</KeyTakeaways>
+
+## Practice and your own backtest
+
+Open GBPUSD H1 or XAUUSD H1 in TradingView. Find at least 20 gravestone dojis. For each, log: date, whether resistance was marked, higher-timeframe trend direction, R to the nearest support, whether confirmation came, and result (R). Then split into "with the trend" and "against the trend" and compare the average R. Do not draw conclusions from fewer than 30 samples.
+
+## Quiz
+
+1. What is the main difference between a gravestone and a shooting star?
+2. A gravestone forms at a minor high in a strong uptrend, with a higher low 1R below. What do you do?
+3. A gravestone shape forms at the bottom of a downtrend. How do you read it?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** In a gravestone the open and close are almost equal, with no body. A shooting star has a small but visible body. The story is nearly the same.
+
+**2.** Skip it. R:R to the nearest support is below 1:1.5, and the trade is against the trend.
+
+**3.** Not as a short. At a bottom the long upper wick shows buyers could lift price; it leans bullish like an inverted hammer and needs confirmation.
+
+</details>
+
+## Next steps
+
+- Full walk-through: [Dragonfly Doji](/en/patterns/dragonfly-doji).
+- The story behind the wick: [Liquidity and Stop Hunts](/en/learn/03-market-structure/04-liquidity-stop-hunts).
+- Same family: [Shooting Star](/en/patterns/shooting-star), [Doji](/en/patterns/doji), [Long-Legged Doji](/en/patterns/long-legged-doji).
+
+<Disclaimer />

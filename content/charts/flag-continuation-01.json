@@ -1,0 +1,335 @@
+{
+  "symbol": "EURUSD",
+  "timeframe": "H4",
+  "mode": "synthetic",
+  "module": "06-trend-chart-patterns",
+  "lessonSlugs": [
+    "02-continuation-patterns"
+  ],
+  "notes": {
+    "en": "Illustrative synthetic data.",
+    "bn": "এটি শিক্ষামূলক কাল্পনিক ডেটা।"
+  },
+  "updatedAt": "2026-11-05T21:00:00Z",
+  "type": "trade-setup",
+  "id": "flag-continuation-01",
+  "title": {
+    "en": "Bull Flag Continuation",
+    "bn": "Bull Flag continuation"
+  },
+  "bias": "bullish",
+  "outcome": "win",
+  "tags": [
+    "flag",
+    "continuation",
+    "pole"
+  ],
+  "caption": {
+    "en": "A sharp pole from 1.0800 to 1.0960, then a shallow downward-sloping flag. Candle 18 closes above the flag top; buy 1.0942, stop 1.0884, target 1.1060.",
+    "bn": "1.0800 থেকে 1.0960 পর্যন্ত তীক্ষ্ণ pole, তারপর অগভীর নিচমুখী flag। ১৮ নম্বর candle flag-এর ওপরে close করে; buy 1.0942, stop 1.0884, target 1.1060।"
+  },
+  "annotations": [
+    {
+      "type": "trendline",
+      "from": {
+        "i": 8,
+        "price": 1.0968
+      },
+      "to": {
+        "i": 17,
+        "price": 1.0914
+      },
+      "color": "#3b82f6",
+      "label": "Flag top"
+    },
+    {
+      "type": "trendline",
+      "from": {
+        "i": 10,
+        "price": 1.0921
+      },
+      "to": {
+        "i": 17,
+        "price": 1.0885
+      },
+      "color": "#3b82f6",
+      "label": "Flag bottom"
+    },
+    {
+      "type": "marker",
+      "i": 8,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Pole top"
+    },
+    {
+      "type": "marker",
+      "i": 0,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Pole start"
+    },
+    {
+      "type": "marker",
+      "i": 18,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Break"
+    },
+    {
+      "type": "marker",
+      "i": 19,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Buy"
+    },
+    {
+      "type": "hline",
+      "price": 1.0942,
+      "label": "Buy entry",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.0884,
+      "label": "Stop (below flag)",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.106,
+      "label": "Target (pole projected)",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Pole = 160 pips. Flag retraced only 71 pips (44%) in 9 candles. Target = breakout point (about 1.0909) + pole height, rounded down to 1.1060. Risk 58 pips for 118 pips of target (about 2.0R).",
+    "bn": "Pole = 160 pip। Flag মাত্র 71 pip (44%) নেমেছে, ৯টি candle-এ। Target = breakout point (প্রায় 1.0909) + pole-এর উচ্চতা, নিচের দিকে গোল করে 1.1060। ঝুঁকি 58 pip, target 118 pip দূরে (প্রায় 2.0R)।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "A flag is a short, shallow pause against a strong pole",
+      "bn": "Flag হলো শক্তিশালী pole-এর বিপরীতে ছোট, অগভীর বিরতি"
+    },
+    {
+      "en": "Target = pole height projected from the breakout",
+      "bn": "Target = breakout থেকে pole-এর উচ্চতা"
+    }
+  ],
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.0792,
+      "h": 1.0806,
+      "l": 1.0786,
+      "c": 1.08
+    },
+    {
+      "i": 1,
+      "o": 1.08,
+      "h": 1.0828,
+      "l": 1.0792,
+      "c": 1.082
+    },
+    {
+      "i": 2,
+      "o": 1.082,
+      "h": 1.085,
+      "l": 1.081,
+      "c": 1.084
+    },
+    {
+      "i": 3,
+      "o": 1.084,
+      "h": 1.0866,
+      "l": 1.0834,
+      "c": 1.086
+    },
+    {
+      "i": 4,
+      "o": 1.086,
+      "h": 1.0888,
+      "l": 1.0852,
+      "c": 1.088
+    },
+    {
+      "i": 5,
+      "o": 1.088,
+      "h": 1.091,
+      "l": 1.087,
+      "c": 1.09
+    },
+    {
+      "i": 6,
+      "o": 1.09,
+      "h": 1.0926,
+      "l": 1.0894,
+      "c": 1.092
+    },
+    {
+      "i": 7,
+      "o": 1.092,
+      "h": 1.0948,
+      "l": 1.0912,
+      "c": 1.094
+    },
+    {
+      "i": 8,
+      "o": 1.094,
+      "h": 1.0968,
+      "l": 1.093,
+      "c": 1.096
+    },
+    {
+      "i": 9,
+      "o": 1.096,
+      "h": 1.096,
+      "l": 1.0936,
+      "c": 1.0942
+    },
+    {
+      "i": 10,
+      "o": 1.0942,
+      "h": 1.095,
+      "l": 1.0921,
+      "c": 1.093
+    },
+    {
+      "i": 11,
+      "o": 1.093,
+      "h": 1.0946,
+      "l": 1.092,
+      "c": 1.0936
+    },
+    {
+      "i": 12,
+      "o": 1.0936,
+      "h": 1.0942,
+      "l": 1.091,
+      "c": 1.0916
+    },
+    {
+      "i": 13,
+      "o": 1.0916,
+      "h": 1.0928,
+      "l": 1.0908,
+      "c": 1.092
+    },
+    {
+      "i": 14,
+      "o": 1.092,
+      "h": 1.093,
+      "l": 1.0894,
+      "c": 1.0904
+    },
+    {
+      "i": 15,
+      "o": 1.0904,
+      "h": 1.0916,
+      "l": 1.0898,
+      "c": 1.091
+    },
+    {
+      "i": 16,
+      "o": 1.091,
+      "h": 1.0918,
+      "l": 1.0889,
+      "c": 1.0896
+    },
+    {
+      "i": 17,
+      "o": 1.0896,
+      "h": 1.0914,
+      "l": 1.0886,
+      "c": 1.0902
+    },
+    {
+      "i": 18,
+      "o": 1.0902,
+      "h": 1.094,
+      "l": 1.0898,
+      "c": 1.0936
+    },
+    {
+      "i": 19,
+      "o": 1.0936,
+      "h": 1.0952,
+      "l": 1.093,
+      "c": 1.0948
+    },
+    {
+      "i": 20,
+      "o": 1.0948,
+      "h": 1.099,
+      "l": 1.0938,
+      "c": 1.098
+    },
+    {
+      "i": 21,
+      "o": 1.098,
+      "h": 1.1001,
+      "l": 1.0974,
+      "c": 1.0995
+    },
+    {
+      "i": 22,
+      "o": 1.0995,
+      "h": 1.1018,
+      "l": 1.0987,
+      "c": 1.101
+    },
+    {
+      "i": 23,
+      "o": 1.101,
+      "h": 1.103,
+      "l": 1.1,
+      "c": 1.102
+    },
+    {
+      "i": 24,
+      "o": 1.102,
+      "h": 1.1036,
+      "l": 1.1014,
+      "c": 1.103
+    },
+    {
+      "i": 25,
+      "o": 1.103,
+      "h": 1.1048,
+      "l": 1.1022,
+      "c": 1.104
+    },
+    {
+      "i": 26,
+      "o": 1.104,
+      "h": 1.106,
+      "l": 1.103,
+      "c": 1.105
+    },
+    {
+      "i": 27,
+      "o": 1.105,
+      "h": 1.1064,
+      "l": 1.1044,
+      "c": 1.106
+    },
+    {
+      "i": 28,
+      "o": 1.106,
+      "h": 1.1068,
+      "l": 1.1042,
+      "c": 1.105
+    },
+    {
+      "i": 29,
+      "o": 1.105,
+      "h": 1.106,
+      "l": 1.103,
+      "c": 1.104
+    }
+  ],
+  "entry": 1.0942
+}

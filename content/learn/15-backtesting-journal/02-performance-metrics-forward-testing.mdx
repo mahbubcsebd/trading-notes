@@ -1,0 +1,193 @@
+---
+title: "Performance Metrics ও Forward Testing: ফল মাপা ও যাচাই"
+description: "Win rate, expectancy, profit factor ও max drawdown কীভাবে হিসাব করবেন, আর backtest-এর ফল forward test-এ কেন মিলিয়ে দেখতে হয় — দুটি equity chart সহ।"
+level: intermediate
+tags: [metrics, expectancy, profit-factor, drawdown, forward-testing]
+instruments: [ACCOUNT]
+timeframes: [per-trade]
+status: done
+sources:
+  - type: blog
+    title: "Backtesting - Investopedia"
+    url: "https://www.investopedia.com/terms/b/backtesting.asp"
+updated: 2026-11-05
+---
+
+# Performance Metrics ও Forward Testing: ফল মাপা ও যাচাই
+
+পরীক্ষার খাতায় শুধু "পাস" লেখা থাকলে কিছু বোঝা যায় না; নম্বর, বিষয়ওয়ারি ফল, আগের পরীক্ষার তুলনা দেখতে হয়। Backtest-এর ফলেও তাই: শুধু "লাভ হয়েছে" যথেষ্ট নয়।
+
+## এই লেখা পড়ে আপনি যা পারবেন
+
+- **Win rate, expectancy, profit factor ও max drawdown** হিসাব করতে পারবেন।
+- **Forward testing** কী ও কেন, তা বুঝবেন।
+- Backtest ও forward ফলের **ফাঁক** পড়তে পারবেন।
+
+## কেন এটি জরুরি
+
+- **Win rate একা বিভ্রান্ত করে।** ৪৫% জিতেও লাভ সম্ভব, ৭০% জিতেও লোকসান।
+- **Drawdown জানা না থাকলে ধৈর্য থাকে না।** আগে থেকে জানলে খারাপ সময়ে plan ছাড়বেন না।
+- **Backtest-এর আস্থা forward test দিয়ে আসে।**
+
+পূর্বশর্ত: [How to Backtest](/bn/learn/15-backtesting-journal/01-how-to-backtest) এবং [Expectancy](/bn/learn/08-risk-management/07-expectancy)।
+
+## মূল মাপকাঠি
+
+**Performance metrics হলো trade-এর তালিকা থেকে বের করা কয়েকটি সংখ্যা, যা বলে নিয়মটি কতটা লাভজনক ও কতটা ঝুঁকিপূর্ণ।**
+
+| মাপকাঠি             | হিসাব                                          | ৪০টি trade-এর উদাহরণ (কাল্পনিক)  |
+| :------------------ | :--------------------------------------------- | :------------------------------- |
+| Win rate            | জেতা trade ÷ মোট trade                         | 18 ÷ 40 = 45%                    |
+| গড় জেতা / গড় হারা | R হিসেবে                                       | +2R / -1R                        |
+| Expectancy          | (win rate × গড় জেতা) − (loss rate × গড় হারা) | (0.45 × 2) − (0.55 × 1) = +0.35R |
+| Profit factor       | মোট লাভ ÷ মোট লোকসান                           | 36R ÷ 22R ≈ 1.64                 |
+| Max drawdown        | সর্বোচ্চ শীর্ষ থেকে নিচে নামা (%)              | প্রায় 2.0% (এই sequence-এ)      |
+| সর্বোচ্চ টানা loss  | সবচেয়ে লম্বা হারের ধারা                       | 2টি                              |
+
+Expectancy হলো প্রতি trade-এ গড়ে কত R আশা করা যায়। ধনাত্মক হলে নিয়ম টিকে থাকার সম্ভাবনা আছে, তবে sample ছোট হলে সংখ্যা অস্থির।
+
+## Chart-এ কেমন দেখায়
+
+<Chart
+  id="metrics-backtest-equity-01"
+  height={440}
+  caption="ACCOUNT, প্রতি trade (শিক্ষামূলক, কাল্পনিক উদাহরণ) — ৪০টি trade, 1% ঝুঁকি: ১৮টি +2R, ২২টি -1R। নিট +14R, expectancy +0.35R। 10,000 থেকে প্রায় 11,449।"
+/>
+
+Win rate ৪৫% হলেও curve ওপরে উঠেছে, কারণ জেতা trade হারা trade-এর দ্বিগুণ।
+
+## ধাপে ধাপে: metrics বের করা
+
+<Steps>
+
+### ধাপ ১: সব trade R-এ লিখুন
+
+টাকা নয়, R। যেমন: +2, -1, -1, +2। তুলনা সহজ হয়।
+
+### ধাপ ২: জেতা ও হারা গুনুন
+
+Win rate = জেতা ÷ মোট। এটি একা কিছু বলে না, পরের ধাপের সঙ্গে দেখুন।
+
+### ধাপ ৩: গড় জেতা ও গড় হারা
+
+R-এ। তারপর expectancy সূত্রে বসান।
+
+### ধাপ ৪: Equity curve আঁকুন
+
+প্রতি trade শেষে account কত। শীর্ষ থেকে সবচেয়ে বড় পতনই max drawdown।
+
+### ধাপ ৫: Forward test চালান
+
+Backtest-এর পর নতুন, অদেখা বাজারে (demo বা ছোট ঝুঁকিতে live) একই নিয়মে নতুন trade। ফল পাশে রেখে মেলান।
+
+</Steps>
+
+## Forward testing কী
+
+**Forward testing হলো backtest-এ বেছে নেওয়া নিয়ম নতুন, অদেখা বাজারে চালিয়ে ফল দেখা।** এতে অতীত দেখে নিয়ম সাজানোর ভুল (overfitting) ধরা পড়ে।
+
+- **Demo account:** ঝুঁকিহীন, তবে execution আসল নয়।
+- **ছোট live:** ঝুঁকি ন্যূনতম, তবে আসল spread ও slippage সহ।
+
+## উদাহরণ ১: যখন কাজ করে (কাল্পনিক)
+
+- **Backtest:** ৪০টি trade, নিট +14R, max drawdown প্রায় 2%।
+- **Forward:** একই নিয়মে পরের কয়েক সপ্তাহে ১৫টি trade, নিট +4R।
+- **ফল:** গতি backtest-এর চেয়ে কম, কিন্তু একই দিকে।
+- **শিক্ষা:** দুই ফলের দিক একই হলে আস্থা বাড়ে। হুবহু মেলা প্রত্যাশা করবেন না।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়।)
+
+## উদাহরণ ২: যখন ব্যর্থ হয় (কাল্পনিক)
+
+<Chart
+  id="metrics-forward-equity-01"
+  height={380}
+  caption="ACCOUNT, প্রতি trade (শিক্ষামূলক, কাল্পনিক উদাহরণ) — একই নিয়মে ১৫টি forward trade: ৫টি জেতা, ১০টি হারা, নিট 0R। Backtest-এর +14R-এর তুলনায় সমতল।"
+/>
+
+- **কী ঘটল:** Backtest +14R, কিন্তু forward-এ ১৫টি trade-এ নিট 0R।
+- **কেন ব্যর্থ হতে পারে:** নিয়ম অতীতে overfit ছিল, বাজার বদলেছে, বা sample এখনো ছোট (১৫টি)।
+- **কী করবেন:** ঝুঁকি কমান, আরও trade সংগ্রহ করুন, আর backtest-এ গোপন bias খুঁজুন। তাড়াহুড়ো করে নিয়ম বদলাবেন না।
+- **শিক্ষা:** ফাঁক তদন্তের সংকেত, আতঙ্কের নয়।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়।)
+
+## সাধারণ ভুল
+
+| ভুল                     | কেন হয়                | কী করবেন                       |
+| :---------------------- | :--------------------- | :----------------------------- |
+| শুধু win rate দেখা      | সহজ ও আকর্ষণীয়        | expectancy ও profit factor-ও   |
+| Drawdown উপেক্ষা        | লাভেই নজর              | max drawdown ও টানা loss জানুন |
+| ছোট sample-এ সিদ্ধান্ত  | তাড়া                  | আরও trade, ভিন্ন সময়          |
+| Forward test বাদ দেওয়া | backtest-এ আত্মবিশ্বাস | অন্তত ছোট ঝুঁকিতে যাচাই        |
+| Forward-এ নিয়ম বদলানো  | ফল খারাপ দেখলে         | নতুন সংস্করণ, আবার forward     |
+
+## Pro tips
+
+<Callout type="tip">
+  Backtest-এর max drawdown জানা থাকলে live-এ তার দেড় থেকে দ্বিগুণ ধরে
+  মানসিকভাবে প্রস্তুত থাকুন। প্রকৃত drawdown প্রায়ই backtest-এর চেয়ে গভীর হয়
+  (সাধারণ নির্দেশনা, নিশ্চয়তা নয়)।
+</Callout>
+
+<Callout type="note">
+  এই পাঠের সংখ্যাগুলো কাল্পনিক। নিজের ডেটায় হিসাব করতে
+  [journal](/bn/learn/15-backtesting-journal/03-journal-template)-এর R কলাম
+  ব্যবহার করুন।
+</Callout>
+
+## কখন এটা কাজ করে না
+
+- **Trade-এর আকার অসম হলে:** R-এ মাপা সম্ভব না হলে তুলনা ভুল হতে পারে। প্রতিবার ঝুঁকি স্থির রাখুন।
+- **Sample খুব ছোট হলে:** সংখ্যাগুলো ভাগ্যের সঙ্গে আলাদা করা যায় না।
+- **বাজারের ধরন বদলালে:** পুরোনো metrics নতুন বাজারে প্রযোজ্য নয়।
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- Win rate একা যথেষ্ট নয়; expectancy, profit factor, max drawdown দেখুন।
+- সব trade R-এ লিখুন।
+- Forward test backtest-এর অতিরিক্ত আস্থা যাচাই।
+- ফাঁক হলে তদন্ত করুন, তাড়াহুড়ো নয়।
+
+</KeyTakeaways>
+
+## অনুশীলন
+
+আপনার ২০টি backtest trade R-এ লিখে win rate, গড় জেতা/হারা, expectancy ও সবচেয়ে লম্বা loss streak বের করুন।
+
+## কুইজ
+
+1. ৪০টির মধ্যে ১৮টি জিতলে win rate কত?
+2. Expectancy কী বলে?
+3. Forward test কেন দরকার?
+4. Forward ফল backtest-এর চেয়ে দুর্বল হলে প্রথমে কী করবেন?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** 18 ÷ 40 = 45%।
+
+**২.** প্রতি trade-এ গড়ে কত R আশা করা যায়।
+
+**৩.** অদেখা বাজারে নিয়ম টেকে কি না দেখতে, এবং overfitting ধরতে।
+
+**৪.** আরও ডেটা সংগ্রহ ও backtest-এ bias খোঁজা। নিয়ম বদলানোর তাড়াহুড়ো নয়।
+
+</details>
+
+## পরের ধাপ
+
+- আগে: [How to Backtest](/bn/learn/15-backtesting-journal/01-how-to-backtest)।
+- পরে: [Journal Template](/bn/learn/15-backtesting-journal/03-journal-template)।
+- সম্পর্কিত: [Drawdown Rules](/bn/learn/08-risk-management/04-drawdown-rules)।
+
+### সূত্র
+
+- <ExternalLink href="https://www.investopedia.com/terms/b/backtesting.asp">
+    Backtesting, Investopedia
+  </ExternalLink>
+
+<Disclaimer />

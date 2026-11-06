@@ -1,0 +1,198 @@
+---
+title: "Smart Money Concepts (SMC) and ICT Basics: Entry by Matching the Sequence"
+description: "How liquidity sweep, CHoCH, fair value gap and order block fit into one sequence; what SMC claims, what is not proven, and why an entry on an FVG without context fails, with two charts."
+level: advanced
+tags: [smc, ict, liquidity-sweep, choch, fvg, order-block]
+instruments: [EURUSD]
+timeframes: [H1]
+status: done
+sources:
+  - type: blog
+    title: "Market Structure - Investopedia"
+    url: "https://www.investopedia.com/terms/s/support.asp"
+updated: 2026-11-06
+---
+
+# Smart Money Concepts (SMC) and ICT Basics: Entry by Matching the Sequence
+
+After watching SMC videos, many people look for "smart money" in every gap and every wick. The result: signals everywhere, and confidence nowhere. In this lesson you will learn to arrange the SMC words in a **sequence**, and learn which claims are not proven.
+
+## What you will be able to do
+
+- **Define liquidity, sweep, CHoCH, FVG and order block.**
+- **Arrange the four into one entry sequence.**
+- **Recognize the mistake of using them without context.**
+- **State the limits** of SMC honestly.
+
+## Why it matters
+
+- **A working model for thinking about where stops pile up.** The idea from the [Liquidity and Stop Hunt](/en/learn/03-market-structure/04-liquidity-stop-hunts) lesson takes the shape of an entry here.
+- **If you learn the words, you can follow talk online,** but it is not right to take every claim as true.
+- **You get a clear invalidation.** The low of the sweep is the reason for the stop.
+
+Prerequisites: [Break of Structure](/en/learn/03-market-structure/03-break-of-structure) and [Premium and Discount](/en/learn/03-market-structure/06-premium-discount-zones).
+
+## What SMC is, and what it is not
+
+**Smart Money Concepts is a framework for reading price action that assumes big participants fill their orders from liquid places, so price goes first to areas where stops pile up, then turns.** ICT (Inner Circle Trader) is a popular line of teaching of this idea.
+
+To be honest:
+
+- This model is **reasonable as an explanation**, because many traders place stops in the same places.
+- But a claim such as "banks deliberately hunt your stop" is **not proven**. It is not assumed here.
+- Forex has no central volume, so you cannot "see big orders". We only read the behavior of price.
+- The result has to be measured with your own [backtest](/en/learn/15-backtesting-journal/01-how-to-backtest), not with anyone's claim.
+
+## Five terms
+
+| Term                 | Meaning                                                                                     | What to look for on the chart                      |
+| :------------------- | :------------------------------------------------------------------------------------------ | :------------------------------------------------- |
+| Liquidity            | where stops or pending orders are likely to be piled up                                     | clear swing highs/lows, equal highs/lows           |
+| Liquidity sweep      | price crossing that level with a wick and coming back                                       | a wick below the low, the body closing back inside |
+| CHoCH                | Change of Character: the first break against the established shape                          | a close above the last lower high in a downtrend   |
+| Fair Value Gap (FVG) | a gap across three candles where the high of the first and the low of the third do not meet | an empty part between candles in a fast move       |
+| Order block          | the area of the last opposite candle before the start of a big move                         | the last down candle just before the impulse       |
+
+## What it looks like on a chart
+
+<Chart
+  id="smc-sweep-choch-fvg-win-01"
+  height={460}
+  caption="EURUSD H1 (educational, imaginary example): a low sweep (wick to 1.0893), a CHoCH by breaking the last lower high at 1.0950, and an up move leaving an FVG. On the pullback, buy at 1.0950, stop below the sweep low at 1.0888, target 2R."
+/>
+
+Notice the sequence: **liquidity taken → structure change → entry on the pullback**. Only when all three match.
+
+## Step by step: the SMC sequence
+
+<Steps>
+
+### Step 1: The big picture and where the market is
+
+On the higher timeframe, is price in the premium or the discount part? If you are looking to buy, then in discount.
+
+### Step 2: Mark the liquidity
+
+A clear swing low or equal lows. Assume stops are piled up below it.
+
+### Step 3: Look for the sweep
+
+Did a wick go down and the body come back inside? Breaking the level alone is not enough. It must also **come back**.
+
+### Step 4: Wait for the CHoCH
+
+After the sweep, price must break the last lower high. If it does not, it is still a downtrend.
+
+### Step 5: The entry area
+
+A pullback to the FVG or order block made by the push. The entry is there, not in a hurry in the middle of the push.
+
+### Step 6: Stop and target
+
+The stop below the low of the sweep. The target is the next liquidity (the earlier high) or at least 2R. Following [Risk Reward](/en/learn/08-risk-management/03-risk-reward).
+
+</Steps>
+
+## Example 1: when it works (synthetic)
+
+- **What there was:** a downtrend, stops piled up below the low at 1.0910, the last lower high at 1.0950.
+- **While running:** price wicked to 1.0893 and came back (sweep), broke 1.0950 and rose (CHoCH), leaving an FVG. On the pullback, buy 1.0950, stop 1.0888, target 1.1074.
+- **Result:** the target was hit, +2R.
+- **Lesson:** entry after every step of the sequence matched. The reason for the stop was clear.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Example 2: when it fails (synthetic)
+
+<Chart
+  id="smc-fvg-no-context-fail-01"
+  height={440}
+  caption="EURUSD H1 (educational, imaginary example): in a bounce within a downtrend, an FVG forms. There is no sweep and no CHoCH. Buy on the pullback at 1.0952; the downtrend returned and touched the stop at 1.0920."
+/>
+
+- **What was visible:** a downtrend is running, and a small bounce made a gap. The trader thought of the gap as "demand" and bought.
+- **Result:** buy 1.0952, the stop at 1.0920 was hit, -1R.
+- **Why it failed:** no liquidity was taken, and no lower high was broken either. The structure was still down.
+- **Lesson:** an FVG alone is not a signal. Without context it is only a gap in the candles.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Common mistakes
+
+| Mistake                                   | Why it happens                | What to do                          |
+| :---------------------------------------- | :---------------------------- | :---------------------------------- |
+| Entering at every gap                     | There seem to be more signals | Want a sweep and a CHoCH first      |
+| Calling any level break a sweep           | Hurry                         | Wait until the body comes back      |
+| Not looking at the higher timeframe       | Addiction to the small chart  | Look at premium/discount first      |
+| Blind faith in an order block             | The teacher's presentation    | Check with your own backtest        |
+| Placing the stop exactly at the sweep low | Thinking "it's very close"    | A little gap below, with the spread |
+
+## Pro tips
+
+<Callout type="tip">
+  Start with only one sequence (sweep → CHoCH → pullback) and log 20 backtest
+  trades. If it does not work or is unclear, this line is not for you, and that
+  too is an important answer.
+</Callout>
+
+<Callout type="note">
+  The numbers and charts in this lesson are imaginary. In reality, not every
+  sweep is followed by a move the other way; after many sweeps price falls
+  further. That is why the stop is a must.
+</Callout>
+
+## When this does not work
+
+- **During big news:** price crosses all levels, and the sequence means nothing.
+- **In a range or an unclear market:** CHoCH gives wrong signals again and again.
+- **If you change the definitions as you like:** if you draw the order block differently each time, a backtest means nothing.
+- **In emotion:** if you bend the rules thinking "a sweep has surely happened this time".
+
+## Summary
+
+<KeyTakeaways>
+
+- The sequence: liquidity → sweep → CHoCH → pullback entry.
+- An FVG or order block alone is not a signal; context is needed.
+- "Smart money hunts stops" is not proven; use it as a model.
+- Your own backtest is the final judge.
+
+</KeyTakeaways>
+
+## Practice
+
+On your chart, find the last 10 swing lows. In how many did the full sequence of sweep and CHoCH match, and of those how many went in the expected direction? Write the numbers.
+
+## Quiz
+
+1. What is the difference between a sweep and an ordinary breakout?
+2. When can you call a CHoCH?
+3. Why is an FVG alone not enough?
+4. Which claim of SMC is not proven?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** In a sweep the wick crosses the level and the body comes back inside; in a breakout the body stays outside.
+
+**2.** When there is a close above the last lower high in a downtrend (the reverse for the opposite).
+
+**3.** Without a change of structure it is only a pause; in a downtrend the gap is filled and price falls again.
+
+**4.** A claim of specific intent, such as "banks deliberately hunt your stop".
+
+</details>
+
+## Next steps
+
+- Before: [Building a Plan](/en/learn/15-backtesting-journal/05-building-a-plan).
+- After: [Volume Profile and Market Profile](/en/learn/16-advanced/02-volume-profile-market-profile).
+- Related: [Fake Breakout](/en/learn/06-trend-chart-patterns/04-fake-breakout).
+
+### Sources
+
+- <ExternalLink href="https://www.investopedia.com/terms/s/support.asp">
+    Support and Resistance, Investopedia
+  </ExternalLink>
+
+<Disclaimer />

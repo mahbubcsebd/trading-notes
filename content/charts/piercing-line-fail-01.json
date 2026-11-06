@@ -1,0 +1,168 @@
+{
+  "id": "piercing-line-fail-01",
+  "title": {
+    "en": "Shallow Piercing Line Inside Strong Selling Momentum",
+    "bn": "শক্তিশালী selling momentum-এর ভেতরে অগভীর piercing line"
+  },
+  "symbol": "GBPUSD",
+  "timeframe": "D1",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bullish",
+  "outcome": "loss",
+  "tags": [
+    "piercing-line",
+    "candlestick",
+    "fail",
+    "momentum",
+    "pattern"
+  ],
+  "module": "patterns",
+  "lessonSlugs": [],
+  "caption": {
+    "en": "Illustrative synthetic GBPUSD D1: after five large bearish days with no support nearby, a green candle closes just past the middle of the prior red body. Bought at the close, the trade fails as the selling resumes.",
+    "bn": "শিক্ষামূলক কাল্পনিক GBPUSD D1: কাছে কোনো support নেই, টানা পাঁচটি বড় bearish দিনের পর একটি সবুজ candle আগের লাল body-র মাঝের সামান্য উপরে close করে। Close-এ buy, selling আবার শুরু হলে stop।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data, not a real market record.",
+    "bn": "শিক্ষামূলক কাল্পনিক ডেটা, বাস্তব মার্কেটের রেকর্ড নয়।"
+  },
+  "updatedAt": "2026-11-06T12:00:00Z",
+  "annotations": [
+    {
+      "type": "marker",
+      "i": 5,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Long red candle"
+    },
+    {
+      "type": "marker",
+      "i": 6,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Shallow piercing"
+    },
+    {
+      "type": "hline",
+      "price": 1.25764,
+      "label": "Entry (close)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.2522,
+      "label": "Stop",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.26852,
+      "label": "Target 2R",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candles 0-5 are large bearish candles: strong selling momentum. Candle 6 technically qualifies as a piercing line, but it closes only about 52% into candle 5's body, and there is no support beneath. Candle 7 turns down and the drop runs through the stop.",
+    "bn": "০-৫ নম্বর বড় bearish candle: শক্তিশালী selling momentum। ৬ নম্বর নিয়মমতো piercing line, কিন্তু ৫ নম্বরের body-র মাত্র প্রায় 52% পর্যন্ত close করে, আর নিচে কোনো support নেই। ৭ নম্বর নিচে ঘোরে, পতন stop ভেঙে এগোয়।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "A barely-50% piercing line against strong momentum is mostly a pause",
+      "bn": "শক্তিশালী momentum-এর বিপরীতে সবে-50% piercing line মূলত বিরতি"
+    }
+  ],
+  "entry": 1.25764,
+  "stopLoss": 1.2522,
+  "takeProfit": 1.26852,
+  "rr": "1:2.0",
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.285,
+      "h": 1.28569,
+      "l": 1.27974,
+      "c": 1.281
+    },
+    {
+      "i": 1,
+      "o": 1.281,
+      "h": 1.28191,
+      "l": 1.27464,
+      "c": 1.2755
+    },
+    {
+      "i": 2,
+      "o": 1.2755,
+      "h": 1.27609,
+      "l": 1.27119,
+      "c": 1.272
+    },
+    {
+      "i": 3,
+      "o": 1.272,
+      "h": 1.27282,
+      "l": 1.2643,
+      "c": 1.266
+    },
+    {
+      "i": 4,
+      "o": 1.266,
+      "h": 1.26696,
+      "l": 1.25946,
+      "c": 1.261
+    },
+    {
+      "i": 5,
+      "o": 1.261,
+      "h": 1.2615,
+      "l": 1.2538,
+      "c": 1.254
+    },
+    {
+      "i": 6,
+      "o": 1.254,
+      "h": 1.25794,
+      "l": 1.2528,
+      "c": 1.25764
+    },
+    {
+      "i": 7,
+      "o": 1.25764,
+      "h": 1.25824,
+      "l": 1.25464,
+      "c": 1.25504
+    },
+    {
+      "i": 8,
+      "o": 1.25504,
+      "h": 1.25589,
+      "l": 1.25032,
+      "c": 1.25154
+    },
+    {
+      "i": 9,
+      "o": 1.25154,
+      "h": 1.25236,
+      "l": 1.24587,
+      "c": 1.24754
+    },
+    {
+      "i": 10,
+      "o": 1.24754,
+      "h": 1.24892,
+      "l": 1.24713,
+      "c": 1.24854
+    },
+    {
+      "i": 11,
+      "o": 1.24854,
+      "h": 1.25036,
+      "l": 1.24263,
+      "c": 1.24404
+    }
+  ]
+}

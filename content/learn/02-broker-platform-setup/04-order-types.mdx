@@ -1,38 +1,192 @@
 ---
-title: "Order Types"
-description: "Market Order, Limit Order এবং Stop Order এর মধ্যে পার্থক্য কী এবং কখন কোনটি ব্যবহার করবেন?"
+title: "Order Types: Market, Limit, Stop ও সুরক্ষা-order"
+description: "Market, buy/sell limit, buy/sell stop, stop loss, take profit ও trailing stop কখন কোনটি, কীভাবে কাজ করে, আর limit ও stop order-এর সুবিধা-ঝুঁকি — দুটি chart সহ।"
 level: beginner
-tags: [orders, execution, platform]
-status: published
-updated: "2026-10-11"
+tags:
+  [order-types, market-order, limit-order, stop-order, stop-loss, take-profit]
+instruments: [EURUSD]
+timeframes: [H1]
+status: done
+sources:
+  - type: blog
+    title: "Order Types - Investopedia"
+    url: "https://www.investopedia.com/terms/o/order.asp"
+updated: 2026-11-05
 ---
 
-# Order Types: কীভাবে ট্রেড বসাবেন?
+# Order Types: Market, Limit, Stop ও সুরক্ষা-order
 
-ফরেক্স মার্কেটে আপনি বিভিন্ন উপায়ে ট্রেড ওপেন করতে পারেন। মূলত চার ধরণের অর্ডার সবচেয়ে বেশি ব্যবহৃত হয়।
+রেস্টুরেন্টে আপনি বলতে পারেন "যা আছে এখনই দিন" (market), বা "দাম এত হলে দেবেন" (limit)। Trading-এ order-এর ধরনও তাই ঠিক করে আপনি কখন, কোন দামে ঢুকবেন। ভুল ধরন বাছলে দিক ঠিক থাকলেও লাভ হারাবেন।
 
-## ১. Market Execution (মার্কেট অর্ডার)
-আপনি যদি বর্তমান মার্কেট প্রাইসেই সাথে সাথে ট্রেড ওপেন করতে চান, তবে Market Order ব্যবহার করবেন।
-- **Buy by Market:** বর্তমান Ask Price এ সাথে সাথে কেনা।
-- **Sell by Market:** বর্তমান Bid Price এ সাথে সাথে বিক্রি করা।
-- *ব্যবহার:* যখন আপনি চোখের সামনে ভালো কোনো সেটআপ দেখতে পান এবং সাথে সাথেই এন্ট্রি নিতে চান।
+## এই লেখা পড়ে আপনি যা পারবেন
 
-## ২. Limit Orders (লিমিট অর্ডার)
-আপনি যদি আশা করেন যে মার্কেট একটি নির্দিষ্ট প্রাইসে (যাতে বর্তমান প্রাইসের চেয়ে ভালো প্রাইস পাওয়া যায়) আসার পর রিভার্স করবে, তখন Limit Order ব্যবহার করা হয়।
-- **Buy Limit:** বর্তমান প্রাইসের **নিচে** কোনো লেভেলে Buy করার জন্য পেন্ডিং অর্ডার রাখা (সস্তায় কেনা)।
-- **Sell Limit:** বর্তমান প্রাইসের **উপরে** কোনো লেভেলে Sell করার জন্য পেন্ডিং অর্ডার রাখা (বেশি দামে বিক্রি করা)।
+- **ছয়টি প্রধান order** চিনতে পারবেন।
+- **Limit ও stop order**-এর পার্থক্য বলতে পারবেন।
+- **সুরক্ষা-order** (stop loss, take profit) বসাতে পারবেন।
+- **কোন পরিস্থিতিতে কোনটি**, বেছে নিতে পারবেন।
 
-## ৩. Stop Orders (স্টপ অর্ডার)
-ব্রেকআউট ট্রেডাররা সাধারণত এটি ব্যবহার করেন। আপনি যদি চান যে মার্কেট একটি নির্দিষ্ট লেভেল পার বা ব্রেক করার পরই ট্রেড ওপেন হোক।
-- **Buy Stop:** বর্তমান প্রাইসের **উপরে** কোনো লেভেলে Buy করার জন্য পেন্ডিং অর্ডার। (মার্কেট উপরের দিকে ব্রেকআউট করলে ট্রেড ওপেন হবে)।
-- **Sell Stop:** বর্তমান প্রাইসের **নিচে** কোনো লেভেলে Sell করার জন্য পেন্ডিং অর্ডার। (মার্কেট নিচের দিকে ব্রেকডাউন করলে ট্রেড ওপেন হবে)।
+## কেন এটি জরুরি
 
-## ৪. Stop Loss (SL) এবং Take Profit (TP)
-- **Stop Loss (SL):** আপনার ট্রেড যদি ভুল দিকে যায়, তবে কতটুকু লস মেনে নিয়ে আপনি ট্রেডটি স্বয়ংক্রিয়ভাবে ক্লোজ করে দিতে চান।
-- **Take Profit (TP):** আপনার ট্রেড প্রফিটে গেলে, কোন প্রাইস লেভেলে পৌঁছালে স্বয়ংক্রিয়ভাবে ট্রেডটি প্রফিট নিয়ে ক্লোজ হয়ে যাবে।
+- **Entry-র দাম ফল বদলায়।** [Slippage](/bn/learn/10-trade-management-execution/04-slippage-requote-spread-widening) ও R:R সবই এর ওপর।
+- **Stop ছাড়া trade বিপজ্জনক।** [Stop](/bn/learn/10-trade-management-execution/01-stop-loss-placement) ভুল জায়গা মানেই ঝুঁকির হিসাব বিগড়ে যাওয়া।
+- **Platform-এ ভুল বোতাম** আসল ক্ষতি ডেকে আনে।
+
+পূর্বশর্ত: [MT5 ও TradingView Setup](/bn/learn/02-broker-platform-setup/03-mt5-ar-tradingview-setup)।
+
+## Order কী
+
+**Order হলো broker-কে দেওয়া নির্দেশ: কী কিনবেন বা বেচবেন, কত, কোন শর্তে।**
+
+| Order      | কখন কার্যকর                      | দামের সাপেক্ষে অবস্থান |
+| :--------- | :------------------------------- | :--------------------- |
+| Market     | এখনই, বর্তমান দামে               | —                      |
+| Buy limit  | দাম নেমে নির্দিষ্ট স্তরে পৌঁছালে | বর্তমান দামের **নিচে** |
+| Sell limit | দাম উঠে নির্দিষ্ট স্তরে পৌঁছালে  | বর্তমান দামের **ওপরে** |
+| Buy stop   | দাম উঠে নির্দিষ্ট স্তর ছাড়ালে   | বর্তমান দামের **ওপরে** |
+| Sell stop  | দাম নেমে নির্দিষ্ট স্তর ছাড়ালে  | বর্তমান দামের **নিচে** |
+| Stop-limit | স্টপ ছুঁলে limit order সক্রিয়   | platform-ভেদে ভিন্ন    |
+
+**সংক্ষেপে:** Limit = ভালো দামে কেনা/বেচা (দামের বিপরীতে অপেক্ষা)। Stop = দাম একটি স্তর ছুঁলে গতির সঙ্গে ঢোকা।
+
+**সুরক্ষা-order:**
+
+- **Stop loss (SL):** ক্ষতি সীমিত করতে অবস্থান বন্ধ হওয়ার স্তর।
+- **Take profit (TP):** লাভ ধরে রাখার স্তর।
+- **Trailing stop:** দাম অনুকূলে গেলে stop আপনাআপনি সরে ([Trailing Stop](/bn/learn/10-trade-management-execution/03-trailing-stop))।
+
+## Chart-এ কেমন দেখায়
+
+<Chart
+  id="order-buy-limit-win-01"
+  height={440}
+  caption="EURUSD H1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — দাম 1.0950-এ, trader সেখানে কিনতে চান না। 1.0900-এ buy limit অপেক্ষা করে; দাম নেমে এসে fill হয়, trade target 1.0950 ছোঁয়।"
+/>
+
+Limit order নিজেই ভালো দামে ঢোকায়। কিন্তু দাম সেই স্তরে না এলে fill হয় না।
+
+## ধাপে ধাপে: order বাছা
+
+<Steps>
+
+### ধাপ ১: আপনার setup কী চায়?
+
+Pullback-এ ঢোকা (limit) নাকি breakout-এ ঢোকা (stop)?
+
+### ধাপ ২: দামের সাপেক্ষে অবস্থান দেখুন
+
+Buy limit নিচে, buy stop ওপরে। ভুল দিকে বসালে platform আপত্তি করে বা ভিন্ন আচরণ করে।
+
+### ধাপ ৩: Stop ও target বসান
+
+Order-এর সঙ্গে। [Risk Reward](/bn/learn/08-risk-management/03-risk-reward) অনুযায়ী ন্যূনতম অনুপাত।
+
+### ধাপ ৪: মেয়াদ ঠিক করুন
+
+আজ রাত পর্যন্ত, নাকি cancel না করা পর্যন্ত? পুরোনো pending order ভুলে গেলে বিপদ।
+
+### ধাপ ৫: Fill হলে plan ধরে থাকুন
+
+Order fill হওয়ার পরের নিয়ম আগে লেখা।
+
+</Steps>
+
+## উদাহরণ ১: যখন কাজ করে (কাল্পনিক)
+
+- **Setup:** Uptrend-এ pullback; দাম 1.0950, trader 1.0900-এর support-এ কিনতে চান।
+- **কাজ:** Buy limit 1.0900, stop 1.0875, target 1.0950।
+- **ফল:** দাম নেমে 1.0900-এ fill, তারপর ওঠে target ছুঁয়েছে। +2R।
+- **শিক্ষা:** Limit ভালো দামে ঢোকায় ও stop ছোট রাখে।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়।)
+
+## উদাহরণ ২: যখন ব্যর্থ হয় (কাল্পনিক)
+
+<Chart
+  id="order-buy-stop-fail-01"
+  height={440}
+  caption="EURUSD H1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — 1.0960-এ buy stop range high ভাঙলে চালু হয়। ভাঙন ক্ষণস্থায়ী, দাম range-এর ভেতরে ফিরে 1.0930-এর stop ছুঁয়েছে।"
+/>
+
+- **কী ঘটল:** Range-এর ওপরে buy stop; দাম সংক্ষিপ্ত ভেঙে ফিরে এল।
+- **ফল:** Fill হয়ে stop লেগেছে, -1R।
+- **কেন ব্যর্থ:** Stop order breakout হলে আপনাকে ঢোকায়, ভুয়া breakout-এও। কোনো ফিল্টার ছিল না।
+- **শিক্ষা:** Breakout order-এর সঙ্গে নিশ্চিতকরণের নিয়ম (যেমন close ও retest) রাখুন। ([Fake Breakout](/bn/learn/06-trend-chart-patterns/04-fake-breakout))
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়।)
+
+## সাধারণ ভুল
+
+| ভুল                                 | কেন হয়           | কী করবেন                            |
+| :---------------------------------- | :---------------- | :---------------------------------- |
+| Limit-কে stop-এর সঙ্গে গুলিয়ে ফেলা | নামের মিল         | "limit = নিচে কেনা" টেবিল মনে রাখুন |
+| Stop ছাড়া order                    | পরে বসাব ভাবা     | order-এর সঙ্গেই                     |
+| পুরোনো pending order ভুলে যাওয়া    | মেয়াদ ঠিক না করা | মেয়াদ বা cancel-এর নিয়ম           |
+| Stop order-এ নিশ্চিতকরণ না রাখা     | গতির আকর্ষণ       | close-এর অপেক্ষা                    |
+| খবরের আগে pending order রেখে দেওয়া | অন্য কাজে ব্যস্ত  | আগে cancel                          |
+
+## Pro tips
+
+<Callout type="tip">
+  খবরের আগে সব pending order cancel করার অভ্যাস করুন। খবরের লাফে order
+  অপ্রত্যাশিত দামে fill হতে পারে।
+</Callout>
+
+<Callout type="note">
+  Limit order-এ দাম আপনার স্তরে ঠিক পৌঁছে ফিরে গেলেও fill না-ও হতে পারে (queue ও
+  spread-এর কারণে)। Fill-এর নিশ্চয়তা নেই।
+</Callout>
+
+## কখন এটা কাজ করে না
+
+- **অতি-দ্রুত বাজারে:** Stop order আপনার স্তর থেকে দূরে fill হতে পারে (slippage)।
+- **Platform-ভেদে ভিন্ন সংজ্ঞা:** Stop-limit ও অন্যান্য ধরন platform অনুযায়ী আলাদা; নিজের platform-এর সহায়তা পড়ুন।
+- **সব broker সব order দেয় না:** বিশেষত OCO ও কিছু শর্তসাপেক্ষ order।
+
+## সারসংক্ষেপ
 
 <KeyTakeaways>
-- Market Order হলো সাথে সাথে এন্ট্রি নেওয়ার জন্য।
-- Limit Order হলো বর্তমান প্রাইসের চেয়ে ভালো বা সুবিধাজনক প্রাইসে (Pullback) এন্ট্রি নেওয়ার জন্য।
-- যেকোনো অর্ডার ওপেন করার সাথে সাথেই Stop Loss (SL) বসানো ট্রেডিংয়ের সবচেয়ে গুরুত্বপূর্ণ নিয়ম।
+
+- Market = এখনই; limit = ভালো দামে অপেক্ষা; stop = স্তর ছুঁলে ঢোকা।
+- Buy limit দামের নিচে, buy stop ওপরে।
+- Stop loss ও take profit order-এর সঙ্গেই।
+- Limit-এ fill নিশ্চিত নয়; stop-এ ভুয়া breakout সম্ভব।
+
 </KeyTakeaways>
+
+## অনুশীলন
+
+Demo-তে একটি buy limit ও একটি buy stop বসান (দামের নিচে ও ওপরে), উভয়ে ছোট lot ও stop সহ। কোনটি আগে fill হলো এবং কেন, লিখুন।
+
+## কুইজ
+
+1. Buy limit দামের নিচে না ওপরে?
+2. Stop order কেন ভুয়া breakout-এ ঢোকাতে পারে?
+3. Limit order-এর দুর্বলতা কী?
+4. খবরের আগে pending order নিয়ে কী করবেন?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** নিচে।
+
+**২.** কারণ এটি দাম স্তর ছুঁলেই ট্রিগার হয়, ভাঙন টিকবে কি না দেখে না।
+
+**৩.** দাম না এলে fill হয় না।
+
+**৪.** Cancel করবেন।
+
+</details>
+
+## পরের ধাপ
+
+- আগে: [MT5 ও TradingView Setup](/bn/learn/02-broker-platform-setup/03-mt5-ar-tradingview-setup)।
+- পরে: [Lot Size, Margin Call ও Stop-out](/bn/learn/02-broker-platform-setup/05-lot-size-margin-call-stop-out)।
+- সম্পর্কিত: [Breakout ও Retest](/bn/learn/09-price-action-entries-strategies/01-breakout-retest-pullback-entry)।
+
+### সূত্র
+
+- <ExternalLink href="https://www.investopedia.com/terms/o/order.asp">
+    Order, Investopedia
+  </ExternalLink>
+
+<Disclaimer />

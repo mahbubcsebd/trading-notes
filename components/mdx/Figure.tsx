@@ -1,9 +1,9 @@
-'use client';
+"use client";
 
-import Image from 'next/image';
-import { useState } from 'react';
-import { X, ZoomIn } from 'lucide-react';
-import { cn } from '@/lib/utils';
+import Image from "next/image";
+import { useEffect, useState } from "react";
+import { X, ZoomIn } from "lucide-react";
+import { cn } from "@/lib/utils";
 
 /**
  * @param {{
@@ -15,39 +15,58 @@ import { cn } from '@/lib/utils';
  *   className?: string,
  * }} props
  */
-export function Figure({ src, caption, width = 1200, height = 675, markers, className }) {
+export function Figure({
+  src,
+  caption,
+  width = 1200,
+  height = 675,
+  markers,
+  className,
+}) {
   const [open, setOpen] = useState(false);
+
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => e.key === "Escape" && setOpen(false);
+    document.addEventListener("keydown", onKey);
+    return () => document.removeEventListener("keydown", onKey);
+  }, [open]);
 
   return (
     <>
-      <figure className={cn('my-6 group relative', className)}>
-        <div className="relative overflow-hidden rounded-xl border border-border bg-panel cursor-zoom-in" onClick={() => setOpen(true)}>
+      <figure className={cn("group relative my-6", className)}>
+        <button
+          type="button"
+          className="border-border bg-panel relative block w-full cursor-zoom-in overflow-hidden rounded-xl border"
+          onClick={() => setOpen(true)}
+          aria-label={caption ? `Zoom: ${caption}` : "Zoom image"}
+        >
           <Image
             src={src}
-            alt={caption ?? ''}
+            alt={caption ?? ""}
             width={width}
             height={height}
-            className="w-full h-auto object-cover transition-transform duration-300 group-hover:scale-[1.01]"
+            className="h-auto w-full object-cover transition-transform duration-300 group-hover:scale-[1.01]"
             placeholder="blur"
             blurDataURL="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAYAAAAfFcSJAAAADUlEQVR42mNk+M9QDwADhgGAWjR9awAAAABJRU5ErkJggg=="
           />
-          <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity bg-background/20">
+          <div className="bg-background/20 absolute inset-0 flex items-center justify-center opacity-0 transition-opacity group-hover:opacity-100">
             <ZoomIn size={24} className="text-white drop-shadow-lg" />
           </div>
           {/* Numbered overlay markers */}
           {markers?.map((m, i) => (
             <span
               key={i}
-              className="absolute w-6 h-6 rounded-full bg-gold text-background text-xs font-bold flex items-center justify-center shadow-lg"
+              className="bg-gold text-background absolute flex h-6 w-6 items-center justify-center rounded-full text-xs font-bold shadow-lg"
               style={{ left: m.x, top: m.y }}
               aria-label={m.label}
             >
               {i + 1}
             </span>
           ))}
-        </div>
+        </button>
         {caption && (
-          <figcaption className="mt-2 text-center text-xs text-muted-foreground">
+          <figcaption className="text-muted-foreground mt-2 text-center text-xs">
             {caption}
           </figcaption>
         )}
@@ -56,29 +75,35 @@ export function Figure({ src, caption, width = 1200, height = 675, markers, clas
       {/* Lightbox */}
       {open && (
         <div
-          className="fixed inset-0 z-[100] bg-background/90 backdrop-blur-sm flex items-center justify-center p-4"
+          className="bg-background/90 fixed inset-0 z-[100] flex items-center justify-center p-4 backdrop-blur-sm"
           onClick={() => setOpen(false)}
           role="dialog"
           aria-modal="true"
-          aria-label={caption ?? 'Image lightbox'}
+          aria-label={caption ?? "Image lightbox"}
         >
           <button
-            className="absolute top-4 right-4 w-8 h-8 rounded-full bg-card border border-border flex items-center justify-center text-muted-foreground hover:text-foreground"
+            type="button"
+            className="bg-card border-border text-muted-foreground hover:text-foreground absolute top-4 right-4 flex h-8 w-8 items-center justify-center rounded-full border"
             onClick={() => setOpen(false)}
             aria-label="Close lightbox"
           >
             <X size={16} />
           </button>
-          <div className="max-w-5xl w-full" onClick={(e) => e.stopPropagation()}>
+          <div
+            className="w-full max-w-5xl"
+            onClick={(e) => e.stopPropagation()}
+          >
             <Image
               src={src}
-              alt={caption ?? ''}
+              alt={caption ?? ""}
               width={width}
               height={height}
-              className="w-full h-auto rounded-xl"
+              className="h-auto w-full rounded-xl"
             />
             {caption && (
-              <p className="mt-3 text-center text-sm text-muted-foreground">{caption}</p>
+              <p className="text-muted-foreground mt-3 text-center text-sm">
+                {caption}
+              </p>
             )}
           </div>
         </div>

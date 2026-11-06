@@ -1,19 +1,220 @@
 ---
-title: "Supply & Demand"
-description: "Order blocks ar supply/demand zones identify kora"
-level: beginner
-tags: []
-status: draft
-updated: 2026-10-10
+title: "Supply & Demand: বড় অর্ডারের zone চিনুন"
+description: "Supply ও demand zone কী, base ও impulse দেখে কীভাবে আঁকবেন, fresh zone কেন ভালো এবং বারবার টেস্ট হলে কী হয় — দুটি chart example সহ।"
+level: intermediate
+tags: [supply, demand, zone, base, impulse, fresh-zone]
+instruments: [EURUSD]
+timeframes: [H4]
+status: done
+sources:
+  - type: blog
+    title: "Supply and Demand Zones - Investopedia"
+    url: "https://www.investopedia.com/terms/s/supplyanddemand.asp"
+  - type: book
+    title: "Technical Analysis of the Financial Markets - John J. Murphy"
+    url: ""
+    note: "Support ও resistance অধ্যায়"
+updated: 2026-11-05
 ---
 
-# Supply & Demand
+# Supply & Demand: বড় অর্ডারের zone চিনুন
+
+Chart-এ ডজনখানেক support-resistance zone আঁকা, সব একরকম দেখায়। কোনটি দাম ঘুরিয়ে দেবে, আর কোনটি পাশ কাটিয়ে যাবে? উত্তরের একটি সূত্র: **দাম যে zone থেকে কত জোরে ছিটকে বেরিয়েছে।** জোরালো প্রস্থান মানে ওখানে বড় অর্ডার ছিল।
+
+## এই লেখা পড়ে আপনি যা পারবেন
+
+- Supply ও demand zone-এর অর্থ **বলতে পারবেন**।
+- **Base ও impulse** দেখে zone আঁকতে পারবেন।
+- Fresh আর tested zone-এর তফাত **ধরতে পারবেন**।
+- Zone-এ ফেরা দামে **entry, stop ও target** সাজাতে পারবেন।
+
+## কেন এটি জরুরি
+
+- **সব zone সমান নয়।** [Levels vs Zones](/bn/learn/05-support-resistance/01-levels-vs-zones) পাঠে zone আঁকা শিখেছেন। এখানে শিখবেন কোনগুলো বাছবেন।
+- **দূর থেকে আগে জায়গা ঠিক হয়।** Price আসার আগেই আপনার প্ল্যান তৈরি থাকে।
+- **Stop-এর স্থান পরিষ্কার।** Zone-এর বাইরে, আর zone ভাঙলে ধারণা বাতিল।
+
+পূর্বশর্ত: Levels vs Zones ও [Role Reversal](/bn/learn/05-support-resistance/02-role-reversal)।
+
+## Supply ও Demand কী
+
+**Demand zone হলো সেই এলাকা যেখান থেকে দাম জোরে উপরে উঠেছে, কারণ সেখানে ক্রেতার অর্ডার বিক্রেতার চেয়ে অনেক বেশি ছিল। Supply zone হলো সেই এলাকা যেখান থেকে দাম জোরে নেমেছে, কারণ বিক্রেতার অর্ডার বেশি ছিল।**
+
+ভাবুন একটি নিলামঘর। কেউ হঠাৎ অনেক বড় একটি কেনার অর্ডার দিলে বিক্রেতারা শেষ হয়ে যায়, দাম লাফিয়ে ওঠে। যে এলাকায় এই লাফের শুরু, সেটিই demand zone। কিছু অর্ডার তখনও বাকি থাকতে পারে, তাই দাম সেখানে ফিরলে আবার সাড়া দিতে পারে।
+
+Support ও demand-এর তফাত সূক্ষ্ম:
+
+| বিষয়       | Support / Resistance           | Demand / Supply              |
+| :---------- | :----------------------------- | :--------------------------- |
+| উৎস         | বারবার থেমে যাওয়া             | একটি জোরালো প্রস্থান         |
+| কতবার দরকার | কমপক্ষে ২-৩ touch              | একটি স্পষ্ট প্রস্থানই যথেষ্ট |
+| আকার        | দুই-তিন swing-এর wick-এর পরিসর | ছোট base candle-গুলোর পরিসর  |
+| শক্তি       | টেস্টে বাড়তেও পারে            | সাধারণত প্রতি টেস্টে কমে     |
+
+## Zone-এর গঠন: base ও impulse
+
+প্রতিটি supply-demand zone-এর দুটি অংশ:
+
+- **Base:** কয়েকটি ছোট candle, দাম সরু পরিসরে থেমে। এখানে বড় খেলোয়াড়রা অর্ডার জমায়।
+- **Impulse:** base থেকে বেরিয়ে একের পর এক বড় body-র candle, যেন দাম ছিটকে গেল।
+
+Zone আঁকা হয় **base-এর high থেকে low** পর্যন্ত। Impulse কতটা জোরালো তা zone-এর মান ঠিক করে।
+
+## Chart-এ কেমন দেখায়
+
+<Chart
+  id="demand-zone-fresh-01"
+  height={420}
+  caption="EURUSD H4 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — ৩-৫ নম্বর candle base (1.0758-1.0782), ৬-৮ নম্বর impulse উপরে, ১৩ নম্বরে দাম প্রথমবার ফিরে zone ছুঁয়ে ওঠে"
+/>
+
+Base-এর candle-গুলো ছোট আর পাশাপাশি। তার পরের তিনটি candle বড় body নিয়ে প্রায় কোনো pullback ছাড়া উঠেছে। এটিই **imbalance**: ক্রেতা এত বেশি যে বিক্রেতারা আর বাধা দিতে পারেনি।
+
+## ধাপে ধাপে: zone বাছার পদ্ধতি
+
+<Steps>
+
+### ধাপ ১: Impulse খুঁজুন
+
+বড় timeframe-এ (H4, D1) এমন জায়গা খুঁজুন যেখান থেকে দাম কয়েক candle-এ অনেক দূর গেছে। ছোট ঘোরাফেরা বাদ।
+
+### ধাপ ২: Impulse-এর আগের base চিহ্নিত করুন
+
+প্রস্থানের ঠিক আগের ছোট candle-এর গুচ্ছটি দেখুন। উপরের chart-এ ৩-৫ নম্বর।
+
+### ধাপ ৩: Zone আঁকুন
+
+Base-এর সর্বোচ্চ ও সর্বনিম্ন দামের মাঝে বাক্স টানুন। Demand হলে base-এর low থেকে high, supply হলে একইভাবে।
+
+### ধাপ ৪: মান যাচাই করুন
+
+তিনটি প্রশ্ন:
+
+- প্রস্থান কি জোরালো (বড় body, অল্প wick)?
+- Zone কি fresh, মানে দাম এখনো ফেরেনি?
+- Base কি সরু, মানে কয়েকটিই candle?
+
+তিনটিতে "হ্যাঁ" হলে zone শক্ত।
+
+### ধাপ ৫: দাম ফেরার অপেক্ষা করুন
+
+Zone-এর দিকে ছুটে যাবেন না। দাম এলে [Candle Context](/bn/learn/04-candlesticks/05-candle-context)-এর মতো একটি confirmation খুঁজুন, যেমন লম্বা wick বা engulfing।
+
+### ধাপ ৬: Entry, stop ও target
+
+Entry confirmation candle-এর high বা low ভাঙলে। Stop zone-এর বাইরে। Target পরের বিপরীত zone বা আগের swing। Stop-এর অন্তত দ্বিগুণ দূরে target না থাকলে trade ছাড়ুন।
+
+</Steps>
+
+## উদাহরণ ১: যখন কাজ করে (কাল্পনিক)
+
+উপরের chart-টিই দেখুন।
+
+- **কী দেখা যাচ্ছিল:** Base 1.0758-1.0782 থেকে ৩ candle-এ প্রায় 100 pip উঠেছে। দাম ফিরেছে প্রথমবার।
+- **সিদ্ধান্ত:** ১৩ নম্বর candle zone-এ 1.0764 পর্যন্ত নেমে লম্বা lower wick নিয়ে ওপরে close করেছে। ১৪ নম্বর candle তার high (1.0796) ভাঙল, buy trigger।
+- **Stop:** zone-এর নিচে 1.0752, ঝুঁকি প্রায় 44 pip।
+- **Target:** আগের high 1.0884, লাভ প্রায় 88 pip, অর্থাৎ ২ গুণ ঝুঁকি। বিস্তারিত [Risk/Reward Ratio](/bn/learn/08-risk-management/03-risk-reward) পাঠে।
+- **ফল:** দাম target পেরিয়ে আরও উঠল।
+- **শিক্ষা:** Zone fresh ছিল, প্রস্থান জোরালো, base সরু। তিনটি শর্তই মিলেছিল। যে zone আপনি আগে থেকে আঁকলেন, দাম সেখানেই এসে সাড়া দিল।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়, কোনো ফলই গ্যারান্টি নয়।)
+
+## উদাহরণ ২: যখন ফাঁদ হয় (কাল্পনিক)
+
+ভালো zone-ও বারবার টেস্ট হলে ক্লান্ত হয়।
+
+<Chart
+  id="supply-zone-tested-01"
+  height={420}
+  caption="EURUSD H4 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — supply zone (1.0936-1.0958) একবার টেস্টে কাজ করেছে; দ্বিতীয় টেস্টে ১৮ নম্বর candle ভেদ করে উপরে close করে"
+/>
+
+- **কী দেখা যাচ্ছিল:** Base 1.0936-1.0958 থেকে দাম ৪ candle-এ প্রায় 120 pip নেমেছে। প্রথম test (১২ নম্বর) zone ছুঁয়ে আবার নেমেছে।
+- **সিদ্ধান্ত:** দ্বিতীয়বার দাম ফিরল (১৬-১৭ নম্বর)। ১৭ নম্বর candle bearish, তার low (1.0924) ভাঙতেই sell, stop zone-এর ওপরে 1.0966, ঝুঁকি প্রায় 42 pip।
+- **কী হলো:** ১৮ নম্বর candle sell trigger করার পরই উপরে ছুটল, zone ভেদ করে 1.0972-এ close। Stop fill হলো।
+- **কেন ব্যর্থ:** প্রতিটি test zone-এর অপেক্ষমাণ অর্ডার খরচ করে। দ্বিতীয়বার সেখানে আর বিক্রেতা ছিল না যে দাম ঠেকাবে।
+- **শিক্ষা:** ক্ষতি ছিল পরিকল্পিত 42 pip। Fresh zone আর tested zone এক নয়: দ্বিতীয় test-এ ঝুঁকি বেশি, তাই position ছোট বা trade বাদ।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়।)
+
+## সাধারণ ভুল
+
+| ভুল                                         | কেন হয়                         | কী করবেন                                |
+| :------------------------------------------ | :------------------------------ | :-------------------------------------- |
+| প্রতিটি ছোট থামাকে zone ভাবা                | Chart-এ সব জায়গা সুযোগ মনে হয় | জোরালো impulse নেই, তাহলে zone নয়      |
+| Base-এর সঙ্গে impulse candle মিশিয়ে ফেলা   | Zone বড় বানিয়ে ধরার ঝোঁক      | শুধু ছোট base candle-গুলো ধরুন          |
+| বারবার টেস্ট হওয়া zone-এ trade             | "আগে কাজ করেছে"                 | Fresh zone অগ্রাধিকার, tested হলে সতর্ক |
+| Confirmation ছাড়া zone ছুঁতেই entry        | দাম ছেড়ে দেওয়ার ভয়           | Rejection candle ও trigger লাগবে        |
+| ছোট timeframe-এর zone বড় trend উপেক্ষা করে | কাছের chart-ই সব মনে হয়        | আগে বড় timeframe-এর দিক দেখুন          |
+
+## Pro tips
+
+<Callout type="tip">
+  যে impulse আগের swing high বা low ভেঙে বেরিয়েছে, সেই zone বিশেষভাবে শক্ত। দাম
+  ওই জায়গা থেকে শুধু ছোটেনি, গঠনও বদলে দিয়েছে। বিস্তারিত [Break of
+  Structure](/bn/learn/03-market-structure/03-break-of-structure) পাঠে।
+</Callout>
+
+<Callout type="tip">
+  একই এলাকায় পুরনো support-resistance zone আর নতুন supply-demand zone মিললে
+  জায়গাটি আরও গুরুত্বপূর্ণ। যত বেশি স্বতন্ত্র কারণ মেলে, তত ভালো।
+</Callout>
+
+<Callout type="warning">
+  Supply-demand "বড় খেলোয়াড়দের অর্ডার" ধারণা অনুমান, দেখা যায় না। Chart-এর
+  আচরণ থেকে সম্ভাবনা আঁচ করা হয়। Stop ছাড়া কোনো zone-এ trade নেবেন না।
+</Callout>
+
+## কখন এটা কাজ করে না
+
+- **বড় news আসার ঠিক আগে-পরে:** Data zone ও অর্ডারের ভারসাম্য উল্টে দিতে পারে।
+- **খুব জোরালো trend-এর বিপরীতে:** Trend-এ কাউন্টার zone দ্রুত ভেঙে যায়।
+- **Zone অনেকবার টেস্ট হলে:** ধাক্কা যত বাড়ে, বিশ্বাস তত কমে।
+- **Impulse দুর্বল হলে:** ধীরে ধীরে সরে যাওয়া দাম থেকে zone আঁকা অর্থহীন।
+
+## সারসংক্ষেপ
 
 <KeyTakeaways>
-- এই lesson টি এখনো লেখা হয়নি।
-- পরবর্তীতে বিস্তারিত যোগ করা হবে।
+
+- Demand ও supply zone আসে base থেকে জোরালো impulse-এর মাধ্যমে।
+- Zone আঁকুন base-এর high-low দিয়ে, impulse candle বাদ দিয়ে।
+- Fresh, সরু base ও জোরালো প্রস্থান: তিনটি মিললে zone শক্ত।
+- প্রতিটি test zone দুর্বল করে; দ্বিতীয়বার সতর্ক থাকুন।
+
 </KeyTakeaways>
 
-## Introduction
+## অনুশীলন
 
-*এই section টি draft আছে। শীঘ্রই বিস্তারিত content যোগ করা হবে।*
+TradingView-এ EUR/USD-এর H4 chart খুলুন। গত ৩ মাসে এমন তিনটি জায়গা খুঁজুন যেখান থেকে দাম দ্রুত দূরে গেছে। প্রতিটির base চিহ্নিত করুন, তারপর দেখুন দাম ফিরেছিল কি না আর ফিরলে কী হয়েছিল। Fresh আর tested zone আলাদা রঙে আঁকুন।
+
+## কুইজ
+
+1. Demand zone কীভাবে সাধারণ support থেকে আলাদা?
+2. Zone আঁকার সময় base না impulse candle ধরবেন?
+3. Fresh zone tested zone-এর চেয়ে ভালো কেন?
+4. তিনটি শর্ত বলুন যা zone শক্ত করে।
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** Demand একটি জোরালো প্রস্থান থেকে আসে, একাধিক touch লাগে না। Support বারবার থেমে যাওয়া থেকে আসে।
+
+**২.** Base। Impulse candle ধরলে zone অকারণে বড় হয়ে যায়, আর stop দূরে পড়ে।
+
+**৩.** প্রতিটি test zone-এর অপেক্ষমাণ অর্ডার খরচ করে। Fresh zone-এ অর্ডার পুরোটাই থাকে।
+
+**৪.** জোরালো প্রস্থান, fresh zone, সরু base।
+
+</details>
+
+## পরের ধাপ
+
+- আগে: [Role Reversal](/bn/learn/05-support-resistance/02-role-reversal)।
+- পরে: [Trendlines & Channels](/bn/learn/05-support-resistance/04-trendlines-channels)।
+- Stop নিয়ে বিস্তারিত: [Stop Loss Placement](/bn/learn/10-trade-management-execution/01-stop-loss-placement)।
+
+### সূত্র
+
+- [Supply and Demand, Investopedia](https://www.investopedia.com/terms/s/supplyanddemand.asp)
+
+<Disclaimer />

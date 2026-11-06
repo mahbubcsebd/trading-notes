@@ -1,3 +1,10 @@
 {
-  "title": "Trend Chart Patterns"
+  "title": "Trend Chart Patterns",
+  "pages": [
+    "00-overview",
+    "01-reversal-patterns",
+    "02-continuation-patterns",
+    "03-range-breakout",
+    "04-fake-breakout"
+  ]
 }

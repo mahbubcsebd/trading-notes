@@ -1,9 +1,12 @@
 {
   "title": "Market Structure",
   "pages": [
-    "01-trend-range-hhhl",
-    "02-break-of-structure",
-    "03-liquidity-stop-hunts",
-    "04-multi-timeframe-analysis"
+    "00-overview",
+    "01-swing-high-low",
+    "02-trend-range-hhhl",
+    "03-break-of-structure",
+    "04-liquidity-stop-hunts",
+    "05-multi-timeframe-analysis",
+    "06-premium-discount-zones"
   ]
 }

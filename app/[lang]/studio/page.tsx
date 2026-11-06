@@ -1,43 +1,60 @@
-import { notFound } from 'next/navigation';
+import Link from "next/link";
+import { notFound } from "next/navigation";
+import { PageHeader } from "@/components/layout/PageHeader";
+
+const TOOLS = [
+  {
+    href: "write",
+    title: "Article Editor",
+    desc: "MDX editor with live preview, image paste, frontmatter form",
+  },
+  {
+    href: "chart-lab",
+    title: "Chart Lab",
+    desc: "Manual candle drawing, annotations, CSV import, replay, export",
+  },
+] as const;
 
 // Studio is only accessible in development
-export default async function StudioPage({ params }: { params: { lang?: string } }) {
-  const { lang = 'bn' } = await params;
-  if (process.env.NODE_ENV !== 'development') {
-    notFound();
-  }
+export default async function StudioPage({
+  params,
+}: {
+  params: Promise<{ lang?: string }>;
+}) {
+  const { lang = "bn" } = await params;
+  if (process.env.NODE_ENV !== "development") notFound();
 
   return (
-    <div className="max-w-4xl mx-auto px-4 sm:px-6 py-12">
-      <div className="mb-8">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-yellow-500/10 border border-yellow-500/30 text-yellow-400 text-xs font-mono mb-4">
-          DEV ONLY
-        </div>
-        <h1 className="text-3xl font-bold text-foreground">Studio</h1>
-        <p className="text-muted-foreground mt-1">Authoring tools — development mode only</p>
+    <>
+      <PageHeader
+        eyebrow="Dev only"
+        title="Studio"
+        desc="Authoring tools, available in development mode only."
+      />
+      <div className="wrap py-12">
+        <ol className="border-line border-t">
+          {TOOLS.map((tool, i) => (
+            <li key={tool.href} className="border-line border-b">
+              <Link
+                href={`/${lang}/studio/${tool.href}`}
+                className="group hover:bg-bg2 flex items-baseline gap-6 px-2 py-6 transition-colors"
+              >
+                <span className="text-mute group-hover:text-gold w-8 shrink-0 font-mono text-sm tabular-nums">
+                  {String(i + 1).padStart(2, "0")}
+                </span>
+                <span className="min-w-0">
+                  <span className="font-display group-hover:text-gold block text-2xl transition-colors">
+                    {tool.title}
+                  </span>
+                  <span className="text-fg2 mt-1 block text-sm">
+                    {tool.desc}
+                  </span>
+                </span>
+              </Link>
+            </li>
+          ))}
+        </ol>
       </div>
-      <div className="grid gap-4">
-        <a
-          href={`/${lang}/studio/write`}
-          className="flex items-center gap-4 p-5 rounded-xl border border-border bg-card hover:border-gold/50 transition-all"
-        >
-          <span className="text-2xl">✍️</span>
-          <div>
-            <p className="font-semibold text-foreground">Article Editor</p>
-            <p className="text-sm text-muted-foreground">MDX editor with live preview, image paste, frontmatter form</p>
-          </div>
-        </a>
-        <a
-          href={`/${lang}/studio/chart-lab`}
-          className="flex items-center gap-4 p-5 rounded-xl border border-border bg-card hover:border-gold/50 transition-all"
-        >
-          <span className="text-2xl">📊</span>
-          <div>
-            <p className="font-semibold text-foreground">Chart Lab</p>
-            <p className="text-sm text-muted-foreground">Manual candle drawing, annotations, CSV import, replay, export</p>
-          </div>
-        </a>
-      </div>
-    </div>
+    </>
   );
 }

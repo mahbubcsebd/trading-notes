@@ -1,0 +1,281 @@
+{
+  "id": "long-legged-doji-win-01",
+  "title": {
+    "en": "Long-Legged Doji on a Retest of Broken Resistance",
+    "bn": "ভাঙা resistance-এর retest-এ long-legged doji"
+  },
+  "symbol": "USDJPY",
+  "timeframe": "H4",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bullish",
+  "outcome": "win",
+  "tags": [
+    "long-legged-doji",
+    "doji",
+    "candlestick",
+    "retest",
+    "trend",
+    "pattern"
+  ],
+  "module": "patterns",
+  "lessonSlugs": [],
+  "caption": {
+    "en": "Illustrative synthetic USDJPY H4: price breaks out of a range, pulls back to the old ceiling and prints a long-legged doji there. The next candle closes above the doji high, filling a buy stop in the trend direction. Price reaches the target under the swing high.",
+    "bn": "শিক্ষামূলক কাল্পনিক USDJPY H4: দাম range ভেঙে উপরে যায়, পুরোনো ceiling-এ ফিরে সেখানে একটি long-legged doji দেয়। পরের candle doji-র high-এর উপরে close করে, trend-এর দিকে buy stop fill হয়। দাম swing high-এর নিচের target পর্যন্ত যায়।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data, not a real market record.",
+    "bn": "শিক্ষামূলক কাল্পনিক ডেটা, বাস্তব মার্কেটের রেকর্ড নয়।"
+  },
+  "updatedAt": "2026-11-06T12:00:00Z",
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 149.438,
+      "label": "Old ceiling (now support)",
+      "color": "#3b82f6",
+      "style": "dashed"
+    },
+    {
+      "type": "marker",
+      "i": 7,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Breakout"
+    },
+    {
+      "type": "marker",
+      "i": 17,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Long-legged doji"
+    },
+    {
+      "type": "hline",
+      "price": 149.818,
+      "label": "Entry (high break)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 149.198,
+      "label": "Stop",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 150.865,
+      "label": "Target (under swing high)",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candles 0-6 range under a ceiling; candle 7 breaks out. Candles 13-16 pull back to the old ceiling, now support. Candle 17 is a long-legged doji: almost no body, long wicks both ways. Candle 18 closes above its high and fills the buy stop. The stop sits below the lower wick; price reaches the target just under the swing high (about 1.7R).",
+    "bn": "০-৬ নম্বর candle একটি ceiling-এর নিচে range; ৭ নম্বর তা ভাঙে। ১৩-১৬ নম্বর পুরোনো ceiling-এ ফেরে, যা এখন support। ১৭ নম্বর long-legged doji: body প্রায় নেই, দুই দিকে লম্বা wick। ১৮ নম্বর তার high-এর উপরে close করে buy stop fill করে। Stop নিচের wick-এর নিচে; দাম swing high-এর নিচের target পর্যন্ত যায়।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Trade the break of the doji's range in the trend direction",
+      "bn": "Trend-এর দিকে doji-র range ভাঙলে trade"
+    }
+  ],
+  "entry": 149.818,
+  "stopLoss": 149.198,
+  "takeProfit": 150.865,
+  "rr": "1:1.7",
+  "candles": [
+    {
+      "i": 0,
+      "o": 149.2,
+      "h": 149.363,
+      "l": 149.152,
+      "c": 149.3
+    },
+    {
+      "i": 1,
+      "o": 149.3,
+      "h": 149.367,
+      "l": 149.154,
+      "c": 149.22
+    },
+    {
+      "i": 2,
+      "o": 149.22,
+      "h": 149.406,
+      "l": 149.144,
+      "c": 149.34
+    },
+    {
+      "i": 3,
+      "o": 149.34,
+      "h": 149.377,
+      "l": 149.243,
+      "c": 149.28
+    },
+    {
+      "i": 4,
+      "o": 149.28,
+      "h": 149.418,
+      "l": 149.217,
+      "c": 149.37
+    },
+    {
+      "i": 5,
+      "o": 149.37,
+      "h": 149.418,
+      "l": 149.191,
+      "c": 149.27
+    },
+    {
+      "i": 6,
+      "o": 149.27,
+      "h": 149.388,
+      "l": 149.228,
+      "c": 149.35
+    },
+    {
+      "i": 7,
+      "o": 149.35,
+      "h": 149.758,
+      "l": 149.32,
+      "c": 149.718
+    },
+    {
+      "i": 8,
+      "o": 149.718,
+      "h": 150.109,
+      "l": 149.546,
+      "c": 150.018
+    },
+    {
+      "i": 9,
+      "o": 150.018,
+      "h": 150.415,
+      "l": 149.889,
+      "c": 150.298
+    },
+    {
+      "i": 10,
+      "o": 150.298,
+      "h": 150.344,
+      "l": 150.162,
+      "c": 150.218
+    },
+    {
+      "i": 11,
+      "o": 150.218,
+      "h": 150.646,
+      "l": 150.113,
+      "c": 150.518
+    },
+    {
+      "i": 12,
+      "o": 150.518,
+      "h": 150.895,
+      "l": 150.414,
+      "c": 150.778
+    },
+    {
+      "i": 13,
+      "o": 150.778,
+      "h": 150.871,
+      "l": 150.299,
+      "c": 150.478
+    },
+    {
+      "i": 14,
+      "o": 150.478,
+      "h": 150.663,
+      "l": 149.945,
+      "c": 150.128
+    },
+    {
+      "i": 15,
+      "o": 150.128,
+      "h": 150.314,
+      "l": 149.701,
+      "c": 149.828
+    },
+    {
+      "i": 16,
+      "o": 149.828,
+      "h": 149.868,
+      "l": 149.478,
+      "c": 149.518
+    },
+    {
+      "i": 17,
+      "o": 149.518,
+      "h": 149.798,
+      "l": 149.238,
+      "c": 149.528
+    },
+    {
+      "i": 18,
+      "o": 149.528,
+      "h": 149.898,
+      "l": 149.488,
+      "c": 149.868
+    },
+    {
+      "i": 19,
+      "o": 149.868,
+      "h": 150.112,
+      "l": 149.802,
+      "c": 150.048
+    },
+    {
+      "i": 20,
+      "o": 150.048,
+      "h": 150.088,
+      "l": 149.923,
+      "c": 149.968
+    },
+    {
+      "i": 21,
+      "o": 149.968,
+      "h": 150.264,
+      "l": 149.884,
+      "c": 150.208
+    },
+    {
+      "i": 22,
+      "o": 150.208,
+      "h": 150.433,
+      "l": 150.15,
+      "c": 150.368
+    },
+    {
+      "i": 23,
+      "o": 150.368,
+      "h": 150.397,
+      "l": 150.268,
+      "c": 150.308
+    },
+    {
+      "i": 24,
+      "o": 150.308,
+      "h": 150.582,
+      "l": 150.224,
+      "c": 150.528
+    },
+    {
+      "i": 25,
+      "o": 150.528,
+      "h": 150.762,
+      "l": 150.479,
+      "c": 150.708
+    },
+    {
+      "i": 26,
+      "o": 150.708,
+      "h": 150.895,
+      "l": 150.665,
+      "c": 150.848
+    }
+  ]
+}

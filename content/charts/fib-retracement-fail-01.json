@@ -1,0 +1,262 @@
+{
+  "id": "fib-retracement-fail-01",
+  "title": {
+    "en": "Fibonacci 61.8% Fails",
+    "bn": "Fibonacci 61.8% টিকল না"
+  },
+  "symbol": "EURUSD",
+  "timeframe": "H4",
+  "mode": "synthetic",
+  "type": "trade-setup",
+  "bias": "bullish",
+  "outcome": "loss",
+  "tags": [
+    "fibonacci",
+    "retracement",
+    "failed-level"
+  ],
+  "module": "05-support-resistance",
+  "lessonSlugs": [
+    "05-fibonacci-basics"
+  ],
+  "caption": {
+    "en": "Swing low (1.0700) to swing high (1.0880). Price falls with five strong bearish candles, touches 61.8% with a tiny bounce, then slices through 78.6% and the swing low.",
+    "bn": "Swing low (1.0700) থেকে swing high (1.0880)। পাঁচটি জোরালো bearish candle-এ দাম নামে, 61.8%-এ ছোট bounce দেয়, তারপর 78.6% ও swing low ভেদ করে চলে যায়।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data.",
+    "bn": "এটি শিক্ষামূলক কাল্পনিক ডেটা।"
+  },
+  "updatedAt": "2026-11-05T21:00:00Z",
+  "entry": 1.0775,
+  "stopLoss": 1.0732,
+  "rr": "loss",
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.076,
+      "h": 1.0766,
+      "l": 1.0736,
+      "c": 1.0742
+    },
+    {
+      "i": 1,
+      "o": 1.0742,
+      "h": 1.0748,
+      "l": 1.0712,
+      "c": 1.0718
+    },
+    {
+      "i": 2,
+      "o": 1.0718,
+      "h": 1.0724,
+      "l": 1.07,
+      "c": 1.0716
+    },
+    {
+      "i": 3,
+      "o": 1.0716,
+      "h": 1.0752,
+      "l": 1.0712,
+      "c": 1.0746
+    },
+    {
+      "i": 4,
+      "o": 1.0746,
+      "h": 1.0786,
+      "l": 1.0742,
+      "c": 1.078
+    },
+    {
+      "i": 5,
+      "o": 1.078,
+      "h": 1.0812,
+      "l": 1.0774,
+      "c": 1.0806
+    },
+    {
+      "i": 6,
+      "o": 1.0806,
+      "h": 1.0846,
+      "l": 1.0802,
+      "c": 1.084
+    },
+    {
+      "i": 7,
+      "o": 1.084,
+      "h": 1.088,
+      "l": 1.0836,
+      "c": 1.0868
+    },
+    {
+      "i": 8,
+      "o": 1.0868,
+      "h": 1.0872,
+      "l": 1.0838,
+      "c": 1.0844
+    },
+    {
+      "i": 9,
+      "o": 1.0844,
+      "h": 1.0848,
+      "l": 1.0816,
+      "c": 1.0822
+    },
+    {
+      "i": 10,
+      "o": 1.0822,
+      "h": 1.0826,
+      "l": 1.0798,
+      "c": 1.0804
+    },
+    {
+      "i": 11,
+      "o": 1.0804,
+      "h": 1.0808,
+      "l": 1.078,
+      "c": 1.0786
+    },
+    {
+      "i": 12,
+      "o": 1.0786,
+      "h": 1.079,
+      "l": 1.0762,
+      "c": 1.0768
+    },
+    {
+      "i": 13,
+      "o": 1.0768,
+      "h": 1.0774,
+      "l": 1.0758,
+      "c": 1.0772
+    },
+    {
+      "i": 14,
+      "o": 1.0772,
+      "h": 1.078,
+      "l": 1.0766,
+      "c": 1.0776
+    },
+    {
+      "i": 15,
+      "o": 1.0776,
+      "h": 1.0778,
+      "l": 1.0748,
+      "c": 1.0752
+    },
+    {
+      "i": 16,
+      "o": 1.0752,
+      "h": 1.0756,
+      "l": 1.0728,
+      "c": 1.0732
+    },
+    {
+      "i": 17,
+      "o": 1.0732,
+      "h": 1.0738,
+      "l": 1.0704,
+      "c": 1.071
+    },
+    {
+      "i": 18,
+      "o": 1.071,
+      "h": 1.0716,
+      "l": 1.069,
+      "c": 1.0694
+    },
+    {
+      "i": 19,
+      "o": 1.0694,
+      "h": 1.0702,
+      "l": 1.0682,
+      "c": 1.0688
+    }
+  ],
+  "annotations": [
+    {
+      "type": "trendline",
+      "from": {
+        "i": 2,
+        "price": 1.07
+      },
+      "to": {
+        "i": 7,
+        "price": 1.088
+      },
+      "label": "Impulse leg",
+      "color": "#38bdf8",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.0811,
+      "label": "Fib 0.382",
+      "color": "#a78bfa",
+      "style": "dotted"
+    },
+    {
+      "type": "hline",
+      "price": 1.079,
+      "label": "Fib 0.5",
+      "color": "#a78bfa",
+      "style": "dotted"
+    },
+    {
+      "type": "hline",
+      "price": 1.0769,
+      "label": "Fib 0.618",
+      "color": "#f5b301",
+      "style": "dotted"
+    },
+    {
+      "type": "hline",
+      "price": 1.0739,
+      "label": "Fib 0.786",
+      "color": "#a78bfa",
+      "style": "dotted"
+    },
+    {
+      "type": "marker",
+      "i": 2,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Swing low"
+    },
+    {
+      "type": "marker",
+      "i": 7,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Swing high"
+    },
+    {
+      "type": "marker",
+      "i": 13,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Weak bounce"
+    },
+    {
+      "type": "marker",
+      "i": 18,
+      "position": "belowBar",
+      "shape": "arrowDown",
+      "text": "Swing low broken"
+    },
+    {
+      "type": "hline",
+      "price": 1.0775,
+      "label": "Buy entry",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.0732,
+      "label": "Stop",
+      "color": "#ef4444",
+      "style": "dashed"
+    }
+  ]
+}

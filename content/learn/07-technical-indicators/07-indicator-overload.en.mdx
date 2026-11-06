@@ -1,0 +1,217 @@
+---
+title: "Indicator Overload: Fewer Tools, Clearer Decisions"
+description: "Why more indicators make decisions harder, which of the four types of indicator to keep, and a checklist for setting up a clean chart, with two versions of the same chart."
+level: beginner
+tags: [indicators, overload, price-action, chart-setup]
+instruments: [EURUSD]
+timeframes: [H4]
+status: done
+sources:
+  - type: book
+    title: "Technical Analysis of the Financial Markets - John J. Murphy"
+    url: ""
+    note: "Classification of indicators and the problem of repeated information"
+  - type: blog
+    title: "Technical Indicator - Investopedia"
+    url: "https://www.investopedia.com/terms/t/technicalindicator.asp"
+updated: 2026-11-06
+---
+
+# Indicator Overload: Fewer Tools, Clearer Decisions
+
+Five indicators, five opinions. Two say buy, two say sell, one says wait. In the end, what you do is not what the indicators said, but what you wanted. This lesson is about stopping that confusion.
+
+## What you will be able to do
+
+- **Sort** indicators into four groups.
+- Explain why many indicators **show the same information again and again**.
+- Pick **one tool per question** on a clean chart.
+- **Trim your own chart** to make decisions easier.
+
+## Why it matters
+
+- **All indicators are built from price.** A new line is not new information, just another form of the same information.
+- **With many tools you get the answer you want.** Out of five, it is easy to pick the one that says what you like.
+- **The candles get lost.** In a crowd of lines, price and structure are hard to see.
+
+Prerequisites: the [previous six lessons](/en/learn/07-technical-indicators/00-overview) of this chapter.
+
+## The four groups of indicators
+
+**Each indicator answers one of four types of question. If you keep two indicators for the same question, they usually say the same thing.**
+
+Think of a car dashboard. The speedometer, tachometer and fuel gauge answer three different questions. Fitting three speedometers does not help.
+
+| Group          | Question                    | Examples             | Lesson in this chapter                                                                                                    |
+| :------------- | :-------------------------- | :------------------- | :------------------------------------------------------------------------------------------------------------------------ |
+| **Trend**      | Which way is the direction? | Moving average       | [Lesson 1](/en/learn/07-technical-indicators/01-moving-averages-crossover)                                                |
+| **Momentum**   | Is speed rising or falling? | RSI, MACD            | [Lesson 2](/en/learn/07-technical-indicators/02-rsi-divergence), [3](/en/learn/07-technical-indicators/03-macd)           |
+| **Volatility** | How restless is the market? | ATR, Bollinger Bands | [Lesson 4](/en/learn/07-technical-indicators/04-atr-stop-size), [5](/en/learn/07-technical-indicators/05-bollinger-bands) |
+| **Volume**     | How is participation?       | Volume, VWAP         | [Lesson 6](/en/learn/07-technical-indicators/06-volume-vwap)                                                              |
+
+Rule: **at most one from each group, no more than three in total.** And price and structure come before all of them.
+
+## What it looks like on a chart: the crowd
+
+<Chart
+  id="indicator-overload-01"
+  height={460}
+  caption="EURUSD H4 (educational, synthetic example) — three EMAs, Bollinger Bands and RSI together. The candles are hidden in the crowd of lines and the signals contradict each other."
+/>
+
+What the five tools say at candle 62 (close 1.0948):
+
+| Tool                               | Price position              | Meaning |
+| :--------------------------------- | :-------------------------- | :------ |
+| EMA 9 (1.0950) and EMA 21 (1.0953) | Price below both            | Bearish |
+| EMA 50 (1.0945)                    | Price above it              | Bullish |
+| Bollinger middle line (1.0962)     | Price below                 | Bearish |
+| RSI 48.0                           | Below 50, between 30 and 70 | Neutral |
+| MACD histogram                     | Negative                    | Bearish |
+
+Let us count: three bearish, one bullish, one neutral. But every signal stands on the same price. Really there is one question: "Is price in the middle, not heading in any clear direction?"
+
+## The same chart, clean
+
+<Chart
+  id="indicator-clean-01"
+  height={440}
+  caption="EURUSD H4 (educational, synthetic example) — the same candles. Only EMA 50 (direction) and two swing levels. The decision question is now clear."
+/>
+
+On this chart:
+
+- **EMA 50** sets the direction: price is moving around it, so there is no clear trend.
+- **Swing high 1.0966 and swing low 1.0898** show the range.
+- Decision: price is in the middle of the range, so **no trade**. Wait for an edge or a breakout.
+
+## Step by step: trim your own chart
+
+<Steps>
+
+### Step 1: Remove all indicators
+
+Start with a bare candle chart. See what price and structure are saying.
+
+### Step 2: Ask yourself
+
+"What do I want to know right now?" Direction, speed, volatility or volume?
+
+### Step 3: One tool per question
+
+EMA 50 for direction, RSI for speed, ATR for the stop, and so on. No more than three in total.
+
+### Step 4: Write down the rules for each first
+
+When you will take a trade and when you will not. The decision is made from the written rules, not from looking at the chart.
+
+### Step 5: Remove it if it breaks the rule
+
+If an indicator has not changed a decision in a month, it is unnecessary.
+
+</Steps>
+
+## Example 1: when it works (synthetic)
+
+The decision from the clean chart:
+
+- **What you could see:** price in a 1.0898-1.0966 range, EMA 50 flat.
+- **Decision:** no trade. Wait for price to reach an edge or break out.
+- **Result:** a pointless entry was avoided.
+- **Lesson:** fewer tools mean fewer but clearer decisions; "doing nothing" is also a decision.
+
+(Synthetic educational example. This is not a real trade, and no result is guaranteed.)
+
+## Example 2: when it fails (synthetic)
+
+The crowded chart:
+
+- **What you could see:** five tools, three bearish, one bullish, one neutral.
+- **Decision:** the trader thought "most of them say sell" and sold.
+- **Why it was wrong:** five tools are not five independent opinions. They are all averages, deviations or differences of the same close. There is only one real piece of information: price is in the middle.
+- **Lesson:** "most indicators" is not a vote; it is repetition.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Common mistakes
+
+| Mistake                            | Why it happens              | What to do               |
+| :--------------------------------- | :-------------------------- | :----------------------- |
+| Two indicators from the same group | Trying to be "sure"         | One per group            |
+| Counting indicator votes           | Treating numbers as proof   | Decide by the question   |
+| Paid tools that come with signals  | Wanting an easy answer      | Write your own rules     |
+| Indicators instead of structure    | It seems easier             | Price first, tools after |
+| Changing tools often               | Blaming the tool for losses | Review your rules        |
+
+## Pro tips
+
+<Callout type="tip">
+  Every week, clear the chart and set it up again. Keep only the tools that
+  actually changed a decision.
+</Callout>
+
+<Callout type="tip">
+  Write down your decision: "what I saw, why, where the stop is." Indicators
+  help with the writing; the writing helps even more.
+</Callout>
+
+<Callout type="warning">
+  Stay away from signal-selling ads that say "always wins" or "guaranteed
+  profit". No indicator guarantees profit.
+</Callout>
+
+## When this does not work
+
+- **When you have no plan:** there is confusion even with few tools.
+- **The first day in a new market:** the same rules behave differently on another asset.
+- **Under stress:** you can break your rules even with a clean chart.
+- **Blind faith:** treating one tool as "everything" is also confusion.
+
+## Summary
+
+<KeyTakeaways>
+
+- Indicators fall into four groups: trend, momentum, volatility, volume.
+- At most one per group, no more than three in total.
+- Indicators repeat the same price; they are not independent votes.
+- Price and structure first, tools after.
+
+</KeyTakeaways>
+
+## Practice
+
+Remove all indicators from your current chart and take a screenshot. Then add one from each group (three at most). Write down which question each one answers.
+
+## Quiz
+
+1. How many groups can indicators be divided into?
+2. Why are five indicators not "five opinions"?
+3. What is the risk of keeping two indicators from the same group?
+4. Why is not taking a trade on a clean chart also a decision?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** Four: trend, momentum, volatility, volume.
+
+**2.** They are all built from the same price, so they show the same information in different forms.
+
+**3.** Most of the time they say the same thing and give a false feeling of certainty.
+
+**4.** Following your rules and saying "the conditions are not met now" means avoiding pointless risk.
+
+</details>
+
+## Next steps
+
+- Before: [Volume and VWAP](/en/learn/07-technical-indicators/06-volume-vwap).
+- Next: [Risk Management chapter](/en/learn/08-risk-management/01-risk-per-trade).
+- To go back: [Technical Indicators chapter](/en/learn/07-technical-indicators/00-overview).
+
+### Sources
+
+- <ExternalLink href="https://www.investopedia.com/terms/t/technicalindicator.asp">
+    Technical Indicator, Investopedia
+  </ExternalLink>
+
+<Disclaimer />

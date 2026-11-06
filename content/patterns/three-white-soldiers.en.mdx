@@ -1,42 +1,323 @@
 ---
-title: "Three White Soldiers"
-description: "A powerful 3-candle bullish continuation/reversal pattern with consecutive long green candles closing near their highs."
+title: "Three White Soldiers: three strong green candles in a row, a buyers' march"
+description: "How to spot three white soldiers, the advance block and stalled pattern warnings, why you wait for a pullback instead of chasing three big candles, and stop and target, with charts."
 type: bullish
-category: "Three White Soldiers"
-winrate: "74% - 78%"
-riskReward: "1:2.5 to 1:4"
-maxRisk: "1%"
-bestLocation: "Breakout from Consolidation / Demand Zone Reversal"
-chartId: "three-white-soldiers-01"
-tags: [bullish, pattern, candlestick]
+category: three-candle
+level: intermediate
+candleCount: 3
+signal: reversal
+chartId: three-white-soldiers-win-01
+tags: [pattern, candlestick, three-white-soldiers, three-candle, momentum]
+status: done
+sources:
+  - type: book
+    title: "Japanese Candlestick Charting Techniques - Steve Nison"
+    note: "Three advancing white soldiers, advance block, stalled pattern"
+  - type: blog
+    title: "Three White Soldiers - Investopedia"
+    url: "https://www.investopedia.com/terms/t/three_white_soldiers.asp"
+updated: 2026-11-06
 ---
 
-<div className="flex gap-6 items-end my-8 p-8 bg-zinc-950 border border-border/50 rounded-2xl w-max relative overflow-hidden">
-  <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:20px_20px]"></div>
-  <div className="relative z-10 flex gap-6">
-    <Candle color="bull" bodyH="h-10" topW="h-2" botW="h-2" offset="mt-14" />
-    <Candle color="bull" bodyH="h-12" topW="h-2" botW="h-2" offset="mt-8" />
-    <Candle color="bull" bodyH="h-14" topW="h-2" botW="h-2" offset="mt-2" />
-  </div>
-</div>
+Three big green candles in a row, each closing higher than the last. It feels like a train leaving the station, so you buy at the third candle's close. What you missed: each candle was smaller than the one before and the upper wicks were growing. The very next candle reversed. Three white soldiers picture strength, but a march of tired soldiers looks the same from a distance.
 
-## Market Psychology & Institutional Order Flow
-Complete, unchallenged institutional dominance. Three consecutive tall green candles opening within the prior body and closing near the highs show relentless buying pressure with zero supply available.
+## At a glance
 
-## 5 Strict Anatomy & Recognition Rules
-1. **Three Bullish Bars:** Three progressive green candles of consistent or expanding size.
-2. **Consecutive Higher Closes:** Each candle establishes a clear new session high.
-3. **Open Within Body:** Each candle opens inside the body of the previous bar.
-4. **Minimal Upper Wicks:** Less than 15% upper shadow, showing strong closing strength.
-5. **Volume Confirmation:** Healthy, sustained trading volume across all three bars.
+| Item          | Three White Soldiers                                                                                                           |
+| :------------ | :----------------------------------------------------------------------------------------------------------------------------- |
+| Type          | Bullish reversal or breakout momentum, three candles                                                                           |
+| Where to look | After a downtrend or base, at the moment a range breaks                                                                        |
+| Key features  | Three long bullish candles, each opening within or at the prior body's close, closing near its high, each close above the last |
+| Confirmation  | The three candles are the confirmation; afterwards, pullbacks hold the broken level                                            |
+| Stop          | Below the second candle's open (medium) or below the first candle's low (conservative)                                         |
+| Invalidation  | A close below the second candle's open                                                                                         |
+| Look-alikes   | Advance block (the tired form), stalled pattern, a run of [Marubozu](/en/patterns/marubozu) candles                            |
+| Opposite      | [Three Black Crows](/en/patterns/three-black-crows)                                                                            |
 
-## 3 Proven Trade Execution Strategies
-**Strategy 1 (First Pullback Entry - Recommended):** Wait for a shallow pullback to the high of Candle 2 or the 50% midpoint of Candle 3 to buy.
-**Strategy 2 (High Breakout Order):** Buy stop above Candle 3 high with Stop Loss below Candle 2 low.
-**Strategy 3 (Order Block Confirmation):** Drop to M15 to catch the Bullish Order Block formed by Candle 3.
+## What you will be able to do
 
-## Where It Works vs Where It Fails
-- ✅ **A+ High Probability Setups:** Breakouts from accumulation ranges, Daily support reversals, and rising volume.
-- ❌ **Low Probability Traps (AVOID):** Appearing deep inside severe overbought conditions near HTF resistance.
+- **Separate** real three white soldiers from an **advance block**.
+- **Enter on a pullback** instead of chasing three big candles.
+- **Choose** between two stop types knowing the difference.
 
-> ⚠️ **Pro Risk Management & Mindset Rule:** Avoid FOMO at the top of candle 3. The safest entry is always the first minor retest. Always limit risk to 1%–2% per trade and maintain a predefined Stop Loss.
+## Why it matters
+
+- **The clearest three-candle picture of momentum.** For three sessions buyers stay in control, closing higher each time.
+- **The biggest temptation to chase.** After three big candles price has already risen a lot; entering there means a huge stop and a poor R:R.
+- **The tired version looks the same.** Nison shows two warning forms: the advance block and the stalled pattern. Both look like soldiers but lean the other way.
+
+Prerequisites: the Marubozu page (linked in the table above) and [Range Breakout](/en/learn/06-trend-chart-patterns/03-range-breakout).
+
+## What are three white soldiers
+
+**Three white soldiers are three consecutive long bullish candles, each opening within or at the prior candle's body, closing near its own high, with each close higher than the last.** "White" comes from the white (bullish) candles on Japanese charts.
+
+Picture a column of soldiers advancing in three ranks. Each rank starts just behind the previous one and stops further ahead. Nobody falls back.
+
+<CandleDiagram
+  title="Soldiers vs advance block"
+  candles={[
+    { o: 40, h: 48.5, l: 39.5, c: 48, label: "1" },
+    { o: 48, h: 56.5, l: 47.5, c: 56, label: "2" },
+    { o: 56, h: 64.5, l: 55.5, c: 64, label: "3", note: "equal strength" },
+    { o: 50, h: 52, l: 49, c: 51, dim: true },
+    { o: 40, h: 49, l: 39.5, c: 48.5, label: "1" },
+    { o: 48.5, h: 56, l: 48, c: 53.5, label: "2" },
+    { o: 53.5, h: 60, l: 53, c: 55, label: "3", note: "small body, long wick" },
+  ]}
+  caption="Left: real soldiers with equally large bodies and small wicks. Right: an advance block, with bodies shrinking and upper wicks growing."
+/>
+
+### Identification rules
+
+| Rule                                              | Required?          | Why                                                          |
+| :------------------------------------------------ | :----------------- | :----------------------------------------------------------- |
+| Three consecutive long bullish candles            | Yes                | These are the "three soldiers"                               |
+| Each close above the previous one                 | Yes                | Steady progress                                              |
+| Each closes near its high (small upper wick)      | Yes                | A long upper wick means sellers above                        |
+| Each opens within or at the prior body's close    | Yes                | In Forex the open is usually at the prior close              |
+| Bodies not shrinking                              | Yes                | Shrinking bodies make it an advance block or stalled pattern |
+| A downtrend or base before it, and a level broken | No (but important) | At the end of a long rally the same shape can be exhaustion  |
+
+## Strong vs weak three white soldiers
+
+<DiagramRow>
+  <CandleDiagram
+    title="Strong"
+    verdict="good"
+    verdictLabel="tradeable"
+    candles={[
+      { o: 46, h: 48, l: 44, c: 45, dim: true },
+      { o: 45, h: 47, l: 43.5, c: 46, dim: true },
+      { o: 46, h: 53.5, l: 45.5, c: 53 },
+      { o: 53, h: 60.5, l: 52.5, c: 60 },
+      { o: 60, h: 67.5, l: 59.5, c: 67, label: "out of a base" },
+    ]}
+    levels={[{ price: 48, label: "base high", tone: "resistance" }]}
+    caption="Three equally large candles after a flat base, breaking the base high."
+  />
+  <CandleDiagram
+    title="Weak (advance block)"
+    verdict="bad"
+    verdictLabel="avoid"
+    candles={[
+      { o: 40, h: 49, l: 39.5, c: 48.5 },
+      { o: 48.5, h: 56, l: 48, c: 53.5 },
+      { o: 53.5, h: 61, l: 53, c: 55, label: "wick at the level" },
+    ]}
+    levels={[{ price: 60, label: "old high", tone: "resistance" }]}
+    caption="Bodies shrink and upper wicks grow; the third touches the old high and closes far below it."
+  />
+</DiagramRow>
+
+| Quality check    | Strong                             | Weak                               |
+| :--------------- | :--------------------------------- | :--------------------------------- |
+| Body size        | All three about equal or growing   | Shrinking (advance block)          |
+| Upper wicks      | Small on all three                 | Getting longer                     |
+| What came before | A downtrend or flat base           | Already a long rally               |
+| Location         | Breaking a level, open space ahead | Right at an old high or resistance |
+
+### Same look, different meaning
+
+| Pattern                  | Shape                                                      | Meaning                             |
+| :----------------------- | :--------------------------------------------------------- | :---------------------------------- |
+| **Three White Soldiers** | Three equally large green candles, small wicks             | Strong momentum                     |
+| **Advance Block**        | Three green candles, bodies shrinking, upper wicks growing | Nison: buyers are tiring; a warning |
+| **Stalled Pattern**      | Two large green candles, the third small (often star-like) | Nison: momentum has stalled         |
+| **Marubozu**             | One large, wickless candle                                 | One candle of momentum              |
+
+## The story inside the candle
+
+One common interpretation of three white soldiers after a base:
+
+1. **First soldier: buyers try to break the base.** A big green candle closing near its high.
+2. **Second soldier: the effort continues.** Starting from the prior close and going higher. Shorts begin to exit.
+3. **Third soldier: confirmed.** Another higher close with no long wick. Sellers could not push price back once in three candles.
+
+But when bodies shrink and wicks grow, the story changes: at each new high, sellers push back more.
+
+<Callout type="note">
+  This is a common interpretation, not a proven fact. A chart does not show who
+  bought or sold.
+</Callout>
+
+## Where it works and where it does not
+
+<Compare
+  leftLabel="Where three white soldiers carry weight"
+  rightLabel="Where soldiers are often a trap"
+  left="- After a long downtrend or a flat base
+- Breaking out of a range or level
+- With three bodies of about equal size and small wicks
+- With open space ahead to the next level"
+  right="- After an already long rally
+- Right at an old high or resistance
+- With shrinking bodies and growing upper wicks (advance block)
+- When entering in a hurry at the third close"
+/>
+
+## Step by step: trading three white soldiers
+
+<Steps>
+
+### Step 1: Context first
+
+Was there a downtrend or base before? Did the soldiers break a level? How far is the next resistance ahead?
+
+### Step 2: Wait for all three candles to close
+
+The third candle can grow a long upper wick in its last minute. Once closed, measure the bodies and wicks.
+
+### Step 3: Check for an advance block
+
+Write down the size of the three bodies. Shrinking? Upper wicks growing? If yes, this is not soldiers but a warning.
+
+### Step 4: Entry type
+
+| Entry                                       | Where                                     | Pro                      | Con                           |
+| :------------------------------------------ | :---------------------------------------- | :----------------------- | :---------------------------- |
+| **50% retest of the third body** (standard) | Buy limit at the middle of the third body | Smaller stop, better R:R | Missed if price never returns |
+| **Retest of the broken level**              | Buy limit at the level the soldiers broke | The best price           | Often never comes             |
+| **Third close**                             | Buy as the third candle closes            | Never missed             | Huge stop; this is chasing    |
+
+### Step 5: Place the stop
+
+**Medium:** below the second soldier's open. **Conservative:** below the first soldier's low (much wider). Either way, add the [spread](/en/learn/01-foundations/04-spread-commission-swap) and a buffer.
+
+### Step 6: Size and target
+
+[Position size](/en/learn/08-risk-management/02-position-sizing) from the entry-to-stop distance, risking no more than 1%. Target before the next resistance, with a [risk reward](/en/learn/08-risk-management/03-risk-reward) of at least 1:1.5.
+
+### Step 7: Manage
+
+A close below the second soldier's open means momentum has broken: get out. If the trend runs, consider a [trailing stop](/en/learn/10-trade-management-execution/03-trailing-stop).
+
+</Steps>
+
+### Pre-trade checklist
+
+<Checklist
+  id="pattern-three-white-soldiers-pretrade-en"
+  items={[
+    "Was there a downtrend or base before, and did the soldiers break a level?",
+    "Does the shape pass the rules (three long green candles, small wicks, bodies not shrinking)?",
+    "Have all three candles closed, and is the entry on a pullback rather than a chase?",
+    "Is the risk reward to the next resistance at least 1:1.5?",
+    "Is there no higher-timeframe level right ahead?",
+  ]}
+/>
+
+If any box stays empty, skip the trade.
+
+## Example 1: when it works (illustrative)
+
+<Chart
+  id="three-white-soldiers-win-01"
+  height={420}
+  caption="GBPUSD H4 (illustrative, synthetic) — three white soldiers out of a flat base; entry on a pullback to 50% of the third body."
+/>
+
+- **What was visible:** Candles 0-3 fell from 1.2700, and candles 4-11 formed a flat base from about 1.2613 to 1.2636.
+- **The soldiers:** Candle 12 ran 1.2626 to 1.2654, candle 13 1.2654 to 1.2688, candle 14 1.2688 to 1.2720. Bodies of 28, 34 and 32 pips, each with an upper wick of only 2 pips. The 1.2636 base high was left well behind.
+- **Decision:** No chase: buy limit at 1.2704 (50% of the third body). Stop 1.2650 (below the second soldier's open): 54 pips of risk. Target 1.2812 (2R).
+- **Result:** Candle 15 paused and candle 16 touched 1.2704, filling the order. Candle 26 reached the target.
+- **Lesson:** Equally strong soldiers out of a base, and a patient entry. Buying the third close would have made the stop about one and a half times larger.
+
+<TradeSetup
+  direction="long"
+  pair="GBPUSD"
+  entry={1.2704}
+  stop={1.265}
+  target={1.2812}
+/>
+
+(Illustrative example, not a real trade. The trend does not always continue after three white soldiers, and no result is guaranteed.)
+
+## Example 2: when it is a trap (illustrative)
+
+<Chart
+  id="three-white-soldiers-fail-01"
+  height={420}
+  caption="XAUUSD H4 (illustrative, synthetic) — an advance block at an old high; bought at the third close, then stopped out."
+/>
+
+- **What was visible:** Candle 5 left an old high near 2387. Candles 6-10 fell.
+- **The "soldiers":** Candle 11 had a $14 body, candle 12 $9 (with a $4 upper wick), candle 13 $4 (with a $13 upper wick up to the old high). Bodies shrinking, wicks growing.
+- **The wrong decision:** "Three green candles!" Buy at the third close at 2375.05, stop 2345.05 (below the first candle): $30 of risk, target 2435.05.
+- **What happened:** Candle 14 reversed lower and candle 16 broke the stop.
+- **Why it failed:** This was an advance block, not real soldiers, and right at the old high. The second, third and fifth checklist boxes would have filtered it out.
+
+**Lesson:** Shrinking bodies and growing upper wicks turn soldiers into an advance block. Because the stop was set in advance, the loss stayed at 1R.
+
+## Common mistakes
+
+| Mistake                                    | Why it happens                 | What to do instead                                   |
+| :----------------------------------------- | :----------------------------- | :--------------------------------------------------- |
+| Buying the third close in a hurry          | Fear of missing out            | A limit at 50% of the third body or the broken level |
+| Calling an advance block soldiers          | Not measuring bodies and wicks | Write down and compare the three bodies and wicks    |
+| Buying soldiers at the end of a long rally | Ignoring context               | Check for a base or downtrend before                 |
+| Stop at the third candle's low             | Wanting a small stop           | Below the second soldier's open                      |
+
+## Pro tips
+
+<Callout type="tip">
+  The first pullback after the soldiers often gives the best entry, because
+  momentum is proven and price has come back a little. If the pullback goes
+  below 50% of the third body and reaches the second soldier's open, momentum
+  has weakened.
+</Callout>
+
+<Callout type="warning">
+  Do not accept numbers like "price rises X% after three white soldiers" without
+  checking. Figures from stock research do not carry over to Forex directly.
+  Your own backtest is the only number you can trust.
+</Callout>
+
+## Summary
+
+<KeyTakeaways>
+
+- Three white soldiers = three consecutive long green candles, each closing higher, near its high, with small wicks.
+- Shrinking bodies and growing upper wicks make it an advance block: a warning, not a buy signal.
+- Most meaningful after a base or downtrend when a level breaks; at the end of a long rally it can be exhaustion.
+- Do not chase the third close: enter at 50% of the third body or the broken level, stop below the second soldier's open.
+
+</KeyTakeaways>
+
+## Practice and your own backtest
+
+Open GBPUSD H4 or XAUUSD H4 in TradingView. Find at least 20 runs of three green candles. Log one row each:
+
+| Date | Base or rally before? | Three bodies (pips or $) | Advance block? | 50% retest came? | Result (R) |
+| :--- | :-------------------- | :----------------------- | :------------- | :--------------- | :--------- |
+|      |                       |                          |                |                  |            |
+
+Then split into "soldiers" and "advance block" and see what price did over the next 10 candles. Do not draw conclusions from fewer than 30 samples.
+
+## Quiz
+
+1. What is the difference between three white soldiers and an advance block?
+2. Why is entering at the third close after three big green candles risky?
+3. Where do the soldiers open in Forex?
+4. Which checklist boxes would have filtered out the trade in Example 2?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** In soldiers the three bodies stay about equal or grow, with small wicks. In an advance block the bodies shrink and the upper wicks grow.
+
+**2.** Price has already risen a lot; the stop is far away, the R:R is poor, and the first pullback puts pressure on the trade.
+
+**3.** Usually at the previous candle's close, because a 24-hour market rarely gaps. That is how Nison's "opens within the prior body" rule is met in Forex.
+
+**4.** The second box (bodies were shrinking), the third box (chasing the third close) and the fifth box (the old high right ahead).
+
+</details>
+
+## Next steps
+
+- Before this: [Marubozu](/en/patterns/marubozu).
+- How to stay in when the trend runs: [Trailing Stop lesson](/en/learn/10-trade-management-execution/03-trailing-stop).
+- Same family: [Three Black Crows](/en/patterns/three-black-crows), [Morning Star](/en/patterns/morning-star), [Rising Three Methods](/en/patterns/rising-three-methods).
+
+<Disclaimer />

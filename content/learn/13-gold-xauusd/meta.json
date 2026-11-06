@@ -1,11 +1,16 @@
 {
   "title": "Gold (XAUUSD)",
   "pages": [
+    "00-overview",
     "01-why-gold-moves",
-    "02-sessions-volatility",
+    "02-gold-contract-spec-pip-value",
     "03-dxy-us-yields",
-    "04-news-events",
-    "05-gold-risk-lot-size",
-    "06-spread-slippage"
+    "04-safe-haven-flow-geopolitical-event",
+    "05-sessions-volatility",
+    "06-news-events",
+    "07-spread-slippage",
+    "08-gold-risk-lot-size",
+    "09-gold-typical-atr",
+    "10-london-breakout-ny-reversal-setup"
   ]
 }

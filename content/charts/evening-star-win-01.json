@@ -1,0 +1,280 @@
+{
+  "id": "evening-star-win-01",
+  "title": {
+    "en": "Evening Doji Star at an Old High, Short at the Third Close",
+    "bn": "পুরোনো high-এ evening doji star, তৃতীয় candle-এর close-এ short"
+  },
+  "symbol": "USDJPY",
+  "timeframe": "D1",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bearish",
+  "outcome": "win",
+  "tags": [
+    "evening-star",
+    "candlestick",
+    "three-candle",
+    "resistance",
+    "pattern"
+  ],
+  "module": "patterns",
+  "lessonSlugs": [],
+  "caption": {
+    "en": "Illustrative synthetic USDJPY D1: a long bullish day into an old high, a doji that pokes above it, then a long bearish day closing about 70% down into the first body. Short at the third close, stop above the star; price falls to 2R.",
+    "bn": "শিক্ষামূলক কাল্পনিক USDJPY D1: পুরোনো high পর্যন্ত একটি লম্বা bullish দিন, তার উপরে উঁকি দেওয়া একটি doji, তারপর প্রথম body-র প্রায় 70% পর্যন্ত নামা লম্বা bearish দিন। তৃতীয় close-এ short, stop star-এর উপরে; দাম 2R পর্যন্ত নামে।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data, not a real market record.",
+    "bn": "শিক্ষামূলক কাল্পনিক ডেটা, বাস্তব মার্কেটের রেকর্ড নয়।"
+  },
+  "updatedAt": "2026-11-06T12:00:00Z",
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 149.43,
+      "label": "Old high (resistance)",
+      "color": "#3b82f6",
+      "style": "dashed"
+    },
+    {
+      "type": "marker",
+      "i": 15,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "1"
+    },
+    {
+      "type": "marker",
+      "i": 16,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Star"
+    },
+    {
+      "type": "marker",
+      "i": 17,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "3"
+    },
+    {
+      "type": "hline",
+      "price": 149.027,
+      "label": "Entry (3rd close)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 149.59,
+      "label": "Stop",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 147.901,
+      "label": "Target 2R",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candle 5 makes the old high. Candle 15 is a long bullish candle into it. Candle 16 is a doji that trades above the old high: the star. Candle 17 is a long bearish candle closing about 70% down into candle 15's body. Short at that close, stop above the star's high.",
+    "bn": "৫ নম্বর candle পুরোনো high বানায়। ১৫ নম্বর সেখানে লম্বা bullish candle। ১৬ নম্বর একটি doji, পুরোনো high-এর উপরে যায়: star। ১৭ নম্বর লম্বা bearish candle, ১৫ নম্বরের body-র প্রায় 70% পর্যন্ত নেমে close করে। সেই close-এ short, stop star-এর high-এর উপরে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Buying, stalling, selling: the evening star at a level",
+      "bn": "কেনা, থমকে যাওয়া, বিক্রি: level-এ evening star"
+    }
+  ],
+  "entry": 149.027,
+  "stopLoss": 149.59,
+  "takeProfit": 147.901,
+  "rr": "1:2.0",
+  "candles": [
+    {
+      "i": 0,
+      "o": 148.0,
+      "h": 148.406,
+      "l": 147.881,
+      "c": 148.3
+    },
+    {
+      "i": 1,
+      "o": 148.3,
+      "h": 148.897,
+      "l": 148.163,
+      "c": 148.7
+    },
+    {
+      "i": 2,
+      "o": 148.7,
+      "h": 148.787,
+      "l": 148.517,
+      "c": 148.58
+    },
+    {
+      "i": 3,
+      "o": 148.58,
+      "h": 149.049,
+      "l": 148.488,
+      "c": 148.93
+    },
+    {
+      "i": 4,
+      "o": 148.93,
+      "h": 149.39,
+      "l": 148.778,
+      "c": 149.21
+    },
+    {
+      "i": 5,
+      "o": 149.21,
+      "h": 149.43,
+      "l": 149.06,
+      "c": 149.13
+    },
+    {
+      "i": 6,
+      "o": 149.13,
+      "h": 149.33,
+      "l": 148.583,
+      "c": 148.78
+    },
+    {
+      "i": 7,
+      "o": 148.78,
+      "h": 149.006,
+      "l": 148.219,
+      "c": 148.36
+    },
+    {
+      "i": 8,
+      "o": 148.36,
+      "h": 148.519,
+      "l": 147.979,
+      "c": 148.11
+    },
+    {
+      "i": 9,
+      "o": 148.11,
+      "h": 148.308,
+      "l": 148.032,
+      "c": 148.23
+    },
+    {
+      "i": 10,
+      "o": 148.23,
+      "h": 148.4,
+      "l": 147.78,
+      "c": 147.93
+    },
+    {
+      "i": 11,
+      "o": 147.93,
+      "h": 148.316,
+      "l": 147.754,
+      "c": 148.23
+    },
+    {
+      "i": 12,
+      "o": 148.23,
+      "h": 148.738,
+      "l": 148.068,
+      "c": 148.57
+    },
+    {
+      "i": 13,
+      "o": 148.57,
+      "h": 148.959,
+      "l": 148.497,
+      "c": 148.83
+    },
+    {
+      "i": 14,
+      "o": 148.83,
+      "h": 148.91,
+      "l": 148.79,
+      "c": 148.88
+    },
+    {
+      "i": 15,
+      "o": 148.88,
+      "h": 149.41,
+      "l": 148.85,
+      "c": 149.37
+    },
+    {
+      "i": 16,
+      "o": 149.37,
+      "h": 149.53,
+      "l": 149.33,
+      "c": 149.365
+    },
+    {
+      "i": 17,
+      "o": 149.365,
+      "h": 149.385,
+      "l": 148.997,
+      "c": 149.027
+    },
+    {
+      "i": 18,
+      "o": 149.027,
+      "h": 149.107,
+      "l": 148.927,
+      "c": 148.967
+    },
+    {
+      "i": 19,
+      "o": 148.967,
+      "h": 149.039,
+      "l": 148.551,
+      "c": 148.667
+    },
+    {
+      "i": 20,
+      "o": 148.667,
+      "h": 148.815,
+      "l": 148.615,
+      "c": 148.767
+    },
+    {
+      "i": 21,
+      "o": 148.767,
+      "h": 148.864,
+      "l": 148.327,
+      "c": 148.407
+    },
+    {
+      "i": 22,
+      "o": 148.407,
+      "h": 148.492,
+      "l": 148.046,
+      "c": 148.127
+    },
+    {
+      "i": 23,
+      "o": 148.127,
+      "h": 148.252,
+      "l": 148.089,
+      "c": 148.207
+    },
+    {
+      "i": 24,
+      "o": 148.207,
+      "h": 148.344,
+      "l": 147.781,
+      "c": 147.887
+    },
+    {
+      "i": 25,
+      "o": 147.887,
+      "h": 147.964,
+      "l": 147.538,
+      "c": 147.647
+    }
+  ]
+}

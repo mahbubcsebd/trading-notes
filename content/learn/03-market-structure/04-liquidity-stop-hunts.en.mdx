@@ -1,0 +1,208 @@
+---
+title: "Liquidity and Stop Hunts: Why Price Touches Your Stop and Turns Back"
+description: "Where liquidity pools build up, the difference between a sweep and a real break, and how to protect your own stop from a stop hunt."
+level: intermediate
+tags: [liquidity, stop-hunt, liquidity-sweep, market-structure, smc]
+instruments: [XAUUSD]
+timeframes: [H1, H4]
+status: done
+sources:
+  - type: blog
+    title: "Liquidity Sweeps - CrossTrade Learn"
+    url: "https://crosstrade.io/learn/price-action/liquidity-sweeps"
+updated: 2026-11-06
+---
+
+# Liquidity and Stop Hunts: Why Price Touches Your Stop and Turns Back
+
+Have you ever seen price race the other way right after your stop was hit? That is not bad luck. Often there is a specific reason behind it: **liquidity** had built up where your stop was.
+
+## What you will be able to do
+
+- **Explain** in your own words what **liquidity** and a **liquidity pool** are.
+- **Recognise** **equal highs/lows** and the pools next to swings on a chart.
+- **Tell apart** a **liquidity sweep** and a real **BOS**.
+- **Place** your own **stop** where the crowd is thinner.
+
+## Why it matters
+
+- Most new traders keep their stops in the same obvious places. That is where price sweeps again and again.
+- If you recognise a sweep, you stop mistaking a wick for a break, which is the main warning of the [BOS and CHOCH](/en/learn/03-market-structure/03-break-of-structure) lesson.
+- If you set your stop location well, you get stopped out for no reason less often.
+
+## What is liquidity?
+
+Put simply, liquidity means **orders waiting at that price**. If someone wants to buy, someone else has to sell against them, or no trade happens. Where many orders have built up, large trades get filled easily.
+
+**Analogy:** at a fair's gate, where the crowd is biggest, a large group wanting to get in has an advantage, because it can deal with many people at once. In the market, that crowd is the orders that have built up.
+
+**Precise definition:** A **liquidity pool** is a price area just above or below which many stop losses and pending orders have built up. A stop loss is filled as a market order in the opposite direction. So a buyer's stop below is a sell order, and a seller's stop above is a buy order.
+
+<Callout type="note">
+  The idea that "big institutions hunt your stop on purpose" is very common
+  among SMC teachers, but we offer no proof of it here. In this lesson we only
+  learn the behaviour you can observe: price often touches the areas where stops
+  have built up and turns back. Whatever the reason, recognising it helps you.
+</Callout>
+
+## Where liquidity builds up
+
+<Steps>
+
+### 1. Equal highs / equal lows
+
+When two or more swings form at about the same price, everyone sees it as "clean" support or resistance. Buyers' stops build up below equal lows, and sellers' stops build up above equal highs. The swings from the earlier [swing high and swing low](/en/learn/03-market-structure/01-swing-high-low) lesson are the target here.
+
+### 2. Beyond previous swings
+
+Stops sit above important swing highs and below swing lows, because those are the most common places to put a stop.
+
+### 3. Beyond a trendline
+
+Stops build up below or above a clear trendline. See [trendlines and channels](/en/learn/05-support-resistance/04-trendlines-channels).
+
+</Steps>
+
+## What it looks like on a chart
+
+In the chart below, two equal lows (EQL) have formed. Then a candle dropped a wick below them and closed back inside, after which price rose and broke structure.
+
+<Chart
+  id="eql-sweep-01"
+  height={420}
+  caption="XAUUSD H1 (educational, synthetic example) — a wick below equal lows = sweep, body closes inside"
+/>
+
+Notice that the sweep candle's **body** closed above the equal lows. This difference is what separates a sweep from a real break.
+
+## Sweep vs real break
+
+|                 | Liquidity sweep                | Real break (BOS)                    |
+| :-------------- | :----------------------------- | :---------------------------------- |
+| **Wick**        | Goes past the level            | Goes past the level                 |
+| **Body close**  | Comes back inside              | Closes outside                      |
+| **Next candle** | Quickly goes the other way     | Keeps going the same way or retests |
+| **Meaning**     | The built-up stops were filled | New structure is forming            |
+
+<Callout type="warning">
+  A sweep is easy to recognise after the fact. While the candle is running, you
+  do not know whether it is a sweep or a real break. So wait for the body close,
+  and do not jump the other way thinking "every wick is a sweep".
+</Callout>
+
+## Step by step: using a sweep as a trade clue
+
+<Steps>
+
+### Step 1: Look at the big picture
+
+Set the trend and direction on the higher timeframe. See [Multi-Timeframe Analysis](/en/learn/03-market-structure/05-multi-timeframe-analysis).
+
+### Step 2: Mark the pool
+
+Mark equal highs/lows or the area beyond a clear swing.
+
+### Step 3: Wait for the sweep
+
+Wait until price wicks beyond the pool. Do not guess in advance and enter.
+
+### Step 4: Look at the body close
+
+If the body comes back inside, the chance of a sweep goes up. Then wait for a CHOCH or BOS on the lower timeframe.
+
+### Step 5: Keep the stop beyond the sweep
+
+Keep the stop a little beyond the sweep's wick. If you keep the stop inside the wick, you will get swept again. Set the lot size with [position sizing](/en/learn/08-risk-management/02-position-sizing).
+
+</Steps>
+
+## Real example
+
+<Callout type="note">
+  **The examples in this lesson are synthetic.** Verified real OHLC data has not
+  been added yet. The chart above is built on synthetic educational data.
+</Callout>
+
+**Example (synthetic trade):** In the chart above, there were two equal lows near 2340. One candle dropped to 2334 and closed at 2345. The body was above the equal lows. After that, price broke the previous swing high and closed above it (BOS). You bought at 2352, with the stop below 2333 (the sweep's wick) and a target of 2378. The stop is far here, so the lot size must be kept small.
+
+## Failed example: buying early because "this is a sweep" (synthetic/educational)
+
+- **What could be seen:** price broke the equal lows and dropped. Someone assumed it was a sweep and bought right away.
+- **Decision:** not waiting for the body close.
+- **Result:** the candle closed below, and the next candles fell too. It was a real break. The stop was hit.
+- **Lesson:** do not call a sweep from a wick. Wait until the body comes back inside.
+
+## Common mistakes
+
+| Mistake                                  | Why it happens                         | What to do                                 |
+| :--------------------------------------- | :------------------------------------- | :----------------------------------------- |
+| Thinking every wick is a sweep           | Assuming every break is fake           | Look at the body close and the next candle |
+| Keeping the stop just below an equal low | The "clean" spot looks attractive      | Keep the stop beyond the sweep's wick      |
+| Entering before the sweep                | Rushing                                | Enter after the sweep and confirmation     |
+| Ignoring the higher timeframe            | Looking at only one part of the chart  | Check the bigger trend first               |
+| Blaming everything on "big institutions" | Looking for an explanation for failure | Fix your own stop and risk plan            |
+
+## Pro tips
+
+<Callout type="tip">
+  Ask yourself: "Where are most traders putting their stops here?" If yours is
+  there, move it one step. Moving the stop changes the risk-to-reward ratio, so
+  recalculate the lot size too.
+</Callout>
+
+<Callout type="tip">
+  At the start of a session, price often touches the previous session's
+  high/low. Keep those marked: [Trading
+  Sessions](/en/learn/01-foundations/05-trading-sessions).
+</Callout>
+
+## When this does not work
+
+- **During big news:** price jumps, and sweeps and real breaks get mixed up.
+- **In a strong trend:** price breaks the pool and does not come back, which is a real break.
+- **On very small timeframes:** the noise shows many fake "sweeps".
+- **When used alone:** a sweep does not tell you direction. It has to be matched with trend and structure.
+
+## Summary
+
+<KeyTakeaways>
+
+- A liquidity pool is where stops and pending orders have built up.
+- Pools are most common at equal highs/lows and beyond clear swings.
+- Sweep: wick outside, body inside. Real break: body closes outside.
+- Do not trade a sweep without checking the body close and the higher timeframe.
+- Keep your own stop away from crowded places.
+
+</KeyTakeaways>
+
+## Practice
+
+Open the XAUUSD H1 chart on TradingView. Over the last two weeks, mark at least 3 equal highs or equal lows. For each, check: did price go past it? Did the body close outside, or come back inside? Write down the results.
+
+## Quiz
+
+1. What is a liquidity pool?
+2. Whose stops build up below equal lows?
+3. What is the main difference between a sweep and a real break?
+4. In a sweep trade, where do you put the stop?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** A price area near which many stops and pending orders have built up.
+
+**2.** Buyers'. Their stops are filled as sell orders.
+
+**3.** In a sweep the body comes back inside; in a real break the body closes outside.
+
+**4.** A little beyond the sweep's wick, so you do not get swept again.
+
+</details>
+
+## Next steps
+
+- Before: [Break of Structure and CHOCH](/en/learn/03-market-structure/03-break-of-structure).
+- After: [Multi-Timeframe Analysis](/en/learn/03-market-structure/05-multi-timeframe-analysis).
+- Risk: [Stop Loss Placement](/en/learn/10-trade-management-execution/01-stop-loss-placement).
+
+<Disclaimer />

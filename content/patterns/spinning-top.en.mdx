@@ -1,0 +1,350 @@
+---
+title: "Spinning Top: the small-body candle where a trend catches its breath"
+description: "How to spot a spinning top, tell a reversal warning from a simple pause, and place entry, stop and target after confirmation, with a winning and a failing chart."
+type: neutral
+category: momentum-indecision
+level: beginner
+candleCount: 1
+signal: indecision
+chartId: spinning-top-win-01
+tags: [pattern, candlestick, spinning-top, indecision]
+status: done
+sources:
+  - type: book
+    title: "Japanese Candlestick Charting Techniques - Steve Nison"
+    note: "Spinning tops, high-wave candles"
+  - type: blog
+    title: "Spinning Top Candlestick - Investopedia"
+    url: "https://www.investopedia.com/terms/s/spinning-top.asp"
+updated: 2026-11-06
+---
+
+An uptrend is running and every candle is green. Then a small-body candle shows up with wicks on both sides. "The trend is over!" Many traders sell, and the next day the trend races higher again. A spinning top is not an answer. It is a question, and its location and the next candle give the answer.
+
+## At a glance
+
+| Item          | Spinning Top                                                                             |
+| :------------ | :--------------------------------------------------------------------------------------- |
+| Type          | Neutral indecision candle, one candle                                                    |
+| Where to look | At the end of a long move, at a marked support or resistance                             |
+| Key features  | Small body, wicks above and below that are both longer than the body                     |
+| Confirmation  | Next candle closes below the spinning top low (at a top) or above its high (at a bottom) |
+| Stop          | Beyond the opposite end of the spinning top, plus spread and a buffer                    |
+| Invalidation  | Instead of confirming, price closes through the spinning top in the trend direction      |
+| Look-alikes   | [Doji](/en/patterns/doji), high-wave candle, [Hammer](/en/patterns/hammer)               |
+| Opposite      | [Marubozu](/en/patterns/marubozu) (large body, no wicks)                                 |
+
+## What you will be able to do
+
+- **Measure** the difference between a spinning top and a doji, a hammer or a plain small candle.
+- **Separate** a spinning top that warns from one that is noise, by location.
+- **Enter only after a confirming candle** instead of trading the spinning top alone.
+- **Decide** on stops or partials in an open trade when a spinning top appears.
+
+## Why it matters
+
+- **The first sign of fading momentum.** A small body after several large ones means the side that was winning could not win this candle.
+- **Trading it alone costs money.** A spinning top has no direction. Inside a trend it is often just one candle of rest.
+- **Useful for open trades.** Even without a new entry, a spinning top near your target is a cue to think about protecting profit.
+
+Prerequisites: [Anatomy of a Candle](/en/learn/04-candlesticks/01-anatomy-of-a-candle) and [Candle Context](/en/learn/04-candlesticks/05-candle-context).
+
+## What is a spinning top
+
+**A spinning top is a candle with a small body and wicks above and below that are both longer than the body.** The name comes from the toy: a small thick middle with thin spindles at both ends. It spins, but it goes nowhere.
+
+Think of a haggle. The buyer pushed the price up, the seller pushed it down. Both made some progress, but at the end of the session the price is back near where it started. Nobody won.
+
+<CandleDiagram
+  title="Spinning top: colour does not matter"
+  candles={[
+    { o: 40, h: 46, l: 38, c: 45, dim: true },
+    { o: 45, h: 53, l: 44, c: 52, dim: true },
+    {
+      o: 52,
+      h: 60,
+      l: 45,
+      c: 53.5,
+      label: "Green",
+      note: "small body, wicks both sides",
+    },
+    { o: 53.5, h: 56, l: 50, c: 55, dim: true },
+    { o: 55, h: 62, l: 47, c: 53.5, label: "Red", note: "same meaning" },
+  ]}
+  caption="A spinning top can be green or red. What matters is the small body with wicks on both sides, not the colour."
+/>
+
+### Identification rules
+
+| Rule                                                | Required?               | Why                                                          |
+| :-------------------------------------------------- | :---------------------- | :----------------------------------------------------------- |
+| Small body, roughly under a third of the full range | Yes                     | A large body means one side won; that is not indecision      |
+| Both upper and lower wicks longer than the body     | Yes                     | One long wick only makes it a hammer or shooting star        |
+| Candle has closed                                   | Yes                     | A live candle can finish with a large body                   |
+| Prior candles clearly larger (after a move)         | No (but very important) | A small body after large ones is what says "momentum slowed" |
+| Wicks of similar length                             | No                      | Cleaner when equal; still a spinning top when uneven         |
+
+Nison also shows a close relative: the **high-wave candle**, with very long wicks. It shows even more tension, but the trading rule is the same: not without confirmation.
+
+## Strong vs weak spinning top
+
+<DiagramRow>
+  <CandleDiagram
+    title="Meaningful"
+    verdict="good"
+    verdictLabel="pay attention"
+    candles={[
+      { o: 40, h: 47, l: 39, c: 46, dim: true },
+      { o: 46, h: 54, l: 45, c: 53, dim: true },
+      { o: 53, h: 61, l: 52, c: 60, dim: true },
+      { o: 60, h: 66, l: 55, c: 59, label: "at the level" },
+      { o: 59, h: 60, l: 51, c: 52, dim: true },
+    ]}
+    levels={[{ price: 64, label: "old high", tone: "resistance" }]}
+    caption="After a rally of large candles, at resistance; the next candle closes below its low."
+  />
+  <CandleDiagram
+    title="Meaningless"
+    verdict="bad"
+    verdictLabel="avoid"
+    candles={[
+      { o: 50, h: 53, l: 48, c: 52, dim: true },
+      { o: 52, h: 54, l: 49, c: 50, dim: true },
+      { o: 50, h: 54, l: 47, c: 50.5, label: "mid-range" },
+      { o: 50.5, h: 53, l: 48, c: 52, dim: true },
+      { o: 52, h: 54, l: 49, c: 49.5, dim: true },
+    ]}
+    caption="One more small candle inside a range of small candles. No new information."
+  />
+</DiagramRow>
+
+| Quality check    | Meaningful                                             | Meaningless                                   |
+| :--------------- | :----------------------------------------------------- | :-------------------------------------------- |
+| What came before | A clear move of large bodies                           | Small candles anyway                          |
+| Where            | Right at a marked support or resistance                | Mid-range or halfway through a trend          |
+| Next candle      | Breaks the spinning top's end and closes the other way | Back in the trend direction, or smaller still |
+| Room ahead       | At least 2R to the next level                          | Next level very close                         |
+
+<Callout type="note">
+  "Body under a third of the range" is my working measure, not a standard
+  definition. Books differ. Pick one measure in your own backtest and keep it
+  the same on every chart.
+</Callout>
+
+### Same look, different meaning
+
+| Pattern                | Shape                                       | Difference                                    |
+| :--------------------- | :------------------------------------------ | :-------------------------------------------- |
+| **Spinning Top**       | Small body, both wicks longer than the body | Indecision, with some body                    |
+| **Doji**               | Almost no body, open ≈ close                | Even closer balance; read with the same rules |
+| **Hammer**             | Small body on top, long lower wick only     | One-sided rejection, bullish at support       |
+| **Plain small candle** | Small body, small wicks                     | Just a quiet market; no sign of a tug of war  |
+
+## The story inside the candle
+
+One common interpretation of a spinning top at resistance after an uptrend, read through time:
+
+1. **Buyers push up.** As before, price rises from the open and peeks above resistance.
+2. **Sellers push it back, and lower.** Sell orders arrive up there and price drops below the open.
+3. **Buyers lift it a little, but do not win.** The close is near the open. Buyers who won easily in the previous candles could not win this one.
+
+The result: momentum has stalled, direction is not decided. If the next candle closes below the spinning top low, sellers scored their first win. If it breaks the high, buyers are back in control.
+
+<Callout type="note">
+  This is a common interpretation, not a proven fact. A chart does not show who
+  bought or sold. We only see how price behaved.
+</Callout>
+
+## Where it works and where it does not
+
+<Compare
+  leftLabel="Where to pay attention"
+  rightLabel="Where a spinning top is usually noise"
+  left="- After a long move of large candles
+- At a marked old high, low or supply-demand zone
+- At a higher-timeframe level
+- Near the target of a trade you already hold
+- When the next candle confirms"
+  right="- Halfway through a strong trend, with no level
+- In the middle of a range
+- In a quiet Asian session where every candle is small
+- Just before big news, while everyone waits
+- When the next candle closes in the trend direction"
+/>
+
+## Step by step: trading a spinning top
+
+<Steps>
+
+### Step 1: Move and level first
+
+Check that there is a clear move and a marked level ahead. Without both, a spinning top is just a small candle.
+
+### Step 2: Wait for the close
+
+Do not call a live candle a spinning top. It can finish with a large body in its last minute.
+
+### Step 3: Measure
+
+Is the body under a third of the full range? Are both wicks longer than the body? Were the prior candles clearly larger?
+
+### Step 4: Wait for confirmation, then enter
+
+A spinning top does not give an entry by itself. At resistance, the next candle has to close below its low.
+
+| Entry                    | Where                                         | Pro                                      | Con                                       |
+| :----------------------- | :-------------------------------------------- | :--------------------------------------- | :---------------------------------------- |
+| **Low break** (standard) | Sell stop just below the spinning top low     | You only enter once price shows its hand | Can fill on a wick and snap back          |
+| **Confirmation close**   | Market sell when the confirming candle closes | Entry on a close, fewer false breaks     | Lower entry, bigger stop                  |
+| **On the spinning top**  | Sell as the spinning top closes               | Best price                               | No direction yet; the trend often resumes |
+
+For beginners the confirmation close is the safest: fewer wick-fill traps.
+
+### Step 5: Place the stop
+
+Above the spinning top high, and above the level too, plus the [spread](/en/learn/01-foundations/04-spread-commission-swap) and a few pips. A wide spinning top means a wide stop; reduce size instead.
+
+### Step 6: Size and target
+
+Use the entry-to-stop distance to calculate [position size](/en/learn/08-risk-management/02-position-sizing), risking no more than 1% of the account. Put the target just before the next support. If the [risk reward](/en/learn/08-risk-management/03-risk-reward) to there is below 1:1.5, skip it.
+
+### Step 7: Manage
+
+A close back above the spinning top high means the idea is wrong: get out. In an open long, a spinning top near the target is a cue for a [partial close](/en/learn/10-trade-management-execution/02-take-profit-partial-close) or a break-even stop.
+
+</Steps>
+
+### Pre-trade checklist
+
+<Checklist
+  id="pattern-spinning-top-pretrade-en"
+  items={[
+    "Was the level marked before the spinning top, and does it sit right at that level?",
+    "Does the shape pass the rules (small body, both wicks longer than the body, larger candles before it)?",
+    "Have both the spinning top and the confirming candle closed?",
+    "Is the risk reward to the next level at least 1:1.5?",
+    "Is there no higher-timeframe level right in front of the trade?",
+  ]}
+/>
+
+If any box stays empty, skip the trade.
+
+## Example 1: when it works (illustrative)
+
+<Chart
+  id="spinning-top-win-01"
+  height={420}
+  caption="USDJPY H1 (illustrative, synthetic) — a spinning top at an old high; short when the next candle breaks its low."
+/>
+
+- **What was visible:** Candles 0-5 left an old high near 152.02. Candles 6-11 pulled back and 12-17 rallied back just under that high.
+- **The spinning top:** Candle 18 opened at 151.96 and closed at 151.93. Body only 3 pips, high 152.10, low 151.83: 13-14 pips of wick each side. The high poked above the old high and came back.
+- **Decision:** Sell stop at 151.81 (2 pips below the low). Stop at 152.16 (above both the spinning top high and the old high): 35 pips of risk. Target 151.11, which is 2R.
+- **Result:** Candle 19 broke the low and closed at 151.76, filling the order. Price stepped down in lower highs and candle 27 reached the target.
+- **Lesson:** There was a move, there was a level, and the entry came after price itself closed lower. The spinning top only gave the warning.
+
+<TradeSetup
+  direction="short"
+  pair="USDJPY"
+  entry={151.81}
+  stop={152.16}
+  target={151.11}
+/>
+
+(Illustrative example, not a real trade. Not every spinning top leads to a reversal, and no result is guaranteed.)
+
+## Example 2: when it is a trap (illustrative)
+
+<Chart
+  id="spinning-top-fail-01"
+  height={420}
+  caption="EURUSD D1 (illustrative, synthetic) — a spinning top mid-trend with no level. Filled on a wick, then stopped out."
+/>
+
+- **What was visible:** Candles 0-8 were a clean uptrend from 1.0700 to about 1.0864, with higher highs and higher lows. No old high above.
+- **The spinning top:** Candle 9 opened at 1.0864 and closed at 1.0868. Body 4 pips, wicks of about 18-20 pips each side. A perfect shape.
+- **The wrong decision:** "The trend has stopped." Sell stop 1.0843, stop 1.0892: 49 pips of risk, target 1.0745.
+- **What happened:** Candle 10's wick touched 1.0843 and filled the order, but the candle closed back near its open. Candle 11, a large bullish candle, hit the stop.
+- **Why it failed:** There was no level, and no confirming close either, just a wick fill. The first and third checklist boxes would have filtered it out.
+
+**Lesson:** Inside a strong trend a spinning top is usually one candle of rest. Because the stop was set in advance, the loss stayed at 1R.
+
+## Common mistakes
+
+| Mistake                                          | Why it happens                    | What to do instead                                 |
+| :----------------------------------------------- | :-------------------------------- | :------------------------------------------------- |
+| Fading the trend as soon as a spinning top forms | "The trend is over"               | Wait for the next candle's confirming close        |
+| Calling any small candle a spinning top          | Wicks are not measured            | Check that both wicks are longer than the body     |
+| Reading bullish or bearish from the colour       | Too much weight on colour         | Read location and the next candle, not colour      |
+| Trading spinning tops in the middle of a range   | Treating every candle as a signal | Only count them at levels, after a move            |
+| Stop inside the spinning top                     | Wanting a small stop              | Stop above its high and beyond the level; cut size |
+| Ignoring a spinning top in an open profit        | Hoping for more                   | Near the target, consider a partial or break-even  |
+
+## Pro tips
+
+<Callout type="tip">
+  Look at a spinning top on the higher timeframe instead of as one candle. A few
+  large H1 candles plus a spinning top often combine into a shooting star or a
+  hammer on H4. The picture is clearer there.
+</Callout>
+
+<Callout type="tip">
+  Several spinning tops or dojis in a row mean the market is coiling. A large
+  breakout often follows. Instead of guessing the direction early, wait under
+  the rules of [Range
+  Breakout](/en/learn/06-trend-chart-patterns/03-range-breakout).
+</Callout>
+
+<Callout type="warning">
+  Do not accept "a spinning top means reversal". Inside a trend it is often just
+  a pause. Without location and confirmation it is not a trade signal.
+</Callout>
+
+## Summary
+
+<KeyTakeaways>
+
+- Spinning top = small body with wicks above and below, both longer than the body; colour does not matter.
+- It shows indecision, not direction. It is not a trade signal on its own.
+- Pay attention after a long move at a marked level; mid-trend or mid-range it is usually noise.
+- Enter only after confirmation; put the stop beyond both the spinning top and the level.
+
+</KeyTakeaways>
+
+## Practice and your own backtest
+
+Open USDJPY H1 or EURUSD D1 in TradingView. Find at least 20 spinning tops that formed after a clear move. Log one row each:
+
+| Date | At a level? | Length of prior move (candles) | Next candle confirmed? | Entry type | Result (R) |
+| :--- | :---------- | :----------------------------- | :--------------------- | :--------- | :--------- |
+|      |             |                                |                        |            |            |
+
+Then split into "at a level" and "no level" and compare the average R. Also count how often the trend simply carried on in the same direction. Do not draw conclusions from fewer than 30 samples.
+
+## Quiz
+
+1. A candle has a small body and a long lower wick, but almost no upper wick. Is it a spinning top?
+2. A red spinning top forms halfway through a strong uptrend, with no level nearby. What do you do?
+3. What is the main difference between a sell stop under the spinning top low and a confirmation-close entry?
+4. Which checklist boxes would have filtered out the trade in Example 2?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** No. A long wick on one side and almost none on the other is the hammer or hanging man shape. A spinning top has wicks longer than the body on both sides.
+
+**2.** No new short. Red colour says nothing. There is no level, so it is most likely a pause. If you hold a long you might think about your stop, but there is no reason to fade the trend.
+
+**3.** The sell stop gets in faster but can fill on a single wick and snap back. The confirmation close enters lower with a bigger stop, but it avoids most false-break traps.
+
+**4.** The first box (there was no level) and the third box (the next candle did not close lower).
+
+</details>
+
+## Next steps
+
+- Before this: [Anatomy of a Candle](/en/learn/04-candlesticks/01-anatomy-of-a-candle).
+- Where a signal counts: [Confirmation vs Trigger](/en/learn/09-price-action-entries-strategies/04-confirmation-vs-trigger).
+- Same family: [Doji](/en/patterns/doji), [Long-Legged Doji](/en/patterns/long-legged-doji), [Marubozu](/en/patterns/marubozu).
+
+<Disclaimer />

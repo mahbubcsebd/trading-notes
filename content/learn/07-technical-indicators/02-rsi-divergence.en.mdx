@@ -1,0 +1,216 @@
+---
+title: "RSI: Reading Momentum and Using Divergence the Right Way"
+description: "What RSI is, why overbought is not a sell signal, how to spot bearish divergence, and how to place entry, stop and target with a structure break."
+level: intermediate
+tags: [rsi, divergence, momentum, overbought, oversold, indicators]
+instruments: [EURUSD]
+timeframes: [H4]
+status: done
+sources:
+  - type: blog
+    title: "Relative Strength Index (RSI) - Investopedia"
+    url: "https://www.investopedia.com/terms/r/rsi.asp"
+  - type: book
+    title: "New Concepts in Technical Trading Systems - J. Welles Wilder"
+    url: ""
+    note: "Original definition of RSI and the 14 period"
+updated: 2026-11-06
+---
+
+# RSI: Reading Momentum and Using Divergence the Right Way
+
+RSI went above 70, so you sold. Price rose another 400 pips. There is no counting how many traders the belief "overbought means it will fall" has dragged down.
+
+## What you will be able to do
+
+- **Explain** what RSI measures and what it does not.
+- Understand **why** an overbought reading in a trend misleads.
+- **Spot** bearish divergence on a chart.
+- After divergence, place **entry, stop and target with a structure break**.
+
+## Why it matters
+
+- **The most misunderstood indicator.** Wrong ideas about overbought/oversold get many stops hit.
+- **Momentum changes first.** Even when price makes a new high, RSI shows early if the speed is weakening.
+- **It pairs well with structure.** [Break of Structure](/en/learn/03-market-structure/03-break-of-structure) and RSI together avoid many traps.
+
+Prerequisites: [Moving Averages](/en/learn/07-technical-indicators/01-moving-averages-crossover) and [Swing High and Swing Low](/en/learn/03-market-structure/01-swing-high-low).
+
+## What is RSI
+
+**RSI (Relative Strength Index) is a number between 0 and 100. It compares how strongly price rose versus fell over the last n candles.**
+
+Think of a runner's breathing. Running fast makes breathing heavy, but a fit runner can keep that pace for a long time. RSI measures speed; it does not announce a stop.
+
+Key facts:
+
+- The common setting is **14 periods**.
+- The usual limits are **above 70 overbought, below 30 oversold**.
+- Formula: RSI = 100 − 100 / (1 + RS), where RS = average gain ÷ average loss.
+- The 50 line is roughly balance: above it, buyer pressure; below it, seller pressure.
+
+**Overbought ≠ sell.** It means "price rose fast". RSI does not tell you why it rose.
+
+## What it looks like on a chart: RSI in a trend
+
+<Chart
+  id="rsi-overbought-trend-01"
+  height={440}
+  caption="EURUSD H4 (educational, synthetic example) — a strong uptrend. RSI first goes above 70 at candle 17 and stays above 70 on 40 of the next 50 candles."
+/>
+
+On this chart:
+
+1. At candle 17, RSI went above 70, with price at 1.0849.
+2. The last close is 1.1260, so a sell at that time would be 411 pips against you.
+3. RSI never fell below 59.9 after that. RSI behaves differently in a trend: it moves in the 40-80 zone.
+
+## What is divergence
+
+**Divergence is when price and RSI move in different directions.** Bearish divergence means price makes a higher high, but RSI makes a lower high. The message: the speed of the rise is slowing.
+
+Important: **divergence is a warning, not a trigger.** Price often keeps rising despite divergence. The trigger is a break in price structure.
+
+## Step by step: the bearish divergence trade
+
+<Steps>
+
+### Step 1: Mark two highs
+
+The second high is above the first. The two should be several candles apart and be clear swing highs.
+
+### Step 2: Match the two RSI highs
+
+If the second RSI high is lower than the first, there is divergence.
+
+### Step 3: Draw the swing low between the two highs
+
+This is your trigger level.
+
+### Step 4: Wait for the close
+
+Sell only when a candle closes below that swing low. Not before.
+
+### Step 5: Place the stop above the second high
+
+If price goes back there, the divergence idea is wrong.
+
+### Step 6: Set the target
+
+At least twice the risk. See [Risk Reward](/en/learn/08-risk-management/03-risk-reward).
+
+</Steps>
+
+## Example 1: when it works (synthetic)
+
+<Chart
+  id="rsi-divergence-01"
+  height={460}
+  caption="EURUSD H4 (educational, synthetic example) — high at candle 26 is 1.1001 (RSI 75.4), high at candle 55 is 1.1008 (RSI 60.6). Candle 59 broke the swing low at 1.0936 and closed at 1.0933."
+/>
+
+- **What you could see:** price made a higher high from 1.1001 to 1.1008, but RSI fell from 75.4 to 60.6.
+- **Trigger:** swing low 1.0936 (candle 33). Candle 59 closed below it.
+- **Entry:** sell 1.0933.
+- **Stop:** 1.1013, above the second high. Risk 80 pips.
+- **Target:** 1.0773, 160 pips away, so 1:2.
+- **Result:** price fell and hit the target.
+- **Lesson:** the divergence was there from candle 26, but the right time to enter was candle 59, when structure broke.
+
+(Synthetic educational example. This is not a real trade, and no result is guaranteed.)
+
+## Example 2: when it fails (synthetic)
+
+Look again at the trend chart from the start of this lesson: selling at candle 17 because it is "overbought".
+
+- **What you could see:** RSI above 70; it seems "price has risen too much".
+- **Decision:** sell 1.0849, with no structure, only RSI.
+- **Result:** price rose another 411 pips. Any reasonable stop would have been hit.
+- **Why it was wrong:** in a trend, RSI easily stays above 70. There was no divergence, and structure did not break.
+- **Lesson:** you cannot trade on the RSI value alone.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Common mistakes
+
+| Mistake                                | Why it happens                            | What to do                           |
+| :------------------------------------- | :---------------------------------------- | :----------------------------------- |
+| Selling at 70, buying at 30            | The name itself sounds like a simple rule | First check whether there is a trend |
+| Entering as soon as you see divergence | Rush to get in early                      | Wait for the structure break         |
+| Divergence on small timeframes         | Noise creates many "divergences"          | Use H4 or a higher timeframe         |
+| Treating one divergence as certain     | A neat picture builds confidence          | Always place a stop                  |
+| Changing settings to move the limits   | Looking for "better" results              | Start with 14 and 30/70              |
+
+## Pro tips
+
+<Callout type="tip">
+  In an uptrend, RSI usually moves in the 40-80 zone; in a downtrend, 20-60.
+  Once you know the trend zone, the "overbought" mistake becomes obvious.
+</Callout>
+
+<Callout type="tip">
+  When divergence lines up with nearby resistance or a supply zone, the warning
+  is stronger. See [Supply and
+  Demand](/en/learn/05-support-resistance/03-supply-demand).
+</Callout>
+
+<Callout type="warning">
+  The stronger the trend, the longer divergence can keep failing. Never trade it
+  without a stop.
+</Callout>
+
+## When this does not work
+
+- **In a strong trend:** RSI often stays overbought or oversold.
+- **On very small timeframes:** noise creates many fake divergences.
+- **In a range:** RSI moves between 30 and 70, which means nothing special.
+- **During big news:** RSI jumps in a single candle, so comparisons are meaningless.
+
+## Summary
+
+<KeyTakeaways>
+
+- RSI measures price speed; above 70 means it rose fast, not that it will fall.
+- In a trend, RSI can stay above 70 for a long time.
+- Divergence is a warning; the trigger is a structure break.
+- The stop goes above the second high.
+
+</KeyTakeaways>
+
+## Practice
+
+On TradingView, put RSI 14 on an EUR/USD H4 chart. In the last 6 months, find three pairs of clear swing highs. For each, note whether there was divergence and what happened after structure broke.
+
+## Quiz
+
+1. Does RSI 75 mean you should sell?
+2. What is bearish divergence?
+3. What is the entry trigger after divergence?
+4. Where is the stop in a divergence trade?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** No. It means price rose fast. In a trend, RSI can stay high for a long time.
+
+**2.** Price makes a higher high but RSI makes a lower high.
+
+**3.** A close below the swing low between the two highs.
+
+**4.** Slightly above the second high.
+
+</details>
+
+## Next steps
+
+- Before: [Moving Averages](/en/learn/07-technical-indicators/01-moving-averages-crossover).
+- Next: [MACD](/en/learn/07-technical-indicators/03-macd).
+- On structure: [Market Structure](/en/learn/03-market-structure/00-overview).
+
+### Sources
+
+- <ExternalLink href="https://www.investopedia.com/terms/r/rsi.asp">
+    RSI, Investopedia
+  </ExternalLink>
+
+<Disclaimer />

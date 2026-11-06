@@ -1,41 +1,290 @@
 ---
-title: "বিয়ারিশ হারামি (ইনসাইড বার) (Bearish Harami (Inside Bar))"
-description: "২টি ক্যান্ডেলের রিভার্সাল প্যাটার্ন যেখানে একটি বড় সবুজ ক্যান্ডেলের ভেতরে একটি ছোট লাল ক্যান্ডেল সম্পূর্ণ সীমাবদ্ধ থাকে।"
+title: "Bearish Harami: বড় সবুজ candle-এর পেটে ছোট candle, buying-এর দম ফুরানো"
+description: "Bearish harami কীভাবে চিনবেন, bullish harami-র উল্টো ছবি, harami cross, কেন আগে uptrend থাকা জরুরি, mother-এর মাঝে entry, stop ও target — chart সহ।"
 type: bearish
-category: "বিয়ারিশ হারামি (ইনসাইড বার)"
-winrate: "64% - 69%"
-riskReward: "1:3 to 1:5"
-maxRisk: "1%"
-bestLocation: "Key Resistance / Supply Zone / Bearish Order Block"
-chartId: "bearish-harami-01"
-tags: [bearish, pattern, candlestick]
+category: two-candle
+level: intermediate
+candleCount: 2
+signal: reversal
+chartId: bearish-harami-win-01
+tags: [pattern, candlestick, bearish-harami, harami, resistance]
+status: done
+sources:
+  - type: book
+    title: "Japanese Candlestick Charting Techniques - Steve Nison"
+    note: "Harami ও harami cross"
+  - type: blog
+    title: "Bearish Harami - Investopedia"
+    url: "https://www.investopedia.com/terms/b/bearishharami.asp"
+updated: 2026-11-06
 ---
 
-<div className="flex gap-6 items-end my-8 p-8 bg-zinc-950 border border-border/50 rounded-2xl w-max relative overflow-hidden">
-  <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:20px_20px]"></div>
-  <div className="relative z-10 flex gap-6">
-    <Candle color="bull" bodyH="h-16" topW="h-2" botW="h-2" offset="mt-6" />
-    <Candle color="bear" bodyH="h-6" topW="h-2" botW="h-2" offset="mt-12" />
-  </div>
-</div>
+একটা সবুজ candle, তারপর তার ভেতরে ছোট লাল candle। আকারে নিখুঁত bearish harami, তাই short নিলেন। কিন্তু chart-এর বাকিটা দেখলে বোঝা যেত, দাম গত দশ candle ধরে এক জায়গায় ঘুরছে। Uptrend-ই ছিল না, উল্টাবে কী? এই পাতা [Bullish Harami](/bn/patterns/bullish-harami)-র mirror; সংজ্ঞা, inside bar-এর সঙ্গে তফাত আর gap-এর ব্যাখ্যা সেখানে বিস্তারিত। এখানে শুধু যা আলাদা।
 
-## Market Psychology & প্রাতিষ্ঠানিক অর্ডার ফ্লো
-আপট্রেন্ডের শীর্ষে এসে বায়ারদের বাষ্প শেষ হয়ে যাওয়ার সংকেত। প্রথম দীর্ঘ সবুজ ক্যান্ডেলের পর বায়াররা আর কোনো নতুন হাই তৈরি করতে পারে না। দ্বিতীয় ছোট লাল ক্যান্ডেলটি প্রথম ক্যান্ডেলের পেটের মধ্যে সীমাবদ্ধ থেকে প্রমাণ করে যে প্রাতিষ্ঠানিক সেলাররা উপরে সাপ্লাই তৈরি করেছে।
+## এক নজরে
 
-## ক্যান্ডেল অ্যানাটমির ৫টি অপরিহার্য শর্ত
-1. **Candle 1 (Mother Bar):** দীর্ঘ সবুজ ক্যান্ডেল যা চলমান আপট্রেন্ডের শিখর।
-2. **Candle 2 (Inside Bar):** ছোট আকারের লাল ক্যান্ডেল যা প্রথম ক্যান্ডেলের রিয়েল বডির ভেতরে সম্পূর্ণ বন্দি।
-3. **Contained Range:** দ্বিতীয় ক্যান্ডেলের রেঞ্জ যেন প্রথম ক্যান্ডেলের রেঞ্জকে অতিক্রম না করে।
-4. **Key Location:** উচ্চ টাইমফ্রেমের রেজিস্ট্যান্স বা সাপ্লাই জোনে অবস্থান।
-5. **Breakdown Trigger:** পরবর্তী ক্যান্ডেল ইনসাইড বারের লো ব্রেক করে নিচে ক্লোজ হতে হবে।
+| বিষয়                | Bearish Harami                                                                                         |
+| :------------------- | :----------------------------------------------------------------------------------------------------- |
+| ধরন                  | Bearish reversal ঝোঁক, দুই candle (confirmation ছাড়া দুর্বল)                                          |
+| কোথায় খুঁজবেন       | Uptrend-এর শেষে, চিহ্নিত resistance-এ                                                                  |
+| চেনার মূল চিহ্ন      | লম্বা bullish "mother" candle, তারপর ছোট candle যার body mother-এর body-র ভেতরে                        |
+| Confirmation         | পরের candle mother body-র মাঝের (50%) নিচে নামা বা close করা                                           |
+| Stop                 | Mother candle-এর high-এর উপরে, spread-সহ buffer                                                        |
+| বাতিল (invalidation) | Mother-এর high-এর উপরে close                                                                           |
+| দেখতে একই রকম        | [Inside Bar](/bn/patterns/inside-bar), bearish harami cross, [Evening Star](/bn/patterns/evening-star) |
+| বিপরীত pattern       | Bullish Harami                                                                                         |
 
-## লাভজনক ট্রেড নেওয়ার ৩টি প্রমাণিত কৌশল (Execution Blueprint)
-**কৌশল ১ (ইনসাইড বার লো ব্রেকআউট):** দ্বিতীয় ছোট ক্যান্ডেলের লো পার হলে Sell Stop দিন। স্টপ লস মাদার ক্যান্ডেলের হাই এর উপরে।
-**কৌশল ২ (মাদার বার লো ব্রেক - নিরাপদ কৌশল):** প্রথম বড় ক্যান্ডেলের লো ব্রেক হওয়া পর্যন্ত অপেক্ষা করে সেল দিন।
-**কৌশল ৩ (M15 অর্ডার ব্লক রিটেস্ট):** দ্বিতীয় ক্যান্ডেলে M15 বেয়ারিশ অর্ডার ব্লকের রিটেস্টে সেল এক্সিকিউট করুন।
+## এই লেখা পড়ে আপনি যা পারবেন
 
-## কোথায় সফল হবে বনাম কোথায় ফাঁদে পড়বেন
-- ✅ **A+ হাই-প্রোবাবিলিটি সেটআপ:** ডেইলি সাপ্লাই জোন, এশিয়ান হাই লিকুইডিটি সুইপ, এবং ওভারবট RSI লেভেল।
-- ❌ **লস খাওয়ার ট্র্যাপ (Avoid):** শক্তিশালী ট্রেন্ডিং মার্কেটের মাঝপথে বা সাপোর্ট জোনে শর্ট করা।
+- Bearish harami আর harami cross **চিনতে** পারবেন।
+- Reversal pattern-এর জন্য **আগে trend আছে কি না** যাচাই করতে পারবেন।
+- Mother-এর মাঝ ভাঙলে entry আর mother-এর open-এ প্রথম বাধা **ঠিক করতে** পারবেন।
 
-> ⚠️ **প্রো মানি ম্যানেজমেন্ট ও সাইকোলজি টিপ:** বিয়ারিশ হারামি তৈরি হওয়ার পর দ্রুত ট্রেড ম্যানেজ করুন এবং প্রথম সাপোর্টে ৫০% প্রফিট বুক করুন। সর্বোচ্চ ১% থেকে ২% ঝুঁকি নিয়ে প্রতিটি ট্রেডে নির্ধারিত স্টপ লস ব্যবহার করুন।
+## কেন জরুরি
+
+- **Uptrend-এর দম ফুরানোর ছবি।** বড় সবুজ candle-এর পর ছোট candle মানে buyers আর আগের মতো তুলতে পারছে না।
+- **Range-এ প্রায় অর্থহীন।** উল্টানোর মতো trend না থাকলে harami শুধু দুটি এলোমেলো candle।
+- **Top-এ harami cross বেশি অর্থবহ।** Nison-এর পর্যবেক্ষণ: top-এ doji বেশি গুরুত্বপূর্ণ, আর harami cross সেই doji-কে mother-এর ভেতরে বসায়।
+
+পূর্বশর্ত: Bullish Harami পাতা (উপরে link) আর [Trend, Range ও HH-HL](/bn/learn/03-market-structure/02-trend-range-hhhl)।
+
+## Bearish Harami কী
+
+**Bearish harami হলো দুই candle-এর pattern: uptrend-এ একটি লম্বা bullish candle, তারপর একটি ছোট candle, যার body পুরোটা আগের body-র ভেতরে।** ছোট candle doji হলে সেটা **bearish harami cross**।
+
+<CandleDiagram
+  title="Bearish harami cross"
+  candles={[
+    { o: 40, h: 46, l: 39, c: 45, dim: true },
+    { o: 45, h: 51, l: 44, c: 50, dim: true },
+    { o: 50, h: 64, l: 49, c: 63, label: "mother", note: "লম্বা সবুজ body" },
+    {
+      o: 63,
+      h: 64,
+      l: 60,
+      c: 62.8,
+      label: "harami cross",
+      note: "body-র ভেতরে doji",
+    },
+    { o: 62.8, h: 63, l: 55, c: 56, dim: true },
+  ]}
+  caption="লম্বা সবুজ mother-এর body-র উপরের দিকে একটি doji। পরের candle mother body-র মাঝ (56.5) পর্যন্ত নামে।"
+/>
+
+### চেনার নিয়ম
+
+| নিয়ম                                               | বাধ্যতামূলক? | কেন                                                |
+| :-------------------------------------------------- | :----------- | :------------------------------------------------- |
+| আগে স্পষ্ট uptrend (higher high, higher low)        | হ্যাঁ        | উল্টানোর মতো trend না থাকলে reversal-এর প্রশ্ন নেই |
+| Mother candle লম্বা bullish                         | হ্যাঁ        | ছোট mother-এর ভেতরে থাকা কিছু প্রমাণ করে না        |
+| দ্বিতীয় candle-এর body mother-এর body-র ভেতরে, ছোট | হ্যাঁ        | এটাই "harami"                                      |
+| চিহ্নিত resistance-এ                                | হ্যাঁ        | Level ছাড়া এটা uptrend-এর বিশ্রাম                 |
+| দ্বিতীয় candle doji (harami cross)                 | না           | আরও স্পষ্ট সিদ্ধান্তহীনতা                          |
+
+## শক্তিশালী বনাম দুর্বল bearish harami
+
+<DiagramRow>
+  <CandleDiagram
+    title="শক্তিশালী"
+    verdict="good"
+    verdictLabel="trade-যোগ্য"
+    candles={[
+      { o: 40, h: 46, l: 39, c: 45, dim: true },
+      { o: 45, h: 51, l: 44, c: 50, dim: true },
+      { o: 50, h: 61, l: 49.5, c: 60.5 },
+      { o: 60.5, h: 61, l: 58.5, c: 60.4, label: "level-এ cross" },
+    ]}
+    levels={[{ price: 61, label: "পুরোনো high", tone: "resistance" }]}
+    caption="Uptrend-এর শেষে পুরোনো high-এ, mother-এর উপরের দিকে doji।"
+  />
+  <CandleDiagram
+    title="দুর্বল"
+    verdict="bad"
+    verdictLabel="এড়িয়ে চলুন"
+    candles={[
+      { o: 50, h: 52, l: 48, c: 51, dim: true },
+      { o: 51, h: 52, l: 48.5, c: 49, dim: true },
+      { o: 49, h: 51.5, l: 48.5, c: 50.5, dim: true },
+      { o: 50.5, h: 53.5, l: 50, c: 53 },
+      { o: 53, h: 53.2, l: 51.8, c: 52.2, label: "range-এ" },
+    ]}
+    caption="পাশাপাশি range-এ সবুজ candle আর তার ভেতরে ছোট candle। উল্টানোর মতো trend নেই।"
+  />
+</DiagramRow>
+
+| মান যাচাই       | শক্তিশালী                                 | দুর্বল                                |
+| :-------------- | :---------------------------------------- | :------------------------------------ |
+| আগে কী ছিল      | স্পষ্ট uptrend                            | পাশাপাশি range বা এলোমেলো candle      |
+| জায়গা          | চিহ্নিত পুরোনো high বা supply zone-এ      | Range-এর ভেতরে বা breakout-এর ঠিক পরে |
+| দ্বিতীয় candle | Doji বা খুব ছোট                           | প্রায় mother-এর অর্ধেক বড়           |
+| নিচে জায়গা     | Mother-এর open বা swing low পর্যন্ত 1.5R+ | কাছেই range-এর তলা                    |
+
+## Candle-এর ভেতরের গল্প
+
+Bullish harami-র গল্পই উল্টো দিকে। একটি প্রচলিত ব্যাখ্যা: লম্বা সবুজ mother-এ buyers জোরে তোলে। পরের candle নতুন high প্রায় বানায় না, ছোট range-এ ঘোরে। Buyers থেমেছে, sellers এখনো আক্রমণ করেনি। পরের candle mother body-র মাঝের নিচে নামলে sellers প্রথম জয় পায়।
+
+<Callout type="note">
+  এটি একটি প্রচলিত ব্যাখ্যা, প্রমাণিত ঘটনা নয়। Chart দেখে কে কিনেছে বা বেচেছে,
+  তা জানা যায় না।
+</Callout>
+
+## কোথায় কাজ করে, কোথায় করে না
+
+<Compare
+  leftLabel="যেখানে bearish harami-র ওজন বেশি"
+  rightLabel="যেখানে bearish harami প্রায়ই ফাঁদ"
+  left="- স্পষ্ট uptrend-এর শেষে চিহ্নিত resistance-এ
+- দ্বিতীয় candle doji হলে (harami cross)
+- পরের candle mother body-র মাঝের নিচে নামলে
+- নিচে swing low পর্যন্ত যথেষ্ট জায়গা থাকলে"
+  right="- পাশাপাশি range-এর ভেতরে, কোনো trend ছাড়া
+- Range breakout candle-এর ঠিক পরে (প্রায়ই শুধু বিরতি)
+- শক্তিশালী uptrend-এর মাঝে ছোট high-এ
+- Target mother-এর open-এর ওপারে বসালে"
+/>
+
+## 24 ঘণ্টার বাজারে gap
+
+<Callout type="note">
+  Bullish harami-র মতোই: Forex-এ দ্বিতীয় candle সাধারণত mother-এর close-এই open
+  করে। বাস্তব নিয়ম: **দ্বিতীয় candle mother-এর close-এর কাছে open করে, নতুন
+  high না বানিয়ে (বা সামান্য বানিয়ে) mother-এর body-র ভেতরে close করে।**
+</Callout>
+
+## ধাপে ধাপে: bearish harami trade
+
+পুরো ধাপ Bullish Harami পাতায় আছে, উল্টো দিকে। শুধু যা আলাদা:
+
+<Steps>
+
+### ধাপ ১: আগে trend যাচাই
+
+শেষ ১০-২০ candle-এ higher high আর higher low আছে? না থাকলে এখানেই থামুন। বিস্তারিত: [Swing High ও Low](/bn/learn/03-market-structure/01-swing-high-low)।
+
+### ধাপ ২: দুটি রেখা
+
+Mother body-র মাঝ (entry trigger) আর mother-এর open (প্রথম বাধা)।
+
+### ধাপ ৩: Entry ও stop
+
+Mother-এর মাঝের একটু নিচে sell stop। Stop mother-এর high-এর উপরে, [spread](/bn/learn/01-foundations/04-spread-commission-swap)-সহ। Mother-এর open পর্যন্ত [risk reward](/bn/learn/08-risk-management/03-risk-reward) কম হলে সেখানে partial, বা পরের swing low পর্যন্ত 1.5R না থাকলে বাদ।
+
+</Steps>
+
+### Trade-এর আগে checklist
+
+<Checklist
+  id="pattern-bearish-harami-pretrade-bn"
+  items={[
+    "আগে স্পষ্ট uptrend ছিল, আর resistance আগেই চিহ্নিত ছিল?",
+    "আকার নিয়ম মানছে (লম্বা সবুজ mother, ছোট body তার body-র ভেতরে)?",
+    "দুটি candle বন্ধ হয়েছে, আর entry trigger mother body-র মাঝের নিচে?",
+    "নিচের swing low বা বাধা পর্যন্ত risk reward অন্তত 1:1.5?",
+    "Higher timeframe-এর trend বা level trade-এর বিপরীতে নেই?",
+  ]}
+/>
+
+একটি ঘরও খালি থাকলে trade বাদ দিন।
+
+## উদাহরণ ১: যখন কাজ করে (কাল্পনিক)
+
+<Chart
+  id="bearish-harami-win-01"
+  height={420}
+  caption="GBPUSD H4 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — পুরোনো high-এ bearish harami cross, mother-এর মাঝের নিচে short।"
+/>
+
+- **কী দেখা যাচ্ছিল:** ৫ নম্বর candle 1.2582-এ পুরোনো high রেখে গেছে। ৬-১০ নম্বর প্রায় 1.2481 পর্যন্ত নামে, ১১-১৪ নম্বর আবার ওঠে।
+- **Harami cross:** ১৫ নম্বর mother: 1.2542 থেকে 1.2580, body 38 pip, high 1.2584। ১৬ নম্বর 1.2580-এ open, 1.25795-এ close: doji, mother-এর body-র উপরের দিকে।
+- **সিদ্ধান্ত:** Mother-এর মাঝ 1.2561। Sell stop 1.2559, stop 1.2589 (mother high-এর উপরে), ঝুঁকি 30 pip। Target 1.2499 (2R); swing low পর্যন্ত জায়গা প্রায় 2.6R।
+- **ফল:** ১৭ নম্বর মাঝ ভেদ করে order fill করে। ২১ নম্বর candle target ছোঁয়।
+- **শিক্ষা:** আগে trend ছিল, level ছিল, doji-র harami cross, আর entry মাঝ ভাঙার পর।
+
+<TradeSetup
+  direction="short"
+  pair="GBPUSD"
+  entry={1.2559}
+  stop={1.2589}
+  target={1.2499}
+/>
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়। সব bearish harami reversal আনে না, আর কোনো ফল গ্যারান্টি নয়।)
+
+## উদাহরণ ২: যখন ফাঁদ হয় (কাল্পনিক)
+
+<Chart
+  id="bearish-harami-fail-01"
+  height={420}
+  caption="EURUSD H1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — পাশাপাশি range-এ bearish harami, উল্টানোর মতো trend নেই, তারপর stop।"
+/>
+
+- **কী দেখা যাচ্ছিল:** ০-৮ নম্বর candle প্রায় 1.0892 থেকে 1.0924-এর মধ্যে পাশাপাশি ঘুরেছে। Higher high বা lower low-এর কোনো সারি নেই।
+- **Harami:** ৯ নম্বর সবুজ mother (1.0914 থেকে 1.0934), range-এর উপরের প্রান্ত পর্যন্ত। ১০ নম্বর ছোট লাল (1.0934 থেকে 1.0927), body-র ভেতরে।
+- **ভুল সিদ্ধান্ত:** "আকার নিখুঁত।" Sell stop 1.0923 (মাঝের নিচে), stop 1.0940, ঝুঁকি 17 pip।
+- **কী হলো:** ১১ নম্বর order fill করে, ১২ নম্বর আবার ওঠে, ১৩ নম্বর stop ভাঙে।
+- **কেন ব্যর্থ:** উল্টানোর মতো uptrend ছিল না; mother ছিল range-এর ভেতরের আরেকটি ঢেউ, বরং উপরে ভাঙার চেষ্টা। Checklist-এর প্রথম ঘরেই trade বাদ পড়ত।
+
+**শিক্ষা:** Reversal pattern-এর জন্য উল্টানোর মতো trend লাগে। Stop আগে বসানো ছিল বলে লোকসান 1R-এ আটকেছে।
+
+## সাধারণ ভুল
+
+| ভুল                                  | কেন হয়                    | কী করবেন                                              |
+| :----------------------------------- | :------------------------- | :---------------------------------------------------- |
+| Range-এ harami trade                 | আকার দেখে trend ধরে নেওয়া | আগে higher high ও higher low গুনুন                    |
+| Breakout candle-এর পরের harami short | বিরতিকে reversal ভাবা      | Breakout-এর পরের harami প্রায়ই continuation-এর বিরতি |
+| Stop ছোট candle-এর high-এ            | ছোট stop-এর লোভ            | Mother-এর high-এর উপরে                                |
+| Mother-এর open-কে বাধা না ভাবা       | Target বইয়ের 2R           | Mother-এর open-এ partial বা R:R মাপুন                 |
+
+## Pro tips
+
+<Callout type="tip">
+  Harami-র পরের candle mother-এর open-এর নিচে close করলে তিন candle মিলে প্রায়ই
+  **three inside down** তৈরি হয়, যা অনেক শক্ত signal। বিস্তারিত: [Three Inside
+  Down](/bn/patterns/three-inside-down)।
+</Callout>
+
+<Callout type="tip">
+  Range breakout candle-এর পর harami এলে উল্টোভাবে ভাবুন: এটা প্রায়ই
+  breakout-এর পরের বিশ্রাম। তখন short নয়, breakout-এর দিকে retest-এর সুযোগ
+  খুঁজুন।
+</Callout>
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- Bearish harami = লম্বা সবুজ mother candle, তারপর ছোট candle যার body mother-এর body-র ভেতরে।
+- আগে স্পষ্ট uptrend না থাকলে এটা reversal pattern নয়, শুধু দুটি candle।
+- Entry mother body-র মাঝ ভাঙার পর; stop mother-এর high-এর উপরে; প্রথম বাধা mother-এর open।
+- Top-এ harami cross (doji) বেশি অর্থবহ।
+
+</KeyTakeaways>
+
+## অনুশীলন ও নিজের backtest
+
+TradingView-এ GBPUSD H4 বা EURUSD H1 খুলুন। অন্তত ২০টি bearish harami খুঁজুন। প্রতিটির জন্য লিখুন: তারিখ, আগে uptrend ছিল কি না (শেষ ১০ candle-এ higher high ও higher low), resistance-এ ছিল কি না, harami cross কি না, মাঝ ভেঙেছে কি না, ফল (R)। এরপর "আগে trend" আর "আগে range" দুই দলে ভাগ করে গড় R তুলনা করুন। অন্তত ৩০টি নমুনা ছাড়া সিদ্ধান্ত নেবেন না।
+
+## কুইজ
+
+1. Bearish harami cross কী?
+2. Range-এর ভেতরে নিখুঁত bearish harami। কী করবেন?
+3. Bearish harami-র নিচের প্রথম বাধা কোথায়?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** Bearish harami, যেখানে ছোট candle-টা doji। লম্বা সবুজ mother-এর body-র ভেতরে একটি doji।
+
+**২.** Trade বাদ। উল্টানোর মতো uptrend নেই, তাই reversal pattern-এর অর্থও নেই।
+
+**৩.** Mother candle-এর open।
+
+</details>
+
+## পরের ধাপ
+
+- পুরো walk-through: [Bullish Harami](/bn/patterns/bullish-harami)।
+- Trend আছে কি না: [Trend, Range ও HH-HL](/bn/learn/03-market-structure/02-trend-range-hhhl)।
+- একই পরিবারের pattern: [Inside Bar](/bn/patterns/inside-bar), [Evening Star](/bn/patterns/evening-star), [Three Inside Down](/bn/patterns/three-inside-down)।
+
+<Disclaimer />

@@ -1,0 +1,183 @@
+{
+  "id": "inverted-hammer-fail-01",
+  "title": {
+    "en": "Inverted Hammer Mid-Downtrend, Bought on a Half Confirmation",
+    "bn": "Downtrend-এর মাঝে inverted hammer, আধা confirmation-এ buy"
+  },
+  "symbol": "GBPUSD",
+  "timeframe": "H4",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bullish",
+  "outcome": "loss",
+  "tags": [
+    "inverted-hammer",
+    "candlestick",
+    "fail",
+    "location",
+    "confirmation",
+    "pattern"
+  ],
+  "module": "patterns",
+  "lessonSlugs": [],
+  "caption": {
+    "en": "Illustrative synthetic GBPUSD H4: an inverted hammer forms in the middle of a steady downtrend with no support. The next candle closes above its body but well below its high; the long taken there is stopped out as the downtrend resumes.",
+    "bn": "শিক্ষামূলক কাল্পনিক GBPUSD H4: কোনো support ছাড়া একটানা downtrend-এর মাঝে একটি inverted hammer। পরের candle তার body-র উপরে কিন্তু high-এর অনেক নিচে close করে; সেখানে নেওয়া long-এর stop হয়, downtrend আবার চলে।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data, not a real market record.",
+    "bn": "শিক্ষামূলক কাল্পনিক ডেটা, বাস্তব মার্কেটের রেকর্ড নয়।"
+  },
+  "updatedAt": "2026-11-06T12:00:00Z",
+  "annotations": [
+    {
+      "type": "marker",
+      "i": 8,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Inverted hammer (no level)"
+    },
+    {
+      "type": "marker",
+      "i": 9,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Half confirmation"
+    },
+    {
+      "type": "hline",
+      "price": 1.2758,
+      "label": "Entry",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.2733,
+      "label": "Stop",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.2808,
+      "label": "Target 2R",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candles 0-7 are a steady downtrend of lower highs. Candle 8 has the inverted hammer shape, but no support lies under it, and its upper wick stops under the last lower high. Candle 9 closes above the body yet far below the high: only half a confirmation. The long entered there is stopped out by candle 10.",
+    "bn": "০-৭ নম্বর candle একটানা downtrend, lower high-এর সারি। ৮ নম্বরের আকার inverted hammer, কিন্তু নিচে কোনো support নেই, আর উপরের wick শেষ lower high-এর নিচে থেমেছে। ৯ নম্বর body-র উপরে কিন্তু high-এর অনেক নিচে close করে: আধা confirmation। সেখানে নেওয়া long ১০ নম্বরে stop হয়।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Mid-downtrend, an upper wick is sellers rejecting higher prices",
+      "bn": "Downtrend-এর মাঝে উপরের wick মানে sellers উপরের দাম ফিরিয়ে দিয়েছে"
+    }
+  ],
+  "entry": 1.2758,
+  "stopLoss": 1.2733,
+  "takeProfit": 1.2808,
+  "rr": "1:2.0",
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.29,
+      "h": 1.29096,
+      "l": 1.28678,
+      "c": 1.2875
+    },
+    {
+      "i": 1,
+      "o": 1.2875,
+      "h": 1.28816,
+      "l": 1.28359,
+      "c": 1.2845
+    },
+    {
+      "i": 2,
+      "o": 1.2845,
+      "h": 1.28591,
+      "l": 1.28395,
+      "c": 1.2855
+    },
+    {
+      "i": 3,
+      "o": 1.2855,
+      "h": 1.2863,
+      "l": 1.28108,
+      "c": 1.282
+    },
+    {
+      "i": 4,
+      "o": 1.282,
+      "h": 1.28269,
+      "l": 1.2785,
+      "c": 1.2792
+    },
+    {
+      "i": 5,
+      "o": 1.2792,
+      "h": 1.28046,
+      "l": 1.27871,
+      "c": 1.28
+    },
+    {
+      "i": 6,
+      "o": 1.28,
+      "h": 1.28099,
+      "l": 1.27582,
+      "c": 1.2768
+    },
+    {
+      "i": 7,
+      "o": 1.2768,
+      "h": 1.27758,
+      "l": 1.27316,
+      "c": 1.2742
+    },
+    {
+      "i": 8,
+      "o": 1.2742,
+      "h": 1.2776,
+      "l": 1.2739,
+      "c": 1.2748
+    },
+    {
+      "i": 9,
+      "o": 1.2748,
+      "h": 1.2762,
+      "l": 1.2746,
+      "c": 1.2758
+    },
+    {
+      "i": 10,
+      "o": 1.2758,
+      "h": 1.27639,
+      "l": 1.27281,
+      "c": 1.2736
+    },
+    {
+      "i": 11,
+      "o": 1.2736,
+      "h": 1.27438,
+      "l": 1.26931,
+      "c": 1.2706
+    },
+    {
+      "i": 12,
+      "o": 1.2706,
+      "h": 1.27159,
+      "l": 1.2702,
+      "c": 1.2712
+    },
+    {
+      "i": 13,
+      "o": 1.2712,
+      "h": 1.27205,
+      "l": 1.26754,
+      "c": 1.2684
+    }
+  ]
+}

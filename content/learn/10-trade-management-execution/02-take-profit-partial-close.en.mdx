@@ -1,0 +1,187 @@
+---
+title: "Take Profit and Partial Close: Where and How Much Profit to Take"
+description: "Where to place take profit, how partial close works, the pros and cons of moving the stop to break-even, and an example of giving profit back through greed, with charts."
+level: intermediate
+tags: [take-profit, partial-close, break-even, target, trade-management]
+instruments: [EURUSD]
+timeframes: [H1]
+status: done
+sources:
+  - type: blog
+    title: "Take-Profit Order - Investopedia"
+    url: "https://www.investopedia.com/terms/t/take-profitorder.asp"
+  - type: blog
+    title: "Risk-Reward Ratio - BabyPips"
+    url: "https://www.babypips.com/learn/forex/risk-reward-ratio"
+updated: 2026-11-06
+---
+
+# Take Profit and Partial Close: Where and How Much Profit to Take
+
+Price went 60 pips your way. You wanted more. Then price came back and touched your stop. The profit on paper never reached your bank.
+
+## What you will be able to do
+
+- **Place the target** by looking at structure and ratio.
+- **Decide the rules** for a partial close.
+- **State the benefit and cost** of moving the stop to break-even.
+
+## Why it matters
+
+- **If you do not protect profit, the numbers do not add up.** The [ratio](/en/learn/08-risk-management/03-risk-reward) is good on paper, but not in reality.
+- **Without a target, greed makes the decisions.** A rule set in advance reduces emotion.
+- **A partial close reduces mental pressure.** Some profit is secure, and the rest is for the move.
+
+Prerequisites: [Stop Loss Placement](/en/learn/10-trade-management-execution/01-stop-loss-placement) and [Support and Resistance](/en/learn/05-support-resistance/01-levels-vs-zones).
+
+## What are take profit and partial close
+
+**Take profit (TP) is a price decided in advance at which the trade closes in profit. Partial close means closing part of the position early and letting the rest run.**
+
+Think of harvesting. You put half the crop in the barn first and let the rest ripen in the field. Even if a storm comes, at least half is safe.
+
+| Method          | How                                     | Benefit                      | Cost                            |
+| :-------------- | :-------------------------------------- | :--------------------------- | :------------------------------ |
+| One target      | The whole position at one place         | Simple, clear rule           | No protection of partial profit |
+| Partial close   | Half at 1R, the rest at a bigger target | Part of the profit is secure | Less total profit on a big move |
+| Break-even stop | Once in profit, stop at the entry price | Risk of loss close to zero   | Can be cut by a normal pullback |
+
+## What it looks like on a chart
+
+<Chart
+  id="tp-partial-win-01"
+  height={440}
+  caption="EURUSD H1 (educational, imaginary example): buy at 1.0900, stop 1.0870. Half closed at 1.0930 (1R). The rest runs to the target at 1.0990 (3R)."
+/>
+
+TP1 (the gold line) and the final target are separate. Price touched TP1, fell a little, and rose again.
+
+## Step by step: target and partial close
+
+<Steps>
+
+### Step 1: Mark the nearest barrier
+
+Where is the next resistance or swing high? The target goes before it, or just below it.
+
+### Step 2: Match the minimum ratio
+
+It is good if the target distance is at least about twice the stop. If it is below that, skip the trade.
+
+### Step 3: Write the partial close rule
+
+For example: half closed at 1R, the rest at the final target. Write the rule before the trade.
+
+### Step 4: Decide the stop rule
+
+After the partial close, does the stop go to break-even? At once, or below a new [swing low](/en/learn/03-market-structure/01-swing-high-low)? Decide beforehand.
+
+### Step 5: Follow the rules
+
+When price is near the TP, do not make a new decision. The earlier rule runs.
+
+</Steps>
+
+## Example 1: when it works (synthetic)
+
+- **Set in advance:** risk 1%, stop 30 pips, TP1 half at 1R, final target 3R.
+- **Result:** TP1 was secured, price fell a little but did not reach the stop, and then touched the final target.
+- **Lesson:** because the rules were written first, there was no need to change the decision on the pullback.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Example 2: when it fails (synthetic)
+
+<Chart
+  id="tp-greedy-fail-01"
+  height={440}
+  caption="EURUSD H1 (educational, imaginary example): buy at 1.0900, stop 1.0870, target 1.1000. Price touched about +2R, reversed and hit the stop at 1.0870. There was no partial close and no stop move."
+/>
+
+- **What was visible:** price reached near 1.0960, with open profit of about 2R.
+- **Result:** price came back and touched the stop. The loss is the full 1R.
+- **Why it failed:** there was no rule for a partial close or for moving the stop.
+- **Lesson:** open profit is not secure. Without a rule, you can lose the profit too.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Common mistakes
+
+| Mistake                               | Why it happens        | What to do                       |
+| :------------------------------------ | :-------------------- | :------------------------------- |
+| Entering without setting a target     | "Let's see"           | Write it before entry            |
+| Moving the stop to break-even at once | Fear of a loss        | Leave room for a normal pullback |
+| A target at an unrealistic distance   | Greed for more profit | Look at the nearest barrier      |
+| Changing the rules mid-profit         | Emotion               | Follow the earlier rules         |
+
+## Pro tips
+
+<Callout type="tip">
+  Choose the share for the partial close (half, a third) to match your own
+  temperament. The share that keeps you calm is the one that works for you.
+</Callout>
+
+<Callout type="note">
+  A partial close changes the total ratio. In your
+  [Expectancy](/en/learn/08-risk-management/07-expectancy) calculation, add up
+  the results of all the parts.
+</Callout>
+
+## When this does not work
+
+- **When the position is very small:** it cannot be split (minimum lot).
+- **When spread and commission are high:** a small TP is wiped out by costs.
+- **In a strong trend:** by exiting early you leave the big move.
+- **When the break-even stop is very close:** a normal pullback cuts it.
+
+## Summary
+
+<KeyTakeaways>
+
+- The target is set by looking at structure and the minimum ratio.
+- A partial close secures part of the profit, and can lower the total profit.
+- Write the partial close and stop rules before the trade.
+- Open profit is not secure.
+
+</KeyTakeaways>
+
+## Practice
+
+Take your last three trades (or demo trades). In each, mark where 1R, 2R and 3R would have fallen. See the maximum R that price reached, and compare which rule would have protected more.
+
+## Quiz
+
+1. What is a partial close?
+2. Why is open profit not secure?
+3. Where do you usually place the target?
+4. What is the risk of a break-even stop?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** Closing part of the position early and letting the rest run.
+
+**2.** Price can come back and touch the stop, and without a rule you lose the profit.
+
+**3.** Before the nearest resistance or swing high, keeping to the minimum ratio.
+
+**4.** It can get cut by a normal pullback.
+
+</details>
+
+## Next steps
+
+- Before: [Stop Loss Placement](/en/learn/10-trade-management-execution/01-stop-loss-placement).
+- After: [Trailing Stop](/en/learn/10-trade-management-execution/03-trailing-stop).
+- Related: [Risk:Reward](/en/learn/08-risk-management/03-risk-reward).
+
+### Sources
+
+- <ExternalLink href="https://www.investopedia.com/terms/t/take-profitorder.asp">
+    Take-Profit Order, Investopedia
+  </ExternalLink>
+- <ExternalLink href="https://www.babypips.com/learn/forex/risk-reward-ratio">
+    Risk-Reward Ratio, BabyPips
+  </ExternalLink>
+
+<Disclaimer />

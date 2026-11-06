@@ -1,0 +1,184 @@
+---
+title: "Multi-Timeframe Analysis: From the Big Timeframe Down to the Entry"
+description: "Rules for setting bias, setup and entry with the top-down method by combining the higher, medium and lower timeframes."
+level: intermediate
+tags: [mtfa, timeframe, top-down, market-structure]
+instruments: [XAUUSD]
+timeframes: [D1, H4, H1, M15]
+status: done
+sources:
+  - type: blog
+    title: "Multiple Time Frame Analysis - BabyPips Forexpedia"
+    url: "https://www.babypips.com/forexpedia/multiple-time-frame-analysis"
+updated: 2026-11-06
+---
+
+# Multi-Timeframe Analysis: From the Big Timeframe Down to the Entry
+
+You see a nice uptrend on the M15 chart and buy. Soon after, price drops hard. The reason: on the H4 chart, price was inside a big downtrend, and your entry was right below an H4 resistance. When you look at one timeframe, you see only one corner of the picture.
+
+## What you will be able to do
+
+- **Describe** the separate job of each of three timeframes.
+- **Set** your **bias** from the higher timeframe.
+- **Time** your entry by watching for a **CHOCH** on the lower timeframe.
+- **Know** what to do when two timeframes say opposite things.
+
+## Why it matters
+
+- A trend on the lower timeframe is often just a pullback on the higher timeframe.
+- Entering from a higher-timeframe level makes the stop smaller and the target bigger.
+- You trade in the wrong direction less often, because the direction is set in advance.
+
+## What is top-down?
+
+**Multi-Timeframe Analysis (MTFA)** means looking at the same instrument on more than one timeframe. **Top-down** means starting from the big timeframe and stepping down to smaller ones.
+
+**Analogy:** on Google Maps, first look at the whole city, then the area, then the street. If you look at the street first, you cannot tell where in the city you are.
+
+## The job of each of the three levels
+
+| Level      | Job                                         | Example (day trader) |
+| :--------- | :------------------------------------------ | :------------------- |
+| **Higher** | Trend and big levels, that is, bias         | D1, H4               |
+| **Medium** | What price is doing near a level, structure | H1, M15              |
+| **Lower**  | Trigger and a small stop                    | M5, M1               |
+
+The common rule is to keep a gap of 4 to 6 times between the three timeframes. This is a habit among teachers, not a strict rule. Fix one set for your own style and stick to it.
+
+## What it looks like on a chart
+
+Say the H4 chart has a bullish bias and price has dropped to an H4 demand level. See what happened in that area on the H1 chart below.
+
+<Chart
+  id="mtf-topdown-01"
+  height={420}
+  caption="XAUUSD H1 (educational, synthetic example) — drops to the H4 level, CHOCH on H1, then entry at a higher low"
+/>
+
+Looking at the H1 chart alone, this is a downtrend. Once you know about the H4 level, you can see it is an area of possible reversal. The [BOS and CHOCH](/en/learn/03-market-structure/03-break-of-structure) from the earlier lesson acts as the trigger here.
+
+## Step by step
+
+<Steps>
+
+### Step 1: Bias on the higher timeframe
+
+Look at the [trend](/en/learn/03-market-structure/02-trend-range-hhhl) on D1 or H4: HH/HL, LH/LL, or a range. If it is a range, treat it as no bias.
+
+### Step 2: Mark the big levels
+
+Mark the H4 swing highs/lows and [liquidity pools](/en/learn/03-market-structure/04-liquidity-stop-hunts) near price.
+
+### Step 3: Watch price's behaviour on the medium timeframe
+
+What does price do when it comes near the level? Is structure changing? Wait.
+
+### Step 4: Trigger on the lower timeframe
+
+When a CHOCH or BOS appears in line with the bias, enter on the pullback. Wait until the candle closes.
+
+### Step 5: Stop and size
+
+Set the stop beyond the structure. Set the lot size with [position sizing](/en/learn/08-risk-management/02-position-sizing).
+
+</Steps>
+
+## When two timeframes say opposite things
+
+| Situation                                      | What to do                                     |
+| :--------------------------------------------- | :--------------------------------------------- |
+| H4 bullish, H1 bearish                         | Wait for the H1 pullback to end, then buy      |
+| H4 bullish, H1 bearish, and not at an H4 level | Do not trade                                   |
+| H4 in a range                                  | Watch the edges of the range, avoid the middle |
+
+The simplest rule: if you trade against the higher timeframe, raise the bar for proof, or skip it.
+
+## Real example
+
+<Callout type="note">
+  **The examples in this lesson are synthetic.** Verified real OHLC data has not
+  been added yet.
+</Callout>
+
+**Example (synthetic trade):** bullish bias on H4, price dropped to the demand level at 2340. On H1, a new LL formed at 2336, but then price closed above the last LH at 2356 (CHOCH). Price came down and made a higher low near 2347. You bought at 2353, with the stop below 2345 and a target of 2372. The risk is 8 points, the possible gain 19 points (about 2.4 times).
+
+## Failed example: ignoring the big picture (synthetic/educational)
+
+- **What could be seen:** a bullish CHOCH on M15, a nice setup.
+- **Decision:** buy, but H4 was in a downtrend at the time, right below an H4 supply level.
+- **Result:** price hit the supply, fell, and the stop was hit.
+- **Lesson:** a lower-timeframe CHOCH inside a higher-timeframe trend is often just a pullback.
+
+## Common mistakes
+
+| Mistake                          | Why it happens                        | What to do                  |
+| :------------------------------- | :------------------------------------ | :-------------------------- |
+| Looking only at M1/M5            | The pull of quick action              | Look at H4/D1 first         |
+| Looking at too many timeframes   | Wanting to be certain                 | Fix three and stick to them |
+| Changing timeframes every time   | Restlessness when results do not come | Keep your own set steady    |
+| Ignoring higher-timeframe levels | Looking only at your own setup        | Mark the big levels first   |
+
+## Pro tips
+
+<Callout type="tip">
+  When you open a chart, first write down on the higher timeframe: "bias = ?,
+  nearest big level = ?". Then move down to the lower timeframe. This habit cuts
+  down on rushing.
+</Callout>
+
+<Callout type="tip">
+  When you change timeframe, the candle size changes, so the stop changes too.
+  Set the stop each time from ATR or structure, not the same number of pips.
+</Callout>
+
+## When this does not work
+
+- **During big news:** all timeframes jump at once.
+- **In a range market:** the higher timeframe has no bias.
+- **In scalping:** for an M1 trade, D1 analysis is often not relevant.
+- **When used alone:** it helps you pick direction and timing; it does not guarantee profit.
+
+## Summary
+
+<KeyTakeaways>
+
+- The higher timeframe gives bias, the medium shows structure, the lower gives the trigger.
+- Step down from big to small, not the other way round.
+- A lower-timeframe CHOCH against the higher timeframe is often just a pullback.
+- Fix three timeframes and keep them steady.
+- When there is no bias, not trading is also a decision.
+
+</KeyTakeaways>
+
+## Practice
+
+Open the XAUUSD D1, H4 and H1 charts side by side. Write the trend on each (bullish/bearish/range). Then find the last 10 CHOCHs on H1. How many were in the direction of the H4 bias, and how did price move after them? Write down the results.
+
+## Quiz
+
+1. What does top-down mean?
+2. What is the job of the higher timeframe?
+3. If H4 is bullish but H1 is bearish, what do you do?
+4. Why is looking at too many timeframes harmful?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** Starting from the big timeframe and stepping down to smaller timeframes.
+
+**2.** Setting the bias by looking at the trend and big levels.
+
+**3.** Wait for the H1 pullback to end and look for a trigger in the direction of the bias.
+
+**4.** Opposite signals cause confusion, and decisions get delayed.
+
+</details>
+
+## Next steps
+
+- Before: [Liquidity and Stop Hunts](/en/learn/03-market-structure/04-liquidity-stop-hunts).
+- After: [Premium, Discount and Swings](/en/learn/03-market-structure/06-premium-discount-zones).
+- Entry: [Multi-timeframe entry top-down](/en/learn/09-price-action-entries-strategies/03-multi-timeframe-entry-top-down).
+
+<Disclaimer />

@@ -1,0 +1,273 @@
+{
+  "id": "bearish-harami-win-01",
+  "title": {
+    "en": "Bearish Harami Cross at an Old High, Short Below the Mother Midpoint",
+    "bn": "পুরোনো high-এ bearish harami cross, mother-এর মাঝের নিচে short"
+  },
+  "symbol": "GBPUSD",
+  "timeframe": "H4",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bearish",
+  "outcome": "win",
+  "tags": [
+    "bearish-harami",
+    "harami",
+    "candlestick",
+    "resistance",
+    "pattern"
+  ],
+  "module": "patterns",
+  "lessonSlugs": [],
+  "caption": {
+    "en": "Illustrative synthetic GBPUSD H4: a long bullish candle runs into an old high, then a doji forms inside the top of its body: a bearish harami cross. The next candle falls through the mother's midpoint, filling a sell stop; price drops to 2R.",
+    "bn": "শিক্ষামূলক কাল্পনিক GBPUSD H4: একটি লম্বা bullish candle পুরোনো high-এ পৌঁছায়, তারপর তার body-র উপরের দিকে একটি doji: bearish harami cross। পরের candle mother-এর মাঝ ভেদ করে নামে, sell stop fill হয়; দাম 2R পর্যন্ত নামে।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data, not a real market record.",
+    "bn": "শিক্ষামূলক কাল্পনিক ডেটা, বাস্তব মার্কেটের রেকর্ড নয়।"
+  },
+  "updatedAt": "2026-11-06T12:00:00Z",
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 1.2582,
+      "label": "Old high (resistance)",
+      "color": "#3b82f6",
+      "style": "dashed"
+    },
+    {
+      "type": "marker",
+      "i": 15,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Mother"
+    },
+    {
+      "type": "marker",
+      "i": 16,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Harami cross"
+    },
+    {
+      "type": "hline",
+      "price": 1.2561,
+      "label": "Mother 50%",
+      "color": "#3b82f6",
+      "style": "dotted"
+    },
+    {
+      "type": "hline",
+      "price": 1.2559,
+      "label": "Entry (below 50%)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.2589,
+      "label": "Stop",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.2499,
+      "label": "Target 2R",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candle 5 makes the old high. Candle 15 is a long bullish mother candle up to it. Candle 16 is a doji inside the top of the mother's body: buying has stalled at the level. Candle 17 falls through the mother's midpoint and fills the sell stop; the stop sits above the mother's high.",
+    "bn": "৫ নম্বর candle পুরোনো high বানায়। ১৫ নম্বর সেখানে পর্যন্ত লম্বা bullish mother candle। ১৬ নম্বর mother-এর body-র উপরের দিকে একটি doji: level-এ buying থেমেছে। ১৭ নম্বর mother-এর মাঝ ভেদ করে sell stop fill করে; stop mother-এর high-এর উপরে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "A harami cross at a level shows buyers stalling; the mother's midpoint is the trigger",
+      "bn": "Level-এ harami cross দেখায় buyers থেমেছে; mother-এর মাঝ trigger"
+    }
+  ],
+  "entry": 1.2559,
+  "stopLoss": 1.2589,
+  "takeProfit": 1.2499,
+  "rr": "1:2.0",
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.25,
+      "h": 1.25283,
+      "l": 1.24891,
+      "c": 1.2518
+    },
+    {
+      "i": 1,
+      "o": 1.2518,
+      "h": 1.2555,
+      "l": 1.25043,
+      "c": 1.254
+    },
+    {
+      "i": 2,
+      "o": 1.254,
+      "h": 1.25448,
+      "l": 1.25263,
+      "c": 1.2532
+    },
+    {
+      "i": 3,
+      "o": 1.2532,
+      "h": 1.25688,
+      "l": 1.25176,
+      "c": 1.2557
+    },
+    {
+      "i": 4,
+      "o": 1.2557,
+      "h": 1.25786,
+      "l": 1.25472,
+      "c": 1.2572
+    },
+    {
+      "i": 5,
+      "o": 1.2572,
+      "h": 1.2582,
+      "l": 1.2562,
+      "c": 1.2564
+    },
+    {
+      "i": 6,
+      "o": 1.2564,
+      "h": 1.25721,
+      "l": 1.25304,
+      "c": 1.2544
+    },
+    {
+      "i": 7,
+      "o": 1.2544,
+      "h": 1.25596,
+      "l": 1.25053,
+      "c": 1.2519
+    },
+    {
+      "i": 8,
+      "o": 1.2519,
+      "h": 1.25256,
+      "l": 1.24964,
+      "c": 1.2504
+    },
+    {
+      "i": 9,
+      "o": 1.2504,
+      "h": 1.25162,
+      "l": 1.24977,
+      "c": 1.2512
+    },
+    {
+      "i": 10,
+      "o": 1.2512,
+      "h": 1.25237,
+      "l": 1.24814,
+      "c": 1.2494
+    },
+    {
+      "i": 11,
+      "o": 1.2494,
+      "h": 1.25172,
+      "l": 1.24842,
+      "c": 1.251
+    },
+    {
+      "i": 12,
+      "o": 1.251,
+      "h": 1.25386,
+      "l": 1.24965,
+      "c": 1.253
+    },
+    {
+      "i": 13,
+      "o": 1.253,
+      "h": 1.25492,
+      "l": 1.25241,
+      "c": 1.2544
+    },
+    {
+      "i": 14,
+      "o": 1.2544,
+      "h": 1.2547,
+      "l": 1.2539,
+      "c": 1.2542
+    },
+    {
+      "i": 15,
+      "o": 1.2542,
+      "h": 1.2584,
+      "l": 1.254,
+      "c": 1.258
+    },
+    {
+      "i": 16,
+      "o": 1.258,
+      "h": 1.2584,
+      "l": 1.2568,
+      "c": 1.25795
+    },
+    {
+      "i": 17,
+      "o": 1.25795,
+      "h": 1.25815,
+      "l": 1.2551,
+      "c": 1.2554
+    },
+    {
+      "i": 18,
+      "o": 1.2554,
+      "h": 1.25631,
+      "l": 1.25301,
+      "c": 1.2536
+    },
+    {
+      "i": 19,
+      "o": 1.2536,
+      "h": 1.25462,
+      "l": 1.25322,
+      "c": 1.2542
+    },
+    {
+      "i": 20,
+      "o": 1.2542,
+      "h": 1.25502,
+      "l": 1.25119,
+      "c": 1.252
+    },
+    {
+      "i": 21,
+      "o": 1.252,
+      "h": 1.25249,
+      "l": 1.24976,
+      "c": 1.2505
+    },
+    {
+      "i": 22,
+      "o": 1.2505,
+      "h": 1.25131,
+      "l": 1.25015,
+      "c": 1.251
+    },
+    {
+      "i": 23,
+      "o": 1.251,
+      "h": 1.25151,
+      "l": 1.24826,
+      "c": 1.249
+    },
+    {
+      "i": 24,
+      "o": 1.249,
+      "h": 1.24948,
+      "l": 1.24714,
+      "c": 1.2476
+    }
+  ]
+}

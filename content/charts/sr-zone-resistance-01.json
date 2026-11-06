@@ -1,0 +1,258 @@
+{
+  "symbol": "EURUSD",
+  "timeframe": "H4",
+  "mode": "synthetic",
+  "module": "05-support-resistance",
+  "lessonSlugs": [
+    "01-levels-vs-zones"
+  ],
+  "notes": {
+    "en": "Illustrative synthetic data.",
+    "bn": "এটি শিক্ষামূলক কাল্পনিক ডেটা।"
+  },
+  "updatedAt": "2026-11-05T16:00:00Z",
+  "id": "sr-zone-resistance-01",
+  "title": {
+    "en": "Resistance Zone, Not Resistance Line",
+    "bn": "Resistance line নয়, resistance zone"
+  },
+  "type": "trade-setup",
+  "bias": "bearish",
+  "outcome": "win",
+  "tags": [
+    "support-resistance",
+    "zone",
+    "resistance"
+  ],
+  "caption": {
+    "en": "Three touches near 1.0850 land at 1.0848, 1.0862 and 1.0856. A single line misses the pattern, a zone catches it.",
+    "bn": "1.0850-এর কাছে তিনবার ধাক্কা: 1.0848, 1.0862, 1.0856। একটি line এই pattern ধরতে পারে না, zone পারে।"
+  },
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.078,
+      "h": 1.0805,
+      "l": 1.0775,
+      "c": 1.08
+    },
+    {
+      "i": 1,
+      "o": 1.08,
+      "h": 1.083,
+      "l": 1.0796,
+      "c": 1.0825
+    },
+    {
+      "i": 2,
+      "o": 1.0825,
+      "h": 1.0848,
+      "l": 1.0822,
+      "c": 1.0846
+    },
+    {
+      "i": 3,
+      "o": 1.0846,
+      "h": 1.085,
+      "l": 1.0812,
+      "c": 1.082
+    },
+    {
+      "i": 4,
+      "o": 1.082,
+      "h": 1.0826,
+      "l": 1.079,
+      "c": 1.0798
+    },
+    {
+      "i": 5,
+      "o": 1.0798,
+      "h": 1.0802,
+      "l": 1.077,
+      "c": 1.0775
+    },
+    {
+      "i": 6,
+      "o": 1.0775,
+      "h": 1.0806,
+      "l": 1.0772,
+      "c": 1.08
+    },
+    {
+      "i": 7,
+      "o": 1.08,
+      "h": 1.0832,
+      "l": 1.0798,
+      "c": 1.0828
+    },
+    {
+      "i": 8,
+      "o": 1.0828,
+      "h": 1.0862,
+      "l": 1.0824,
+      "c": 1.0852
+    },
+    {
+      "i": 9,
+      "o": 1.0852,
+      "h": 1.0858,
+      "l": 1.0826,
+      "c": 1.083
+    },
+    {
+      "i": 10,
+      "o": 1.083,
+      "h": 1.0834,
+      "l": 1.08,
+      "c": 1.0805
+    },
+    {
+      "i": 11,
+      "o": 1.0805,
+      "h": 1.081,
+      "l": 1.0785,
+      "c": 1.079
+    },
+    {
+      "i": 12,
+      "o": 1.079,
+      "h": 1.082,
+      "l": 1.0786,
+      "c": 1.0815
+    },
+    {
+      "i": 13,
+      "o": 1.0815,
+      "h": 1.0842,
+      "l": 1.0812,
+      "c": 1.0838
+    },
+    {
+      "i": 14,
+      "o": 1.0838,
+      "h": 1.0856,
+      "l": 1.0834,
+      "c": 1.0842
+    },
+    {
+      "i": 15,
+      "o": 1.0842,
+      "h": 1.085,
+      "l": 1.0818,
+      "c": 1.0822
+    },
+    {
+      "i": 16,
+      "o": 1.0822,
+      "h": 1.0826,
+      "l": 1.0796,
+      "c": 1.08
+    },
+    {
+      "i": 17,
+      "o": 1.08,
+      "h": 1.0804,
+      "l": 1.0768,
+      "c": 1.0772
+    },
+    {
+      "i": 18,
+      "o": 1.0772,
+      "h": 1.0776,
+      "l": 1.074,
+      "c": 1.0745
+    },
+    {
+      "i": 19,
+      "o": 1.0745,
+      "h": 1.075,
+      "l": 1.0722,
+      "c": 1.0726
+    },
+    {
+      "i": 20,
+      "o": 1.0726,
+      "h": 1.0742,
+      "l": 1.072,
+      "c": 1.0738
+    }
+  ],
+  "annotations": [
+    {
+      "type": "zone",
+      "from": {
+        "price": 1.0865,
+        "i": 1
+      },
+      "to": {
+        "price": 1.084,
+        "i": 20
+      },
+      "label": "Resistance Zone",
+      "color": "#ef4444"
+    },
+    {
+      "type": "hline",
+      "price": 1.085,
+      "label": "Exact line 1.0850",
+      "color": "#94a3b8",
+      "style": "dashed"
+    },
+    {
+      "type": "marker",
+      "i": 2,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Touch 1"
+    },
+    {
+      "type": "marker",
+      "i": 8,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Touch 2"
+    },
+    {
+      "type": "marker",
+      "i": 14,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Touch 3"
+    },
+    {
+      "type": "hline",
+      "price": 1.0818,
+      "label": "Sell entry",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.0868,
+      "label": "Stop (above zone)",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.0722,
+      "label": "Target",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Highs of 1.0848, 1.0862 and 1.0856 never hit the same price, yet each stops inside 25 pips. The zone (1.0840-1.0865) describes where sellers act. Candle 16 closes below candle 15's low, so the short triggers; the stop sits above the zone, not inside it.",
+    "bn": "Highs 1.0848, 1.0862 ও 1.0856 কখনো একই দামে লাগেনি, তবু প্রতিটি ২৫ pip-এর মধ্যে থেমেছে। Zone (1.0840-1.0865) দেখায় sellers কোথায় সক্রিয়। ১৬ নম্বর candle ১৫-এর low-এর নিচে close করায় short ট্রিগার হয়; stop zone-এর উপরে, ভেতরে নয়।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Price reacts in an area, not at one exact number",
+      "bn": "দাম এক নির্দিষ্ট সংখ্যায় নয়, একটি এলাকায় সাড়া দেয়"
+    },
+    {
+      "en": "Put the stop beyond the zone, not inside it",
+      "bn": "Stop zone-এর বাইরে রাখুন, ভেতরে নয়"
+    }
+  ]
+}

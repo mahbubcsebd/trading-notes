@@ -1,0 +1,202 @@
+---
+title: "Fake Breakout: ফাঁদ চিনে উল্টো দিকে সুযোগ নেওয়া"
+description: "Fake breakout কী, কীভাবে চিনবেন, ব্যর্থতার পর উল্টো দিকে entry, stop ও target কীভাবে বসাবেন এবং কখন এটি ভুল পড়া হয় — chart সহ।"
+level: advanced
+tags: [fake-breakout, false-breakout, trap, range]
+instruments: [EURUSD]
+timeframes: [H4]
+status: done
+sources:
+  - type: blog
+    title: "False Breakout - Investopedia"
+    url: "https://www.investopedia.com/terms/f/false-breakout.asp"
+  - type: book
+    title: "Technical Analysis of the Financial Markets - John J. Murphy"
+    url: ""
+    note: "Breakout যাচাই ও false signal প্রসঙ্গ"
+updated: 2026-11-05
+---
+
+# Fake Breakout: ফাঁদ চিনে উল্টো দিকে সুযোগ নেওয়া
+
+আপনি breakout দেখে ঢুকলেন, পরের candle ফিরে এসে stop কেটে দিল। রাগ হয়। কিন্তু ভাবুন: ঠিক তখন যারা উল্টো দিকে অপেক্ষা করছিল, তারা কী পেল? **Fake breakout শুধু ক্ষতির কারণ নয়, সঠিকভাবে পড়লে এটি নিজেই একটি trade।**
+
+## এই লেখা পড়ে আপনি যা পারবেন
+
+- **Fake breakout** কী এবং কীভাবে তৈরি হয় তা ব্যাখ্যা করতে পারবেন।
+- Breakout ব্যর্থ হয়েছে কি না **একটি পরিষ্কার শর্তে যাচাই করতে পারবেন**।
+- উল্টো দিকের trade-এ **entry, stop ও target বসাতে পারবেন**।
+- Pullback-কে fake breakout ভেবে **ভুল করা এড়াতে পারবেন**।
+
+## কেন এটি জরুরি
+
+- **আটকে পড়া ক্রেতারা জ্বালানি।** তাদের stop ও বিক্রির order দামকে উল্টো দিকে ঠেলে। [Liquidity ও Stop Hunt](/bn/learn/03-market-structure/04-liquidity-stop-hunts) পাঠে এর ভিত্তি দেখেছেন।
+- **Stop অত্যন্ত স্পষ্ট।** Fake চূড়ার ওপরেই সব ঠিক হয়ে যায়।
+- **নিজের ক্ষতি কমে।** ফাঁদ চিনলে প্রথম breakout trade-এ দ্রুত বেরিয়ে আসা যায়।
+
+পূর্বশর্ত: [Range Breakout](/bn/learn/06-trend-chart-patterns/03-range-breakout) ও [Role Reversal](/bn/learn/05-support-resistance/02-role-reversal)।
+
+## Fake Breakout কী
+
+**Fake breakout হলো এমন breakout, যেখানে দাম একটি level পার হয়ে যায় কিন্তু সেখানে টিকে থাকতে পারে না এবং দ্রুত আগের range-এর ভিতরে ফিরে close করে।**
+
+ভাবুন একটি দোকানের দরজা। কয়েকজন ঠেলে ঢুকে পড়ল, তারপর দেখল ভিতরে ভিড় নেই, তাই বেরিয়ে এল। **ঢোকা আর টিকে থাকা আলাদা জিনিস।**
+
+Fake breakout চেনার একমাত্র নির্ভরযোগ্য শর্ত: **দাম ভাঙা level-এর ভিতরে ফিরে close করেছে।** Spike দেখেই নয়, ফিরে close দেখে।
+
+## Chart-এ কেমন দেখায়: ফাঁদ ও উল্টো trade
+
+<Chart
+  id="fakeout-reversal-01"
+  height={440}
+  caption="EURUSD H4 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — ১৮ নম্বর candle 1.0900 ভাঙে, ১৯ নম্বর 1.0888-এ ভিতরে ফিরে close করে; ২০ নম্বরে sell"
+/>
+
+গঠনটি তিন ধাপে:
+
+1. **ধাক্কা (১৮):** candle 1.0932 পর্যন্ত উঠল, কিন্তু 1.0912-এ close করল, বড় upper wick সহ।
+2. **ব্যর্থতা (১৯):** পরের candle 1.0888-এ close করে range-এর ভিতরে ফিরে এল। এটিই নিশ্চিতকরণ।
+3. **চাপ (২০ থেকে):** ওপরে ঢুকে যাওয়া ক্রেতারা আটকে গেছে। তাদের বেরোনোর বিক্রি দামকে নিচে ঠেলে।
+
+## ধাপে ধাপে: fake breakout trade
+
+<Steps>
+
+### ধাপ ১: আগে range বা level চিহ্নিত করুন
+
+Fake breakout একটি বৈধ level-এর ওপর নির্ভর করে। উদাহরণে 1.0900 top, Range Breakout পাঠের মতো।
+
+### ধাপ ২: ধাক্কা দেখুন
+
+Level পার হয়েছে, কিন্তু কেমন? সাধারণত লম্বা wick, ছোট body বা দুর্বল close। জোরালো body-র সত্যিকারের breakout হলে এ পথে যাবেন না।
+
+### ধাপ ৩: ফিরে close-এর অপেক্ষা করুন
+
+Candle ভাঙা level-এর ভিতরে close করেছে কি না দেখুন। না করলে কিছুই নিশ্চিত নয়, trade নেই।
+
+### ধাপ ৪: Entry নিন
+
+ফিরে close করার সময় সরাসরি, অথবা পরের candle-এর low ভাঙলে (উদাহরণে sell 1.0888)।
+
+### ধাপ ৫: Stop বসান fake চূড়ার ওপরে
+
+উদাহরণে 1.0932। দাম সেখানে ফিরলে ফাঁদের ধারণা ভুল প্রমাণিত। ঝুঁকি 44 pip।
+
+### ধাপ ৬: Target ঠিক করুন
+
+Range-এর বিপরীত প্রান্ত বা মাঝের একটি যুক্তিযুক্ত জায়গা। উদাহরণে 1.0808, দূরত্ব 80 pip, প্রায় 1.8 গুণ। অর্ধেক position মাঝপথে বন্ধ করা যায়। [Risk/Reward Ratio](/bn/learn/08-risk-management/03-risk-reward) পাঠে বিস্তারিত।
+
+</Steps>
+
+## উদাহরণ ১: যখন কাজ করে (কাল্পনিক)
+
+উপরের chart:
+
+- **কী দেখা যাচ্ছিল:** একই range (1.0800-1.0900)। ১৮ নম্বর candle 1.0932 ছুঁয়ে 1.0912-এ close করল, upper wick লম্বা।
+- **নিশ্চিতকরণ:** ১৯ নম্বর candle 1.0888-এ close করল, range-এর ভিতরে।
+- **Entry:** sell 1.0888।
+- **Stop:** 1.0932, fake চূড়ার ওপরে। ঝুঁকি 44 pip।
+- **Target:** 1.0808, দূরত্ব 80 pip।
+- **ফল:** দাম ধাপে ধাপে নেমে ২৮ নম্বরে target ছুঁল।
+- **শিক্ষা:** ১৮ নম্বরেই sell করলে ভুল ছিল, কারণ তখনো নিশ্চিত নয় যে ব্যর্থ। ভিতরে ফিরে close-ই চাবি।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়, কোনো ফলই গ্যারান্টি নয়।)
+
+## উদাহরণ ২: যখন ভুল পড়া হয় (কাল্পনিক)
+
+এবার উল্টোটা: সত্যিকারের breakout-কে fake ভেবে sell।
+
+<Chart
+  id="fakeout-misread-01"
+  height={440}
+  caption="EURUSD H4 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — ১৮ নম্বর জোরালো breakout; ১৯ নম্বর নামে কিন্তু 1.0912-এ close করে, 1.0900-এর ওপরেই; ২০ নম্বর stop কাটে"
+/>
+
+- **কী দেখা যাচ্ছিল:** ১৮ নম্বর candle 60 pip body নিয়ে 1.0936-এ close করেছে। বড় এবং জোরালো।
+- **সিদ্ধান্ত:** ১৯ নম্বর candle নামতেই trader ভাবলেন "ফাঁদ"। Sell 1.0910, stop 1.0946, ঝুঁকি 36 pip।
+- **কী হলো:** দাম 1.0900-এর নিচে close করেনি (১৯ নম্বর close 1.0912)। ২০ নম্বর candle জোরে উঠে stop কাটল। পরে দাম আরও উঠল।
+- **কেন ভুল:** ভিতরে ফিরে close হয়নি, তাই failure-এর শর্তই পূরণ হয়নি। এটি ছিল retest, ব্যর্থতা নয়।
+- **শিক্ষা:** Wick বা pullback দেখে fake ধরে নেবেন না। শর্ত হলো ভাঙা level-এর ভিতরে close। ক্ষতি ছিল পরিকল্পিত 36 pip।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়।)
+
+## সাধারণ ভুল
+
+| ভুল                          | কেন হয়               | কী করবেন                              |
+| :--------------------------- | :-------------------- | :------------------------------------ |
+| Spike দেখেই উল্টো trade      | আগে ধরার তাড়া        | ভিতরে ফিরে close-এর অপেক্ষা করুন      |
+| প্রতিটি pullback-কে ফাঁদ ধরা | সব জায়গায় ফাঁদ দেখা | Level-এর ভিতরে close না হলে ছেড়ে দিন |
+| Stop fake চূড়ার নিচে রাখা   | ঝুঁকি কমানোর চেষ্টা   | চূড়ার ওপরে রাখুন, position ছোট করুন  |
+| বড় trend-এর বিপরীতে লড়া    | নিজের অনুমানে বিশ্বাস | Higher timeframe-এর দিক দেখুন         |
+| একই ব্যর্থতায় বারবার ঢোকা   | "এবার হবে" ভাবনা      | একটি setup-এ দুবারের বেশি নয়         |
+
+## Pro tips
+
+<Callout type="tip">
+  Fake breakout-এর ওপরের বা নিচের wick যত লম্বা, ব্যর্থতার সম্ভাবনা তত বেশি।
+  লম্বা wick মানে দাম সেই জায়গা প্রত্যাখ্যান করেছে।
+</Callout>
+
+<Callout type="tip">
+  নিজের breakout trade-এ আগেই ঠিক করে রাখুন, কোন দামে ভিতরে ফিরে close হলে আপনি
+  বেরিয়ে যাবেন। এতে ফাঁদ হলেও ক্ষতি সীমিত থাকে।
+</Callout>
+
+<Callout type="warning">
+  উল্টো trade মানে শক্তির বিপরীতে যাওয়া। Position ছোট রাখুন, stop অবশ্যই বসান।
+  কোনো ধারণাই নিশ্চিত নয়।
+</Callout>
+
+## কখন এটা কাজ করে না
+
+- **জোরালো trend চলাকালীন:** Trend-এর দিকে ভাঙা প্রায়ই ঠিক থাকে, উল্টো দিকে লড়া ঝুঁকিপূর্ণ।
+- **বড় news-এর সময়:** spike ও ফিরে আসা দ্রুত ঘটে, নিশ্চিতকরণ বোঝা যায় না।
+- **অস্পষ্ট level-এ:** level নিজেই ঝাপসা হলে ব্যর্থতার সংজ্ঞাও ঝাপসা।
+- **খুব ছোট timeframe-এ:** noise এত বেশি যে ফিরে close-এর অর্থ থাকে না।
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- Fake breakout নিশ্চিত হয় ভাঙা level-এর ভিতরে ফিরে close করলে, spike দেখে নয়।
+- উল্টো trade-এ stop যায় fake চূড়ার ওপরে।
+- Pullback যদি level ধরে রাখে, সেটি retest, ফাঁদ নয়।
+- নিজের breakout trade-এও আগে থেকে ফিরে আসার শর্ত ঠিক রাখুন।
+
+</KeyTakeaways>
+
+## অনুশীলন
+
+TradingView-এ EUR/USD-এর H4 chart-এ গত ৬ মাসে তিনটি range-এর প্রান্তে breakout চিহ্নিত করুন। প্রতিটির জন্য লিখুন: ভিতরে ফিরে close হয়েছিল কি না, হলে কত candle পরে, এবং উল্টো দিকে target পর্যন্ত গিয়েছিল কি না।
+
+## কুইজ
+
+1. Fake breakout নিশ্চিত হয় কোন শর্তে?
+2. উল্টো trade-এ stop কোথায় বসে?
+3. Pullback আর fake breakout আলাদা করবেন কীভাবে?
+4. নিজের breakout trade ফাঁদ হলে কখন বেরোবেন?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** দাম ভাঙা level-এর ভিতরে ফিরে close করলে।
+
+**২.** Fake চূড়ার সামান্য ওপরে (বা নিচে), যেখানে ফাঁদের ধারণা ভুল প্রমাণিত হয়।
+
+**৩.** Level-এর ভিতরে close হলে ফাঁদ, level ধরে রেখে close হলে pullback বা retest।
+
+**৪.** পূর্বনির্ধারিত দামে, অর্থাৎ ভাঙা level-এর ভিতরে ফিরে close হলে।
+
+</details>
+
+## পরের ধাপ
+
+- আগে: [Range Breakout](/bn/learn/06-trend-chart-patterns/03-range-breakout)।
+- পরে: [Technical Indicators চ্যাপ্টার](/bn/learn/07-technical-indicators/01-moving-averages-crossover)।
+- Stop নিয়ে বিস্তারিত: [Stop Loss Placement](/bn/learn/10-trade-management-execution/01-stop-loss-placement)।
+
+### সূত্র
+
+- [False Breakout, Investopedia](https://www.investopedia.com/terms/f/false-breakout.asp)
+
+<Disclaimer />

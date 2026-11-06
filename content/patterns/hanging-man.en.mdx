@@ -1,41 +1,302 @@
 ---
-title: "Hanging Man"
-description: "A bearish reversal pattern at the top of an uptrend with a small body and a long lower shadow, showing emerging sell pressure."
+title: "Hanging Man: the hammer shape at the top of an uptrend, as a warning"
+description: "How to spot a hanging man, why it differs from a hammer only by location, and why it is no trade without a bearish close below its body, with entry, stop and charts."
 type: bearish
-category: "Hanging Man"
-winrate: "65% - 70%"
-riskReward: "1:2.5 to 1:4"
-maxRisk: "1%"
-bestLocation: "Overextended Uptrend Peak / Major Resistance"
-chartId: "hanging-man-01"
-tags: [bearish, pattern, candlestick]
+category: rejection
+level: intermediate
+candleCount: 1
+signal: reversal
+chartId: hanging-man-win-01
+tags: [pattern, candlestick, hanging-man, reversal, resistance]
+status: done
+sources:
+  - type: book
+    title: "Japanese Candlestick Charting Techniques - Steve Nison"
+    note: "Hammer and hanging man, bearish confirmation of the hanging man"
+  - type: blog
+    title: "Hanging Man Candlestick - Investopedia"
+    url: "https://www.investopedia.com/terms/h/hangingman.asp"
+updated: 2026-11-06
 ---
 
-<div className="flex gap-6 items-end my-8 p-8 bg-zinc-950 border border-border/50 rounded-2xl w-max relative overflow-hidden">
-  <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:20px_20px]"></div>
-  <div className="relative z-10 flex gap-6">
-    <Candle color="bull" bodyH="h-10" topW="h-2" botW="h-2" offset="mt-6" />
-    <Candle color="bear" bodyH="h-4" topW="h-2" botW="h-12" offset="mt-2" />
-  </div>
-</div>
+A candle at the top of an uptrend: a small body on top and a long lower wick. It looks exactly like a [Hammer](/en/patterns/hammer), so some traders buy it. Others shout "hanging man!" and sell at once, and the trend keeps climbing. Both are wrong. A hanging man's meaning depends entirely on the next candle. This is the hammer's mirror page, so only what differs is detailed here.
 
-## Market Psychology & Institutional Order Flow
-At the top of an uptrend, sellers managed to crash price significantly during the session before buyers recovered it. This reveals that underlying institutional supply is emerging. Once the low of this candle is broken, long holders panic and trigger a waterfall sell-off.
+## At a glance
 
-## 5 Strict Anatomy & Recognition Rules
-1. **Uptrend Peak:** Must appear after a prolonged uptrend or at major resistance.
-2. **Lower Wick:** The lower shadow must be at least twice the length of the real body.
-3. **Upper Wick:** Negligible or non-existent upper shadow.
-4. **Body Position:** Small body situated at the top of the session range.
-5. **Mandatory Confirmation:** The following candle must close lower than the Hanging Man.
+| Item          | Hanging Man                                                                                      |
+| :------------ | :----------------------------------------------------------------------------------------------- |
+| Type          | Bearish reversal warning, one candle                                                             |
+| Where to look | At the top of an uptrend, at a marked resistance                                                 |
+| Key features  | Small body on top, lower wick at least twice the body, almost no upper wick                      |
+| Confirmation  | Next candle closes **below the hanging man's body** (Nison's key condition)                      |
+| Stop          | Above the hanging man high, plus spread and a buffer                                             |
+| Invalidation  | A close above the hanging man high                                                               |
+| Look-alikes   | Hammer (same shape, at the bottom of a downtrend), [Dragonfly Doji](/en/patterns/dragonfly-doji) |
+| Opposite      | [Shooting Star](/en/patterns/shooting-star) (long upper wick at a top)                           |
 
-## 3 Proven Trade Execution Strategies
-**Strategy 1 (Break of Low Sell):** Place a Sell Stop order just below the lowest wick of the Hanging Man.
-**Strategy 2 (Confirmation Close):** Enter market short only after the next candle closes as a decisive red bar.
-**Strategy 3 (Fibonacci Retest):** Sell the 50% retracement of the subsequent breakdown candle.
+## What you will be able to do
 
-## Where It Works vs Where It Fails
-- ✅ **A+ High Probability Setups:** RSI divergence above 70, Daily resistance level, and London session liquidity purge.
-- ❌ **Low Probability Traps (AVOID):** Occurring in an early-stage trend or near key support.
+- **Tell** by location why the same shape can be a hammer or a hanging man.
+- **Measure** what a bearish confirmation after a hanging man looks like.
+- **Place** an entry on the confirming close and a stop above the high.
 
-> ⚠️ **Pro Risk Management & Mindset Rule:** Never trade a Hanging Man without waiting for the next candle to confirm the downward breakdown. Always limit risk to 1%–2% per trade and maintain a predefined Stop Loss.
+## Why it matters
+
+- **One shape, two names.** The shape says nothing by itself; where it forms in the trend gives the name. It is the clearest example of [Candle Context](/en/learn/04-candlesticks/05-candle-context).
+- **Confirmation is everything.** Nison writes that bearish confirmation after a hanging man, especially a close below its body, matters even more than after a hammer.
+- **A trap both ways.** Buying it at the top is a trap, and selling it without confirmation is a trap too.
+
+Prerequisites: the Hammer page (linked above) and [Single Candle Patterns](/en/learn/04-candlesticks/02-single-candle-patterns).
+
+## What is a hanging man
+
+**A hanging man is a candle at the top of an uptrend with a small body in the upper part of the candle and a lower wick at least twice the length of the body.** The name comes from the picture of a hanged man: the head (body) on top, the legs (wick) dangling below.
+
+Picture someone standing on a high wall who suddenly slips and hangs from the edge, then manages to climb back up. They are still on top, but everyone has now seen they can fall.
+
+<CandleDiagram
+  title="Same shape, two places"
+  candles={[
+    { o: 62, h: 63, l: 56, c: 57, dim: true },
+    { o: 57, h: 58, l: 51, c: 52, dim: true },
+    {
+      o: 50,
+      h: 52.5,
+      l: 41,
+      c: 52,
+      label: "Hammer",
+      note: "bottom of a downtrend",
+    },
+    { o: 52, h: 60, l: 51, c: 59, dim: true },
+    { o: 59, h: 66, l: 58, c: 65, dim: true },
+    {
+      o: 65,
+      h: 67.5,
+      l: 56,
+      c: 67,
+      label: "Hanging man",
+      note: "top of an uptrend",
+    },
+  ]}
+  caption="Both candles have exactly the same shape. The left one is at the bottom of a downtrend (hammer), the right one at the top of an uptrend (hanging man)."
+/>
+
+### Identification rules
+
+| Rule                                                | Required?      | Why                                                  |
+| :-------------------------------------------------- | :------------- | :--------------------------------------------------- |
+| Small body in the upper part of the candle          | Yes            | A body in the middle makes it a spinning top         |
+| Lower wick at least twice the body                  | Yes            | A short wick carries no "it could fall" story        |
+| No upper wick, or a very small one                  | Yes            | A long upper wick is a different shape               |
+| A clear uptrend before it, near a marked resistance | Yes            | This is what separates it from a hammer              |
+| Next candle closes below the body                   | Yes (to trade) | Without confirmation a hanging man is only a warning |
+
+Body colour (green or red) is not in the rules. Some treat a red body as slightly more bearish, but that matters far less than confirmation.
+
+## Strong vs weak hanging man
+
+<DiagramRow>
+  <CandleDiagram
+    title="Strong"
+    verdict="good"
+    verdictLabel="tradeable"
+    candles={[
+      { o: 44, h: 51, l: 43, c: 50, dim: true },
+      { o: 50, h: 57, l: 49, c: 56, dim: true },
+      { o: 56, h: 58.5, l: 47, c: 58, label: "at resistance" },
+      { o: 57.5, h: 58, l: 50, c: 51, label: "closes below body" },
+    ]}
+    levels={[{ price: 59, label: "old high", tone: "resistance" }]}
+    caption="A hanging man just under an old high; the next candle closes well below its body."
+  />
+  <CandleDiagram
+    title="Weak"
+    verdict="bad"
+    verdictLabel="avoid"
+    candles={[
+      { o: 40, h: 46, l: 39, c: 45, dim: true },
+      { o: 45, h: 51, l: 44, c: 50, dim: true },
+      { o: 50, h: 52.5, l: 45, c: 52, label: "no level" },
+      { o: 52, h: 57, l: 51.5, c: 56.5, label: "closes higher" },
+    ]}
+    caption="Mid-way through a steady uptrend, no level; the next candle closes above the body."
+  />
+</DiagramRow>
+
+| Quality check | Strong                               | Weak                            |
+| :------------ | :----------------------------------- | :------------------------------ |
+| Where         | At a marked old high or supply zone  | Mid-trend, no level             |
+| Lower wick    | 3-5× the body, like nearby ranges    | Just 2× or less                 |
+| Next candle   | Closes clearly below the body        | Closes above or inside the body |
+| Room below    | At least 1.5R to the nearest support | Nearest higher low very close   |
+
+## The story inside the candle
+
+One common interpretation: buyers are in control of the uptrend. In this candle sellers suddenly manage to push price far down, which they could not do in previous candles. Buyers bring it back to close high, so the shape looks "strong". But the news is: **sellers have woken up.** If the next candle closes below the body, those who bought late are now losing, and their exits can add to fresh selling.
+
+<Callout type="note">
+  This is a common interpretation, not a proven fact. A chart does not show who
+  bought or sold.
+</Callout>
+
+## Where it works and where it does not
+
+<Compare
+  leftLabel="Where a hanging man carries weight"
+  rightLabel="Where a hanging man is often a trap"
+  left="- At a marked old high after a long uptrend
+- At a higher-timeframe supply zone
+- When the next candle closes clearly below the body
+- When there is enough room to the nearest support below"
+  right="- Mid-way through a steady uptrend, no level
+- When the next candle closes above the body
+- With a short lower wick, like nearby candles
+- When sold at its own close, without confirmation"
+/>
+
+## Step by step: trading a hanging man
+
+The full steps for context, size and target are on the Hammer page; here the direction is reversed. Only what differs:
+
+<Steps>
+
+### Step 1: Measure the confirmation
+
+The next candle has to close **below the hanging man's body**, not just wick below its low. The lower the close, the cleaner.
+
+### Step 2: Entry
+
+| Entry                           | Where                                           | Pro                     | Con                                      |
+| :------------------------------ | :---------------------------------------------- | :---------------------- | :--------------------------------------- |
+| **Confirming close** (standard) | Sell when the next candle closes below the body | Meets Nison's condition | Lower entry, slightly bigger stop        |
+| **Low break**                   | Sell stop below the hanging man low             | Momentum confirmed      | Stop beyond the whole candle: wide       |
+| **At the hanging man close**    | Sell as the candle closes                       | Small stop              | No confirmation; the trend often resumes |
+
+### Step 3: Stop
+
+Above the hanging man high, plus the [spread](/en/learn/01-foundations/04-spread-commission-swap) and a buffer. The reverse of the hammer: here the stop sits on the short-wick side, so with a confirming-close entry it is usually manageable.
+
+### Step 4: R:R
+
+If the [risk reward](/en/learn/08-risk-management/03-risk-reward) to the nearest support or higher low below is under 1:1.5, skip it.
+
+</Steps>
+
+### Pre-trade checklist
+
+<Checklist
+  id="pattern-hanging-man-pretrade-en"
+  items={[
+    "Was resistance marked before the hanging man, and is it at that level at the top of an uptrend?",
+    "Does the shape pass the rules (small body on top, lower wick at least twice the body)?",
+    "Has the next candle closed, and did it close below the hanging man's body?",
+    "Is the risk reward to the nearest support below at least 1:1.5?",
+    "Is there no higher-timeframe level right in front of the trade?",
+  ]}
+/>
+
+If any box stays empty, skip the trade.
+
+## Example 1: when it works (illustrative)
+
+<Chart
+  id="hanging-man-win-01"
+  height={420}
+  caption="XAUUSD H4 (illustrative, synthetic) — a hanging man under an old high; short when the next candle closes below its body."
+/>
+
+- **What was visible:** Candle 5 left an old high at 2449.92. Candles 6-10 fell to about 2398, and 11-15 rallied back under the high.
+- **The hanging man:** Candle 16 opened at 2445.92, closed at 2448.52, high 2449.12. The lower wick reached 2429.92: about $16, six times the body.
+- **Confirmation:** Candle 17 closed at 2439.42, about $6.50 below the body.
+- **Decision:** Sell on that close at 2439.42. Stop 2451.62 (above both the hanging man high and the old high): $12.20 of risk. Target 2415.02 (2R); the earlier pullback low near 2398 left plenty of room.
+- **Result:** Candle 19 reached the target.
+- **Lesson:** A level, the shape, and a clear close below the body: all three lined up.
+
+<TradeSetup
+  direction="short"
+  pair="XAUUSD"
+  entry={2439.42}
+  stop={2451.62}
+  target={2415.02}
+/>
+
+(Illustrative example, not a real trade. Not every hanging man leads to a reversal, and no result is guaranteed.)
+
+## Example 2: when it is a trap (illustrative)
+
+<Chart
+  id="hanging-man-fail-01"
+  height={420}
+  caption="USDJPY H1 (illustrative, synthetic) — a hanging man in a steady uptrend, shorted at its close; no confirmation, stopped out."
+/>
+
+- **What was visible:** Candles 0-8 were a steady uptrend from 153.40 to 154.05. No marked resistance above.
+- **The hanging man:** Candle 9 opened at 154.050, closed at 154.155, high 154.175, low 153.830. The shape was fine.
+- **The wrong decision:** "Hanging man, sell now." Sell at the close at 154.155, stop 154.215: only 6 pips of risk. The small stop looked attractive.
+- **What happened:** Candle 10 closed above the body, at 154.215, not below it, and the same candle touched the stop. The trend carried on.
+- **Why it failed:** There was no level, and no wait for confirmation. The first and third checklist boxes would have filtered it out.
+
+**Lesson:** No bearish close below the body, no trade. A small stop is not an edge.
+
+## Common mistakes
+
+| Mistake                                       | Why it happens           | What to do instead                               |
+| :-------------------------------------------- | :----------------------- | :----------------------------------------------- |
+| Buying a hammer shape at the top              | Naming by shape          | Location in the trend first, then the name       |
+| Selling at the hanging man close              | Wanting a small stop     | Wait for the next candle to close below the body |
+| Counting a wick below the low as confirmation | Mixing up wick and close | Only count a close below the body                |
+| Shorting every hanging man mid-trend          | Not checking for a level | Only at marked resistance                        |
+
+## Pro tips
+
+<Callout type="tip">
+  The clearest confirmation is a next candle that closes far below the body with
+  a large bearish body or a gap. Forex rarely gaps, so the distance of the close
+  below the body is the real measure.
+</Callout>
+
+<Callout type="tip">
+  In an open long, a hanging man at the top lets you raise your stop to just
+  below the hanging man low without opening a new short. If confirmation comes
+  you are out; if not, the trade runs.
+</Callout>
+
+## Summary
+
+<KeyTakeaways>
+
+- Hanging man = the hammer shape, but at the top of an uptrend; location gives the name.
+- It is a warning, not a signal: no trade unless the next candle closes below the body.
+- Enter on the confirming close; stop above the hanging man high.
+- Skip it unless there is at least 1.5R to the nearest support below.
+
+</KeyTakeaways>
+
+## Practice and your own backtest
+
+Open XAUUSD H4 or USDJPY H1 in TradingView. Find at least 20 hanging men. For each, log: date, whether it was at resistance, whether the next candle closed below the body, entry type, R to the nearest support, and result (R). Then split into "confirmed" and "not confirmed" and see what shorting without confirmation would have done. Do not draw conclusions from fewer than 30 samples.
+
+## Quiz
+
+1. When is the same-shaped candle a hammer, and when a hanging man?
+2. The candle after a hanging man wicks below its low but closes inside the body. Is that confirmation?
+3. Which checklist boxes would have filtered out the trade in Example 2?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** At the bottom of a downtrend it is a hammer; at the top of an uptrend it is a hanging man. Same shape, different place.
+
+**2.** No. Confirmation means a close below the body. A wick only shows sellers tried; they did not win.
+
+**3.** The first box (no marked resistance) and the third box (the next candle closed above the body).
+
+</details>
+
+## Next steps
+
+- Full walk-through: [Hammer](/en/patterns/hammer).
+- Why location gives the name: [Candle Context](/en/learn/04-candlesticks/05-candle-context).
+- Same family: [Shooting Star](/en/patterns/shooting-star), [Inverted Hammer](/en/patterns/inverted-hammer), [Dragonfly Doji](/en/patterns/dragonfly-doji).
+
+<Disclaimer />

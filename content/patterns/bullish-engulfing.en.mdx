@@ -1,41 +1,340 @@
 ---
-title: "Bullish Engulfing"
-description: "A large bullish candle completely covers the real body of the previous smaller bearish candle, signaling an institutional reversal at key support."
+title: "Bullish Engulfing: one candle that wipes out the sellers' gains"
+description: "How to spot a bullish engulfing, the three quality questions, how the rule adapts without gaps in 24-hour Forex, and where to enter and stop, with a winning and a weak-quality losing chart."
 type: bullish
-category: "Bullish Engulfing"
-winrate: "70% - 75%"
-riskReward: "1:3 to 1:5"
-maxRisk: "1% - 2%"
-bestLocation: "HTF Daily/H4 Support / Demand Zone / SSL Sweep"
-chartId: "bullish-engulfing-01"
-tags: [pattern, candlestick, bullish-engulfing]
+category: two-candle
+level: beginner
+candleCount: 2
+signal: reversal
+chartId: bullish-engulfing-win-01
+tags: [pattern, candlestick, bullish-engulfing, engulfing, reversal]
+status: done
+sources:
+  - type: book
+    title: "Japanese Candlestick Charting Techniques - Steve Nison"
+    note: "Engulfing patterns"
+  - type: book
+    title: "Encyclopedia of Candlestick Charts - Thomas Bulkowski"
+    note: "Behaviour of engulfing patterns; results vary by market and period"
+  - type: blog
+    title: "Bullish Engulfing Pattern - Investopedia"
+    url: "https://www.investopedia.com/terms/b/bullishengulfingpattern.asp"
+updated: 2026-11-06
 ---
 
-<div className="flex gap-6 items-end my-8 p-8 bg-zinc-950 border border-border/50 rounded-2xl w-max relative overflow-hidden">
-  <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:20px_20px]"></div>
-  <div className="relative z-10 flex gap-6">
-    <Candle color="bear" bodyH="h-8" topW="h-4" botW="h-4" offset="mt-12" />
-    <Candle color="bull" bodyH="h-16" topW="h-2" botW="h-2" offset="mt-6" />
-  </div>
-</div>
+A big green candle after a red one, covering it completely. The book says "bullish engulfing, buy!" You buy, and two candles later you are stopped out. Looking back, the red candle it covered was almost a doji, and the green candle had a huge upper wick. It met the rule but had no quality. This page teaches both.
 
-## Market Psychology & Institutional Order Flow
-Sellers were driving price down into major support, inducing retail breakout shorts. Suddenly, institutional demand absorbs all selling pressure. The large green candle completely engulfing the prior red candle proves buyer dominance and traps short traders into forced liquidations.
+## At a glance
 
-## 5 Strict Anatomy & Recognition Rules
-1. **Preceding Trend:** Must form after an established downtrend or at key HTF support.
-2. **Candle 1 (Bearish Exhaustion):** Small red candle reflecting diminishing selling pressure.
-3. **Candle 2 (The Engulfing Thrust):** The green candle real body must completely encompass the real body of Candle 1.
-4. **Wick Ratio:** Minimal upper wick (< 20% of total candle height), confirming strong closing conviction.
-5. **Volume Expansion:** Candle 2 volume must be visibly higher than preceding candles.
+| Item          | Bullish Engulfing                                                                                                   |
+| :------------ | :------------------------------------------------------------------------------------------------------------------ |
+| Type          | Bullish reversal, two candles                                                                                       |
+| Where to look | At the end of a downtrend or an uptrend pullback, at a marked support                                               |
+| Key features  | The second (green) candle's body fully covers the first (red) candle's body                                         |
+| Confirmation  | The engulfing close is the main proof; the next candle should not break the engulfing low                           |
+| Stop          | Below the engulfing low (the lower of the two candles), plus spread and a buffer                                    |
+| Invalidation  | A close below the engulfing low                                                                                     |
+| Look-alikes   | [Piercing Line](/en/patterns/piercing-line), [Outside Bar](/en/patterns/outside-bar), the reverse of Bullish Harami |
+| Opposite      | [Bearish Engulfing](/en/patterns/bearish-engulfing)                                                                 |
 
-## 3 Proven Trade Execution Strategies
-**Strategy 1 (50% Equilibrium Retest - Pro Choice):** Measure Candle 2 and place a Buy Limit at the 50% Fibonacci retracement level with Stop Loss below the low.
-**Strategy 2 (Candle Close Market Entry):** Execute a Market Buy immediately on the close of Candle 2.
-**Strategy 3 (M15 CHoCH Sniper Entry):** Spot the pattern on H4, drop down to M15, wait for a Change of Character (CHoCH), and buy the Bullish Order Block retest.
+## What you will be able to do
 
-## Where It Works vs Where It Fails
-- ✅ **A+ High Probability Setups:** Daily support floor, Sell-Side Liquidity (SSL) sweep, London/NY session open, and Bullish RSI divergence.
-- ❌ **Low Probability Traps (AVOID):** Middle of a consolidation range or counter-trading an aggressive macro downtrend without HTF alignment.
+- **Check** a bullish engulfing for rule and quality separately.
+- **Know** how to read the pattern without gaps in 24-hour Forex.
+- **Choose** one of three entry types for yourself.
+- **Spot** a weak engulfing trap in advance.
 
-> ⚠️ **Pro Risk Management & Mindset Rule:** Never risk more than 1% to 2% per trade. Always add spread buffer beneath the swing low. Always limit risk to 1%–2% per trade and maintain a predefined Stop Loss.
+## Why it matters
+
+- **One of the most common reversal patterns.** You will find it on almost every chart, so not telling good from bad wastes many trades.
+- **The story flips in one candle.** Everything sellers won in the first candle, buyers take back and more in the second.
+- **The deep dive lives in the lesson.** The three quality questions and three entries in detail: [Bullish Engulfing lesson](/en/learn/04-candlesticks/04-bullish-engulfing). This page is the field guide.
+
+Prerequisite: [Two Candle Patterns](/en/learn/04-candlesticks/03-two-candle-patterns).
+
+## What is a bullish engulfing
+
+**A bullish engulfing is a two-candle pattern where a bullish candle that follows a bearish one has a body that fully covers the previous candle's body.** "Engulf" means to swallow.
+
+Think of a tug of war. All morning sellers pulled and gained some rope. In the afternoon buyers took it all back in one pull, and then some.
+
+<CandleDiagram
+  title="Bullish engulfing: the rule"
+  candles={[
+    { o: 64, h: 65, l: 57, c: 58, dim: true },
+    { o: 58, h: 59, l: 52, c: 53, dim: true },
+    { o: 53, h: 54, l: 47, c: 48, label: "1", note: "clear bearish body" },
+    { o: 48, h: 57, l: 47, c: 56, label: "2", note: "body fully covers" },
+  ]}
+  caption="The second candle's body (48 to 56) fully covers the first candle's body (53 to 48). Wicks do not count, only bodies."
+/>
+
+### The rule and the three quality questions
+
+| Rule / question                                                             | Required? | Why                                                 |
+| :-------------------------------------------------------------------------- | :-------- | :-------------------------------------------------- |
+| First candle bearish, second bullish                                        | Yes       | The colour change starts the story                  |
+| Second body covers all of the first body (close ≥ prior open)               | Yes       | This is the "engulfing"                             |
+| A downtrend or pullback before it, at a marked support                      | Yes       | Mid-way, an engulfing is just ordinary swing        |
+| **Question 1:** is the first body clear, not a doji?                        | Quality   | A tiny candle is easy to cover; little proof        |
+| **Question 2:** does the second candle close in the top third of its range? | Quality   | A big upper wick means sellers pushed back up there |
+| **Question 3:** is the second body at least 1.5× the first?                 | Quality   | A bigger body means a bigger shift                  |
+
+<Callout type="note">
+  "Top third" and "1.5×" are working measures, not verified statistics. If one
+  question fails, be careful; if two fail, skip it.
+</Callout>
+
+## Strong vs weak bullish engulfing
+
+<DiagramRow>
+  <CandleDiagram
+    title="Strong"
+    verdict="good"
+    verdictLabel="tradeable"
+    candles={[
+      { o: 62, h: 63, l: 56, c: 57, dim: true },
+      { o: 57, h: 58, l: 50, c: 51 },
+      { o: 51, h: 63.5, l: 49.5, c: 63, label: "all 3 pass" },
+    ]}
+    levels={[{ price: 50, label: "support", tone: "support" }]}
+    caption="At support, a clear prior body, close almost at the high, body about twice the size."
+  />
+  <CandleDiagram
+    title="Weak"
+    verdict="bad"
+    verdictLabel="avoid"
+    candles={[
+      { o: 62, h: 63, l: 56, c: 57, dim: true },
+      { o: 57, h: 57.6, l: 56, c: 56.6, label: "tiny candle" },
+      { o: 56.6, h: 64, l: 56, c: 58, label: "long upper wick" },
+    ]}
+    caption="It covered almost a doji, and the close sits low in its range."
+  />
+</DiagramRow>
+
+| Quality check | Strong                                   | Weak                       |
+| :------------ | :--------------------------------------- | :------------------------- |
+| First candle  | Clear bearish body                       | Tiny candle or doji        |
+| Close         | In the top third of the range            | Under a long upper wick    |
+| Body ratio    | 1.5-2× the prior body or more            | Only slightly larger       |
+| Location      | At a marked support or broken resistance | Mid-range or mid-downtrend |
+
+### Same look, different meaning
+
+| Pattern               | Shape                                                                          | Difference                                             |
+| :-------------------- | :----------------------------------------------------------------------------- | :----------------------------------------------------- |
+| **Bullish Engulfing** | Second body fully covers the first body                                        | A full reversal of the prior candle                    |
+| **Piercing Line**     | Second candle closes above the middle of the first body, but does not cover it | A half reversal, a bit weaker                          |
+| **Outside Bar**       | Second candle's whole range (wicks included) covers the first                  | Range-based price action definition; colour not needed |
+| **Bullish Harami**    | Second candle sits inside the first body                                       | The opposite shape: inside, not covering               |
+
+## The story inside the candle
+
+One common interpretation of a bullish engulfing at support:
+
+1. **First candle: sellers still in control.** Price closes lower and the downtrend seems intact.
+2. **Second candle opens at or below the prior close.** Sellers try to push lower again but do not get far.
+3. **Buyers win the whole session.** Price rises past the prior candle's open and closes higher. Everyone who sold in the prior candle is now losing.
+
+The result: across both candles buyers are ahead, and shorts exiting can add buying pressure in the next candles.
+
+<Callout type="note">
+  This is a common interpretation, not a proven fact. A chart does not show who
+  bought or sold.
+</Callout>
+
+## Where it works and where it does not
+
+<Compare
+  leftLabel="Where a bullish engulfing carries weight"
+  rightLabel="Where a bullish engulfing is often a trap"
+  left="- At a marked support or demand zone
+- At the end of an uptrend pullback, on a retest of broken resistance
+- When all three quality questions pass
+- In the higher-timeframe trend direction
+- With enough room to the swing high above"
+  right="- Mid-way through a downtrend, no level
+- In the middle of a range
+- When it covers a tiny candle or doji
+- When it closes under a long upper wick
+- With a lower high or resistance right above"
+/>
+
+## Gaps in a 24-hour market
+
+<Callout type="note">
+  Nison's original definition has the second candle opening below the first
+  candle's close, a small gap. That is common in stocks, but in 24-hour Forex a
+  candle almost always opens at the prior close. So the practical Forex rule is:
+  **second open ≈ first close, and second close above the first open.** The
+  close does all the engulfing. That makes where it closes (question 2) even
+  more important in Forex.
+</Callout>
+
+## Step by step: trading a bullish engulfing
+
+<Steps>
+
+### Step 1: Level and trend first
+
+Draw support, demand zones or broken resistance in advance. Note the higher-timeframe trend direction. An engulfing at the end of a pullback in the trend direction is usually the cleanest.
+
+### Step 2: Wait for both candles to close
+
+A live green candle can grow a long upper wick in its last minute, or fall back below the prior open. Count it only once the engulfing candle has closed.
+
+### Step 3: The three questions
+
+Is the first body clear? Close in the top third? Body at least 1.5×? If two fail, stop here.
+
+### Step 4: Entry type
+
+| Entry                     | Where                                          | Pro                    | Con                           |
+| :------------------------ | :--------------------------------------------- | :--------------------- | :---------------------------- |
+| **50% retest** (standard) | Buy limit at the middle of the engulfing body  | Small stop, better R:R | Missed if price never returns |
+| **Close entry**           | Buy as the engulfing candle closes             | Never missed           | No confirmation, bigger stop  |
+| **High break**            | When the next candle clears the engulfing high | Momentum confirmed     | Higher entry, smaller R:R     |
+
+### Step 5: Place the stop
+
+Below the lower low of the two candles, plus the [spread](/en/learn/01-foundations/04-spread-commission-swap) and a buffer.
+
+### Step 6: Size and target
+
+[Position size](/en/learn/08-risk-management/02-position-sizing) from the entry-to-stop distance, risking no more than 1%. Target before the prior swing high or next resistance, with a [risk reward](/en/learn/08-risk-management/03-risk-reward) of at least 1:1.5 to there.
+
+### Step 7: Manage
+
+A close below the engulfing low means the idea is wrong. Two consecutive closes below the engulfing body mean momentum is fading; consider exiting.
+
+</Steps>
+
+### Pre-trade checklist
+
+<Checklist
+  id="pattern-bullish-engulfing-pretrade-en"
+  items={[
+    "Was the support or level marked before the engulfing, and does it sit at that level?",
+    "Do the rule and quality pass (body fully covered, clear first body, close in the top third)?",
+    "Have both candles closed?",
+    "Is the risk reward to the prior swing high or resistance at least 1:1.5?",
+    "Is the higher-timeframe trend or level not against the trade?",
+  ]}
+/>
+
+If any box stays empty, skip the trade.
+
+## Example 1: when it works (illustrative)
+
+<Chart
+  id="bullish-engulfing-win-01"
+  height={420}
+  caption="GBPUSD H1 (illustrative, synthetic) — a bullish engulfing at the old ceiling after a range breakout; entry on the 50% body retest."
+/>
+
+- **What was visible:** Candles 0-6 ranged under a ceiling near 1.2619. Candle 7 broke out and candle 12 made a swing high near 1.2697. Candles 13-17 pulled back to the old ceiling.
+- **The engulfing:** Candle 17 was clearly bearish (1.2625 to 1.2612, a 13-pip body). Candle 18 opened at 1.2612 and closed at 1.2642: a 30-pip body, about 2.3×, closing only 3 pips under its 1.2645 high. All three questions pass.
+- **Decision:** Buy limit at 1.2627 (50% of the body). Stop at 1.2604 (4 pips below the engulfing low): 23 pips of risk. Target 1.2673 (2R); room to the swing high was about 3R.
+- **Result:** Candle 19 drifted lower and candle 20 touched 1.2627, filling the order. Candle 24 reached the target.
+- **Lesson:** In the trend direction, at a broken level, all three questions passed, and a patient entry.
+
+<TradeSetup
+  direction="long"
+  pair="GBPUSD"
+  entry={1.2627}
+  stop={1.2604}
+  target={1.2673}
+/>
+
+(Illustrative example, not a real trade. Not every bullish engulfing wins, and no result is guaranteed.)
+
+## Example 2: when it is a trap (illustrative)
+
+<Chart
+  id="bullish-engulfing-fail-01"
+  height={420}
+  caption="EURUSD H4 (illustrative, synthetic) — a weak engulfing of a tiny candle with a long upper wick. Bought at the close, then stopped out."
+/>
+
+- **What was visible:** Candles 0-7 fell from 1.0950 to 1.0835. A support sat below, near 1.0824.
+- **The engulfing:** Candle 8 was tiny, a body of only 2 pips (1.0835 to 1.0833). Candle 9 opened at 1.0833 and closed at 1.0840, but its high was 1.0859: a 29-pip range with the close in the bottom third.
+- **The wrong decision:** "It meets the rule, buy." Buy at the close at 1.0840, stop 1.0826: 14 pips of risk.
+- **What happened:** Candle 10 gave no follow-through and candle 11 broke both support and the stop.
+- **Why it failed:** Question 1 (no clear first body) and question 2 (close not in the top third) both failed. The second checklist box would have filtered it out.
+
+**Lesson:** Covering a tiny candle proves little. The rule says "present or not"; quality says "how strong". Because the stop was set in advance, the loss stayed at 1R.
+
+## Common mistakes
+
+| Mistake                                          | Why it happens                          | What to do instead                                       |
+| :----------------------------------------------- | :-------------------------------------- | :------------------------------------------------------- |
+| Trading on the rule alone                        | Quality is not measured                 | Check the three questions; skip if two fail              |
+| Counting a wick-inclusive cover as engulfing     | Mixing up body and range                | Count bodies only; covering with wicks is an outside bar |
+| Buying mid-downtrend without a level             | Treating every green candle as a signal | Only at marked support                                   |
+| Stop at the first candle's low, not the second's | Rushing                                 | Below the lower low of the two                           |
+| Entering on a live candle                        | Fear of missing out                     | Wait for the engulfing candle to close                   |
+
+## Pro tips
+
+<Callout type="tip">
+  When the engulfing forms on a retest of broken resistance (as in Example 1),
+  three reasons meet in one place: trend, level and pattern. That is the
+  cleanest engulfing setup for beginners. More in [Role
+  Reversal](/en/learn/05-support-resistance/02-role-reversal).
+</Callout>
+
+<Callout type="warning">
+  Researchers such as Bulkowski publish statistics on engulfing patterns, but
+  they come from specific markets and periods, often stocks. Do not assume they
+  carry over to Forex. Your own backtest is the only number you can trust.
+</Callout>
+
+## Summary
+
+<KeyTakeaways>
+
+- Bullish engulfing = a bullish candle after a bearish one whose body fully covers the prior body.
+- Rule and quality are separate: clear first body, close in the top third, body at least 1.5×.
+- Forex rarely gaps, so the close does the engulfing; where it closes matters even more.
+- At a marked support, in the trend direction; enter on the 50% retest, stop below the lower low of the two.
+
+</KeyTakeaways>
+
+## Practice and your own backtest
+
+Open GBPUSD H1 or EURUSD H4 in TradingView. Find at least 20 bullish engulfings. Log one row each:
+
+| Date | At a level? | Q1  | Q2  | Q3  | Entry type | Result (R) |
+| :--- | :---------- | :-- | :-- | :-- | :--------- | :--------- |
+|      |             |     |     |     |            |            |
+
+Then split into "all three pass" and "one or more fail" and compare the average R. Do not draw conclusions from fewer than 30 samples.
+
+## Quiz
+
+1. The second candle's wicks cover the first candle entirely, but its body does not. Is it a bullish engulfing?
+2. In Forex the second candle almost always opens at the prior close. Which part of the engulfing then matters most?
+3. An engulfing at support, but the first candle is a doji and the second closes low in its range. What do you do?
+4. Where does the stop go?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** No. Engulfing counts bodies. Covering with wicks is the outside bar definition.
+
+**2.** The close. How far the second close sits above the first open, and where it sits in its own range, shows the strength.
+
+**3.** Skip it. Two of the three questions fail (no clear first body, close not in the top third).
+
+**4.** Below whichever of the two candles has the lower low, plus spread and a buffer.
+
+</details>
+
+## Next steps
+
+- Deeper: [Bullish Engulfing lesson](/en/learn/04-candlesticks/04-bullish-engulfing).
+- When to enter: [Confirmation vs Trigger](/en/learn/09-price-action-entries-strategies/04-confirmation-vs-trigger).
+- Same family: [Bearish Engulfing](/en/patterns/bearish-engulfing), [Piercing Line](/en/patterns/piercing-line), [Bullish Harami](/en/patterns/bullish-harami).
+
+<Disclaimer />

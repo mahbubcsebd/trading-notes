@@ -1,0 +1,245 @@
+{
+  "id": "dark-cloud-cover-fail-01",
+  "title": {
+    "en": "Textbook Dark Cloud Cover That Still Loses",
+    "bn": "সব নিয়ম মেনেও হেরে যাওয়া dark cloud cover"
+  },
+  "symbol": "EURUSD",
+  "timeframe": "D1",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bearish",
+  "outcome": "loss",
+  "tags": [
+    "dark-cloud-cover",
+    "candlestick",
+    "fail",
+    "expectancy",
+    "pattern"
+  ],
+  "module": "patterns",
+  "lessonSlugs": [],
+  "caption": {
+    "en": "Illustrative synthetic EURUSD D1: a deep dark cloud cover at a clearly marked old high, confirmed by a low break, with room to support below. Every checklist box is ticked, and the trade still loses when buyers return.",
+    "bn": "শিক্ষামূলক কাল্পনিক EURUSD D1: স্পষ্ট পুরোনো high-এ গভীর dark cloud cover, low ভেঙে confirmation, নিচে support পর্যন্ত জায়গাও আছে। Checklist-এর সব ঘর পূর্ণ, তবু buyers ফিরে এলে trade হারে।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data, not a real market record.",
+    "bn": "শিক্ষামূলক কাল্পনিক ডেটা, বাস্তব মার্কেটের রেকর্ড নয়।"
+  },
+  "updatedAt": "2026-11-06T12:00:00Z",
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 1.0836,
+      "label": "Old high (resistance)",
+      "color": "#3b82f6",
+      "style": "dashed"
+    },
+    {
+      "type": "marker",
+      "i": 16,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Dark cloud cover"
+    },
+    {
+      "type": "hline",
+      "price": 1.0786,
+      "label": "Entry (low break)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.0856,
+      "label": "Stop",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.06756,
+      "label": "Target (above swing low)",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candle 5 marks the old high. Candle 16 is a deep dark cloud cover there, about 68% into candle 15's green body. Candle 17 breaks its low and fills the sell stop. Nothing is wrong with the setup. Candle 18 stalls and the rally from candle 19 takes the stop. This is a normal loss inside a positive-expectancy plan.",
+    "bn": "৫ নম্বর candle পুরোনো high চিহ্নিত করে। ১৬ নম্বর সেখানে গভীর dark cloud cover, ১৫ নম্বরের সবুজ body-র প্রায় 68% পর্যন্ত। ১৭ নম্বর তার low ভেঙে sell stop fill করে। Setup-এ কোনো ভুল নেই। ১৮ নম্বর থেমে যায়, ১৯ নম্বর থেকে rally stop নিয়ে যায়। এটা লাভজনক পরিকল্পনার ভেতরের স্বাভাবিক লোকসান।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "A good setup can lose; the stop and the size keep that loss small",
+      "bn": "ভালো setup-ও হারতে পারে; stop আর size সেই লোকসান ছোট রাখে"
+    }
+  ],
+  "entry": 1.0786,
+  "stopLoss": 1.0856,
+  "takeProfit": 1.06756,
+  "rr": "1:1.6",
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.07,
+      "h": 1.07418,
+      "l": 1.06908,
+      "c": 1.073
+    },
+    {
+      "i": 1,
+      "o": 1.073,
+      "h": 1.07814,
+      "l": 1.07137,
+      "c": 1.0765
+    },
+    {
+      "i": 2,
+      "o": 1.0765,
+      "h": 1.0769,
+      "l": 1.07477,
+      "c": 1.0755
+    },
+    {
+      "i": 3,
+      "o": 1.0755,
+      "h": 1.08183,
+      "l": 1.07376,
+      "c": 1.0795
+    },
+    {
+      "i": 4,
+      "o": 1.0795,
+      "h": 1.08332,
+      "l": 1.07794,
+      "c": 1.082
+    },
+    {
+      "i": 5,
+      "o": 1.082,
+      "h": 1.0836,
+      "l": 1.0805,
+      "c": 1.0811
+    },
+    {
+      "i": 6,
+      "o": 1.0811,
+      "h": 1.08233,
+      "l": 1.07569,
+      "c": 1.0776
+    },
+    {
+      "i": 7,
+      "o": 1.0776,
+      "h": 1.07936,
+      "l": 1.07125,
+      "c": 1.0736
+    },
+    {
+      "i": 8,
+      "o": 1.0736,
+      "h": 1.07508,
+      "l": 1.06959,
+      "c": 1.0711
+    },
+    {
+      "i": 9,
+      "o": 1.0711,
+      "h": 1.07251,
+      "l": 1.07031,
+      "c": 1.0721
+    },
+    {
+      "i": 10,
+      "o": 1.0721,
+      "h": 1.07309,
+      "l": 1.06726,
+      "c": 1.0691
+    },
+    {
+      "i": 11,
+      "o": 1.0691,
+      "h": 1.07345,
+      "l": 1.06821,
+      "c": 1.0719
+    },
+    {
+      "i": 12,
+      "o": 1.0719,
+      "h": 1.07643,
+      "l": 1.06989,
+      "c": 1.0751
+    },
+    {
+      "i": 13,
+      "o": 1.0751,
+      "h": 1.07926,
+      "l": 1.07391,
+      "c": 1.0776
+    },
+    {
+      "i": 14,
+      "o": 1.0776,
+      "h": 1.078,
+      "l": 1.077,
+      "c": 1.0776
+    },
+    {
+      "i": 15,
+      "o": 1.0776,
+      "h": 1.0828,
+      "l": 1.0772,
+      "c": 1.0826
+    },
+    {
+      "i": 16,
+      "o": 1.0826,
+      "h": 1.0848,
+      "l": 1.0789,
+      "c": 1.0792
+    },
+    {
+      "i": 17,
+      "o": 1.0792,
+      "h": 1.0796,
+      "l": 1.0776,
+      "c": 1.078
+    },
+    {
+      "i": 18,
+      "o": 1.078,
+      "h": 1.0788,
+      "l": 1.0766,
+      "c": 1.0776
+    },
+    {
+      "i": 19,
+      "o": 1.0776,
+      "h": 1.08189,
+      "l": 1.0762,
+      "c": 1.0806
+    },
+    {
+      "i": 20,
+      "o": 1.0806,
+      "h": 1.08503,
+      "l": 1.07976,
+      "c": 1.0841
+    },
+    {
+      "i": 21,
+      "o": 1.0841,
+      "h": 1.08797,
+      "l": 1.08301,
+      "c": 1.0869
+    },
+    {
+      "i": 22,
+      "o": 1.0869,
+      "h": 1.08945,
+      "l": 1.08606,
+      "c": 1.0889
+    }
+  ]
+}

@@ -1,0 +1,202 @@
+---
+title: "Automation: What to Know Before Running Rules in Code"
+description: "Which rules can be automated, the benefits and traps of automation (overfitting, costs, execution), a moving-average cross example, and in-sample vs out-of-sample testing, with two charts."
+level: advanced
+tags: [automation, expert-advisor, backtest, overfitting, out-of-sample]
+instruments: [EURUSD, ACCOUNT]
+timeframes: [H1, per-trade]
+status: done
+sources:
+  - type: blog
+    title: "Algorithmic Trading - Investopedia"
+    url: "https://www.investopedia.com/terms/a/algorithmictrading.asp"
+updated: 2026-11-06
+---
+
+# Automation: What to Know Before Running Rules in Code
+
+Automation does not mean "the machine will make profit for me". The machine will run your rules **exactly**: if the rules are good, well; if they are wrong, every mistake, perfectly. This lesson says when automation makes sense, and which traps to avoid.
+
+## What you will be able to do
+
+- **Say which rules can be automated.**
+- **Know the benefits and traps** of automation.
+- **Understand the difference** between **in-sample and out-of-sample** testing.
+- **Arrange the safe steps** before running live.
+
+## Why it matters
+
+- **Emotion is removed,** but the repetition of mistakes is added.
+- **A natural step after [backtesting](/en/learn/15-backtesting-journal/01-how-to-backtest).** With automation, hundreds of trades are tested in minutes, and the risk of overfitting rises too.
+- **Protection from sales traps.** To spot ads like "the robot gives 30% a month", you need basic ideas.
+
+Prerequisites: [Performance Metrics and Forward Testing](/en/learn/15-backtesting-journal/02-performance-metrics-forward-testing).
+
+## What is automation
+
+**Automation means turning written rules into code and having a program look for signals or place trades.** Common forms: MetaTrader's Expert Advisor (EA), TradingView's Pine Script alert, your own script with Python.
+
+| Level           | What it does                                       | Risk                    |
+| :-------------- | :------------------------------------------------- | :---------------------- |
+| Signal alert    | An alert when conditions match, you take the trade | Low                     |
+| Semi-automatic  | Entry automatic, exit by you                       | Medium                  |
+| Fully automatic | Entry, stop, exit all in code                      | High; needs supervision |
+
+At the start, learn with a **signal alert**.
+
+## Which rules can be automated
+
+Rules that are **fully measurable**: every condition yes/no, nothing like "if it feels good". In [Entry, Exit and Risk Rules](/en/learn/14-trading-plan-system/02-entry-exit-risk-rules-ek-page-e) you learned to write such rules. What cannot be written there will not go into code either.
+
+## What it looks like on a chart
+
+<Chart
+  id="automation-ma-cross-01"
+  height={480}
+  caption="EURUSD H1 (educational, imaginary example): the rule: buy when the 8-period average crosses above the 21-period average, exit on the opposite cross. +161 pips in one trade in the trend, and two small losses (−29, −21 pips) in the range at the end. Only an example, not a recommended strategy; costs are not counted."
+/>
+
+The rule worked in the trend and got hit in the range. The code **does not know** this; on every cross it does the same thing.
+
+The rule in plain description (not code, pseudo):
+
+```text
+If the fast_average crosses above the slow_average and there is no position:
+    buy
+If the fast_average crosses below the slow_average and a position is open:
+    close
+(In the chart above, exit only on the cross; in reality you must add a separate stop and risk rules)
+```
+
+## Step by step: the path to automation
+
+<Steps>
+
+### Step 1: The rules on paper first
+
+Complete, with numbers, like a [Plan](/en/learn/14-trading-plan-system/01-trading-plan-template).
+
+### Step 2: Split the data
+
+The first ~60–70% of the period is **in-sample** (building the rules), and the rest is **out-of-sample** (only for the final test). Do not change the rules before looking at the out-of-sample.
+
+### Step 3: Count the costs
+
+Spread, commission, slippage. If there are many trades, costs eat the profit.
+
+### Step 4: The out-of-sample test
+
+Run it once. If the result is bad, do not "tune and run again"; a new idea, new data.
+
+### Step 5: Demo, then small live
+
+Real execution (slippage, requote) is different from a backtest.
+
+### Step 6: Supervision and the rules for closing
+
+Do not relax because automation is running. Put the daily/weekly limits into the code itself ([stopping rules](/en/learn/14-trading-plan-system/05-kokhon-trading-bondho-korbo)).
+
+</Steps>
+
+## Example 1: when it works (synthetic)
+
+- **What there was:** a simple MA cross rule, with the stop and risk fixed, a backtest with costs.
+- **While running:** the rules were built on the in-sample and run once on the out-of-sample. The result was weaker than the in-sample, but in the same direction (positive).
+- **Result:** started on demo at a small risk; after two months close to expectation.
+- **Lesson:** it is normal for the out-of-sample result to be a bit weaker. If the direction is the same, confidence rises.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Example 2: when it fails (synthetic)
+
+<Chart
+  id="automation-overfit-equity-01"
+  height={420}
+  caption="ACCOUNT, per trade (educational, imaginary example): the rules were tuned until the first 30 trades looked good. In the next 20 unseen trades, the curve gives back about 1,130 of the 1,782 profit."
+/>
+
+- **What happened:** the trader changed the parameters again and again (average length, stop, time) to make the in-sample curve look good.
+- **Result:** from 10,000 to 11,782. But after the next 20 unseen trades, 10,653, a large part of the profit returned.
+- **Why it failed:** the tuned rules had also memorized the noise of the past. This is overfitting.
+- **Lesson:** the out-of-sample is the honest test. If you tune again after looking at it, that too becomes in-sample.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Common mistakes
+
+| Mistake                              | Why it happens               | What to do                                   |
+| :----------------------------------- | :--------------------------- | :------------------------------------------- |
+| Tuning parameters again and again    | The greed for a pretty curve | Tune little, keep the out-of-sample separate |
+| Backtesting without costs            | It seems simple              | Add spread/slippage                          |
+| Believing the ad of a bought "robot" | Hoping for easy profit       | Not without your own data and testing        |
+| Not supervising                      | "The machine is running it"  | Limits, alerts, a weekly review              |
+| Going straight to big risk live      | Confidence in the backtest   | demo → small live                            |
+
+## Pro tips
+
+<Callout type="tip">
+  The simpler the rules, the lower the risk of overfitting. Few parameters, more
+  logic. It is better to stay with two than to tune five.
+</Callout>
+
+<Callout type="warning">
+  Do not believe any claim like "sure profit", "risk-free", or "X% a month
+  guaranteed". This is educational writing, not investment advice. Check any
+  bought software independently first.
+</Callout>
+
+## When this does not work
+
+- **If the rules are unclear:** they cannot be written in code.
+- **When the type of market changes:** rules built for a trend will struggle in a range (the chart above).
+- **On very little data:** with a few dozen trades the parameters mean nothing.
+- **A gap in execution:** backtest prices and live prices differ, especially on news.
+
+## Summary
+
+<KeyTakeaways>
+
+- Automation runs the rules exactly; it does not judge good or bad.
+- Start with a signal alert.
+- Split the data; look at the out-of-sample only once.
+- Count the costs, use demo and small live, and always keep limits.
+
+</KeyTakeaways>
+
+## Practice
+
+Write your simplest rule in pseudo-code (as above). Does the word "if it feels" or "good" appear in any line? If so, that rule is not yet ready for automation.
+
+## Quiz
+
+1. For which kind of rules is automation suitable?
+2. What is the difference between in-sample and out-of-sample?
+3. Why did the curve fall in the failed example above?
+4. What are the three steps before going live?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** Fully measurable rules with yes/no conditions.
+
+**2.** The rules are built on the in-sample; the out-of-sample is only for the final test and is not looked at after changing the rules.
+
+**3.** Overfitting: the rules had memorized the noise of the past.
+
+**4.** The out-of-sample test, demo, and live at a small risk.
+
+</details>
+
+## Next steps
+
+- Before: [Elliott Wave](/en/learn/16-advanced/04-elliott-wave).
+- After: [The breakdown of your winning and losing trades](/en/learn/17-case-studies-trade-reviews/01-nijer-winning-losing-trade-breakdown).
+- Related: [How to Backtest](/en/learn/15-backtesting-journal/01-how-to-backtest).
+
+### Sources
+
+- <ExternalLink href="https://www.investopedia.com/terms/a/algorithmictrading.asp">
+    Algorithmic Trading, Investopedia
+  </ExternalLink>
+
+<Disclaimer />

@@ -1,14 +1,182 @@
 ---
-title: "Entry exit risk rules ek page e"
-description: "Detailed notes on Entry exit risk rules ek page e"
-status: draft
-updated: 2026-10-10
+title: "Entry, Exit ও Risk Rules: এক পাতায় সংখ্যা সহ নিয়ম"
+description: "Entry, stop, target ও ঝুঁকির নিয়ম কীভাবে মাপার মতো করে লিখবেন, আর একটি নিয়ম বাদ পড়লে কী হয় — দুটি chart সহ।"
+level: beginner
+tags: [trading-plan, entry-rules, exit-rules, risk-rules, system]
+instruments: [EURUSD]
+timeframes: [H1]
+status: done
+sources:
+  - type: blog
+    title: "Trading Plan - Investopedia"
+    url: "https://www.investopedia.com/articles/trading/06/tradingplan.asp"
+updated: 2026-11-05
 ---
 
-# Entry exit risk rules ek page e
+# Entry, Exit ও Risk Rules: এক পাতায় সংখ্যা সহ নিয়ম
 
-<div className="rounded-xl border border-border bg-card p-6 text-center text-muted-foreground my-8">
-  <p className="text-3xl mb-4">🚧</p>
-  <p className="font-semibold text-foreground">Coming in Phase 2</p>
-  <p className="text-sm mt-1">This module is under construction.</p>
-</div>
+"ভালো জায়গায় ঢুকব, ঠিক জায়গায় বেরোব।" শুনতে সুন্দর, কিন্তু কোনটা ভালো জায়গা? এই পাঠে অস্পষ্ট ইচ্ছাকে সংখ্যা ও শর্তে বদলানো শিখবেন।
+
+## এই লেখা পড়ে আপনি যা পারবেন
+
+- **Entry, exit ও risk** নিয়ম আলাদা করে লিখতে পারবেন।
+- নিয়মকে **হ্যাঁ/না শর্তে** ভাঙতে পারবেন।
+- একটি trade **নিয়ম মেনেছে কি না** যাচাই করতে পারবেন।
+
+## কেন এটি জরুরি
+
+- **অস্পষ্ট নিয়ম ভাঙা সহজ।** "প্রায় মিলেছে" বলে ঢুকে পড়া সহজ হয়।
+- **ফল তুলনা করা যায়।** একই নিয়মে নেওয়া trade-গুলোই [expectancy](/bn/learn/08-risk-management/07-expectancy) মাপার উপযুক্ত।
+- **ঝুঁকি আগে ঠিক থাকে।** Stop বসানোর পর lot ঠিক করলে লোকসান পরিকল্পিত থাকে।
+
+পূর্বশর্ত: [Trading Plan Template](/bn/learn/14-trading-plan-system/01-trading-plan-template) এবং [Stop Loss Placement](/bn/learn/10-trade-management-execution/01-stop-loss-placement)।
+
+## নিয়মের তিন গোষ্ঠী
+
+**Entry নিয়ম বলে কখন ঢুকবেন, exit নিয়ম বলে কখন বেরোবেন, risk নিয়ম বলে কত হারাতে রাজি।** তিনটি একসঙ্গে লিখলে একটি trade পুরোপুরি সংজ্ঞায়িত হয়।
+
+| গোষ্ঠী | প্রশ্ন                  | নিয়মের ধরন (কাল্পনিক উদাহরণ)                                           |
+| :----- | :---------------------- | :---------------------------------------------------------------------- |
+| Entry  | সব শর্ত মিলেছে?         | H1 close resistance-এর ওপরে; দাম retest করেছে; bullish rejection candle |
+| Exit   | কোথায় ভুল, কোথায় লাভ? | Stop retest low-এর 5 pip নিচে; target 2R; target-এর আগে stop সরানো নয়  |
+| Risk   | কত ঝুঁকি?               | Account-এর 1%; lot = ঝুঁকির টাকা ÷ stop pip মূল্য                       |
+
+নিয়ম লেখার পরীক্ষা: **অন্য কেউ আপনার chart দেখে "হ্যাঁ" বা "না" বলতে পারবে কি?** পারলে নিয়ম ভালো।
+
+## Chart-এ কেমন দেখায়
+
+<Chart
+  id="plan-rule-trade-win-01"
+  height={440}
+  caption="EURUSD H1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — নিয়ম: H1 close resistance-এর ওপরে, retest-এ buy, stop 30 pip নিচে, target 2R। সব মিলেছে বলে 1.0968-এ entry।"
+/>
+
+লক্ষ্য করুন, entry-র আগেই তিনটি দাম জানা ছিল: entry, stop, target। Trade চলাকালীন কিছু নতুন ঠিক করতে হয়নি।
+
+## ধাপে ধাপে: নিয়ম লেখা
+
+<Steps>
+
+### ধাপ ১: Entry-র শর্ত গোনা
+
+তিন থেকে চারটি হ্যাঁ/না শর্ত। সবগুলো "হ্যাঁ" না হলে ঢুকবেন না। এটাই [Entry Model Checklist](/bn/learn/09-price-action-entries-strategies/05-entry-model-checklist)-এর কাজ।
+
+### ধাপ ২: Stop-এর নিয়ম
+
+কীসের ভিত্তিতে: swing low, retest low, ATR। "কত pip" নির্দিষ্ট না করে "কীসের নিচে" লিখুন।
+
+### ধাপ ৩: Target-এর নিয়ম
+
+Fixed R (যেমন 2R) বা পরবর্তী level। [Risk Reward](/bn/learn/08-risk-management/03-risk-reward) মেনে ন্যূনতম অনুপাত লিখুন।
+
+### ধাপ ৪: Lot-এর সূত্র
+
+ঝুঁকির টাকা ÷ (stop pip × pip মূল্য)। [Position Sizing](/bn/learn/08-risk-management/02-position-sizing) থেকে।
+
+### ধাপ ৫: নিষিদ্ধ কাজ
+
+Stop দূরে সরানো, size বাড়ানো, plan-এর বাইরে entry। তিনটি লাইনে লিখুন।
+
+</Steps>
+
+## উদাহরণ ১: যখন কাজ করে (কাল্পনিক)
+
+- **নিয়ম:** H1 close 1.0960-এর ওপরে, retest-এ buy, stop 30 pip, target 2R।
+- **চলাকালীন:** Breakout-এর পর দাম নেমে 1.0960 ছুঁল। Rejection candle হলো। Buy 1.0968, stop 1.0938, target 1.1028।
+- **ফল:** Target ছুঁয়েছে, +2R।
+- **শিক্ষা:** তিনটি দামই আগে ঠিক ছিল। জেতার কারণ সৌভাগ্য নয়, পুনরাবৃত্তিযোগ্য প্রক্রিয়া।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়।)
+
+## উদাহরণ ২: যখন ব্যর্থ হয় (কাল্পনিক)
+
+<Chart
+  id="plan-rule-broken-loss-01"
+  height={440}
+  caption="EURUSD H1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — নিয়ম 'retest-এ buy'। Trader breakout candle ধরে 1.1000-এ ঢুকলেন; দাম পুরোনো resistance-এ ফিরে stop ছুঁল।"
+/>
+
+- **কী দেখা যাচ্ছিল:** একই setup। কিন্তু retest-এর অপেক্ষা সইল না, breakout candle-এই buy।
+- **ফল:** Buy 1.1000, stop 1.0970 লেগেছে, -1R।
+- **কেন ব্যর্থ:** একটি শর্ত (retest) বাদ পড়ায় entry দাম থেকে দূরে সরল। স্বাভাবিক pullback-ই stop ছুঁয়ে দিল।
+- **শিক্ষা:** Setup ঠিক থাকলেও একটি নিয়ম বাদ দিলে ফল বদলায়। এই loss "বাজারের দোষ" নয়, "নিয়ম ভাঙার ফল"।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়।)
+
+## সাধারণ ভুল
+
+| ভুল                        | কেন হয়              | কী করবেন                   |
+| :------------------------- | :------------------- | :------------------------- |
+| "প্রায় মিলেছে" বলে ঢোকা   | সুযোগ হারানোর ভয়    | সব শর্ত হ্যাঁ না হলে skip  |
+| Stop-এর যুক্তি না লেখা     | pip গুনে বসানো       | "কীসের নিচে" লিখুন         |
+| Target মন বুঝে ঠিক করা     | লোভ                  | Fixed R বা level আগে লিখুন |
+| Lot আন্দাজে বসানো          | হিসাব ঝামেলা মনে হয় | সূত্র লিখে রাখুন           |
+| Loss-এর পর নিয়ম বদলে ফেলা | আবেগ                 | ২০ trade-এর আগে বদল নয়    |
+
+## Pro tips
+
+<Callout type="tip">
+  Trade-এর আগে screenshot নিন: entry, stop, target-সহ। পরে মেলান নিয়ম মানা
+  হয়েছে কি না। এটি
+  [journal](/bn/learn/12-trading-psychology/05-journaling-habit)-এর মূল উপাদান।
+</Callout>
+
+<Callout type="note">
+  নতুন নিয়ম যোগ করার আগে জিজ্ঞেস করুন: গত ২০টি trade-এ এটি থাকলে কি ফল বদলাত?
+  উত্তর না জানলে এটি অনুমান।
+</Callout>
+
+## কখন এটা কাজ করে না
+
+- **নিয়ম যত্ন করে লিখেও setup পরীক্ষা না করলে:** লিখিত ভুল নিয়ম ভুলই।
+- **খবরের মুহূর্তে:** দাম লাফালে entry ও stop লিখিত দামে নাও হতে পারে ([slippage](/bn/learn/10-trade-management-execution/04-slippage-requote-spread-widening))।
+- **অতিরিক্ত নিয়ম হলে:** দশটির বেশি শর্ত প্রায় কখনো একসঙ্গে মেলে না, ফলে কোনো trade-ই হয় না।
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- Entry, exit ও risk তিন গোষ্ঠীতে নিয়ম লিখুন।
+- প্রতিটি নিয়ম হ্যাঁ/না বা সংখ্যায় মাপার যোগ্য হবে।
+- একটি নিয়ম বাদ পড়লেও ফল বদলে যায়।
+- Trade-এর আগে entry, stop, target জানা থাকবে।
+
+</KeyTakeaways>
+
+## অনুশীলন
+
+আপনার প্রিয় setup-এর জন্য তিন গোষ্ঠীতে নিয়ম লিখুন। গত তিনটি chart-এ প্রয়োগ করে দেখুন: প্রতিটি শর্তে হ্যাঁ/না বলা যায় কি?
+
+## কুইজ
+
+1. নিয়ম ভালো কি না, কীভাবে পরীক্ষা করবেন?
+2. Entry-র তিনটি শর্তের দুটি মিললে কী করবেন?
+3. Stop-এর নিয়মে "কীসের নিচে" কেন লিখতে হয়?
+4. ওপরের loss-এর কারণ কী ছিল?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** অন্য কেউ chart দেখে হ্যাঁ/না বলতে পারলে নিয়ম ভালো।
+
+**২.** ঢুকবেন না। সব শর্ত "হ্যাঁ" হতে হবে।
+
+**৩.** কারণ বাজার বদলায়; যুক্তি (swing low, retest low) থাকলে stop অর্থপূর্ণ থাকে।
+
+**৪.** Retest-এর অপেক্ষা না করে breakout candle-এ ঢোকা, অর্থাৎ নিয়ম ভাঙা।
+
+</details>
+
+## পরের ধাপ
+
+- আগে: [Trading Plan Template](/bn/learn/14-trading-plan-system/01-trading-plan-template)।
+- পরে: [Pre-Trade Checklist](/bn/learn/14-trading-plan-system/03-pre-trade-checklist)।
+- সম্পর্কিত: [Risk per Trade](/bn/learn/08-risk-management/01-risk-per-trade)।
+
+### সূত্র
+
+- <ExternalLink href="https://www.investopedia.com/articles/trading/06/tradingplan.asp">
+    Trading Plan, Investopedia
+  </ExternalLink>
+
+<Disclaimer />

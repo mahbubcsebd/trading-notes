@@ -1,42 +1,295 @@
 ---
-title: "Evening Star"
-description: "A 3-candle bearish reversal pattern: a strong green candle, a small indecision candle, and a large red candle closing deep into the first candle."
+title: "Evening Star: three candles that tell the story of day turning into evening"
+description: "How to spot an evening star, the mirror of the morning star, the evening doji star, the no-gap Forex rule, and why a weekend gap can skip your stop, with entry, stop and charts."
 type: bearish
-category: "Evening Star"
-winrate: "71% - 76%"
-riskReward: "1:3 to 1:5"
-maxRisk: "1% - 2%"
-bestLocation: "HTF Resistance / 4H Supply Zone / Liquidity Sweep"
-chartId: "evening-star-01"
-tags: [bearish, pattern, candlestick]
+category: three-candle
+level: intermediate
+candleCount: 3
+signal: reversal
+chartId: evening-star-win-01
+tags: [pattern, candlestick, evening-star, three-candle, reversal]
+status: done
+sources:
+  - type: book
+    title: "Japanese Candlestick Charting Techniques - Steve Nison"
+    note: "Evening star, evening doji star"
+  - type: blog
+    title: "Evening Star - Investopedia"
+    url: "https://www.investopedia.com/terms/e/eveningstar.asp"
+updated: 2026-11-06
 ---
 
-<div className="flex gap-6 items-end my-8 p-8 bg-zinc-950 border border-border/50 rounded-2xl w-max relative overflow-hidden">
-  <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:20px_20px]"></div>
-  <div className="relative z-10 flex gap-6">
-    <Candle color="bull" bodyH="h-14" topW="h-3" botW="h-2" offset="mt-6" />
-    <Candle color="neutral" bodyH="h-2" topW="h-4" botW="h-4" offset="mt-2" />
-    <Candle color="bear" bodyH="h-16" topW="h-2" botW="h-2" offset="mt-6" />
-  </div>
-</div>
+On Friday night a perfect evening star completes, so you go short and set your stop. On Monday morning you open the chart and price has opened far above your stop. The stop worked, but not at your price. The loss is not 1R; it is more. This page is the mirror of [Morning Star](/en/patterns/morning-star); the three-candle rule, penetration and the gap explanation are detailed there. Here is only what differs, plus one limit of stops.
 
-## Market Psychology & Institutional Order Flow
-Bulls push aggressively to new highs on Candle 1. On Candle 2, upside momentum stalls completely, creating a tiny body that traps retail breakout buyers. On Candle 3, institutional smart money dumps liquidity, pushing prices violently downward past the 50% midpoint of Candle 1. Trapped bulls are forced to liquidate into institutional short orders.
+## At a glance
 
-## 5 Strict Anatomy & Recognition Rules
-1. **Preceding Trend:** Must appear at the peak of an uptrend or at a key HTF resistance level.
-2. **Candle 1 (Bullish Expansion):** A tall green candle representing the final push of buyer momentum.
-3. **Candle 2 (The Star):** A small-bodied candle (Doji or Spinning Top) showing exhaustion and stalling volume.
-4. **Candle 3 (Bearish Reversal):** A strong red candle that closes well past the 50% midpoint of Candle 1.
-5. **Volume Confirmation:** Candle 3 must exhibit a clear expansion in trading volume.
+| Item          | Evening Star                                                                                                                                                |
+| :------------ | :---------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Type          | Bearish reversal, three candles                                                                                                                             |
+| Where to look | At the top of an uptrend, at a marked resistance                                                                                                            |
+| Key features  | 1: long bullish; 2: a small-body star near or above 1's close; 3: long bearish, closing below the middle of 1's body                                        |
+| Confirmation  | The third candle; a close below 50% of the first body                                                                                                       |
+| Stop          | Above the star's high (the highest of the three), plus spread and a buffer                                                                                  |
+| Invalidation  | A close above the star's high                                                                                                                               |
+| Look-alikes   | [Bearish Engulfing](/en/patterns/bearish-engulfing), [Dark Cloud Cover](/en/patterns/dark-cloud-cover), [Three Inside Down](/en/patterns/three-inside-down) |
+| Opposite      | Morning Star                                                                                                                                                |
 
-## 3 Proven Trade Execution Strategies
-**Strategy 1 (50% Equilibrium Retest - Pro Choice):** Measure Candle 3 and place a Sell Limit at the 50% Fibonacci retracement level. Stop Loss goes above the high of Candle 2.
-**Strategy 2 (Candle 3 Close Market Order):** Enter a market sell immediately upon the close of Candle 3 with Stop Loss above the star.
-**Strategy 3 (Lower Timeframe Sniper Entry):** Spot the pattern on H4, drop down to M15, wait for a Change of Character (CHoCH), and sell the retest with 10–15 pip risk.
+## What you will be able to do
 
-## Where It Works vs Where It Fails
-- ✅ **A+ High Probability Setups:** Daily/H4 supply zone, Asian High liquidity sweep, Bearish RSI divergence, and London/NY session open.
-- ❌ **Low Probability Traps (AVOID):** Middle of a consolidation range or trading against a parabolic macro bull trend.
+- **Recognise** an evening star and an evening doji star.
+- **Explain** why a star poking above resistance is **the picture of a false breakout**.
+- **Decide** on Friday setups knowing the **weekend gap risk**.
 
-> ⚠️ **Pro Risk Management & Mindset Rule:** Never front-run Candle 2. The entire statistical edge lies in Candle 3 confirming the institutional shift. Always limit risk to 1%–2% per trade and maintain a predefined Stop Loss.
+## Why it matters
+
+- **Dojis at tops matter more.** Per Nison's observation the evening doji star is a strong signal, because a doji carries more weight at a top.
+- **The star often peeks above resistance.** The third candle turns that peek into a false breakout.
+- **A stop is not a guarantee.** A stop is an order that fills at the next available price. Over a weekend or on big news that price can be much worse. More in [Slippage and Spread Widening](/en/learn/10-trade-management-execution/04-slippage-requote-spread-widening).
+
+Prerequisite: the Morning Star page (linked above).
+
+## What is an evening star
+
+**An evening star is a three-candle pattern: a long bullish candle in an uptrend, then a small-body star, then a long bearish candle that closes below the middle of the first body.** If the star is a doji, it is an **evening doji star**.
+
+<CandleDiagram
+  title="Evening doji star"
+  candles={[
+    { o: 40, h: 46, l: 39, c: 45, dim: true },
+    { o: 45, h: 59, l: 44, c: 58, label: "1", note: "long green" },
+    {
+      o: 58,
+      h: 63,
+      l: 56.5,
+      c: 58.1,
+      label: "doji star",
+      note: "peeks above the level",
+    },
+    { o: 58.1, h: 58.5, l: 47, c: 48, label: "3", note: "below 1's middle" },
+  ]}
+  levels={[{ price: 60, label: "old high", tone: "resistance" }]}
+  caption="A long green candle, a doji peeking above the old high, then a red candle closing far down into the first body."
+/>
+
+### Identification rules
+
+| Rule                                                                   | Required? | Why                                           |
+| :--------------------------------------------------------------------- | :-------- | :-------------------------------------------- |
+| An uptrend before it; the first candle long and bullish                | Yes       | Buyers' last strong push                      |
+| The second candle's body small, near or above the first close          | Yes       | The picture of momentum stalling              |
+| The third candle long and bearish, closing below 50% of the first body | Yes       | Sellers' win                                  |
+| At a marked resistance                                                 | Yes       | Without a level it is a dip inside an uptrend |
+| The star is a doji (evening doji star), peeking above resistance       | No        | An even clearer picture                       |
+
+## Strong vs weak evening star
+
+<DiagramRow>
+  <CandleDiagram
+    title="Strong"
+    verdict="good"
+    verdictLabel="tradeable"
+    candles={[
+      { o: 40, h: 46, l: 39, c: 45, dim: true },
+      { o: 45, h: 57, l: 44, c: 56 },
+      { o: 56, h: 60, l: 55, c: 56.1 },
+      { o: 56.1, h: 56.5, l: 46, c: 47, label: "~75% deep" },
+    ]}
+    levels={[{ price: 58, label: "old high", tone: "resistance" }]}
+    caption="A doji star peeks above the old high, and the third candle falls about three quarters into the first body."
+  />
+  <CandleDiagram
+    title="Weak"
+    verdict="bad"
+    verdictLabel="avoid"
+    candles={[
+      { o: 30, h: 36, l: 29, c: 35, dim: true },
+      { o: 35, h: 43, l: 34, c: 42, dim: true },
+      { o: 42, h: 52, l: 41, c: 51 },
+      { o: 51, h: 54, l: 50, c: 52 },
+      { o: 52, h: 52.5, l: 45.5, c: 46, label: "barely 50%" },
+    ]}
+    caption="Mid-rally, no level, and the third candle only just below the middle."
+  />
+</DiagramRow>
+
+| Quality check | Strong                                         | Weak                                   |
+| :------------ | :--------------------------------------------- | :------------------------------------- |
+| Location      | A marked old high, with the star peeking above | Mid-uptrend, no level                  |
+| Star          | A doji or very small                           | A medium body                          |
+| Third candle  | 60-75% or more of the first body               | Barely 50%                             |
+| Timing        | Midweek, no big news                           | Friday's close, with the weekend ahead |
+
+## The story inside the candle
+
+The morning star story in reverse. One common interpretation: in the first candle buyers lift hard. In the star, price peeks above resistance but closes with a small body: buyers have stalled. In the third candle sellers take back more than half of the first candle. Those who bought the star thinking it was a breakout are now losing.
+
+<Callout type="note">
+  This is a common interpretation, not a proven fact. A chart does not show who
+  bought or sold.
+</Callout>
+
+## Where it works and where it does not
+
+<Compare
+  leftLabel="Where an evening star carries weight"
+  rightLabel="Where an evening star is often a trap"
+  left="- At a marked old high or supply zone
+- When the star peeks above resistance and returns
+- When the star is a doji
+- When the third candle falls 60%+ into the first body"
+  right="- Mid-way through an uptrend, no level
+- With a rising moving average or higher low right below
+- When the third candle barely reaches 50%
+- At Friday's close, ahead of significant weekend risk"
+/>
+
+## Gaps in a 24-hour market
+
+<Callout type="note">
+  As with the morning star: Forex rarely gaps around the star, so the star's
+  body should sit near or above the first candle's close, ideally with the
+  star's high above the first high. **But there is one exception: the weekend.**
+  The Forex market closes on Friday and reopens on Monday (early morning in
+  Asia). If big news arrives in between, Monday's open can be far from Friday's
+  close.
+</Callout>
+
+## Step by step: trading an evening star
+
+The full steps are on the Morning Star page, reversed. Only what differs:
+
+<Steps>
+
+### Step 1: Entry and stop
+
+Sell at the third candle's close, or with a sell stop below its low. Stop above the star's high, plus the [spread](/en/learn/01-foundations/04-spread-commission-swap).
+
+### Step 2: Obstacles below
+
+The prior swing low, a higher low, a rising moving average. Keep the [risk reward](/en/learn/08-risk-management/03-risk-reward) to the nearest one at least 1:1.5.
+
+### Step 3: Think differently on a Friday
+
+If the pattern completes at Friday's close, there are three reasonable paths: (a) enter with a reduced size, so even a gap stays manageable; (b) wait for Monday's open and then decide; (c) skip the trade. Entering at full size thinking "the stop is there" is a fourth path, and the worst.
+
+</Steps>
+
+### Pre-trade checklist
+
+<Checklist
+  id="pattern-evening-star-pretrade-en"
+  items={[
+    "Was resistance marked before the evening star, and is the star at that level?",
+    "Does the shape pass the rules (long green, small star, third candle below 50% of the first body)?",
+    "Have all three candles closed, and have you weighed the weekend or big-news gap risk?",
+    "Is the risk reward to the nearest obstacle at least 1:1.5?",
+    "Is the higher-timeframe trend or level not against the trade?",
+  ]}
+/>
+
+If any box stays empty, skip the trade.
+
+## Example 1: when it works (illustrative)
+
+<Chart
+  id="evening-star-win-01"
+  height={420}
+  caption="USDJPY D1 (illustrative, synthetic) — an evening doji star at an old high; short at the third candle's close."
+/>
+
+- **What was visible:** Candle 5 left an old high at 149.43. Candles 6-10 fell to about 147.78, and 11-14 rallied again.
+- **The evening star:** Candle 15 was a long green candle (148.88 to 149.37). Candle 16 was a doji (149.37 to 149.365) with a high of 149.53, above the old high. Candle 17 closed at 149.027: about 70% of the first body.
+- **Decision:** Sell at the third close at 149.027. Stop 149.59 (above the star's high): about 56 pips of risk. Target 147.901 (2R); room to the swing low was about 2.2R. It was midweek.
+- **Result:** Candle 24 reached the target.
+- **Lesson:** A doji star above the level, a deep third candle, and open space below.
+
+<TradeSetup
+  direction="short"
+  pair="USDJPY"
+  entry={149.027}
+  stop={149.59}
+  target={147.901}
+/>
+
+(Illustrative example, not a real trade. Not every evening star wins, and no result is guaranteed.)
+
+## Example 2: when it is a trap (illustrative)
+
+<Chart
+  id="evening-star-fail-01"
+  height={420}
+  caption="EURUSD D1 (illustrative, synthetic) — an evening star completed on Friday; Monday gaps over the stop and the loss is about 1.4R."
+/>
+
+- **What was visible:** Candles 0-6 rallied from 1.0800 to about 1.0943. There was no marked resistance.
+- **The evening star:** Candle 7 (Wednesday) was a long green candle, 1.0943 to 1.0991. Candle 8 (Thursday) was a small star, high 1.1005. Candle 9 (Friday) closed at 1.09612: about 62% of the first body.
+- **Decision:** Sell at Friday's close at full size at 1.09612, stop 1.1011: about 50 pips of risk.
+- **What happened:** News moved the market over the weekend. Candle 10 (Monday) opened at 1.1029, 18 pips above the stop. The stop filled at the first available price: a loss of about 1.36R.
+- **Why it failed:** No marked resistance (first box), and the weekend gap risk was not weighed (third box). The pattern itself was a perfect shape.
+
+**Lesson:** A stop is an order, not a guarantee. On Friday setups, reduce size or wait for Monday.
+
+## Common mistakes
+
+| Mistake                                        | Why it happens                      | What to do instead                 |
+| :--------------------------------------------- | :---------------------------------- | :--------------------------------- |
+| Treating the stop as a guaranteed maximum loss | Not knowing how orders fill         | Allow for gaps and slippage        |
+| Full size at Friday's close                    | Ignoring weekend risk               | Reduce size or watch Monday's open |
+| Shorting mid-uptrend without a level           | Impressed by the three-candle shape | Only at marked resistance          |
+| Stop at the third candle's high                | Wanting a small stop                | Above the star's high              |
+
+## Pro tips
+
+<Callout type="tip">
+  Know what your broker does at weekends. Many brokers raise margin on Friday
+  afternoon, and spreads are very wide in the first minutes after the Monday
+  open. More in [Trading
+  Sessions](/en/learn/01-foundations/05-trading-sessions).
+</Callout>
+
+<Callout type="warning">
+  Even midweek, big news (rate decisions, NFP) can bring gaps or heavy slippage.
+  However perfect the pattern, think separately about the risk of a trade left
+  open into a major release. More in [Avoiding News
+  Trades](/en/learn/11-fundamental-intermarket-analysis/06-news-trade-avoid-korbo).
+</Callout>
+
+## Summary
+
+<KeyTakeaways>
+
+- Evening star = a long green candle, a small star, then a long red candle closing below 50% of the first body.
+- The signal is clearest when the star peeks above resistance and returns, and when it is a doji.
+- Enter at the third close, stop above the star's high.
+- A stop is not a guarantee: handle weekend and big-news gap risk through size.
+
+</KeyTakeaways>
+
+## Practice and your own backtest
+
+Open USDJPY D1 or EURUSD D1 in TradingView. Find at least 20 evening stars. For each, log: date and weekday, whether it was at resistance, whether it was a doji star, the third candle's penetration %, and result (R). Separately, check how far Monday's open was for setups that completed on a Friday. Do not draw conclusions from fewer than 30 samples.
+
+## Quiz
+
+1. Why is an evening doji star treated as stronger than a plain evening star?
+2. The stop is at 1.1011, and on Monday price opens at 1.1029. Where does the short's stop fill?
+3. A perfect evening star at Friday's close. What are the three reasonable paths?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** A doji carries more weight at a top (Nison's observation), and a doji star shows buyers stalling more clearly.
+
+**2.** At about 1.1029, the first available price. A stop order does not guarantee a price.
+
+**3.** Enter with a reduced size, wait for Monday's open before entering, or skip the trade.
+
+</details>
+
+## Next steps
+
+- Full walk-through: [Morning Star](/en/patterns/morning-star).
+- Why stops slip: [Slippage and Spread Widening](/en/learn/10-trade-management-execution/04-slippage-requote-spread-widening).
+- Same family: [Bearish Engulfing](/en/patterns/bearish-engulfing), [Three Inside Down](/en/patterns/three-inside-down), [Shooting Star](/en/patterns/shooting-star).
+
+<Disclaimer />

@@ -1,19 +1,223 @@
 ---
-title: "Anatomy of a Candle"
-description: "Candle er body, wick, open, close ar unader meaning"
+title: "Anatomy of a Candle: body ও wick দেখে price-এর গল্প পড়ুন"
+description: "Candlestick-এর body, wick, open ও close কী বলে, bullish ও bearish candle কীভাবে চিনবেন এবং শুধু আকার দেখে কেন trade নেওয়া ভুল।"
 level: beginner
-tags: []
-status: draft
-updated: 2026-10-10
+tags: [candlestick, body, wick, ohlc]
+instruments: [EURUSD]
+timeframes: [H1, H4]
+status: done
+sources:
+  - type: blog
+    title: "Candlestick Chart - Investopedia"
+    url: "https://www.investopedia.com/terms/c/candlestick.asp"
+  - type: book
+    title: "Japanese Candlestick Charting Techniques - Steve Nison"
+    url: ""
+    note: "প্রাথমিক ধারণা অধ্যায়"
+updated: 2026-11-05
 ---
 
-# Anatomy of a Candle
+# Anatomy of a Candle: body ও wick দেখে price-এর গল্প পড়ুন
+
+একই ঘণ্টায় দাম 40 pip উঠে 35 pip ফিরে এলে আর শুধু 5 pip উঠলে, ঘণ্টা শেষের close দাম একই হতে পারে। কিন্তু গল্প দুটি পুরো আলাদা। প্রথমটিতে buyer লড়েছে এবং হেরেছে। দ্বিতীয়টিতে লড়াই-ই হয়নি। Candle এই পার্থক্যটাই এক ছবিতে ধরে রাখে।
+
+## এই লেখা পড়ে আপনি যা পারবেন
+
+- একটি candle-এর চারটি দাম (open, high, low, close) **চিনতে পারবেন**।
+- Body ও wick দেখে buyer-seller-এর শক্তি **পড়তে পারবেন**।
+- Bullish ও bearish candle **আলাদা করতে পারবেন**।
+- Wick-কে signal ভেবে ভুল করার ফাঁদ **এড়াতে পারবেন**।
+
+## কেন এটি জরুরি
+
+- **সব pattern এর ওপর দাঁড়িয়ে।** Hammer, Doji, Engulfing, সবই body আর wick-এর অনুপাত।
+- **Line chart অনেক তথ্য লুকায়।** শুধু close দাম দেখলে ঘণ্টার ভেতরের লড়াই হারিয়ে যায়।
+- **Stop-loss ঠিক করতে লাগে।** পরে দেখবেন stop সাধারণত কোনো candle-এর wick-এর ওপারে বসে।
+
+পূর্বশর্ত হিসেবে দেখে নিন [Chart পড়া](/bn/learn/01-foundations/06-reading-a-chart) এবং [Swing High ও Swing Low](/bn/learn/03-market-structure/01-swing-high-low)।
+
+## Candle কী
+
+**Candle হলো একটি নির্দিষ্ট সময়ে (যেমন ১ ঘণ্টা) price কোথায় শুরু হলো, কত উঠল, কত নামল এবং কোথায় শেষ হলো তার একটি ছবি।**
+
+এটাকে একটি ম্যাচের স্কোরকার্ডের মতো ভাবুন। শুধু চূড়ান্ত ফল জানলে (close) বোঝা যায় না ম্যাচটি কতটা জমেছিল। স্কোরকার্ডে কে কতদূর এগিয়েছিল, কে কতবার পিছিয়ে ছিল, সব থাকে।
+
+প্রতিটি candle চারটি দাম দিয়ে তৈরি:
+
+| দাম       | অর্থ                       |
+| :-------- | :------------------------- |
+| **Open**  | সময় শুরুর প্রথম দাম       |
+| **High**  | সময়ের মধ্যে সর্বোচ্চ দাম  |
+| **Low**   | সময়ের মধ্যে সর্বনিম্ন দাম |
+| **Close** | সময় শেষের শেষ দাম         |
+
+Open আর close-এর মাঝের অংশটি **body**। High থেকে body পর্যন্ত সরু রেখা **upper wick** (shadow বা tail-ও বলা হয়)। Low থেকে body পর্যন্ত রেখা **lower wick**।
+
+## Bullish ও bearish candle
+
+- **Bullish candle:** close, open-এর চেয়ে উপরে। দাম বেড়েছে। সাধারণত সবুজ।
+- **Bearish candle:** close, open-এর চেয়ে নিচে। দাম কমেছে। সাধারণত লাল।
+
+<Callout type="note">
+  রং platform ভেদে বদলায়। কোনো platform-এ bullish সাদা বা নীল দেখায়। রং নয়,
+  open ও close-এর অবস্থান দেখে চিনুন।
+</Callout>
+
+## Body ও wick কী বলে
+
+**Body বলে কে জিতেছে। Wick বলে কে ফিরে গেছে।**
+
+- **বড় body, ছোট wick:** একপক্ষ শুরু থেকে শেষ পর্যন্ত নিয়ন্ত্রণ রেখেছে।
+- **ছোট body:** কোনো পক্ষই জেতেনি, দ্বিধা আছে।
+- **লম্বা upper wick:** buyer দাম উপরে তুলেছিল, কিন্তু seller ঠেলে নামিয়ে এনেছে।
+- **লম্বা lower wick:** seller দাম নিচে নামিয়েছিল, কিন্তু buyer ঠেলে তুলে এনেছে।
+
+## Chart-এ কেমন দেখায়
+
+<Chart
+  id="candle-anatomy-01"
+  height={420}
+  caption="EURUSD H4 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — A: বড় bull body, B: লম্বা upper wick, C: বড় bear body, D: লম্বা lower wick, E: ছোট body"
+/>
+
+প্রতিটি চিহ্ন একটি আলাদা গল্প বলছে:
+
+| চিহ্ন | আকার                       | গল্প                                  |
+| :---- | :------------------------- | :------------------------------------ |
+| A     | বড় bull body, ছোট wick    | buyer শুরু থেকে শেষ পর্যন্ত চালিয়েছে |
+| B     | ছোট body, লম্বা upper wick | উপরে গিয়ে seller ফিরিয়ে এনেছে       |
+| C     | বড় bear body              | seller পুরো নিয়ন্ত্রণে               |
+| D     | ছোট body, লম্বা lower wick | নিচে গিয়ে buyer ফিরিয়ে এনেছে        |
+| E     | প্রায় নেই body            | দুই পক্ষই সমান, দ্বিধা                |
+
+## ধাপে ধাপে: একটি candle পড়ার পদ্ধতি
+
+<Steps>
+
+### ধাপ ১: Bullish না bearish বলুন
+
+Close, open-এর উপরে না নিচে? এক সেকেন্ডের কাজ।
+
+### ধাপ ২: Body-র আকার দেখুন
+
+আশপাশের candle-এর তুলনায় বড় না ছোট? "বড়" মানে আগের ১০-১৫টি candle-এর গড়ের চেয়ে স্পষ্ট বড়।
+
+### ধাপ ৩: Wick মাপুন
+
+কোন দিকে wick লম্বা? Body-র তুলনায় কতটা? Wick যত লম্বা, ওই দিক থেকে rejection তত বেশি।
+
+### ধাপ ৪: Close কোথায় পড়েছে দেখুন
+
+Candle-এর পুরো পরিসরের (high থেকে low) উপরের দিকে close মানে buyer শক্তিশালী। নিচের দিকে হলে seller।
+
+### ধাপ ৫: নিজেকে প্রশ্ন করুন: "এটি কোথায় ঘটেছে?"
+
+সবশেষে আশপাশ দেখুন। এই ধাপটি অনেকে বাদ দেন, আর সেখান থেকেই ভুল শুরু। বিস্তারিত পাবেন [Candle Context](/bn/learn/04-candlesticks/05-candle-context) পাঠে।
+
+</Steps>
+
+## উদাহরণ ১: যখন পড়াটা কাজ করে (কাল্পনিক)
+
+পরপর কয়েকটি candle ভাবুন: প্রথমে ছোট body, তারপর একটি বড় bull body (উপরের chart-এর A), তারপর আরও দুটি bull candle। প্রতিটির close আগের চেয়ে উপরে।
+
+- **কী দেখা যাচ্ছিল:** বড় bull body, ছোট wick, close high-এর কাছে।
+- **সিদ্ধান্ত:** buyer-এর নিয়ন্ত্রণ স্পষ্ট। Pullback-এ buy খোঁজা যুক্তিসংগত।
+- **ফল:** দাম আরও উঠল।
+- **শিক্ষা:** শক্তিশালী candle একা নয়, পরপর আসা candle-এর সঙ্গে মিলে বিশ্বাসযোগ্য হয়।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়।)
+
+## উদাহরণ ২: যখন লম্বা wick ফাঁকি দেয় (কাল্পনিক)
+
+<Chart
+  id="candle-wick-fail-01"
+  height={420}
+  caption="EURUSD H4 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — জোরালো downtrend-এ লম্বা lower wick, তবু দাম নামতেই থাকে"
+/>
+
+- **কী দেখা যাচ্ছিল:** ৫ নম্বর candle-এ লম্বা lower wick, মনে হচ্ছে buyer ফিরে এসেছে।
+- **ভুল সিদ্ধান্ত:** "এটা তো rejection, buy করি।"
+- **কী হলো:** পরের candle wick-এর low-এর নিচে close করল। Stop লাগল।
+- **কেন ব্যর্থ:** Trend জোরালো নিচমুখী ছিল এবং কাছাকাছি কোনো support ছিল না। Wick শুধু একটি ক্ষণস্থায়ী প্রতিরোধ ছিল।
+
+**শিক্ষা:** Wick একটি ইঙ্গিত, signal নয়।
+
+## সাধারণ ভুল
+
+| ভুল                                | কেন হয়                         | কী করবেন                                  |
+| :--------------------------------- | :------------------------------ | :---------------------------------------- |
+| শুধু রং দেখে সিদ্ধান্ত             | সবুজ = কিনব, এমন সরল ধারণা      | Body-র আকার ও close-এর অবস্থান দেখুন      |
+| Candle শেষ হওয়ার আগেই পড়া        | চলমান candle-এর close বদলে যায় | Candle close হওয়ার পর পড়ুন              |
+| লম্বা wick দেখলেই reversal ধরা     | Pattern-এর নাম পরিচিত বলে       | আগে trend ও জায়গা দেখুন                  |
+| সব timeframe-এ একই গুরুত্ব         | সব candle সমান মনে হয়          | D1-এর candle M5-এর চেয়ে অনেক বেশি অর্থবহ |
+| Spread/news-এ তৈরি wick-কে বিশ্বাস | বড় news-এ wick বিকৃত হয়       | News-এর সময়ের candle আলাদা সন্দেহে দেখুন |
+
+## Pro tips
+
+<Callout type="tip">
+  Candle তুলনা করুন তার প্রতিবেশীদের সঙ্গে, কোনো নির্দিষ্ট pip সংখ্যার সঙ্গে
+  নয়। EURUSD H1-এ 15
+  [pip](/bn/learn/01-foundations/03-pips-lots-leverage-margin)-এর body বড় হতে
+  পারে, কিন্তু গোল্ডে সেটা নগণ্য।
+</Callout>
+
+<Callout type="tip">
+  Chart-এ candle close-এর একটু আগে থেকেই অপেক্ষা শুরু করুন, কিন্তু সিদ্ধান্ত নিন
+  কেবল close হওয়ার পর। চলমান candle প্রতি সেকেন্ডে বদলায়।
+</Callout>
+
+## কখন এটা কাজ করে না
+
+- **খুব ছোট timeframe-এ (M1–M5):** আকার প্রায় এলোমেলো, কম তথ্য বহন করে।
+- **Low liquidity-র সময়ে:** রাতের দিকে বা ছুটির দিনে wick ছোট দামে লাফে বেড়ে যেতে পারে।
+- **বড় news-এর মুহূর্তে:** wick আকস্মিক বড় হয়, কিন্তু তা বাজারের সত্যিকারের মত নয়।
+- **একা ব্যবহার করলে:** candle-এর আকার জায়গা ছাড়া প্রায় কিছুই বলে না।
+
+## সারসংক্ষেপ
 
 <KeyTakeaways>
-- এই lesson টি এখনো লেখা হয়নি।
-- পরবর্তীতে বিস্তারিত যোগ করা হবে।
+
+- প্রতিটি candle = open, high, low, close।
+- Body বলে কে জিতেছে, wick বলে কে ফিরে গেছে।
+- বড় body ও ছোট wick নিয়ন্ত্রণ দেখায়; ছোট body দ্বিধা দেখায়।
+- লম্বা wick একটি ইঙ্গিত, signal নয়। জায়গা না দেখে trade নেওয়া ঝুঁকিপূর্ণ।
+- Candle close হওয়ার পরই পড়ুন।
+
 </KeyTakeaways>
 
-## Introduction
+## অনুশীলন
 
-*এই section টি draft আছে। শীঘ্রই বিস্তারিত content যোগ করা হবে।*
+TradingView-এ EUR/USD-এর H4 chart খুলুন। শেষ ৩০টি candle থেকে ৫টি করে বেছে নিন: বড় bull body, বড় bear body, লম্বা upper wick, লম্বা lower wick এবং ছোট body। প্রতিটির জন্য এক লাইনে লিখুন: কে জিতল, আর পরের candle কী করল।
+
+## কুইজ
+
+1. Candle bullish হতে কী লাগে?
+2. লম্বা lower wick মানে কী?
+3. ছোট body ও দুই দিকে প্রায় সমান wick কী নির্দেশ করে?
+4. লম্বা lower wick দেখলেই কেন সরাসরি buy করা ঠিক নয়?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** Close, open-এর উপরে হতে হবে।
+
+**২.** দাম নিচে নেমেছিল, কিন্তু buyer ঠেলে আবার উপরে তুলেছে।
+
+**৩.** দ্বিধা। দুই পক্ষের কেউ জেতেনি।
+
+**৪.** কারণ wick শুধু একটি ঘটনা। Trend, support-এর কাছাকাছি অবস্থান ও পরের candle না দেখলে এটি অনির্ভরযোগ্য।
+
+</details>
+
+## পরের ধাপ
+
+- আগে: [Market Structure](/bn/learn/03-market-structure/00-overview)।
+- পরে: [Single Candle Patterns](/bn/learn/04-candlesticks/02-single-candle-patterns)।
+- জায়গা বোঝা: [Candle Context](/bn/learn/04-candlesticks/05-candle-context)।
+- ঝুঁকি: [Stop Loss Placement](/bn/learn/10-trade-management-execution/01-stop-loss-placement)।
+
+### সূত্র
+
+- [Candlestick, Investopedia](https://www.investopedia.com/terms/c/candlestick.asp)
+
+<Disclaimer />

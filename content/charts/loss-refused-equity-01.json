@@ -1,0 +1,132 @@
+{
+  "id": "loss-refused-equity-01",
+  "title": {
+    "en": "The Loss That Was Not Accepted",
+    "bn": "যে লোকসান মেনে নেওয়া হয়নি"
+  },
+  "symbol": "ACCOUNT",
+  "timeframe": "per trade",
+  "mode": "synthetic",
+  "type": "concept",
+  "bias": "neutral",
+  "outcome": "loss",
+  "tags": [
+    "acceptance",
+    "held-loser",
+    "drawdown"
+  ],
+  "module": "12-trading-psychology",
+  "lessonSlugs": [
+    "03-accepting-losses"
+  ],
+  "caption": {
+    "en": "In trade 5 the stop was removed in hope of a bounce. A planned -1% became -8%. The orange line shows the same trades with stops honored (hypothetical).",
+    "bn": "৫ম trade-এ ফেরার আশায় stop সরানো হয়। পরিকল্পিত -1% হলো -8%। কমলা রেখায় stop মানা হলে একই trade-গুলোর ফল (কাল্পনিক)।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data.",
+    "bn": "এটি শিক্ষামূলক কাল্পনিক ডেটা।"
+  },
+  "explanation": {
+    "en": "One refused loss can erase the work of many correct trades.",
+    "bn": "একটি না-মানা লোকসান অনেকগুলো সঠিক trade-এর কাজ মুছে দিতে পারে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "A small loss taken early beats a large loss hoped away",
+      "bn": "আশায় রাখা বড় লোকসানের চেয়ে আগে নেওয়া ছোট লোকসান ভালো"
+    }
+  ],
+  "updatedAt": "2026-11-05T22:00:00Z",
+  "candles": [
+    {
+      "i": 0,
+      "o": 10000.0,
+      "h": 10222.0,
+      "l": 9978.0,
+      "c": 10200.0,
+      "v": 0
+    },
+    {
+      "i": 1,
+      "o": 10200.0,
+      "h": 10212.2,
+      "l": 10085.8,
+      "c": 10098.0,
+      "v": 0
+    },
+    {
+      "i": 2,
+      "o": 10098.0,
+      "h": 10322.16,
+      "l": 10075.8,
+      "c": 10299.96,
+      "v": 0
+    },
+    {
+      "i": 3,
+      "o": 10299.96,
+      "h": 10312.26,
+      "l": 10184.66,
+      "c": 10196.96,
+      "v": 0
+    },
+    {
+      "i": 4,
+      "o": 10196.96,
+      "h": 10280.54,
+      "l": 9297.62,
+      "c": 9381.2,
+      "v": 0
+    },
+    {
+      "i": 5,
+      "o": 9381.2,
+      "h": 9392.58,
+      "l": 9276.01,
+      "c": 9287.39,
+      "v": 0
+    },
+    {
+      "i": 6,
+      "o": 9287.39,
+      "h": 9493.72,
+      "l": 9266.81,
+      "c": 9473.14,
+      "v": 0
+    },
+    {
+      "i": 7,
+      "o": 9473.14,
+      "h": 9484.61,
+      "l": 9366.94,
+      "c": 9378.41,
+      "v": 0
+    }
+  ],
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 10000,
+      "label": "Start 10,000",
+      "color": "#3b82f6",
+      "style": "dotted"
+    }
+  ],
+  "overlays": [
+    {
+      "label": "Stops honored",
+      "color": "#f97316",
+      "values": [
+        10200.0,
+        10098.0,
+        10299.96,
+        10196.96,
+        10094.99,
+        9994.04,
+        10193.92,
+        10091.98
+      ]
+    }
+  ]
+}

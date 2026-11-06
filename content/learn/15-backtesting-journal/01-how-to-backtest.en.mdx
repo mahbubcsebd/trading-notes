@@ -1,0 +1,193 @@
+---
+title: "How to Backtest: Testing the Rules on Past Charts"
+description: "How to do a manual backtest, which traps to avoid (lookahead, cherry-picking, small sample, costs), and how to log each result, with a chart and imaginary examples."
+level: intermediate
+tags: [backtest, manual-backtest, trade-log, bias, sample-size]
+instruments: [EURUSD]
+timeframes: [H1]
+status: done
+sources:
+  - type: blog
+    title: "Backtesting - Investopedia"
+    url: "https://www.investopedia.com/terms/b/backtesting.asp"
+updated: 2026-11-06
+---
+
+# How to Backtest: Testing the Rules on Past Charts
+
+You do not test a new recipe by feeding the whole family. You let one person taste it first. A backtest is that tasting: running your written rules on past charts without real money.
+
+## What you will be able to do
+
+- **Run a manual backtest** step by step.
+- **Recognize and avoid the four common traps.**
+- **Write the result of each setup** in a **log**.
+
+## Why it matters
+
+- **Do not believe the rules work without proof.** "I think it works" and "I saw it in 40 setups" are different.
+- **You can catch mistakes at no cost.** If you learn a mistake on demo or live, money goes. In a backtest only time goes.
+- **The next step stands on it.** [Performance metrics](/en/learn/15-backtesting-journal/02-performance-metrics-forward-testing) can be measured only when you have data.
+
+Prerequisites: [Entry, Exit and Risk Rules](/en/learn/14-trading-plan-system/02-entry-exit-risk-rules-ek-page-e).
+
+## What is a backtest
+
+**A backtest is applying fixed rules to past prices one setup at a time and writing down every result, losses included.**
+
+The word "fixed" is the key here. If you change the rules as you go, it is not a backtest. It is a story built by looking at the past.
+
+| Type           | What                                                            | When it is good                   |
+| :------------- | :-------------------------------------------------------------- | :-------------------------------- |
+| Manual         | Moving the chart back and forward one candle at a time yourself | At the start; you learn           |
+| Semi-automated | Finding signals with an indicator and counting results yourself | If the signal is measurable       |
+| Automated      | Code runs it (briefly in a later chapter)                       | If the rules are fully measurable |
+
+This lesson covers manual.
+
+## What it looks like on a chart
+
+<Chart
+  id="backtest-manual-log-01"
+  height={460}
+  caption="EURUSD H1 (educational, imaginary example): the rule: buy on a pullback in an uptrend, stop 30 pips, target 60 pips. Five setups: three +2R, two -1R."
+/>
+
+All five setups go in the log, with the two losses. If you keep only the wins, it is not a backtest.
+
+## Step by step: a manual backtest
+
+<Steps>
+
+### Step 1: Write the rules, then start
+
+Entry, stop, target, risk: all fixed first. Keep a version number for the rules (v1).
+
+### Step 2: Pick the data, before seeing results
+
+For example the last 12 months of H1. Cover the right side of the chart (with replay or paper) so the future is not seen.
+
+### Step 3: Move forward one candle at a time
+
+When each candle closes, ask: "Have all the conditions of the rules matched?" If yes, mark the entry, stop and target.
+
+### Step 4: Read the result
+
+Did it touch the stop or the target first? If both are touched in one candle, **assume the stop first** (conservative).
+
+### Step 5: Write it in the log
+
+Date, direction, entry, stop, target, result (R), comment. Every setup, losses too.
+
+### Step 6: Run until the sample is enough
+
+No decision from a few trades. At least a few dozen trades, across different market conditions (trend, range).
+
+</Steps>
+
+## The four traps
+
+| Trap           | What happens                                                                                                 | How to avoid it                                |
+| :------------- | :----------------------------------------------------------------------------------------------------------- | :--------------------------------------------- |
+| Lookahead bias | Deciding by looking at candles on the right                                                                  | Cover the chart, use replay                    |
+| Cherry-picking | Keeping the nice setups and dropping the ugly ones                                                           | Log it whenever the rules match, no exceptions |
+| Small sample   | Confidence from five or seven trades                                                                         | A few dozen trades, at different times         |
+| Ignoring costs | Leaving out [spread](/en/learn/10-trade-management-execution/04-slippage-requote-spread-widening)/commission | Subtract the cost on every trade               |
+
+One more: **overfitting**. Changing the rules again and again so the result in the past looks good. Such rules usually lose in the future.
+
+## Example 1: when it works (synthetic)
+
+- **Rules (v1):** buy on a pullback in an uptrend, stop 30 pips, target 60 pips.
+- **While running:** the trader covered the chart and marked the setups one by one. Of five, three were +2R and two were -1R. Each was logged.
+- **Result:** a net of +4R in these five. The number is small, so this is just the start; more setups are needed.
+- **Lesson:** the rules were fixed before the result was known, and losses were logged too. This is an honest backtest.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Example 2: when it fails (synthetic)
+
+- **What happened:** the trader picked 10 "nice" setups with the whole chart open. 9 won.
+- **Result:** thinking "90% win rate", went live. In the first month 3 of 10 won.
+- **Why it failed:** the setups were picked by seeing the future (lookahead), and the ugly setups were left out. That is not a backtest. It is a selected collection.
+- **Lesson:** if the result looks too good, doubt it first. Do not celebrate.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Common mistakes
+
+| Mistake                            | Why it happens              | What to do                           |
+| :--------------------------------- | :-------------------------- | :----------------------------------- |
+| Changing the rules while running   | Seeing a bad result         | A new version, start again           |
+| Only one market condition          | Picking a convenient period | Keep both trend and range            |
+| Not keeping a log                  | Thinking you'll remember    | Write right after each setup         |
+| Leaving out costs                  | It seems complicated        | Subtract a fixed cost on every trade |
+| Stop and target both in one candle | Ambiguity                   | Assume the stop first                |
+
+## Pro tips
+
+<Callout type="tip">
+  Whether the first backtest gives a good or a bad result, run the same rules on
+  another period. If the two periods agree, confidence rises.
+</Callout>
+
+<Callout type="note">
+  A backtest is no guarantee of the future. The past market and spread can be
+  different in the future. That is why the forward test in the next lesson is
+  essential.
+</Callout>
+
+## When this does not work
+
+- **If the rules are unclear:** rules of the "if it feels good" kind cannot be tested.
+- **If the structure of the market changes:** the result of an earlier period may not apply in the new situation.
+- **In discretionary trading:** if every trade needs judgment, the result depends on the person, so comparison is hard.
+
+## Summary
+
+<KeyTakeaways>
+
+- Backtest = fixed rules, past prices, every result in the log.
+- Four traps: lookahead, cherry-picking, small sample, ignoring costs.
+- If one candle touches two levels, assume the stop first.
+- Doubt a result that looks very good.
+
+</KeyTakeaways>
+
+## Practice
+
+With your plan's rules (v1), log at least 20 setups on the chart of the last six months. Run it with the chart covered, and subtract costs.
+
+## Quiz
+
+1. What is lookahead bias?
+2. If one candle touches both the stop and the target, what do you assume?
+3. Why is the 90% in the failed example above not believable?
+4. What is overfitting?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** Deciding in the past by looking at future candles, which is impossible live.
+
+**2.** The stop was hit first, conservatively.
+
+**3.** The setups were picked by looking at the result, and the bad ones were left out.
+
+**4.** Changing the rules again and again to make the result in the past look good, so that they don't work in the future.
+
+</details>
+
+## Next steps
+
+- Before: [When to Stop Trading](/en/learn/14-trading-plan-system/05-kokhon-trading-bondho-korbo).
+- After: [Performance Metrics and Forward Testing](/en/learn/15-backtesting-journal/02-performance-metrics-forward-testing).
+- Related: [Expectancy](/en/learn/08-risk-management/07-expectancy).
+
+### Sources
+
+- <ExternalLink href="https://www.investopedia.com/terms/b/backtesting.asp">
+    Backtesting, Investopedia
+  </ExternalLink>
+
+<Disclaimer />

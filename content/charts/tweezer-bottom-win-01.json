@@ -1,0 +1,266 @@
+{
+  "id": "tweezer-bottom-win-01",
+  "title": {
+    "en": "Tweezer Bottom on Tested Support, High Break Entry",
+    "bn": "পরীক্ষিত support-এ tweezer bottom, high ভাঙলে entry"
+  },
+  "symbol": "XAUUSD",
+  "timeframe": "H4",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bullish",
+  "outcome": "win",
+  "tags": [
+    "tweezer-bottom",
+    "tweezer",
+    "candlestick",
+    "support",
+    "pattern"
+  ],
+  "module": "patterns",
+  "lessonSlugs": [],
+  "caption": {
+    "en": "Illustrative synthetic XAUUSD H4: price returns to a support that held once. A bearish candle and the next bullish candle print matching lows just under the level; the second closes above the first one's open. A buy stop above the pair fills and price rallies to 2R.",
+    "bn": "শিক্ষামূলক কাল্পনিক XAUUSD H4: দাম আগে একবার ধরে রাখা support-এ ফেরে। একটি bearish candle আর পরের bullish candle level-এর সামান্য নিচে একই low দেয়; দ্বিতীয়টা প্রথমটার open-এর উপরে close করে। জোড়ার উপরে buy stop fill হয়, দাম 2R পর্যন্ত ওঠে।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data, not a real market record.",
+    "bn": "শিক্ষামূলক কাল্পনিক ডেটা, বাস্তব মার্কেটের রেকর্ড নয়।"
+  },
+  "updatedAt": "2026-11-06T12:00:00Z",
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 2373.87,
+      "label": "Support",
+      "color": "#3b82f6",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 2372.37,
+      "label": "Matching lows",
+      "color": "#3b82f6",
+      "style": "dotted"
+    },
+    {
+      "type": "marker",
+      "i": 14,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Tweezer A"
+    },
+    {
+      "type": "marker",
+      "i": 15,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Tweezer B"
+    },
+    {
+      "type": "hline",
+      "price": 2384.87,
+      "label": "Entry (high break)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 2369.87,
+      "label": "Stop",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 2414.87,
+      "label": "Target 2R",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candle 4 marks support. Candles 10-13 fall back to it. Candle 14 drops to a low just under support; candle 15 tests the same low within 20 cents and closes above candle 14's open. Two candles rejected the same price: a tweezer bottom. Candle 16 breaks the high and fills the buy stop; the stop sits under the shared low.",
+    "bn": "৪ নম্বর candle support চিহ্নিত করে। ১০-১৩ নম্বর আবার সেখানে নামে। ১৪ নম্বর support-এর সামান্য নিচে একটি low দেয়; ১৫ নম্বর 20 সেন্টের মধ্যে একই low পরীক্ষা করে ১৪ নম্বরের open-এর উপরে close করে। দুটি candle একই দাম প্রত্যাখ্যান করেছে: tweezer bottom। ১৬ নম্বর high ভেঙে buy stop fill করে; stop যৌথ low-এর নিচে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Two candles rejecting the same price at a level is the signal",
+      "bn": "Level-এ দুটি candle-এর একই দাম প্রত্যাখ্যানই signal"
+    }
+  ],
+  "entry": 2384.87,
+  "stopLoss": 2369.87,
+  "takeProfit": 2414.87,
+  "rr": "1:2.0",
+  "candles": [
+    {
+      "i": 0,
+      "o": 2420.0,
+      "h": 2426.75,
+      "l": 2406.27,
+      "c": 2411.0
+    },
+    {
+      "i": 1,
+      "o": 2411.0,
+      "h": 2415.74,
+      "l": 2392.51,
+      "c": 2399.0
+    },
+    {
+      "i": 2,
+      "o": 2399.0,
+      "h": 2405.12,
+      "l": 2388.17,
+      "c": 2392.0
+    },
+    {
+      "i": 3,
+      "o": 2392.0,
+      "h": 2398.21,
+      "l": 2375.87,
+      "c": 2382.0
+    },
+    {
+      "i": 4,
+      "o": 2382.0,
+      "h": 2385.0,
+      "l": 2373.87,
+      "c": 2381.87
+    },
+    {
+      "i": 5,
+      "o": 2381.87,
+      "h": 2399.36,
+      "l": 2375.93,
+      "c": 2393.87
+    },
+    {
+      "i": 6,
+      "o": 2393.87,
+      "h": 2409.1,
+      "l": 2386.9,
+      "c": 2403.87
+    },
+    {
+      "i": 7,
+      "o": 2403.87,
+      "h": 2407.66,
+      "l": 2395.9,
+      "c": 2399.87
+    },
+    {
+      "i": 8,
+      "o": 2399.87,
+      "h": 2422.58,
+      "l": 2393.45,
+      "c": 2413.87
+    },
+    {
+      "i": 9,
+      "o": 2413.87,
+      "h": 2429.74,
+      "l": 2408.0,
+      "c": 2422.87
+    },
+    {
+      "i": 10,
+      "o": 2422.87,
+      "h": 2429.3,
+      "l": 2407.82,
+      "c": 2412.87
+    },
+    {
+      "i": 11,
+      "o": 2412.87,
+      "h": 2418.75,
+      "l": 2392.07,
+      "c": 2400.87
+    },
+    {
+      "i": 12,
+      "o": 2400.87,
+      "h": 2407.47,
+      "l": 2384.78,
+      "c": 2391.87
+    },
+    {
+      "i": 13,
+      "o": 2391.87,
+      "h": 2393.87,
+      "l": 2376.87,
+      "c": 2379.87
+    },
+    {
+      "i": 14,
+      "o": 2379.87,
+      "h": 2381.37,
+      "l": 2372.37,
+      "c": 2373.57
+    },
+    {
+      "i": 15,
+      "o": 2373.57,
+      "h": 2384.37,
+      "l": 2372.57,
+      "c": 2383.37
+    },
+    {
+      "i": 16,
+      "o": 2383.37,
+      "h": 2388.87,
+      "l": 2382.37,
+      "c": 2387.87
+    },
+    {
+      "i": 17,
+      "o": 2387.87,
+      "h": 2399.59,
+      "l": 2384.43,
+      "c": 2395.87
+    },
+    {
+      "i": 18,
+      "o": 2395.87,
+      "h": 2399.01,
+      "l": 2389.68,
+      "c": 2392.87
+    },
+    {
+      "i": 19,
+      "o": 2392.87,
+      "h": 2408.34,
+      "l": 2388.04,
+      "c": 2402.87
+    },
+    {
+      "i": 20,
+      "o": 2402.87,
+      "h": 2413.93,
+      "l": 2399.64,
+      "c": 2409.87
+    },
+    {
+      "i": 21,
+      "o": 2409.87,
+      "h": 2412.68,
+      "l": 2402.48,
+      "c": 2405.87
+    },
+    {
+      "i": 22,
+      "o": 2405.87,
+      "h": 2418.34,
+      "l": 2401.53,
+      "c": 2414.87
+    },
+    {
+      "i": 23,
+      "o": 2414.87,
+      "h": 2424.87,
+      "l": 2411.06,
+      "c": 2420.87
+    }
+  ]
+}

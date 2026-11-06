@@ -1,0 +1,343 @@
+{
+  "symbol": "EURUSD",
+  "timeframe": "H4",
+  "mode": "synthetic",
+  "module": "06-trend-chart-patterns",
+  "lessonSlugs": [
+    "01-reversal-patterns"
+  ],
+  "notes": {
+    "en": "Illustrative synthetic data.",
+    "bn": "এটি শিক্ষামূলক কাল্পনিক ডেটা।"
+  },
+  "updatedAt": "2026-11-05T20:00:00Z",
+  "type": "trade-setup",
+  "id": "double-top-neckline-01",
+  "title": {
+    "en": "Double Top That Works",
+    "bn": "যে double top কাজ করল"
+  },
+  "bias": "bearish",
+  "outcome": "win",
+  "tags": [
+    "double-top",
+    "reversal",
+    "neckline"
+  ],
+  "caption": {
+    "en": "Two peaks near 1.0980 with a neckline at 1.0880. Candle 21 closes below the neckline, candle 23 retests it, candle 24 breaks the retest low: sell 1.0868, stop 1.0898, target 1.0780.",
+    "bn": "1.0980-এর কাছে দুটি peak, neckline 1.0880। ২১ নম্বর candle neckline-এর নিচে close করে, ২৩ নম্বর retest করে, ২৪ নম্বর retest-এর low ভাঙে: sell 1.0868, stop 1.0898, target 1.0780।"
+  },
+  "annotations": [
+    {
+      "type": "zone",
+      "from": {
+        "price": 1.0984,
+        "i": 7
+      },
+      "to": {
+        "price": 1.097,
+        "i": 19
+      },
+      "label": "Double Top (resistance)",
+      "color": "#f5b301"
+    },
+    {
+      "type": "hline",
+      "price": 1.088,
+      "label": "Neckline 1.0880",
+      "color": "#3b82f6",
+      "style": "dashed"
+    },
+    {
+      "type": "marker",
+      "i": 8,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Peak 1"
+    },
+    {
+      "type": "marker",
+      "i": 18,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Peak 2"
+    },
+    {
+      "type": "marker",
+      "i": 13,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Neckline low"
+    },
+    {
+      "type": "marker",
+      "i": 21,
+      "position": "belowBar",
+      "shape": "arrowDown",
+      "text": "Break"
+    },
+    {
+      "type": "marker",
+      "i": 23,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Retest"
+    },
+    {
+      "type": "marker",
+      "i": 24,
+      "position": "belowBar",
+      "shape": "arrowDown",
+      "text": "Sell"
+    },
+    {
+      "type": "hline",
+      "price": 1.0868,
+      "label": "Sell entry",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.0898,
+      "label": "Stop (above retest)",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.078,
+      "label": "Target (height projected)",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Pattern height = 1.0980 - 1.0880 = 100 pips. Target = neckline - height = 1.0780. Risk 30 pips for 88 pips of target (about 2.9R). The second peak failed to beat the first, then sellers broke the neckline.",
+    "bn": "Pattern-এর উচ্চতা = 1.0980 - 1.0880 = 100 pip। Target = neckline - উচ্চতা = 1.0780। ঝুঁকি 30 pip, target 88 pip দূরে (প্রায় 2.9R)। দ্বিতীয় peak প্রথমটি পার করতে পারেনি, তারপর বিক্রেতারা neckline ভাঙল।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "The neckline break confirms the pattern, not the second peak",
+      "bn": "Pattern নিশ্চিত হয় neckline ভাঙলে, দ্বিতীয় peak-এ নয়"
+    },
+    {
+      "en": "Target = neckline minus pattern height",
+      "bn": "Target = neckline - pattern-এর উচ্চতা"
+    }
+  ],
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.0792,
+      "h": 1.0806,
+      "l": 1.0786,
+      "c": 1.08
+    },
+    {
+      "i": 1,
+      "o": 1.08,
+      "h": 1.0828,
+      "l": 1.0792,
+      "c": 1.082
+    },
+    {
+      "i": 2,
+      "o": 1.082,
+      "h": 1.085,
+      "l": 1.081,
+      "c": 1.084
+    },
+    {
+      "i": 3,
+      "o": 1.084,
+      "h": 1.0866,
+      "l": 1.0834,
+      "c": 1.086
+    },
+    {
+      "i": 4,
+      "o": 1.086,
+      "h": 1.0888,
+      "l": 1.0852,
+      "c": 1.088
+    },
+    {
+      "i": 5,
+      "o": 1.088,
+      "h": 1.0914,
+      "l": 1.087,
+      "c": 1.0904
+    },
+    {
+      "i": 6,
+      "o": 1.0904,
+      "h": 1.0934,
+      "l": 1.0898,
+      "c": 1.0928
+    },
+    {
+      "i": 7,
+      "o": 1.0928,
+      "h": 1.096,
+      "l": 1.092,
+      "c": 1.0952
+    },
+    {
+      "i": 8,
+      "o": 1.0952,
+      "h": 1.098,
+      "l": 1.0942,
+      "c": 1.0976
+    },
+    {
+      "i": 9,
+      "o": 1.0976,
+      "h": 1.0982,
+      "l": 1.0945,
+      "c": 1.0951
+    },
+    {
+      "i": 10,
+      "o": 1.0951,
+      "h": 1.0959,
+      "l": 1.0917,
+      "c": 1.0925
+    },
+    {
+      "i": 11,
+      "o": 1.0925,
+      "h": 1.0935,
+      "l": 1.089,
+      "c": 1.09
+    },
+    {
+      "i": 12,
+      "o": 1.09,
+      "h": 1.0906,
+      "l": 1.0887,
+      "c": 1.0893
+    },
+    {
+      "i": 13,
+      "o": 1.0893,
+      "h": 1.0901,
+      "l": 1.088,
+      "c": 1.0886
+    },
+    {
+      "i": 14,
+      "o": 1.0886,
+      "h": 1.0917,
+      "l": 1.0876,
+      "c": 1.0907
+    },
+    {
+      "i": 15,
+      "o": 1.0907,
+      "h": 1.0935,
+      "l": 1.0901,
+      "c": 1.0929
+    },
+    {
+      "i": 16,
+      "o": 1.0929,
+      "h": 1.0958,
+      "l": 1.0921,
+      "c": 1.095
+    },
+    {
+      "i": 17,
+      "o": 1.095,
+      "h": 1.097,
+      "l": 1.094,
+      "c": 1.096
+    },
+    {
+      "i": 18,
+      "o": 1.096,
+      "h": 1.0976,
+      "l": 1.0954,
+      "c": 1.097
+    },
+    {
+      "i": 19,
+      "o": 1.097,
+      "h": 1.0978,
+      "l": 1.0932,
+      "c": 1.094
+    },
+    {
+      "i": 20,
+      "o": 1.094,
+      "h": 1.095,
+      "l": 1.09,
+      "c": 1.091
+    },
+    {
+      "i": 21,
+      "o": 1.091,
+      "h": 1.0914,
+      "l": 1.0862,
+      "c": 1.0866
+    },
+    {
+      "i": 22,
+      "o": 1.0866,
+      "h": 1.0878,
+      "l": 1.085,
+      "c": 1.087
+    },
+    {
+      "i": 23,
+      "o": 1.087,
+      "h": 1.0892,
+      "l": 1.0868,
+      "c": 1.0876
+    },
+    {
+      "i": 24,
+      "o": 1.0876,
+      "h": 1.0878,
+      "l": 1.0846,
+      "c": 1.085
+    },
+    {
+      "i": 25,
+      "o": 1.085,
+      "h": 1.0858,
+      "l": 1.0827,
+      "c": 1.0835
+    },
+    {
+      "i": 26,
+      "o": 1.0835,
+      "h": 1.0845,
+      "l": 1.081,
+      "c": 1.082
+    },
+    {
+      "i": 27,
+      "o": 1.082,
+      "h": 1.0826,
+      "l": 1.0802,
+      "c": 1.0808
+    },
+    {
+      "i": 28,
+      "o": 1.0808,
+      "h": 1.0816,
+      "l": 1.0787,
+      "c": 1.0795
+    },
+    {
+      "i": 29,
+      "o": 1.0795,
+      "h": 1.0805,
+      "l": 1.0778,
+      "c": 1.078
+    }
+  ],
+  "entry": 1.0868
+}

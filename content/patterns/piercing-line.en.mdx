@@ -1,0 +1,344 @@
+---
+title: "Piercing Line: a bullish counter-punch that takes back over half the red body"
+description: "How to spot a piercing line, why penetration above 50% matters, how it differs from engulfing and thrusting, the no-gap Forex rule, and entry, stop and target, with charts."
+type: bullish
+category: two-candle
+level: intermediate
+candleCount: 2
+signal: reversal
+chartId: piercing-line-win-01
+tags: [pattern, candlestick, piercing-line, reversal, support]
+status: done
+sources:
+  - type: book
+    title: "Japanese Candlestick Charting Techniques - Steve Nison"
+    note: "Piercing pattern; on-neck, in-neck and thrusting"
+  - type: blog
+    title: "Piercing Pattern - Investopedia"
+    url: "https://www.investopedia.com/terms/p/piercingpattern.asp"
+updated: 2026-11-06
+---
+
+After a string of red candles a green one arrives and takes back a little over half of the last red candle. "Piercing line, buy!" But the next day prints a new low. The problem is not the rule but the depth and the location. How far the green close reaches into the red body is the real measure of this pattern.
+
+## At a glance
+
+| Item          | Piercing Line                                                                                                |
+| :------------ | :----------------------------------------------------------------------------------------------------------- |
+| Type          | Bullish reversal, two candles                                                                                |
+| Where to look | At the end of a downtrend or pullback, at a marked support                                                   |
+| Key features  | A long red candle, then a green candle that closes above the middle (50%) of the red body but below its open |
+| Confirmation  | The next candle breaks or closes above the piercing candle's high                                            |
+| Stop          | Below the lower low of the two candles, plus spread and a buffer                                             |
+| Invalidation  | A close below the pattern low                                                                                |
+| Look-alikes   | [Bullish Engulfing](/en/patterns/bullish-engulfing), thrusting / in-neck / on-neck (bearish continuation)    |
+| Opposite      | [Dark Cloud Cover](/en/patterns/dark-cloud-cover)                                                            |
+
+## What you will be able to do
+
+- **Measure** a piercing line's penetration (depth).
+- **Separate** it from look-alike thrusting or in-neck patterns that mean the opposite.
+- **Know** how to read the pattern without gaps in Forex.
+- **Place** entry, stop and target step by step.
+
+## Why it matters
+
+- **The engulfing's little sibling.** Even without covering the whole red body, taking back more than half means buyers won something important.
+- **The 50% line is the divider.** According to Nison, a close below the middle (thrusting, in-neck, on-neck) rather hints the downtrend continues. Same shape, opposite meaning, a few pips apart.
+- **The definition changes in Forex.** The original definition needs a gap, which hardly ever happens in a 24-hour market.
+
+Prerequisites: [Two Candle Patterns](/en/learn/04-candlesticks/03-two-candle-patterns) and [Levels vs Zones](/en/learn/05-support-resistance/01-levels-vs-zones).
+
+## What is a piercing line
+
+**A piercing line is a two-candle pattern: a long bearish candle in a downtrend, then a bullish candle that closes above the middle of the prior body but below the prior open.** The name means "to pierce": the green candle drives into the red body.
+
+Think of a border war. Sellers had captured a lot of ground. Buyers' counter-attack takes back more than half of it, but not all. The war is not over, but the balance has shifted.
+
+<CandleDiagram
+  title="Piercing line: the 50% rule"
+  candles={[
+    { o: 64, h: 65, l: 58, c: 59, dim: true },
+    { o: 59, h: 60, l: 54, c: 55, dim: true },
+    { o: 55, h: 56, l: 41, c: 42, label: "1", note: "long red body" },
+    {
+      o: 42,
+      h: 52,
+      l: 39,
+      c: 51.5,
+      label: "2",
+      note: "closes above the middle (48.5)",
+    },
+  ]}
+  levels={[{ price: 48.5, label: "50% of the red body", tone: "neutral" }]}
+  caption="The first body runs 55 to 42, middle 48.5. The second candle closes at 51.5: above the middle, but below 55."
+/>
+
+### Identification rules
+
+| Rule                                                       | Required?          | Why                                                      |
+| :--------------------------------------------------------- | :----------------- | :------------------------------------------------------- |
+| A downtrend before it; first candle long and bearish       | Yes                | Taking back a small red candle proves little             |
+| Second candle bullish, closing above 50% of the first body | Yes                | This is the "piercing"; below it is thrusting or in-neck |
+| Second close below the first open                          | Yes                | Above it, it is a bullish engulfing                      |
+| At a marked support                                        | Yes                | Without a level it is just a small bounce in a downtrend |
+| Penetration of 60-75% or more                              | No (but important) | The deeper, the stronger; right at 50% it is weak        |
+
+## Strong vs weak piercing line
+
+<DiagramRow>
+  <CandleDiagram
+    title="Strong"
+    verdict="good"
+    verdictLabel="tradeable"
+    candles={[
+      { o: 60, h: 61, l: 55, c: 56, dim: true },
+      { o: 56, h: 57, l: 43, c: 44 },
+      { o: 44, h: 54, l: 41, c: 53, label: "~75% deep" },
+    ]}
+    levels={[{ price: 43, label: "support", tone: "support" }]}
+    caption="At support, taking back about three quarters of the red body."
+  />
+  <CandleDiagram
+    title="Weak"
+    verdict="bad"
+    verdictLabel="avoid"
+    candles={[
+      { o: 80, h: 81, l: 70, c: 71, dim: true },
+      { o: 71, h: 72, l: 61, c: 62, dim: true },
+      { o: 62, h: 63, l: 48, c: 49 },
+      { o: 49, h: 56.5, l: 47, c: 56, label: "barely 50%" },
+    ]}
+    caption="After a run of large red candles, no level, close right at the middle."
+  />
+</DiagramRow>
+
+| Quality check       | Strong                             | Weak                                             |
+| :------------------ | :--------------------------------- | :----------------------------------------------- |
+| Penetration         | 60-75% of the red body or more     | Right at 50%                                     |
+| Location            | At a marked support or demand zone | Mid-downtrend, no level                          |
+| Prior momentum      | A slowing downtrend or a pullback  | A run of large red candles, momentum at its peak |
+| Second candle close | Near its own high                  | Under a long upper wick                          |
+
+### Same look, different meaning
+
+| Pattern               | Second candle's close                            | Meaning                                    |
+| :-------------------- | :----------------------------------------------- | :----------------------------------------- |
+| **Bullish Engulfing** | Above the first open (covers the whole body)     | A stronger reversal than the piercing line |
+| **Piercing Line**     | Above 50% of the first body, below its open      | Bullish reversal                           |
+| **Thrusting**         | Inside the first body, but below 50%             | Nison: usually bearish continuation        |
+| **In-neck / On-neck** | Just above the first close or near the first low | Nison: bearish continuation                |
+
+<Callout type="note">
+  Nison presents thrusting, in-neck and on-neck as signs the downtrend
+  continues. You do not need to memorise them. Remember: **a close below the
+  middle of the red body is not a piercing line and not a reason to buy.**
+</Callout>
+
+## The story inside the candle
+
+One common interpretation of a piercing line at support:
+
+1. **First candle: sellers fully in control.** A long red candle closing near its low. The downtrend seems intact.
+2. **Second candle starts low.** Price first drops further and peeks below support.
+3. **Buyers push back hard.** Buy orders at support lift price past the middle of the red body before the close.
+
+The result: those who sold late in the prior candle are losing. But buyers could not take back the whole red body, so it is a bit weaker than an engulfing, and confirmation from the next candle matters more.
+
+<Callout type="note">
+  This is a common interpretation, not a proven fact. A chart does not show who
+  bought or sold.
+</Callout>
+
+## Where it works and where it does not
+
+<Compare
+  leftLabel="Where a piercing line carries weight"
+  rightLabel="Where a piercing line is often a trap"
+  left="- At a marked support or demand zone
+- At the end of an uptrend pullback, in the trend direction
+- With penetration of 60-75% or more
+- When the second candle dips below support and returns
+- When the next candle breaks the piercing high"
+  right="- In the middle of a run of large red candles
+- Mid-downtrend with no level
+- With a close right at or below 50%
+- With a close under a long upper wick
+- With a lower high or resistance right above"
+/>
+
+## Gaps in a 24-hour market
+
+<Callout type="note">
+  Nison's original definition has the second candle gapping open below the first
+  candle's low. In 24-hour Forex this hardly happens; the second open usually
+  equals the first close. The practical rule: **the second candle opens near the
+  first close, first trades lower (ideally below the first low), then closes
+  above 50% of the first body.** The lower wick does the gap's job.
+</Callout>
+
+## Step by step: trading a piercing line
+
+<Steps>
+
+### Step 1: Level first
+
+Draw support or a demand zone in advance. Check how forceful the downtrend is: a run of large red candles calls for caution.
+
+### Step 2: Wait for both candles to close
+
+A live green candle can slip back below 50% in its last minute. Only measure closed candles.
+
+### Step 3: Measure the penetration
+
+Middle of the first body = (open + close) ÷ 2. Where is the second close? Penetration % = (second close − first close) ÷ (first open − first close). Below 50%, skip it; below 60%, be careful.
+
+### Step 4: Entry type
+
+| Entry                            | Where                                            | Pro                              | Con                            |
+| :------------------------------- | :----------------------------------------------- | :------------------------------- | :----------------------------- |
+| **High break** (standard)        | Buy stop just above the piercing candle's high   | You enter only if buyers push on | Slightly higher entry          |
+| **Close entry**                  | Buy as the piercing candle closes                | Closer entry                     | No confirmation                |
+| **Close above the pattern high** | When the next candle closes above the first open | Most certain                     | Much higher entry, smaller R:R |
+
+### Step 5: Place the stop
+
+Below the lower low of the two candles and below support, plus the [spread](/en/learn/01-foundations/04-spread-commission-swap) and a buffer.
+
+### Step 6: Size and target
+
+[Position size](/en/learn/08-risk-management/02-position-sizing) from the entry-to-stop distance, risking no more than 1%. The first obstacle is often the first candle's open; after that, the prior swing high. Keep the [risk reward](/en/learn/08-risk-management/03-risk-reward) to there at least 1:1.5.
+
+### Step 7: Manage
+
+Repeated closes back below the middle of the red body mean the idea is weakening. A close below the pattern low means it is wrong.
+
+</Steps>
+
+### Pre-trade checklist
+
+<Checklist
+  id="pattern-piercing-line-pretrade-en"
+  items={[
+    "Was support marked before the piercing line, and does it sit at that level?",
+    "Does the shape pass the rules (long red candle, green close above 50% but below the red open)?",
+    "Have both candles closed, and is the penetration at least 60%?",
+    "Is the risk reward to the prior swing high at least 1:1.5?",
+    "Is the higher-timeframe trend or level not against the trade?",
+  ]}
+/>
+
+If any box stays empty, skip the trade.
+
+## Example 1: when it works (illustrative)
+
+<Chart
+  id="piercing-line-win-01"
+  height={420}
+  caption="EURUSD H1 (illustrative, synthetic) — a deep piercing line at a once-tested support; long on the high break."
+/>
+
+- **What was visible:** Candle 4 marked support at 1.0834. Candles 5-9 rallied to about 1.0946, and 10-14 fell back.
+- **The piercing line:** Candle 15 was a long red candle (1.0864 to 1.0837, a 27-pip body). Candle 16 opened at 1.0837, dipped to 1.0828 below support, then closed at 1.08573: about 75% into the red body.
+- **Decision:** Buy stop at 1.08593 (just above the piercing high). Stop at 1.0825 (below the pattern low): about 34 pips of risk. Target 1.09279 (2R); room to the swing high was about 2.5R.
+- **Result:** Candle 17 broke the high and filled the order. Candle 23 reached the target.
+- **Lesson:** A fresh level, deep penetration, a wick below support, and an entry on confirmation.
+
+<TradeSetup
+  direction="long"
+  pair="EURUSD"
+  entry={1.08593}
+  stop={1.0825}
+  target={1.09279}
+/>
+
+(Illustrative example, not a real trade. Not every piercing line wins, and no result is guaranteed.)
+
+## Example 2: when it is a trap (illustrative)
+
+<Chart
+  id="piercing-line-fail-01"
+  height={420}
+  caption="GBPUSD D1 (illustrative, synthetic) — a barely-50% piercing line after a run of large red days, no support. Bought at the close, then stopped out."
+/>
+
+- **What was visible:** Candles 0-5 were large red days from 1.2850 to 1.2540. No marked support below.
+- **The piercing line:** Candle 5 was red (1.2610 to 1.2540, a 70-pip body). Candle 6 closed at 1.25764: only about 52% into the red body.
+- **The wrong decision:** "It meets the rule." Buy at the close at 1.25764, stop 1.2522: about 54 pips of risk.
+- **What happened:** Candle 7 turned down again and candle 8 broke the stop.
+- **Why it failed:** No level, momentum at its peak, and penetration of barely 50%. The first and third checklist boxes would have filtered it out.
+
+**Lesson:** Against strong momentum, a barely-50% piercing line is mostly a pause. Because the stop was set in advance, the loss stayed at 1R.
+
+## Common mistakes
+
+| Mistake                                                  | Why it happens                            | What to do instead                           |
+| :------------------------------------------------------- | :---------------------------------------- | :------------------------------------------- |
+| Calling a close right at 50% a piercing line             | Measuring by eye                          | Calculate the penetration %                  |
+| Buying a thrusting pattern as a piercing line            | Ignoring a close below the middle         | A close below the middle is no reason to buy |
+| Buying in the middle of strong momentum                  | Treating every green candle as a reversal | Only when momentum slows, and at a level     |
+| A target beyond the first candle's open without thinking | Forgetting the first obstacle             | The first open is often the first resistance |
+
+## Pro tips
+
+<Callout type="tip">
+  If price closes above the first candle's open after a piercing line, the two
+  candles together take on nearly the strength of a bullish engulfing. In an
+  open trade, that is a good moment to consider moving the stop to break-even.
+</Callout>
+
+<Callout type="tip">
+  Check the higher timeframe: an H1 piercing line is often an H4 hammer or a
+  candle with a long lower wick. If the H4 picture is clear, the signal is more
+  credible. More in [Multi-Timeframe
+  Analysis](/en/learn/03-market-structure/05-multi-timeframe-analysis).
+</Callout>
+
+## Summary
+
+<KeyTakeaways>
+
+- Piercing line = a long red candle, then a green candle closing above 50% of the red body but below the red open.
+- The 50% line is the divider: a close below it is thrusting or in-neck, not a reason to buy.
+- The deeper the penetration (60-75%+), the stronger; barely 50% inside strong momentum is weak.
+- In Forex the lower wick does the gap's job; enter on the high break, stop below the pattern low.
+
+</KeyTakeaways>
+
+## Practice and your own backtest
+
+Open EURUSD H1 or GBPUSD D1 in TradingView. Find at least 20 piercing lines. Log one row each:
+
+| Date | At support? | Penetration % | Momentum over prior 5 candles | Entry type | Result (R) |
+| :--- | :---------- | :------------ | :---------------------------- | :--------- | :--------- |
+|      |             |               |                               |            |            |
+
+Then split into penetration 50-60% and 60%+ and compare the average R. Do not draw conclusions from fewer than 30 samples.
+
+## Quiz
+
+1. The first candle opens at 1.1050 and closes at 1.1000. The second candle closes at 1.1022. Is it a piercing line?
+2. If the second candle closed at 1.1055, what would the pattern be called?
+3. Without gaps in Forex, which part of the piercing line does the gap's job?
+4. Which checklist boxes would have filtered out the trade in Example 2?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** No. The middle is 1.1025; 1.1022 is below it, so it is a thrusting-type pattern, not a piercing line.
+
+**2.** A bullish engulfing, because the close is above the first candle's open.
+
+**3.** The second candle's lower wick: first dropping below the first close, then returning higher.
+
+**4.** The first box (no support) and the third box (penetration only 52%, below 60%).
+
+</details>
+
+## Next steps
+
+- Before this: [Two Candle Patterns](/en/learn/04-candlesticks/03-two-candle-patterns).
+- The stronger form: [Bullish Engulfing lesson](/en/learn/04-candlesticks/04-bullish-engulfing).
+- Same family: [Dark Cloud Cover](/en/patterns/dark-cloud-cover), [Bullish Engulfing](/en/patterns/bullish-engulfing), [Morning Star](/en/patterns/morning-star).
+
+<Disclaimer />

@@ -1,3 +1,12 @@
 {
-  "title": "Fundamental Intermarket Analysis"
+  "title": "Fundamental Intermarket Analysis",
+  "pages": [
+    "00-overview",
+    "01-central-bank-interest-rate-inflation",
+    "02-economic-calendar-nfp-cpi-fomc",
+    "03-currency-strength-dxy",
+    "04-risk-on-risk-off",
+    "05-correlation-gold-vs-dxy",
+    "06-news-trade-avoid-korbo"
+  ]
 }

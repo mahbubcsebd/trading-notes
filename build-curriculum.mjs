@@ -7,7 +7,7 @@ const renames = [
   { from: '08-backtesting-journal', to: '15-backtesting-journal' },
   { from: '07-gold-xauusd', to: '13-gold-xauusd' },
   { from: '06-trading-psychology', to: '12-trading-psychology' },
-  { from: '05-risk-management', to: '09-risk-management' },
+  { from: '05-risk-management', to: '08-risk-management' },
   { from: '04-support-resistance', to: '05-support-resistance' },
   { from: '03-candlesticks', to: '04-candlesticks' },
   { from: '02-market-structure', to: '03-market-structure' }
@@ -50,7 +50,7 @@ const curriculum = {
     'Volume VWAP',
     'Indicator overload keno bad'
   ],
-  '08-price-action-entries-strategies': [
+  '09-price-action-entries-strategies': [
     'Breakout retest pullback entry',
     'Trend continuation vs reversal',
     'Multi-timeframe entry top-down',
@@ -58,7 +58,7 @@ const curriculum = {
     'Entry model checklist',
     'My Strategies'
   ],
-  '09-risk-management': [
+  '08-risk-management': [
     'Correlation risk expectancy risk of ruin'
   ],
   '10-trade-management-execution': [

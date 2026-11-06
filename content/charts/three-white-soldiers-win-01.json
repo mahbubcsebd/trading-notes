@@ -1,0 +1,287 @@
+{
+  "id": "three-white-soldiers-win-01",
+  "title": {
+    "en": "Three White Soldiers Out of a Base, Pullback Entry",
+    "bn": "Base থেকে three white soldiers, pullback-এ entry"
+  },
+  "symbol": "GBPUSD",
+  "timeframe": "H4",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bullish",
+  "outcome": "win",
+  "tags": [
+    "three-white-soldiers",
+    "candlestick",
+    "three-candle",
+    "breakout",
+    "pattern"
+  ],
+  "module": "patterns",
+  "lessonSlugs": [],
+  "caption": {
+    "en": "Illustrative synthetic GBPUSD H4: after a decline and a flat base, three long bullish candles each open at the previous close and close near their highs, breaking out of the base. Instead of chasing, a buy limit at 50% of the third body fills on the pullback; price reaches 2R.",
+    "bn": "শিক্ষামূলক কাল্পনিক GBPUSD H4: পতন আর সমতল base-এর পর তিনটি লম্বা bullish candle, প্রতিটি আগের close-এ open করে high-এর কাছে close, base থেকে বেরিয়ে যায়। তাড়া না করে তৃতীয় body-র 50%-এ buy limit pullback-এ fill হয়; দাম 2R পর্যন্ত যায়।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data, not a real market record.",
+    "bn": "শিক্ষামূলক কাল্পনিক ডেটা, বাস্তব মার্কেটের রেকর্ড নয়।"
+  },
+  "updatedAt": "2026-11-06T12:00:00Z",
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 1.26363,
+      "label": "Base high",
+      "color": "#3b82f6",
+      "style": "dashed"
+    },
+    {
+      "type": "marker",
+      "i": 12,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "1"
+    },
+    {
+      "type": "marker",
+      "i": 13,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "2"
+    },
+    {
+      "type": "marker",
+      "i": 14,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "3"
+    },
+    {
+      "type": "hline",
+      "price": 1.2704,
+      "label": "Entry (50% of 3rd)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.265,
+      "label": "Stop",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.2812,
+      "label": "Target 2R",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candles 4-11 form a flat base after the decline. Candles 12-14 are three white soldiers: each opens at the prior close and closes near its high, with no long upper wicks. The third closes well above the base. A buy limit at 50% of the third body fills on candle 16; the stop sits below the second soldier's open.",
+    "bn": "৪-১১ নম্বর candle পতনের পর সমতল base। ১২-১৪ নম্বর three white soldiers: প্রতিটি আগের close-এ open করে high-এর কাছে close করে, লম্বা upper wick নেই। তৃতীয়টা base-এর অনেক উপরে close করে। তৃতীয় body-র 50%-এ buy limit ১৬ নম্বরে fill হয়; stop দ্বিতীয় soldier-এর open-এর নিচে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Three soldiers mark strength; the entry still waits for a pullback",
+      "bn": "তিন soldier শক্তির চিহ্ন; entry তবু pullback-এর অপেক্ষা করে"
+    }
+  ],
+  "entry": 1.2704,
+  "stopLoss": 1.265,
+  "takeProfit": 1.2812,
+  "rr": "1:2.0",
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.27,
+      "h": 1.27137,
+      "l": 1.26678,
+      "c": 1.268
+    },
+    {
+      "i": 1,
+      "o": 1.268,
+      "h": 1.26962,
+      "l": 1.26401,
+      "c": 1.2655
+    },
+    {
+      "i": 2,
+      "o": 1.2655,
+      "h": 1.266,
+      "l": 1.26324,
+      "c": 1.264
+    },
+    {
+      "i": 3,
+      "o": 1.264,
+      "h": 1.26467,
+      "l": 1.26126,
+      "c": 1.2622
+    },
+    {
+      "i": 4,
+      "o": 1.2622,
+      "h": 1.26322,
+      "l": 1.26172,
+      "c": 1.2628
+    },
+    {
+      "i": 5,
+      "o": 1.2628,
+      "h": 1.2632,
+      "l": 1.26183,
+      "c": 1.2623
+    },
+    {
+      "i": 6,
+      "o": 1.2623,
+      "h": 1.26349,
+      "l": 1.26173,
+      "c": 1.263
+    },
+    {
+      "i": 7,
+      "o": 1.263,
+      "h": 1.26349,
+      "l": 1.26189,
+      "c": 1.2624
+    },
+    {
+      "i": 8,
+      "o": 1.2624,
+      "h": 1.2634,
+      "l": 1.26199,
+      "c": 1.2629
+    },
+    {
+      "i": 9,
+      "o": 1.2629,
+      "h": 1.26324,
+      "l": 1.2621,
+      "c": 1.2625
+    },
+    {
+      "i": 10,
+      "o": 1.2625,
+      "h": 1.26363,
+      "l": 1.26204,
+      "c": 1.2631
+    },
+    {
+      "i": 11,
+      "o": 1.2631,
+      "h": 1.26348,
+      "l": 1.26216,
+      "c": 1.2626
+    },
+    {
+      "i": 12,
+      "o": 1.2626,
+      "h": 1.2656,
+      "l": 1.2623,
+      "c": 1.2654
+    },
+    {
+      "i": 13,
+      "o": 1.2654,
+      "h": 1.269,
+      "l": 1.2652,
+      "c": 1.2688
+    },
+    {
+      "i": 14,
+      "o": 1.2688,
+      "h": 1.2722,
+      "l": 1.2686,
+      "c": 1.272
+    },
+    {
+      "i": 15,
+      "o": 1.272,
+      "h": 1.2726,
+      "l": 1.2709,
+      "c": 1.2713
+    },
+    {
+      "i": 16,
+      "o": 1.2713,
+      "h": 1.2717,
+      "l": 1.2701,
+      "c": 1.271
+    },
+    {
+      "i": 17,
+      "o": 1.271,
+      "h": 1.27334,
+      "l": 1.27017,
+      "c": 1.2726
+    },
+    {
+      "i": 18,
+      "o": 1.2726,
+      "h": 1.27302,
+      "l": 1.27163,
+      "c": 1.272
+    },
+    {
+      "i": 19,
+      "o": 1.272,
+      "h": 1.27468,
+      "l": 1.27103,
+      "c": 1.274
+    },
+    {
+      "i": 20,
+      "o": 1.274,
+      "h": 1.27609,
+      "l": 1.27344,
+      "c": 1.2754
+    },
+    {
+      "i": 21,
+      "o": 1.2754,
+      "h": 1.2759,
+      "l": 1.27417,
+      "c": 1.2746
+    },
+    {
+      "i": 22,
+      "o": 1.2746,
+      "h": 1.27731,
+      "l": 1.27409,
+      "c": 1.2764
+    },
+    {
+      "i": 23,
+      "o": 1.2764,
+      "h": 1.27814,
+      "l": 1.27584,
+      "c": 1.2776
+    },
+    {
+      "i": 24,
+      "o": 1.2776,
+      "h": 1.27976,
+      "l": 1.27716,
+      "c": 1.2791
+    },
+    {
+      "i": 25,
+      "o": 1.2791,
+      "h": 1.28062,
+      "l": 1.27859,
+      "c": 1.2801
+    },
+    {
+      "i": 26,
+      "o": 1.2801,
+      "h": 1.28182,
+      "l": 1.27959,
+      "c": 1.2813
+    }
+  ]
+}

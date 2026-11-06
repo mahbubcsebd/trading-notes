@@ -1,0 +1,167 @@
+{
+  "id": "journal-plan-only-equity-01",
+  "title": {
+    "en": "What Plan-Only Trades Would Have Done",
+    "bn": "শুধু plan-এর trade হলে কী হতো"
+  },
+  "symbol": "ACCOUNT",
+  "timeframe": "per trade",
+  "mode": "synthetic",
+  "type": "concept",
+  "bias": "neutral",
+  "outcome": "loss",
+  "tags": [
+    "journal",
+    "plan-only"
+  ],
+  "module": "12-trading-psychology",
+  "lessonSlugs": [
+    "05-journaling-habit"
+  ],
+  "caption": {
+    "en": "Candles show all twelve trades. The orange line applies only the eight 'Plan' trades. The journal exposed the gap (hypothetical).",
+    "bn": "Candle-এ বারোটি trade। কমলা রেখায় শুধু আটটি 'Plan' trade। Journal ফাঁকটি দেখিয়েছে (কাল্পনিক)।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data.",
+    "bn": "এটি শিক্ষামূলক কাল্পনিক ডেটা।"
+  },
+  "explanation": {
+    "en": "Only the journal can separate edge from habit.",
+    "bn": "Edge আর অভ্যাস আলাদা করতে পারে শুধু journal।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Review by tag, not by gut feel",
+      "bn": "অনুভূতি নয়, tag ধরে পর্যালোচনা করুন"
+    }
+  ],
+  "updatedAt": "2026-11-05T22:00:00Z",
+  "candles": [
+    {
+      "i": 0,
+      "o": 10000.0,
+      "h": 10222.0,
+      "l": 9978.0,
+      "c": 10200.0,
+      "v": 0
+    },
+    {
+      "i": 1,
+      "o": 10200.0,
+      "h": 10212.2,
+      "l": 10085.8,
+      "c": 10098.0,
+      "v": 0
+    },
+    {
+      "i": 2,
+      "o": 10098.0,
+      "h": 10110.1,
+      "l": 9984.92,
+      "c": 9997.02,
+      "v": 0
+    },
+    {
+      "i": 3,
+      "o": 9997.02,
+      "h": 10218.95,
+      "l": 9975.03,
+      "c": 10196.96,
+      "v": 0
+    },
+    {
+      "i": 4,
+      "o": 10196.96,
+      "h": 10219.35,
+      "l": 9970.63,
+      "c": 9993.02,
+      "v": 0
+    },
+    {
+      "i": 5,
+      "o": 9993.02,
+      "h": 10214.87,
+      "l": 9971.03,
+      "c": 10192.88,
+      "v": 0
+    },
+    {
+      "i": 6,
+      "o": 10192.88,
+      "h": 10205.07,
+      "l": 10078.76,
+      "c": 10090.95,
+      "v": 0
+    },
+    {
+      "i": 7,
+      "o": 10090.95,
+      "h": 10123.22,
+      "l": 9755.95,
+      "c": 9788.22,
+      "v": 0
+    },
+    {
+      "i": 8,
+      "o": 9788.22,
+      "h": 10005.56,
+      "l": 9766.64,
+      "c": 9983.98,
+      "v": 0
+    },
+    {
+      "i": 9,
+      "o": 9983.98,
+      "h": 10205.63,
+      "l": 9962.01,
+      "c": 10183.66,
+      "v": 0
+    },
+    {
+      "i": 10,
+      "o": 10183.66,
+      "h": 10195.84,
+      "l": 10069.64,
+      "c": 10081.82,
+      "v": 0
+    },
+    {
+      "i": 11,
+      "o": 10081.82,
+      "h": 10305.62,
+      "l": 10059.66,
+      "c": 10283.46,
+      "v": 0
+    }
+  ],
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 10000,
+      "label": "Start 10,000",
+      "color": "#3b82f6",
+      "style": "dotted"
+    }
+  ],
+  "overlays": [
+    {
+      "label": "Plan trades only",
+      "color": "#f97316",
+      "values": [
+        10200.0,
+        10098.0,
+        10098.0,
+        10299.96,
+        10299.96,
+        10505.96,
+        10400.9,
+        10400.9,
+        10608.92,
+        10821.1,
+        10821.1,
+        11037.52
+      ]
+    }
+  ]
+}

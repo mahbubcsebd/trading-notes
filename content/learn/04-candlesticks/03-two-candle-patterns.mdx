@@ -1,19 +1,240 @@
 ---
-title: "Two Candle Patterns"
-description: "Engulfing, harami, tweezer - do candle er combination"
+title: "Two Candle Patterns: দ্বিতীয় candle প্রথমটির জবাব দেয়"
+description: "Engulfing, harami ও tweezer কীভাবে চিনবেন, কখন কাজ করে, কখন ফাঁদ হয় — chart example, stop-loss ও checklist সহ।"
 level: beginner
-tags: []
-status: draft
-updated: 2026-10-10
+tags: [candlestick, engulfing, harami, tweezer]
+instruments: [EURUSD]
+timeframes: [H1, H4]
+status: done
+sources:
+  - type: blog
+    title: "Engulfing Candlestick Pattern - Investopedia"
+    url: "https://www.investopedia.com/terms/b/bullishengulfingpattern.asp"
+  - type: blog
+    title: "Harami - Investopedia"
+    url: "https://www.investopedia.com/terms/b/bullishharami.asp"
+  - type: blog
+    title: "Tweezers - Investopedia"
+    url: "https://www.investopedia.com/terms/t/tweezers.asp"
+  - type: book
+    title: "Japanese Candlestick Charting Techniques - Steve Nison"
+    url: ""
+    note: "Engulfing, harami ও tweezer অধ্যায়"
+updated: 2026-11-05
 ---
 
-# Two Candle Patterns
+# Two Candle Patterns: দ্বিতীয় candle প্রথমটির জবাব দেয়
+
+আগের পাঠে একটি candle আপনাকে একটি সন্দেহ দিয়েছিল। এবার সন্দেহের পাশে একটা সাক্ষী দরকার। দ্বিতীয় candle সেই সাক্ষী: প্রথমটির কথা সে মেনে নিয়েছে, নাকি উল্টে দিয়েছে? দুই candle একসঙ্গে পড়লে ছবিটা অনেক পরিষ্কার হয়, কিন্তু ফাঁদও কম নয়।
+
+## এই লেখা পড়ে আপনি যা পারবেন
+
+- Engulfing, harami ও tweezer **চিনতে পারবেন** এবং এদের তফাত বলতে পারবেন।
+- দুই candle-এর **body, wick ও close মিলিয়ে** পড়তে পারবেন।
+- Pattern-এর high বা low দেখে **stop-loss বসাতে পারবেন**।
+- কোন পরিস্থিতিতে এই pattern ফাঁদ হয়, তা **এড়াতে পারবেন**।
+
+## কেন এটি জরুরি
+
+- **এক candle প্রায়ই অস্পষ্ট।** দ্বিতীয় candle দেখলে বোঝা যায় বাজার সত্যিই দিক বদলাচ্ছে, নাকি শুধু থেমেছে।
+- **Pattern-এর আকারই stop ঠিক করে।** Engulfing-এর low বা harami-র low, ভুল প্রমাণ হলে দাম কোথায় যাবে তা বলে দেয়।
+- **তিন candle ও তার বেশির পথ এখান থেকেই শুরু।** Morning star, three white soldiers সবই এই যুক্তির বিস্তার।
+
+পূর্বশর্ত: [Single Candle Patterns](/bn/learn/04-candlesticks/02-single-candle-patterns) ও [Trend ও Range](/bn/learn/03-market-structure/02-trend-range-hhhl)।
+
+## Two candle pattern কী
+
+**Two candle pattern হলো পরপর দুটি candle-এর সম্পর্ক, যেখানে দ্বিতীয় candle প্রথমটির body ও close-এর সঙ্গে তুলনা করে নতুন তথ্য দেয়।**
+
+এটাকে প্রশ্ন আর উত্তরের মতো ভাবুন। প্রথম candle প্রশ্ন করল: "কে জিতছে?" দ্বিতীয় candle উত্তর দিল। উত্তর তিন রকম হতে পারে: সব উল্টে দিল (engulfing), থেমে গেল (harami), অথবা একই জায়গায় আটকে গেল (tweezer)।
+
+মনে রাখুন সেই সূত্র: **Pattern = আকার + জায়গা + confirmation।** এখানেও কোনো ছাড় নেই।
+
+## তিনটি pattern, তিনটি উত্তর
+
+| Pattern       | দ্বিতীয় candle কী করে                                                  | কী বোঝায়                     |
+| :------------ | :---------------------------------------------------------------------- | :---------------------------- |
+| **Engulfing** | প্রথম candle-এর পুরো body ঢেকে ফেলে, উল্টো রঙে                          | নিয়ন্ত্রণ হাত বদলের সম্ভাবনা |
+| **Harami**    | প্রথম বড় candle-এর body-র ভেতরে ছোট হয়ে থাকে                          | গতি কমেছে, বিরতি              |
+| **Tweezer**   | প্রথমটির মতো প্রায় একই high (top) বা একই low (bottom) ছুঁয়ে ফিরে যায় | ওই দামে প্রতিরোধ বা সমর্থন    |
+
+প্রতিটির আলাদা নিয়ম আছে।
+
+### Engulfing: body ঢাকা পড়ে
+
+Bullish engulfing-এ প্রথম candle bearish, দ্বিতীয়টি bullish। দ্বিতীয় candle-এর body প্রথমটির body পুরো ঢেকে ফেলে: তার open প্রথমটির close-এর সমান বা নিচে, আর close প্রথমটির open-এর সমান বা উপরে। Bearish engulfing ঠিক এর উল্টো।
+
+**অনেকে মনে করেন wick-ও ঢাকতে হবে, কিন্তু আসলে প্রচলিত নিয়মে শুধু body দেখা হয়।** কিছু বই-প্ল্যাটফর্ম কঠোরভাবে পুরো range ধরে, তাই নিজের নিয়ম একটি রাখুন।
+
+### Harami: ভেতরে ছোট candle
+
+"Harami" শব্দের মানে জাপানি ভাষায় গর্ভবতী নারী। বাংলায় একে "বড় candle-এর ভেতরে ছোট candle" মনে রাখুন। প্রথম candle বড় body-র, দ্বিতীয় candle-এর body তার ভেতরে। এটা engulfing-এর ঠিক উল্টো: আগে শক্তি, তারপর দ্বিধা।
+
+Harami **একা reversal নয়**। এটি বলে "গতি কমেছে"। পরের candle তা প্রমাণ করে।
+
+### Tweezer: একই দামে ধাক্কা
+
+Tweezer top-এ দুটি candle প্রায় একই high ছোঁয় এবং দাম ফিরে আসে। Tweezer bottom-এ একই low। বিদ্যমান trend-এর শেষে এলে এটি ইঙ্গিত করে যে ওই দামে বাজার আবার ধাক্কা খেয়েছে।
+
+"প্রায় একই" কতটা, তা কঠোর নয়। Timeframe-এর স্বাভাবিক range-এর তুলনায় খুব সামান্য ফারাক গ্রহণযোগ্য। Pattern-এর তিনটির বিস্তারিত রূপ দেখতে [Pattern Library](/bn/patterns)-তে দেখুন।
+
+<Callout type="note">
+  তিনটিই কেবল trend-এর পরে অর্থবহ। Range-এর মাঝখানে এরা বারবার তৈরি হয় এবং
+  কিছুই বলে না।
+</Callout>
+
+## Chart-এ কেমন দেখায়
+
+<Chart
+  id="two-candle-engulfing-01"
+  height={420}
+  caption="EURUSD H4 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — Downtrend-এর পরে support-এ bullish engulfing, পরের candle তার high-এর উপরে close করে"
+/>
+
+তিনটি জিনিস একসঙ্গে মিলেছে:
+
+1. **আকার:** ৮ নম্বর candle ৭ নম্বরের body পুরো ঢেকে ফেলেছে।
+2. **জায়গা:** দাম আগেই একবার 1.0745 এ ফিরেছে। এটি support।
+3. **Confirmation:** ৯ নম্বর candle engulfing-এর high-এর উপরে close করেছে।
+
+## ধাপে ধাপে: two candle pattern পড়ার পদ্ধতি
+
+<Steps>
+
+### ধাপ ১: আগে trend দেখুন
+
+শেষ ৮-১০টি candle কোন দিকে গেছে? Bullish pattern চাইলে আগে downtrend দরকার।
+
+### ধাপ ২: একটি জায়গা খুঁজুন
+
+কাছে কি [support বা resistance](/bn/learn/05-support-resistance/01-levels-vs-zones) আছে? জায়গা ছাড়া pattern শুধু একটি আকার।
+
+### ধাপ ৩: দ্বিতীয় candle-এর close মাপুন
+
+Engulfing-এ body কি সত্যিই ঢাকা পড়েছে? Harami-তে ছোট candle কি ভেতরে? Tweezer-এ high বা low কি প্রায় সমান?
+
+### ধাপ ৪: Candle close হওয়ার অপেক্ষা করুন
+
+চলমান দ্বিতীয় candle বদলে যায়। বন্ধ না হওয়া পর্যন্ত pattern নামই দেবেন না।
+
+### ধাপ ৫: Confirmation চান
+
+Bullish pattern-এ পরের candle pattern-এর high-এর উপরে close করবে। Bearish-এ low-এর নিচে।
+
+### ধাপ ৬: Stop আগে ঠিক করুন
+
+Stop বসবে পুরো pattern-এর বাইরে: bullish-এ দুই candle-এর সবচেয়ে নিচের low-এর সামান্য নিচে, bearish-এ সবচেয়ে উপরের high-এর সামান্য উপরে। Stop-এর দূরত্ব দেখে [position size](/bn/learn/08-risk-management/02-position-sizing) ঠিক করুন। আরও দেখুন [Stop Loss Placement](/bn/learn/10-trade-management-execution/01-stop-loss-placement)।
+
+</Steps>
+
+## উদাহরণ ১: যখন কাজ করে (কাল্পনিক)
+
+উপরের chart-টিই দেখুন।
+
+- **কী দেখা যাচ্ছিল:** টানা downtrend, দাম 1.0745 support-এ একবার ফিরেছে। ৭ নম্বর candle bearish, তারপর ৮ নম্বর candle ৭-এর close-এর নিচে open করে ৭-এর open-এর উপরে close করল।
+- **সিদ্ধান্ত:** আকার ও জায়গা মিলছে, কিন্তু entry এখনই নয়।
+- **Confirmation:** ৯ নম্বর candle engulfing-এর high-এর (1.0790) উপরে close করল। Buy প্রায় 1.0792-এ। Stop engulfing-এর low (1.0730) থেকে সামান্য নিচে 1.0722-এ।
+- **ফল:** দাম ধাপে ধাপে উঠল।
+- **শিক্ষা:** Stop প্রায় 70 pip দূরে ছিল। এত দূরের stop মানে ছোট position size। Engulfing candle যত বড়, ঝুঁকি তত বেশি।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়, কোনো ফলই গ্যারান্টি নয়।)
+
+## উদাহরণ ২: যখন ফাঁদ হয় (কাল্পনিক)
+
+<Chart
+  id="two-candle-harami-fail-01"
+  height={420}
+  caption="EURUSD H4 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — Downtrend-এর মাঝখানে bullish harami, কাছে কোনো support নেই, দাম তার low ভেঙে আরও নামে"
+/>
+
+- **কী দেখা যাচ্ছিল:** টানা bearish candle, ৫ নম্বর বড়। ৬ নম্বর ছোট candle তার body-র ভেতরে: পাঠ্যবইয়ের bullish harami।
+- **ভুল সিদ্ধান্ত:** "Downtrend-এ harami, এবার reversal।" ৭ নম্বর candle harami-র উপরে close করায় ভরসা বাড়ল। Buy 1.0810-এ, stop 1.0770-এ।
+- **কী হলো:** ৮ নম্বর candle জোরে নেমে stop লাগিয়ে দিল। তারপর আরও তিনটি bearish candle।
+- **কেন ব্যর্থ:** Harami মানে বিরতি, উল্টো যাত্রা নয়। কাছে কোনো support ছিল না। Downtrend তখনো সবল। একটি ছোট bullish candle আর তার পরের একটি close যথেষ্ট প্রমাণ ছিল না।
+
+**শিক্ষা:** Harami দেখলে প্রশ্ন করুন "কেন থামল?", "কেন উল্টাল?" নয়। Stop আগে ঠিক করা ছিল বলে লোকসান 40 pip-এ আটকেছে।
+
+## সাধারণ ভুল
+
+| ভুল                                      | কেন হয়                     | কী করবেন                               |
+| :--------------------------------------- | :-------------------------- | :------------------------------------- |
+| Harami-কে reversal ধরা                   | নাম পরিচিত, আকৃতি আকর্ষণীয় | বিরতি ভাবুন, break-এর অপেক্ষা করুন     |
+| Wick দেখে engulfing ঠিক করা              | কিছু বইয়ে ভিন্ন নিয়ম      | নিজের নিয়ম লিখে রাখুন, body-তে থাকুন  |
+| Range-এর মাঝখানে pattern খোঁজা           | সব জায়গায় আকার মিলে যায়  | আগে trend ও level দেখুন                |
+| Engulfing-এর পর confirmation ছাড়া entry | ফাঁকা সুযোগ মিস করার ভয়    | পরের candle-এর close পর্যন্ত থামুন     |
+| অতি-বড় engulfing candle-এ সরাসরি entry  | আকার দেখে আত্মবিশ্বাস       | stop অনেক দূরে, size ছোট করুন বা এড়ান |
+| Tweezer-এর "প্রায় সমান" নিজের মতো মাপা  | কঠোর সংজ্ঞা নেই             | timeframe-এর range-এর তুলনায় মাপুন    |
+
+## Pro tips
+
+<Callout type="tip">
+  Engulfing-এর আগের candle যত ছোট এবং দ্বিতীয় candle যত বড়, তত বেশি নাটকীয়।
+  কিন্তু অতি-নাটকীয় candle প্রায়ই news-এর ফল। সেখানে সতর্ক থাকুন।
+</Callout>
+
+<Callout type="tip">
+  Harami-র পরের break দেখুন। Bullish harami-তে দাম ছোট candle-এর high ভাঙলে তবেই
+  কথা, না ভাঙলে কিছুই বদলায়নি।
+</Callout>
+
+<Callout type="warning">
+  "Engulfing = reversal" ধরনের স্থির নিয়ম কোনো বাজারে সবসময় চলে না। কারও কাছে
+  সাফল্যের নির্দিষ্ট শতাংশ শুনলে যাচাই ছাড়া বিশ্বাস করবেন না।
+</Callout>
+
+## কখন এটা কাজ করে না
+
+- **Trend না থাকলে:** Range-এর ভেতরে এসব pattern বারবার আসে, কিছুই বদলায় না।
+- **Level ছাড়া ফাঁকা জায়গায়:** উদাহরণ ২-এর মতো।
+- **ছোট timeframe বা কম liquidity-তে:** M1-M5-এ আকার এলোমেলো।
+- **বড় news-এর সময়:** অতি-বড় candle কৃত্রিম, বাজারের স্বাভাবিক মত নয়।
+- **আগের candle খুব ছোট হলে:** ছোটকে "engulf" করা সহজ, কিন্তু অর্থহীন।
+
+## সারসংক্ষেপ
 
 <KeyTakeaways>
-- এই lesson টি এখনো লেখা হয়নি।
-- পরবর্তীতে বিস্তারিত যোগ করা হবে।
+
+- দ্বিতীয় candle প্রথমটির জবাব: engulfing উল্টে দেয়, harami থামে, tweezer একই দামে আটকায়।
+- Engulfing-এ body ঢাকা পড়ে, wick নয়। Harami বিরতি, reversal নয়।
+- তিনটিই trend-এর পরে এবং কোনো level-এর কাছে অর্থবহ।
+- Stop বসবে পুরো pattern-এর বাইরে; stop-এর দূরত্ব দেখে size ঠিক করুন।
+
 </KeyTakeaways>
 
-## Introduction
+## অনুশীলন
 
-*এই section টি draft আছে। শীঘ্রই বিস্তারিত content যোগ করা হবে।*
+TradingView-এ EUR/USD-এর H4 chart খুলুন। শেষ ৩ মাসে ৫টি engulfing বা harami খুঁজুন। প্রতিটির জন্য লিখুন: আগের trend, কাছে level ছিল কি না, পরের candle কী করল, আর আপনি কোথায় stop বসাতেন। ৫টির মধ্যে কতটি তিনটি শর্ত মিলিয়েছিল, গুনে দেখুন।
+
+## কুইজ
+
+1. Bullish engulfing-এ দ্বিতীয় candle প্রথমটির কোন অংশ ঢাকে?
+2. Harami আর engulfing-এর মূল তফাত কী?
+3. Harami দেখে তৎক্ষণাৎ buy করা কেন ঝুঁকিপূর্ণ?
+4. Bullish engulfing-এ stop কোথায় বসে?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** Body। প্রচলিত নিয়মে দ্বিতীয় candle-এর body প্রথমটির body পুরো ঢাকে, wick ধরা হয় না।
+
+**২.** Engulfing-এ দ্বিতীয় candle বড় ও প্রথমটিকে ঢাকে, harami-তে দ্বিতীয় candle ছোট ও প্রথমটির ভেতরে। একটি শক্তির পরিবর্তন, অন্যটি বিরতি।
+
+**৩.** Harami শুধু গতি কমার ইঙ্গিত, উল্টো যাত্রার প্রমাণ নয়। Trend তখনো চলতে পারে।
+
+**৪.** দুই candle-এর সবচেয়ে নিচের low-এর সামান্য নিচে।
+
+</details>
+
+## পরের ধাপ
+
+- আগে: [Single Candle Patterns](/bn/learn/04-candlesticks/02-single-candle-patterns)।
+- পরে: [Bullish Engulfing Pattern](/bn/learn/04-candlesticks/04-bullish-engulfing)।
+- জায়গা বোঝা: [Candle Context](/bn/learn/04-candlesticks/05-candle-context)।
+
+### সূত্র
+
+- [Bullish Engulfing, Investopedia](https://www.investopedia.com/terms/b/bullishengulfingpattern.asp)
+- [Harami, Investopedia](https://www.investopedia.com/terms/b/bullishharami.asp)
+- [Tweezers, Investopedia](https://www.investopedia.com/terms/t/tweezers.asp)
+
+<Disclaimer />

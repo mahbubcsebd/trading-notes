@@ -1,0 +1,288 @@
+{
+  "id": "bullish-engulfing-win-01",
+  "title": {
+    "en": "Bullish Engulfing at Broken Resistance, 50% Body Retest",
+    "bn": "ভাঙা resistance-এ bullish engulfing, body-র 50% retest-এ entry"
+  },
+  "symbol": "GBPUSD",
+  "timeframe": "H1",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bullish",
+  "outcome": "win",
+  "tags": [
+    "bullish-engulfing",
+    "engulfing",
+    "candlestick",
+    "retest",
+    "trend",
+    "pattern"
+  ],
+  "module": "patterns",
+  "lessonSlugs": [],
+  "caption": {
+    "en": "Illustrative synthetic GBPUSD H1: after a range breakout, price pulls back to the old ceiling and prints a bullish engulfing there. A buy limit at 50% of the engulfing body fills two candles later and price rallies to 2R.",
+    "bn": "শিক্ষামূলক কাল্পনিক GBPUSD H1: range breakout-এর পর দাম পুরোনো ceiling-এ ফিরে সেখানে একটি bullish engulfing দেয়। Engulfing body-র 50%-এ buy limit দুই candle পরে fill হয়, দাম 2R পর্যন্ত ওঠে।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data, not a real market record.",
+    "bn": "শিক্ষামূলক কাল্পনিক ডেটা, বাস্তব মার্কেটের রেকর্ড নয়।"
+  },
+  "updatedAt": "2026-11-06T12:00:00Z",
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 1.2619,
+      "label": "Old ceiling (now support)",
+      "color": "#3b82f6",
+      "style": "dashed"
+    },
+    {
+      "type": "marker",
+      "i": 18,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Bullish engulfing"
+    },
+    {
+      "type": "marker",
+      "i": 20,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "50% retest"
+    },
+    {
+      "type": "hline",
+      "price": 1.2627,
+      "label": "Entry (50% body)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.2604,
+      "label": "Stop",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.2673,
+      "label": "Target 2R",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candles 0-6 range; candle 7 breaks out. Candles 13-17 pull back to the old ceiling, now support; candle 17 is a clear bearish candle. Candle 18's body engulfs it completely, about 2.3× its size, closing near the high. The buy limit at 50% of that body fills on candle 20; the stop sits under the engulfing low.",
+    "bn": "০-৬ নম্বর candle range; ৭ নম্বর তা ভাঙে। ১৩-১৭ নম্বর পুরোনো ceiling-এ ফেরে, যা এখন support; ১৭ নম্বর একটি স্পষ্ট bearish candle। ১৮ নম্বরের body সেটাকে পুরো ঢেকে দেয়, আকারে প্রায় ২.৩ গুণ, close high-এর কাছে। সেই body-র 50%-এর buy limit ২০ নম্বরে fill হয়; stop engulfing-এর low-এর নিচে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Trend, level, quality, then a patient entry",
+      "bn": "Trend, level, মান, তারপর ধৈর্যের entry"
+    }
+  ],
+  "entry": 1.2627,
+  "stopLoss": 1.2604,
+  "takeProfit": 1.2673,
+  "rr": "1:2.0",
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.26,
+      "h": 1.2614,
+      "l": 1.25939,
+      "c": 1.2608
+    },
+    {
+      "i": 1,
+      "o": 1.2608,
+      "h": 1.26133,
+      "l": 1.25976,
+      "c": 1.2602
+    },
+    {
+      "i": 2,
+      "o": 1.2602,
+      "h": 1.26166,
+      "l": 1.25964,
+      "c": 1.2612
+    },
+    {
+      "i": 3,
+      "o": 1.2612,
+      "h": 1.26172,
+      "l": 1.26003,
+      "c": 1.2605
+    },
+    {
+      "i": 4,
+      "o": 1.2605,
+      "h": 1.26157,
+      "l": 1.25996,
+      "c": 1.2611
+    },
+    {
+      "i": 5,
+      "o": 1.2611,
+      "h": 1.26163,
+      "l": 1.25969,
+      "c": 1.2602
+    },
+    {
+      "i": 6,
+      "o": 1.2602,
+      "h": 1.26134,
+      "l": 1.25966,
+      "c": 1.2609
+    },
+    {
+      "i": 7,
+      "o": 1.2609,
+      "h": 1.2645,
+      "l": 1.2607,
+      "c": 1.2641
+    },
+    {
+      "i": 8,
+      "o": 1.2641,
+      "h": 1.26633,
+      "l": 1.26315,
+      "c": 1.2655
+    },
+    {
+      "i": 9,
+      "o": 1.2655,
+      "h": 1.26691,
+      "l": 1.2649,
+      "c": 1.2665
+    },
+    {
+      "i": 10,
+      "o": 1.2665,
+      "h": 1.26691,
+      "l": 1.26568,
+      "c": 1.2661
+    },
+    {
+      "i": 11,
+      "o": 1.2661,
+      "h": 1.26841,
+      "l": 1.26535,
+      "c": 1.2677
+    },
+    {
+      "i": 12,
+      "o": 1.2677,
+      "h": 1.26974,
+      "l": 1.26725,
+      "c": 1.2689
+    },
+    {
+      "i": 13,
+      "o": 1.2689,
+      "h": 1.26971,
+      "l": 1.26688,
+      "c": 1.2677
+    },
+    {
+      "i": 14,
+      "o": 1.2677,
+      "h": 1.2686,
+      "l": 1.26517,
+      "c": 1.2662
+    },
+    {
+      "i": 15,
+      "o": 1.2662,
+      "h": 1.26669,
+      "l": 1.26455,
+      "c": 1.2652
+    },
+    {
+      "i": 16,
+      "o": 1.2652,
+      "h": 1.2655,
+      "l": 1.2622,
+      "c": 1.2625
+    },
+    {
+      "i": 17,
+      "o": 1.2625,
+      "h": 1.2627,
+      "l": 1.2609,
+      "c": 1.2612
+    },
+    {
+      "i": 18,
+      "o": 1.2612,
+      "h": 1.2645,
+      "l": 1.2608,
+      "c": 1.2642
+    },
+    {
+      "i": 19,
+      "o": 1.2642,
+      "h": 1.2647,
+      "l": 1.263,
+      "c": 1.2633
+    },
+    {
+      "i": 20,
+      "o": 1.2633,
+      "h": 1.2636,
+      "l": 1.2625,
+      "c": 1.2635
+    },
+    {
+      "i": 21,
+      "o": 1.2635,
+      "h": 1.26565,
+      "l": 1.26292,
+      "c": 1.2649
+    },
+    {
+      "i": 22,
+      "o": 1.2649,
+      "h": 1.26521,
+      "l": 1.26408,
+      "c": 1.2644
+    },
+    {
+      "i": 23,
+      "o": 1.2644,
+      "h": 1.2666,
+      "l": 1.26377,
+      "c": 1.266
+    },
+    {
+      "i": 24,
+      "o": 1.266,
+      "h": 1.26782,
+      "l": 1.2656,
+      "c": 1.2672
+    },
+    {
+      "i": 25,
+      "o": 1.2672,
+      "h": 1.2675,
+      "l": 1.26628,
+      "c": 1.2666
+    },
+    {
+      "i": 26,
+      "o": 1.2666,
+      "h": 1.2686,
+      "l": 1.26607,
+      "c": 1.2681
+    },
+    {
+      "i": 27,
+      "o": 1.2681,
+      "h": 1.26949,
+      "l": 1.26771,
+      "c": 1.2691
+    }
+  ]
+}

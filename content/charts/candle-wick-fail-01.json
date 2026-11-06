@@ -1,0 +1,71 @@
+{
+  "id": "candle-wick-fail-01",
+  "title": {
+    "en": "A Long Lower Wick That Failed",
+    "bn": "লম্বা নিচের wick যা কাজ করেনি"
+  },
+  "symbol": "EURUSD",
+  "timeframe": "H4",
+  "mode": "synthetic",
+  "type": "concept",
+  "bias": "bearish",
+  "outcome": "loss",
+  "tags": ["candlestick", "wick", "failure"],
+  "module": "04-candlesticks",
+  "lessonSlugs": ["01-anatomy-of-a-candle"],
+  "caption": {
+    "en": "A long lower wick appears in a strong downtrend with no support nearby. Price keeps falling.",
+    "bn": "শক্তিশালী downtrend-এ, কাছাকাছি কোনো support ছাড়া লম্বা নিচের wick। Price নামতেই থাকে।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data.",
+    "bn": "এটি শিক্ষামূলক কাল্পনিক ডেটা।"
+  },
+  "updatedAt": "2026-11-05T12:00:00Z",
+  "candles": [
+    { "i": 0, "o": 1.09, "h": 1.0905, "l": 1.088, "c": 1.0884 },
+    { "i": 1, "o": 1.0884, "h": 1.0888, "l": 1.086, "c": 1.0864 },
+    { "i": 2, "o": 1.0864, "h": 1.0868, "l": 1.0842, "c": 1.0846 },
+    { "i": 3, "o": 1.0846, "h": 1.085, "l": 1.0824, "c": 1.0828 },
+    { "i": 4, "o": 1.0828, "h": 1.0832, "l": 1.08, "c": 1.0804 },
+    { "i": 5, "o": 1.0804, "h": 1.0808, "l": 1.077, "c": 1.08 },
+    { "i": 6, "o": 1.08, "h": 1.0806, "l": 1.0778, "c": 1.0782 },
+    { "i": 7, "o": 1.0782, "h": 1.0786, "l": 1.0756, "c": 1.076 },
+    { "i": 8, "o": 1.076, "h": 1.0764, "l": 1.0738, "c": 1.0742 },
+    { "i": 9, "o": 1.0742, "h": 1.075, "l": 1.072, "c": 1.0724 },
+    { "i": 10, "o": 1.0724, "h": 1.0728, "l": 1.0702, "c": 1.0706 }
+  ],
+  "annotations": [
+    {
+      "type": "marker",
+      "i": 5,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "লম্বা wick"
+    },
+    {
+      "type": "hline",
+      "price": 1.0804,
+      "label": "Wick candle open",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.077,
+      "label": "Wick low (stop)",
+      "color": "#ef4444",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candle 5 has a long lower wick, but the trend is strongly down and no support sits nearby. The next candle closes below the wick low.",
+    "bn": "৫ নম্বর candle-এ লম্বা নিচের wick আছে, কিন্তু trend জোরালো নিচমুখী এবং কাছে কোনো support নেই। পরের candle wick-এর low-এর নিচে close করে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "A wick is a clue, not a signal",
+      "bn": "Wick একটি ইঙ্গিত, signal নয়"
+    }
+  ]
+}

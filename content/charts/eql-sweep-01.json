@@ -1,0 +1,183 @@
+{
+  "id": "eql-sweep-01",
+  "title": {
+    "en": "Equal Lows liquidity sweep",
+    "bn": "Equal Lows liquidity sweep"
+  },
+  "symbol": "XAUUSD",
+  "timeframe": "H1",
+  "mode": "synthetic",
+  "type": "concept",
+  "bias": "bullish",
+  "outcome": null,
+  "tags": [
+    "liquidity",
+    "sweep",
+    "equal-lows",
+    "stop-hunt"
+  ],
+  "module": "03-market-structure",
+  "lessonSlugs": [
+    "04-liquidity-stop-hunts"
+  ],
+  "caption": {
+    "en": "Two equal lows form a liquidity pool; a wick sweeps below them and the body closes back inside.",
+    "bn": "দুটি equal low-এর নিচে liquidity জমে; wick নিচে ঝাড়ু দিয়ে body আবার ভেতরে close করেছে।"
+  },
+  "notes": {
+    "en": "Synthetic teaching data.",
+    "bn": "শিক্ষামূলক কাল্পনিক data।"
+  },
+  "updatedAt": "2026-11-05T10:00:00Z",
+  "candles": [
+    {
+      "i": 0,
+      "o": 2360,
+      "h": 2364,
+      "l": 2352,
+      "c": 2354
+    },
+    {
+      "i": 1,
+      "o": 2354,
+      "h": 2356,
+      "l": 2344,
+      "c": 2346
+    },
+    {
+      "i": 2,
+      "o": 2346,
+      "h": 2348,
+      "l": 2340,
+      "c": 2344
+    },
+    {
+      "i": 3,
+      "o": 2344,
+      "h": 2354,
+      "l": 2343,
+      "c": 2352
+    },
+    {
+      "i": 4,
+      "o": 2352,
+      "h": 2356,
+      "l": 2347,
+      "c": 2349
+    },
+    {
+      "i": 5,
+      "o": 2349,
+      "h": 2351,
+      "l": 2341,
+      "c": 2344
+    },
+    {
+      "i": 6,
+      "o": 2344,
+      "h": 2352,
+      "l": 2343,
+      "c": 2350
+    },
+    {
+      "i": 7,
+      "o": 2350,
+      "h": 2355,
+      "l": 2346,
+      "c": 2348
+    },
+    {
+      "i": 8,
+      "o": 2347,
+      "h": 2349,
+      "l": 2334,
+      "c": 2345
+    },
+    {
+      "i": 9,
+      "o": 2345,
+      "h": 2358,
+      "l": 2344,
+      "c": 2356
+    },
+    {
+      "i": 10,
+      "o": 2356,
+      "h": 2366,
+      "l": 2354,
+      "c": 2364
+    },
+    {
+      "i": 11,
+      "o": 2364,
+      "h": 2372,
+      "l": 2361,
+      "c": 2370
+    },
+    {
+      "i": 12,
+      "o": 2370,
+      "h": 2376,
+      "l": 2366,
+      "c": 2374
+    },
+    {
+      "i": 13,
+      "o": 2374,
+      "h": 2380,
+      "l": 2370,
+      "c": 2378
+    }
+  ],
+  "annotations": [
+    {
+      "type": "marker",
+      "i": 2,
+      "position": "belowBar",
+      "shape": "circle",
+      "text": "EQL"
+    },
+    {
+      "type": "marker",
+      "i": 5,
+      "position": "belowBar",
+      "shape": "circle",
+      "text": "EQL"
+    },
+    {
+      "type": "marker",
+      "i": 8,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Sweep"
+    },
+    {
+      "type": "marker",
+      "i": 9,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "BOS ↑"
+    },
+    {
+      "type": "hline",
+      "price": 2340,
+      "label": "Equal Lows",
+      "color": "#f5b301",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Stops cluster below equal lows. Price wicks through them, fills large orders, closes back inside, then breaks structure up.",
+    "bn": "Equal low-এর নিচে stop জমে থাকে। Price wick দিয়ে সেগুলো ছুঁয়ে body ভেতরে close করে, তারপর structure ওপরে ভাঙে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Sweep = wick beyond level, body back inside.",
+      "bn": "Sweep = level-এর বাইরে wick, body ভেতরে close।"
+    }
+  ],
+  "entry": 2352,
+  "stopLoss": 2333,
+  "takeProfit": 2378,
+  "rr": "1.4"
+}

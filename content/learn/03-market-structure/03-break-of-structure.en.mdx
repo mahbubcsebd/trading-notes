@@ -1,0 +1,206 @@
+---
+title: "Break of Structure (BOS) and CHOCH: Is the Trend Continuing or Changing?"
+description: "What is the difference between BOS and CHOCH? How to confirm a break with a body close, how to avoid the wick trap, and where to place your stop."
+level: intermediate
+tags: [bos, msb, choch, market-structure, price-action, smc]
+instruments: [XAUUSD]
+timeframes: [H1, H4, D1]
+status: done
+sources:
+  - type: blog
+    title: "Market structure - CrossTrade Learn"
+    url: "https://crosstrade.io/learn/price-action/market-structure"
+updated: 2026-11-06
+---
+
+# Break of Structure (BOS) and CHOCH: Is the Trend Continuing or Changing?
+
+You are holding a sell in a downtrend. Suddenly price breaks a big high and moves up. Is this just a pullback, or is the trend turning? Two terms answer this question: **BOS** and **CHOCH**. One says "the trend is still alive", the other says "the trend's character has changed".
+
+## What you will be able to do
+
+- **Tell apart** **BOS** and **CHOCH**.
+- **Confirm** a break with a **body close**.
+- **Avoid** a **fake break** made by a wick.
+- **Decide** where the **stop** goes after a break.
+
+## Why it matters
+
+- To trade in the direction of the trend, you need to know whether the trend is still active. BOS tells you that.
+- To get the first hint of a reversal, you need to recognise CHOCH.
+- If you treat a false break as real, you trade in the wrong direction. This is where most accounts get burned.
+
+## What are BOS and CHOCH?
+
+In the earlier lessons you learned about [swing highs and swing lows](/en/learn/03-market-structure/01-swing-high-low) and [HH/HL](/en/learn/03-market-structure/02-trend-range-hhhl). Now comes the story of those swings breaking.
+
+- **BOS (Break of Structure):** breaking the previous swing **in the direction** of the trend. In an uptrend, breaking the previous high to make a new HH; in a downtrend, breaking the previous low to make a new LL. It means the trend is **continuing**.
+- **CHOCH (Change of Character):** breaking an important swing **against** the trend. In an uptrend, a close below the last HL; in a downtrend, a close above the last LH. It means the trend's character has **started to change**.
+
+You will also see the name MSB (Market Structure Break). Most teachers use it as another word for BOS, but some use it to mean CHOCH. So when you see MSB in a source, check its definition first.
+
+## What it looks like on a chart
+
+In the chart below, a downtrend makes LHs and LLs (BOS), and then price closes above the last LH (CHOCH).
+
+<Chart
+  id="bos-choch-01"
+  height={420}
+  caption="XAUUSD H4 (educational, synthetic example) — breaking an LL = BOS, then a close above the LH = CHOCH"
+/>
+
+Notice that before the CHOCH, one LL came after another. After the CHOCH, structure broke the other way for the first time. That is why a CHOCH alone is **not a guarantee of reversal**, only the first warning sign.
+
+## BOS vs CHOCH
+
+|                        | BOS                                         | CHOCH                                           |
+| :--------------------- | :------------------------------------------ | :---------------------------------------------- |
+| **Meaning**            | The trend is continuing                     | The trend may change                            |
+| **Which swing breaks** | In the trend's direction (HH or LL)         | Against the trend (the last HL or LH)           |
+| **The trader's job**   | Look in the trend's direction on a pullback | Manage the earlier trade, watch for a new setup |
+| **Risk**               | Relatively low                              | Higher, needs confirmation                      |
+
+## Step by step: confirming a break
+
+<Steps>
+
+### Step 1: Identify the trend
+
+First set the trend using HH/HL or LH/LL. Without knowing the trend, you cannot tell BOS from CHOCH.
+
+### Step 2: Mark the important swing
+
+In an uptrend, the last HL; in a downtrend, the last LH. This swing is the CHOCH level.
+
+### Step 3: See whether it broke
+
+Check whether price has gone past that swing. If only a wick went past, it is not a break yet.
+
+### Step 4: Look at the candle's body close
+
+Count it as a break only if the candle's **body** closes beyond the swing. Wait until the candle has closed.
+
+### Step 5: Name it and plan
+
+If it is in the trend's direction, it is a BOS; if against, a CHOCH. Then check it against the higher timeframe.
+
+</Steps>
+
+<Callout type="note">
+  Some people count a break as soon as a wick goes past; others want a body
+  close. Not all teachers agree on the definition. In this course we take the
+  careful approach: **body close**. Whichever you choose, use the same rule
+  everywhere.
+</Callout>
+
+## Wick vs body close: the fake-break trap
+
+Price often makes a wick slightly past a previous high or low and comes back. This hits many people's stops, but the candle's body closes inside. This is not a real BOS or CHOCH; it may be a sign of a [liquidity sweep](/en/learn/03-market-structure/04-liquidity-stop-hunts).
+
+<Callout type="warning">
+  A body close does not make a break certain. Price can come back even after the
+  close. So do not treat a break as a signal; it is a piece of information that
+  needs to be checked against the higher timeframe and the surrounding context.
+</Callout>
+
+## Where the stop goes after a break
+
+- **Buy after a BOS:** stop a little below the new HL formed on the pullback. See [stop loss placement](/en/learn/10-trade-management-execution/01-stop-loss-placement).
+- **Buy after a CHOCH (turning from a downtrend):** stop a little below the low that price rose from.
+
+Keep a small buffer for the spread and wicks. Decide how many lots to take with [position sizing](/en/learn/08-risk-management/02-position-sizing).
+
+## Real example
+
+<Callout type="note">
+  **The examples in this lesson are synthetic.** We have not yet added verified
+  real OHLC data. The chart above is built on synthetic educational data. Run
+  the same method on your own chart; that is what the practice below asks you to
+  do.
+</Callout>
+
+**Example (synthetic trade):** In the chart above, a downtrend was running and two LHs had formed. Price closed its body above the 2360 level. This is a bullish CHOCH. Instead of rushing, you waited. Price came back down and made a new HL. You buy near that HL, with the stop a little below it. If price breaks the HL, the idea was wrong and the loss is small.
+
+## Failed example: mistaking a wick for a CHOCH (synthetic/educational)
+
+- **What could be seen:** a long wick above the last LH of a downtrend, but the body closed below.
+- **Decision:** someone treated it as a CHOCH and bought right away.
+- **Result:** price fell again, the downtrend continued, and the stop was hit.
+- **Lesson:** do not count a break without a body close. Wait until the candle closes.
+
+## Common mistakes
+
+| Mistake                                 | Why it happens                | What to do                                        |
+| :-------------------------------------- | :---------------------------- | :------------------------------------------------ |
+| Calling a break from a wick             | Rushing                       | Wait for the body close                           |
+| Treating CHOCH as a guaranteed reversal | Thinking one break is enough  | Check the higher timeframe and the next structure |
+| Counting breaks of minor swings         | Mixing up noise and structure | Count only breaks of major swings                 |
+| Looking only at the lower timeframe     | Not seeing the big picture    | Check the trend on the higher timeframe first     |
+
+## Pro tips
+
+<Callout type="tip">
+  Do not jump in right after a CHOCH. Price often comes back to test the broken
+  level. On that retest the signal is clearer and the stop is smaller.
+</Callout>
+
+<Callout type="tip">
+  A lower-timeframe CHOCH against a higher-timeframe BOS is often just a
+  pullback. Match the two timeframes: [Multi-Timeframe
+  Analysis](/en/learn/03-market-structure/05-multi-timeframe-analysis).
+</Callout>
+
+## When this does not work
+
+- **In a range market:** breaks happen again and again and come back.
+- **During big news:** price jumps, and the body close loses meaning.
+- **On very small timeframes (M1–M5):** most breaks in the noise are fake.
+- **When used alone:** BOS/CHOCH does not tell you direction, and gives no guarantee.
+
+## Summary
+
+<KeyTakeaways>
+
+- BOS = a swing breaks in the trend's direction (the trend is continuing).
+- CHOCH = the last important swing breaks against the trend (the trend may change).
+- A break needs a candle body close, not just a wick.
+- CHOCH is not a guaranteed reversal; it is the first warning sign.
+- Do not trade a break without checking it against the higher timeframe.
+
+</KeyTakeaways>
+
+## Practice
+
+Open the XAUUSD H4 chart on TradingView. Over the last 3 months, find and mark at least 3 BOS and 1 CHOCH. For each, check: did the break happen with a body close, or only a wick? Then look at the same period on the D1 chart: which ones matched the higher-timeframe trend?
+
+## Quiz
+
+1. In an uptrend, breaking which swing makes a BOS?
+2. In an uptrend, breaking which swing makes a CHOCH?
+3. Why is it wrong to treat a wick break as a BOS straight away?
+4. What do you gain by waiting instead of trading right after a CHOCH?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** Breaking the previous HH (in the trend's direction).
+
+**2.** A body close below the last HL.
+
+**3.** A wick is often a liquidity sweep. If the body closes inside, the break does not hold.
+
+**4.** On the retest the signal is clearer, the stop is smaller, and fake breaks get caught.
+
+</details>
+
+## Next steps
+
+- Before: [Trend, Range and HH/HL](/en/learn/03-market-structure/02-trend-range-hhhl).
+- After: [Liquidity and Stop Hunts](/en/learn/03-market-structure/04-liquidity-stop-hunts).
+- Risk: [Stop Loss Placement](/en/learn/10-trade-management-execution/01-stop-loss-placement).
+
+### Sources
+
+- [Market structure, CrossTrade](https://crosstrade.io/learn/price-action/market-structure)
+
+<Disclaimer />

@@ -1,0 +1,190 @@
+---
+title: "Journal Template: Which Columns, Why, and How to Fill Them"
+description: "The full trade journal template: what to write before, during and after a trade, which metric comes from which column, and the harm of an incomplete journal, with a chart."
+level: intermediate
+tags: [journal, template, trade-log, tags, spreadsheet]
+instruments: [ACCOUNT]
+timeframes: [per-trade]
+status: done
+sources:
+  - type: blog
+    title: "Trading Plan - Investopedia"
+    url: "https://www.investopedia.com/articles/trading/06/tradingplan.asp"
+updated: 2026-11-06
+---
+
+# Journal Template: Which Columns, Why, and How to Fill Them
+
+In [Journaling Habit](/en/learn/12-trading-psychology/05-journaling-habit) you learned why the habit of keeping a journal is needed. Here is its structure: which columns there will be, when they are filled, and which metric comes from which column.
+
+## What you will be able to do
+
+- **Divide the journal into three parts:** **before, during and after**.
+- **Say which question** each column **answers**.
+- **Build a spreadsheet template** yourself.
+
+## Why it matters
+
+- **You need data that can be matched.** To work out [metrics](/en/learn/15-backtesting-journal/02-performance-metrics-forward-testing), every trade has to be written in the same format.
+- **Memory mixes up luck and skill.** A log with screenshots and reasons is an honest witness.
+- **A review is possible only when there is data.** The next lesson runs on the journal.
+
+Prerequisites: [Daily and Weekly Routine](/en/learn/14-trading-plan-system/04-daily-weekly-routine).
+
+## What is a journal
+
+**A trade journal is a written record of every trade in the same format, from which the result and the pattern of mistakes can be found later.**
+
+Think of a doctor's patient file. The same boxes are filled each time, so after six months a trend can be seen.
+
+## A three-part template
+
+| Part   | When                    | Columns                                                                                                          | What it answers                  |
+| :----- | :---------------------- | :--------------------------------------------------------------------------------------------------------------- | :------------------------------- |
+| Before | Right before entry      | date-time, instrument, setup name, direction, entry, stop, target, risk %, checklist passed (yes/no), screenshot | What was the plan?               |
+| During | While the trade is open | any change (was the stop/target moved?), mental state (1–5)                                                      | Were the rules broken?           |
+| After  | When closed             | exit price, result (R), tag, the reason in one line, the final screenshot                                        | What happened, what did I learn? |
+
+A **tag** is a short label: `Plan`, `FOMO`, `Moved stop`, `Revenge`, `No-checklist`. One main tag for a trade.
+
+## What it looks like on a chart
+
+<Chart
+  id="journal-plan-only-equity-01"
+  height={420}
+  caption="ACCOUNT, per trade (educational, imaginary example): twelve trades. The orange line shows only the eight 'Plan' trades. The journal's tags showed the gap."
+/>
+
+With the columns in place this comparison is easy: all trades against only the plan's trades.
+
+## Step by step: building a spreadsheet
+
+<Steps>
+
+### Step 1: Set the columns
+
+The columns of the table above, in one row. Each trade is one row.
+
+### Step 2: Put in the formula for R
+
+Result (R) = (exit − entry) ÷ (entry − stop), for a buy. For a sell the sign flips. Automate it with a formula.
+
+### Step 3: Set the list of tags
+
+4–6 tags in a drop-down. Keep the list fixed instead of making a new tag each time.
+
+### Step 4: A summary page
+
+On a separate page: total trades, win rate, expectancy, total R by tag. Link them with formulas.
+
+### Step 5: The rule for screenshots
+
+Before entry and after exit. Name the file date-instrument.
+
+### Step 6: Fill it in every day
+
+15 minutes after the window. If you leave it for the next day, it gets dropped.
+
+</Steps>
+
+## Example 1: when it works (synthetic)
+
+- **What there was:** a tag, a checklist and a screenshot on every trade.
+- **Result:** at the end of the month, counting by tag: the net positive in `Plan` trades, and the net negative in `FOMO` and `Moved stop` trades.
+- **Decision:** next month's goal, bring FOMO trades down to zero.
+- **Lesson:** with tags the problem became specific; not "I'll do better" but "I'll drop FOMO".
+
+(Synthetic educational example. This is not a real trade.)
+
+## Example 2: when it fails (synthetic)
+
+<Chart
+  id="journal-tagged-equity-01"
+  height={420}
+  caption="ACCOUNT, per trade (educational, imaginary example): twelve trades, each tagged. The trades with a mistake tag stand out. Without tags these are only ups and downs."
+/>
+
+- **What happened:** another trader wrote only the date and the result. No tag, checklist or reason.
+- **Result:** at the end of the month the total was negative, but the cause could not be found. They changed the strategy, though the real problem was breaking the rules.
+- **Why it failed:** the data had no reason column, so the fix was in the wrong place.
+- **Lesson:** writing the result is half the job. Without reasons and tags, a journal is only an accounts book.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Common mistakes
+
+| Mistake                    | Why it happens              | What to do                           |
+| :------------------------- | :-------------------------- | :----------------------------------- |
+| Writing only the wins      | Avoiding the pain of losses | Every trade, even the skipped ones   |
+| Too many columns           | The urge to be perfect      | Stop at 12–15 columns                |
+| A new tag each time        | Lack of habit               | A fixed drop-down list               |
+| Writing from memory later  | Laziness                    | Fill in the "before" part beforehand |
+| Not looking at the summary | Writing feels like the work | Open it in the weekly review         |
+
+## Pro tips
+
+<Callout type="tip">
+  Write the "skipped trade" in a separate row, with the reason. A trade left out
+  by the rules is also proof of your discipline.
+</Callout>
+
+<Callout type="note">
+  The most valuable column of the journal is often the "reason in one line". You
+  will forget the result, and you will not remember the reason, so write it
+  down.
+</Callout>
+
+## When this does not work
+
+- **If the journal is a formality:** if you fill the boxes without thinking, the data misleads.
+- **If there are so many columns that the habit does not last:** start small and add if needed.
+- **If you change the tag before seeing the result:** give the tag honestly after the trade, not on the basis of the result.
+
+## Summary
+
+<KeyTakeaways>
+
+- The template has three parts: before, during, after.
+- The result in R, the tag from a fixed list.
+- The reason column is the most valuable.
+- Write the skipped trades too.
+
+</KeyTakeaways>
+
+## Practice
+
+Today put 12 columns in a spreadsheet, and add the R formula and the tag drop-down. Fill in your last five trades backward.
+
+## Quiz
+
+1. What are the three parts of the template?
+2. What is the formula for R on a buy?
+3. Why give the tag from a fixed list?
+4. Why write the skipped trade?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** Before, during, after.
+
+**2.** R = (exit − entry) ÷ (entry − stop).
+
+**3.** So that counting and comparing are easy; a new name each time breaks the count.
+
+**4.** A trade skipped by the rules is part of discipline too, and the opportunity cost can be measured later.
+
+</details>
+
+## Next steps
+
+- Before: [Performance Metrics and Forward Testing](/en/learn/15-backtesting-journal/02-performance-metrics-forward-testing).
+- After: [Reviewing Trades](/en/learn/15-backtesting-journal/04-reviewing-trades).
+- Related: [Pre-Trade Checklist](/en/learn/14-trading-plan-system/03-pre-trade-checklist).
+
+### Sources
+
+- <ExternalLink href="https://www.investopedia.com/articles/trading/06/tradingplan.asp">
+    Trading Plan, Investopedia
+  </ExternalLink>
+
+<Disclaimer />

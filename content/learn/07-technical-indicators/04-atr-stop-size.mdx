@@ -1,14 +1,202 @@
 ---
-title: "ATR stop size"
-description: "Detailed notes on ATR stop size"
-status: draft
-updated: 2026-10-10
+title: "ATR: Volatility অনুযায়ী Stop ও Position Size ঠিক করুন"
+description: "ATR কী, 2 x ATR stop কীভাবে বসাবেন, কেন noise-এর ভিতরের stop কাটে এবং ঝুঁকি স্থির রেখে lot size কীভাবে বদলাবেন — chart example সহ।"
+level: intermediate
+tags: [atr, volatility, stop-loss, position-sizing, indicators]
+instruments: [EURUSD]
+timeframes: [H4]
+status: done
+sources:
+  - type: blog
+    title: "Average True Range (ATR) - Investopedia"
+    url: "https://www.investopedia.com/terms/a/atr.asp"
+  - type: book
+    title: "New Concepts in Technical Trading Systems - J. Welles Wilder"
+    url: ""
+    note: "ATR-এর মূল সংজ্ঞা"
+updated: 2026-11-05
 ---
 
-# ATR stop size
+# ATR: Volatility অনুযায়ী Stop ও Position Size ঠিক করুন
 
-<div className="rounded-xl border border-border bg-card p-6 text-center text-muted-foreground my-8">
-  <p className="text-3xl mb-4">🚧</p>
-  <p className="font-semibold text-foreground">Coming in Phase 2</p>
-  <p className="text-sm mt-1">This module is under construction.</p>
-</div>
+আপনার ধারণা ঠিক ছিল। দাম আপনার দিকেই গেল। কিন্তু তার আগে এক মুহূর্তের ঝাঁকুনিতে আপনার stop কেটে গেল। ধারণা নয়, stop-এর দূরত্ব ভুল ছিল।
+
+## এই লেখা পড়ে আপনি যা পারবেন
+
+- ATR কী মাপে তা **ব্যাখ্যা করতে পারবেন**।
+- ATR দিয়ে **noise-এর বাইরে stop বসাতে পারবেন**।
+- Stop দূরে গেলে **lot size কমিয়ে ঝুঁকি স্থির রাখতে পারবেন**।
+- খুব কাছের stop কেন ধারণা ঠিক থাকলেও হারায়, তা **chart দেখে বুঝতে পারবেন**।
+
+## কেন এটি জরুরি
+
+- **Stop-এর দূরত্ব অনুমান নয়।** স্থির 15 pip সব বাজারে সমান অর্থ বহন করে না।
+- **Volatility বদলায়।** শান্ত দিনে 15 pip অনেক, উত্তাল দিনে সামান্য।
+- **Size ও stop একসঙ্গে ঠিক হয়।** পরের [Risk Management](/bn/learn/08-risk-management/01-risk-per-trade) অধ্যায়ের ভিত্তি এখানে।
+
+পূর্বশর্ত: [Swing High ও Swing Low](/bn/learn/03-market-structure/01-swing-high-low) ও [Pip, Lot, Leverage](/bn/learn/01-foundations/03-pips-lots-leverage-margin)।
+
+## ATR কী
+
+**ATR (Average True Range) হলো প্রতি candle গড়ে কতটা চলে তার মাপ। এটি দিক বলে না, শুধু চলনের আকার বলে।**
+
+ভাবুন নদীর স্রোত। শান্ত নদীতে ছোট নৌকাও টিকে থাকে, খরস্রোতায় বড় ঢেউ আসে। ATR বলে আজ নদী কতটা অস্থির।
+
+গণনার সারকথা:
+
+- **True Range** = নিচের তিনটির মধ্যে সবচেয়ে বড়: high − low; |high − আগের close|; |low − আগের close|।
+- **ATR** = শেষ 14টি candle-এর True Range-এর গড় (Wilder-এর smoothing সহ)।
+- ফল price-এর এককে আসে। EURUSD-তে 0.0019 মানে 19 pip।
+
+## Chart-এ কেমন দেখায়: একই entry, দুই রকম stop
+
+<Chart
+  id="atr-stop-wide-01"
+  height={460}
+  caption="EURUSD H4 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — ৫২ নম্বর candle-এ buy 1.0952। ATR 19.4 pip। Stop 2 x ATR নিচে 1.0913 (38.8 pip), target 1.1030।"
+/>
+
+এখানে ATR 19.4 pip। অর্থাৎ প্রতি H4 candle গড়ে এই পরিমাণ চলে। এর **অর্ধেক দূরত্বে** (প্রায় 10 pip) stop বসালে একটি সাধারণ candle-ই সেটি ছুঁয়ে ফেলতে পারে।
+
+## ধাপে ধাপে: ATR stop ও size
+
+<Steps>
+
+### ধাপ ১: Entry ঠিক করুন
+
+Entry দামের structure থেকে আসে (pullback, breakout ইত্যাদি)। ATR entry দেয় না।
+
+### ধাপ ২: ATR পড়ুন
+
+Entry-র candle-এ ATR কত? উদাহরণে 19.4 pip।
+
+### ধাপ ৩: গুণক বেছে stop বসান
+
+সাধারণত 1.5 থেকে 3 গুণ ATR। উদাহরণে 2 গুণ: 38.8 pip। সম্ভব হলে stop swing low-এর নিচেও পড়ুক।
+
+### ধাপ ৪: Size ঠিক করুন
+
+লট = ঝুঁকির পরিমাণ ÷ (stop pip × প্রতি pip-এর মূল্য)। EURUSD-তে 1 standard lot-এ pip মূল্য আনুমানিক $10।
+
+(উদাহরণস্বরূপ, কাল্পনিক) ঝুঁকি $10 ধরলে: 10 ÷ (38.8 × 10) = 0.026, অর্থাৎ নিচে ঘুরিয়ে 0.02 লট।
+
+### ধাপ ৫: Target ঠিক করুন
+
+ঝুঁকির অন্তত দ্বিগুণ। উদাহরণে 1.1030, দূরত্ব প্রায় 78 pip।
+
+</Steps>
+
+লক্ষ্য করুন: stop দ্বিগুণ দূরে গেলে ঝুঁকি স্থির রাখতে লট প্রায় অর্ধেক হয়। **ATR stop মানে ঝুঁকি বাড়ানো নয়, size কমানো।** বিস্তারিত [Position Sizing](/bn/learn/08-risk-management/02-position-sizing)-এ।
+
+## উদাহরণ ১: যখন কাজ করে (কাল্পনিক)
+
+উপরের chart:
+
+- **Entry:** buy 1.0952।
+- **Stop:** 1.0913 (2 x ATR)। ঝুঁকি 38.8 pip।
+- **Target:** 1.1030 (প্রায় 1:2)।
+- **ফল:** সাময়িক পিছিয়ে এলেও দাম stop ছোঁয়নি। ৬৫ নম্বর candle target ছুঁয়েছে।
+- **শিক্ষা:** stop noise-এর বাইরে ছিল, তাই ধারণা কাজ করার সুযোগ পেল।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়, কোনো ফলই গ্যারান্টি নয়।)
+
+## উদাহরণ ২: যখন ব্যর্থ হয় (কাল্পনিক)
+
+একই candle, একই entry। শুধু stop বদলেছে:
+
+<Chart
+  id="atr-stop-tight-01"
+  height={460}
+  caption="EURUSD H4 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — একই buy 1.0952, কিন্তু stop মাত্র 0.5 x ATR নিচে 1.0942 (প্রায় 10 pip)। ৫৩ নম্বর candle সেটি কেটে দেয়, তারপর দাম ওপরে চলে।"
+/>
+
+- **কী দেখা যাচ্ছিল:** একই setup। ATR 19.4 pip, তবু stop 10 pip দূরে।
+- **ফল:** পরের candle-ই (৫৩ নম্বর) stop কাটে। এরপর দাম ওপরে গিয়ে আগের উদাহরণের target-এ পৌঁছায়।
+- **কেন ভুল:** stop স্বাভাবিক noise-এর ভিতরে ছিল। ধারণা ঠিক, তবু হার।
+- **শিক্ষা:** "ঝুঁকি কম" দেখাতে stop কাছে টানা ভুল। ঝুঁকি কমে size ছোট করে।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়।)
+
+## সাধারণ ভুল
+
+| ভুল                              | কেন হয়         | কী করবেন                    |
+| :------------------------------- | :-------------- | :-------------------------- |
+| স্থির pip stop সব সময়ে          | সহজ মনে হয়     | ATR অনুযায়ী বদলান          |
+| Stop কাছে টেনে "ঝুঁকি কম" দেখানো | কম লোকসানের লোভ | size কমান, stop নয়         |
+| ATR দিয়ে entry খোঁজা            | ATR ভুল বোঝা    | entry structure থেকে        |
+| Stop দূরে অথচ size একই           | হিসাব না করা    | লট নতুন করে গণনা করুন       |
+| ATR-কে ভবিষ্যদ্বাণী ভাবা         | ATR অতীতের গড়  | বড় news-এর আগে সতর্ক থাকুন |
+
+## Pro tips
+
+<Callout type="tip">
+  Stop ATR-এর গুণক ও structure, দুটিই মেলান। 2 x ATR যদি swing low-এর ভিতরে
+  পড়ে, stop swing low-এর নিচে নিন।
+</Callout>
+
+<Callout type="tip">
+  ATR বাড়তে থাকলে বাজার গরম হচ্ছে, কমতে থাকলে শান্ত হচ্ছে। শান্ত সময়ের পরে চাল
+  আসে, [Bollinger Bands](/bn/learn/07-technical-indicators/05-bollinger-bands)-এ
+  এর আরেক রূপ দেখবেন।
+</Callout>
+
+<Callout type="warning">
+  ATR বড় news-এর spike আগাম ধরে না। অনুষ্ঠানের আগে size ছোট করা বা বাইরে থাকাই
+  নিরাপদ।
+</Callout>
+
+## কখন এটা কাজ করে না
+
+- **হঠাৎ volatility লাফ:** ATR পিছিয়ে থাকে, প্রথম spike-এ আপনার stop ছোট।
+- **খুব অল্প ডেটার সম্পদে:** গড় অস্থির।
+- **Structure অস্পষ্ট হলে:** ATR stop-এর দূরত্ব দেয়, কিন্তু কোথা থেকে তা দেয় না।
+- **ছোট timeframe-এ:** spread ATR-এর বড় অংশ খেয়ে ফেলতে পারে।
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- ATR প্রতি candle-এর গড় চলনের আকার, দিক নয়।
+- Stop বসান 1.5-3 x ATR দূরে, noise-এর বাইরে।
+- Stop দূরে গেলে লট কমান, ঝুঁকি স্থির রাখুন।
+- ধারণা ঠিক থেকেও হার আসে যদি stop noise-এর ভিতরে থাকে।
+
+</KeyTakeaways>
+
+## অনুশীলন
+
+TradingView-এ EUR/USD H4 chart-এ ATR 14 বসান। গত ২০টি swing trade-এর entry-র সময়ে ATR কত ছিল লিখুন, তারপর 2 x ATR stop বসালে কতগুলো কাটত তা দেখুন।
+
+## কুইজ
+
+1. ATR কী মাপে?
+2. ATR 20 pip হলে 2 x ATR stop কত pip?
+3. Stop দ্বিগুণ দূরে গেলে ঝুঁকি একই রাখতে লট কী করবেন?
+4. ধারণা ঠিক থেকেও trade হারায় কেন?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** প্রতি candle-এর গড় চলনের আকার, অর্থাৎ volatility।
+
+**২.** 40 pip।
+
+**৩.** প্রায় অর্ধেক করবেন।
+
+**৪.** Stop স্বাভাবিক noise-এর ভিতরে থাকলে ছোট ঝাঁকুনিতেই কেটে যায়।
+
+</details>
+
+## পরের ধাপ
+
+- আগে: [MACD](/bn/learn/07-technical-indicators/03-macd)।
+- পরে: [Bollinger Bands](/bn/learn/07-technical-indicators/05-bollinger-bands)।
+- ঝুঁকি নিয়ে: [Risk per Trade](/bn/learn/08-risk-management/01-risk-per-trade)।
+
+### সূত্র
+
+- <ExternalLink href="https://www.investopedia.com/terms/a/atr.asp">
+    ATR, Investopedia
+  </ExternalLink>
+
+<Disclaimer />

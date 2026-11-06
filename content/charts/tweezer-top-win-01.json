@@ -1,0 +1,273 @@
+{
+  "id": "tweezer-top-win-01",
+  "title": {
+    "en": "Tweezer Top at an Old High, Short on the Low Break",
+    "bn": "পুরোনো high-এ tweezer top, low ভাঙলে short"
+  },
+  "symbol": "EURUSD",
+  "timeframe": "H4",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bearish",
+  "outcome": "win",
+  "tags": [
+    "tweezer-top",
+    "tweezer",
+    "candlestick",
+    "resistance",
+    "pattern"
+  ],
+  "module": "patterns",
+  "lessonSlugs": [],
+  "caption": {
+    "en": "Illustrative synthetic EURUSD H4: price rallies back to an old high. A bullish candle and the next bearish candle print matching highs just above the level; the second closes below the first one's open. A sell stop under the pair fills and price falls to 2R.",
+    "bn": "শিক্ষামূলক কাল্পনিক EURUSD H4: দাম আবার পুরোনো high-এ ফেরে। একটি bullish candle আর পরের bearish candle level-এর সামান্য উপরে একই high দেয়; দ্বিতীয়টা প্রথমটার open-এর নিচে close করে। জোড়ার নিচে sell stop fill হয়, দাম 2R পর্যন্ত নামে।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data, not a real market record.",
+    "bn": "শিক্ষামূলক কাল্পনিক ডেটা, বাস্তব মার্কেটের রেকর্ড নয়।"
+  },
+  "updatedAt": "2026-11-06T12:00:00Z",
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 1.089,
+      "label": "Old high (resistance)",
+      "color": "#3b82f6",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.0892,
+      "label": "Matching highs",
+      "color": "#3b82f6",
+      "style": "dotted"
+    },
+    {
+      "type": "marker",
+      "i": 15,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Tweezer A"
+    },
+    {
+      "type": "marker",
+      "i": 16,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Tweezer B"
+    },
+    {
+      "type": "hline",
+      "price": 1.0866,
+      "label": "Entry (low break)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.0897,
+      "label": "Stop",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.0804,
+      "label": "Target 2R",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candle 5 makes the old high. Candles 11-14 rally back to it. Candle 15 runs to a high just above the level; candle 16 tests the same high within half a pip and closes below candle 15's open. A tweezer top that is also a bearish engulfing. Candle 17 breaks the low and fills the sell stop; the stop sits above the shared high.",
+    "bn": "৫ নম্বর candle পুরোনো high বানায়। ১১-১৪ নম্বর আবার সেখানে ওঠে। ১৫ নম্বর level-এর সামান্য উপরে একটি high দেয়; ১৬ নম্বর আধা pip-এর মধ্যে একই high পরীক্ষা করে ১৫ নম্বরের open-এর নিচে close করে। Tweezer top, যা একই সঙ্গে bearish engulfing। ১৭ নম্বর low ভেঙে sell stop fill করে; stop যৌথ high-এর উপরে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Two candles rejecting the same high at a level, plus an engulfing, is a strong combination",
+      "bn": "Level-এ দুটি candle-এর একই high প্রত্যাখ্যান আর engulfing মিলে শক্ত"
+    }
+  ],
+  "entry": 1.0866,
+  "stopLoss": 1.0897,
+  "takeProfit": 1.0804,
+  "rr": "1:2.0",
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.08,
+      "h": 1.08327,
+      "l": 1.07914,
+      "c": 1.082
+    },
+    {
+      "i": 1,
+      "o": 1.082,
+      "h": 1.08537,
+      "l": 1.08043,
+      "c": 1.0845
+    },
+    {
+      "i": 2,
+      "o": 1.0845,
+      "h": 1.08506,
+      "l": 1.08313,
+      "c": 1.0837
+    },
+    {
+      "i": 3,
+      "o": 1.0837,
+      "h": 1.08695,
+      "l": 1.08221,
+      "c": 1.0859
+    },
+    {
+      "i": 4,
+      "o": 1.0859,
+      "h": 1.08874,
+      "l": 1.08492,
+      "c": 1.0877
+    },
+    {
+      "i": 5,
+      "o": 1.0877,
+      "h": 1.089,
+      "l": 1.0867,
+      "c": 1.087
+    },
+    {
+      "i": 6,
+      "o": 1.087,
+      "h": 1.0884,
+      "l": 1.0835,
+      "c": 1.0848
+    },
+    {
+      "i": 7,
+      "o": 1.0848,
+      "h": 1.08653,
+      "l": 1.08032,
+      "c": 1.082
+    },
+    {
+      "i": 8,
+      "o": 1.082,
+      "h": 1.08296,
+      "l": 1.07957,
+      "c": 1.0805
+    },
+    {
+      "i": 9,
+      "o": 1.0805,
+      "h": 1.08186,
+      "l": 1.08013,
+      "c": 1.0813
+    },
+    {
+      "i": 10,
+      "o": 1.0813,
+      "h": 1.08233,
+      "l": 1.07798,
+      "c": 1.0793
+    },
+    {
+      "i": 11,
+      "o": 1.0793,
+      "h": 1.08218,
+      "l": 1.07819,
+      "c": 1.0811
+    },
+    {
+      "i": 12,
+      "o": 1.0811,
+      "h": 1.08465,
+      "l": 1.07998,
+      "c": 1.0833
+    },
+    {
+      "i": 13,
+      "o": 1.0833,
+      "h": 1.08579,
+      "l": 1.08266,
+      "c": 1.0848
+    },
+    {
+      "i": 14,
+      "o": 1.0848,
+      "h": 1.0884,
+      "l": 1.0844,
+      "c": 1.0882
+    },
+    {
+      "i": 15,
+      "o": 1.0882,
+      "h": 1.0892,
+      "l": 1.088,
+      "c": 1.089
+    },
+    {
+      "i": 16,
+      "o": 1.089,
+      "h": 1.08915,
+      "l": 1.0868,
+      "c": 1.087
+    },
+    {
+      "i": 17,
+      "o": 1.087,
+      "h": 1.0873,
+      "l": 1.0858,
+      "c": 1.0861
+    },
+    {
+      "i": 18,
+      "o": 1.0861,
+      "h": 1.08663,
+      "l": 1.08349,
+      "c": 1.0843
+    },
+    {
+      "i": 19,
+      "o": 1.0843,
+      "h": 1.08528,
+      "l": 1.084,
+      "c": 1.0849
+    },
+    {
+      "i": 20,
+      "o": 1.0849,
+      "h": 1.08575,
+      "l": 1.08164,
+      "c": 1.0827
+    },
+    {
+      "i": 21,
+      "o": 1.0827,
+      "h": 1.08343,
+      "l": 1.08044,
+      "c": 1.0811
+    },
+    {
+      "i": 22,
+      "o": 1.0811,
+      "h": 1.08194,
+      "l": 1.08074,
+      "c": 1.0816
+    },
+    {
+      "i": 23,
+      "o": 1.0816,
+      "h": 1.08235,
+      "l": 1.07909,
+      "c": 1.0796
+    },
+    {
+      "i": 24,
+      "o": 1.0796,
+      "h": 1.08019,
+      "l": 1.07801,
+      "c": 1.0784
+    }
+  ]
+}

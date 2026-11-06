@@ -1,14 +1,188 @@
 ---
-title: "Correlation gold vs DXY"
-description: "Detailed notes on Correlation gold vs DXY"
-status: draft
-updated: 2026-10-10
+title: "Gold বনাম DXY: উল্টো সম্পর্ক ও তার সীমা"
+description: "Gold ও ডলার সূচক (DXY) সাধারণত উল্টো চলে কেন, এই সম্পর্ক কীভাবে ব্যবহার করবেন, এবং কখন তা ভেঙে যায় — দুটি chart সহ।"
+level: intermediate
+tags: [gold, xauusd, dxy, correlation, intermarket]
+instruments: [XAUUSD]
+timeframes: [H1]
+status: done
+sources:
+  - type: blog
+    title: "Gold and the U.S. Dollar - Investopedia"
+    url: "https://www.investopedia.com/articles/investing/021915/relationship-between-gold-and-us-dollar.asp"
+  - type: blog
+    title: "Gold Price Drivers - World Gold Council"
+    url: "https://www.gold.org/goldhub/research/gold-demand-trends"
+updated: 2026-11-05
 ---
 
-# Correlation gold vs DXY
+# Gold বনাম DXY: উল্টো সম্পর্ক ও তার সীমা
 
-<div className="rounded-xl border border-border bg-card p-6 text-center text-muted-foreground my-8">
-  <p className="text-3xl mb-4">🚧</p>
-  <p className="font-semibold text-foreground">Coming in Phase 2</p>
-  <p className="text-sm mt-1">This module is under construction.</p>
-</div>
+"ডলার শক্তিশালী হলে gold নামে", প্রায় সবাই এটি শোনেন। কথাটি প্রায়ই সত্যি, কিন্তু সবসময় নয়। এই পাঠ নিয়মটি কীভাবে কাজে লাগাবেন ও কোথায় থামবেন, দুটিই শেখায়।
+
+## এই লেখা পড়ে আপনি যা পারবেন
+
+- Gold ও DXY-র **উল্টো সম্পর্কের কারণ** বলতে পারবেন।
+- Trade-এ সম্পর্কটি **context হিসেবে** ব্যবহার করবেন।
+- **সম্পর্ক ভাঙার লক্ষণ** চিনবেন।
+
+## কেন এটি জরুরি
+
+- **Gold সরাসরি ডলারে দামি হয়।** XAUUSD-তে USD একটি পক্ষ।
+- **একটি chart দিয়ে অন্যটির সম্ভাব্য চাপ বোঝা যায়।** দ্রুত context মেলে।
+- **অন্ধ বিশ্বাস লোকসান আনে।** সীমা না জানলে ভুল দিকে বড় বাজি ধরা হয়।
+
+পূর্বশর্ত: [Risk-on / Risk-off](/bn/learn/11-fundamental-intermarket-analysis/04-risk-on-risk-off) এবং [DXY](/bn/learn/11-fundamental-intermarket-analysis/03-currency-strength-dxy)।
+
+## মূল ধারণা
+
+**Correlation হলো দুটি বাজারের একসঙ্গে বা উল্টো দিকে চলার প্রবণতা। Gold ও DXY-র ক্ষেত্রে এটি সাধারণত উল্টো (negative)।**
+
+কারণগুলো, সরলভাবে:
+
+- Gold ডলারে দর হয়। ডলার শক্তিশালী হলে অন্য মুদ্রার ক্রেতার কাছে gold দামি, চাহিদা কমতে পারে।
+- সুদের হার বাড়লে ডলার-সম্পদ আকর্ষণীয় হয়, আর সুদ না-দেওয়া gold-এর আকর্ষণ কমে। (বিস্তারিত: [Gold ও US yield](/bn/learn/13-gold-xauusd/03-dxy-us-yields))
+
+| DXY  | Gold সাধারণত | কারণ (সরল)               |
+| :--- | :----------- | :----------------------- |
+| ওপরে | নিচে         | ডলার-দর gold ব্যয়বহুল   |
+| নিচে | ওপরে         | gold সস্তা, চাহিদা বাড়ে |
+
+## Chart-এ কেমন দেখায়
+
+<Chart
+  id="gold-dxy-inverse-01"
+  height={480}
+  caption="XAUUSD H1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — নিচে কাল্পনিক DXY। DXY ওপরে গেলে gold নিচে নামে, DXY-র উঁচু বিন্দুতে gold-এর নিচু বিন্দু।"
+/>
+
+এখানে সম্পর্ক পরিষ্কার। বাস্তবে এত পরিষ্কার সবসময় হয় না।
+
+## ধাপে ধাপে: সম্পর্ক ব্যবহার
+
+<Steps>
+
+### ধাপ ১: দুটি chart পাশাপাশি রাখুন
+
+একই time frame-এ XAUUSD ও DXY খুলুন।
+
+### ধাপ ২: সাম্প্রতিক সম্পর্ক যাচাই করুন
+
+গত কয়েক দিনে কি সত্যিই উল্টো চলেছে? না চললে নিয়ম ছেড়ে দিন।
+
+### ধাপ ৩: DXY-র গুরুত্বপূর্ণ স্তর চিহ্নিত করুন
+
+[Support/resistance](/bn/learn/05-support-resistance/01-levels-vs-zones)-এ DXY পৌঁছালে gold-এর সম্ভাব্য প্রতিক্রিয়ার জন্য প্রস্তুত থাকুন।
+
+### ধাপ ৪: Gold-এর নিজস্ব setup খুঁজুন
+
+সম্পর্ক শুধু পক্ষে বা বিপক্ষে context। Entry আসে gold-এর structure থেকে।
+
+### ধাপ ৫: সম্পর্ক ভাঙলে বাদ দিন
+
+দুটি একসঙ্গে একই দিকে চললে এই নিয়ম থেকে সরে আসুন।
+
+</Steps>
+
+## উদাহরণ ১: যখন কাজ করে (কাল্পনিক)
+
+- **আগে থেকে ঠিক:** DXY ওপরে চলছে, gold-এ sell setup খুঁজব, নিয়ম অনুযায়ী stop বসাব।
+- **ফল:** DXY টানা উঠে gold-এ lower high ও নিচের দিকে ঝোঁক তৈরি হয়। Sell setup-এ gold প্রায় 50 USD নামে। উভয় chart একই গল্প বলে।
+- **শিক্ষা:** Context ও structure একমত হলে ধরে রাখা সহজ।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়।)
+
+## উদাহরণ ২: যখন ব্যর্থ হয় (কাল্পনিক)
+
+<Chart
+  id="gold-dxy-break-01"
+  height={480}
+  caption="XAUUSD H1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — প্রথম অংশের পর gold ও DXY দুটিই ওপরে ওঠে, যেমন ভয়ের পরিবেশে দুটিই ক্রেতা পায়। উল্টো সম্পর্ক এখানে ভুল signal দেয়।"
+/>
+
+- **কী দেখা যাচ্ছিল:** "DXY উঠছে, তাই gold নামবে" ভেবে sell।
+- **ফল:** Gold ও DXY একসঙ্গে ওঠে, sell stop খায়।
+- **কেন ব্যর্থ:** ভয়ের পরিবেশে ডলার ও gold দুটিই আশ্রয় হিসেবে কেনা হতে পারে। সম্পর্ক সাময়িকভাবে উল্টে যায়।
+- **শিক্ষা:** Correlation আইন নয়। বড় ঘটনার পর আবার যাচাই করুন।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়।)
+
+## সাধারণ ভুল
+
+| ভুল                                 | কেন হয়                | কী করবেন                       |
+| :---------------------------------- | :--------------------- | :----------------------------- |
+| সম্পর্ককে নিয়ম ধরে বড় size নেওয়া | "সবাই বলে" বিশ্বাস     | সাম্প্রতিক চালে যাচাই করুন     |
+| শুধু DXY দেখে gold trade করা        | সহজ পথ খোঁজা           | gold-এর নিজস্ব structure দেখুন |
+| বড় খবরের দিনেও একই নিয়ম           | সম্পর্ক ভাঙতে পারে     | খবরের দিনে আস্থা কমান          |
+| সময়-পরিসর না মেলানো                | এক chart M5, অন্যটি H4 | একই time frame-এ তুলনা করুন    |
+
+## Pro tips
+
+<Callout type="tip">
+  সম্পর্ক ভরসাযোগ্য কিনা দ্রুত যাচাই: গত 20টি বড় চালের মধ্যে কয়টিতে gold ও DXY
+  উল্টো গিয়েছিল, গুনে দেখুন। নিজের গণনা নিজের chart থেকেই করুন।
+</Callout>
+
+<Callout type="note">
+  Gold-এর চালে সুদের হার, ভূ-রাজনীতি, central bank-এর কেনা ও ETF-এর প্রবাহও
+  ভূমিকা রাখে। DXY কেবল একটি উপাদান।
+</Callout>
+
+## কখন এটা কাজ করে না
+
+- **ভয়ের সংকটে:** ডলার ও gold দুটিই কেনা হতে পারে।
+- **Gold-নির্দিষ্ট খবরে:** যেমন বড় central bank-এর কেনা।
+- **ডলারের ঝুড়ির অন্য মুদ্রার নড়াচড়ায়:** DXY-র কারণ gold-এর কারণ নয়।
+- **খুব ছোট time frame-এ:** noise সম্পর্ক ঢেকে দেয়।
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- Gold ও DXY সাধারণত উল্টো চলে, কারণ gold ডলারে দর হয়।
+- সম্পর্ক context, entry signal নয়।
+- সংকট বা বিশেষ খবরে সম্পর্ক ভাঙতে পারে।
+- ব্যবহারের আগে সাম্প্রতিক চালে যাচাই করুন।
+
+</KeyTakeaways>
+
+## অনুশীলন
+
+XAUUSD ও DXY H1 chart পাশাপাশি রেখে গত দুই সপ্তাহে সম্পর্ক কোথায় মিলেছে ও কোথায় ভেঙেছে, দুই রঙে দাগ দিন। ভাঙার দিনগুলোতে কী খবর ছিল, লিখে রাখুন।
+
+## কুইজ
+
+1. Gold ও DXY সাধারণত কোন দিকে চলে?
+2. এর একটি কারণ বলুন।
+3. কখন এই সম্পর্ক ভাঙতে পারে?
+4. সম্পর্ক ভাঙলে কী করবেন?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** উল্টো দিকে।
+
+**২.** Gold ডলারে দর হয়, ডলার শক্তিশালী হলে gold অন্য মুদ্রার ক্রেতার কাছে দামি।
+
+**৩.** ভয়ের সংকটে বা gold-নির্দিষ্ট খবরে।
+
+**৪.** নিয়মটি বাদ দিয়ে gold-এর নিজস্ব structure দেখুন।
+
+</details>
+
+## পরের ধাপ
+
+- আগে: [Risk-on / Risk-off](/bn/learn/11-fundamental-intermarket-analysis/04-risk-on-risk-off)।
+- পরে: [News Trade করা বা এড়ানো](/bn/learn/11-fundamental-intermarket-analysis/06-news-trade-avoid-korbo)।
+- সম্পর্কিত: [Gold (XAUUSD) অধ্যায়](/bn/learn/13-gold-xauusd/01-why-gold-moves)।
+
+### সূত্র
+
+- <ExternalLink href="https://www.investopedia.com/articles/investing/021915/relationship-between-gold-and-us-dollar.asp">
+    Gold and the U.S. Dollar, Investopedia
+  </ExternalLink>
+- <ExternalLink href="https://www.gold.org/goldhub/research/gold-demand-trends">
+    Gold Demand Trends, World Gold Council
+  </ExternalLink>
+
+<Disclaimer />

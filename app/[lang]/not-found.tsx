@@ -4,7 +4,7 @@ export default function NotFound() {
   return (
     <div className="flex flex-col items-center justify-center min-h-[60vh] px-4 text-center">
       <p className="font-mono text-6xl font-bold text-gold mb-4">404</p>
-      <h1 className="text-2xl font-bold text-foreground mb-2">Page not found</h1>
+      <h1 className="text-2xl text-foreground mb-2">Page not found</h1>
       <p className="text-muted-foreground mb-8 max-w-md">
         এই page টি পাওয়া যাচ্ছে না। হয়তো সরানো হয়েছে অথবা URL ভুল।
       </p>

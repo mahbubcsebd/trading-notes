@@ -1,0 +1,204 @@
+---
+title: "Break of Structure (BOS) ও CHOCH: trend চলছে নাকি বদলাচ্ছে"
+description: "BOS ও CHOCH-এর পার্থক্য কী? body close দিয়ে কীভাবে যাচাই করবেন, wick-এর ফাঁদ কীভাবে এড়াবেন, আর কোথায় stop বসাবেন।"
+level: intermediate
+tags: [bos, msb, choch, market-structure, price-action, smc]
+instruments: [XAUUSD]
+timeframes: [H1, H4, D1]
+status: done
+sources:
+  - type: blog
+    title: "Market structure - CrossTrade Learn"
+    url: "https://crosstrade.io/learn/price-action/market-structure"
+updated: 2026-11-05
+---
+
+# Break of Structure (BOS) ও CHOCH: trend চলছে নাকি বদলাচ্ছে
+
+আপনি downtrend-এ sell নিয়ে বসে আছেন। হঠাৎ price একটি বড় high ভেঙে উপরে উঠল। এটা কি শুধু একটি pullback, নাকি trend-এর মোড় ঘোরা? এই প্রশ্নের উত্তর দেয় দুটি শব্দ: **BOS** আর **CHOCH**। একটি বলে "trend এখনো বেঁচে আছে", অন্যটি বলে "trend-এর চরিত্র বদলে গেছে"।
+
+## এই লেখা পড়ে আপনি যা পারবেন
+
+- **BOS** ও **CHOCH** আলাদা করে চিনতে পারবেন।
+- **Body close** দিয়ে break যাচাই করতে পারবেন।
+- Wick দিয়ে হওয়া **fake break** এড়াতে পারবেন।
+- Break-এর পর **stop** কোথায় বসবে ঠিক করতে পারবেন।
+
+## কেন এটি জরুরি
+
+- Trend-এর দিকে trade নিতে হলে জানতে হয় trend এখনো সচল কিনা। BOS সেটা বলে।
+- Reversal-এর প্রথম ইঙ্গিত পেতে হলে CHOCH চিনতে হয়।
+- ভুল break-কে সত্যি ধরলে ভুল দিকে trade হয়। এখানেই বেশি account পুড়ে।
+
+## BOS ও CHOCH কী?
+
+আগের lesson-এ আপনি [swing high ও swing low](/bn/learn/03-market-structure/01-swing-high-low) এবং [HH/HL](/bn/learn/03-market-structure/02-trend-range-hhhl) শিখেছেন। এবার সেই swing ভাঙার গল্প।
+
+- **BOS (Break of Structure):** trend-এর **দিকেই** আগের swing ভাঙা। Uptrend-এ আগের high ভেঙে নতুন HH, downtrend-এ আগের low ভেঙে নতুন LL। মানে trend **চলমান**।
+- **CHOCH (Change of Character):** trend-এর **বিপরীতে** গুরুত্বপূর্ণ swing ভাঙা। Uptrend-এ শেষ HL-এর নিচে close, downtrend-এ শেষ LH-এর ওপরে close। মানে trend-এর চরিত্র **বদলাতে শুরু করেছে**।
+
+MSB (Market Structure Break) নামটিও আপনি দেখবেন। বেশিরভাগ শিক্ষক BOS-এর সমার্থক হিসেবে ব্যবহার করেন, কিন্তু কেউ কেউ CHOCH বোঝাতেও ব্যবহার করেন। তাই কোনো উৎসে MSB দেখলে আগে তার সংজ্ঞা দেখে নিন।
+
+## chart-এ কেমন দেখায়
+
+নিচের chart-এ downtrend-এ LH ও LL তৈরি হচ্ছে (BOS), তারপর price শেষ LH ছাড়িয়ে ওপরে close করছে (CHOCH)।
+
+<Chart
+  id="bos-choch-01"
+  height={420}
+  caption="XAUUSD H4 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — LL ভাঙা = BOS, তারপর LH-এর ওপরে close = CHOCH"
+/>
+
+লক্ষ্য করুন, CHOCH-এর আগে একের পর এক LL এসেছে। CHOCH-এর পর প্রথমবার structure উল্টো দিকে ভেঙেছে। সেই কারণে CHOCH একা **reversal-এর নিশ্চয়তা** নয়, শুধু প্রথম সতর্কসংকেত।
+
+## BOS বনাম CHOCH
+
+|                    | BOS                            | CHOCH                               |
+| :----------------- | :----------------------------- | :---------------------------------- |
+| **অর্থ**           | trend চলমান                    | trend বদলাতে পারে                   |
+| **কোন swing ভাঙে** | trend-এর দিকে (HH বা LL)       | trend-এর বিপরীতে (শেষ HL বা LH)     |
+| **trader-এর কাজ**  | pullback-এ trend-এর দিকে খোঁজা | আগের trade সামলানো, নতুন setup দেখা |
+| **ঝুঁকি**          | তুলনামূলক কম                   | বেশি, confirmation দরকার            |
+
+## ধাপে ধাপে: break যাচাই করা
+
+<Steps>
+
+### ধাপ ১: trend চিনুন
+
+আগে HH/HL বা LH/LL দিয়ে trend ঠিক করুন। Trend না জানলে BOS আর CHOCH আলাদা করা যায় না।
+
+### ধাপ ২: গুরুত্বপূর্ণ swing চিহ্নিত করুন
+
+Uptrend-এ শেষ HL, downtrend-এ শেষ LH। এই swing-ই CHOCH-এর লেভেল।
+
+### ধাপ ৩: break হলো কিনা দেখুন
+
+Price সেই swing ছাড়িয়েছে কিনা দেখুন। শুধু wick ছাড়ালে এখনো break নয়।
+
+### ধাপ ৪: candle-এর body close দেখুন
+
+Candle-এর **body** swing-এর বাইরে close করলে তবেই break ধরুন। Candle close হওয়া পর্যন্ত অপেক্ষা করুন।
+
+### ধাপ ৫: নাম দিন ও পরিকল্পনা করুন
+
+Trend-এর দিকে হলে BOS, বিপরীতে হলে CHOCH। তারপর higher timeframe-এর সঙ্গে মিলিয়ে দেখুন।
+
+</Steps>
+
+<Callout type="note">
+  কেউ কেউ শুধু wick ছাড়ালেই break ধরেন, কেউ body close চান। সংজ্ঞা নিয়ে সব
+  শিক্ষক একমত নন। এই কোর্সে আমরা সাবধানি পদ্ধতি নিচ্ছি: **body close**। যেটাই
+  নিন, সব জায়গায় একই নিয়ম মানুন।
+</Callout>
+
+## Wick বনাম body close: fake break-এর ফাঁদ
+
+অনেক সময় price আগের high বা low-এর সামান্য বাইরে wick বানিয়ে ফিরে আসে। এতে অনেকের stop হিট হয়, কিন্তু candle-এর body ভেতরেই close করে। এটি আসল BOS বা CHOCH নয়, এটি [liquidity sweep](/bn/learn/03-market-structure/04-liquidity-stop-hunts)-এর লক্ষণ হতে পারে।
+
+<Callout type="warning">
+  Body close হলেই break নিশ্চিত, এমন নয়। Close-এর পরও price ফিরে আসতে পারে। তাই
+  break-কে signal ভাববেন না; এটি একটি তথ্য, যা higher timeframe ও আশপাশের
+  context দিয়ে যাচাই করতে হয়।
+</Callout>
+
+## Break-এর পর stop কোথায়
+
+- **BOS-এর পর buy:** pullback-এ নতুন HL-এর সামান্য নিচে stop। দেখুন [stop loss placement](/bn/learn/10-trade-management-execution/01-stop-loss-placement)।
+- **CHOCH-এর পর buy (downtrend ফেরত):** যে low থেকে price উঠেছে তার সামান্য নিচে stop।
+
+Spread ও wick-এর জন্য একটু buffer রাখুন। কত lot নেবেন তা ঠিক করুন [position sizing](/bn/learn/08-risk-management/02-position-sizing) দিয়ে।
+
+## বাস্তব উদাহরণ
+
+<Callout type="note">
+  **এই lesson-এর উদাহরণ কাল্পনিক।** আমরা এখনো যাচাই করা real OHLC data যোগ
+  করিনি। উপরের chart শিক্ষামূলক কাল্পনিক data-য় তৈরি। নিজের chart-এ একই পদ্ধতি
+  চালিয়ে দেখুন, নিচের অনুশীলন সেটাই করতে বলেছে।
+</Callout>
+
+**উদাহরণ (কাল্পনিক trade):** উপরের chart-এ downtrend চলছিল এবং দুটি LH তৈরি হয়েছে। Price ২৩৬০ লেভেলের ওপরে body close করল। এটি bullish CHOCH। আপনি তাড়াহুড়ো না করে অপেক্ষা করলেন। Price নেমে এসে নতুন HL বানাল। সেই HL-এর কাছে buy, stop তার সামান্য নিচে। Price যদি HL ভাঙে, ধারণা ভুল, loss ছোট।
+
+## ব্যর্থ উদাহরণ: wick-কে CHOCH ভাবা (কাল্পনিক/শিক্ষামূলক)
+
+- **কী দেখা যাচ্ছিল:** Downtrend-এর শেষ LH-এর ওপরে একটি লম্বা wick, কিন্তু body নিচে close।
+- **সিদ্ধান্ত:** কেউ এটিকে CHOCH ধরে সঙ্গে সঙ্গে buy নিলেন।
+- **ফল:** Price আবার নামল, downtrend চলল, stop লাগল।
+- **শিক্ষা:** Body close ছাড়া break ধরবেন না। Candle close হওয়া পর্যন্ত অপেক্ষা করুন।
+
+## সাধারণ ভুল
+
+| ভুল                                 | কেন হয়                         | কী করবেন                               |
+| :---------------------------------- | :------------------------------ | :------------------------------------- |
+| Wick দেখেই break ধরা                | তাড়াহুড়ো                      | body close পর্যন্ত অপেক্ষা             |
+| CHOCH-কে reversal-এর নিশ্চয়তা ভাবা | একটি break-কে যথেষ্ট ধরা        | higher timeframe ও পরের structure দেখা |
+| Minor swing-এর break গোনা           | noise আর structure গুলিয়ে ফেলা | major swing-এর break-ই ধরুন            |
+| শুধু lower timeframe দেখা           | বড় ছবি না দেখা                 | আগে higher timeframe-এ trend দেখুন     |
+
+## প্রো টিপস
+
+<Callout type="tip">
+  CHOCH-এর পর সঙ্গে সঙ্গে ঝাঁপাবেন না। অনেক সময় price ভাঙা লেভেলে ফিরে এসে
+  পরীক্ষা করে। ওই retest-এ সংকেত পরিষ্কার থাকে এবং stop ছোট হয়।
+</Callout>
+
+<Callout type="tip">
+  Higher timeframe-এর BOS-এর বিপরীতে lower timeframe-এর CHOCH প্রায়ই শুধু
+  pullback। দুই timeframe মেলান: [Multi-Timeframe
+  Analysis](/bn/learn/03-market-structure/05-multi-timeframe-analysis)।
+</Callout>
+
+## কখন এটা কাজ করে না
+
+- **Range বাজারে:** break বারবার হয় এবং ফিরে আসে।
+- **বড় news-এর মুহূর্তে:** price লাফ দেয়, body close অর্থহীন হয়ে পড়ে।
+- **খুব ছোট timeframe-এ (M1–M5):** noise-এ বেশিরভাগ break ভুয়া।
+- **একা ব্যবহার করলে:** BOS/CHOCH দিক বলে না, নিশ্চয়তাও দেয় না।
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- BOS = trend-এর দিকে swing ভাঙা (trend চলমান)।
+- CHOCH = trend-এর বিপরীতে শেষ গুরুত্বপূর্ণ swing ভাঙা (trend বদলাতে পারে)।
+- Break ধরতে হলে candle-এর body close লাগে, শুধু wick নয়।
+- CHOCH reversal-এর নিশ্চয়তা নয়, প্রথম সতর্কসংকেত।
+- Higher timeframe-এর সঙ্গে না মিলিয়ে break-এ trade নেবেন না।
+
+</KeyTakeaways>
+
+## অনুশীলন
+
+TradingView-এ XAUUSD-এর H4 chart খুলুন। শেষ ৩ মাসে অন্তত ৩টি BOS ও ১টি CHOCH খুঁজে চিহ্নিত করুন। প্রতিটির জন্য দেখুন: break কি body close দিয়ে হয়েছিল, নাকি শুধু wick? তারপর D1 chart-এ একই সময় দেখুন, higher timeframe-এর trend-এর সঙ্গে কোনটি মিলেছে?
+
+## কুইজ
+
+1. Uptrend-এ BOS কোন swing ভাঙলে হয়?
+2. Uptrend-এ CHOCH কোন swing ভাঙলে হয়?
+3. কেন wick-এর break-কে সরাসরি BOS ধরা ঠিক নয়?
+4. CHOCH-এর পর সঙ্গে সঙ্গে trade না নিয়ে অপেক্ষা করলে কী লাভ?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** আগের HH ভাঙলে (trend-এর দিকে)।
+
+**২.** শেষ HL-এর নিচে body close করলে।
+
+**৩.** Wick প্রায়ই liquidity sweep। Body ভেতরে close হলে break টেকে না।
+
+**৪.** Retest-এ সংকেত পরিষ্কার হয়, stop ছোট হয়, fake break ধরা পড়ে।
+
+</details>
+
+## পরের ধাপ
+
+- আগে: [Trend, Range ও HH/HL](/bn/learn/03-market-structure/02-trend-range-hhhl)।
+- পরে: [Liquidity ও Stop Hunts](/bn/learn/03-market-structure/04-liquidity-stop-hunts)।
+- ঝুঁকি: [Stop Loss Placement](/bn/learn/10-trade-management-execution/01-stop-loss-placement)।
+
+### সূত্র
+
+- [Market structure, CrossTrade](https://crosstrade.io/learn/price-action/market-structure)
+
+<Disclaimer />

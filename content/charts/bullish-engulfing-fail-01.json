@@ -1,0 +1,197 @@
+{
+  "id": "bullish-engulfing-fail-01",
+  "title": {
+    "en": "Weak Bullish Engulfing of a Tiny Candle",
+    "bn": "ছোট্ট candle-কে ঢাকা দুর্বল bullish engulfing"
+  },
+  "symbol": "EURUSD",
+  "timeframe": "H4",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bullish",
+  "outcome": "loss",
+  "tags": [
+    "bullish-engulfing",
+    "engulfing",
+    "candlestick",
+    "fail",
+    "quality",
+    "pattern"
+  ],
+  "module": "patterns",
+  "lessonSlugs": [],
+  "caption": {
+    "en": "Illustrative synthetic EURUSD H4: at the end of a downtrend a green candle engulfs a tiny candle, but closes far below its own high after a long upper wick. Bought at the close, it fails as support breaks.",
+    "bn": "শিক্ষামূলক কাল্পনিক EURUSD H4: downtrend-এর শেষে একটি সবুজ candle একটি ছোট্ট candle-কে ঢাকে, কিন্তু লম্বা upper wick রেখে নিজের high-এর অনেক নিচে close করে। Close-এ buy, support ভাঙলে stop।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data, not a real market record.",
+    "bn": "শিক্ষামূলক কাল্পনিক ডেটা, বাস্তব মার্কেটের রেকর্ড নয়।"
+  },
+  "updatedAt": "2026-11-06T12:00:00Z",
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 1.0824,
+      "label": "Support",
+      "color": "#3b82f6",
+      "style": "dashed"
+    },
+    {
+      "type": "marker",
+      "i": 8,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Tiny candle"
+    },
+    {
+      "type": "marker",
+      "i": 9,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Weak engulfing"
+    },
+    {
+      "type": "hline",
+      "price": 1.084,
+      "label": "Entry (close)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.0826,
+      "label": "Stop",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.0868,
+      "label": "Target 2R",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candle 8 is a tiny candle with a 2-pip body: easy to engulf. Candle 9 technically engulfs it, but its close sits in the lower third of its range under a long upper wick. Two of the three quality questions fail. Bought at the close, the trade gets no follow-through and the stop goes with the support.",
+    "bn": "৮ নম্বর ছোট্ট candle, body মাত্র 2 pip: ঢাকা সহজ। ৯ নম্বর নিয়মমতো ঢাকে, কিন্তু close নিজের range-এর নিচের এক-তৃতীয়াংশে, উপরে লম্বা wick। মানের তিন প্রশ্নের দুটিই ব্যর্থ। Close-এ buy, পরে কোনো follow-through নেই, support-এর সঙ্গে stop-ও যায়।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Engulfing a tiny candle proves little; check the three quality questions",
+      "bn": "ছোট্ট candle ঢাকা কম প্রমাণ; মানের তিন প্রশ্ন যাচাই করুন"
+    }
+  ],
+  "entry": 1.084,
+  "stopLoss": 1.0826,
+  "takeProfit": 1.0868,
+  "rr": "1:2.0",
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.095,
+      "h": 1.09577,
+      "l": 1.09243,
+      "c": 1.093
+    },
+    {
+      "i": 1,
+      "o": 1.093,
+      "h": 1.09359,
+      "l": 1.08981,
+      "c": 1.0905
+    },
+    {
+      "i": 2,
+      "o": 1.0905,
+      "h": 1.09164,
+      "l": 1.09006,
+      "c": 1.0913
+    },
+    {
+      "i": 3,
+      "o": 1.0913,
+      "h": 1.09208,
+      "l": 1.08806,
+      "c": 1.0891
+    },
+    {
+      "i": 4,
+      "o": 1.0891,
+      "h": 1.09,
+      "l": 1.08645,
+      "c": 1.0873
+    },
+    {
+      "i": 5,
+      "o": 1.0873,
+      "h": 1.08831,
+      "l": 1.08691,
+      "c": 1.0879
+    },
+    {
+      "i": 6,
+      "o": 1.0879,
+      "h": 1.08856,
+      "l": 1.08459,
+      "c": 1.0855
+    },
+    {
+      "i": 7,
+      "o": 1.0855,
+      "h": 1.08625,
+      "l": 1.08275,
+      "c": 1.0835
+    },
+    {
+      "i": 8,
+      "o": 1.0835,
+      "h": 1.0838,
+      "l": 1.0826,
+      "c": 1.0833
+    },
+    {
+      "i": 9,
+      "o": 1.0833,
+      "h": 1.0859,
+      "l": 1.083,
+      "c": 1.084
+    },
+    {
+      "i": 10,
+      "o": 1.084,
+      "h": 1.0844,
+      "l": 1.0831,
+      "c": 1.0833
+    },
+    {
+      "i": 11,
+      "o": 1.0833,
+      "h": 1.08396,
+      "l": 1.08102,
+      "c": 1.0817
+    },
+    {
+      "i": 12,
+      "o": 1.0817,
+      "h": 1.08249,
+      "l": 1.07858,
+      "c": 1.0795
+    },
+    {
+      "i": 13,
+      "o": 1.0795,
+      "h": 1.08031,
+      "l": 1.0792,
+      "c": 1.08
+    },
+    {
+      "i": 14,
+      "o": 1.08,
+      "h": 1.08092,
+      "l": 1.07718,
+      "c": 1.078
+    }
+  ]
+}

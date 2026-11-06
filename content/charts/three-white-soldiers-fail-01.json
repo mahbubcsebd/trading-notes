@@ -1,0 +1,232 @@
+{
+  "id": "three-white-soldiers-fail-01",
+  "title": {
+    "en": "Advance Block Into an Old High, Bought at the Third Close",
+    "bn": "পুরোনো high-এ advance block, তৃতীয় close-এ buy"
+  },
+  "symbol": "XAUUSD",
+  "timeframe": "H4",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bullish",
+  "outcome": "loss",
+  "tags": [
+    "three-white-soldiers",
+    "advance-block",
+    "candlestick",
+    "three-candle",
+    "fail",
+    "pattern"
+  ],
+  "module": "patterns",
+  "lessonSlugs": [],
+  "caption": {
+    "en": "Illustrative synthetic XAUUSD H4: three bullish candles rise into an old high, but each body is smaller than the last and the upper wicks grow: an advance block. Bought at the third close, the trade reverses and the stop below the first candle goes.",
+    "bn": "শিক্ষামূলক কাল্পনিক XAUUSD H4: তিনটি bullish candle পুরোনো high-এর দিকে ওঠে, কিন্তু প্রতিটির body আগেরটার চেয়ে ছোট আর upper wick বড় হতে থাকে: advance block। তৃতীয় close-এ buy, দাম উল্টে প্রথম candle-এর নিচের stop নেয়।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data, not a real market record.",
+    "bn": "শিক্ষামূলক কাল্পনিক ডেটা, বাস্তব মার্কেটের রেকর্ড নয়।"
+  },
+  "updatedAt": "2026-11-06T12:00:00Z",
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 2387.05,
+      "label": "Old high (resistance)",
+      "color": "#3b82f6",
+      "style": "dashed"
+    },
+    {
+      "type": "marker",
+      "i": 11,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "1"
+    },
+    {
+      "type": "marker",
+      "i": 12,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "2 (smaller)"
+    },
+    {
+      "type": "marker",
+      "i": 13,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "3 (long wick)"
+    },
+    {
+      "type": "hline",
+      "price": 2375.05,
+      "label": "Entry (3rd close)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 2345.05,
+      "label": "Stop",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 2435.05,
+      "label": "Target 2R",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candle 5 leaves an old high. Candles 11-13 are three bullish candles, but the bodies shrink ($14, $9, $4) and the upper wicks grow, the third reaching the old high and closing far below it. Nison calls this an advance block: buyers are tiring. Bought at the third close, the stop sits under the first candle; candles 14-17 fall through it.",
+    "bn": "৫ নম্বর candle একটি পুরোনো high রেখে যায়। ১১-১৩ নম্বর তিনটি bullish candle, কিন্তু body ছোট হতে থাকে ($14, $9, $4) আর upper wick বড়; তৃতীয়টা পুরোনো high ছুঁয়ে তার অনেক নিচে close করে। Nison একে advance block বলেছেন: buyers ক্লান্ত। তৃতীয় close-এ buy, stop প্রথম candle-এর নিচে; ১৪-১৭ নম্বর তা ভেঙে নামে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Shrinking bodies and growing upper wicks turn soldiers into an advance block",
+      "bn": "ছোট হতে থাকা body আর বড় হতে থাকা upper wick soldiers-কে advance block বানায়"
+    }
+  ],
+  "entry": 2375.05,
+  "stopLoss": 2345.05,
+  "takeProfit": 2435.05,
+  "rr": "1:2.0",
+  "candles": [
+    {
+      "i": 0,
+      "o": 2350.0,
+      "h": 2362.24,
+      "l": 2344.81,
+      "c": 2358.0
+    },
+    {
+      "i": 1,
+      "o": 2358.0,
+      "h": 2372.16,
+      "l": 2351.53,
+      "c": 2368.0
+    },
+    {
+      "i": 2,
+      "o": 2368.0,
+      "h": 2371.67,
+      "l": 2361.27,
+      "c": 2365.0
+    },
+    {
+      "i": 3,
+      "o": 2365.0,
+      "h": 2380.66,
+      "l": 2360.77,
+      "c": 2374.0
+    },
+    {
+      "i": 4,
+      "o": 2374.0,
+      "h": 2385.05,
+      "l": 2370.06,
+      "c": 2381.0
+    },
+    {
+      "i": 5,
+      "o": 2381.0,
+      "h": 2387.05,
+      "l": 2377.0,
+      "c": 2380.05
+    },
+    {
+      "i": 6,
+      "o": 2380.05,
+      "h": 2386.32,
+      "l": 2366.11,
+      "c": 2371.05
+    },
+    {
+      "i": 7,
+      "o": 2371.05,
+      "h": 2375.29,
+      "l": 2352.63,
+      "c": 2360.05
+    },
+    {
+      "i": 8,
+      "o": 2360.05,
+      "h": 2363.74,
+      "l": 2347.01,
+      "c": 2353.05
+    },
+    {
+      "i": 9,
+      "o": 2353.05,
+      "h": 2358.81,
+      "l": 2350.44,
+      "c": 2356.05
+    },
+    {
+      "i": 10,
+      "o": 2356.05,
+      "h": 2361.71,
+      "l": 2341.46,
+      "c": 2348.05
+    },
+    {
+      "i": 11,
+      "o": 2348.05,
+      "h": 2363.05,
+      "l": 2347.05,
+      "c": 2362.05
+    },
+    {
+      "i": 12,
+      "o": 2362.05,
+      "h": 2375.05,
+      "l": 2361.05,
+      "c": 2371.05
+    },
+    {
+      "i": 13,
+      "o": 2371.05,
+      "h": 2388.05,
+      "l": 2370.05,
+      "c": 2375.05
+    },
+    {
+      "i": 14,
+      "o": 2375.05,
+      "h": 2377.05,
+      "l": 2363.05,
+      "c": 2365.05
+    },
+    {
+      "i": 15,
+      "o": 2365.05,
+      "h": 2370.53,
+      "l": 2348.95,
+      "c": 2353.05
+    },
+    {
+      "i": 16,
+      "o": 2353.05,
+      "h": 2357.81,
+      "l": 2340.45,
+      "c": 2344.05
+    },
+    {
+      "i": 17,
+      "o": 2344.05,
+      "h": 2349.94,
+      "l": 2341.48,
+      "c": 2347.05
+    },
+    {
+      "i": 18,
+      "o": 2347.05,
+      "h": 2352.78,
+      "l": 2327.59,
+      "c": 2333.05
+    }
+  ]
+}

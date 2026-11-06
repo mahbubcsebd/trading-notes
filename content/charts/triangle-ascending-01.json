@@ -1,0 +1,344 @@
+{
+  "symbol": "EURUSD",
+  "timeframe": "H4",
+  "mode": "synthetic",
+  "module": "06-trend-chart-patterns",
+  "lessonSlugs": [
+    "02-continuation-patterns"
+  ],
+  "notes": {
+    "en": "Illustrative synthetic data.",
+    "bn": "এটি শিক্ষামূলক কাল্পনিক ডেটা।"
+  },
+  "updatedAt": "2026-11-05T21:00:00Z",
+  "type": "trade-setup",
+  "id": "triangle-ascending-01",
+  "title": {
+    "en": "Ascending Triangle Breakout",
+    "bn": "Ascending triangle breakout"
+  },
+  "bias": "bullish",
+  "outcome": "win",
+  "tags": [
+    "triangle",
+    "ascending-triangle",
+    "continuation",
+    "breakout"
+  ],
+  "caption": {
+    "en": "Flat resistance at 1.0900 touched three times, higher lows beneath. Candle 22 closes above, candle 24 retests 1.0900 and holds; buy 1.0924, stop 1.0884, target 1.1040.",
+    "bn": "1.0900-এ সমতল resistance তিনবার ছোঁয়া, নিচে higher low। ২২ নম্বর candle ওপরে close করে, ২৪ নম্বর 1.0900 retest করে টিকে যায়; buy 1.0924, stop 1.0884, target 1.1040।"
+  },
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 1.09,
+      "label": "Resistance 1.0900",
+      "color": "#3b82f6",
+      "style": "dashed"
+    },
+    {
+      "type": "trendline",
+      "from": {
+        "i": 8,
+        "price": 1.076
+      },
+      "to": {
+        "i": 22,
+        "price": 1.0877
+      },
+      "color": "#3b82f6",
+      "label": "Rising support"
+    },
+    {
+      "type": "marker",
+      "i": 5,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Touch 1"
+    },
+    {
+      "type": "marker",
+      "i": 11,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Touch 2"
+    },
+    {
+      "type": "marker",
+      "i": 17,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Touch 3"
+    },
+    {
+      "type": "marker",
+      "i": 22,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Break"
+    },
+    {
+      "type": "marker",
+      "i": 24,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Retest"
+    },
+    {
+      "type": "marker",
+      "i": 25,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Buy"
+    },
+    {
+      "type": "hline",
+      "price": 1.0924,
+      "label": "Buy entry",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.0884,
+      "label": "Stop (below flipped level)",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.104,
+      "label": "Target (height projected)",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Triangle height = 1.0900 - 1.0760 = 140 pips. Target = 1.0900 + 140 pips = 1.1040. Buyers pay more at every dip while sellers defend one price. Risk 40 pips for 116 pips of target (about 2.9R).",
+    "bn": "Triangle-এর উচ্চতা = 1.0900 - 1.0760 = 140 pip। Target = 1.0900 + 140 pip = 1.1040। প্রতিটি dip-এ ক্রেতারা বেশি দামে কিনছে, বিক্রেতারা একটি দামে আটকে আছে। ঝুঁকি 40 pip, target 116 pip দূরে (প্রায় 2.9R)।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Flat top + rising lows = pressure building under one level",
+      "bn": "সমতল top + ক্রমে বাড়তে থাকা low = একটি level-এর নিচে চাপ জমছে"
+    },
+    {
+      "en": "Broken resistance becomes support on the retest",
+      "bn": "ভাঙা resistance retest-এ support হয়ে যায়"
+    }
+  ],
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.0692,
+      "h": 1.0706,
+      "l": 1.0686,
+      "c": 1.07
+    },
+    {
+      "i": 1,
+      "o": 1.07,
+      "h": 1.0747,
+      "l": 1.0692,
+      "c": 1.0739
+    },
+    {
+      "i": 2,
+      "o": 1.0739,
+      "h": 1.0788,
+      "l": 1.0729,
+      "c": 1.0778
+    },
+    {
+      "i": 3,
+      "o": 1.0778,
+      "h": 1.0822,
+      "l": 1.0772,
+      "c": 1.0816
+    },
+    {
+      "i": 4,
+      "o": 1.0816,
+      "h": 1.0863,
+      "l": 1.0808,
+      "c": 1.0855
+    },
+    {
+      "i": 5,
+      "o": 1.0855,
+      "h": 1.0902,
+      "l": 1.0845,
+      "c": 1.0894
+    },
+    {
+      "i": 6,
+      "o": 1.0894,
+      "h": 1.09,
+      "l": 1.0847,
+      "c": 1.0853
+    },
+    {
+      "i": 7,
+      "o": 1.0853,
+      "h": 1.0861,
+      "l": 1.0803,
+      "c": 1.0811
+    },
+    {
+      "i": 8,
+      "o": 1.0811,
+      "h": 1.0821,
+      "l": 1.076,
+      "c": 1.077
+    },
+    {
+      "i": 9,
+      "o": 1.077,
+      "h": 1.0817,
+      "l": 1.0764,
+      "c": 1.0811
+    },
+    {
+      "i": 10,
+      "o": 1.0811,
+      "h": 1.0859,
+      "l": 1.0803,
+      "c": 1.0851
+    },
+    {
+      "i": 11,
+      "o": 1.0851,
+      "h": 1.0901,
+      "l": 1.0841,
+      "c": 1.0892
+    },
+    {
+      "i": 12,
+      "o": 1.0892,
+      "h": 1.0898,
+      "l": 1.0865,
+      "c": 1.0871
+    },
+    {
+      "i": 13,
+      "o": 1.0871,
+      "h": 1.0879,
+      "l": 1.0843,
+      "c": 1.0851
+    },
+    {
+      "i": 14,
+      "o": 1.0851,
+      "h": 1.0861,
+      "l": 1.081,
+      "c": 1.083
+    },
+    {
+      "i": 15,
+      "o": 1.083,
+      "h": 1.0857,
+      "l": 1.0824,
+      "c": 1.0851
+    },
+    {
+      "i": 16,
+      "o": 1.0851,
+      "h": 1.0879,
+      "l": 1.0843,
+      "c": 1.0871
+    },
+    {
+      "i": 17,
+      "o": 1.0871,
+      "h": 1.09,
+      "l": 1.0861,
+      "c": 1.0892
+    },
+    {
+      "i": 18,
+      "o": 1.0892,
+      "h": 1.0898,
+      "l": 1.0878,
+      "c": 1.0884
+    },
+    {
+      "i": 19,
+      "o": 1.0884,
+      "h": 1.0892,
+      "l": 1.0868,
+      "c": 1.0876
+    },
+    {
+      "i": 20,
+      "o": 1.0876,
+      "h": 1.0886,
+      "l": 1.086,
+      "c": 1.0868
+    },
+    {
+      "i": 21,
+      "o": 1.0868,
+      "h": 1.0894,
+      "l": 1.0862,
+      "c": 1.0888
+    },
+    {
+      "i": 22,
+      "o": 1.0888,
+      "h": 1.0938,
+      "l": 1.0868,
+      "c": 1.0932
+    },
+    {
+      "i": 23,
+      "o": 1.0932,
+      "h": 1.0936,
+      "l": 1.091,
+      "c": 1.0918
+    },
+    {
+      "i": 24,
+      "o": 1.0918,
+      "h": 1.0922,
+      "l": 1.0902,
+      "c": 1.0912
+    },
+    {
+      "i": 25,
+      "o": 1.0912,
+      "h": 1.093,
+      "l": 1.091,
+      "c": 1.0926
+    },
+    {
+      "i": 26,
+      "o": 1.0926,
+      "h": 1.0968,
+      "l": 1.0916,
+      "c": 1.0958
+    },
+    {
+      "i": 27,
+      "o": 1.0958,
+      "h": 1.0996,
+      "l": 1.0952,
+      "c": 1.099
+    },
+    {
+      "i": 28,
+      "o": 1.099,
+      "h": 1.1018,
+      "l": 1.0982,
+      "c": 1.101
+    },
+    {
+      "i": 29,
+      "o": 1.101,
+      "h": 1.1042,
+      "l": 1.1,
+      "c": 1.103
+    }
+  ],
+  "entry": 1.0924
+}

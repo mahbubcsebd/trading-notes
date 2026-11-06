@@ -1,0 +1,230 @@
+{
+  "symbol": "EURUSD",
+  "timeframe": "H4",
+  "mode": "synthetic",
+  "module": "05-support-resistance",
+  "lessonSlugs": [
+    "01-levels-vs-zones"
+  ],
+  "notes": {
+    "en": "Illustrative synthetic data.",
+    "bn": "এটি শিক্ষামূলক কাল্পনিক ডেটা।"
+  },
+  "updatedAt": "2026-11-05T16:00:00Z",
+  "id": "sr-zone-break-fail-01",
+  "title": {
+    "en": "Support Zone That Finally Breaks",
+    "bn": "যে support zone শেষে ভাঙল"
+  },
+  "type": "trade-setup",
+  "bias": "bullish",
+  "outcome": "loss",
+  "tags": [
+    "support-resistance",
+    "zone",
+    "failed-setup"
+  ],
+  "caption": {
+    "en": "Support zone holds three times, then candle 15 closes through it. The buy with a stop below the zone takes a planned loss.",
+    "bn": "Support zone তিনবার টিকে, তারপর ১৫ নম্বর candle তা ভেদ করে close করে। Zone-এর নিচে stop থাকা buy পরিকল্পিত ক্ষতিতে শেষ হয়।"
+  },
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.079,
+      "h": 1.0795,
+      "l": 1.0765,
+      "c": 1.077
+    },
+    {
+      "i": 1,
+      "o": 1.077,
+      "h": 1.0772,
+      "l": 1.074,
+      "c": 1.0745
+    },
+    {
+      "i": 2,
+      "o": 1.0745,
+      "h": 1.0748,
+      "l": 1.0715,
+      "c": 1.0722
+    },
+    {
+      "i": 3,
+      "o": 1.0722,
+      "h": 1.0755,
+      "l": 1.0718,
+      "c": 1.075
+    },
+    {
+      "i": 4,
+      "o": 1.075,
+      "h": 1.0772,
+      "l": 1.0746,
+      "c": 1.0768
+    },
+    {
+      "i": 5,
+      "o": 1.0768,
+      "h": 1.077,
+      "l": 1.074,
+      "c": 1.0745
+    },
+    {
+      "i": 6,
+      "o": 1.0745,
+      "h": 1.075,
+      "l": 1.0702,
+      "c": 1.0722
+    },
+    {
+      "i": 7,
+      "o": 1.0722,
+      "h": 1.0752,
+      "l": 1.0716,
+      "c": 1.0748
+    },
+    {
+      "i": 8,
+      "o": 1.0748,
+      "h": 1.0765,
+      "l": 1.0742,
+      "c": 1.076
+    },
+    {
+      "i": 9,
+      "o": 1.076,
+      "h": 1.0762,
+      "l": 1.073,
+      "c": 1.0735
+    },
+    {
+      "i": 10,
+      "o": 1.0735,
+      "h": 1.0738,
+      "l": 1.0708,
+      "c": 1.0712
+    },
+    {
+      "i": 11,
+      "o": 1.0712,
+      "h": 1.0733,
+      "l": 1.0706,
+      "c": 1.0728
+    },
+    {
+      "i": 12,
+      "o": 1.0728,
+      "h": 1.0745,
+      "l": 1.0724,
+      "c": 1.074
+    },
+    {
+      "i": 13,
+      "o": 1.074,
+      "h": 1.0742,
+      "l": 1.0718,
+      "c": 1.0722
+    },
+    {
+      "i": 14,
+      "o": 1.0722,
+      "h": 1.0724,
+      "l": 1.0696,
+      "c": 1.07
+    },
+    {
+      "i": 15,
+      "o": 1.07,
+      "h": 1.0704,
+      "l": 1.0668,
+      "c": 1.0672
+    },
+    {
+      "i": 16,
+      "o": 1.0672,
+      "h": 1.0678,
+      "l": 1.065,
+      "c": 1.0655
+    },
+    {
+      "i": 17,
+      "o": 1.0655,
+      "h": 1.067,
+      "l": 1.0645,
+      "c": 1.0662
+    }
+  ],
+  "annotations": [
+    {
+      "type": "zone",
+      "from": {
+        "price": 1.0722,
+        "i": 1
+      },
+      "to": {
+        "price": 1.0695,
+        "i": 17
+      },
+      "label": "Support Zone",
+      "color": "#22c55e"
+    },
+    {
+      "type": "marker",
+      "i": 2,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Touch 1"
+    },
+    {
+      "type": "marker",
+      "i": 6,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Touch 2"
+    },
+    {
+      "type": "marker",
+      "i": 10,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Touch 3"
+    },
+    {
+      "type": "hline",
+      "price": 1.0734,
+      "label": "Buy entry",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.0688,
+      "label": "Stop (below zone)",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "marker",
+      "i": 15,
+      "position": "belowBar",
+      "shape": "arrowDown",
+      "text": "Zone broken"
+    }
+  ],
+  "explanation": {
+    "en": "Three touches make the zone look solid, and candle 11 prints a bullish rejection. The buy at 1.0734 has a stop at 1.0688, below the zone. Candle 15 closes at 1.0672, through the zone, and the stop fills. Loss is the planned 46 pips; no widening, no hoping.",
+    "bn": "তিনবার ধাক্কায় zone শক্ত দেখায়, আর ১১ নম্বর candle bullish rejection দেখায়। 1.0734-এ buy, stop zone-এর নিচে 1.0688-এ। ১৫ নম্বর candle 1.0672-এ close করে zone ভেদ করে, stop fill হয়। ক্ষতি পরিকল্পিত ৪৬ pip; stop সরানো নয়, আশা নয়।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "A zone that held three times can still break",
+      "bn": "তিনবার টিকে থাকা zone-ও ভাঙতে পারে"
+    },
+    {
+      "en": "The stop is the plan for exactly this day",
+      "bn": "ঠিক এই দিনের জন্যই stop"
+    }
+  ]
+}

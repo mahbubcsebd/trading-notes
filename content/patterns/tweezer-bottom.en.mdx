@@ -1,41 +1,333 @@
 ---
-title: "Tweezer Bottom"
-description: "A 2-candle reversal pattern where two consecutive candles hit the exact same price low at major support."
+title: "Tweezer Bottom: price returns to the same low twice, a pinch-shaped floor at support"
+description: "How to spot a tweezer bottom, how equal 'equal lows' must be, why equal lows without a real level attract stops, how it combines with other patterns, and entry, stop and target, with charts."
 type: bullish
-category: "Tweezer Bottom"
-winrate: "68% - 73%"
-riskReward: "1:3 to 1:5"
-maxRisk: "1% - 2%"
-bestLocation: "Double Bottom Support / Liquidity Sweep / Discount Zone"
-chartId: "tweezer-bottom-01"
-tags: [bullish, pattern, candlestick]
+category: two-candle
+level: intermediate
+candleCount: 2
+signal: reversal
+chartId: tweezer-bottom-win-01
+tags: [pattern, candlestick, tweezer-bottom, tweezer, support]
+status: done
+sources:
+  - type: book
+    title: "Japanese Candlestick Charting Techniques - Steve Nison"
+    note: "Tweezers tops and bottoms, reading them together with other patterns"
+  - type: blog
+    title: "Tweezer Bottom - Investopedia"
+    url: "https://www.investopedia.com/terms/t/tweezer-bottom.asp"
+updated: 2026-11-06
 ---
 
-<div className="flex gap-6 items-end my-8 p-8 bg-zinc-950 border border-border/50 rounded-2xl w-max relative overflow-hidden">
-  <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:20px_20px]"></div>
-  <div className="relative z-10 flex gap-6">
-    <Candle color="bear" bodyH="h-10" topW="h-2" botW="h-10" offset="mt-2" />
-    <Candle color="bull" bodyH="h-10" topW="h-2" botW="h-10" offset="mt-2" />
-  </div>
-</div>
+Two candles in a row print their low at exactly the same price, as if someone stepped on the floor twice to check it holds. "Double bottom, tweezer, buyers are here!" Often true. But in the middle of a downtrend, equal lows often mean the opposite: everyone has a stop just below that low, and the market comes back to take those stops. Which tweezer is which is decided by the level.
 
-## Market Psychology & Institutional Order Flow
-Bears attempt to break through a key price level twice and fail at the identical tick. This double rejection demonstrates strong institutional absorption. Once the second candle closes bullish, short sellers are forced into covering, igniting an explosive upward rally.
+## At a glance
 
-## 5 Strict Anatomy & Recognition Rules
-1. **Identical Lows:** Both candles share an exact or near-identical lowest price point.
-2. **Candle 1 Bearish:** The first bar is a red candle following the downtrend.
-3. **Candle 2 Bullish:** The second candle bounces off the same low and closes green.
-4. **Key Location:** Must form directly on a recognized HTF support or demand level.
-5. **Wick Rejection:** Clear lower wicks displaying rejection of cheaper pricing.
+| Item          | Tweezer Bottom                                                                                                         |
+| :------------ | :--------------------------------------------------------------------------------------------------------------------- |
+| Type          | Bullish reversal, two (or more) candles                                                                                |
+| Where to look | At the end of a downtrend or pullback, at a marked support                                                             |
+| Key features  | Two consecutive candles with lows at almost the same price; usually the first bearish, the second bullish              |
+| Confirmation  | A break of the second candle's high, or the next candle closing above it                                               |
+| Stop          | Below the shared low, plus spread and a buffer                                                                         |
+| Invalidation  | A close below the shared low                                                                                           |
+| Look-alikes   | Double bottom (many candles apart), [Bullish Engulfing](/en/patterns/bullish-engulfing), [Hammer](/en/patterns/hammer) |
+| Opposite      | [Tweezer Top](/en/patterns/tweezer-top)                                                                                |
 
-## 3 Proven Trade Execution Strategies
-**Strategy 1 (Candle 2 Close Market Buy):** Enter on the closing tick of the second bullish bar. Stop loss 3–5 pips below the twin lows.
-**Strategy 2 (Break of Pattern High):** Place Buy Stop above the high of the tweezer formation.
-**Strategy 3 (Lower Timeframe Retest):** Drop to M15 and buy the order block retest following the second rejection.
+## What you will be able to do
 
-## Where It Works vs Where It Fails
-- ✅ **A+ High Probability Setups:** HTF daily support, Previous Day Low (PDL) liquidity sweep, and oversold momentum.
-- ❌ **Low Probability Traps (AVOID):** No clean support level or occurring inside mid-range chop.
+- **Decide** by measurement how equal the lows must be to count as a tweezer.
+- **Combine** a tweezer with other patterns (engulfing, hammer, harami) to judge strength.
+- **Explain** why equal lows without a real level are a **liquidity pool**.
 
-> ⚠️ **Pro Risk Management & Mindset Rule:** Identical lows create a clear invalidation level, offering an exceptional Risk-to-Reward ratio. Always limit risk to 1%–2% per trade and maintain a predefined Stop Loss.
+## Why it matters
+
+- **Rejected twice.** One candle rejecting a price is one thing; two consecutive candles rejecting the same price is stronger evidence.
+- **Weak alone, strong in combination.** Nison's observation: tweezers mean more when they coincide with another candle pattern, such as the second candle being a hammer or a bullish engulfing.
+- **Equal lows are where stops sit.** Many traders put stops just below equal lows. So a tweezer in the wrong place is exactly the target of a sweep. More in [Liquidity and Stop Hunts](/en/learn/03-market-structure/04-liquidity-stop-hunts).
+
+Prerequisite: [Two Candle Patterns](/en/learn/04-candlesticks/03-two-candle-patterns).
+
+## What is a tweezer bottom
+
+**A tweezer bottom is two (sometimes more) consecutive candles whose lows sit at almost the same price, at support at the end of a downtrend.** The name comes from tweezers: two equal prongs reaching down side by side and stopping at the same point.
+
+<CandleDiagram
+  title="Tweezer bottom"
+  candles={[
+    { o: 64, h: 65, l: 58, c: 59, dim: true },
+    { o: 59, h: 60, l: 53, c: 54, dim: true },
+    { o: 54, h: 55, l: 44, c: 47, label: "A", note: "low 44" },
+    { o: 47, h: 56, l: 44.1, c: 55, label: "B", note: "low 44.1" },
+    { o: 55, h: 60, l: 54, c: 59, dim: true },
+  ]}
+  levels={[{ price: 44, label: "equal lows", tone: "support" }]}
+  caption="A and B both stop at about 44. B is green and closes above A's body."
+/>
+
+### Identification rules
+
+| Rule                                                      | Required?          | Why                                             |
+| :-------------------------------------------------------- | :----------------- | :---------------------------------------------- |
+| Two consecutive candles with almost equal lows            | Yes                | This is the "tweezer"                           |
+| A downtrend or pullback before it                         | Yes                | Equal lows mid-range are ordinary               |
+| At a marked support                                       | Yes                | Without a level, equal lows often attract stops |
+| First candle bearish, second bullish                      | No (but important) | The colour change shows control shifting        |
+| The second candle is itself a pattern (hammer, engulfing) | No                 | Per Nison, stronger in combination              |
+
+<Callout type="note">
+  A working rule for "almost equal": the gap between the two lows is under 10%
+  of ATR, or about 2-3 pips on EURUSD H1. This is not a standard definition; set
+  your own in a backtest.
+</Callout>
+
+## Strong vs weak tweezer bottom
+
+<DiagramRow>
+  <CandleDiagram
+    title="Strong"
+    verdict="good"
+    verdictLabel="tradeable"
+    candles={[
+      { o: 62, h: 63, l: 56, c: 57, dim: true },
+      { o: 57, h: 58, l: 46, c: 48 },
+      { o: 48, h: 58, l: 46.1, c: 57.5, label: "engulfing too" },
+    ]}
+    levels={[{ price: 47, label: "support", tone: "support" }]}
+    caption="Equal lows just under support, and the second candle covers the first: two patterns in one place."
+  />
+  <CandleDiagram
+    title="Weak"
+    verdict="bad"
+    verdictLabel="avoid"
+    candles={[
+      { o: 80, h: 81, l: 73, c: 74, dim: true },
+      { o: 74, h: 75, l: 66, c: 67, dim: true },
+      { o: 67, h: 68, l: 60, c: 61 },
+      { o: 61, h: 64, l: 60.1, c: 63, label: "no level" },
+      { o: 63, h: 63.5, l: 55, c: 56, dim: true },
+    ]}
+    caption="Equal lows mid-downtrend with no support. The next candle drops below that low and takes the stops."
+  />
+</DiagramRow>
+
+| Quality check  | Strong                                      | Weak                               |
+| :------------- | :------------------------------------------ | :--------------------------------- |
+| Location       | At a marked support or demand zone          | Mid-downtrend, no level            |
+| Second candle  | Bullish, closing above the first one's body | Small, inside the first one's body |
+| Combination    | A hammer or engulfing forms too             | Only the two lows match            |
+| Prior momentum | Slowing                                     | A run of large red candles         |
+
+### Same look, different meaning
+
+| Pattern                         | Shape                                   | Difference                                   |
+| :------------------------------ | :-------------------------------------- | :------------------------------------------- |
+| **Tweezer Bottom**              | Two consecutive candles with equal lows | An immediate double rejection by two candles |
+| **Double Bottom**               | Two equal lows, but many candles apart  | A chart pattern; a bigger structure          |
+| **Bullish Engulfing**           | Second body covers the first body       | Equal lows not required                      |
+| **Equal lows (a sweep target)** | Equal lows mid-downtrend, no level      | Where stops collect, not support             |
+
+## The story inside the candle
+
+One common interpretation of a tweezer bottom at support:
+
+1. **Candle A: sellers push down to support.** A low forms, where buyers stop them.
+2. **Candle B: sellers test the same low again.** But they cannot take it a single pip lower.
+3. **Buyers win.** The second candle closes higher. The same price has been defended twice.
+
+The result: sellers tried twice and failed. But without a level the same picture has the opposite reading: everyone's stops have collected under the two lows, and larger players may come back for exactly those.
+
+<Callout type="note">
+  This is a common interpretation, not a proven fact. A chart does not show
+  where anyone's stop is.
+</Callout>
+
+## Where it works and where it does not
+
+<Compare
+  leftLabel="Where a tweezer bottom carries weight"
+  rightLabel="Where a tweezer bottom is often a trap"
+  left="- At a marked support or demand zone
+- Equal lows just under support, then a close back above
+- When the second candle is a hammer or bullish engulfing
+- At the end of an uptrend pullback, in the trend direction"
+  right="- Mid-way through a steady downtrend, no level
+- After a run of large red candles
+- When the second candle is small and inside the first one's body
+- On small timeframes, where equal lows are very common"
+/>
+
+## Gaps in a 24-hour market
+
+<Callout type="note">
+  The tweezer definition needs no gap, so the rule does not change in Forex.
+  Just remember: lows can differ by a few pipettes between brokers, because each
+  broker has its own data feed. So measure "almost equal", not "exactly equal".
+</Callout>
+
+## Step by step: trading a tweezer bottom
+
+<Steps>
+
+### Step 1: Level first
+
+Draw support in advance. If the equal lows are not at that support or just below it, stop here.
+
+### Step 2: Wait for both candles to close
+
+A live second candle can still close below the first low. Count it only once both have closed.
+
+### Step 3: Measure
+
+How far apart are the two lows (compared with ATR)? Is the second candle bullish? Does it close above the first one's body? Is the second candle itself a hammer or engulfing?
+
+### Step 4: Entry type
+
+| Entry                     | Where                                        | Pro                              | Con                           |
+| :------------------------ | :------------------------------------------- | :------------------------------- | :---------------------------- |
+| **High break** (standard) | Buy stop just above the second candle's high | You enter only if buyers push on | Slightly higher entry         |
+| **Close entry**           | Buy as the second candle closes              | Closer entry                     | No confirmation               |
+| **Retest limit**          | Buy limit at the middle of the second body   | Smaller stop                     | Missed if price never returns |
+
+### Step 5: Place the stop
+
+Below the shared low, plus the [spread](/en/learn/01-foundations/04-spread-commission-swap) and a buffer. Do not keep the buffer too small: many stops sit just under equal lows, and wicks there are common.
+
+### Step 6: Size and target
+
+[Position size](/en/learn/08-risk-management/02-position-sizing) from the entry-to-stop distance, risking no more than 1%. Target before the prior swing high, with a [risk reward](/en/learn/08-risk-management/03-risk-reward) of at least 1:1.5.
+
+### Step 7: Manage
+
+A close below the shared low means the idea is wrong: get out.
+
+</Steps>
+
+### Pre-trade checklist
+
+<Checklist
+  id="pattern-tweezer-bottom-pretrade-en"
+  items={[
+    "Was support marked before the tweezer, and are the equal lows at that level?",
+    "Does the shape pass the rules (lows almost equal, second candle bullish)?",
+    "Have both candles closed, and did the second not close below the first low?",
+    "Is the risk reward to the prior swing high at least 1:1.5?",
+    "Is the higher-timeframe trend or level not against the trade?",
+  ]}
+/>
+
+If any box stays empty, skip the trade.
+
+## Example 1: when it works (illustrative)
+
+<Chart
+  id="tweezer-bottom-win-01"
+  height={420}
+  caption="XAUUSD H4 (illustrative, synthetic) — a tweezer bottom just under a once-tested support; long on the high break."
+/>
+
+- **What was visible:** Candle 4 marked support at 2373.87. Candles 5-9 rallied to about 2430, and 10-13 fell back.
+- **The tweezer:** Candle 14 was bearish with a low of 2372.37 ($1.50 under support). Candle 15's low was 2372.57, only 20 cents apart, and it closed at 2383.37, above candle 14's open: a tweezer and a bullish engulfing in one place.
+- **Decision:** Buy stop at 2384.87. Stop at 2369.87 ($2.50 below the shared low): $15 of risk. Target 2414.87 (2R); room to the swing high was about 3R.
+- **Result:** Candle 16 broke the high and filled the order. Candle 22 reached the target.
+- **Lesson:** A real level, a double rejection, and a second candle that was itself a strong pattern.
+
+<TradeSetup
+  direction="long"
+  pair="XAUUSD"
+  entry={2384.87}
+  stop={2369.87}
+  target={2414.87}
+/>
+
+(Illustrative example, not a real trade. Not every tweezer bottom wins, and no result is guaranteed.)
+
+## Example 2: when it is a trap (illustrative)
+
+<Chart
+  id="tweezer-bottom-fail-01"
+  height={420}
+  caption="GBPUSD H1 (illustrative, synthetic) — equal lows mid-downtrend, no support. Bought on the high break, then swept."
+/>
+
+- **What was visible:** Candles 0-6 were a steady downtrend from 1.2750 to 1.2670. No marked support below.
+- **The tweezer:** Candle 7's low was 1.2656, candle 8's low 1.2657, and candle 8 closed at 1.2672, above candle 7's open. A perfect shape.
+- **The wrong decision:** Buy stop 1.2676, stop 1.2651: 25 pips of risk.
+- **What happened:** Candle 9 filled the order. Candle 10 turned down, and candle 11 dropped below the equal lows to 1.2644, taking the stop, before the downtrend carried on.
+- **Why it failed:** The equal lows had no level behind them, in the middle of a downtrend. Stops had collected there, and the market took them. The first checklist box would have filtered it out.
+
+**Lesson:** Equal lows without a real level are a magnet for stops, not support. Because the stop was set in advance, the loss stayed at 1R.
+
+## Common mistakes
+
+| Mistake                                    | Why it happens                   | What to do instead                            |
+| :----------------------------------------- | :------------------------------- | :-------------------------------------------- |
+| Treating any equal lows as support         | "It held twice"                  | Check first whether a marked level exists     |
+| Stop right under the equal lows, no buffer | Wanting a small stop             | Add a buffer, a fraction of ATR or a few pips |
+| Looking for exactly equal lows             | Not knowing broker feeds differ  | Measure "almost equal"                        |
+| Counting every tweezer on small timeframes | Equal lows are very common there | H1 or above, and only at levels               |
+
+## Pro tips
+
+<Callout type="tip">
+  Think from the other side: when you see equal lows with no level in a
+  downtrend, do not go long; ask whether price will sweep below them and come
+  back. A candle that returns to support after the sweep often gives a cleaner
+  setup. More in [Fake
+  Breakout](/en/learn/06-trend-chart-patterns/04-fake-breakout).
+</Callout>
+
+<Callout type="tip">
+  If the tweezer's second candle is itself a hammer, bullish engulfing or
+  piercing line, run that pattern's quality checks too. When both patterns pass
+  their rules, the signal is stronger.
+</Callout>
+
+## Summary
+
+<KeyTakeaways>
+
+- Tweezer bottom = two consecutive candles with almost equal lows, at support at the end of a downtrend.
+- Measure "almost equal" (a small fraction of ATR); lows differ slightly between brokers.
+- Strong in combination with another pattern; weak alone.
+- Equal lows without a real level are a magnet for stops; no long there.
+
+</KeyTakeaways>
+
+## Practice and your own backtest
+
+Open XAUUSD H4 or GBPUSD H1 in TradingView. Find at least 20 tweezer bottoms. Log one row each:
+
+| Date | At support? | Gap between lows ÷ ATR | Second candle's pattern | Swept later? | Result (R) |
+| :--- | :---------- | :--------------------- | :---------------------- | :----------- | :--------- |
+|      |             |                        |                         |              |            |
+
+Then split into "at a level" and "no level" and see how many were later swept below the equal lows. Do not draw conclusions from fewer than 30 samples.
+
+## Quiz
+
+1. What is the difference between a tweezer bottom and a double bottom?
+2. Equal lows mid-downtrend, with no level. How do you read them?
+3. How close must the two lows be to count as "almost equal"?
+4. Besides the tweezer, which pattern was present in Example 1?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** In a tweezer the equal lows are on two consecutive candles. In a double bottom many candles separate the two lows; it is a bigger chart pattern.
+
+**2.** Not as support, but as a possible liquidity pool. Stops have collected below; a sweep may come. No long.
+
+**3.** There is no universal number. A working rule: under 10% of ATR. Set your own in a backtest.
+
+**4.** A bullish engulfing: candle 15 covered candle 14's body and closed higher.
+
+</details>
+
+## Next steps
+
+- Before this: [Two Candle Patterns](/en/learn/04-candlesticks/03-two-candle-patterns).
+- What happens below equal lows: [Liquidity and Stop Hunts lesson](/en/learn/03-market-structure/04-liquidity-stop-hunts).
+- Same family: [Tweezer Top](/en/patterns/tweezer-top), [Bullish Engulfing](/en/patterns/bullish-engulfing), [Hammer](/en/patterns/hammer).
+
+<Disclaimer />

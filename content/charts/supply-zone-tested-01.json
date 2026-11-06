@@ -1,0 +1,244 @@
+{
+  "symbol": "EURUSD",
+  "timeframe": "H4",
+  "mode": "synthetic",
+  "module": "05-support-resistance",
+  "lessonSlugs": [
+    "03-supply-demand"
+  ],
+  "notes": {
+    "en": "Illustrative synthetic data.",
+    "bn": "এটি শিক্ষামূলক কাল্পনিক ডেটা।"
+  },
+  "updatedAt": "2026-11-05T19:00:00Z",
+  "type": "trade-setup",
+  "id": "supply-zone-tested-01",
+  "title": {
+    "en": "Supply Zone Tested Too Often",
+    "bn": "বারবার টেস্ট হওয়া supply zone"
+  },
+  "bias": "bearish",
+  "outcome": "loss",
+  "tags": [
+    "support-resistance",
+    "supply",
+    "failed-setup"
+  ],
+  "caption": {
+    "en": "A supply zone sends price down once. The second return is sold, but the zone is spent: candle 18 closes above it and the stop fills.",
+    "bn": "Supply zone একবার দাম নামায়। দ্বিতীয়বার ফিরলে sell নেওয়া হয়, কিন্তু zone তখন ক্লান্ত: ১৮ নম্বর candle তার উপরে close করে, stop fill হয়।"
+  },
+  "annotations": [
+    {
+      "type": "zone",
+      "from": {
+        "price": 1.0958,
+        "i": 3
+      },
+      "to": {
+        "price": 1.0936,
+        "i": 19
+      },
+      "label": "Supply Zone",
+      "color": "#ef4444"
+    },
+    {
+      "type": "marker",
+      "i": 7,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Impulse"
+    },
+    {
+      "type": "marker",
+      "i": 12,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Test 1"
+    },
+    {
+      "type": "marker",
+      "i": 16,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Test 2"
+    },
+    {
+      "type": "marker",
+      "i": 18,
+      "position": "aboveBar",
+      "shape": "arrowUp",
+      "text": "Zone broken"
+    },
+    {
+      "type": "hline",
+      "price": 1.0924,
+      "label": "Sell entry",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.0966,
+      "label": "Stop (above zone)",
+      "color": "#ef4444",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "The base at 1.0936-1.0958 launched a strong drop, a genuine supply zone. Test 1 (candle 12) already tapped it and price fell again, which used up some of the sell orders. At test 2 (candle 16-17) the sell triggers at 1.0924 but candle 18 rips through the zone and closes at 1.0972; the stop at 1.0966 fills for a planned 42 pip loss.",
+    "bn": "1.0936-1.0958 base জোরালো পতন ঘটিয়েছে, আসল supply zone। Test 1 (১২ নম্বর) আগেই zone ছুঁয়ে দাম নামিয়েছে, অর্থাৎ কিছু sell অর্ডার খরচ হয়ে গেছে। Test 2-এ (১৬-১৭) sell 1.0924-এ trigger হয়, কিন্তু ১৮ নম্বর candle zone ভেদ করে 1.0972-এ close করে; 1.0966 stop fill হয়, পরিকল্পিত 42 pip ক্ষতি।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Each test eats the orders waiting in the zone",
+      "bn": "প্রতিটি test zone-এর অপেক্ষমাণ অর্ডার খেয়ে ফেলে"
+    },
+    {
+      "en": "A good zone can still fail; the stop plans for it",
+      "bn": "ভালো zone-ও ব্যর্থ হয়; stop সেজন্যই"
+    }
+  ],
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.09,
+      "h": 1.0912,
+      "l": 1.0896,
+      "c": 1.0908
+    },
+    {
+      "i": 1,
+      "o": 1.0908,
+      "h": 1.0925,
+      "l": 1.0904,
+      "c": 1.0922
+    },
+    {
+      "i": 2,
+      "o": 1.0922,
+      "h": 1.094,
+      "l": 1.0918,
+      "c": 1.0936
+    },
+    {
+      "i": 3,
+      "o": 1.0936,
+      "h": 1.0958,
+      "l": 1.0932,
+      "c": 1.0952
+    },
+    {
+      "i": 4,
+      "o": 1.0952,
+      "h": 1.0957,
+      "l": 1.0938,
+      "c": 1.0944
+    },
+    {
+      "i": 5,
+      "o": 1.0944,
+      "h": 1.0956,
+      "l": 1.0936,
+      "c": 1.095
+    },
+    {
+      "i": 6,
+      "o": 1.095,
+      "h": 1.0952,
+      "l": 1.089,
+      "c": 1.0896
+    },
+    {
+      "i": 7,
+      "o": 1.0896,
+      "h": 1.09,
+      "l": 1.0846,
+      "c": 1.0852
+    },
+    {
+      "i": 8,
+      "o": 1.0852,
+      "h": 1.0858,
+      "l": 1.0822,
+      "c": 1.083
+    },
+    {
+      "i": 9,
+      "o": 1.083,
+      "h": 1.085,
+      "l": 1.0826,
+      "c": 1.0846
+    },
+    {
+      "i": 10,
+      "o": 1.0846,
+      "h": 1.089,
+      "l": 1.0842,
+      "c": 1.0884
+    },
+    {
+      "i": 11,
+      "o": 1.0884,
+      "h": 1.093,
+      "l": 1.088,
+      "c": 1.0926
+    },
+    {
+      "i": 12,
+      "o": 1.0926,
+      "h": 1.0946,
+      "l": 1.092,
+      "c": 1.0928
+    },
+    {
+      "i": 13,
+      "o": 1.0928,
+      "h": 1.093,
+      "l": 1.088,
+      "c": 1.0886
+    },
+    {
+      "i": 14,
+      "o": 1.0886,
+      "h": 1.09,
+      "l": 1.087,
+      "c": 1.0896
+    },
+    {
+      "i": 15,
+      "o": 1.0896,
+      "h": 1.0925,
+      "l": 1.0892,
+      "c": 1.092
+    },
+    {
+      "i": 16,
+      "o": 1.092,
+      "h": 1.0952,
+      "l": 1.0916,
+      "c": 1.0944
+    },
+    {
+      "i": 17,
+      "o": 1.0944,
+      "h": 1.095,
+      "l": 1.0924,
+      "c": 1.0928
+    },
+    {
+      "i": 18,
+      "o": 1.0928,
+      "h": 1.0976,
+      "l": 1.092,
+      "c": 1.0972
+    },
+    {
+      "i": 19,
+      "o": 1.0972,
+      "h": 1.0995,
+      "l": 1.0966,
+      "c": 1.099
+    }
+  ]
+}

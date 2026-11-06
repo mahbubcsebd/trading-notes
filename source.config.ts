@@ -1,22 +1,26 @@
-import { defineConfig, defineDocs, frontmatterSchema } from 'fumadocs-mdx/config';
-import { z } from 'zod';
+import {
+  defineConfig,
+  defineDocs,
+  frontmatterSchema,
+} from "fumadocs-mdx/config";
+import { z } from "zod";
 
 // Extended frontmatter schema with Zod validation
 const customSchema = frontmatterSchema.extend({
   description: z.string().optional(),
-  level: z.enum(['beginner', 'intermediate', 'advanced']).default('beginner'),
+  level: z.enum(["beginner", "intermediate", "advanced"]).default("beginner"),
   tags: z.array(z.string()).default([]),
   instruments: z.array(z.string()).optional(),
   timeframes: z.array(z.string()).optional(),
-  status: z.enum(['draft', 'in-progress', 'done']).default('draft'),
+  status: z.enum(["draft", "in-progress", "done"]).default("draft"),
   sources: z
     .array(
       z.object({
-        type: z.enum(['youtube', 'pdf', 'book', 'blog', 'other']),
+        type: z.enum(["youtube", "pdf", "book", "blog", "other"]),
         title: z.string(),
         url: z.string().optional(),
         note: z.string().optional(),
-      })
+      }),
     )
     .optional(),
   updated: z.coerce.date().optional(),
@@ -24,6 +28,10 @@ const customSchema = frontmatterSchema.extend({
 
 const patternSchema = customSchema.extend({
   category: z.string().optional(),
+  type: z.enum(["bullish", "bearish", "neutral"]).optional(),
+  candleCount: z.number().int().min(1).max(5).optional(),
+  signal: z.enum(["reversal", "continuation", "indecision"]).optional(),
+  // Legacy fields (old pages). New pattern articles must not use them: no unverified stats.
   winrate: z.string().optional(),
   riskReward: z.string().optional(),
   maxRisk: z.string().optional(),
@@ -32,14 +40,14 @@ const patternSchema = customSchema.extend({
 });
 
 export const { docs, meta } = defineDocs({
-  dir: 'content/learn',
+  dir: "content/learn",
   docs: {
     schema: customSchema,
   },
 });
 
 export const { docs: patternDocs, meta: patternMeta } = defineDocs({
-  dir: 'content/patterns',
+  dir: "content/patterns",
   docs: {
     schema: patternSchema,
   },

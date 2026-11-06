@@ -1,14 +1,187 @@
 ---
-title: "Trading plan template"
-description: "Detailed notes on Trading plan template"
-status: draft
-updated: 2026-10-10
+title: "Trading Plan Template: এক পাতার লিখিত নিয়ম"
+description: "Trading plan-এ কী কী থাকবে, কেন তা entry-র আগে লিখতে হয়, আর এক পাতার একটি ব্যবহারযোগ্য template কেমন — chart ও কাল্পনিক উদাহরণ সহ।"
+level: beginner
+tags: [trading-plan, template, rules, discipline, system]
+instruments: [EURUSD]
+timeframes: [H1]
+status: done
+sources:
+  - type: blog
+    title: "Trading Plan - Investopedia"
+    url: "https://www.investopedia.com/articles/trading/06/tradingplan.asp"
+updated: 2026-11-05
 ---
 
-# Trading plan template
+# Trading Plan Template: এক পাতার লিখিত নিয়ম
 
-<div className="rounded-xl border border-border bg-card p-6 text-center text-muted-foreground my-8">
-  <p className="text-3xl mb-4">🚧</p>
-  <p className="font-semibold text-foreground">Coming in Phase 2</p>
-  <p className="text-sm mt-1">This module is under construction.</p>
-</div>
+ম্যাপ ছাড়া অচেনা শহরে গাড়ি চালালে প্রতি মোড়ে থেমে ভাবতে হয়। Trading-এও তাই: plan না থাকলে প্রতিটি candle-এ নতুন সিদ্ধান্ত, আর সিদ্ধান্ত যত বেশি, ভুলও তত বেশি। এই পাঠে এক পাতার একটি plan বানানো শিখবেন।
+
+## এই লেখা পড়ে আপনি যা পারবেন
+
+- Trading plan-এর **ছয়টি অংশ** চিনতে পারবেন।
+- নিজের জন্য **এক পাতার template** পূরণ করতে পারবেন।
+- Plan-এর **ভালো ও খারাপ লেখা** আলাদা করতে পারবেন।
+
+## কেন এটি জরুরি
+
+- **আবেগের মুহূর্তে কিছু ভাবার সময় থাকে না।** [Discipline](/bn/learn/12-trading-psychology/01-discipline) তখনই সম্ভব, যখন কী করতে হবে আগে থেকে লেখা আছে।
+- **ফল যাচাই করা যায়।** নিয়ম না থাকলে বোঝা যায় না, ফল strategy-র না ভাগ্যের।
+- **পরের পাঠগুলো এর ওপর দাঁড়ানো।** Checklist, routine ও stop-নিয়ম সবই এই নথির অংশ।
+
+পূর্বশর্ত: [Risk per Trade](/bn/learn/08-risk-management/01-risk-per-trade) এবং [Entry Model Checklist](/bn/learn/09-price-action-entries-strategies/05-entry-model-checklist)।
+
+## Trading plan কী
+
+**Trading plan হলো আগে থেকে লেখা নিয়মের তালিকা, যা বলে কী trade করবেন, কখন ঢুকবেন-বেরোবেন, কত ঝুঁকি নেবেন এবং কখন থামবেন।**
+
+ভাবুন বিমানের checklist। পাইলট যত অভিজ্ঞই হোক, প্রতিবার তালিকা মিলিয়ে নেন, কারণ মনের ওপর ভরসা করা সবচেয়ে ঝুঁকিপূর্ণ। আপনার plan আপনার checklist।
+
+## ছয়টি অংশ
+
+| #   | অংশ                   | মূল প্রশ্ন                       | উদাহরণ (কাল্পনিক)                    |
+| :-- | :-------------------- | :------------------------------- | :----------------------------------- |
+| ১   | বাজার ও timeframe     | কী trade করব, কোন chart-এ?       | EURUSD, H1 (setup), M15 (entry)      |
+| ২   | Setup                 | কোন অবস্থায় ঢুকব?               | Resistance ভেঙে retest               |
+| ৩   | Entry ও trigger       | ঠিক কোন সংকেতে buy/sell?         | Retest-এ bullish rejection candle    |
+| ৪   | Exit: stop ও target   | কোথায় ভুল প্রমাণিত, কোথায় লাভ? | Stop 30 pip নিচে, target 2R          |
+| ৫   | Risk                  | কত হারাতে রাজি?                  | প্রতি trade 1%, দিনে সর্বোচ্চ 2%     |
+| ৬   | থামার নিয়ম ও routine | কখন বন্ধ করব?                    | দিনে ২ loss হলে বন্ধ, window ২ ঘণ্টা |
+
+প্রতিটি অংশ **সংখ্যা বা হ্যাঁ/না প্রশ্ন** দিয়ে লিখতে হয়। "বাজার ভালো দেখলে ঢুকব" নিয়ম নয়, মত।
+
+## Chart-এ কেমন দেখায়
+
+<Chart
+  id="discipline-plan-followed-01"
+  height={440}
+  caption="EURUSD H1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — Buy, stop ও target entry-র আগেই লেখা। Pullback-এ মন অস্থির হলেও plan বদলায়নি।"
+/>
+
+Plan-এর কাজ এই pullback-এর মুহূর্তে। মন বলে "বেরিয়ে যাই"; plan বলে "stop এখনো লাগেনি"।
+
+## ধাপে ধাপে: এক পাতার plan লেখা
+
+<Steps>
+
+### ধাপ ১: একটি বাজার, একটি timeframe দিয়ে শুরু
+
+শুরুতে একটি instrument বেছে নিন। [Trading Sessions](/bn/learn/01-foundations/05-trading-sessions) দেখে সক্রিয় সময় লিখুন।
+
+### ধাপ ২: একটি setup বেছে নিন
+
+যে setup-টি আপনি [Breakout ও Retest](/bn/learn/09-price-action-entries-strategies/01-breakout-retest-pullback-entry)-এর মতো করে স্পষ্ট ভাষায় লিখতে পারেন, সেটি। তিনটির বেশি নয়।
+
+### ধাপ ৩: Entry, stop, target-এর নিয়ম
+
+"কীভাবে" নির্ধারণ করুন, "কোন দামে" নয়। যেমন: "retest low-এর 5 pip নিচে stop"।
+
+### ধাপ ৪: ঝুঁকির সংখ্যা বসান
+
+প্রতি trade ও প্রতি দিনের সীমা। [Daily ও Weekly Limits](/bn/learn/08-risk-management/05-daily-weekly-limits) থেকে নিন।
+
+### ধাপ ৫: থামার নিয়ম লিখুন
+
+কয়টি loss-এর পর দিন শেষ, কয়টির পর সপ্তাহ। বিস্তারিত পাঠ ৫-এ।
+
+### ধাপ ৬: এক পাতায় সংক্ষেপ করুন
+
+পাতা ছাপিয়ে ডেস্কে রাখুন। এক পাতায় না ধরলে plan বেশি জটিল।
+
+</Steps>
+
+## উদাহরণ ১: যখন কাজ করে (কাল্পনিক)
+
+- **Plan:** EURUSD H1, resistance ভেঙে retest-এ buy, stop 30 pip, target 2R, ঝুঁকি 1%।
+- **চলাকালীন:** Retest-এ সব শর্ত মিলল। Buy 1.0930, stop 1.0885, target 1.1020। Pullback এল, stop ছোঁয়নি।
+- **ফল:** Target ছুঁয়েছে, +2R।
+- **শিক্ষা:** Plan জেতার নিশ্চয়তা দেয় না; মনকে স্থির রাখে।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়।)
+
+## উদাহরণ ২: যখন ব্যর্থ হয় (কাল্পনিক)
+
+- **কী দেখা গেল:** Plan লেখা ছিল, কিন্তু অস্পষ্ট: "শক্তিশালী মনে হলে buy"।
+- **ফল:** Trader একই সপ্তাহে তিনটি আলাদা ধরনের trade নিলেন। দুটি loss, একটি ছোট জেতা। কোনটি plan-এর, বলা গেল না।
+- **কেন ব্যর্থ:** "শক্তিশালী মনে হলে" মাপা যায় না। তাই plan ভাঙা ধরাও যায় না।
+- **শিক্ষা:** প্রতিটি নিয়ম এমনভাবে লিখুন, যাতে অন্য কেউ chart দেখে বলতে পারে নিয়ম মেনেছেন কি না।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়।)
+
+## সাধারণ ভুল
+
+| ভুল                        | কেন হয়           | কী করবেন                              |
+| :------------------------- | :---------------- | :------------------------------------ |
+| অস্পষ্ট নিয়ম              | সহজ লাগে          | সংখ্যা বা হ্যাঁ/না প্রশ্নে লিখুন      |
+| একসঙ্গে অনেক setup         | সুযোগ হারানোর ভয় | শুরুতে একটি, সর্বোচ্চ তিনটি           |
+| Plan লিখে ড্রয়ারে রাখা    | লেখাই কাজ মনে হয় | Trade-এর আগে প্রতিবার চোখ বুলান       |
+| ঝুঁকির অংশ বাদ দেওয়া      | Entry-ই মজার      | Risk লাইন ছাড়া plan অসম্পূর্ণ        |
+| Trade চলাকালীন plan বদলানো | আবেগ              | বদলাতে চাইলে trade শেষে, নতুন সংস্করণ |
+
+## Pro tips
+
+<Callout type="tip">
+  Plan-এ তারিখ ও সংস্করণ লিখুন (v1, v2)। বদলানোর কারণও এক লাইনে। কয়েক মাস পর
+  দেখবেন কোন বদল কাজে দিয়েছে।
+</Callout>
+
+<Callout type="note">
+  Plan একবার লিখে শেষ নয়।
+  [Journal](/bn/learn/12-trading-psychology/05-journaling-habit) দেখে মাসে একবার
+  পর্যালোচনা করুন, তবে trade চলাকালীন কখনো নয়।
+</Callout>
+
+## কখন এটা কাজ করে না
+
+- **Setup পরীক্ষা না করা থাকলে:** লিখিত নিয়ম খারাপ strategy-কে ভালো করে না। আগে [backtest](/bn/learn/15-backtesting-journal/01-how-to-backtest) করুন।
+- **নিয়ম এত বেশি যে মনে থাকে না:** এক পাতার সীমা এ কারণেই।
+- **অস্বাভাবিক বাজারে:** বড় খবর বা গ্যাপে লিখিত stop-ও পুরোপুরি রক্ষা করে না। ঝুঁকি ধরে রাখুন কম।
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- Plan ছয় অংশ: বাজার, setup, entry, exit, risk, থামার নিয়ম।
+- প্রতিটি নিয়ম মাপার মতো করে লিখুন।
+- Plan trade-এর আগে লেখা, চলাকালীন নয়।
+- এক পাতায় না ধরলে সহজ করুন।
+
+</KeyTakeaways>
+
+## অনুশীলন
+
+ওপরের ছয় অংশের টেবিল নিজের জন্য এক পাতায় পূরণ করুন। তারপর একজন বন্ধুকে (বা নিজেকে একদিন পর) পড়তে দিন: প্রতিটি নিয়ম কি স্পষ্ট ও মাপার যোগ্য?
+
+## কুইজ
+
+1. Trading plan-এর ছয়টি অংশ কী কী?
+2. "বাজার ভালো দেখলে ঢুকব" কেন নিয়ম নয়?
+3. Plan কখন বদলানো ঠিক?
+4. Plan কি জেতার নিশ্চয়তা দেয়?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** বাজার ও timeframe, setup, entry, exit, risk, থামার নিয়ম ও routine।
+
+**২.** কারণ এটি মাপা যায় না। প্রতিবার ভিন্ন অর্থ হতে পারে।
+
+**৩.** Trade শেষে, journal ও পর্যালোচনার পর, সংস্করণ নম্বর দিয়ে।
+
+**৪.** না। Plan সিদ্ধান্ত স্থির রাখে, ফল নয়।
+
+</details>
+
+## পরের ধাপ
+
+- আগে: [Trading Psychology](/bn/learn/12-trading-psychology/00-overview)।
+- পরে: [Entry, Exit ও Risk Rules](/bn/learn/14-trading-plan-system/02-entry-exit-risk-rules-ek-page-e)।
+- সম্পর্কিত: [Building a Plan](/bn/learn/15-backtesting-journal/05-building-a-plan)।
+
+### সূত্র
+
+- <ExternalLink href="https://www.investopedia.com/articles/trading/06/tradingplan.asp">
+    Trading Plan, Investopedia
+  </ExternalLink>
+
+<Disclaimer />

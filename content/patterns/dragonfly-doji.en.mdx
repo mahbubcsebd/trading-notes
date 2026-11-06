@@ -1,0 +1,344 @@
+---
+title: "Dragonfly Doji: a full round trip down, and sellers fail at support"
+description: "How to spot a dragonfly doji, how it differs from a hammer, why it is bullish at support but a warning at a top, and how to handle its wide stop, with charts."
+type: bullish
+category: momentum-indecision
+level: beginner
+candleCount: 1
+signal: reversal
+chartId: dragonfly-doji-win-01
+tags: [pattern, candlestick, dragonfly-doji, doji, support]
+status: done
+sources:
+  - type: book
+    title: "Japanese Candlestick Charting Techniques - Steve Nison"
+    note: "Dragonfly doji, doji at tops vs bottoms"
+  - type: blog
+    title: "Dragonfly Doji - Investopedia"
+    url: "https://www.investopedia.com/terms/d/dragonfly-doji.asp"
+updated: 2026-11-06
+---
+
+Price suddenly drops well below support and takes out the stop on your long. Then, in the same candle, it comes all the way back and closes right at the open. That shape is a dragonfly doji. In the right place it pictures a big failure by sellers. In the wrong place, at the top of a rally, the same shape is a warning.
+
+## At a glance
+
+| Item          | Dragonfly Doji                                                               |
+| :------------ | :--------------------------------------------------------------------------- |
+| Type          | Bullish reversal lean (at support), one candle                               |
+| Where to look | At the end of a downtrend or pullback, at a marked support                   |
+| Key features  | Open ≈ close ≈ high, a long lower wick only, almost no upper wick            |
+| Confirmation  | Next candle closes above the dragonfly high                                  |
+| Stop          | Below the low of the long wick, plus spread and a buffer                     |
+| Invalidation  | A close below the wick low                                                   |
+| Look-alikes   | [Hammer](/en/patterns/hammer), [Hanging Man](/en/patterns/hanging-man), Doji |
+| Opposite      | [Gravestone Doji](/en/patterns/gravestone-doji) (long upper wick only)       |
+
+## What you will be able to do
+
+- **Measure** the difference between a dragonfly doji and a hammer.
+- **Explain** why the same shape means opposite things at support and at the top of a rally.
+- **Handle** the wide stop from a long wick by cutting size.
+- **Place** entry and target step by step after confirmation.
+
+## Why it matters
+
+- **The most extreme form of rejection.** In a hammer buyers win back most of the drop. In a dragonfly they win back all of it, right to the open.
+- **A key to spotting stop hunts.** A long wick below support often shows stops resting there were taken before price came back. More in [Liquidity and Stop Hunts](/en/learn/03-market-structure/04-liquidity-stop-hunts).
+- **Opposite meaning in the wrong place.** Memorise "dragonfly = bullish" and you will buy tops. Location is everything.
+
+Prerequisites: the [Doji](/en/patterns/doji) page and [Single Candle Patterns](/en/learn/04-candlesticks/02-single-candle-patterns).
+
+## What is a dragonfly doji
+
+**A dragonfly doji is a doji whose open, close and high are at almost the same price, with a long lower wick.** It looks like the letter "T", or a dragonfly: short wings on top, a long body below.
+
+Think of pushing a ball under water. The deeper you push, the harder it pops back up when you let go. Sellers pushed price far down but could not hold it there. Price bobbed back to exactly where it started.
+
+<CandleDiagram
+  title="Dragonfly doji vs hammer"
+  candles={[
+    { o: 60, h: 62, l: 55, c: 56, dim: true },
+    { o: 56, h: 57, l: 50, c: 51, dim: true },
+    {
+      o: 51,
+      h: 51.3,
+      l: 36,
+      c: 51.1,
+      label: "Dragonfly",
+      note: "no body, open ≈ close ≈ high",
+    },
+    { o: 51, h: 53, l: 48, c: 52, dim: true },
+    { o: 50, h: 52.5, l: 37, c: 52, label: "Hammer", note: "small body" },
+  ]}
+  caption="Both have a long lower wick. A dragonfly has almost no body; a hammer has a small but visible one."
+/>
+
+### Identification rules
+
+| Rule                                                               | Required?               | Why                                                |
+| :----------------------------------------------------------------- | :---------------------- | :------------------------------------------------- |
+| Open and close almost equal                                        | Yes                     | A visible body makes it a hammer or hanging man    |
+| Open and close near the candle high (almost no upper wick)         | Yes                     | An upper wick moves it toward a long-legged doji   |
+| Lower wick clearly long, as long as nearby candles' ranges or more | Yes                     | A short wick carries no rejection story            |
+| Candle has closed                                                  | Yes                     | A live candle's wick can extend in the last minute |
+| At a marked support, after a move down                             | No (but very important) | This gives the bullish meaning; at a top it flips  |
+
+## Strong vs weak dragonfly doji
+
+<DiagramRow>
+  <CandleDiagram
+    title="Strong"
+    verdict="good"
+    verdictLabel="tradeable"
+    candles={[
+      { o: 62, h: 63, l: 56, c: 57, dim: true },
+      { o: 57, h: 58, l: 51, c: 52, dim: true },
+      { o: 52, h: 52.3, l: 40, c: 52.1, label: "pierces support, returns" },
+      { o: 52, h: 58, l: 51.5, c: 57, dim: true },
+    ]}
+    levels={[{ price: 46, label: "support", tone: "support" }]}
+    caption="At support after a pullback, wick below the level, next candle closes above the high."
+  />
+  <CandleDiagram
+    title="Weak"
+    verdict="bad"
+    verdictLabel="avoid"
+    candles={[
+      { o: 40, h: 46, l: 39.5, c: 45.5, dim: true },
+      { o: 45.5, h: 52, l: 45, c: 51.5, dim: true },
+      { o: 51.5, h: 58, l: 51, c: 57.5, dim: true },
+      { o: 57.5, h: 57.8, l: 49, c: 57.6, label: "at the top" },
+      { o: 57.6, h: 58.5, l: 52, c: 53, dim: true },
+    ]}
+    caption="The same shape at the top of a rally. The lower wick shows sellers could already push price far down."
+  />
+</DiagramRow>
+
+| Quality check    | Strong                                        | Weak                                         |
+| :--------------- | :-------------------------------------------- | :------------------------------------------- |
+| What came before | A downtrend or pullback                       | A long rally                                 |
+| Where            | At a marked support, wick pierces and returns | No support, or at the top of a rally         |
+| Wick             | As long as nearby ranges or longer            | Short, like other candles                    |
+| Next candle      | Closes above the dragonfly high               | Touches the high and closes lower            |
+| Stop size        | Fits 1% risk with a reduced size              | So wide that the size becomes absurdly small |
+
+<Callout type="note">
+  In Nison's book a dragonfly doji at the top after a rally is treated as a
+  warning, like a hanging man: the long lower wick shows sellers were able to
+  drive price far down. A lower close next candle strengthens the warning. This
+  is a book observation, not a statistic.
+</Callout>
+
+### Same look, different meaning
+
+| Pattern             | Shape                                         | Difference                                     |
+| :------------------ | :-------------------------------------------- | :--------------------------------------------- |
+| **Dragonfly Doji**  | No body, open ≈ close ≈ high, long lower wick | Full rejection; bullish lean at support        |
+| **Hammer**          | Small body on top, long lower wick            | Nearly the same story, slightly less complete  |
+| **Hanging Man**     | Hammer shape, but at the top of an uptrend    | Same shape, opposite location, bearish warning |
+| **Gravestone Doji** | No body, open ≈ close ≈ low, long upper wick  | The mirror: higher prices rejected             |
+
+## The story inside the candle
+
+One common interpretation of a dragonfly doji at support, read through time:
+
+1. **Sellers press right after the open.** Price falls to support, then below it.
+2. **Stops below support are triggered.** Sell stops of traders who bought support fire and push price lower. New breakout sellers join.
+3. **Larger buyers arrive lower down.** Buy orders at the cheaper price and shorts taking profit start lifting price.
+4. **The close is right at the open, at the candle high.** Those who sold lower are now losing. All the lower prices were rejected.
+
+The result: sellers tried for the entire candle and ended empty-handed. But buyers could not get above the open either, so the next candle has to confirm.
+
+<Callout type="note">
+  This is a common interpretation, not a proven fact. A chart does not show
+  whose stop was hit or who bought. We only see how price behaved.
+</Callout>
+
+## Where it works and where it does not
+
+<Compare
+  leftLabel="Where a dragonfly carries weight"
+  rightLabel="Where a dragonfly is often a trap"
+  left="- At a marked support after a downtrend or pullback
+- When the wick pierces support and closes back above
+- At the end of a pullback inside an uptrend, in the trend direction
+- At a higher-timeframe demand zone
+- When the next candle closes above the high"
+  right="- At the top of a long rally (then it is a warning)
+- Mid-downtrend with no support
+- With a short wick, when nearby candles look the same
+- On a news spike, where the wick is thin liquidity
+- When the stop is so wide that 1% risk leaves almost no size"
+/>
+
+## Step by step: trading a dragonfly doji
+
+<Steps>
+
+### Step 1: Level and direction first
+
+Draw support in advance. Check that price came down into it. If the shape forms at the top of a rally, drop the long idea at this step.
+
+### Step 2: Wait for the close
+
+In a live candle the wick can extend again, or the close can drift away from the high. Only count closed candles.
+
+### Step 3: Measure
+
+Open and close almost equal? Both near the candle high? Lower wick as long as nearby ranges or longer? Did the wick dip below support and return?
+
+### Step 4: Choose an entry type
+
+| Entry                     | Where                                          | Pro                              | Con                                        |
+| :------------------------ | :--------------------------------------------- | :------------------------------- | :----------------------------------------- |
+| **High break** (standard) | Buy stop just above the dragonfly high         | You enter only if buyers push on | Stop below the whole wick: wide            |
+| **Confirmation close**    | Buy once the next candle closes above the high | Fewer false breaks               | Higher entry, even wider stop              |
+| **50% wick retest**       | Buy limit at the middle of the wick            | Half the stop, better R:R        | Missed if price never returns; early entry |
+
+### Step 5: Place the stop
+
+Below the wick low, plus the [spread](/en/learn/01-foundations/04-spread-commission-swap) and a buffer. A long wick means a wide stop. Do not shrink it by putting it mid-wick: sellers have already traded that area once.
+
+### Step 6: Size and target
+
+Wide stop means small size: calculate [position size](/en/learn/08-risk-management/02-position-sizing) from the entry-to-stop distance, risking no more than 1%. Put the target before the prior swing high or the next resistance. If the [risk reward](/en/learn/08-risk-management/03-risk-reward) to there is below 1:1.5, skip it.
+
+### Step 7: Manage
+
+Repeated closes below the middle of the wick mean the idea is weakening; consider exiting. A close below the wick low means it is wrong.
+
+</Steps>
+
+### Pre-trade checklist
+
+<Checklist
+  id="pattern-dragonfly-doji-pretrade-en"
+  items={[
+    "Was support marked before the dragonfly, and did price come down into it (not the top of a rally)?",
+    "Does the shape pass the rules (open ≈ close ≈ high, long lower wick)?",
+    "Have both the dragonfly and the confirming candle closed?",
+    "Is the risk reward to the next resistance at least 1:1.5?",
+    "Is there no higher-timeframe level right in front of the trade?",
+  ]}
+/>
+
+If any box stays empty, skip the trade.
+
+## Example 1: when it works (illustrative)
+
+<Chart
+  id="dragonfly-doji-win-01"
+  height={420}
+  caption="EURUSD H4 (illustrative, synthetic) — a dragonfly doji on the second test of support; long when the next candle closes above its high."
+/>
+
+- **What was visible:** Candle 5 marked support at 1.0880. Candles 6-10 rallied to about 1.0970, and 11-15 fell back to just above support.
+- **The dragonfly:** Candle 16 opened at 1.0886, closed at 1.08865, high 1.0887. The lower wick reached 1.0858, 22 pips below support, and was fully reclaimed.
+- **Decision:** Buy stop at 1.0889 (2 pips above the high). Stop at 1.0853 (5 pips below the wick low): 36 pips of risk. Target 1.0961 (2R), just under the earlier bounce high at 1.0970.
+- **Result:** Candle 17 closed at 1.0898, filling the order. Candle 23 reached the target.
+- **Lesson:** Stops below support were taken and price came all the way back, and the next candle confirmed it. The target sat just before the obstacle.
+
+<TradeSetup
+  direction="long"
+  pair="EURUSD"
+  entry={1.0889}
+  stop={1.0853}
+  target={1.0961}
+/>
+
+(Illustrative example, not a real trade. Not every dragonfly doji wins, and no result is guaranteed.)
+
+## Example 2: when it is a trap (illustrative)
+
+<Chart
+  id="dragonfly-doji-fail-01"
+  height={420}
+  caption="USDJPY D1 (illustrative, synthetic) — a dragonfly doji at the top of a nine-day rally, bought as 'bullish', then stopped out."
+/>
+
+- **What was visible:** Candles 0-8 rallied without a break from 148.00 to 151.05. No support beneath, price at the top.
+- **The dragonfly:** Candle 9 opened at 151.05, closed at 151.06, high 151.08. The lower wick reached 150.35, about 70 pips.
+- **The wrong decision:** "Dragonfly means bullish." Buy stop 151.12, stop 150.25: 87 pips of risk, target 152.86.
+- **What happened:** Candle 10 rose to 151.24 and filled the order, but closed red at 150.84. Candle 11 broke the stop.
+- **Why it failed:** Right shape, wrong place. At the top of a rally the long lower wick shows sellers could already push price 70 pips down. The first checklist box would have filtered it out, and the third (confirming close) again.
+
+**Lesson:** The same shape at a top is a warning, not a buy signal. Because the stop was set in advance, the loss stayed at 1R.
+
+## Common mistakes
+
+| Mistake                                    | Why it happens                 | What to do instead                                         |
+| :----------------------------------------- | :----------------------------- | :--------------------------------------------------------- |
+| Buying every dragonfly anywhere            | "Dragonfly = bullish" by heart | Check direction and level first; at a top it is a warning  |
+| Stop in the middle of the wick             | Fear of a wide stop            | Stop below the wick low; cut size                          |
+| Mixing up hammer and dragonfly             | Body not measured              | Visible body = hammer; nearly none = dragonfly             |
+| Reading a news-spike wick as rejection     | Same shape                     | Check the economic calendar; treat news candles separately |
+| Entering at the close without confirmation | Chasing a better price         | Wait for the next candle to close above the high           |
+
+## Pro tips
+
+<Callout type="tip">
+  When a dragonfly wick dips below a clear old low or support and returns, it is
+  the picture of a stop hunt. With confirmation at such a place the setup is
+  cleaner. Log how far below that low the wick went.
+</Callout>
+
+<Callout type="tip">
+  If the stop feels too wide, drop to a lower timeframe. After an H4 dragonfly,
+  H1 often forms a small higher low; a stop below it cuts the risk a lot. It
+  also raises the chance of being stopped out.
+</Callout>
+
+<Callout type="warning">
+  Spot Forex and Gold only have tick volume. Claims like "huge volume on the
+  long wick means institutions bought" cannot be proven from a chart.
+</Callout>
+
+## Summary
+
+<KeyTakeaways>
+
+- Dragonfly doji = open ≈ close ≈ high with a long lower wick; it looks like a "T".
+- At support after a move down it shows sellers failing; at the top of a rally the same shape is a warning.
+- Enter after the next candle closes above the high; stop below the wick low.
+- Long wick means wide stop: cut size, never hide the stop mid-wick.
+
+</KeyTakeaways>
+
+## Practice and your own backtest
+
+Open EURUSD H4 or USDJPY D1 in TradingView. Find at least 20 dragonfly dojis. Log one row each:
+
+| Date | Downtrend or rally before? | At support? | Wick pierced the level? | Confirmation came? | Result (R) |
+| :--- | :------------------------- | :---------- | :---------------------- | :----------------- | :--------- |
+|      |                            |             |                         |                    |            |
+
+Then split into "at support" and "at a top". Count how often price fell after a dragonfly at a top. Do not draw conclusions from fewer than 30 samples.
+
+## Quiz
+
+1. A candle has a long lower wick and open ≈ close, but also a medium upper wick. Is it a dragonfly?
+2. A dragonfly doji forms at the top of a nine-day rally. What might it mean?
+3. Why is putting the stop in the middle of the wick risky?
+4. Which checklist boxes would have filtered out the trade in Example 2?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** No. A dragonfly has almost no upper wick. Wicks on both sides make it a standard or long-legged doji.
+
+**2.** A warning. The long lower wick shows sellers could push price far down. A lower close next candle strengthens it, like a hanging man.
+
+**3.** Sellers have already traded that area once. If price returns there the stop is hit, even though the idea has not been proven wrong.
+
+**4.** The first box (price did not come down into support; it was at the top of a rally) and the third box (the confirming candle closed red).
+
+</details>
+
+## Next steps
+
+- Before this: [Single Candle Patterns](/en/learn/04-candlesticks/02-single-candle-patterns).
+- The story behind the wick: [Fake Breakout](/en/learn/06-trend-chart-patterns/04-fake-breakout).
+- Same family: [Gravestone Doji](/en/patterns/gravestone-doji), [Hammer](/en/patterns/hammer), [Long-Legged Doji](/en/patterns/long-legged-doji).
+
+<Disclaimer />

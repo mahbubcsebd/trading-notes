@@ -1,0 +1,183 @@
+---
+title: "Premium and Discount: At What Price Should You Buy or Sell?"
+description: "Rules for splitting a swing range at the 50% equilibrium to find the premium and discount parts, and for picking the right entry price in the direction of the trend."
+level: intermediate
+tags: [premium, discount, equilibrium, market-structure]
+instruments: [XAUUSD]
+timeframes: [H4, H1]
+status: done
+sources:
+  - type: blog
+    title: "Premium & Discount - LuxAlgo Library"
+    url: "https://www.luxalgo.com/library/concept/premium-and-discount/"
+updated: 2026-11-06
+---
+
+# Premium and Discount: At What Price Should You Buy or Sell?
+
+You saw an uptrend, read the direction correctly, and bought. But the entry was right near the swing high. A small pullback came and the stop was hit. The direction was right; the **price** was not.
+
+## What you will be able to do
+
+- **Find** the **equilibrium** (50%) of a swing range.
+- **Recognise** the **premium** and **discount** parts.
+- **Say** which part to look for buys or sells in, based on the trend's direction.
+- **Know** the limits and mistakes of this rule.
+
+## Why it matters
+
+- In trades in the same direction, changing the entry price changes the ratio between stop and target (R:R).
+- Buying in the discount makes the stop smaller and the target bigger.
+- Buying in the premium often means "entering late".
+
+## What are equilibrium, premium and discount?
+
+Take a **range**: a swing low at the bottom, a swing high at the top. The rules for spotting swings are in the [first lesson](/en/learn/03-market-structure/01-swing-high-low).
+
+- **Equilibrium:** the price exactly in the middle of the range, that is, 50%.
+- **Premium:** the part above 50%. Price is relatively "expensive".
+- **Discount:** the part below 50%. Price is relatively "cheap".
+
+**Analogy:** something normally costs 100 taka. If you get it for 70 taka, you are happy to buy; at 130 taka, you are not. Premium and discount are the same comparison, but inside a range.
+
+The formula is simple:
+
+```
+equilibrium = (swing high + swing low) / 2
+```
+
+For example, if the low is 2300 and the high is 2340, equilibrium = (2340 + 2300) / 2 = 2320.
+
+## What the rule is
+
+| Trend     | Where to look             | What to avoid           |
+| :-------- | :------------------------ | :---------------------- |
+| Uptrend   | **Buy** in the discount   | Buying in the premium   |
+| Downtrend | **Sell** in the premium   | Selling in the discount |
+| Range     | The edges, not the middle | Near the equilibrium    |
+
+The key point: [trend](/en/learn/03-market-structure/02-trend-range-hhhl) first, price second. Being in the premium is not a reason to sell. In an uptrend, the premium usually means a strong market, so just wait.
+
+## What it looks like on a chart
+
+In the chart below, there is an impulse from a low of 2300 to a high of 2340. Equilibrium is 2320. Price pulled back down to 2312, that is, it entered the discount.
+
+<Chart
+  id="premium-discount-02"
+  height={420}
+  caption="XAUUSD H1 (educational, synthetic example) — the impulse's 50% line, buy in the discount below it"
+/>
+
+Notice that there is no reason to buy before price breaks below 2320. The discount starts only once price is below 2320.
+
+## Step by step
+
+<Steps>
+
+### Step 1: Set the bias
+
+Look at the trend on the higher timeframe ([Multi-Timeframe Analysis](/en/learn/03-market-structure/05-multi-timeframe-analysis)). If it is bullish, look only for buys in the discount.
+
+### Step 2: Pick the right range
+
+Draw from the swing low to the swing high of the most recent impulse leg. If you set 0 and 100 on the chart's Fibonacci retracement tool, the 0.5 level shows the equilibrium.
+
+### Step 3: Wait
+
+Do not look for an entry until price comes below the 50% line.
+
+### Step 4: Trigger in the discount
+
+Once price is in the discount, look for a [CHOCH or BOS](/en/learn/03-market-structure/03-break-of-structure) on the lower timeframe. Touching 50% alone is not a reason to enter.
+
+### Step 5: Stop and target
+
+Place the stop below the pullback's low. Keep the target at the previous swing high or the [liquidity](/en/learn/03-market-structure/04-liquidity-stop-hunts) above it.
+
+</Steps>
+
+## Real example
+
+<Callout type="note">
+  **The examples in this lesson are synthetic.** Verified real OHLC data has not
+  been added yet.
+</Callout>
+
+**Example (synthetic trade):** H4 is bullish. On H1, the impulse runs from 2300 to 2340. Equilibrium is 2320. Price dropped, made a low at 2312, then turned. You bought at 2316, with the stop below 2309 and a target of 2340. The risk is 7 points, the possible gain 24 points (about 3.4 times).
+
+Comparison: if you took the same trade in the premium at 2332, even with the stop at 2325, the target of 2340 is only 8 points away. Risk 7, gain 8. Same direction, but a much worse ratio.
+
+## Failed example: discount does not mean buy (synthetic/educational)
+
+- **What could be seen:** an uptrend, and price came below 50%.
+- **Decision:** bought right away because it was the discount.
+- **Result:** price fell further and broke the range's low.
+- **Lesson:** a broken low means the uptrend's structure broke. That range is then no longer valid. The discount is not protection, just an area of better prices.
+
+## Common mistakes
+
+| Mistake                                       | Why it happens                         | What to do                       |
+| :-------------------------------------------- | :------------------------------------- | :------------------------------- |
+| Selling in the premium without checking trend | Being misled by the word "expensive"   | Bias first, price second         |
+| Drawing the range from the wrong swing        | Not knowing which swing is the big one | Use the most recent impulse leg  |
+| Keeping the old line after the range breaks   | Habit                                  | Draw a new range after a new BOS |
+| Entering as soon as price touches 50%         | Treating the line as a signal          | Wait for a trigger               |
+
+## Pro tips
+
+<Callout type="tip">
+  Split the discount part further. The lower price gets between 50% and the
+  range low, the better the price, but the higher the risk of structure
+  breaking. Check this balance by writing down your own trades.
+</Callout>
+
+## When this does not work
+
+- **When the range is small:** the 50% line ends up close to the spread.
+- **During big news:** price ignores the line and runs.
+- **In a strong trend:** price may not pull back deeply. Then waiting makes you miss the trade.
+- **When used alone:** it is a filter for picking price, not a guarantee of profit.
+
+## Summary
+
+<KeyTakeaways>
+
+- Equilibrium = the average of the swing high and swing low, that is, 50%.
+- Above 50% is the premium, below is the discount.
+- Buy in the discount in an uptrend, sell in the premium in a downtrend.
+- Trend first, then price, then the trigger.
+- If an edge of the range breaks, draw a new range.
+
+</KeyTakeaways>
+
+## Practice
+
+Open the XAUUSD H1 chart. Put the Fibonacci tool on the last 5 impulse legs. For each, write down whether the pullback reached below 50%. If it did, what did price do afterwards, and what did it do if it did not?
+
+## Quiz
+
+1. If the low is 2300 and the high is 2340, what is the equilibrium?
+2. In an uptrend, which part do you look for buys in?
+3. If price is in the premium, do you always sell?
+4. What do you do if the range's low breaks?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** 2320.
+
+**2.** In the discount part, that is, below 50%.
+
+**3.** No. First check whether there is a downtrend.
+
+**4.** Drop the old range and draw a new range based on the new structure.
+
+</details>
+
+## Next steps
+
+- Before: [Multi-Timeframe Analysis](/en/learn/03-market-structure/05-multi-timeframe-analysis).
+- After: [Anatomy of a Candlestick](/en/learn/04-candlesticks/01-anatomy-of-a-candle).
+- Use in entries: [Multi-timeframe entry top-down](/en/learn/09-price-action-entries-strategies/03-multi-timeframe-entry-top-down).
+
+<Disclaimer />

@@ -1,0 +1,176 @@
+---
+title: "Gold Risk ও Lot Size: stop থেকে lot বের করা"
+description: "Gold-এ ঝুঁকি টাকায় ঠিক করে stop-এর ডলার-দূরত্ব থেকে lot size বের করার সূত্র, উদাহরণ ও সাধারণ ভুল — chart সহ।"
+level: beginner
+tags: [gold, risk, lot-size, position-sizing, stop-loss]
+instruments: [XAUUSD]
+timeframes: [H1]
+status: done
+sources:
+  - type: blog
+    title: "Position Sizing - Investopedia"
+    url: "https://www.investopedia.com/terms/p/positionsizing.asp"
+updated: 2026-11-05
+---
+
+# Gold Risk ও Lot Size: stop থেকে lot বের করা
+
+Lot আগে ঠিক করে stop বসালে ঝুঁকি আন্দাজে হয়। উল্টো পথে হিসাব করুন: আগে ঝুঁকি, তারপর stop, শেষে lot। Gold-এ এই ক্রম আরও জরুরি।
+
+## এই লেখা পড়ে আপনি যা পারবেন
+
+- **Stop-এর ডলার-দূরত্ব থেকে lot size** বের করতে পারবেন।
+- **Lot ছোট রাখার কারণ** বুঝবেন।
+- **Account ছোট হলে কী করবেন**, জানবেন।
+
+## কেন এটি জরুরি
+
+- **Gold-এ প্রতি $1 নড়াচড়ার মান বড়।** [Contract spec](/bn/learn/13-gold-xauusd/02-gold-contract-spec-pip-value) অনুযায়ী 1 lot-এ $1 = প্রায় $100।
+- **Stop প্রায়ই forex-এর চেয়ে ডলারে বড়।** তাই একই ঝুঁকিতে lot ছোট।
+- **ভুল lot ঝুঁকি কয়েকগুণ করে।**
+
+পূর্বশর্ত: [Risk per Trade](/bn/learn/08-risk-management/01-risk-per-trade) এবং [Position Sizing](/bn/learn/08-risk-management/02-position-sizing)।
+
+## সূত্র
+
+**Lot = ঝুঁকির টাকা ÷ (stop-এর দূরত্ব $ × 100)**
+
+এখানে 100 ধরা হয়েছে 1 lot = 100 ounce হলে। আপনার broker আলাদা হলে সেই সংখ্যা বসান।
+
+| ধাপ                  | উদাহরণ (কাল্পনিক) |
+| :------------------- | :---------------- |
+| Account              | $5,000            |
+| ঝুঁকি (১%)           | $50               |
+| Stop-এর দূরত্ব       | $8                |
+| Lot = 50 ÷ (8 × 100) | 0.0625            |
+| নিচে নামিয়ে         | **0.06 lot**      |
+
+নিচে নামাতে হয়, ওপরে নয়, যাতে ঝুঁকি সীমা না ছাড়ায়। 0.06 lot-এ stop লাগলে ক্ষতি 8 × 6 = $48।
+
+## Chart-এ কেমন দেখায়
+
+<Chart
+  id="gold-lot-risk-01"
+  height={440}
+  caption="কাল্পনিক XAUUSD H1 — stop $8 নিচে, target $16 ওপরে (1:2)। Stop-এর দূরত্ব থেকেই lot আসে।"
+/>
+
+এখানে 0.06 lot হলে target পেলে লাভ 16 × 6 = $96, stop লাগলে ক্ষতি $48 (spread বাদে)।
+
+## ধাপে ধাপে: lot বের করা
+
+<Steps>
+
+### ধাপ ১: ঝুঁকির টাকা ঠিক করুন
+
+Account-এর ১% বা আপনার plan-এর সীমা।
+
+### ধাপ ২: Stop-এর জায়গা chart থেকে ঠিক করুন
+
+Structure বা [ATR](/bn/learn/13-gold-xauusd/09-gold-typical-atr) দেখে, lot দেখে নয়।
+
+### ধাপ ৩: দূরত্ব ডলারে মাপুন
+
+Entry থেকে stop-এর পার্থক্য।
+
+### ধাপ ৪: সূত্রে বসান, নিচে নামান
+
+Broker-এর lot step অনুযায়ী (যেমন 0.01)।
+
+### ধাপ ৫: Minimum lot-এ ঝুঁকি বেশি হলে trade বাদ দিন
+
+0.01 lot-এও ঝুঁকি সীমার বেশি হলে stop কমানো নয়, trade ছাড়ুন।
+
+</Steps>
+
+## উদাহরণ ১: যখন কাজ করে (কাল্পনিক)
+
+- **আগে থেকে ঠিক:** ঝুঁকি $50, stop $8, lot 0.06।
+- **ফল:** Stop লাগলে ক্ষতি $48, সীমার ভেতরে।
+- **শিক্ষা:** Stop আগে, lot পরে — ঝুঁকি নিয়ন্ত্রণে থাকে।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়।)
+
+## উদাহরণ ২: যখন ব্যর্থ হয় (কাল্পনিক)
+
+- **কী করা হয়েছিল:** $5,000 account-এ "সবসময় 0.50 lot" নিয়ম।
+- **ঘটল কী:** $8 stop লাগলে ক্ষতি 8 × 50 = $400, মানে ৮%। তিন loss-এ ২৪%।
+- **কেন ব্যর্থ:** Stop-এর দূরত্বের সঙ্গে lot মেলানো হয়নি।
+- **শিক্ষা:** স্থির lot নয়, স্থির ঝুঁকি।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়।)
+
+## সাধারণ ভুল
+
+| ভুল                     | কেন হয়           | কী করবেন                        |
+| :---------------------- | :---------------- | :------------------------------ |
+| স্থির lot ব্যবহার       | সরলতা             | প্রতিবার সূত্র                  |
+| Lot-এ মানিয়ে stop টানা | বড় lot চাই       | Stop chart থেকে, lot হিসাব থেকে |
+| ওপরে round              | ছোট পার্থক্য ভাবা | সবসময় নিচে নামান               |
+| Spread ও slippage বাদ   | হিসাব সরল রাখা    | সামান্য বাফার রাখুন             |
+
+## Pro tips
+
+<Callout type="tip">
+  Excel বা notes-এ সূত্র বসিয়ে রাখুন: ঝুঁকি $, stop $ দিলে lot আসে। Trade-এর
+  আগে ১০ সেকেন্ডের কাজ।
+</Callout>
+
+<Callout type="warning">
+  ছোট account-এ gold কঠিন। 0.01 lot-এ ($1 ≈ $1) $8 stop মানে $8 ঝুঁকি। $200
+  account-এ এটি ৪%, সীমার অনেক ওপরে।
+</Callout>
+
+## কখন এটা কাজ করে না
+
+- **Account মুদ্রা USD না হলে:** রূপান্তর যোগ করুন।
+- **Gap বা slippage-এ:** বাস্তব ক্ষতি হিসাবের চেয়ে বেশি হতে পারে।
+- **Broker-এর contract size আলাদা হলে:** সূত্রের 100 বদলান।
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- প্রথমে ঝুঁকি, তারপর stop, শেষে lot।
+- Lot = ঝুঁকি ÷ (stop $ × 100), নিচে round।
+- ছোট account-এ gold-এর ন্যূনতম lot-ই বড় ঝুঁকি হতে পারে।
+- স্থির lot নয়, স্থির ঝুঁকি।
+
+</KeyTakeaways>
+
+## অনুশীলন
+
+আপনার account আকার ধরে ১% ঝুঁকির টাকা বের করুন। $5, $8 ও $12 stop-এর জন্য lot হিসাব করুন। কোনটিতে 0.01 lot-এও সীমা ছাড়ায়?
+
+## কুইজ
+
+1. Lot বের করার সূত্র কী?
+2. $100 ঝুঁকি, $10 stop, lot কত?
+3. Lot কেন নিচে round করবেন?
+4. 0.01 lot-এও ঝুঁকি সীমার বেশি হলে কী করবেন?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** ঝুঁকি ÷ (stop $ × 100)।
+
+**২.** 100 ÷ (10 × 100) = 0.10 lot।
+
+**৩.** যাতে ঝুঁকি সীমা না ছাড়ায়।
+
+**৪.** Trade ছেড়ে দিন।
+
+</details>
+
+## পরের ধাপ
+
+- আগে: [Spread ও Slippage](/bn/learn/13-gold-xauusd/07-spread-slippage)।
+- পরে: [Gold ATR](/bn/learn/13-gold-xauusd/09-gold-typical-atr)।
+
+### সূত্র
+
+- <ExternalLink href="https://www.investopedia.com/terms/p/positionsizing.asp">
+    Position Sizing, Investopedia
+  </ExternalLink>
+
+<Disclaimer />

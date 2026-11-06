@@ -1,41 +1,278 @@
 ---
-title: "টুইজার টপ (Tweezer Top)"
-description: "২টি ক্যান্ডেলের বিয়ারিশ রিভার্সাল প্যাটার্ন যেখানে পরপর দুটি ক্যান্ডেল একই সর্বোচ্চ মূল্যে (হাই) বাধা পেয়ে রিভার্স করে।"
+title: "Tweezer Top: একই high-এ দুইবার ধাক্কা, resistance-এ চিমটির মতো চূড়া"
+description: "Tweezer top কীভাবে চিনবেন, tweezer bottom-এর উল্টো ছবি, engulfing-এর সঙ্গে মিল, আর কেন পাতলা Asian session-এর tweezer প্রায়ই London open-এ ভেঙে যায় — chart সহ।"
 type: bearish
-category: "টুইজার টপ"
-winrate: "69% - 74%"
-riskReward: "1:3 to 1:5"
-maxRisk: "1% - 2%"
-bestLocation: "Double Top Resistance / Premium Zone / Liquidity Grab"
-chartId: "tweezer-top-01"
-tags: [bearish, pattern, candlestick]
+category: two-candle
+level: intermediate
+candleCount: 2
+signal: reversal
+chartId: tweezer-top-win-01
+tags: [pattern, candlestick, tweezer-top, tweezer, resistance]
+status: done
+sources:
+  - type: book
+    title: "Japanese Candlestick Charting Techniques - Steve Nison"
+    note: "Tweezers tops and bottoms"
+  - type: blog
+    title: "Tweezer Top - Investopedia"
+    url: "https://www.investopedia.com/terms/t/tweezer-top.asp"
+updated: 2026-11-06
 ---
 
-<div className="flex gap-6 items-end my-8 p-8 bg-zinc-950 border border-border/50 rounded-2xl w-max relative overflow-hidden">
-  <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:20px_20px]"></div>
-  <div className="relative z-10 flex gap-6">
-    <Candle color="bull" bodyH="h-10" topW="h-10" botW="h-2" offset="mt-6" />
-    <Candle color="bear" bodyH="h-10" topW="h-10" botW="h-2" offset="mt-6" />
-  </div>
-</div>
+রাতে Asian session-এ দাম ধীরে ধীরে উঠে দুইবার একই high-এ থামল। নিখুঁত tweezer top, short নিলেন। ঘুম থেকে উঠে দেখলেন London open-এর প্রথম ঘণ্টাতেই দাম সেই high উড়িয়ে দিয়েছে, আর stop গেছে। পাতলা বাজারের "দুইবার ধরে রাখা" আসলে খুব কম লোকের সিদ্ধান্ত। এই পাতা [Tweezer Bottom](/bn/patterns/tweezer-bottom)-এর mirror; সংজ্ঞা, "প্রায় সমান" মাপা আর liquidity-র ব্যাখ্যা সেখানে বিস্তারিত।
 
-## Market Psychology & প্রাতিষ্ঠানিক অর্ডার ফ্লো
-বায়াররা পরপর দুটি ক্যান্ডেলে রেজিস্ট্যান্স লেভেল পার করতে সর্বশক্তি দিয়ে চেষ্টা করে ব্যর্থ হয়। একই হাই পয়েন্টে দুইবার রিজেকশন নিশ্চিত করে যে প্রাতিষ্ঠানিক সেলাররা তাদের লিমিট সেল অর্ডার দিয়ে বাজার আটকে রেখেছে। দ্বিতীয় ক্যান্ডেলটি লাল হয়ে নিচে নামলে বায়াররা বুঝতে পারে আপট্রেন্ড শেষ।
+## এক নজরে
 
-## ক্যান্ডেল অ্যানাটমির ৫টি অপরিহার্য শর্ত
-1. **Matching Highs:** প্রথম এবং দ্বিতীয় ক্যান্ডেলের হাই পয়েন্ট হুবহু এক হতে হবে।
-2. **Candle 1 (Bullish):** প্রথম ক্যান্ডেলটি গ্রিন এবং আপট্রেন্ড বজায় রাখে।
-3. **Candle 2 (Bearish):** দ্বিতীয় ক্যান্ডেলটি একই হাই ছুয়ে প্রবল বেগে রেড ক্যান্ডেলে পরিণত হয়।
-4. **Resistance Location:** গুরুত্বপূর্ণ রেজিস্ট্যান্স জোন বা সাপ্লাই এরিয়ায় গঠিত হতে হবে।
-5. **Upper Wick Rejection:** দুটি ক্যান্ডেলেই উপরের দিকে স্পষ্ট উইক বা শ্যাডো থাকতে হবে।
+| বিষয়                | Tweezer Top                                                                                                  |
+| :------------------- | :----------------------------------------------------------------------------------------------------------- |
+| ধরন                  | Bearish reversal, দুই (বা বেশি) candle                                                                       |
+| কোথায় খুঁজবেন       | Uptrend বা pullback-এর চূড়ায়, চিহ্নিত resistance-এ                                                         |
+| চেনার মূল চিহ্ন      | পরপর দুটি candle-এর high প্রায় একই দামে; সাধারণত প্রথমটি bullish, দ্বিতীয়টি bearish                        |
+| Confirmation         | দ্বিতীয় candle-এর low ভাঙা, বা পরের candle তার নিচে close                                                   |
+| Stop                 | যৌথ high-এর উপরে, spread-সহ buffer                                                                           |
+| বাতিল (invalidation) | যৌথ high-এর উপরে close                                                                                       |
+| দেখতে একই রকম        | Double top, [Bearish Engulfing](/bn/patterns/bearish-engulfing), [Shooting Star](/bn/patterns/shooting-star) |
+| বিপরীত pattern       | Tweezer Bottom                                                                                               |
 
-## লাভজনক ট্রেড নেওয়ার ৩টি প্রমাণিত কৌশল (Execution Blueprint)
-**কৌশল ১ (দ্বিতীয় ক্যান্ডেল ক্লোজ সেল):** দ্বিতীয় ক্যান্ডেল লাল হয়ে ক্লোজ হলেই সেল এক্সিকিউট করুন। স্টপ লস হাই এর উপরে।
-**কৌশল ২ (লো ব্রেক কনফার্মেশন):** টুইজার প্যাটার্নের লো ব্রেক করলে মার্কেট সেল দিন।
-**কৌশল ৩ (৫০% পুলব্যাক রিটেস্ট):** দ্বিতীয় ক্যান্ডেলের ৫০% ফিবোনাচি রিটেস্টে Sell Limit সেট করুন।
+## এই লেখা পড়ে আপনি যা পারবেন
 
-## কোথায় সফল হবে বনাম কোথায় ফাঁদে পড়বেন
-- ✅ **A+ হাই-প্রোবাবিলিটি সেটআপ:** ডেইলি সাপ্লাই জোন, এশিয়ান হাই লিকুইডিটি সুইপ, এবং RSI বিয়ারিশ ডাইভারজেন্স।
-- ❌ **লস খাওয়ার ট্র্যাপ (Avoid):** শক্তিশালী ফান্ডামেন্টাল বুলিশ নিউজের মুখে ট্রেড নেওয়া।
+- Tweezer top আর engulfing-এর **মিল চিনে** শক্তি বিচার করতে পারবেন।
+- কোন **session**-এ tweezer তৈরি হলো, সেটা কেন জরুরি, ব্যাখ্যা করতে পারবেন।
+- যৌথ high-এর উপরে buffer-সহ stop **বসাতে** পারবেন।
 
-> ⚠️ **প্রো মানি ম্যানেজমেন্ট ও সাইকোলজি টিপ:** টুইজার টপ তখনই সবচেয়ে নিখুঁত কাজ করে যখন দ্বিতীয় ক্যান্ডেলটি প্রথম ক্যান্ডেলের চেয়ে আকারে বড় বা সমান হয়। সর্বোচ্চ ১% থেকে ২% ঝুঁকি নিয়ে প্রতিটি ট্রেডে নির্ধারিত স্টপ লস ব্যবহার করুন।
+## কেন জরুরি
+
+- **দুইবার উপরের দাম প্রত্যাখ্যান।** পরপর দুটি candle একই high-এ থামলে buyers সেখানে পারছে না, এমন প্রমাণ।
+- **সমান high-ও liquidity।** Short-দের buy stop প্রায়ই সমান high-এর ঠিক উপরে। আসল level না থাকলে সেটাই পরের move-এর লক্ষ্য।
+- **কোন session-এ, সেটাও context।** Asian session-এর পাতলা বাজারে তৈরি high প্রায়ই London বা New York open-এ পরীক্ষা হয়। বিস্তারিত: [Trading Sessions](/bn/learn/01-foundations/05-trading-sessions)।
+
+পূর্বশর্ত: Tweezer Bottom পাতা (উপরে link)।
+
+## Tweezer Top কী
+
+**Tweezer top হলো পরপর দুটি (কখনো বেশি) candle, যাদের high প্রায় একই দামে, uptrend-এর চূড়ায় resistance-এ।** দ্বিতীয় candle bearish হয়ে প্রথমটার body-র নিচে close করলে সেটা একই সঙ্গে bearish engulfing-ও।
+
+<CandleDiagram
+  title="Tweezer top"
+  candles={[
+    { o: 40, h: 46, l: 39, c: 45, dim: true },
+    { o: 45, h: 51, l: 44, c: 50, dim: true },
+    { o: 50, h: 60, l: 49, c: 57, label: "A", note: "high 60" },
+    { o: 57, h: 59.9, l: 48, c: 49, label: "B", note: "high 59.9" },
+    { o: 49, h: 50, l: 44, c: 45, dim: true },
+  ]}
+  levels={[{ price: 60, label: "সমান high", tone: "resistance" }]}
+  caption="A আর B দুটোই প্রায় 60-এ থামে। B লাল, A-র open-এর নিচে close: tweezer আর bearish engulfing একসঙ্গে।"
+/>
+
+### চেনার নিয়ম
+
+| নিয়ম                                               | বাধ্যতামূলক?      | কেন                                               |
+| :-------------------------------------------------- | :---------------- | :------------------------------------------------ |
+| পরপর দুটি candle-এর high প্রায় সমান                | হ্যাঁ             | এটাই "tweezer"                                    |
+| আগে uptrend বা pullback                             | হ্যাঁ             | Range-এর মাঝে সমান high সাধারণ ঘটনা               |
+| চিহ্নিত resistance-এ                                | হ্যাঁ             | Level ছাড়া সমান high stop-এর চুম্বক              |
+| দ্বিতীয় candle bearish, প্রথমটার body-র নিচে close | না (কিন্তু জরুরি) | রং-বদল আর engulfing মিলে শক্ত                     |
+| স্বাভাবিক volatility-র session-এ                    | না (কিন্তু জরুরি) | পাতলা session-এর high পরের session-এ প্রায়ই ভাঙে |
+
+## শক্তিশালী বনাম দুর্বল tweezer top
+
+<DiagramRow>
+  <CandleDiagram
+    title="শক্তিশালী"
+    verdict="good"
+    verdictLabel="trade-যোগ্য"
+    candles={[
+      { o: 40, h: 46, l: 39, c: 45, dim: true },
+      { o: 45, h: 58, l: 44, c: 56 },
+      { o: 56, h: 57.9, l: 46, c: 47, label: "engulfing-ও" },
+    ]}
+    levels={[{ price: 57, label: "পুরোনো high", tone: "resistance" }]}
+    caption="পুরোনো high-এর সামান্য উপরে সমান high, দ্বিতীয় candle প্রথমটাকে ঢাকে।"
+  />
+  <CandleDiagram
+    title="দুর্বল"
+    verdict="bad"
+    verdictLabel="এড়িয়ে চলুন"
+    candles={[
+      { o: 50, h: 50.8, l: 49.6, c: 50.5, dim: true },
+      { o: 50.5, h: 51, l: 50, c: 50.4, dim: true },
+      { o: 50.4, h: 51.4, l: 50.2, c: 51.2, label: "ছোট" },
+      { o: 51.2, h: 51.38, l: 50.6, c: 50.7, label: "Asian high" },
+      { o: 50.7, h: 56, l: 50.5, c: 55.5, label: "London open" },
+    ]}
+    caption="পাতলা session-এর কয়েক pip-এর tweezer; পরের session-এর প্রথম candle তা উড়িয়ে দেয়।"
+  />
+</DiagramRow>
+
+| মান যাচাই | শক্তিশালী                                          | দুর্বল                                            |
+| :-------- | :------------------------------------------------- | :------------------------------------------------ |
+| জায়গা    | চিহ্নিত পুরোনো high বা supply zone-এ               | শুধু session-এর high, বড় level নয়               |
+| আকার      | আশেপাশের স্বাভাবিক candle-এর মতো বা বড়            | কয়েক pip-এর ছোট candle                           |
+| মিল       | দ্বিতীয় candle bearish engulfing বা shooting star | শুধু দুটি high মিলেছে                             |
+| Session   | London বা New York-এর স্বাভাবিক বাজার              | Asian session-এর শান্ত বাজার, বড় open-এর ঠিক আগে |
+
+## Candle-এর ভেতরের গল্প
+
+Tweezer bottom-এর গল্পই উল্টো দিকে। একটি প্রচলিত ব্যাখ্যা: প্রথম candle-এ buyers resistance পর্যন্ত তোলে, সেখানে sellers থামায়। দ্বিতীয় candle আবার সেই high পরীক্ষা করে, এক pip-ও উপরে যেতে পারে না, আর নিচে close করে। দুইবার একই দাম রক্ষা। কিন্তু পাতলা session-এ এই "রক্ষা" খুব কম অংশগ্রহণকারীর, তাই কম ওজনের।
+
+<Callout type="note">
+  এটি একটি প্রচলিত ব্যাখ্যা, প্রমাণিত ঘটনা নয়। Chart দেখে কে কিনেছে বা বেচেছে,
+  তা জানা যায় না।
+</Callout>
+
+## কোথায় কাজ করে, কোথায় করে না
+
+<Compare
+  leftLabel="যেখানে tweezer top-এর ওজন বেশি"
+  rightLabel="যেখানে tweezer top প্রায়ই ফাঁদ"
+  left="- চিহ্নিত পুরোনো high বা supply zone-এ
+- দ্বিতীয় candle bearish engulfing বা shooting star হলে
+- স্বাভাবিক volatility-র session-এ
+- Downtrend-এর pullback-এর চূড়ায়, trend-এর দিকে"
+  right="- Asian session-এর সরু range-এর মাথায়
+- London বা New York open-এর ঠিক আগে
+- শক্তিশালী uptrend-এর মাঝে, কোনো level ছাড়া
+- কয়েক pip-এর ছোট candle-এ"
+/>
+
+## 24 ঘণ্টার বাজারে gap
+
+<Callout type="note">
+  Tweezer-এ gap লাগে না, তাই Forex-এ নিয়ম একই। Broker-ভেদে high কয়েক pipette
+  আলাদা হতে পারে, তাই "হুবহু সমান" নয়, "প্রায় সমান" মাপুন।
+</Callout>
+
+## ধাপে ধাপে: tweezer top trade
+
+পুরো ধাপ Tweezer Bottom পাতায় আছে, উল্টো দিকে। শুধু যা আলাদা:
+
+<Steps>
+
+### ধাপ ১: Session যাচাই
+
+Tweezer কোন session-এ তৈরি হলো? পাতলা Asian session-এ, বিশেষ করে London open-এর ঠিক আগে হলে, পরের session-এর প্রথম এক-দুই ঘণ্টা দেখে তবে সিদ্ধান্ত নিন।
+
+### ধাপ ২: Entry ও stop
+
+দ্বিতীয় candle-এর low-এর একটু নিচে sell stop। Stop যৌথ high-এর উপরে, [spread](/bn/learn/01-foundations/04-spread-commission-swap) ও buffer-সহ। Session-এর শুরুতে spread বাড়ে, তাই buffer একটু বেশি রাখুন।
+
+### ধাপ ৩: R:R
+
+নিচের swing low পর্যন্ত [risk reward](/bn/learn/08-risk-management/03-risk-reward) অন্তত 1:1.5 না হলে বাদ।
+
+</Steps>
+
+### Trade-এর আগে checklist
+
+<Checklist
+  id="pattern-tweezer-top-pretrade-bn"
+  items={[
+    "Tweezer আসার আগেই resistance চিহ্নিত ছিল, আর সমান high সেই level-এ?",
+    "আকার নিয়ম মানছে (দুই high প্রায় সমান, দ্বিতীয় candle bearish, স্বাভাবিক আকারের candle)?",
+    "দুটি candle-ই বন্ধ হয়েছে, আর এটা বড় session open-এর ঠিক আগের পাতলা বাজার নয়?",
+    "নিচের swing low পর্যন্ত risk reward অন্তত 1:1.5?",
+    "Higher timeframe-এর trend বা level trade-এর বিপরীতে নেই?",
+  ]}
+/>
+
+একটি ঘরও খালি থাকলে trade বাদ দিন।
+
+## উদাহরণ ১: যখন কাজ করে (কাল্পনিক)
+
+<Chart
+  id="tweezer-top-win-01"
+  height={420}
+  caption="EURUSD H4 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — পুরোনো high-এর সামান্য উপরে tweezer top, low ভাঙলে short।"
+/>
+
+- **কী দেখা যাচ্ছিল:** ৫ নম্বর candle 1.0890-এ পুরোনো high রেখে গেছে। ৬-১০ নম্বর প্রায় 1.0780 পর্যন্ত নামে, ১১-১৪ নম্বর আবার ওঠে।
+- **Tweezer:** ১৫ নম্বর bullish, high 1.0892। ১৬ নম্বর high 1.08915, আধা pip-এর ফারাক, আর 1.0870-এ close করে ১৫ নম্বরের open 1.0882-এর নিচে: tweezer আর bearish engulfing একসঙ্গে।
+- **সিদ্ধান্ত:** Sell stop 1.0866, stop 1.0897 (যৌথ high-এর 5 pip উপরে), ঝুঁকি 31 pip। Target 1.0804 (2R); swing low পর্যন্ত জায়গা প্রায় 2.8R।
+- **ফল:** ১৭ নম্বর low ভেঙে order fill করে। ২৩ নম্বর candle target ছোঁয়।
+- **শিক্ষা:** আসল level, স্বাভাবিক আকারের candle, আর দুটি pattern এক জায়গায়।
+
+<TradeSetup
+  direction="short"
+  pair="EURUSD"
+  entry={1.0866}
+  stop={1.0897}
+  target={1.0804}
+/>
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়। সব tweezer top জেতে না, আর কোনো ফল গ্যারান্টি নয়।)
+
+## উদাহরণ ২: যখন ফাঁদ হয় (কাল্পনিক)
+
+<Chart
+  id="tweezer-top-fail-01"
+  height={420}
+  caption="USDJPY H1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — Asian session-এর ছোট tweezer top, London open-এ ভেঙে stop।"
+/>
+
+- **কী দেখা যাচ্ছিল:** ০-৫ নম্বর candle 150.20 থেকে প্রায় 150.89 পর্যন্ত uptrend। ৬-১৪ নম্বর শান্ত Asian session, candle-এর range মাত্র 5-8 pip।
+- **Tweezer:** ১১ নম্বর high 150.967, ১২ নম্বর high 150.965, আর ১২ নম্বর 150.870-এ close করে। আকারে নিখুঁত, কিন্তু মাত্র কয়েক pip-এর candle।
+- **ভুল সিদ্ধান্ত:** Sell stop 150.850, stop 151.027, ঝুঁকি প্রায় 18 pip। ১৩ নম্বরে fill।
+- **কী হলো:** ১৫ নম্বর, London open-এর প্রথম ঘণ্টা, 30 pip উঠে Asian high আর stop দুটোই ভেঙে দেয়। Uptrend চলতে থাকে।
+- **কেন ব্যর্থ:** চিহ্নিত resistance ছিল না, শুধু Asian session-এর high; আর trade ছিল বড় session open-এর ঠিক আগে, uptrend-এর বিপরীতে। Checklist-এর প্রথম, তৃতীয় আর পঞ্চম ঘরে trade বাদ পড়ত।
+
+**শিক্ষা:** পাতলা session-এর tweezer level নয়; পরের session সিদ্ধান্ত নেয়। Stop আগে বসানো ছিল বলে লোকসান 1R-এ আটকেছে।
+
+## সাধারণ ভুল
+
+| ভুল                                      | কেন হয়                          | কী করবেন                                        |
+| :--------------------------------------- | :------------------------------- | :---------------------------------------------- |
+| Asian session-এর high-কে resistance ভাবা | Session context না দেখা          | বড় open-এর পর level টিকল কি না দেখুন           |
+| ছোট candle-এর tweezer trade              | শুধু "high সমান" দেখা            | আশেপাশের স্বাভাবিক candle-এর তুলনায় আকার মাপুন |
+| Buffer ছাড়া যৌথ high-এর উপরে stop       | ছোট stop-এর লোভ                  | Session শুরুর spread মাথায় রেখে buffer দিন     |
+| Uptrend-এর মাঝে level ছাড়া short        | প্রতিটি সমান high-কে signal ভাবা | শুধু চিহ্নিত resistance-এ                       |
+
+## Pro tips
+
+<Callout type="tip">
+  Asian session-এর high আর low অনেক trader-এর chart-এ চিহ্নিত থাকে, আর London
+  open-এ প্রায়ই সেগুলোর একটি পরীক্ষা হয়। Asian high-এর উপরে sweep হয়ে আবার
+  নিচে close করলে, সেটা Asian tweezer-এর চেয়ে অনেক পরিষ্কার short setup।
+  বিস্তারিত: [London Breakout ও NY
+  Reversal](/bn/learn/13-gold-xauusd/10-london-breakout-ny-reversal-setup)।
+</Callout>
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- Tweezer top = পরপর দুটি candle-এর high প্রায় সমান, uptrend-এর চূড়ায় resistance-এ।
+- দ্বিতীয় candle bearish engulfing বা shooting star হলে signal শক্ত।
+- কোন session-এ তৈরি, সেটাও context: পাতলা Asian session-এর tweezer প্রায়ই পরের open-এ ভাঙে।
+- Stop যৌথ high-এর উপরে buffer-সহ; আসল level ছাড়া সমান high stop-এর চুম্বক।
+
+</KeyTakeaways>
+
+## অনুশীলন ও নিজের backtest
+
+TradingView-এ EURUSD H4 বা USDJPY H1 খুলুন। অন্তত ২০টি tweezer top খুঁজুন। প্রতিটির জন্য লিখুন: তারিখ ও সময়, কোন session, resistance-এ ছিল কি না, দ্বিতীয় candle-এর pattern, পরের session-এর open-এ সেই high ভেঙেছে কি না, ফল (R)। এরপর session অনুযায়ী ভাগ করে গড় R তুলনা করুন। অন্তত ৩০টি নমুনা ছাড়া সিদ্ধান্ত নেবেন না।
+
+## কুইজ
+
+1. Tweezer top-এর দ্বিতীয় candle প্রথমটার open-এর নিচে close করলে আর কোন pattern তৈরি হয়?
+2. London open-এর এক ঘণ্টা আগে Asian session-এর high-এ tweezer top। কী করবেন?
+3. উদাহরণ ২-এর trade checklist-এর কোন ঘরে বাদ পড়ত?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** Bearish engulfing (যদি body পুরো ঢাকে)।
+
+**২.** অপেক্ষা। London open-এর প্রথম এক-দুই ঘণ্টায় সেই high টেকে কি না দেখুন। Sweep হয়ে নিচে close করলে সেটা আরও ভালো setup।
+
+**৩.** প্রথম ঘর (চিহ্নিত resistance ছিল না), তৃতীয় ঘর (বড় session open-এর ঠিক আগে পাতলা বাজার) আর পঞ্চম ঘর (uptrend-এর বিপরীতে)।
+
+</details>
+
+## পরের ধাপ
+
+- পুরো walk-through: [Tweezer Bottom](/bn/patterns/tweezer-bottom)।
+- Session-এর প্রভাব: [Trading Sessions](/bn/learn/01-foundations/05-trading-sessions)।
+- একই পরিবারের pattern: [Bearish Engulfing](/bn/patterns/bearish-engulfing), [Shooting Star](/bn/patterns/shooting-star), [Evening Star](/bn/patterns/evening-star)।
+
+<Disclaimer />

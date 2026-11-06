@@ -1,0 +1,247 @@
+---
+title: "Swing High and Swing Low: Recognise the Turning Points on a Chart"
+description: "What swing highs and swing lows are, how to spot them on a chart, which ones are major and which are noise, and how to use them to place a stop-loss."
+level: beginner
+tags: [swing-high, swing-low, market-structure, fractal, pivot]
+instruments: [EURUSD]
+timeframes: [H1, H4, D1]
+status: done
+sources:
+  - type: blog
+    title: "Swing High/Low - LuxAlgo Library"
+    url: "https://www.luxalgo.com/library/concept/swing-high-low/"
+  - type: blog
+    title: "Strong vs Weak Swings - LuxAlgo Library"
+    url: "https://www.luxalgo.com/library/concept/strong-vs-weak-swings/"
+  - type: blog
+    title: "Swing High and Swing Low: Trend Trading Guide - TradingSim"
+    url: "https://tradingsim.com/blog/swing-high"
+  - type: blog
+    title: "Trading Swing Highs and Swing Lows - MindMathMoney"
+    url: "https://www.mindmathmoney.com/articles/trading-swing-highs-and-swing-lows-an-essential-guide-for-traders"
+  - type: blog
+    title: "Fractals - Swing Highs, Swing Lows - Linn Software"
+    url: "https://www.linnsoft.com/techind/fractals-swing-highs-swing-lows"
+  - type: blog
+    title: "Market structure - CrossTrade Learn"
+    url: "https://crosstrade.io/learn/price-action/market-structure"
+updated: 2026-11-06
+---
+
+# Swing High and Swing Low: Recognise the Turning Points on a Chart
+
+You open a chart and see price rising. But where did it rise from, where does it stop, and where is it safe to put a stop-loss? The answer is hidden in the chart's **turning points**. These turning points are called swing highs and swing lows. You will need them in almost every later lesson (trend, BOS, support/resistance), so build the foundation here.
+
+## What you will be able to do
+
+- **Recognise** swing highs and swing lows on any chart.
+- **Check** them yourself with the **5-candle test**.
+- **Tell apart** major and minor swings.
+- **Use** swing points to set a stop-loss.
+
+## Why it matters
+
+- To understand a **trend**, you need to look at the order of highs and lows. Highs and lows are swing points.
+- **Support and resistance** are really the locations of old swings.
+- A **stop-loss** usually sits beyond a swing. Pick the wrong swing and your stop gets hit again and again.
+
+If you cannot recognise swings, you cannot do any of these properly.
+
+## What are swing highs and swing lows?
+
+**A swing high is a candle whose high (highest price) is above the highs of the candles on both sides.** A swing low is the opposite: a candle whose low is below the lows of the candles on both sides.
+
+Think of walking on a hill path. The point where the climb ends and the descent begins is the **peak** (swing high). The point where the descent ends and the climb starts again is the **dip** (swing low).
+
+Technically these turning points are also called pivot highs/lows or fractals. So do not worry if a platform uses a different name.
+
+## What it looks like on a chart
+
+In the chart below, candles marked **SH** are swing highs, and those marked **SL** are swing lows.
+
+<Chart
+  id="swing-points-01"
+  height={420}
+  caption="EURUSD H1 (educational, synthetic example) — turning points marked SH and SL"
+/>
+
+Notice that every SH has lower candles on both sides, and every SL has higher candles on both sides. Also, SH and SL alternate here. Even when price moves in one direction, this rhythm holds.
+
+## Step by step: how to spot a swing
+
+A simple method is the 5-candle test (also known as Bill Williams' Fractal):
+
+<Steps>
+
+### Step 1: Pick a candle
+
+Take the candle that looks like a peak or a dip on the chart as the middle one.
+
+### Step 2: Count 2 candles on each side
+
+2 on the left and 2 on the right. 5 candles in total.
+
+### Step 3: Compare the highs (or lows)
+
+If the middle candle's high is above the highs of all the other 4, it is a swing high. If its low is below all of theirs, it is a swing low.
+
+### Step 4: Wait until the 2 candles on the right have closed
+
+This is the most important step. A swing is **only confirmed** once the candles on the right have closed.
+
+### Step 5: Mark it
+
+Write SH/SL with a tool. You can keep major swings in a different colour.
+
+</Steps>
+
+<Callout type="note">
+  If you use 3, 5 or 10 candles instead of 2, you get fewer swings, but they
+  matter more. The number is not a law; it is a choice. Sources differ slightly
+  on this, so pick one number and use it everywhere.
+</Callout>
+
+## Major vs minor swings
+
+The same chart has many small turns. If you mark all of them, the chart fills up with noise.
+
+<Chart
+  id="swing-major-minor-01"
+  height={420}
+  caption="EURUSD H1 (educational, synthetic example) — arrows = major swings, small dots = minor swings (noise)"
+/>
+
+|                       | Minor swing                    | Major swing                     |
+| :-------------------- | :----------------------------- | :------------------------------ |
+| **Size**              | Small, a turn of a few candles | Large, spread over many candles |
+| **Role**              | Noise, small pullbacks         | Builds the trend's structure    |
+| **Timeframe**         | More common on lower frames    | Clear on higher frames          |
+| **Use for stop-loss** | Usually risky                  | Relatively reliable             |
+
+A practical rule: first mark the major swings on the **higher timeframe** (H4, D1). Then move down to the lower frame. See the details in the [Multi-Timeframe Analysis](/en/learn/03-market-structure/05-multi-timeframe-analysis) lesson.
+
+## Strong and weak swings
+
+Some teachers (especially in Smart Money Concepts discussions) split swings into strong and weak. The idea is simple:
+
+- A swing low from which price rose and broke the previous high is **strong** (it did its job).
+- A swing low from which price rose but could not break the high is **weak**.
+
+<Callout type="warning">
+  This strong/weak split is not a formal or recognised standard. The definition
+  differs between teachers and indicators. Do not treat it as a buy/sell signal;
+  it is only one way of looking at structure. See also [Break of
+  Structure](/en/learn/03-market-structure/03-break-of-structure).
+</Callout>
+
+## Placing a stop-loss with swings (risk management)
+
+The usual rule for a buy trade: place the stop-loss **a little below the most recent major swing low**. For a sell trade, a little above the major swing high. The reason is that if price breaks that turning point, the idea behind your trade has been proven wrong.
+
+"A little below" means leaving some room for the spread and wicks. Exactly how much depends on the instrument and timeframe. You will find the details in the [Stop Loss Placement](/en/learn/10-trade-management-execution/01-stop-loss-placement) lesson. To decide how many lots to take, you will need [Position Sizing](/en/learn/08-risk-management/02-position-sizing).
+
+## Real example
+
+<Callout type="note">
+  **The examples in this lesson are synthetic.** We have not yet added verified
+  real OHLC data for this lesson. That is why the two charts above are built on
+  synthetic educational data. Run the same method on your own chart; that is
+  what the practice below asks you to do.
+</Callout>
+
+**For example (synthetic trade):** In the first chart above, you want to buy after candle 11. The nearest swing low is at candle 11 itself. The stop-loss goes just below it. If price drops below this low, your idea was wrong and the loss stays limited.
+
+## Failed example: trusting a small swing (synthetic/educational)
+
+**What could be seen:** In the second chart, there is a small swing low near candle 17.
+
+**Decision:** Someone treated it as support, bought, and placed the stop just below it.
+
+**Result:** Price was inside a larger downward move. The small low broke quickly and the stop was hit. The real dip was further down (near candle 25).
+
+**Lesson:** A minor swing can fool you. Before you use a swing as the base for support or a stop, ask: is it also major on the higher timeframe?
+
+## Common mistakes
+
+| Mistake                                 | Why it happens                                | What to do                                  |
+| :-------------------------------------- | :-------------------------------------------- | :------------------------------------------ |
+| Marking a swing before it is confirmed  | Rushing                                       | Wait until the right-side candles close     |
+| Treating every small turn as a swing    | Not separating noise from structure           | Find major swings on the higher frame first |
+| Mixing up candle bodies and wicks       | Sometimes using the close, sometimes the high | Fix one method, usually the wick's high/low |
+| Trading only because of a turn          | Thinking swing = signal                       | A swing is a map, not a signal              |
+| Stop exactly at the swing's high or low | Leaving no room                               | Keep a buffer for the spread and wicks      |
+
+## Pro tips
+
+<Callout type="tip">
+  First mark only the major swings on the chart, then step back (zoom out) and
+  see whether the story makes sense. If it does not, you may have marked too
+  many swings.
+</Callout>
+
+<Callout type="tip">
+  A swing can never be "caught" in advance; it is confirmed only after the
+  right-side candles close. This delay is a normal limit of every swing-based
+  method. Keep it in mind when you backtest, or the results will look better
+  than reality.
+</Callout>
+
+## When this does not work
+
+- **In a range market:** price moves up and down within the same limits; there are many swings, but none of them is special.
+- **On very small timeframes (M1–M5):** there is so much noise that most swings mean nothing.
+- **During big news:** when price jumps, swings do not form properly.
+- **When used alone:** a swing does not tell you direction, only location.
+
+## Summary
+
+<KeyTakeaways>
+
+- Swing high = a candle whose high is above both sides; swing low = one whose low is below both sides.
+- The 5-candle test is a simple method; a swing is not confirmed until the right-side candles close.
+- Look for major swings on the higher timeframe first; minor swings are noise.
+- The stop-loss sits a little beyond a major swing.
+- A swing is a map; on its own it is not a signal.
+
+</KeyTakeaways>
+
+## Practice
+
+Open the EUR/USD D1 chart on TradingView. Using the 5-candle test, mark at least 4 swing highs and 4 swing lows over the last 6 months. Then look at the same period on the H1 chart and see how many extra small swings appear. Write down: which D1 swings also look large on H1?
+
+## Quiz
+
+1. For a candle to count as a swing high, what must its high be like?
+2. In the 5-candle test, when is a swing confirmed?
+3. Why do small timeframes produce more noisy swings, and what should you do about it?
+4. In a buy trade, where does the stop-loss usually go?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** Higher than the highs of the candles on both sides (left and right).
+
+**2.** After the 2 candles on the right have closed.
+
+**3.** Small frames have more small ups and downs. Mark the major swings on the higher frame first and give them priority.
+
+**4.** A little below the most recent major swing low.
+
+</details>
+
+## Next steps
+
+- Before: [Reading a Chart](/en/learn/01-foundations/06-reading-a-chart).
+- After: [Trend, Range and HH/HL](/en/learn/03-market-structure/02-trend-range-hhhl), then [Break of Structure](/en/learn/03-market-structure/03-break-of-structure).
+- Risk: [Stop Loss Placement](/en/learn/10-trade-management-execution/01-stop-loss-placement).
+
+### Sources
+
+- [Swing High/Low, LuxAlgo](https://www.luxalgo.com/library/concept/swing-high-low/)
+- [Strong vs Weak Swings, LuxAlgo](https://www.luxalgo.com/library/concept/strong-vs-weak-swings/)
+- [Swing High and Swing Low, TradingSim](https://tradingsim.com/blog/swing-high)
+- [Trading Swing Highs and Swing Lows, MindMathMoney](https://www.mindmathmoney.com/articles/trading-swing-highs-and-swing-lows-an-essential-guide-for-traders)
+- [Fractals, Linn Software](https://www.linnsoft.com/techind/fractals-swing-highs-swing-lows)
+- [Market structure, CrossTrade](https://crosstrade.io/learn/price-action/market-structure)
+
+<Disclaimer />

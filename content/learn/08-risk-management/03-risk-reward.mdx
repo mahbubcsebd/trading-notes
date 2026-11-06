@@ -1,0 +1,209 @@
+---
+title: "Risk:Reward Ratio: Win Rate কম হলেও টিকে থাকার হিসাব"
+description: "Risk:Reward কী, break-even win rate কীভাবে বের করবেন, 1:3 ও 1:0.4 trade-এর তফাত এবং entry-র আগে ratio যাচাইয়ের ধাপ — chart সহ।"
+level: beginner
+tags: [risk-management, risk-reward, rr, win-rate, target]
+instruments: [EURUSD]
+timeframes: [H1, H4]
+status: done
+sources:
+  - type: blog
+    title: "Risk/Reward Ratio - Investopedia"
+    url: "https://www.investopedia.com/terms/r/riskrewardratio.asp"
+  - type: blog
+    title: "Risk-Reward Ratio - BabyPips"
+    url: "https://www.babypips.com/learn/forex/risk-reward-ratio"
+updated: 2026-11-05
+---
+
+# Risk:Reward Ratio: Win Rate কম হলেও টিকে থাকার হিসাব
+
+দশটির সাতটি trade জিতলেন, তবু account কমল। অন্য একজন দশটির চারটি জিতে লাভে। এটা ভাগ্য নয়, অনুপাতের খেলা।
+
+## এই লেখা পড়ে আপনি যা পারবেন
+
+- Risk:Reward ratio **হিসাব করতে পারবেন**।
+- যেকোনো ratio-র জন্য **break-even win rate বের করতে পারবেন**।
+- Entry-র আগে **trade নেওয়ার যোগ্য কি না যাচাই করতে পারবেন**।
+- উঁচু win rate কেন লাভের গ্যারান্টি নয় তা **chart দেখে বোঝাতে পারবেন**।
+
+## কেন এটি জরুরি
+
+- **Win rate একা কিছুই বলে না।** জেতার সংখ্যা নয়, জেতার আকার ও হারের আকার মিলে ফল।
+- **ভালো ratio ভুলের জায়গা দেয়।** অর্ধেকের বেশি হারলেও টিকে থাকা যায়।
+- **খারাপ ratio নিখুঁত হতে বাধ্য করে।** তখন একটি ভুলেই পুরো সপ্তাহ যায়।
+
+পূর্বশর্ত: [Risk per Trade](/bn/learn/08-risk-management/01-risk-per-trade) এবং [Position Sizing](/bn/learn/08-risk-management/02-position-sizing)।
+
+## Risk:Reward কী
+
+**Risk:Reward ratio হলো একটি trade-এ সম্ভাব্য লোকসান ও সম্ভাব্য লাভের তুলনা। Risk হলো entry থেকে stop-এর দূরত্ব, reward হলো entry থেকে target-এর দূরত্ব।**
+
+ভাবুন ক্রিকেটে। 6 বলে 1 রান নিয়ে wicket ঝুঁকিতে ফেলা আর 6 বলে ছক্কার সুযোগ নেওয়া এক জিনিস নয়। ঝুঁকির তুলনায় পুরস্কার কত, তাই ratio।
+
+(উদাহরণস্বরূপ) Stop 30 pip, target 90 pip হলে ratio 1:3। অর্থাৎ 1 একক ঝুঁকিতে 3 একক সম্ভাব্য লাভ।
+
+## Break-even win rate
+
+যে win rate-এ আপনার লাভ-লোকসান সমান হয়:
+
+**Break-even win rate = 1 ÷ (1 + R)**, যেখানে R হলো reward ÷ risk।
+
+| Ratio | R   | Break-even win rate |
+| :---- | :-- | :------------------ |
+| 1:0.5 | 0.5 | প্রায় 67%          |
+| 1:1   | 1   | 50%                 |
+| 1:2   | 2   | প্রায় 33%          |
+| 1:3   | 3   | 25%                 |
+
+এটি spread ও commission ধরার আগের হিসাব। খরচ ধরলে সংখ্যা সামান্য ওপরে ওঠে।
+
+**মনে রাখুন:** ratio ভালো হলেই লাভ নিশ্চিত নয়। Target যত দূরে, ছোঁয়ার সম্ভাবনা তত কমে। তাই ratio আর win rate একসঙ্গে ভাবতে হয়।
+
+## Chart-এ কেমন দেখায়
+
+<Chart
+  id="rr-1to3-win-01"
+  height={440}
+  caption="EURUSD H4 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — ৩৮ নম্বর candle-এ buy 1.0900। Stop 1.0870 (30 pip), target 1.0990 (90 pip), ratio 1:3।"
+/>
+
+Stop আর target দুটোই আগে থেকে চার্টে আঁকা। এটাই অভ্যাস: entry-র আগে দুই দিকের দূরত্ব দেখুন।
+
+## ধাপে ধাপে: trade-এর আগে ratio যাচাই
+
+<Steps>
+
+### ধাপ ১: Stop বসান structure দেখে
+
+Stop-এর জায়গা ঠিক হয় চার্টে, ratio অনুযায়ী নয়। [Swing Low](/bn/learn/03-market-structure/01-swing-high-low)-এর নিচে বা ATR-এর বাইরে।
+
+### ধাপ ২: Target খুঁজুন কাছের বাধায়
+
+পরের [resistance](/bn/learn/05-support-resistance/01-levels-vs-zones) বা swing high কোথায়? সেটাই বাস্তবসম্মত target।
+
+### ধাপ ৩: দূরত্ব মাপুন
+
+Stop 30 pip, target 90 pip হলে ratio 1:3।
+
+### ধাপ ৪: সিদ্ধান্ত নিন
+
+Ratio আপনার plan-এর ন্যূনতমের (যেমন 1:2) নিচে হলে trade এড়িয়ে যান। Stop সরাবেন না, target বাড়াবেন না।
+
+### ধাপ ৫: Size বসান
+
+ঝুঁকি টাকায় ঠিক রেখে lot বের করুন। Ratio সিদ্ধান্ত নেয়, size ঝুঁকি ঠিক রাখে।
+
+</Steps>
+
+## উদাহরণ ১: যখন কাজ করে (কাল্পনিক)
+
+ওপরের chart:
+
+- **আগে থেকে ঠিক:** ঝুঁকি 1% (100), stop 30 pip, target 90 pip।
+- **ফল:** দাম নিচে নেমেও stop ছোঁয়নি, target পেরিয়ে গেছে। লাভ প্রায় 300।
+- **শিক্ষা:** এক জয়ে তিন হারের খরচ উঠেছে। 25% জিতলেও account টিকত।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়।)
+
+## উদাহরণ ২: যখন ব্যর্থ হয় (কাল্পনিক)
+
+<Chart
+  id="rr-low-rr-fail-01"
+  height={440}
+  caption="EURUSD H1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — ৩৬ নম্বর candle-এ buy 1.0890, target মাত্র 12 pip দূরে (1.0912), stop 30 pip দূরে (1.0860)। ratio 1:0.4। Target লাগে, কিন্তু পরের একটি stop-out অনেকটা মুছে দেয়।"
+/>
+
+- **কী দেখা যাচ্ছিল:** Trader "তাড়াতাড়ি লাভ" চান, তাই target কাছে।
+- **ফল:** এই trade 12 pip জেতে। পরের trade-এ stop লেগে 30 pip যায়।
+- **হিসাব:** 1:0.4-এ break-even win rate প্রায় 71%। এক হারে প্রায় আড়াইটি জয় মুছে যায়।
+- **কেন ভুল:** জয় ঘন ঘন আসে বলে ভালো লাগে, কিন্তু ফলাফল দেখলে হিসাব মেলে না।
+- **শিক্ষা:** "বেশি জিতছি" মানেই "লাভে আছি" নয়।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়।)
+
+## সাধারণ ভুল
+
+| ভুল                           | কেন হয়           | কী করবেন                         |
+| :---------------------------- | :---------------- | :------------------------------- |
+| Ratio ঠিক করতে stop কাছে টানা | ভালো ratio দেখানো | stop structure থেকে, তারপর ratio |
+| Target অবাস্তব দূরে           | বেশি লাভের লোভ    | কাছের resistance বা swing দেখুন  |
+| শুধু win rate দেখা            | সহজ মেট্রিক       | ratio ও win rate একসঙ্গে         |
+| Spread ও খরচ বাদ দেওয়া       | ছোট মনে হয়       | দুই দিকেই খরচ যোগ করুন           |
+| Trade চলাকালে ratio বদলানো    | আবেগ              | plan-এর নিয়ম মানুন              |
+
+## Pro tips
+
+<Callout type="tip">
+  Plan-এ ন্যূনতম ratio লিখে রাখুন (যেমন 1:1.5)। নিচে হলে trade এড়ানো হয়ে যায়
+  যান্ত্রিক নিয়ম, তখন সিদ্ধান্ত নিয়ে ভাবতে হয় না।
+</Callout>
+
+<Callout type="tip">
+  Scalping-এ ছোট target থাকে, তাই win rate অনেক উঁচু লাগে এবং খরচ বড় ভূমিকা
+  নেয়। শুরুতে মাঝারি timeframe-এ অভ্যাস করা সহজ।
+</Callout>
+
+<Callout type="warning">
+  Ratio কাগজে ভালো দেখালেই trade ভালো নয়। Target যদি মাঝপথে বড় resistance
+  পেরোয়, সেই ratio কল্পনা।
+</Callout>
+
+## কখন এটা কাজ করে না
+
+- **Target বাস্তবে ছোঁয়া না গেলে:** বাধার কারণে বড় ratio শুধু কাগজে থাকে।
+- **দ্রুত বাজারে slippage হলে:** প্রকৃত risk পরিকল্পিতের চেয়ে বড় হয়।
+- **Partial close ও trailing ব্যবহার করলে:** ফলাফলের ratio একটি স্থির সংখ্যা থাকে না ([Trade Management](/bn/learn/10-trade-management-execution/02-take-profit-partial-close)-এ বিস্তারিত)।
+- **নমুনা খুব কম হলে:** দশটি trade-এ win rate অর্থহীন।
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- Ratio = সম্ভাব্য লাভ ÷ সম্ভাব্য ঝুঁকি, entry-র আগে মাপুন।
+- Break-even win rate = 1 ÷ (1 + R)। 1:2 হলে প্রায় 33%।
+- Stop structure থেকে ঠিক হয়, ratio সাজাতে সরানো যায় না।
+- উঁচু win rate খারাপ ratio বাঁচাতে পারে না।
+
+</KeyTakeaways>
+
+## অনুশীলন
+
+আপনার শেষ 10টি trade (বা demo trade) নিন। প্রতিটির risk ও reward pip-এ লিখে ratio বের করুন। তারপর win rate ও গড় ratio দিয়ে দেখুন আপনি break-even-এর ওপরে না নিচে।
+
+## কুইজ
+
+1. Stop 25 pip, target 75 pip হলে ratio কত?
+2. 1:2 ratio-তে break-even win rate কত?
+3. Win rate 70% কিন্তু ratio 1:0.4 হলে সাধারণত কী হয়?
+4. Ratio ভালো করতে stop কাছে টানা কেন ভুল?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** 1:3।
+
+**২.** প্রায় 33%।
+
+**৩.** 1:0.4-এর break-even প্রায় 71%, তাই 70% জিতলেও লাভে না থাকার সম্ভাবনা বেশি।
+
+**৪.** Stop কাছে গেলে স্বাভাবিক noise-এ কেটে যায়, ratio কাগজে ভালো দেখালেও win rate কমে।
+
+</details>
+
+## পরের ধাপ
+
+- আগে: [Position Sizing](/bn/learn/08-risk-management/02-position-sizing)।
+- পরে: [Drawdown Rules](/bn/learn/08-risk-management/04-drawdown-rules)।
+- সম্পর্কিত: [Expectancy](/bn/learn/08-risk-management/07-expectancy)।
+
+### সূত্র
+
+- <ExternalLink href="https://www.investopedia.com/terms/r/riskrewardratio.asp">
+    Risk/Reward Ratio, Investopedia
+  </ExternalLink>
+- <ExternalLink href="https://www.babypips.com/learn/forex/risk-reward-ratio">
+    Risk-Reward Ratio, BabyPips
+  </ExternalLink>
+
+<Disclaimer />

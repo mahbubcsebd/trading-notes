@@ -1,0 +1,308 @@
+{
+  "symbol": "EURUSD",
+  "timeframe": "H4",
+  "mode": "synthetic",
+  "module": "06-trend-chart-patterns",
+  "lessonSlugs": [
+    "01-reversal-patterns"
+  ],
+  "notes": {
+    "en": "Illustrative synthetic data.",
+    "bn": "এটি শিক্ষামূলক কাল্পনিক ডেটা।"
+  },
+  "updatedAt": "2026-11-05T20:00:00Z",
+  "type": "trade-setup",
+  "id": "head-shoulders-01",
+  "title": {
+    "en": "Head and Shoulders",
+    "bn": "Head and Shoulders pattern"
+  },
+  "bias": "bearish",
+  "outcome": "win",
+  "tags": [
+    "head-and-shoulders",
+    "reversal",
+    "neckline"
+  ],
+  "caption": {
+    "en": "Left shoulder (5), head (12), right shoulder (19) with a flat neckline near 1.0760. Candle 22 closes below it; target is the head height projected down.",
+    "bn": "বাঁ কাঁধ (৫), মাথা (১২), ডান কাঁধ (১৯) এবং 1.0760-এর কাছে সমতল neckline। ২২ নম্বর candle নিচে close করে; target হলো মাথার উচ্চতা নিচে মাপা।"
+  },
+  "annotations": [
+    {
+      "type": "marker",
+      "i": 5,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Left shoulder"
+    },
+    {
+      "type": "marker",
+      "i": 12,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Head"
+    },
+    {
+      "type": "marker",
+      "i": 19,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Right shoulder"
+    },
+    {
+      "type": "marker",
+      "i": 22,
+      "position": "belowBar",
+      "shape": "arrowDown",
+      "text": "Break"
+    },
+    {
+      "type": "marker",
+      "i": 24,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Retest"
+    },
+    {
+      "type": "hline",
+      "price": 1.076,
+      "label": "Neckline 1.0760",
+      "color": "#3b82f6",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.0634,
+      "label": "Target (head height)",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Head 1.0886, neckline 1.0760, height 126 pips, target about 1.0634. The right shoulder (1.0828) is lower than the head: buyers could no longer make a new high.",
+    "bn": "মাথা 1.0886, neckline 1.0760, উচ্চতা 126 pip, target প্রায় 1.0634। ডান কাঁধ (1.0828) মাথার চেয়ে নিচে: ক্রেতারা আর নতুন high বানাতে পারেনি।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Head is the highest peak; shoulders are lower and roughly level",
+      "bn": "মাথা সবচেয়ে উঁচু peak; দুই কাঁধ নিচু ও প্রায় সমান"
+    },
+    {
+      "en": "Neckline close below confirms the pattern",
+      "bn": "Neckline-এর নিচে close হলে pattern নিশ্চিত"
+    }
+  ],
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.0692,
+      "h": 1.0706,
+      "l": 1.0686,
+      "c": 1.07
+    },
+    {
+      "i": 1,
+      "o": 1.07,
+      "h": 1.0732,
+      "l": 1.0692,
+      "c": 1.0724
+    },
+    {
+      "i": 2,
+      "o": 1.0724,
+      "h": 1.0757,
+      "l": 1.0714,
+      "c": 1.0747
+    },
+    {
+      "i": 3,
+      "o": 1.0747,
+      "h": 1.0777,
+      "l": 1.0741,
+      "c": 1.0771
+    },
+    {
+      "i": 4,
+      "o": 1.0771,
+      "h": 1.0802,
+      "l": 1.0763,
+      "c": 1.0794
+    },
+    {
+      "i": 5,
+      "o": 1.0794,
+      "h": 1.0826,
+      "l": 1.0784,
+      "c": 1.0818
+    },
+    {
+      "i": 6,
+      "o": 1.0818,
+      "h": 1.0824,
+      "l": 1.0793,
+      "c": 1.0799
+    },
+    {
+      "i": 7,
+      "o": 1.0799,
+      "h": 1.0807,
+      "l": 1.0773,
+      "c": 1.0781
+    },
+    {
+      "i": 8,
+      "o": 1.0781,
+      "h": 1.0791,
+      "l": 1.076,
+      "c": 1.0762
+    },
+    {
+      "i": 9,
+      "o": 1.0762,
+      "h": 1.0798,
+      "l": 1.0756,
+      "c": 1.0792
+    },
+    {
+      "i": 10,
+      "o": 1.0792,
+      "h": 1.083,
+      "l": 1.0784,
+      "c": 1.0822
+    },
+    {
+      "i": 11,
+      "o": 1.0822,
+      "h": 1.0862,
+      "l": 1.0812,
+      "c": 1.0852
+    },
+    {
+      "i": 12,
+      "o": 1.0852,
+      "h": 1.0886,
+      "l": 1.0846,
+      "c": 1.0882
+    },
+    {
+      "i": 13,
+      "o": 1.0882,
+      "h": 1.089,
+      "l": 1.0845,
+      "c": 1.0853
+    },
+    {
+      "i": 14,
+      "o": 1.0853,
+      "h": 1.0863,
+      "l": 1.0813,
+      "c": 1.0823
+    },
+    {
+      "i": 15,
+      "o": 1.0823,
+      "h": 1.0829,
+      "l": 1.0788,
+      "c": 1.0794
+    },
+    {
+      "i": 16,
+      "o": 1.0794,
+      "h": 1.0802,
+      "l": 1.076,
+      "c": 1.0764
+    },
+    {
+      "i": 17,
+      "o": 1.0764,
+      "h": 1.0793,
+      "l": 1.0754,
+      "c": 1.0783
+    },
+    {
+      "i": 18,
+      "o": 1.0783,
+      "h": 1.0809,
+      "l": 1.0777,
+      "c": 1.0803
+    },
+    {
+      "i": 19,
+      "o": 1.0803,
+      "h": 1.0828,
+      "l": 1.0795,
+      "c": 1.0822
+    },
+    {
+      "i": 20,
+      "o": 1.0822,
+      "h": 1.0832,
+      "l": 1.0789,
+      "c": 1.0799
+    },
+    {
+      "i": 21,
+      "o": 1.0799,
+      "h": 1.0805,
+      "l": 1.0769,
+      "c": 1.0775
+    },
+    {
+      "i": 22,
+      "o": 1.08,
+      "h": 1.0804,
+      "l": 1.0748,
+      "c": 1.0752
+    },
+    {
+      "i": 23,
+      "o": 1.0752,
+      "h": 1.0762,
+      "l": 1.0732,
+      "c": 1.0742
+    },
+    {
+      "i": 24,
+      "o": 1.0742,
+      "h": 1.0772,
+      "l": 1.0738,
+      "c": 1.0756
+    },
+    {
+      "i": 25,
+      "o": 1.0756,
+      "h": 1.0758,
+      "l": 1.0734,
+      "c": 1.0738
+    },
+    {
+      "i": 26,
+      "o": 1.0738,
+      "h": 1.0748,
+      "l": 1.0704,
+      "c": 1.0714
+    },
+    {
+      "i": 27,
+      "o": 1.0714,
+      "h": 1.072,
+      "l": 1.0684,
+      "c": 1.069
+    },
+    {
+      "i": 28,
+      "o": 1.069,
+      "h": 1.0698,
+      "l": 1.0658,
+      "c": 1.0666
+    },
+    {
+      "i": 29,
+      "o": 1.0666,
+      "h": 1.0676,
+      "l": 1.0632,
+      "c": 1.0642
+    }
+  ]
+}

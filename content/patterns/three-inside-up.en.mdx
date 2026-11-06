@@ -1,0 +1,337 @@
+---
+title: "Three Inside Up: a harami followed by a confirmed reversal"
+description: "How to spot three inside up, why it is stronger than a harami, why the third candle clearing the mother's open matters, entry and stop, and why checking higher-timeframe zones is essential, with charts."
+type: bullish
+category: three-candle
+level: intermediate
+candleCount: 3
+signal: reversal
+chartId: three-inside-up-win-01
+tags: [pattern, candlestick, three-inside-up, harami, three-candle]
+status: done
+sources:
+  - type: book
+    title: "Candlestick Charting Explained - Gregory L. Morris"
+    note: "Three inside up / down, confirming the harami"
+  - type: blog
+    title: "Three Inside Up/Down - Investopedia"
+    url: "https://www.investopedia.com/terms/t/three-inside-updown.asp"
+updated: 2026-11-06
+---
+
+You saw a bullish harami and waited, because you know a harami is only a pause. The next candle closed above the mother's open: now it is confirmed! You buy. Price rises, right up to a supply zone on the daily chart that turned price away only a week ago. The H4 story was perfect, but the daily chart was telling a different one.
+
+## At a glance
+
+| Item          | Three Inside Up                                                                                                                  |
+| :------------ | :------------------------------------------------------------------------------------------------------------------------------- |
+| Type          | Bullish reversal, three candles (harami + confirmation)                                                                          |
+| Where to look | At the end of a downtrend, at a marked support                                                                                   |
+| Key features  | 1: long bearish mother; 2: a small candle inside the mother's body (bullish harami); 3: bullish, closing above the mother's open |
+| Confirmation  | The third candle is the confirmation                                                                                             |
+| Stop          | Below the mother's low, plus spread and a buffer                                                                                 |
+| Invalidation  | A close below the mother's low                                                                                                   |
+| Look-alikes   | [Bullish Harami](/en/patterns/bullish-harami) (the first two candles), [Morning Star](/en/patterns/morning-star)                 |
+| Opposite      | [Three Inside Down](/en/patterns/three-inside-down)                                                                              |
+
+## What you will be able to do
+
+- **Explain** why three inside up is **stronger** than a harami.
+- **Separate** it from a morning star.
+- **Place** an entry at the third close and a stop below the mother's low.
+- **Measure** higher-timeframe zones in advance to filter trades.
+
+## Why it matters
+
+- **It solves the harami's problem.** A harami is only a pause; its first obstacle is the mother's open. Three inside up means that obstacle has already been cleared.
+- **Confirmation is built in.** No separate wait for confirmation.
+- **The entry comes late, so there is less room.** At the third close price has already risen a lot. Without measuring obstacles above, especially higher-timeframe ones, the R:R misleads you.
+
+Prerequisites: the Bullish Harami page (linked in the table above) and [Multi-Timeframe Analysis](/en/learn/03-market-structure/05-multi-timeframe-analysis).
+
+## What is three inside up
+
+**Three inside up is a three-candle pattern: a long bearish candle, a small candle inside its body (a bullish harami), then a bullish candle that closes above the first candle's open.** "Inside" because the second candle sits within the first; "up" because the third breaks out above.
+
+<CandleDiagram
+  title="From harami to three inside up"
+  candles={[
+    { o: 64, h: 65, l: 58, c: 59, dim: true },
+    { o: 59, h: 60, l: 47, c: 48, label: "1 mother" },
+    { o: 48, h: 54, l: 47.5, c: 53.5, label: "2 harami" },
+    {
+      o: 53.5,
+      h: 62,
+      l: 53,
+      c: 61,
+      label: "3",
+      note: "above the mother open (59)",
+    },
+  ]}
+  caption="The first two candles are a bullish harami. The third closes above the mother's open, confirming the harami."
+/>
+
+### Identification rules
+
+| Rule                                                      | Required?               | Why                                               |
+| :-------------------------------------------------------- | :---------------------- | :------------------------------------------------ |
+| A downtrend before it; the mother long and bearish        | Yes                     | The harami's foundation                           |
+| The second candle's body inside the mother's body         | Yes                     | This is the harami                                |
+| The third candle bullish, closing above the mother's open | Yes                     | This is the "up": the first obstacle cleared      |
+| At a marked support                                       | Yes                     | Without a level it is a bounce inside a downtrend |
+| Higher-timeframe obstacles at least 1.5R away             | No (but very important) | The entry is late, so there is less room above    |
+
+<Callout type="note">
+  If the third candle only clears the middle of the mother body, that confirms
+  the harami, but it is not three inside up. Three inside up needs the mother's
+  **open** to be cleared.
+</Callout>
+
+## Strong vs weak three inside up
+
+<DiagramRow>
+  <CandleDiagram
+    title="Strong"
+    verdict="good"
+    verdictLabel="tradeable"
+    candles={[
+      { o: 64, h: 65, l: 58, c: 59, dim: true },
+      { o: 59, h: 60, l: 48, c: 49 },
+      { o: 49, h: 53, l: 48.5, c: 52.5 },
+      { o: 52.5, h: 61, l: 52, c: 60.5, label: "open space above" },
+    ]}
+    levels={[{ price: 48, label: "support", tone: "support" }]}
+    caption="At support; the third candle clears the mother's open and closes near its high, with no big obstacle above."
+  />
+  <CandleDiagram
+    title="Weak"
+    verdict="bad"
+    verdictLabel="avoid"
+    candles={[
+      { o: 64, h: 65, l: 58, c: 59, dim: true },
+      { o: 59, h: 60, l: 50, c: 51 },
+      { o: 51, h: 55, l: 50.5, c: 54.5 },
+      { o: 54.5, h: 60.5, l: 54, c: 60, label: "under the zone" },
+    ]}
+    levels={[{ price: 63, label: "daily supply", tone: "resistance" }]}
+    caption="A daily supply zone right above the third candle. A wall before the target."
+  />
+</DiagramRow>
+
+| Quality check   | Strong                                         | Weak                                        |
+| :-------------- | :--------------------------------------------- | :------------------------------------------ |
+| Location        | At a marked support                            | Mid-downtrend, no level                     |
+| Third candle    | Clearly above the mother's open, near its high | Just above the open, with a long upper wick |
+| Obstacles above | Higher-timeframe zone at least 1.5R away       | A daily or weekly zone within 1.5R          |
+
+### Same look, different meaning
+
+| Pattern             | Second candle                              | Third candle                         |
+| :------------------ | :----------------------------------------- | :----------------------------------- |
+| **Three Inside Up** | **Inside** the mother's body               | Closes above the mother's open       |
+| **Morning Star**    | Near or **below** the first candle's close | Closes above 50% of the first body   |
+| **Bullish Harami**  | Inside the mother's body                   | Not there yet (a two-candle pattern) |
+
+## The story inside the candle
+
+One common interpretation of three inside up at support:
+
+1. **Mother: sellers push hard.** A long red candle down to support.
+2. **Harami: sellers stop.** No new low, a small candle inside the mother.
+3. **Third: buyers wipe out the mother's gains entirely.** A close above the mother's open means everyone who sold during the mother candle is now losing.
+
+The result: across three candles, sellers attack, stall and give it all back. But these three candles do not tell you where larger sellers are waiting on the higher timeframe.
+
+<Callout type="note">
+  This is a common interpretation, not a proven fact. A chart does not show who
+  bought or sold.
+</Callout>
+
+## Where it works and where it does not
+
+<Compare
+  leftLabel="Where three inside up carries weight"
+  rightLabel="Where three inside up is often a trap"
+  left="- At a marked support or demand zone
+- When the third candle closes clearly above the mother's open
+- At the end of a pullback in the higher-timeframe trend direction
+- With higher-timeframe zones at least 1.5R above"
+  right="- Right under a daily or weekly supply zone
+- Mid-downtrend with no level
+- When the third candle closes just above with a long upper wick
+- Just before big news"
+/>
+
+## Gaps in a 24-hour market
+
+<Callout type="note">
+  As with the harami: in Forex the second candle usually opens at the mother's
+  close, so its body starts at the edge of the mother's body. The third starts
+  from the second's close and clears the mother's open. No gap is needed.
+</Callout>
+
+## Step by step: trading three inside up
+
+<Steps>
+
+### Step 1: Level first, then the higher timeframe
+
+Draw support in advance. Then open one timeframe higher (D1 if you trade H4): is there a supply zone or resistance above? How far away?
+
+### Step 2: Wait for all three candles to close
+
+The third candle can still fall back below the mother's open in its last minute.
+
+### Step 3: Measure
+
+Is the mother long? Is the second candle's body small and inside? Does the third close above the mother's open, near its high?
+
+### Step 4: Entry type
+
+| Entry                           | Where                                  | Pro                            | Con                           |
+| :------------------------------ | :------------------------------------- | :----------------------------- | :---------------------------- |
+| **Third close** (standard)      | Buy as the third candle closes         | Confirmation is in the pattern | Higher entry, wider stop      |
+| **Retest of the mother's open** | Buy limit at the mother's open         | Smaller stop, better R:R       | Missed if price never returns |
+| **Third high break**            | Buy stop above the third candle's high | Momentum confirmed             | Even higher entry             |
+
+### Step 5: Place the stop
+
+Below the mother's low (or the second candle's low if it is lower), plus the [spread](/en/learn/01-foundations/04-spread-commission-swap) and a buffer.
+
+### Step 6: Size and target
+
+[Position size](/en/learn/08-risk-management/02-position-sizing) from the entry-to-stop distance, risking no more than 1%. Target before the nearest obstacle, **including higher-timeframe zones**. [Risk reward](/en/learn/08-risk-management/03-risk-reward) at least 1:1.5.
+
+### Step 7: Manage
+
+Repeated closes back below the mother's open mean the confirmation is weakening. A close below the mother's low means the idea is wrong.
+
+</Steps>
+
+### Pre-trade checklist
+
+<Checklist
+  id="pattern-three-inside-up-pretrade-en"
+  items={[
+    "Was support marked before the pattern, and did the mother stop there?",
+    "Does the shape pass the rules (long red mother, small harami inside, third closing above the mother's open)?",
+    "Have all three candles closed?",
+    "Is the risk reward to the nearest obstacle at least 1:1.5?",
+    "Is there no zone or level one timeframe up right in front of the trade?",
+  ]}
+/>
+
+If any box stays empty, skip the trade.
+
+## Example 1: when it works (illustrative)
+
+<Chart
+  id="three-inside-up-win-01"
+  height={420}
+  caption="XAUUSD H1 (illustrative, synthetic) — three inside up at a once-tested support; long at the third close."
+/>
+
+- **What was visible:** Candle 4 marked support near 2332.44. Candles 5-10 rallied to about 2387, and 11-15 fell back.
+- **The pattern:** Candle 16 was the mother: 2344.44 to 2333.94. Candle 17 was the harami: 2333.94 to 2338.66, inside the body. Candle 18 closed at 2346.94, above the mother's 2344.44 open.
+- **Decision:** Buy at the third close at 2346.94. Stop 2331.44 (below the mother's low): $15.50 of risk. Target 2377.94 (2R); room to the swing high was about 2.6R, with no higher-timeframe zone above.
+- **Result:** Candle 27 reached the target.
+- **Lesson:** A level, a harami, the mother's open cleared, and open space above.
+
+<TradeSetup
+  direction="long"
+  pair="XAUUSD"
+  entry={2346.94}
+  stop={2331.44}
+  target={2377.94}
+/>
+
+(Illustrative example, not a real trade. Not every three inside up wins, and no result is guaranteed.)
+
+## Example 2: when it is a trap (illustrative)
+
+<Chart
+  id="three-inside-up-fail-01"
+  height={420}
+  caption="GBPUSD H4 (illustrative, synthetic) — a clean three inside up, but a daily supply zone right above. The long reaches the zone, is rejected, and is stopped out."
+/>
+
+- **What was visible:** Candles 0-5 rallied into a daily supply zone at about 1.2899-1.2929 and were rejected. Candles 6-8 fell.
+- **The pattern:** Candle 9 was the mother: 1.2836 to 1.2808. Candle 10 was the harami: 1.2808 to 1.28206. Candle 11 closed at 1.2840, above the mother's open. Perfect on H4.
+- **The wrong decision:** Buy at the third close at 1.2840, stop 1.2800: 40 pips of risk, target 1.2920 (2R). But the bottom of the daily zone at 1.2899 was only about 1.48R away, and the target lay inside the zone.
+- **What happened:** Candle 13 reached the zone, candle 14 was rejected, and candle 18 broke the stop.
+- **Why it failed:** A higher-timeframe zone right ahead, and no support either. The first, fourth and fifth checklist boxes would have filtered it out.
+
+**Lesson:** Check the higher timeframe: a daily zone overhead caps the trade. Because the stop was set in advance, the loss stayed at 1R.
+
+## Common mistakes
+
+| Mistake                                                  | Why it happens                            | What to do instead                    |
+| :------------------------------------------------------- | :---------------------------------------- | :------------------------------------ |
+| Looking only at your own timeframe                       | Treating the higher timeframe as optional | Draw the zones one timeframe up first |
+| Calling a close past the mother's middle three inside up | Mixing up the rules                       | The mother's **open** must be cleared |
+| Stop at the second candle's low                          | Wanting a small stop                      | Below the mother's low                |
+| Treating morning star and three inside up as the same    | Not checking where the second candle sits | Inside = inside; below = star         |
+
+## Pro tips
+
+<Callout type="tip">
+  If the third-close entry feels too high, place a limit order at the mother's
+  open. A broken obstacle is often retested once, and entering there keeps the
+  same stop with much less risk. More in [Role
+  Reversal](/en/learn/05-support-resistance/02-role-reversal).
+</Callout>
+
+<Callout type="tip">
+  How to draw supply and demand zones: [Supply and
+  Demand](/en/learn/05-support-resistance/03-supply-demand). Trading H4, check
+  the D1 zones; trading H1, check H4. Always look one step up.
+</Callout>
+
+## Summary
+
+<KeyTakeaways>
+
+- Three inside up = a long red mother, a small harami inside it, then a green candle closing above the mother's open.
+- It is a confirmed harami: the first obstacle (the mother's open) has already been cleared.
+- Enter at the third close or on a retest of the mother's open; stop below the mother's low.
+- The entry is late, so measure obstacles above in advance, including higher-timeframe zones.
+
+</KeyTakeaways>
+
+## Practice and your own backtest
+
+Open XAUUSD H1 or GBPUSD H4 in TradingView, with the next timeframe up beside it. Find at least 20 three inside ups. Log one row each:
+
+| Date | At support? | R to the higher-TF zone | Mother-open retest came? | Entry type | Result (R) |
+| :--- | :---------- | :---------------------- | :----------------------- | :--------- | :--------- |
+|      |             |                         |                          |            |            |
+
+Then split into "zone more than 1.5R away" and "within 1.5R" and compare the average R. Do not draw conclusions from fewer than 30 samples.
+
+## Quiz
+
+1. What is the difference between three inside up and a bullish harami?
+2. The third candle closes past the middle of the mother body but below the mother's open. Is it three inside up?
+3. Which candle holds the main difference between three inside up and a morning star?
+4. Which checklist boxes would have filtered out the trade in Example 2?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** A bullish harami is a two-candle pattern, only a pause. In three inside up the third candle clears the mother's open and confirms the harami.
+
+**2.** No. That is a partial confirmation of the harami. Three inside up needs a close above the mother's open.
+
+**3.** The second candle. In three inside up it sits inside the mother's body; in a morning star it sits near or below the first candle's close.
+
+**4.** The first box (no support), the fourth box (only about 1.48R to the zone) and the fifth box (the daily zone right ahead).
+
+</details>
+
+## Next steps
+
+- Before this: [Bullish Harami](/en/patterns/bullish-harami).
+- How to look one timeframe up: [Multi-Timeframe Entry](/en/learn/09-price-action-entries-strategies/03-multi-timeframe-entry-top-down).
+- Same family: [Three Inside Down](/en/patterns/three-inside-down), [Morning Star](/en/patterns/morning-star), [Bullish Engulfing](/en/patterns/bullish-engulfing).
+
+<Disclaimer />

@@ -1,42 +1,372 @@
 ---
-title: "ডোজি (Doji / Indecision)"
-description: "একটি নিরপেক্ষ প্যাটার্ন যেখানে ওপেন এবং ক্লোজ প্রাইস প্রায় হুবহু এক থাকে, যা বায়ার এবং সেলারদের মধ্যকার চরম সিদ্ধান্তহীনতা নির্দেশ করে।"
+title: "Doji: open আর close সমান, বাজার যখন সিদ্ধান্ত নিতে পারে না"
+description: "Doji কীভাবে চিনবেন, চার রকম doji-র তফাত, কখন এটা turning point-এর সতর্কসংকেত আর কখন noise, confirmation-এর পর entry ও stop — জেতা ও হারা chart সহ।"
 type: neutral
-category: "ডোজি (Doji / Indecision)"
-winrate: "65% - 70%"
-riskReward: "1:2.5 to 1:4"
-maxRisk: "1%"
-bestLocation: "Key Support / Resistance Boundary / Trend Exhaustion Point"
-chartId: "doji-indecision-01"
-tags: [pattern, candlestick, doji]
+category: momentum-indecision
+level: beginner
+candleCount: 1
+signal: indecision
+chartId: doji-win-01
+tags: [pattern, candlestick, doji, indecision]
+status: done
+sources:
+  - type: book
+    title: "Japanese Candlestick Charting Techniques - Steve Nison"
+    note: "Doji, doji at tops vs bottoms, long-legged, dragonfly ও gravestone doji"
+  - type: blog
+    title: "Doji Candlestick - Investopedia"
+    url: "https://www.investopedia.com/terms/d/doji.asp"
+updated: 2026-11-06
 ---
 
-<div className="flex gap-6 items-end my-8 p-8 bg-zinc-950 border border-border/50 rounded-2xl w-max relative overflow-hidden">
-  <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:20px_20px]"></div>
-  <div className="relative z-10 flex gap-6">
-    <Candle color="bull" bodyH="h-8" topW="h-4" botW="h-4" offset="mt-8" />
-    <Candle color="neutral" bodyH="h-[2px]" topW="h-8" botW="h-8" offset="mt-8" />
-    <Candle color="bear" bodyH="h-8" topW="h-4" botW="h-4" offset="mt-8" />
-  </div>
-</div>
+Chart-এ একটা "যোগ চিহ্ন" দেখলেন, open আর close একই দামে। অনেক বই বলে "doji মানে reversal", তাই সঙ্গে সঙ্গে trend-এর বিপরীতে ঢুকলেন। কিন্তু M15 chart-এ দিনে এরকম দশটা doji আসে, আর বেশিরভাগই কিছু বোঝায় না। Doji-র শক্তি তার আকারে নয়, তার জায়গায়।
 
-## Market Psychology & প্রাতিষ্ঠানিক অর্ডার ফ্লো
-সেশন চলাকালীন বায়াররা দাম ওপরে নেওয়ার চেষ্টা করে এবং সেলাররা দাম নিচে নামানোর চেষ্টা করে। কিন্তু দিনশেষে কোনো পক্ষই আধিপত্য বিস্তার করতে পারে না এবং প্রাইস ওপেনিং প্রাইসেই ফিরে আসে। একটি চলমান ট্রেন্ডের পর ডোজি তৈরি হওয়া মানে সেই ট্রেন্ডের গতি শূন্যে নেমে এসেছে এবং যে কোনো মুহূর্তে তীব্র রিভার্সাল হতে পারে।
+## এক নজরে
 
-## ক্যান্ডেল অ্যানাটমির ৫টি অপরিহার্য শর্ত
-1. **Virtually No Real Body:** ওপেন এবং ক্লোজ প্রাইস একই টিক বা ১-২ পিপ্স ব্যবধানে থাকবে।
-2. **Both Side Shadows:** উপরের এবং নিচের উভয় দিকেই লক্ষণীয় উইক থাকতে হবে।
-3. **Types:** স্ট্যান্ডার্ড ডোজি, লং-লেগড ডোজি, ড্রাগনফ্লাই ডোজি (বুলিশ), অথবা গ্রেভস্টোন ডোজি (বিয়ারিশ)।
-4. **Trend Context:** দীর্ঘ ট্রেন্ডের পর গঠিত হলে এর গুরুত্ব বহুগুণ বৃদ্ধি পায়।
-5. **Never Trade Alone:** ডোজি একা কোনো ট্রেড সিগন্যাল নয়; পরবর্তী ক্যান্ডেলের দিকনির্দেশনাই মূল বিষয়।
+| বিষয়                | Doji                                                                                                                                      |
+| :------------------- | :---------------------------------------------------------------------------------------------------------------------------------------- |
+| ধরন                  | Neutral, indecision candle, একটি candle                                                                                                   |
+| কোথায় খুঁজবেন       | লম্বা move-এর শেষে, চিহ্নিত support বা resistance-এ                                                                                       |
+| চেনার মূল চিহ্ন      | Open আর close প্রায় সমান, body প্রায় একটি রেখা                                                                                          |
+| Confirmation         | পরের candle doji-র high-এর উপরে (support-এ) বা low-এর নিচে (resistance-এ) close করা                                                       |
+| Stop                 | Doji-র বিপরীত প্রান্তের বাইরে, spread-সহ buffer                                                                                           |
+| বাতিল (invalidation) | Confirmation-এর বদলে trend-এর দিকে doji-র প্রান্ত ভেঙে close                                                                              |
+| দেখতে একই রকম        | [Spinning Top](/bn/patterns/spinning-top), [Dragonfly Doji](/bn/patterns/dragonfly-doji), [Gravestone Doji](/bn/patterns/gravestone-doji) |
+| বিপরীত pattern       | [Marubozu](/bn/patterns/marubozu) (বড় body, wick নেই)                                                                                    |
 
-## লাভজনক ট্রেড নেওয়ার ৩টি প্রমাণিত কৌশল (Execution Blueprint)
-**কৌশল ১ (ব্রেকআউট ডিরেকশনাল এন্ট্রি):** ডোজির পরবর্তী ক্যান্ডেল যেদিকে ক্লোজ হয় সেদিকে এন্ট্রি নিন। স্টপ লস ডোজির বিপরীত প্রান্তে।
-**কৌশল ২ (মর্নিং/ইভনিং স্টার কনফার্মেশন):** ডোজির পর তৃতীয় ক্যান্ডেলটি বিপরীত দিকে স্ট্রং মুভ দিলে ৩-ক্যান্ডেল রিভার্সাল হিসেবে ট্রেড করুন।
-**কৌশল ৩ (রেঞ্জ ব্রেক স্নাইপার):** ডোজি তৈরি হওয়ার সময় লোয়ার টাইমফ্রেমে তৈরি হওয়া রেঞ্জের ব্রেকআউটে এন্ট্রি নিন।
+## এই লেখা পড়ে আপনি যা পারবেন
 
-## কোথায় সফল হবে বনাম কোথায় ফাঁদে পড়বেন
-- ✅ **A+ হাই-প্রোবাবিলিটি সেটআপ:** উচ্চ টাইমফ্রেমের সাপোর্ট/রেজিস্ট্যান্স, চরম ওভারবট বা ওভারসোল্ড আরএসআই, এবং উচ্চ ভলিউম ডোজি।
-- ❌ **লস খাওয়ার ট্র্যাপ (Avoid):** লো-ভলিউম সেশনে বা কোনো লেভেল ছাড়া চপি কনসলিডেশনের মাঝখানে।
+- Doji আর spinning top-এর তফাত **মেপে বলতে পারবেন**।
+- চার রকম doji (standard, long-legged, dragonfly, gravestone) **আকার দেখে চিনতে পারবেন**।
+- কোন doji turning point-এর সতর্কসংকেত আর কোনটা noise, তা **জায়গা দেখে আলাদা করতে পারবেন**।
+- Confirmation-এর পর entry, stop ও target **ধাপে ধাপে বসাতে পারবেন**।
 
-> ⚠️ **প্রো মানি ম্যানেজমেন্ট ও সাইকোলজি টিপ:** ডোজি হলো ট্রাফিক লাইটের হলুদ বাতির মতো। এটি বলে ‘প্রস্তুত হও’, সবুজ বাতি (পরবর্তী ক্যান্ডেল) না জ্বলা পর্যন্ত এক্সিলারেটরে চাপ দেবেন না। সর্বোচ্চ ১% থেকে ২% ঝুঁকি নিয়ে প্রতিটি ট্রেডে নির্ধারিত স্টপ লস ব্যবহার করুন।
+## কেন জরুরি
+
+- **সবচেয়ে পরিচিত, সবচেয়ে ভুল বোঝা candle।** প্রায় সবাই doji চেনে, কিন্তু বেশিরভাগ doji trade-যোগ্য নয়।
+- **Momentum থামার পরিষ্কার ছবি।** বড় candle-এর move-এর পর doji মানে যে পক্ষ জিতছিল, তারা এই candle-এ এক pip-ও এগোতে পারেনি।
+- **পুরো পরিবারের ভিত্তি।** Dragonfly, gravestone, long-legged doji আর morning বা evening star-এর মাঝের candle বুঝতে আগে সাধারণ doji বুঝতে হবে।
+
+পূর্বশর্ত: [Anatomy of a Candle](/bn/learn/04-candlesticks/01-anatomy-of-a-candle) এবং [Candle Context](/bn/learn/04-candlesticks/05-candle-context)।
+
+## Doji কী
+
+**Doji হলো এমন একটি candle, যার open আর close একই বা প্রায় একই দামে, ফলে body প্রায় একটি আনুভূমিক রেখা।** উপরে-নিচে wick থাকতে পারে, তাই দেখতে প্রায়ই যোগ চিহ্ন (+) বা ক্রুশের মতো। "Doji" জাপানি শব্দ, মোটামুটি অর্থ "একই সময়ে" বা "ভুল করে": দিন শেষে দাম যেখানে শুরু, সেখানেই।
+
+একটা দাঁড়িপাল্লা ভাবুন। সারাদিন দুই দিকে ওজন চাপানো হয়েছে, পাল্লা একবার এদিক, একবার ওদিক নেমেছে। দিনশেষে পাল্লা ঠিক মাঝখানে। কোনো দিক ভারী হয়নি।
+
+<CandleDiagram
+  title="চার রকম doji"
+  candles={[
+    {
+      o: 50,
+      h: 56,
+      l: 44,
+      c: 50.2,
+      label: "Standard",
+      note: "দুই দিকে মাঝারি wick",
+    },
+    {
+      o: 50,
+      h: 64,
+      l: 36,
+      c: 50.2,
+      label: "Long-legged",
+      note: "দুই দিকে খুব লম্বা wick",
+    },
+    {
+      o: 60,
+      h: 60.3,
+      l: 42,
+      c: 60.1,
+      label: "Dragonfly",
+      note: "open ≈ close ≈ high",
+    },
+    {
+      o: 42,
+      h: 60,
+      l: 41.8,
+      c: 42.1,
+      label: "Gravestone",
+      note: "open ≈ close ≈ low",
+    },
+  ]}
+  caption="সব doji-তে open ≈ close। তফাত শুধু wick কোথায় আর কত লম্বা।"
+/>
+
+### চেনার নিয়ম
+
+| নিয়ম                                       | বাধ্যতামূলক?          | কেন                                                           |
+| :------------------------------------------ | :-------------------- | :------------------------------------------------------------ |
+| Open আর close প্রায় সমান (body খুবই পাতলা) | হ্যাঁ                 | Body দেখা গেলে সেটা spinning top                              |
+| আশেপাশের candle-এর তুলনায় body নগণ্য       | হ্যাঁ                 | Doji আপেক্ষিক: সব candle ছোট হলে "প্রায় সমান" কিছু বোঝায় না |
+| Candle বন্ধ হয়েছে                          | হ্যাঁ                 | চলমান candle-এর open-close যেকোনো মুহূর্তে বদলায়             |
+| আগে স্পষ্ট move (বড় body-র candle)         | না (কিন্তু খুব জরুরি) | Move-এর পর থেমে যাওয়াই doji-র আসল খবর                        |
+| চিহ্নিত level-এর গায়ে                      | না (কিন্তু খুব জরুরি) | Level ছাড়া doji প্রায়ই শুধু বিরতি                           |
+
+**চতুর্থ রূপ: four-price doji।** Open, high, low, close চারটিই এক দামে, একটি সমতল দাগ। Forex-এ এটা প্রায় শুধু ছুটির দিনের খুব পাতলা বাজারে বা data feed-এর ফাঁকে দেখা যায়। এটা trade signal নয়, শুধু "বাজার প্রায় বন্ধ ছিল"।
+
+## শক্তিশালী বনাম দুর্বল doji
+
+<DiagramRow>
+  <CandleDiagram
+    title="অর্থবহ"
+    verdict="good"
+    verdictLabel="নজর দিন"
+    candles={[
+      { o: 64, h: 65, l: 57, c: 58, dim: true },
+      { o: 58, h: 59, l: 51, c: 52, dim: true },
+      { o: 52, h: 53, l: 45, c: 46, dim: true },
+      { o: 46, h: 49, l: 42, c: 46.1, label: "support-এ" },
+      { o: 46.1, h: 53, l: 45.5, c: 52.5, dim: true },
+    ]}
+    levels={[{ price: 44, label: "support", tone: "support" }]}
+    caption="বড় bearish candle-এর পর support-এ doji, পরের candle high ভেঙে উপরে close।"
+  />
+  <CandleDiagram
+    title="অর্থহীন"
+    verdict="bad"
+    verdictLabel="এড়িয়ে চলুন"
+    candles={[
+      { o: 50, h: 51.5, l: 48.5, c: 49.5, dim: true },
+      { o: 49.5, h: 51, l: 48, c: 50.5, dim: true },
+      { o: 50.5, h: 52, l: 49, c: 50.6, label: "শান্ত বাজারে" },
+      { o: 50.6, h: 52, l: 49, c: 49.8, dim: true },
+      { o: 49.8, h: 51.5, l: 48.5, c: 50.4, dim: true },
+    ]}
+    caption="সব candle-ই ছোট, তার মধ্যে আরেকটি ছোট candle। এখানে doji নতুন কিছু বলে না।"
+  />
+</DiagramRow>
+
+| মান যাচাই       | অর্থবহ                                 | অর্থহীন                                     |
+| :-------------- | :------------------------------------- | :------------------------------------------ |
+| আগে কী ছিল      | বড় body-র স্পষ্ট move                 | এমনিতেই ছোট ছোট candle                      |
+| কোথায়          | চিহ্নিত support বা resistance-এর গায়ে | Range বা trend-এর মাঝখানে                   |
+| Level-এর অবস্থা | তাজা বা একবার পরীক্ষিত level           | বহুবার ছোঁয়া level, প্রতিবার দুর্বল bounce |
+| পরের candle     | Doji-র প্রান্ত ভেঙে বিপরীতে close      | আবার trend-এর দিকে বা আরেকটি ছোট candle     |
+| সামনে জায়গা    | সবচেয়ে কাছের বাধা পর্যন্ত অন্তত 1.5R  | কাছের বাধা 1R-এর মধ্যে                      |
+
+<Callout type="note">
+  Nison-এর একটি পর্যবেক্ষণ: uptrend-এর শেষে top-এ doji বেশি গুরুত্বপূর্ণ, কারণ
+  উপরে ওঠার জন্য নতুন buyers লাগে, আর doji দেখায় তারা থেমেছে। Downtrend-এর
+  bottom-এ দাম নিজের ভারেও নামতে পারে, তাই সেখানে doji-র পর confirmation আরও
+  জরুরি। এটা বইয়ের পর্যবেক্ষণ, যাচাই-করা পরিসংখ্যান নয়।
+</Callout>
+
+### দেখতে একই রকম, অর্থ আলাদা
+
+| Pattern              | আকার                                       | তফাত                                              |
+| :------------------- | :----------------------------------------- | :------------------------------------------------ |
+| **Doji**             | Body প্রায় শূন্য, দুই দিকে wick           | পূর্ণ সমতা; দিক নেই                               |
+| **Spinning Top**     | ছোট কিন্তু দৃশ্যমান body, দুই দিকে wick    | প্রায় একই অর্থ, সমতা একটু কম নিখুঁত              |
+| **Dragonfly Doji**   | Open ≈ close ≈ high, শুধু নিচে লম্বা wick  | নিচের দাম প্রত্যাখ্যাত; support-এ bullish ঝোঁক    |
+| **Gravestone Doji**  | Open ≈ close ≈ low, শুধু উপরে লম্বা wick   | উপরের দাম প্রত্যাখ্যাত; resistance-এ bearish ঝোঁক |
+| **Long-Legged Doji** | Body প্রায় শূন্য, দুই দিকে খুব লম্বা wick | তীব্র টানাপোড়েন, volatility বেশি                 |
+
+## Candle-এর ভেতরের গল্প
+
+Downtrend-এর শেষে support-এ একটি doji সময় ধরে পড়লে একটি প্রচলিত ব্যাখ্যা এরকম:
+
+1. **Sellers আগের মতো নামায়।** দাম open থেকে নিচে যায়, support-এর সামান্য নিচেও উঁকি দেয়।
+2. **Buyers ফিরিয়ে আনে।** Support-এ buy order আর short-দের profit নেওয়া মিলে দাম উঠে open-এর উপরেও যায়।
+3. **দিনশেষে ঠিক শুরুর জায়গায়।** Close প্রায় open-এ। আগের candle-গুলোয় sellers প্রতিবার নিচে close করছিল, এবার পারেনি।
+
+ফল: selling momentum থেমেছে, কিন্তু buyers এখনো জেতেনি। পরের candle doji-র high-এর উপরে close করলে buyers প্রথম স্পষ্ট জয় পেল। Low-এর নিচে close করলে sellers আবার নিয়ন্ত্রণে।
+
+<Callout type="note">
+  এটি একটি প্রচলিত ব্যাখ্যা, প্রমাণিত ঘটনা নয়। Chart দেখে কে কিনেছে বা বেচেছে,
+  তা জানা যায় না। আমরা শুধু দামের আচরণ দেখি।
+</Callout>
+
+## কোথায় কাজ করে, কোথায় করে না
+
+<Compare
+  leftLabel="যেখানে doji-তে নজর দেবেন"
+  rightLabel="যেখানে doji প্রায়ই noise"
+  left="- বড় candle-এর লম্বা move-এর পর
+- তাজা বা একবার পরীক্ষিত support বা resistance-এ
+- Higher timeframe-এর level-এর গায়ে
+- H4 বা D1-এর মতো বড় timeframe-এ
+- পরের candle স্পষ্ট confirmation দিলে"
+  right="- M1-M15-এর মতো ছোট timeframe-এ, যেখানে doji খুব সাধারণ
+- শান্ত বাজারে, যখন সব candle-ই ছোট
+- বহুবার ছোঁয়া level-এ, যেখানে প্রতিটি bounce দুর্বল হচ্ছে
+- বড় news-এর ঠিক আগে
+- ছুটির দিনের পাতলা বাজারে (four-price doji)"
+/>
+
+## ধাপে ধাপে: doji trade
+
+<Steps>
+
+### ধাপ ১: আগে move আর level
+
+স্পষ্ট move চলছে কি না আর সামনে চিহ্নিত level আছে কি না, আগে দেখুন। Level কতবার ছোঁয়া হয়েছে আর bounce-গুলো ছোট হচ্ছে কি না, সেটাও লিখে রাখুন।
+
+### ধাপ ২: Candle বন্ধ হওয়ার অপেক্ষা
+
+চলমান candle-কে doji ধরবেন না। শেষ মিনিটে open-close-এর ফাঁক বড় হয়ে যেতে পারে।
+
+### ধাপ ৩: মাপুন
+
+Body আশেপাশের candle-এর তুলনায় নগণ্য? আগের candle-গুলো স্পষ্ট বড় ছিল? কোন রকম doji: standard, long-legged, dragonfly না gravestone?
+
+### ধাপ ৪: Confirmation-এর অপেক্ষা ও entry
+
+Doji নিজে দিক দেয় না। Support-এ হলে পরের candle-কে doji-র high-এর উপরে close করতে হবে।
+
+| Entry                    | কোথায়                                  | সুবিধা                          | অসুবিধা                          |
+| :----------------------- | :-------------------------------------- | :------------------------------ | :------------------------------- |
+| **High break** (প্রচলিত) | Doji-র high-এর একটু উপরে buy stop       | দাম দিক দেখালে তবেই ঢোকা        | শুধু wick-এ fill হয়ে ফিরতে পারে |
+| **Confirmation close**   | Confirmation candle বন্ধ হলে market buy | Close দেখে ঢোকা, ভুয়া break কম | Entry উপরে, stop বড়             |
+| **Doji-তে সরাসরি**       | Doji বন্ধ হতেই buy                      | সবচেয়ে ভালো দাম                | দিক জানা নেই                     |
+
+### ধাপ ৫: Stop বসান
+
+Doji-র low-এর নিচে আর support-এর নিচেও, [spread](/bn/learn/01-foundations/04-spread-commission-swap) ও buffer-সহ। Long-legged doji-তে range বড়, তাই stop বড়; size কমান।
+
+### ধাপ ৬: Size ও target
+
+Entry থেকে stop-এর দূরত্ব দিয়ে [position size](/bn/learn/08-risk-management/02-position-sizing) বের করুন, ঝুঁকি account-এর ১%-এর বেশি নয়। Target বসানোর আগে **সবচেয়ে কাছের বাধা** খুঁজুন: পুরোনো high, lower high, round number। সেখানে পর্যন্ত [risk reward](/bn/learn/08-risk-management/03-risk-reward) অন্তত 1:1.5 না হলে বাদ দিন।
+
+### ধাপ ৭: পরিচালনা
+
+দাম doji-র low-এর নিচে close করলে ধারণা ভুল, বেরিয়ে যান। প্রথম বাধায় পৌঁছালে partial বা stop break-even-এ আনার কথা ভাবুন।
+
+</Steps>
+
+### Trade-এর আগে checklist
+
+<Checklist
+  id="pattern-doji-pretrade-bn"
+  items={[
+    "Doji আসার আগেই level চিহ্নিত ছিল, আর এটা সেই level-এর গায়ে বসেছে?",
+    "আকার নিয়ম মানছে (body নগণ্য, আগের candle-গুলো স্পষ্ট বড়)?",
+    "Doji আর confirmation candle দুটোই বন্ধ হয়েছে?",
+    "সবচেয়ে কাছের বাধা পর্যন্ত risk reward অন্তত 1:1.5?",
+    "Higher timeframe-এর কোনো level trade-এর ঠিক সামনে নেই?",
+  ]}
+/>
+
+একটি ঘরও খালি থাকলে trade বাদ দিন।
+
+## উদাহরণ ১: যখন কাজ করে (কাল্পনিক)
+
+<Chart
+  id="doji-win-01"
+  height={420}
+  caption="XAUUSD H1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — একবার পরীক্ষিত support-এ doji, পরের candle high ভাঙলে long।"
+/>
+
+- **কী দেখা যাচ্ছিল:** ৫ নম্বর candle প্রায় 2318.55-এ support তৈরি করেছে। ৬-১০ নম্বর প্রায় 2355 পর্যন্ত ওঠে, ১১-১৭ নম্বর আবার সেই support-এ নামে।
+- **Doji:** ১৮ নম্বর 2322.05-এ open, 2322.15-এ close। Body মাত্র 10 সেন্ট, high 2326.25, low 2317.45। Low support-এর সামান্য নিচে উঁকি দিয়ে ফিরেছে।
+- **সিদ্ধান্ত:** Buy stop 2326.75 (high-এর 50 সেন্ট উপরে)। Stop 2315.45 (doji low আর support দুটোরই নিচে), ঝুঁকি $11.30। Target 2349.35 (2R), আগের bounce-এর high প্রায় 2355-এর নিচেই।
+- **ফল:** ১৯ নম্বর doji-র high ভেঙে 2328.75-এ close করে, order fill হয়। ২৬ নম্বর candle target ছোঁয়।
+- **শিক্ষা:** Move ছিল, level তাজা ছিল (একবার মাত্র পরীক্ষিত), আর entry এসেছে confirmation close-এর পর।
+
+<TradeSetup
+  direction="long"
+  pair="XAUUSD"
+  entry={2326.75}
+  stop={2315.45}
+  target={2349.35}
+/>
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়। সব doji turning point নয়, আর কোনো ফল গ্যারান্টি নয়।)
+
+## উদাহরণ ২: যখন ফাঁদ হয় (কাল্পনিক)
+
+<Chart
+  id="doji-fail-01"
+  height={420}
+  caption="GBPUSD D1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — lower high-এর নিচে তৃতীয়বার ছোঁয়া support-এ doji। Confirmation আসে, তবু stop।"
+/>
+
+- **কী দেখা যাচ্ছিল:** ৪ ও ৯ নম্বর candle 1.2600-এর support পরীক্ষা করেছে। দ্বিতীয় bounce প্রায় 1.2709-এ থেমেছে, প্রথমটার চেয়ে নিচে। প্রতিবার sellers আরও তাড়াতাড়ি ফিরছে।
+- **Doji:** ১৫ নম্বর 1.2614-এ open, 1.2615-এ close, high 1.2642, low 1.2588। আকারে নিখুঁত।
+- **ভুল সিদ্ধান্ত:** "Support-এ doji, confirmation-ও এসেছে।" ১৬ নম্বর 1.2649-এ close করে, buy stop 1.2645 fill হয়। Stop 1.2578, ঝুঁকি 67 pip, target 1.2779 (2R)। কিন্তু lower high 1.2709 মাত্র 64 pip দূরে, প্রায় 1R।
+- **কী হলো:** ১৭ নম্বর নিচে ঘোরে, ১৮ নম্বর support আর stop দুটোই ভাঙে।
+- **কেন ব্যর্থ:** আকার আর confirmation ঠিক ছিল, কিন্তু level ক্লান্ত (তৃতীয় ছোঁয়া, lower high), আর সবচেয়ে কাছের বাধা 1R-এর মধ্যে। Checklist-এর চতুর্থ ঘরেই trade বাদ পড়ত।
+
+**শিক্ষা:** বইয়ের 2R নয়, সবচেয়ে কাছের বাধা পর্যন্ত জায়গা মাপুন। Stop আগে বসানো ছিল বলে লোকসান 1R-এ আটকেছে।
+
+## সাধারণ ভুল
+
+| ভুল                                  | কেন হয়                      | কী করবেন                                                 |
+| :----------------------------------- | :--------------------------- | :------------------------------------------------------- |
+| Doji দেখেই trend-এর বিপরীতে ঢোকা     | "Doji মানে reversal" ধারণা   | পরের candle-এর confirmation close-এর অপেক্ষা করুন        |
+| ছোট timeframe-এর প্রতিটি doji গোনা   | সব doji সমান মনে করা         | H4-D1-এ খুঁজুন; ছোট TF-এ শুধু level-এর গায়েরগুলো        |
+| শান্ত বাজারের ছোট candle-কে doji ধরা | Doji-কে আপেক্ষিকভাবে না মাপা | আশেপাশের candle-এর তুলনায় body মাপুন                    |
+| বহুবার ছোঁয়া level-এ doji-তে ভরসা   | "Support তো আছে"             | Bounce ছোট হচ্ছে কি না দেখুন; lower high = sellers চাপছে |
+| Target শুধু 2R ধরে বসানো             | কাছের বাধা না দেখা           | সবচেয়ে কাছের high বা lower high পর্যন্ত R:R মাপুন       |
+| Stop doji-র ভেতরে রাখা               | ছোট stop-এর লোভ              | Doji-র প্রান্ত আর level দুটোরই ওপারে; size কমান          |
+
+## Pro tips
+
+<Callout type="tip">
+  Doji-র পরের candle-ই সবচেয়ে জরুরি। Doji + বড় বিপরীত candle মিলে প্রায়ই
+  [Morning Star](/bn/patterns/morning-star) বা [Evening
+  Star](/bn/patterns/evening-star) তৈরি হয়। তখন আলাদা doji নয়, পুরো তিন-candle
+  pattern-এর নিয়মে পড়ুন।
+</Callout>
+
+<Callout type="tip">
+  একটি সহজ মাপ: doji-র body যদি আগের ১০টি candle-এর গড় body-র দশ ভাগের এক ভাগের
+  কম হয়, সেটা স্পষ্ট doji। এটা কাজ চালানোর মাপ, আদর্শ সংজ্ঞা নয়; নিজের
+  backtest-এ ঠিক করুন।
+</Callout>
+
+<Callout type="warning">
+  "Doji-র win rate ৬৫-৭০%" জাতীয় সংখ্যা যাচাই ছাড়া মানবেন না। Doji-কে কীভাবে
+  গোনা হয়, কোন timeframe, কোন জায়গা, তার ওপর ফল পুরো বদলে যায়। নিজের
+  backtest-ই একমাত্র বিশ্বাসযোগ্য সংখ্যা।
+</Callout>
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- Doji = open ≈ close, body প্রায় একটি রেখা; চার রূপ: standard, long-legged, dragonfly, gravestone।
+- Doji সিদ্ধান্তহীনতা দেখায়, দিক নয়। একা trade signal নয়।
+- লম্বা move-এর পর তাজা level-এ নজর দিন; শান্ত বাজারে, ছোট TF-এ বা ক্লান্ত level-এ প্রায়ই noise।
+- Entry শুধু confirmation-এর পর; target-এর আগে সবচেয়ে কাছের বাধা পর্যন্ত R:R মাপুন।
+
+</KeyTakeaways>
+
+## অনুশীলন ও নিজের backtest
+
+TradingView-এ XAUUSD H1 বা GBPUSD D1 খুলুন। অন্তত ২০টি doji খুঁজুন, যেগুলো স্পষ্ট move-এর পর এসেছে। প্রতিটির জন্য একটি সারি লিখুন:
+
+| তারিখ | Doji-র রূপ | Level কতবার ছোঁয়া? | Confirmation এসেছে? | কাছের বাধা পর্যন্ত R | ফল (R) |
+| :---- | :--------- | :------------------ | :------------------ | :------------------- | :----- |
+|       |            |                     |                     |                      |        |
+
+এরপর "তাজা level" আর "তিন বা বেশিবার ছোঁয়া level" দুই দলে ভাগ করে গড় R তুলনা করুন। Top-এর doji আর bottom-এর doji আলাদা করেও দেখুন। অন্তত ৩০টি নমুনা ছাড়া সিদ্ধান্ত নেবেন না।
+
+## কুইজ
+
+1. একটি candle-এর open 1.1000, close 1.1006, আর আশেপাশের candle-এর body প্রায় 5 pip। এটি কি doji?
+2. Dragonfly আর gravestone doji-র মূল তফাত কী?
+3. Support-এ doji, পরের candle confirm করেছে, কিন্তু 1R দূরে একটি lower high। কী করবেন?
+4. Nison-এর মতে কোথায় doji-র পর confirmation আরও জরুরি, top না bottom?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** সম্ভবত না। 6 pip body আশেপাশের 5 pip body-র চেয়ে ছোট নয়। Doji আপেক্ষিক: আশেপাশের তুলনায় body নগণ্য হতে হবে।
+
+**২.** Dragonfly-তে open, close আর high প্রায় এক জায়গায়, শুধু নিচে লম্বা wick: নিচের দাম প্রত্যাখ্যাত। Gravestone-এ open, close আর low এক জায়গায়, শুধু উপরে লম্বা wick: উপরের দাম প্রত্যাখ্যাত।
+
+**৩.** Trade বাদ দিন, বা lower high ভাঙার পর নতুন setup খুঁজুন। সবচেয়ে কাছের বাধা পর্যন্ত R:R 1:1.5-এর কম।
+
+**৪.** Bottom-এ। Nison লিখেছেন doji top-এ বেশি অর্থবহ; downtrend-এ দাম নিজের ভারেও নামতে পারে, তাই bottom-এ doji-র পর confirmation আরও দরকার।
+
+</details>
+
+## পরের ধাপ
+
+- আগে: [Anatomy of a Candle](/bn/learn/04-candlesticks/01-anatomy-of-a-candle)।
+- Signal কখন trade হয়: [Confirmation vs Trigger](/bn/learn/09-price-action-entries-strategies/04-confirmation-vs-trigger)।
+- একই পরিবারের pattern: [Dragonfly Doji](/bn/patterns/dragonfly-doji), [Gravestone Doji](/bn/patterns/gravestone-doji), [Long-Legged Doji](/bn/patterns/long-legged-doji)।
+
+<Disclaimer />

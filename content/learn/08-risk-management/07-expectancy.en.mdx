@@ -1,0 +1,195 @@
+---
+title: "Expectancy: How Much Your System Makes Per Trade on Average"
+description: "What expectancy is, how to calculate it, why a 43% win rate can still profit and a 63% win rate can still lose, with R-multiples and equity curves."
+level: intermediate
+tags: [risk-management, expectancy, r-multiple, win-rate, system]
+status: done
+sources:
+  - type: blog
+    title: "Expected Value / Expectancy - Investopedia"
+    url: "https://www.investopedia.com/terms/e/expected-value.asp"
+  - type: book
+    title: "Trade Your Way to Financial Freedom - Van K. Tharp"
+    url: ""
+    note: "The idea of R-multiple and expectancy"
+updated: 2026-11-06
+---
+
+# Expectancy: How Much Your System Makes Per Trade on Average
+
+Two friends each made 30 trades in the same month. One won 43% and was in profit. The other won 63% and was at a loss. What is the difference? The difference is not in the win rate. It is in the expectancy.
+
+## What you will be able to do
+
+- **Explain** what an R-multiple is and why it is useful.
+- **Calculate** expectancy.
+- **Check a system** by combining win rate and ratio.
+- **Understand** why losing streaks come even with positive expectancy.
+
+## Why it matters
+
+- **Win rate alone gives a false picture.** Without [Risk:Reward](/en/learn/08-risk-management/03-risk-reward), the win rate means nothing.
+- **Expectancy measures average behavior, not the future.** It tells you what to expect per trade over the long run.
+- **It steadies your decisions.** It is the basis for deciding whether to leave a system during a bad run.
+
+Prerequisites: the Risk:Reward ratio and [Risk per Trade](/en/learn/08-risk-management/01-risk-per-trade).
+
+## What is expectancy
+
+**Expectancy is the average profit or loss you can expect per trade from a system, measured in units of risk (R).**
+
+Think of the opposite of a lottery. A lottery ticket has an average loss, so most people lose. If your system's average is positive, then playing with risk makes sense.
+
+**R-multiple:** the result of a trade divided by its risk. If you risk 1% and gain 2%, that is +2R. If the stop is hit, it is −1R.
+
+Formula:
+
+**Expectancy (R) = (win rate × average win in R) − (loss rate × average loss in R)**
+
+## What it looks like on a chart
+
+<Chart
+  id="expectancy-positive-01"
+  height={440}
+  caption="Account equity (educational, imaginary trade sequence, 1% risk): 30 trades, 13 wins (about 43%), average win 2R, average loss 1R. Expectancy is about +0.3R."
+/>
+
+Calculation: 0.433 × 2 − 0.567 × 1 = +0.3R. That is 0.3 times the risk per trade on average. Over 30 trades that is about +9R, which at 1% risk is about 9% (here the account ends at about 10,904).
+
+Notice that this curve does not go straight up. In the middle there are several losses in a row (here, at most 4 in a row). **Positive expectancy does not mean there are no losing streaks.**
+
+## Step by step: your own expectancy
+
+<Steps>
+
+### Step 1: Take at least 20-30 trades
+
+From a backtest, demo or live. The more, the more reliable.
+
+### Step 2: Write each one in R
+
+A stop-out is −1R. A gain of twice the risk is +2R. Leave out costs (spread, commission) for now.
+
+### Step 3: Find the win rate and averages
+
+Wins ÷ total, the average R of the wins, the average R of the losses.
+
+### Step 4: Put it in the formula
+
+Expectancy = (win rate × average win) − (loss rate × average loss).
+
+### Step 5: Evaluate
+
+If it is positive and still positive after costs, the system survives. If it is negative, it must change.
+
+</Steps>
+
+## Example 1: when it works (synthetic)
+
+The chart above:
+
+- **Win rate:** about 43%. **Average win:** 2R. **Average loss:** 1R.
+- **Expectancy:** +0.3R.
+- **Result:** about +9R over 30 trades.
+- **Lesson:** profit is possible even with fewer wins, if the wins are bigger than the losses.
+
+(Synthetic educational example. This is not a real trade. The result depends on the sequence.)
+
+## Example 2: when it fails (synthetic)
+
+<Chart
+  id="expectancy-negative-01"
+  height={440}
+  caption="Account equity (educational, imaginary): 30 trades, 19 wins (about 63%), but average win 0.5R and average loss 1R. Expectancy is about −0.05R, and the curve falls slowly."
+/>
+
+- **What was visible:** most trades win, so everything seems fine.
+- **Calculation:** 0.633 × 0.5 − 0.367 × 1 = −0.05R.
+- **Result:** over 30 trades the account is at about 9,843. A small loss, but it gets worse after counting costs (spread, commission).
+- **Lesson:** even with a high win rate, small wins and big losses make a system unprofitable.
+
+(Synthetic educational example. The result is not a guarantee.)
+
+## Common mistakes
+
+| Mistake                             | Why it happens                | What to do                       |
+| :---------------------------------- | :---------------------------- | :------------------------------- |
+| Deciding on a tiny sample           | Trusting a few trades         | At least 20-30, more if possible |
+| Leaving out costs                   | Keeping the formula simple    | Add spread and commission in R   |
+| Looking only at win rate            | It is an easy number          | Look at expectancy               |
+| Treating expectancy as a guarantee  | Average seems to mean certain | Allow for streaks and drawdown   |
+| Changing the system again and again | Little patience in a bad run  | Write review rules first         |
+
+## Pro tips
+
+<Callout type="tip">
+  Write each trade in your journal in R, not in money. Money changes with the
+  risk, while R keeps the quality of the system.
+</Callout>
+
+<Callout type="tip">
+  Even in a system with positive expectancy, 4-5 losses in a row can be normal.
+  So write the [Drawdown Rules](/en/learn/08-risk-management/04-drawdown-rules)
+  in advance.
+</Callout>
+
+<Callout type="warning">
+  The expectancy from a backtest almost always comes out a little lower live
+  (slippage, emotion, a changed market). Keep an extra safety margin.
+</Callout>
+
+## When this does not work
+
+- **When the sample is small:** the average means nothing, and luck plays a part.
+- **When the market changes:** the earlier average will not stay the same in the future.
+- **When risk differs from trade to trade:** it is easy to measure in R, not in money.
+- **When results are not consistent:** a few huge wins can pull the average up, which is not reliable.
+
+## Summary
+
+<KeyTakeaways>
+
+- Expectancy = (win rate × average win in R) − (loss rate × average loss in R).
+- A 43% win rate can give +0.3R, and a 63% win rate can give −0.05R.
+- Even with positive expectancy, losing streaks come.
+- Do not trust the numbers without enough samples and costs.
+
+</KeyTakeaways>
+
+## Practice
+
+Write your last 20-30 trades in R. Find the win rate, average win, average loss and expectancy. Then take off the costs (about how much in R per trade) and look again.
+
+## Quiz
+
+1. With +2R and −1R and a 40% win rate, what is the expectancy?
+2. With a 50% win rate, average win 0.8R and average loss 1R, how is the system?
+3. Does positive expectancy mean no losses in a row?
+4. Why are at least 20-30 trades needed?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** 0.4 × 2 − 0.6 × 1 = +0.2R.
+
+**2.** 0.5 × 0.8 − 0.5 × 1 = −0.1R, which is unprofitable.
+
+**3.** No. Losing streaks are normal. Only the average is positive.
+
+**4.** In a small sample luck decides the result, and the average is not reliable.
+
+</details>
+
+## Next steps
+
+- Before: [Correlation Risk](/en/learn/08-risk-management/06-correlation-risk).
+- After: [Risk of Ruin](/en/learn/08-risk-management/08-risk-of-ruin).
+- Related: [How to Backtest](/en/learn/15-backtesting-journal/01-how-to-backtest).
+
+### Sources
+
+- <ExternalLink href="https://www.investopedia.com/terms/e/expected-value.asp">
+    Expected Value, Investopedia
+  </ExternalLink>
+
+<Disclaimer />

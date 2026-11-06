@@ -1,0 +1,194 @@
+---
+title: "Reading a Chart: A First Lesson in Candles, Timeframes and Trend"
+description: "The difference between line, bar and candlestick charts, the four prices in a candle, choosing a timeframe, and recognising uptrends and downtrends — with a clean chart and synthetic examples."
+level: beginner
+tags: [chart-reading, candlestick, timeframes, trend, basics]
+instruments: [EURUSD]
+timeframes: [H1]
+status: done
+sources:
+  - type: blog
+    title: "Candlestick - Investopedia"
+    url: "https://www.investopedia.com/terms/c/candlestick.asp"
+updated: 2026-11-06
+---
+
+# Reading a Chart: A First Lesson in Candles, Timeframes and Trend
+
+Looking at a chart and reading a chart are not the same. The first is watching coloured lights; the second is understanding their language. This lesson is the alphabet of that language.
+
+## What you will be able to do
+
+- **Recognise** the three types of chart.
+- **Read** the four prices in a single candle.
+- **Choose** a timeframe.
+- **Recognise** an uptrend and a downtrend.
+
+## Why it matters
+
+- **All analysis starts with the chart.** Misread it here and everything after goes wrong.
+- **The picture changes with the timeframe.** The same market can look like it is rising on one chart and falling on another.
+- **It is the base for the [Candlesticks](/en/learn/04-candlesticks/00-overview) and [Market Structure](/en/learn/03-market-structure/00-overview) chapters.**
+
+Prerequisites: [Trading Sessions](/en/learn/01-foundations/05-trading-sessions).
+
+## Three types of chart
+
+| Type        | What it shows                         | When it is useful                 |
+| :---------- | :------------------------------------ | :-------------------------------- |
+| Line        | Only the closing prices, joined up    | The big picture, a simple view    |
+| Bar (OHLC)  | Open, High, Low, Close                | Detailed, but harder on the eye   |
+| Candlestick | OHLC in colour, with a body and wicks | The choice of almost every trader |
+
+## A single candle
+
+**A candle shows four prices for a set period of time:** Open (start), High (highest), Low (lowest), Close (end).
+
+- **Body:** The thick part between the open and the close.
+- **Wick (shadow):** The thin lines up to the high and down to the low.
+- **Colour:** By convention, green/white = close > open (bullish) and red/black = close < open (bearish). Colours can be changed in platform settings, so check yours.
+
+One H1 candle holds the four prices of one hour. More detail: [Anatomy of a Candle](/en/learn/04-candlesticks/01-anatomy-of-a-candle).
+
+## Timeframe
+
+**A timeframe is how much time each candle covers.** M5 = 5 minutes, H1 = 1 hour, H4 = 4 hours, D1 = 1 day.
+
+- Small timeframes: more candles, more noise.
+- Large timeframes: less noise, slower signals.
+- A general rule: **the higher timeframe sets the direction, the lower timeframe the entry**. ([Multi-Timeframe](/en/learn/03-market-structure/05-multi-timeframe-analysis))
+
+## Trend
+
+**Uptrend:** a series of higher highs and higher lows. **Downtrend:** lower highs and lower lows. When neither is present, it is a range.
+
+## What it looks like on a chart
+
+<Chart
+  id="chart-reading-trend-01"
+  height={460}
+  caption="EURUSD H1 (educational, synthetic example) — each green candle rises from open to close, and the wicks mark the extremes. The sequence of higher highs and higher lows defines the uptrend."
+/>
+
+The swing highs and lows are marked on the chart. Each new high is above the previous one, and each new low is above the previous one. That is an uptrend.
+
+## Step by step: reading a chart
+
+<Steps>
+
+### Step 1: Open a higher timeframe
+
+D1 or H4. What is the overall direction?
+
+### Step 2: Mark the swings
+
+The sequence of highs and lows: up, down or sideways?
+
+### Step 3: Drop to a lower timeframe
+
+H1 or M15. Does it agree with the higher direction?
+
+### Step 4: Find the key levels
+
+Where price has turned again and again before. ([Support and Resistance](/en/learn/05-support-resistance/00-overview))
+
+### Step 5: Write it down
+
+"Higher direction: up. I'm looking for a buy on a pullback." If not, wait.
+
+</Steps>
+
+## Example 1: when it works (synthetic)
+
+- **Big picture:** H4 uptrend, higher highs and higher lows.
+- **Small picture:** An H1 pullback near a higher low.
+- **Decision:** Looking for a buy, stop below the latest low.
+- **Lesson:** Reading a chart means following an order: big picture, then small picture, then decision.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Example 2: when it fails (synthetic)
+
+- **What happened:** Looking only at the M5 chart, the trader bought on a big green candle.
+- **Big picture:** H4 was in a downtrend at the time; the M5 candle was just a small bounce.
+- **Result:** When the bounce ended, the downtrend resumed and the stop was hit.
+- **Lesson:** A small chart can hide the big picture. Higher timeframe first.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Common mistakes
+
+| Mistake                           | Why it happens         | What to do                      |
+| :-------------------------------- | :--------------------- | :------------------------------ |
+| Deciding on a single candle       | It looks convincing    | Look at the swings and context  |
+| Using only a small timeframe      | Wanting quick results  | Higher timeframe first          |
+| Missing the wicks on a line chart | Simplicity             | Stay on candlesticks            |
+| Piling on indicators              | Wanting to look clever | A clean chart first             |
+| Misreading what the colours mean  | Platform settings      | Check against your own settings |
+
+## Pro tips
+
+<Callout type="tip">
+  For your first week, put no indicators on the chart and just mark swing highs
+  and lows. With practice, your analysis becomes much clearer.
+</Callout>
+
+<Callout type="note">
+  Reading charts is a skill. You won't understand everything on day one;
+  practice works best, especially scrolling back and reading old charts.
+</Callout>
+
+## When this does not work
+
+- **On very small timeframes:** More noise, and the rules work less well.
+- **On illiquid pairs:** Candles are irregular and wicks are large.
+- **During news:** What a candle means is less reliable.
+
+## Summary
+
+<KeyTakeaways>
+
+- Candle = Open, High, Low, Close; body and wicks.
+- Timeframe: the higher one for direction, the lower one for entry.
+- Uptrend = higher highs and higher lows; a downtrend is the reverse.
+- Read the sequence, not a single candle.
+
+</KeyTakeaways>
+
+## Practice
+
+Open the D1 chart of a pair. Mark the swing highs and lows of the last 30 days. Write down whether it is an uptrend, a downtrend or a range.
+
+## Quiz
+
+1. What are the four prices in a candle?
+2. What do higher highs and higher lows indicate?
+3. Why look at the higher timeframe first?
+4. Are candle colours the same on every platform?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** Open, High, Low, Close.
+
+**2.** An uptrend.
+
+**3.** Because it shows the overall direction, without the noise of small timeframes.
+
+**4.** No. They can be changed in settings.
+
+</details>
+
+## Next steps
+
+- Previous: [Trading Sessions](/en/learn/01-foundations/05-trading-sessions).
+- Next: [Trading Styles, Platforms and Tools](/en/learn/01-foundations/07-types-of-trading-platforms-tools).
+- Related: [Market Structure](/en/learn/03-market-structure/01-swing-high-low).
+
+### Sources
+
+- <ExternalLink href="https://www.investopedia.com/terms/c/candlestick.asp">
+    Candlestick, Investopedia
+  </ExternalLink>
+
+<Disclaimer />

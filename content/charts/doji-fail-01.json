@@ -1,0 +1,253 @@
+{
+  "id": "doji-fail-01",
+  "title": {
+    "en": "Doji at a Worn-Out Support Under Lower Highs",
+    "bn": "Lower high-এর নিচে বারবার ছোঁয়া support-এ doji"
+  },
+  "symbol": "GBPUSD",
+  "timeframe": "D1",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bullish",
+  "outcome": "loss",
+  "tags": [
+    "doji",
+    "candlestick",
+    "fail",
+    "support",
+    "descending-triangle",
+    "pattern"
+  ],
+  "module": "patterns",
+  "lessonSlugs": [],
+  "caption": {
+    "en": "Illustrative synthetic GBPUSD D1: support at 1.2600 is touched for the third time while each bounce makes a lower high. A doji forms and the next candle confirms, but price turns back and breaks support.",
+    "bn": "শিক্ষামূলক কাল্পনিক GBPUSD D1: 1.2600-এর support তৃতীয়বার ছোঁয়া হচ্ছে, আর প্রতিটি bounce আগের চেয়ে নিচু high বানাচ্ছে। একটি doji আসে, পরের candle confirm-ও করে, কিন্তু দাম ফিরে support ভেঙে দেয়।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data, not a real market record.",
+    "bn": "শিক্ষামূলক কাল্পনিক ডেটা, বাস্তব মার্কেটের রেকর্ড নয়।"
+  },
+  "updatedAt": "2026-11-06T12:00:00Z",
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 1.26,
+      "label": "Support (3rd test)",
+      "color": "#3b82f6",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.2709,
+      "label": "Lower high",
+      "color": "#3b82f6",
+      "style": "dotted"
+    },
+    {
+      "type": "marker",
+      "i": 15,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Doji"
+    },
+    {
+      "type": "marker",
+      "i": 16,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Confirmation"
+    },
+    {
+      "type": "hline",
+      "price": 1.2645,
+      "label": "Entry (high break)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.2578,
+      "label": "Stop",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.2779,
+      "label": "Target 2R",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candles 4 and 9 test support at 1.2600; the bounces make lower highs (sellers press harder each time). Candle 15 is a clean doji on the third test. Candle 16 closes above its high and fills the buy stop, but the lower high is only a short distance above. Candle 17 turns down and the support breaks.",
+    "bn": "৪ ও ৯ নম্বর candle 1.2600-এর support পরীক্ষা করে; bounce-গুলো lower high বানায় (প্রতিবার sellers আরও চাপ দেয়)। তৃতীয় পরীক্ষায় ১৫ নম্বর একটি পরিষ্কার doji। ১৬ নম্বর তার high-এর উপরে close করে buy stop fill করে, কিন্তু lower high খুব কাছেই। ১৭ নম্বর নিচে ঘোরে, support ভাঙে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Check the room to the nearest obstacle, not just the textbook 2R",
+      "bn": "বইয়ের 2R নয়, সবচেয়ে কাছের বাধা পর্যন্ত জায়গা মাপুন"
+    }
+  ],
+  "entry": 1.2645,
+  "stopLoss": 1.2578,
+  "takeProfit": 1.2779,
+  "rr": "1:2.0",
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.276,
+      "h": 1.27779,
+      "l": 1.27011,
+      "c": 1.272
+    },
+    {
+      "i": 1,
+      "o": 1.272,
+      "h": 1.27403,
+      "l": 1.26715,
+      "c": 1.2685
+    },
+    {
+      "i": 2,
+      "o": 1.2685,
+      "h": 1.27034,
+      "l": 1.26091,
+      "c": 1.2635
+    },
+    {
+      "i": 3,
+      "o": 1.2635,
+      "h": 1.264,
+      "l": 1.2606,
+      "c": 1.2612
+    },
+    {
+      "i": 4,
+      "o": 1.2612,
+      "h": 1.2637,
+      "l": 1.26,
+      "c": 1.2637
+    },
+    {
+      "i": 5,
+      "o": 1.2637,
+      "h": 1.27018,
+      "l": 1.26195,
+      "c": 1.2682
+    },
+    {
+      "i": 6,
+      "o": 1.2682,
+      "h": 1.27249,
+      "l": 1.267,
+      "c": 1.2712
+    },
+    {
+      "i": 7,
+      "o": 1.2712,
+      "h": 1.27193,
+      "l": 1.26809,
+      "c": 1.2692
+    },
+    {
+      "i": 8,
+      "o": 1.2692,
+      "h": 1.2723,
+      "l": 1.26133,
+      "c": 1.264
+    },
+    {
+      "i": 9,
+      "o": 1.264,
+      "h": 1.266,
+      "l": 1.2602,
+      "c": 1.266
+    },
+    {
+      "i": 10,
+      "o": 1.266,
+      "h": 1.27056,
+      "l": 1.26479,
+      "c": 1.269
+    },
+    {
+      "i": 11,
+      "o": 1.269,
+      "h": 1.27085,
+      "l": 1.26849,
+      "c": 1.2702
+    },
+    {
+      "i": 12,
+      "o": 1.2702,
+      "h": 1.27187,
+      "l": 1.26604,
+      "c": 1.2672
+    },
+    {
+      "i": 13,
+      "o": 1.2672,
+      "h": 1.2681,
+      "l": 1.2635,
+      "c": 1.265
+    },
+    {
+      "i": 14,
+      "o": 1.265,
+      "h": 1.2656,
+      "l": 1.2607,
+      "c": 1.2614
+    },
+    {
+      "i": 15,
+      "o": 1.2614,
+      "h": 1.2642,
+      "l": 1.2588,
+      "c": 1.2615
+    },
+    {
+      "i": 16,
+      "o": 1.2615,
+      "h": 1.2655,
+      "l": 1.2607,
+      "c": 1.2649
+    },
+    {
+      "i": 17,
+      "o": 1.2649,
+      "h": 1.2655,
+      "l": 1.2619,
+      "c": 1.2624
+    },
+    {
+      "i": 18,
+      "o": 1.2624,
+      "h": 1.26354,
+      "l": 1.25662,
+      "c": 1.2584
+    },
+    {
+      "i": 19,
+      "o": 1.2584,
+      "h": 1.25967,
+      "l": 1.25351,
+      "c": 1.2549
+    },
+    {
+      "i": 20,
+      "o": 1.2549,
+      "h": 1.25663,
+      "l": 1.24873,
+      "c": 1.2499
+    },
+    {
+      "i": 21,
+      "o": 1.2499,
+      "h": 1.25076,
+      "l": 1.24727,
+      "c": 1.2479
+    }
+  ]
+}

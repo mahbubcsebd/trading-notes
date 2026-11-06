@@ -1,0 +1,79 @@
+{
+  "id": "engulfing-weak-quality-01",
+  "title": {
+    "en": "Weak Bullish Engulfing That Fails",
+    "bn": "দুর্বল bullish engulfing যা ব্যর্থ হয়"
+  },
+  "symbol": "EURUSD",
+  "timeframe": "H4",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bullish",
+  "outcome": "loss",
+  "tags": ["engulfing", "candlestick", "quality", "fail"],
+  "module": "04-candlesticks",
+  "lessonSlugs": ["04-bullish-engulfing"],
+  "caption": {
+    "en": "The second candle technically engulfs a tiny bearish candle, but it has a long upper wick and closes in the lower half of its range. Price then breaks the pattern low.",
+    "bn": "দ্বিতীয় candle নিয়মমতো একটি ছোট bearish candle ঢেকেছে, কিন্তু তার উপরের wick লম্বা এবং range-এর নিচের অর্ধেকে close করেছে। এরপর দাম pattern low ভেঙে নামে।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data.",
+    "bn": "এটি শিক্ষামূলক কাল্পনিক ডেটা।"
+  },
+  "updatedAt": "2026-11-05T16:00:00Z",
+  "annotations": [
+    {
+      "type": "marker",
+      "i": 6,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "ছোট body"
+    },
+    {
+      "type": "marker",
+      "i": 7,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "লম্বা upper wick"
+    },
+    {
+      "type": "hline",
+      "price": 1.0726,
+      "label": "Entry (close-এ)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.0702,
+      "label": "Stop",
+      "color": "#ef4444",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candle 6 has a 6-pip body. Candle 7 covers it, but its body is only 12 pips against a 52-pip range, and it closes at 31% of that range. Sellers rejected the rise, then candle 9 broke the stop.",
+    "bn": "৬ নম্বর candle-এর body মাত্র ৬ pip। ৭ নম্বর তা ঢাকে, কিন্তু ৫২ pip range-এর মধ্যে body মাত্র ১২ pip এবং close range-এর ৩১% জায়গায়। Sellers ওঠা প্রত্যাখ্যান করেছে, তারপর ৯ নম্বর candle stop ভাঙে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Engulfing by the rules is not the same as engulfing with strength",
+      "bn": "নিয়ম মেলা আর শক্তি থাকা এক জিনিস নয়"
+    }
+  ],
+  "candles": [
+    { "i": 0, "o": 1.09, "h": 1.091, "l": 1.0865, "c": 1.0875 },
+    { "i": 1, "o": 1.0875, "h": 1.088, "l": 1.0835, "c": 1.0845 },
+    { "i": 2, "o": 1.0845, "h": 1.0852, "l": 1.08, "c": 1.081 },
+    { "i": 3, "o": 1.081, "h": 1.082, "l": 1.0765, "c": 1.0775 },
+    { "i": 4, "o": 1.0775, "h": 1.0782, "l": 1.0735, "c": 1.0745 },
+    { "i": 5, "o": 1.0745, "h": 1.075, "l": 1.0715, "c": 1.0722 },
+    { "i": 6, "o": 1.0722, "h": 1.0728, "l": 1.0712, "c": 1.0716 },
+    { "i": 7, "o": 1.0714, "h": 1.0762, "l": 1.071, "c": 1.0726 },
+    { "i": 8, "o": 1.0726, "h": 1.0745, "l": 1.0722, "c": 1.074 },
+    { "i": 9, "o": 1.074, "h": 1.0742, "l": 1.07, "c": 1.0704 },
+    { "i": 10, "o": 1.0704, "h": 1.0708, "l": 1.067, "c": 1.0675 },
+    { "i": 11, "o": 1.0675, "h": 1.0682, "l": 1.065, "c": 1.0655 }
+  ]
+}

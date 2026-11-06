@@ -1,0 +1,222 @@
+---
+title: "Anatomy of a Candle: Read Price's Story from the Body and Wicks"
+description: "What a candlestick's body, wicks, open and close tell you, how to recognise bullish and bearish candles, and why trading on shape alone is a mistake."
+level: beginner
+tags: [candlestick, body, wick, ohlc]
+instruments: [EURUSD]
+timeframes: [H1, H4]
+status: done
+sources:
+  - type: blog
+    title: "Candlestick Chart - Investopedia"
+    url: "https://www.investopedia.com/terms/c/candlestick.asp"
+  - type: book
+    title: "Japanese Candlestick Charting Techniques - Steve Nison"
+    url: ""
+    note: "Basic concepts chapter"
+updated: 2026-11-06
+---
+
+# Anatomy of a Candle: Read Price's Story from the Body and Wicks
+
+If in one hour price rises 40 pips and comes back 35, or rises only 5 pips, the closing price at the end of the hour can be the same. But the two stories are completely different. In the first, buyers fought and lost. In the second, there was no fight at all. A candle captures exactly this difference in one picture.
+
+## What you will be able to do
+
+- **Recognise** the four prices of a candle (open, high, low, close).
+- **Read** the strength of buyers and sellers from the body and wicks.
+- **Tell apart** bullish and bearish candles.
+- **Avoid** the trap of mistaking a wick for a signal.
+
+## Why it matters
+
+- **Every pattern rests on this.** Hammer, Doji, Engulfing: they are all ratios of body to wick.
+- **A line chart hides a lot of information.** If you look only at closing prices, the fight inside the hour is lost.
+- **You need it to set a stop-loss.** Later you will see that a stop usually sits beyond a candle's wick.
+
+As prerequisites, look at [Reading a Chart](/en/learn/01-foundations/06-reading-a-chart) and [Swing High and Swing Low](/en/learn/03-market-structure/01-swing-high-low).
+
+## What a candle is
+
+**A candle is a picture of where price started in a set period (for example 1 hour), how far it rose, how far it fell, and where it ended.**
+
+Think of it like a match scorecard. If you know only the final result (the close), you cannot tell how close the match was. The scorecard shows who got how far ahead and how many times who fell behind.
+
+Every candle is made of four prices:
+
+| Price     | Meaning                                    |
+| :-------- | :----------------------------------------- |
+| **Open**  | The first price at the start of the period |
+| **High**  | The highest price during the period        |
+| **Low**   | The lowest price during the period         |
+| **Close** | The last price at the end of the period    |
+
+The part between the open and the close is the **body**. The thin line from the high to the body is the **upper wick** (also called a shadow or tail). The line from the low to the body is the **lower wick**.
+
+## Bullish and bearish candles
+
+- **Bullish candle:** the close is above the open. Price went up. Usually green.
+- **Bearish candle:** the close is below the open. Price went down. Usually red.
+
+<Callout type="note">
+  Colours vary between platforms. On some platforms, bullish shows as white or
+  blue. Recognise candles by where the open and close are, not by colour.
+</Callout>
+
+## What the body and wicks say
+
+**The body says who won. The wick says who was pushed back.**
+
+- **Big body, small wicks:** one side kept control from start to finish.
+- **Small body:** neither side won; there is indecision.
+- **Long upper wick:** buyers pushed price up, but sellers pushed it back down.
+- **Long lower wick:** sellers pushed price down, but buyers pushed it back up.
+
+## What it looks like on a chart
+
+<Chart
+  id="candle-anatomy-01"
+  height={420}
+  caption="EURUSD H4 (educational, synthetic example) — A: big bull body, B: long upper wick, C: big bear body, D: long lower wick, E: small body"
+/>
+
+Each mark tells a different story:
+
+| Mark | Shape                       | Story                                   |
+| :--- | :-------------------------- | :-------------------------------------- |
+| A    | Big bull body, small wicks  | Buyers drove it from start to finish    |
+| B    | Small body, long upper wick | It went up and sellers brought it back  |
+| C    | Big bear body               | Sellers fully in control                |
+| D    | Small body, long lower wick | It went down and buyers brought it back |
+| E    | Almost no body              | Both sides equal, indecision            |
+
+## Step by step: how to read a candle
+
+<Steps>
+
+### Step 1: Say whether it is bullish or bearish
+
+Is the close above or below the open? A one-second job.
+
+### Step 2: Look at the body size
+
+Is it big or small compared with the candles around it? "Big" means clearly bigger than the average of the previous 10–15 candles.
+
+### Step 3: Measure the wicks
+
+Which way is the wick longer? How long compared with the body? The longer the wick, the stronger the rejection from that side.
+
+### Step 4: See where the close landed
+
+A close near the top of the candle's full range (high to low) means buyers are strong. Near the bottom means sellers.
+
+### Step 5: Ask yourself: "Where did this happen?"
+
+Finally, look at the surroundings. Many people skip this step, and that is where mistakes begin. You will find the details in the [Candle Context](/en/learn/04-candlesticks/05-candle-context) lesson.
+
+</Steps>
+
+## Example 1: when the reading works (synthetic)
+
+Picture a few candles in a row: first a small body, then a big bull body (A on the chart above), then two more bull candles. Each close is above the previous one.
+
+- **What could be seen:** a big bull body, small wicks, the close near the high.
+- **Decision:** buyers are clearly in control. Looking for a buy on a pullback is reasonable.
+- **Result:** price rose further.
+- **Lesson:** a strong candle becomes believable not alone, but together with the candles that follow it.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Example 2: when a long wick fools you (synthetic)
+
+<Chart
+  id="candle-wick-fail-01"
+  height={420}
+  caption="EURUSD H4 (educational, synthetic example) — a long lower wick in a strong downtrend, yet price keeps falling"
+/>
+
+- **What could be seen:** a long lower wick on candle 5; it looks as if buyers have come back.
+- **Wrong decision:** "This is a rejection, let me buy."
+- **What happened:** the next candle closed below the wick's low. The stop was hit.
+- **Why it failed:** the trend was strongly down and there was no support nearby. The wick was only a brief pushback.
+
+**Lesson:** a wick is a hint, not a signal.
+
+## Common mistakes
+
+| Mistake                                   | Why it happens                          | What to do                                         |
+| :---------------------------------------- | :-------------------------------------- | :------------------------------------------------- |
+| Deciding from colour alone                | The simple idea that green = buy        | Look at the body size and where the close is       |
+| Reading a candle before it finishes       | A running candle's close keeps changing | Read the candle after it closes                    |
+| Calling a reversal from any long wick     | Because the pattern name is familiar    | Check the trend and location first                 |
+| Giving the same weight on every timeframe | All candles seem equal                  | A D1 candle means much more than an M5 one         |
+| Trusting wicks made by spread or news     | Wicks get distorted during big news     | Treat candles from news times with extra suspicion |
+
+## Pro tips
+
+<Callout type="tip">
+  Compare a candle with its neighbours, not with a fixed number of pips. On
+  EURUSD H1, a 15-[pip](/en/learn/01-foundations/03-pips-lots-leverage-margin)
+  body can be big, but on gold it is tiny.
+</Callout>
+
+<Callout type="tip">
+  Start watching a little before the candle closes, but make your decision only
+  after it closes. A running candle changes every second.
+</Callout>
+
+## When this does not work
+
+- **On very small timeframes (M1–M5):** the shapes are almost random and carry little information.
+- **In low-liquidity times:** late at night or on holidays, wicks can stretch on small price jumps.
+- **During big news:** wicks suddenly get big, but they do not reflect the market's real view.
+- **When used alone:** a candle's shape says almost nothing without its location.
+
+## Summary
+
+<KeyTakeaways>
+
+- Every candle = open, high, low, close.
+- The body says who won; the wick says who was pushed back.
+- A big body with small wicks shows control; a small body shows indecision.
+- A long wick is a hint, not a signal. Trading without checking the location is risky.
+- Read a candle only after it closes.
+
+</KeyTakeaways>
+
+## Practice
+
+Open the EUR/USD H4 chart on TradingView. From the last 30 candles, pick 5 of each: big bull body, big bear body, long upper wick, long lower wick and small body. For each, write one line: who won, and what did the next candle do?
+
+## Quiz
+
+1. What does a candle need to be bullish?
+2. What does a long lower wick mean?
+3. What does a small body with roughly equal wicks on both sides indicate?
+4. Why is it wrong to buy straight away whenever you see a long lower wick?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** The close has to be above the open.
+
+**2.** Price went down, but buyers pushed it back up.
+
+**3.** Indecision. Neither side won.
+
+**4.** Because a wick is just one event. Without checking the trend, the nearness of support and the next candle, it is unreliable.
+
+</details>
+
+## Next steps
+
+- Before: [Market Structure](/en/learn/03-market-structure/00-overview).
+- After: [Single Candle Patterns](/en/learn/04-candlesticks/02-single-candle-patterns).
+- Understanding location: [Candle Context](/en/learn/04-candlesticks/05-candle-context).
+- Risk: [Stop Loss Placement](/en/learn/10-trade-management-execution/01-stop-loss-placement).
+
+### Sources
+
+- [Candlestick, Investopedia](https://www.investopedia.com/terms/c/candlestick.asp)
+
+<Disclaimer />

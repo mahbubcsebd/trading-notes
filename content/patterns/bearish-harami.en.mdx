@@ -1,41 +1,291 @@
 ---
-title: "Bearish Harami (Inside Bar)"
-description: "A 2-candle reversal pattern where a small red candle is completely contained within the real body of the preceding large green candle."
+title: "Bearish Harami: a small candle inside a big green one, as buying runs out of breath"
+description: "How to spot a bearish harami, the mirror of the bullish harami, the harami cross, why a prior uptrend is required, and entry at the mother's midpoint, stop and target, with charts."
 type: bearish
-category: "Bearish Harami (Inside Bar)"
-winrate: "64% - 69%"
-riskReward: "1:3 to 1:5"
-maxRisk: "1%"
-bestLocation: "Key Resistance / Supply Zone / Bearish Order Block"
-chartId: "bearish-harami-01"
-tags: [bearish, pattern, candlestick]
+category: two-candle
+level: intermediate
+candleCount: 2
+signal: reversal
+chartId: bearish-harami-win-01
+tags: [pattern, candlestick, bearish-harami, harami, resistance]
+status: done
+sources:
+  - type: book
+    title: "Japanese Candlestick Charting Techniques - Steve Nison"
+    note: "Harami and harami cross"
+  - type: blog
+    title: "Bearish Harami - Investopedia"
+    url: "https://www.investopedia.com/terms/b/bearishharami.asp"
+updated: 2026-11-06
 ---
 
-<div className="flex gap-6 items-end my-8 p-8 bg-zinc-950 border border-border/50 rounded-2xl w-max relative overflow-hidden">
-  <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:20px_20px]"></div>
-  <div className="relative z-10 flex gap-6">
-    <Candle color="bull" bodyH="h-16" topW="h-2" botW="h-2" offset="mt-6" />
-    <Candle color="bear" bodyH="h-6" topW="h-2" botW="h-2" offset="mt-12" />
-  </div>
-</div>
+A green candle, then a small red candle inside it. A perfect bearish harami by shape, so you go short. But the rest of the chart would have told you price had been circling one area for ten candles. There was no uptrend; what was there to reverse? This page is the mirror of [Bullish Harami](/en/patterns/bullish-harami); the definition, the inside bar comparison and the gap explanation are detailed there. Only what differs is here.
 
-## Market Psychology & Institutional Order Flow
-Buyer momentum grinds to a dead stop at the peak of an uptrend. The inability of Candle 2 to create a higher high, closing as a small red bar inside Candle 1, indicates that institutional supply is blocking further advance.
+## At a glance
 
-## 5 Strict Anatomy & Recognition Rules
-1. **Candle 1 (Mother Bar):** Large bullish candle representing the final surge of the uptrend.
-2. **Candle 2 (Inside Bar):** Small red candle whose body is entirely enclosed inside Candle 1.
-3. **Range Contraction:** Noticeable decrease in candle size and volatility.
-4. **Resistance Level:** Must form at major HTF supply or structural resistance.
-5. **Breakdown Confirmation:** The subsequent candle breaks and closes below the Inside Bar low.
+| Item          | Bearish Harami                                                                                         |
+| :------------ | :----------------------------------------------------------------------------------------------------- |
+| Type          | Bearish reversal lean, two candles (weak without confirmation)                                         |
+| Where to look | At the end of an uptrend, at a marked resistance                                                       |
+| Key features  | A long bullish "mother" candle, then a small candle whose body sits inside the mother's body           |
+| Confirmation  | The next candle falls or closes below the middle (50%) of the mother body                              |
+| Stop          | Above the mother candle's high, plus spread and a buffer                                               |
+| Invalidation  | A close above the mother's high                                                                        |
+| Look-alikes   | [Inside Bar](/en/patterns/inside-bar), bearish harami cross, [Evening Star](/en/patterns/evening-star) |
+| Opposite      | Bullish Harami                                                                                         |
 
-## 3 Proven Trade Execution Strategies
-**Strategy 1 (Inside Bar Low Sell Stop):** Place a Sell Stop 2 pips below Candle 2 low with Stop Loss above Candle 1 high.
-**Strategy 2 (Mother Bar Breakdown - Conservative):** Sell once price decisively closes below Candle 1 low.
-**Strategy 3 (Lower Timeframe Retest):** Drop to M15 and sell the retest of the Bearish Order Block created during the consolidation.
+## What you will be able to do
 
-## Where It Works vs Where It Fails
-- ✅ **A+ High Probability Setups:** Daily supply zone, Asian High liquidity sweep, and Bearish RSI divergence.
-- ❌ **Low Probability Traps (AVOID):** Shorting in a runaway macro bull trend without multi-timeframe alignment.
+- **Recognise** a bearish harami and a harami cross.
+- **Check** whether there is a trend to reverse before trading a reversal pattern.
+- **Set** the entry on the mother's midpoint break and the first obstacle at the mother's open.
 
-> ⚠️ **Pro Risk Management & Mindset Rule:** Inside bar setups provide ultra-tight stop loss placement for maximum Risk-to-Reward returns. Always limit risk to 1%–2% per trade and maintain a predefined Stop Loss.
+## Why it matters
+
+- **The picture of an uptrend running out of breath.** A small candle after a big green one means buyers can no longer lift price as before.
+- **Nearly meaningless in a range.** Without a trend to reverse, a harami is just two random candles.
+- **A harami cross at a top matters more.** Nison's observation: dojis matter more at tops, and the harami cross places that doji inside the mother.
+
+Prerequisites: the Bullish Harami page (linked above) and [Trend, Range and HH-HL](/en/learn/03-market-structure/02-trend-range-hhhl).
+
+## What is a bearish harami
+
+**A bearish harami is a two-candle pattern: a long bullish candle in an uptrend, then a small candle whose body sits entirely inside the previous body.** If the small candle is a doji, it is a **bearish harami cross**.
+
+<CandleDiagram
+  title="Bearish harami cross"
+  candles={[
+    { o: 40, h: 46, l: 39, c: 45, dim: true },
+    { o: 45, h: 51, l: 44, c: 50, dim: true },
+    { o: 50, h: 64, l: 49, c: 63, label: "mother", note: "long green body" },
+    {
+      o: 63,
+      h: 64,
+      l: 60,
+      c: 62.8,
+      label: "harami cross",
+      note: "doji inside the body",
+    },
+    { o: 62.8, h: 63, l: 55, c: 56, dim: true },
+  ]}
+  caption="A doji near the top of a long green mother's body. The next candle falls to the mother body's middle (56.5)."
+/>
+
+### Identification rules
+
+| Rule                                                        | Required? | Why                                                       |
+| :---------------------------------------------------------- | :-------- | :-------------------------------------------------------- |
+| A clear uptrend before it (higher highs, higher lows)       | Yes       | Without a trend to reverse, there is no reversal question |
+| The mother candle long and bullish                          | Yes       | Sitting inside a small mother proves nothing              |
+| The second candle's body small and inside the mother's body | Yes       | This is the "harami"                                      |
+| At a marked resistance                                      | Yes       | Without a level it is a rest inside an uptrend            |
+| Second candle is a doji (harami cross)                      | No        | A clearer indecision                                      |
+
+## Strong vs weak bearish harami
+
+<DiagramRow>
+  <CandleDiagram
+    title="Strong"
+    verdict="good"
+    verdictLabel="tradeable"
+    candles={[
+      { o: 40, h: 46, l: 39, c: 45, dim: true },
+      { o: 45, h: 51, l: 44, c: 50, dim: true },
+      { o: 50, h: 61, l: 49.5, c: 60.5 },
+      { o: 60.5, h: 61, l: 58.5, c: 60.4, label: "cross at the level" },
+    ]}
+    levels={[{ price: 61, label: "old high", tone: "resistance" }]}
+    caption="At an old high at the end of an uptrend, a doji near the top of the mother."
+  />
+  <CandleDiagram
+    title="Weak"
+    verdict="bad"
+    verdictLabel="avoid"
+    candles={[
+      { o: 50, h: 52, l: 48, c: 51, dim: true },
+      { o: 51, h: 52, l: 48.5, c: 49, dim: true },
+      { o: 49, h: 51.5, l: 48.5, c: 50.5, dim: true },
+      { o: 50.5, h: 53.5, l: 50, c: 53 },
+      { o: 53, h: 53.2, l: 51.8, c: 52.2, label: "in a range" },
+    ]}
+    caption="A green candle and a small candle inside it, in a sideways range. No trend to reverse."
+  />
+</DiagramRow>
+
+| Quality check    | Strong                                  | Weak                                     |
+| :--------------- | :-------------------------------------- | :--------------------------------------- |
+| What came before | A clear uptrend                         | A sideways range or random candles       |
+| Location         | At a marked old high or supply zone     | Inside a range or right after a breakout |
+| Second candle    | A doji or very small                    | Nearly half the mother's size            |
+| Room below       | 1.5R+ to the mother's open or swing low | The range floor close by                 |
+
+## The story inside the candle
+
+The bullish harami story in reverse. One common interpretation: in the long green mother, buyers lift hard. The next candle barely makes a new high and turns in a small range. Buyers have stopped; sellers have not attacked yet. If the next candle falls below the middle of the mother body, sellers score their first win.
+
+<Callout type="note">
+  This is a common interpretation, not a proven fact. A chart does not show who
+  bought or sold.
+</Callout>
+
+## Where it works and where it does not
+
+<Compare
+  leftLabel="Where a bearish harami carries weight"
+  rightLabel="Where a bearish harami is often a trap"
+  left="- At a marked resistance at the end of a clear uptrend
+- When the second candle is a doji (harami cross)
+- When the next candle falls below the mother body's middle
+- With enough room to the swing low below"
+  right="- Inside a sideways range, with no trend
+- Right after a range breakout candle (often just a pause)
+- At a minor high in the middle of a strong uptrend
+- With the target placed beyond the mother's open"
+/>
+
+## Gaps in a 24-hour market
+
+<Callout type="note">
+  As with the bullish harami: in Forex the second candle usually opens at the
+  mother's close. The practical rule: **the second candle opens near the
+  mother's close, makes no new high (or only a slight one), and closes inside
+  the mother's body.**
+</Callout>
+
+## Step by step: trading a bearish harami
+
+The full steps are on the Bullish Harami page, reversed. Only what differs:
+
+<Steps>
+
+### Step 1: Check the trend first
+
+Are there higher highs and higher lows over the last 10-20 candles? If not, stop here. More in [Swing High and Low](/en/learn/03-market-structure/01-swing-high-low).
+
+### Step 2: Two lines
+
+The middle of the mother body (entry trigger) and the mother's open (first obstacle).
+
+### Step 3: Entry and stop
+
+Sell stop just below the mother's middle. Stop above the mother's high, plus the [spread](/en/learn/01-foundations/04-spread-commission-swap). If the [risk reward](/en/learn/08-risk-management/03-risk-reward) to the mother's open is small, take a partial there, or skip the trade if there is not 1.5R to the next swing low.
+
+</Steps>
+
+### Pre-trade checklist
+
+<Checklist
+  id="pattern-bearish-harami-pretrade-en"
+  items={[
+    "Was there a clear uptrend before it, and was resistance marked in advance?",
+    "Does the shape pass the rules (long green mother, small body inside its body)?",
+    "Have both candles closed, and is the entry trigger below the middle of the mother body?",
+    "Is the risk reward to the swing low or obstacle below at least 1:1.5?",
+    "Is the higher-timeframe trend or level not against the trade?",
+  ]}
+/>
+
+If any box stays empty, skip the trade.
+
+## Example 1: when it works (illustrative)
+
+<Chart
+  id="bearish-harami-win-01"
+  height={420}
+  caption="GBPUSD H4 (illustrative, synthetic) — a bearish harami cross at an old high; short below the mother's midpoint."
+/>
+
+- **What was visible:** Candle 5 left an old high at 1.2582. Candles 6-10 fell to about 1.2481, and 11-14 rallied again.
+- **The harami cross:** Candle 15 was the mother: 1.2542 to 1.2580, a 38-pip body, high 1.2584. Candle 16 opened at 1.2580 and closed at 1.25795: a doji near the top of the mother's body.
+- **Decision:** The mother's middle was 1.2561. Sell stop at 1.2559, stop at 1.2589 (above the mother's high): 30 pips of risk. Target 1.2499 (2R); room to the swing low was about 2.6R.
+- **Result:** Candle 17 broke through the middle and filled the order. Candle 21 reached the target.
+- **Lesson:** A prior trend, a level, a doji harami cross, and an entry after the middle broke.
+
+<TradeSetup
+  direction="short"
+  pair="GBPUSD"
+  entry={1.2559}
+  stop={1.2589}
+  target={1.2499}
+/>
+
+(Illustrative example, not a real trade. Not every bearish harami leads to a reversal, and no result is guaranteed.)
+
+## Example 2: when it is a trap (illustrative)
+
+<Chart
+  id="bearish-harami-fail-01"
+  height={420}
+  caption="EURUSD H1 (illustrative, synthetic) — a bearish harami in a sideways range, no trend to reverse, then stopped out."
+/>
+
+- **What was visible:** Candles 0-8 circled between about 1.0892 and 1.0924. No series of higher highs or lower lows.
+- **The harami:** Candle 9 was a green mother (1.0914 to 1.0934), up to the top of the range. Candle 10 was a small red candle (1.0934 to 1.0927) inside its body.
+- **The wrong decision:** "Perfect shape." Sell stop 1.0923 (below the middle), stop 1.0940: 17 pips of risk.
+- **What happened:** Candle 11 filled the order, 12 rose again, and 13 broke the stop.
+- **Why it failed:** There was no uptrend to reverse; the mother was just another swing inside the range, an attempt to break higher if anything. The first checklist box would have filtered it out.
+
+**Lesson:** A reversal pattern needs a trend to reverse. Because the stop was set in advance, the loss stayed at 1R.
+
+## Common mistakes
+
+| Mistake                                       | Why it happens                  | What to do instead                                      |
+| :-------------------------------------------- | :------------------------------ | :------------------------------------------------------ |
+| Trading a harami in a range                   | Assuming a trend from the shape | Count higher highs and higher lows first                |
+| Shorting the harami after a breakout candle   | Reading a pause as a reversal   | A harami after a breakout is often a continuation pause |
+| Stop at the small candle's high               | Wanting a small stop            | Above the mother's high                                 |
+| Not treating the mother's open as an obstacle | Textbook 2R target              | Take a partial at the mother's open or measure R:R      |
+
+## Pro tips
+
+<Callout type="tip">
+  If the candle after the harami closes below the mother's open, the three
+  candles often form a **three inside down**, a much stronger signal. More in
+  [Three Inside Down](/en/patterns/three-inside-down).
+</Callout>
+
+<Callout type="tip">
+  When a harami follows a range breakout candle, think the other way: it is
+  often a rest after the breakout. Then do not short; look for a retest in the
+  breakout direction instead.
+</Callout>
+
+## Summary
+
+<KeyTakeaways>
+
+- Bearish harami = a long green mother candle, then a small candle whose body sits inside the mother's body.
+- Without a clear prior uptrend it is not a reversal pattern, just two candles.
+- Enter after the middle of the mother body breaks; stop above the mother's high; first obstacle at the mother's open.
+- A harami cross (doji) at a top matters more.
+
+</KeyTakeaways>
+
+## Practice and your own backtest
+
+Open GBPUSD H4 or EURUSD H1 in TradingView. Find at least 20 bearish haramis. For each, log: date, whether there was a prior uptrend (higher highs and higher lows over the last 10 candles), whether it was at resistance, whether it was a harami cross, whether the middle broke, and result (R). Then split into "trend before" and "range before" and compare the average R. Do not draw conclusions from fewer than 30 samples.
+
+## Quiz
+
+1. What is a bearish harami cross?
+2. A perfect bearish harami forms inside a range. What do you do?
+3. Where is the first obstacle below a bearish harami?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** A bearish harami whose small candle is a doji: a doji inside the body of a long green mother.
+
+**2.** Skip it. There is no uptrend to reverse, so the reversal pattern has no meaning.
+
+**3.** The mother candle's open.
+
+</details>
+
+## Next steps
+
+- Full walk-through: [Bullish Harami](/en/patterns/bullish-harami).
+- Is there a trend: [Trend, Range and HH-HL](/en/learn/03-market-structure/02-trend-range-hhhl).
+- Same family: [Inside Bar](/en/patterns/inside-bar), [Evening Star](/en/patterns/evening-star), [Three Inside Down](/en/patterns/three-inside-down).
+
+<Disclaimer />

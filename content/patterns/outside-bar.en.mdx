@@ -1,0 +1,323 @@
+---
+title: "Outside Bar: a big candle that breaks both ends of the previous one"
+description: "How to spot an outside bar, how it differs from an engulfing, why the close location is everything, the level sweep that closes at the far end, and handling the wide stop, with charts."
+type: neutral
+category: range-bars
+level: intermediate
+candleCount: 2
+signal: reversal
+chartId: outside-bar-win-01
+tags: [pattern, price-action, outside-bar, reversal, volatility]
+status: done
+sources:
+  - type: book
+    title: "Trading Price Action Trends - Al Brooks"
+    note: "Outside bars, ioi pattern, failed breakouts"
+updated: 2026-11-06
+---
+
+A candle breaks the previous candle's low, then its high too. Stops on both sides get hit. It looks enormously strong, but in which direction? If the candle closes at one end of its range, the answer is clear. If it closes in the middle, it is not strength, just a storm in both directions. With an outside bar, the close location is everything.
+
+## At a glance
+
+| Item          | Outside Bar                                                                                |
+| :------------ | :----------------------------------------------------------------------------------------- |
+| Type          | Neutral; reversal in the direction of the close at a level; two candles                    |
+| Where to look | At a marked support or resistance, especially when it sweeps the level                     |
+| Key features  | The second candle's high is above the prior high and its low below the prior low           |
+| Confirmation  | A close at one end of its range (top or bottom quarter); the next candle breaking that way |
+| Stop          | Beyond the outside bar's opposite end, plus spread and a buffer                            |
+| Invalidation  | A close beyond the outside bar's opposite end                                              |
+| Look-alikes   | [Bullish Engulfing](/en/patterns/bullish-engulfing) (body-based), long-legged doji         |
+| Opposite      | [Inside Bar](/en/patterns/inside-bar)                                                      |
+
+## What you will be able to do
+
+- **Explain** the definitional difference between an outside bar and an engulfing.
+- **Measure** the close location to judge an outside bar's direction and strength.
+- **Recognise** and trade the outside bar that sweeps a level.
+- **Handle** the wide stop from a large range through size.
+
+## Why it matters
+
+- **Liquidity on both sides in one candle.** Stops beyond both the prior high and low are hit in the same candle. Where it ends shows which side used that liquidity.
+- **The range version of an engulfing.** Many outside bars are also engulfings. But not every outside bar is an engulfing, and not the other way round either.
+- **Big range, wide stop.** Outside bars are often much larger than nearby candles. With the stop at the opposite end, size has to come down a lot.
+
+Prerequisites: the Inside Bar page (linked in the table above) and [Liquidity and Stop Hunts](/en/learn/03-market-structure/04-liquidity-stop-hunts).
+
+## What is an outside bar
+
+**An outside bar is a candle whose high is above the previous candle's high and whose low is below the previous candle's low.** The whole prior range, wicks included, fits inside it. Colour is not required; the close tells the direction.
+
+Picture a wave that floods over both banks left by the previous one. Which way the water settled is what matters.
+
+<CandleDiagram
+  title="Outside bar: where it closes"
+  candles={[
+    { o: 52, h: 55, l: 49, c: 50, label: "prior" },
+    {
+      o: 50,
+      h: 58,
+      l: 45,
+      c: 57.5,
+      label: "strong",
+      note: "closes at the top",
+    },
+    { o: 52, h: 55, l: 49, c: 50, label: "prior" },
+    { o: 50, h: 58, l: 45, c: 51.5, label: "weak", note: "closes mid-range" },
+  ]}
+  caption="Both are outside bars: high above the prior high, low below the prior low. The left one closes at its top, the right one in the middle."
+/>
+
+### Identification rules
+
+| Rule                                                  | Required?          | Why                                                         |
+| :---------------------------------------------------- | :----------------- | :---------------------------------------------------------- |
+| High > prior high and low < prior low                 | Yes                | This is "outside"                                           |
+| Candle has closed                                     | Yes                | The close location is the decision                          |
+| Close at one end of the range (top or bottom quarter) | Yes (to trade)     | A mid-range close means nobody won                          |
+| At a marked level, with one end sweeping that level   | No (but important) | A sweep then a close at the far end is the clearest picture |
+| The body also covers the prior body                   | No                 | Then it is an engulfing too; one more reason                |
+
+## Strong vs weak outside bar
+
+<DiagramRow>
+  <CandleDiagram
+    title="Strong"
+    verdict="good"
+    verdictLabel="tradeable"
+    candles={[
+      { o: 62, h: 63, l: 56, c: 57, dim: true },
+      { o: 57, h: 58, l: 51, c: 52, dim: true },
+      { o: 52, h: 53, l: 49, c: 50 },
+      { o: 50, h: 55, l: 46, c: 54.5, label: "sweep + top close" },
+    ]}
+    levels={[{ price: 48, label: "support", tone: "support" }]}
+    caption="A sweep below support, then a rise above the prior high and a close almost at its own high."
+  />
+  <CandleDiagram
+    title="Weak"
+    verdict="bad"
+    verdictLabel="avoid"
+    candles={[
+      { o: 50, h: 56, l: 45, c: 54, dim: true },
+      { o: 54, h: 57, l: 46, c: 48, dim: true },
+      { o: 48, h: 53, l: 47, c: 51 },
+      { o: 51, h: 57, l: 44, c: 51.5, label: "mid close" },
+    ]}
+    caption="An outside bar in a wide, choppy range with a mid-range close. A two-way storm, no winner."
+  />
+</DiagramRow>
+
+| Quality check  | Strong                                            | Weak                             |
+| :------------- | :------------------------------------------------ | :------------------------------- |
+| Close location | In the top or bottom quarter of the range         | In the middle (40-60%)           |
+| Location       | At a marked level, sweeping at one end            | In the middle of a range or chop |
+| Prior market   | A clear move into a trend or level                | Large swings in both directions  |
+| Stop and room  | 1.5R+ to the next obstacle with a full-range stop | A stop so wide that no R:R works |
+
+### Same look, different meaning
+
+| Pattern              | What it measures                       | Difference                                         |
+| :------------------- | :------------------------------------- | :------------------------------------------------- |
+| **Outside Bar**      | The whole range (high and low)         | Price action definition; the close gives direction |
+| **Engulfing**        | Bodies only; needs a colour change     | Covering the wicks is not required                 |
+| **Long-Legged Doji** | Long wicks both ways, almost no body   | May not be an outside bar; always closes mid-range |
+| **Inside Bar**       | The whole range inside the prior range | The exact opposite: contraction                    |
+
+## The story inside the candle
+
+One common interpretation of a bullish outside bar at support:
+
+1. **Down first.** Price drops below the prior low and support. Sell stops there fire and breakout sellers join.
+2. **Then larger buyers.** Buy orders fill in that liquidity below and price turns hard.
+3. **The prior high breaks too, and the close is near the high.** Those who sold below are losing; buy stops above the prior high fire as well.
+
+The result: a trap for sellers, and buyers won the whole candle. But with a mid-range close the story differs: both sides got hit, and nobody had the last word.
+
+<Callout type="note">
+  This is a common interpretation, not a proven fact. A chart does not show
+  whose stop was hit or who bought.
+</Callout>
+
+## Where it works and where it does not
+
+<Compare
+  leftLabel="Where an outside bar carries weight"
+  rightLabel="Where an outside bar is often a trap"
+  left="- At a marked support or resistance, sweeping at one end
+- With the close in the far quarter
+- When the body also covers the prior body (an engulfing too)
+- On larger timeframes such as D1 or H4"
+  right="- In a wide, choppy range
+- With a mid-range close
+- On a big news candle (spikes both ways)
+- When the range is so large the stop leaves no workable R:R"
+/>
+
+## Step by step: trading an outside bar
+
+<Steps>
+
+### Step 1: Level first
+
+Draw support or resistance in advance. Check whether one end of the outside bar went beyond that level and came back.
+
+### Step 2: Wait for the close
+
+The close location is the decision. A live candle can slip back to the middle in its last minute.
+
+### Step 3: Measure the close location
+
+Close position = (close − low) ÷ (high − low). For a bullish setup, 0.75 or more; for a bearish one, 0.25 or less. In the middle (0.4-0.6), skip it.
+
+### Step 4: Entry type
+
+| Entry                         | Where                                              | Pro                              | Con                           |
+| :---------------------------- | :------------------------------------------------- | :------------------------------- | :---------------------------- |
+| **High/low break** (standard) | Stop order just beyond the end on the close's side | You enter only if price moves on | Stop beyond the whole range   |
+| **50% retest**                | Limit at the middle of the outside bar's range     | Half the stop                    | Missed if price never returns |
+| **Close entry**               | As the candle closes                               | Never missed                     | No confirmation, wide stop    |
+
+### Step 5: Place the stop
+
+Beyond the outside bar's opposite end, plus the [spread](/en/learn/01-foundations/04-spread-commission-swap) and a buffer. That is the sweep end, so a stop inside it is risky.
+
+### Step 6: Size and target
+
+Big range means small size: [position size](/en/learn/08-risk-management/02-position-sizing) from the entry-to-stop distance, risking no more than 1%. Target before the next level, with a [risk reward](/en/learn/08-risk-management/03-risk-reward) of at least 1:1.5.
+
+### Step 7: Manage
+
+Repeated closes back below the outside bar's middle mean the idea is weakening. A close beyond the opposite end means it is wrong.
+
+</Steps>
+
+### Pre-trade checklist
+
+<Checklist
+  id="pattern-outside-bar-pretrade-en"
+  items={[
+    "Is the outside bar at a marked level, and did one end sweep that level?",
+    "Does the shape pass the rules (high above the prior high, low below the prior low)?",
+    "Has the candle closed, with the close in the far quarter (not the middle)?",
+    "With a full-range stop, is the risk reward to the next level still at least 1:1.5?",
+    "Is the higher-timeframe trend or level not against the trade?",
+  ]}
+/>
+
+If any box stays empty, skip the trade.
+
+## Example 1: when it works (illustrative)
+
+<Chart
+  id="outside-bar-win-01"
+  height={420}
+  caption="USDJPY H4 (illustrative, synthetic) — a bullish outside bar that sweeps below support and closes near its high; long on the high break."
+/>
+
+- **What was visible:** Candle 4 marked support at 151.606. Candles 5-9 rallied to about 152.64, and 10-14 fell back.
+- **The outside bar:** Candle 14 was a small bearish candle (151.726 to 151.666). Candle 15 dropped to 151.506, below support and the prior low, then rose past the prior high to 151.786, and closed at 151.766: within about the top 7% of its range.
+- **Decision:** Buy stop at 151.806. Stop at 151.466 (4 pips below the outside bar low): 34 pips of risk. Target 152.486 (2R); room to the swing high was about 2.4R.
+- **Result:** Candle 16 broke the high and filled the order. Candle 22 reached the target.
+- **Lesson:** A level sweep, a close at the far end, and open space ahead.
+
+<TradeSetup
+  direction="long"
+  pair="USDJPY"
+  entry={151.806}
+  stop={151.466}
+  target={152.486}
+/>
+
+(Illustrative example, not a real trade. Not every outside bar wins, and no result is guaranteed.)
+
+## Example 2: when it is a trap (illustrative)
+
+<Chart
+  id="outside-bar-fail-01"
+  height={420}
+  caption="EURUSD D1 (illustrative, synthetic) — an outside bar with a mid-range close in a wide, choppy range; bought on the high break, then stopped out."
+/>
+
+- **What was visible:** Candles 0-7 swung widely both ways in a range from about 1.0764 to 1.0853. No trend.
+- **The outside bar:** Candle 9 covered candle 8's whole range: high 1.0845, low 1.0749. But it closed at 1.0799, right in the middle of its range (about 52%).
+- **The wrong decision:** "A big outside bar, it shows strength." Buy stop 1.0848, stop 1.0743: 105 pips of risk.
+- **What happened:** Candle 10 spiked to 1.0856 and filled the order, then closed back in the middle. Candles 11-12 fell and broke both the outside bar low and the stop.
+- **Why it failed:** A mid-range close, no level, and a market storming both ways. The first and third checklist boxes would have filtered it out.
+
+**Lesson:** An outside bar that closes in the middle shows two-way volatility, not a winner. Because the stop was set in advance, the loss stayed at 1R.
+
+## Common mistakes
+
+| Mistake                                        | Why it happens              | What to do instead                             |
+| :--------------------------------------------- | :-------------------------- | :--------------------------------------------- |
+| Guessing direction because the candle is big   | Being impressed by size     | Measure the close position                     |
+| Stop in the middle of the outside bar          | Fear of a wide stop         | Stop at the opposite end; cut size             |
+| Treating a news spike as an outside bar setup  | Same shape                  | Check the economic calendar; skip news candles |
+| Treating engulfing and outside bar as the same | Mixing up bodies and ranges | Outside = whole range; engulfing = bodies      |
+
+## Pro tips
+
+<Callout type="tip">
+  If the candle after an outside bar is an inside bar (the middle part of an
+  ioi), it often offers a smaller stop: enter at the inside bar's end, stop at
+  the outside bar's middle or the inside bar's opposite end.
+</Callout>
+
+<Callout type="tip">
+  Measure the outside bar's range with
+  [ATR](/en/learn/07-technical-indicators/04-atr-stop-size). If it is more than
+  twice ATR, a full-range stop is often too wide; then consider a 50% retest or
+  a lower-timeframe structure entry.
+</Callout>
+
+## Summary
+
+<KeyTakeaways>
+
+- Outside bar = high above the prior high, low below the prior low; the whole prior range fits inside.
+- The close gives the direction: a close in the far quarter is a signal; a mid-range close is just a storm.
+- A level sweep followed by a close at the far end is the clearest picture.
+- Stop beyond the opposite end; a big range means a small size.
+
+</KeyTakeaways>
+
+## Practice and your own backtest
+
+Open USDJPY H4 or EURUSD D1 in TradingView. Find at least 20 outside bars. Log one row each:
+
+| Date | At a level, swept? | Close position (0-1) | Range ÷ ATR | Entry type | Result (R) |
+| :--- | :----------------- | :------------------- | :---------- | :--------- | :--------- |
+|      |                    |                      |             |            |            |
+
+Then split into close position 0.75+ (or 0.25-) and 0.4-0.6 and compare the average R. Do not draw conclusions from fewer than 30 samples.
+
+## Quiz
+
+1. What is the main difference between an outside bar and an engulfing?
+2. An outside bar has a high of 1.2100, a low of 1.2000 and a close of 1.2090. What is the close position and what does it mean?
+3. Why does an outside bar's stop go beyond its opposite end?
+4. Which checklist boxes would have filtered out the trade in Example 2?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** An outside bar measures the whole range and needs no colour. An engulfing measures bodies only and needs a colour change.
+
+**2.** (1.2090 − 1.2000) ÷ (1.2100 − 1.2000) = 0.9. A close at the top end: buyers won, a bullish signal.
+
+**3.** That is the sweep end. If price goes back there the idea is proven wrong; a stop inside it gets hit on an ordinary retest.
+
+**4.** The first box (no level or sweep) and the third box (a mid-range close at about 52%).
+
+</details>
+
+## Next steps
+
+- Before this: [Inside Bar](/en/patterns/inside-bar).
+- The story behind the sweep: [Fake Breakout](/en/learn/06-trend-chart-patterns/04-fake-breakout).
+- Same family: [Bullish Engulfing](/en/patterns/bullish-engulfing), [Bearish Engulfing](/en/patterns/bearish-engulfing), [Long-Legged Doji](/en/patterns/long-legged-doji).
+
+<Disclaimer />

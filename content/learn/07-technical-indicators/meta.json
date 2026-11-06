@@ -1,3 +1,13 @@
 {
-  "title": "Technical Indicators"
+  "title": "Technical Indicators",
+  "pages": [
+    "00-overview",
+    "01-moving-averages-crossover",
+    "02-rsi-divergence",
+    "03-macd",
+    "04-atr-stop-size",
+    "05-bollinger-bands",
+    "06-volume-vwap",
+    "07-indicator-overload"
+  ]
 }

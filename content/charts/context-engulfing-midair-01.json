@@ -1,0 +1,79 @@
+{
+  "id": "context-engulfing-midair-01",
+  "title": {
+    "en": "Bullish Engulfing Under Resistance in a Downtrend",
+    "bn": "Downtrend-এ resistance-এর নিচে bullish engulfing"
+  },
+  "symbol": "EURUSD",
+  "timeframe": "H4",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bullish",
+  "outcome": "loss",
+  "tags": ["candle-context", "engulfing", "resistance", "failure"],
+  "module": "04-candlesticks",
+  "lessonSlugs": ["05-candle-context"],
+  "caption": {
+    "en": "A textbook bullish engulfing prints right under broken support that now acts as resistance. The small confirmation candle fails and price drops.",
+    "bn": "ভাঙা support-এর ঠিক নিচে, যা এখন resistance, একটি পাঠ্যবইয়ের bullish engulfing তৈরি হয়। ছোট confirmation candle ব্যর্থ হয় এবং দাম নামে।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data.",
+    "bn": "এটি শিক্ষামূলক কাল্পনিক ডেটা।"
+  },
+  "updatedAt": "2026-11-05T14:00:00Z",
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 1.08,
+      "label": "Resistance (ভাঙা support)",
+      "color": "#ef4444",
+      "style": "solid"
+    },
+    {
+      "type": "marker",
+      "i": 7,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Engulfing"
+    },
+    {
+      "type": "hline",
+      "price": 1.0808,
+      "label": "Buy entry",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.0758,
+      "label": "Stop",
+      "color": "#ef4444",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candle 7 has the same shape as the winning example, but it prints against a downtrend and tops out exactly at resistance. Candle 8 barely closes above it, and candle 9 reverses through the stop.",
+    "bn": "৭ নম্বর candle-এর আকার আগের সফল উদাহরণের মতোই, কিন্তু এটি downtrend-এর বিপরীতে তৈরি এবং ঠিক resistance-এ গিয়ে থেমেছে। ৮ নম্বর candle কোনোমতে এর উপরে close করে, আর ৯ নম্বর উল্টে stop ভেঙে দেয়।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "A perfect shape in the wrong place is still a bad trade",
+      "bn": "ভুল জায়গায় নিখুঁত আকারও খারাপ trade"
+    }
+  ],
+  "candles": [
+    { "i": 0, "o": 1.09, "h": 1.091, "l": 1.086, "c": 1.0868 },
+    { "i": 1, "o": 1.0868, "h": 1.0872, "l": 1.0815, "c": 1.082 },
+    { "i": 2, "o": 1.082, "h": 1.0825, "l": 1.077, "c": 1.0775 },
+    { "i": 3, "o": 1.0775, "h": 1.078, "l": 1.0735, "c": 1.074 },
+    { "i": 4, "o": 1.074, "h": 1.0765, "l": 1.0732, "c": 1.076 },
+    { "i": 5, "o": 1.076, "h": 1.0785, "l": 1.0755, "c": 1.078 },
+    { "i": 6, "o": 1.078, "h": 1.0792, "l": 1.077, "c": 1.0772 },
+    { "i": 7, "o": 1.0768, "h": 1.0805, "l": 1.0764, "c": 1.08 },
+    { "i": 8, "o": 1.08, "h": 1.0808, "l": 1.0796, "c": 1.0806 },
+    { "i": 9, "o": 1.0806, "h": 1.081, "l": 1.075, "c": 1.0755 },
+    { "i": 10, "o": 1.0755, "h": 1.076, "l": 1.0712, "c": 1.0718 },
+    { "i": 11, "o": 1.0718, "h": 1.0722, "l": 1.068, "c": 1.0685 }
+  ]
+}

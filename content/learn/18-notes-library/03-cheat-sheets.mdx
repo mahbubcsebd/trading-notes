@@ -1,14 +1,219 @@
 ---
-title: "Cheat Sheets"
-description: "Detailed notes on Cheat Sheets"
-status: draft
-updated: 2026-10-10
+title: "Cheat Sheets: ঝুঁকি, R ও recovery-র সূত্র এক পাতায়"
+description: "Lot size, R-multiple, expectancy, breakeven win rate ও drawdown recovery-র সূত্র ও টেবিল, পাশে সংক্ষিপ্ত checklist-লিংক। প্রতিটি সংখ্যা গণনা করা যায়।"
+level: beginner
+tags: [cheat-sheet, formulas, risk, r-multiple, expectancy, drawdown]
+instruments: [ACCOUNT]
+timeframes: [per-trade]
+status: done
+sources:
+  - type: blog
+    title: "Risk-Reward Ratio - Investopedia"
+    url: "https://www.investopedia.com/terms/r/riskrewardratio.asp"
+updated: 2026-11-05
 ---
 
-# Cheat Sheets
+# Cheat Sheets: ঝুঁকি, R ও recovery-র সূত্র এক পাতায়
 
-<div className="rounded-xl border border-border bg-card p-6 text-center text-muted-foreground my-8">
-  <p className="text-3xl mb-4">🚧</p>
-  <p className="font-semibold text-foreground">Coming in Phase 2</p>
-  <p className="text-sm mt-1">This module is under construction.</p>
-</div>
+ট্রেডিং-এর মাঝখানে সূত্র খুঁজতে বই খুলতে হলে সময় ও মনোযোগ দুটোই যায়। এই পাতা প্রিন্ট করে ডেস্কে রাখার জন্য। প্রতিটি সংখ্যা সরল গণিত থেকে বের করা, আপনি নিজেই মিলিয়ে নিতে পারবেন।
+
+## এই লেখা পড়ে আপনি যা পারবেন
+
+- **পাঁচটি মূল সূত্র** দ্রুত প্রয়োগ করতে পারবেন।
+- **Breakeven win rate ও recovery টেবিল** পড়তে পারবেন।
+- **নিজের cheat sheet** বানাতে পারবেন।
+
+## কেন এটি জরুরি
+
+- **চাপের মুহূর্তে হিসাব ভুল হয়।** কাগজে তৈরি সূত্র ভুল কমায়।
+- **সংখ্যা ধারণা বদলে দেয়।** যেমন, ৫০% loss পুষিয়ে নিতে ১০০% লাভ লাগে।
+- **ঝুঁকির নিয়ম সহজে মনে থাকে।**
+
+পূর্বশর্ত: [Risk per Trade](/bn/learn/08-risk-management/01-risk-per-trade) এবং [Expectancy](/bn/learn/08-risk-management/07-expectancy)।
+
+## Cheat sheet কী
+
+**Cheat sheet হলো বারবার লাগে এমন সূত্র, টেবিল ও checklist-লিংকের সংক্ষিপ্ত তালিকা।** নিজের হাতে বানালে মনে থাকে বেশি।
+
+## সূত্র ১: R ও ঝুঁকির টাকা
+
+- **ঝুঁকির টাকা** = account × ঝুঁকির শতাংশ। 10,000 × 1% = 100।
+- **R** = এক trade-এ ঝুঁকির টাকার একক। Stop লাগলে −1R; ঝুঁকির দ্বিগুণ লাভ হলে +2R।
+
+## সূত্র ২: Lot size
+
+**Lot = ঝুঁকির টাকা ÷ (stop-এর pip × এক lot-এ প্রতি pip-এর মূল্য)**
+
+উদাহরণ (কাল্পনিক): account 10,000, ঝুঁকি 1% = 100। Stop 25 pip। EURUSD-তে এক standard lot-এ প্রতি pip প্রায় 10 USD। Lot = 100 ÷ (25 × 10) = 0.4 lot।
+
+Pip-এর মূল্য জোড়া, আপনার account-এর মুদ্রা ও broker অনুযায়ী ভিন্ন হতে পারে। নিজের platform-এ মিলিয়ে নিন। বিস্তারিত: [Position Sizing](/bn/learn/08-risk-management/02-position-sizing)।
+
+## সূত্র ৩: Expectancy
+
+**Expectancy (R) = (win rate × গড় জেতা R) − (loss rate × গড় হারা R)**
+
+উদাহরণ (কাল্পনিক): win rate 45%, গড় জেতা 2R, গড় হারা 1R। (0.45 × 2) − (0.55 × 1) = 0.90 − 0.55 = **+0.35R প্রতি trade**।
+
+## সূত্র ৪: Breakeven win rate
+
+**Breakeven win rate = 1 ÷ (1 + R:R)**, যেখানে R:R = লাভ ÷ ঝুঁকি (খরচ ধরা হয়নি)।
+
+| Risk : Reward | Breakeven win rate |
+| :------------ | :----------------- |
+| 1 : 1         | 50%                |
+| 1 : 1.5       | 40%                |
+| 1 : 2         | 33.3%              |
+| 1 : 3         | 25%                |
+
+Spread ও commission ধরলে breakeven একটু বাড়ে।
+
+## সূত্র ৫: Drawdown থেকে ফেরা
+
+**ফিরতে প্রয়োজনীয় লাভ = loss ÷ (1 − loss)**
+
+| Account-এর loss | ফিরতে লাগে |
+| :-------------- | :--------- |
+| 10%             | 11.1%      |
+| 20%             | 25%        |
+| 30%             | 42.9%      |
+| 40%             | 66.7%      |
+| 50%             | 100%       |
+
+Loss যত গভীর, ফেরার পথ তত বেশি খাড়া। তাই [drawdown-নিয়ম](/bn/learn/08-risk-management/04-drawdown-rules) আগে থেকে লেখা।
+
+## Chart-এ কেমন দেখায়
+
+<Chart
+  id="expectancy-positive-01"
+  height={420}
+  caption="ACCOUNT, প্রতি trade (শিক্ষামূলক, কাল্পনিক উদাহরণ) — ১% ঝুঁকিতে ৩০টি trade, গড় জয় 2R, গড় হার 1R। মাত্র ১৩টি জেতে, তবু curve ওপরে ওঠে।"
+/>
+
+সূত্র ৩ ও ৪ একসঙ্গে: 1:2 অনুপাতে breakeven প্রায় 33%, তাই ৪৩% জিতলে (১৩ ÷ ৩০) curve ওপরে ওঠে।
+
+## ধাপে ধাপে: নিজের cheat sheet
+
+<Steps>
+
+### ধাপ ১: আপনার পাঁচটি সূত্র বেছে নিন
+
+উপরের পাঁচটি দিয়ে শুরু, পরে যোগ করুন।
+
+### ধাপ ২: নিজের সংখ্যা বসান
+
+Account, ঝুঁকি %, pip মূল্য, সাধারণ stop। একটি উদাহরণ গণনা সহ।
+
+### ধাপ ৩: Checklist-লিংক রাখুন
+
+[Pre-trade checklist](/bn/learn/14-trading-plan-system/03-pre-trade-checklist) ও [থামার নিয়ম](/bn/learn/14-trading-plan-system/05-kokhon-trading-bondho-korbo) এক লাইনে।
+
+### ধাপ ৪: এক পাতায় ছাপুন
+
+ডেস্কে বা monitor-এর পাশে।
+
+### ধাপ ৫: মাসে একবার পুনর্বিবেচনা
+
+কোনো সংখ্যা বদলেছে? (যেমন ঝুঁকি বা account)।
+
+</Steps>
+
+## উদাহরণ ১: যখন কাজ করে (কাল্পনিক)
+
+- **পরিস্থিতি:** Setup এল, stop 25 pip।
+- **চলাকালীন:** Trader cheat sheet দেখে lot বের করলেন: 100 ÷ (25 × 10) = 0.4 lot। প্ল্যাটফর্মের calculator-এর সঙ্গে মিলল।
+- **ফল:** Stop লাগলে −100, অর্থাৎ ঠিক 1R। হিসাবে ভুল নেই।
+- **শিক্ষা:** তৈরি সূত্র তাড়ার মুহূর্তে ভুল কমায়।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়।)
+
+## উদাহরণ ২: যখন ব্যর্থ হয় (কাল্পনিক)
+
+<Chart
+  id="drawdown-nolimit-01"
+  height={420}
+  caption="ACCOUNT, প্রতি trade (শিক্ষামূলক, কাল্পনিক উদাহরণ) — ২% ঝুঁকিতে একটি খারাপ ধারা; কমলা রেখা equity-র সর্বোচ্চ বিন্দু, এর নিচের ফাঁকই drawdown।"
+/>
+
+- **কী ঘটল:** Trader ঝুঁকির সীমা রাখেননি, একটি খারাপ ধারায় account গভীর drawdown-এ।
+- **ফল:** সূত্র ৫ বলে, ৩০% loss পুষিয়ে নিতে প্রায় ৪৩% লাভ লাগে। ফেরার পথ খাড়া।
+- **কেন ব্যর্থ:** সীমা না থাকায় ক্ষতি বেড়ে চলেছে, আর সংখ্যা যে নির্মম, তা আগে জানা ছিল না।
+- **শিক্ষা:** সূত্র ৫ মনে রাখলে "পুষিয়ে নেব" মানসিকতা কমে।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়।)
+
+## সাধারণ ভুল
+
+| ভুল                             | কেন হয়        | কী করবেন                           |
+| :------------------------------ | :------------- | :--------------------------------- |
+| Pip মূল্য সব জোড়ায় 10 ধরা     | সরল ধরে নেওয়া | নিজের platform-এ প্রতি জোড়া মেলান |
+| Breakeven-এ খরচ ভুলে যাওয়া     | সূত্র সরল      | spread/commission আলাদা বিয়োগ     |
+| Expectancy ছোট sample-এ বিশ্বাস | সংখ্যা সুন্দর  | যথেষ্ট trade সংগ্রহ                |
+| Cheat sheet পুরোনো হওয়া        | account বদলায় | মাসে একবার হালনাগাদ                |
+| মুখস্থ না করে শুধু কাগজে নির্ভর | সময় বাঁচানো   | ক্রমাগত ব্যবহারে মনে থাকে          |
+
+## Pro tips
+
+<Callout type="tip">
+  সূত্র ৫-এর টেবিলটি আলাদা করে ছাপিয়ে রাখুন। যখন "পুষিয়ে নিই" বলে মন অস্থির
+  হয়, টেবিল দেখলে ছন্দে ফেরা সহজ।
+</Callout>
+
+<Callout type="note">
+  সব সূত্র সরল গণিত; বাস্তবে slippage, spread ও মুদ্রা-রূপান্তর সংখ্যাকে সামান্য
+  সরায়। সূত্র দিক ঠিক করে, শেষ ডিজিট নয়।
+</Callout>
+
+## কখন এটা কাজ করে না
+
+- **ভিন্ন মুদ্রার account-এ:** pip মূল্য রূপান্তর লাগে; platform-এর calculator দেখুন।
+- **Gold, index বা crypto-তে:** contract spec ভিন্ন; [Gold lot-হিসাব](/bn/learn/13-gold-xauusd/08-gold-risk-lot-size) আলাদা।
+- **অনিয়মিত আকারের trade-এ:** R-ভিত্তিক সূত্র ঠিকমতো খাটে না।
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- পাঁচ সূত্র: ঝুঁকির টাকা ও R, lot size, expectancy, breakeven win rate, drawdown recovery।
+- 1:2 অনুপাতে breakeven প্রায় 33%।
+- ৫০% loss ফেরাতে ১০০% লাভ লাগে।
+- সংখ্যা নিজের platform-এ মিলিয়ে নিন।
+
+</KeyTakeaways>
+
+## অনুশীলন
+
+আপনার account, ঝুঁকি % ও সাধারণ stop বসিয়ে একটি lot গণনা করুন। Platform-এর calculator-এর সঙ্গে মেলান। তারপর সূত্র ৫-এ নিজের account-এর 10% loss-এর টাকা কত, লিখুন।
+
+## কুইজ
+
+1. 1:3 অনুপাতে breakeven win rate কত?
+2. ২০% loss ফিরতে কত লাভ লাগে?
+3. Account 5,000, ঝুঁকি 2%, stop 20 pip, pip মূল্য 10 হলে lot কত?
+4. Expectancy কীভাবে বের হয়?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** 1 ÷ (1 + 3) = 25%।
+
+**২.** 0.20 ÷ 0.80 = 25%।
+
+**৩.** ঝুঁকি = 100। Lot = 100 ÷ (20 × 10) = 0.5 lot।
+
+**৪.** (win rate × গড় জেতা R) − (loss rate × গড় হারা R)।
+
+</details>
+
+## পরের ধাপ
+
+- আগে: [Video Notes](/bn/learn/18-notes-library/02-video-notes)।
+- পরে: [Mistakes Log](/bn/learn/18-notes-library/04-mistakes-log)।
+- সম্পর্কিত: [Risk-Reward](/bn/learn/08-risk-management/03-risk-reward)।
+
+### সূত্র
+
+- <ExternalLink href="https://www.investopedia.com/terms/r/riskrewardratio.asp">
+    Risk/Reward Ratio, Investopedia
+  </ExternalLink>
+
+<Disclaimer />

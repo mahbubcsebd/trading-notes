@@ -1,0 +1,185 @@
+{
+  "id": "single-candle-hammer-01",
+  "title": {
+    "en": "Hammer at Support, Then Confirmation",
+    "bn": "Support-এ hammer, তারপর confirmation"
+  },
+  "symbol": "EURUSD",
+  "timeframe": "H4",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bullish",
+  "outcome": "win",
+  "tags": [
+    "hammer",
+    "candlestick",
+    "support"
+  ],
+  "module": "04-candlesticks",
+  "lessonSlugs": [
+    "02-single-candle-patterns"
+  ],
+  "caption": {
+    "en": "Downtrend reaches a support area. A hammer forms, the next candle closes above its high.",
+    "bn": "Downtrend support এলাকায় পৌঁছায়। Hammer তৈরি হয়, পরের candle তার high-এর উপরে close করে।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data.",
+    "bn": "এটি শিক্ষামূলক কাল্পনিক ডেটা।"
+  },
+  "updatedAt": "2026-11-05T12:00:00Z",
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 1.075,
+      "label": "Support",
+      "color": "#3b82f6",
+      "style": "dashed"
+    },
+    {
+      "type": "marker",
+      "i": 10,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Hammer"
+    },
+    {
+      "type": "marker",
+      "i": 11,
+      "position": "belowBar",
+      "shape": "circle",
+      "text": "Confirmation"
+    },
+    {
+      "type": "hline",
+      "price": 1.0695,
+      "label": "Stop (wick low-এর নিচে)",
+      "color": "#ef4444",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candle 10 dips under support, then closes near its high. Candle 11 closes above the hammer high, which confirms the buyers.",
+    "bn": "১০ নম্বর candle support-এর নিচে নেমে high-এর কাছে close করে। ১১ নম্বর candle hammer-এর high-এর উপরে close করে buyer-দের নিশ্চিত করে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Shape plus location plus confirmation",
+      "bn": "আকার + জায়গা + confirmation"
+    }
+  ],
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.09,
+      "h": 1.0905,
+      "l": 1.0875,
+      "c": 1.088
+    },
+    {
+      "i": 1,
+      "o": 1.088,
+      "h": 1.0885,
+      "l": 1.085,
+      "c": 1.0855
+    },
+    {
+      "i": 2,
+      "o": 1.0855,
+      "h": 1.0862,
+      "l": 1.0825,
+      "c": 1.0832
+    },
+    {
+      "i": 3,
+      "o": 1.0832,
+      "h": 1.0838,
+      "l": 1.08,
+      "c": 1.0806
+    },
+    {
+      "i": 4,
+      "o": 1.0806,
+      "h": 1.0812,
+      "l": 1.0775,
+      "c": 1.0782
+    },
+    {
+      "i": 5,
+      "o": 1.0782,
+      "h": 1.079,
+      "l": 1.075,
+      "c": 1.076
+    },
+    {
+      "i": 6,
+      "o": 1.076,
+      "h": 1.0795,
+      "l": 1.0752,
+      "c": 1.0788
+    },
+    {
+      "i": 7,
+      "o": 1.0788,
+      "h": 1.08,
+      "l": 1.078,
+      "c": 1.0784
+    },
+    {
+      "i": 8,
+      "o": 1.0784,
+      "h": 1.079,
+      "l": 1.076,
+      "c": 1.0764
+    },
+    {
+      "i": 9,
+      "o": 1.0764,
+      "h": 1.0768,
+      "l": 1.0735,
+      "c": 1.074
+    },
+    {
+      "i": 10,
+      "o": 1.074,
+      "h": 1.0752,
+      "l": 1.0702,
+      "c": 1.0748
+    },
+    {
+      "i": 11,
+      "o": 1.0748,
+      "h": 1.0775,
+      "l": 1.0746,
+      "c": 1.077
+    },
+    {
+      "i": 12,
+      "o": 1.077,
+      "h": 1.0795,
+      "l": 1.0766,
+      "c": 1.079
+    },
+    {
+      "i": 13,
+      "o": 1.079,
+      "h": 1.0815,
+      "l": 1.0786,
+      "c": 1.0808
+    },
+    {
+      "i": 14,
+      "o": 1.0808,
+      "h": 1.083,
+      "l": 1.0802,
+      "c": 1.0824
+    },
+    {
+      "i": 15,
+      "o": 1.0824,
+      "h": 1.084,
+      "l": 1.0818,
+      "c": 1.0832
+    }
+  ]
+}

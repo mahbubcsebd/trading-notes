@@ -1,0 +1,294 @@
+---
+title: "Dark Cloud Cover: a dark cloud that wipes out over half the green body"
+description: "How to spot a dark cloud cover, the mirror of the piercing line, measuring penetration, the no-gap Forex rule, and why a loss after following every rule is normal, with charts."
+type: bearish
+category: two-candle
+level: intermediate
+candleCount: 2
+signal: reversal
+chartId: dark-cloud-cover-win-01
+tags: [pattern, candlestick, dark-cloud-cover, reversal, resistance]
+status: done
+sources:
+  - type: book
+    title: "Japanese Candlestick Charting Techniques - Steve Nison"
+    note: "Dark cloud cover, comparison with engulfing"
+  - type: blog
+    title: "Dark Cloud Cover - Investopedia"
+    url: "https://www.investopedia.com/terms/d/darkcloud.asp"
+updated: 2026-11-06
+---
+
+A deep dark cloud cover at an old high, the next candle breaks the low, and there is room below. All five checklist boxes are ticked. You go short, and three days later you are stopped out. What went wrong? Nothing. Good setups lose too. This page is the mirror of [Piercing Line](/en/patterns/piercing-line); the 50% rule, measuring penetration and the gap explanation are detailed there. Here is only what differs, plus one important point: how to accept a loss.
+
+## At a glance
+
+| Item          | Dark Cloud Cover                                                                                               |
+| :------------ | :------------------------------------------------------------------------------------------------------------- |
+| Type          | Bearish reversal, two candles                                                                                  |
+| Where to look | At the top of an uptrend or pullback, at a marked resistance                                                   |
+| Key features  | A long green candle, then a red candle that closes below the middle (50%) of the green body but above its open |
+| Confirmation  | The next candle breaks or closes below the dark cloud candle's low                                             |
+| Stop          | Above the higher high of the two candles, plus spread and a buffer                                             |
+| Invalidation  | A close above the pattern high                                                                                 |
+| Look-alikes   | [Bearish Engulfing](/en/patterns/bearish-engulfing) (stronger form), a close just above 50% (weak)             |
+| Opposite      | Piercing Line                                                                                                  |
+
+## What you will be able to do
+
+- **Measure** a dark cloud cover's penetration to judge its strength.
+- **Separate** it from a bearish engulfing.
+- **See** a loss after following every rule through the lens of expectancy.
+
+## Why it matters
+
+- **The piercing line's mirror.** The same 50% rule, just at a top and in the other direction.
+- **A half version of the engulfing.** The red candle does not cover the whole green body, so it is a bit weaker than an engulfing. The deeper the close, the stronger.
+- **Losses are part of the system.** No pattern wins every time. Changing your rules after one trade breaks the system itself. More in [Expectancy](/en/learn/08-risk-management/07-expectancy).
+
+Prerequisites: the Piercing Line page (linked above) and [Accepting Losses](/en/learn/12-trading-psychology/03-accepting-losses).
+
+## What is a dark cloud cover
+
+**A dark cloud cover is a two-candle pattern: a long bullish candle in an uptrend, then a bearish candle that closes below the middle of the prior body but above the prior open.** A dark cloud in a sunny sky: it has not covered the whole sky, but more than half.
+
+<CandleDiagram
+  title="Dark cloud cover: the 50% rule"
+  candles={[
+    { o: 40, h: 46, l: 39, c: 45, dim: true },
+    { o: 45, h: 51, l: 44, c: 50, dim: true },
+    { o: 50, h: 64, l: 49, c: 63, label: "1", note: "long green body" },
+    {
+      o: 63,
+      h: 66,
+      l: 53,
+      c: 54,
+      label: "2",
+      note: "closes below the middle (56.5)",
+    },
+  ]}
+  levels={[{ price: 56.5, label: "50% of the green body", tone: "neutral" }]}
+  caption="The first body runs 50 to 63, middle 56.5. The second candle closes at 54: below the middle, but above 50."
+/>
+
+### Identification rules
+
+| Rule                                                       | Required?          | Why                                             |
+| :--------------------------------------------------------- | :----------------- | :---------------------------------------------- |
+| An uptrend before it; first candle long and bullish        | Yes                | Erasing a small green candle proves little      |
+| Second candle bearish, closing below 50% of the first body | Yes                | This is the "dark cloud"                        |
+| Second close above the first open                          | Yes                | Below it, it is a bearish engulfing             |
+| At a marked resistance                                     | Yes                | Without a level it is a small dip in an uptrend |
+| Penetration of 60-75% or more                              | No (but important) | The deeper, the stronger                        |
+
+## Strong vs weak dark cloud cover
+
+<DiagramRow>
+  <CandleDiagram
+    title="Strong"
+    verdict="good"
+    verdictLabel="tradeable"
+    candles={[
+      { o: 40, h: 46, l: 39, c: 45, dim: true },
+      { o: 45, h: 58, l: 44, c: 57 },
+      { o: 57, h: 61, l: 47, c: 48, label: "~75% deep" },
+    ]}
+    levels={[{ price: 58, label: "old high", tone: "resistance" }]}
+    caption="A wick above the old high, then a close about three quarters down into the green body."
+  />
+  <CandleDiagram
+    title="Weak"
+    verdict="bad"
+    verdictLabel="avoid"
+    candles={[
+      { o: 30, h: 41, l: 29, c: 40, dim: true },
+      { o: 40, h: 51, l: 39, c: 50, dim: true },
+      { o: 50, h: 61, l: 49, c: 60 },
+      { o: 60, h: 61, l: 54, c: 54.5, label: "barely 50%" },
+    ]}
+    caption="After a run of large green candles, no level, close right at the middle."
+  />
+</DiagramRow>
+
+| Pattern               | Second candle's close                       | Strength           |
+| :-------------------- | :------------------------------------------ | :----------------- |
+| **Bearish Engulfing** | Below the first open                        | Higher             |
+| **Dark Cloud Cover**  | Below 50% of the first body, above its open | Medium             |
+| **Close above 50%**   | Inside the first body, but above the middle | Weak; not a signal |
+
+## The story inside the candle
+
+The piercing line story, at a top and in reverse. One common interpretation: in the long green candle buyers are fully in control. The second candle first rises further, often peeking above resistance. Then sellers push hard and close past the middle of the green body. Those who bought late are now losing.
+
+<Callout type="note">
+  This is a common interpretation, not a proven fact. A chart does not show who
+  bought or sold.
+</Callout>
+
+## Where it works and where it does not
+
+<Compare
+  leftLabel="Where a dark cloud cover carries weight"
+  rightLabel="Where a dark cloud cover is often a trap"
+  left="- At a marked old high or supply zone
+- When the second candle peeks above resistance and closes lower
+- With penetration of 60-75% or more
+- At the top of a downtrend pullback, in the trend direction"
+  right="- In the middle of a run of large green candles
+- Mid-uptrend with no level
+- With a close right at or above 50%
+- With a higher low or support right below"
+/>
+
+## Gaps in a 24-hour market
+
+<Callout type="note">
+  Nison's original definition has the second candle gapping open above the first
+  candle's high. In Forex the second open usually equals the first close. The
+  practical rule: **the second candle opens near the first close, first trades
+  higher (ideally above the first high), then closes below 50% of the first
+  body.** The upper wick does the gap's job.
+</Callout>
+
+## Step by step: trading a dark cloud cover
+
+The full steps are on the Piercing Line page, reversed. Only what differs:
+
+<Steps>
+
+### Step 1: Calculate the penetration
+
+Penetration % = (first close − second close) ÷ (first close − first open). Below 50%, skip it; below 60%, be careful.
+
+### Step 2: Entry and stop
+
+Sell stop just below the dark cloud candle's low. Stop above the higher high of the two candles, plus the [spread](/en/learn/01-foundations/04-spread-commission-swap).
+
+### Step 3: Target before the obstacle
+
+The first obstacle is often the first candle's open; then the prior swing low. Put the target just before that obstacle, with a [risk reward](/en/learn/08-risk-management/03-risk-reward) of at least 1:1.5.
+
+### Step 4: Accept the risk in advance
+
+Before entry, say it: "If this trade loses, the loss is 1R, and that is normal." At 1% risk, even several losses in a row are a small part of the account.
+
+</Steps>
+
+### Pre-trade checklist
+
+<Checklist
+  id="pattern-dark-cloud-cover-pretrade-en"
+  items={[
+    "Was resistance marked before the dark cloud, and does it sit at that level?",
+    "Does the shape pass the rules (long green candle, red close below 50% but above the green open)?",
+    "Have both candles closed, and is the penetration at least 60%?",
+    "Is the risk reward to the swing low below at least 1:1.5?",
+    "Is the higher-timeframe trend or level not against the trade?",
+  ]}
+/>
+
+If any box stays empty, skip the trade.
+
+## Example 1: when it works (illustrative)
+
+<Chart
+  id="dark-cloud-cover-win-01"
+  height={420}
+  caption="XAUUSD H1 (illustrative, synthetic) — a deep dark cloud cover at an old high; short on the low break."
+/>
+
+- **What was visible:** Candle 5 left an old high at 2354.44. Candles 6-10 fell to about 2321, and 11-15 rallied again.
+- **The dark cloud:** Candle 16 was a long green candle (2347.44 to 2356.44), closing just above the old high. Candle 17 opened at 2356.44, peeked up to 2358.44, and closed at 2350.14: about 70% into the green body.
+- **Decision:** Sell stop at 2349.14. Stop at 2359.94 (above the high of both candles): $10.80 of risk. Target 2327.54 (2R); room to the swing low was about 2.6R.
+- **Result:** Candle 18 broke the low and filled the order. Candle 24 reached the target.
+- **Lesson:** A wick above the level, deep penetration, and an entry on the low break.
+
+<TradeSetup
+  direction="short"
+  pair="XAUUSD"
+  entry={2349.14}
+  stop={2359.94}
+  target={2327.54}
+/>
+
+(Illustrative example, not a real trade. Not every dark cloud cover wins, and no result is guaranteed.)
+
+## Example 2: when it loses without a mistake (illustrative)
+
+<Chart
+  id="dark-cloud-cover-fail-01"
+  height={420}
+  caption="EURUSD D1 (illustrative, synthetic) — a deep dark cloud cover at a clear old high, every box ticked, stopped out anyway."
+/>
+
+- **What was visible:** Candle 5 left an old high near 1.0836. Candle 10 made a swing low near 1.0673.
+- **The dark cloud:** Candle 15 was a long green candle (1.0776 to 1.0826, a 50-pip body). Candle 16 opened at 1.0826, rose to 1.0848 above the old high, and closed at 1.0792: about 68%.
+- **Decision:** Sell stop at 1.0786, filled on candle 17. Stop 1.0856: 70 pips of risk. Target 1.06756, just above the swing low, about 1.6R. All five boxes ticked.
+- **What happened:** Candle 18 stalled, buyers returned from candle 19, and candle 21 broke the stop.
+- **Why it lost:** No rule was broken. This is a normal loss from a good setup.
+
+**Lesson:** One trade's result does not tell you a setup's quality. At 1% risk this loss is 1% of the account. The mistake would be deciding "dark clouds do not work" and changing the rules, or raising size on the next trade to win it back.
+
+## Common mistakes
+
+| Mistake                                       | Why it happens                     | What to do instead                            |
+| :-------------------------------------------- | :--------------------------------- | :-------------------------------------------- |
+| Changing the rules after one loss             | Deciding on a tiny sample          | Review a journal of at least 30 samples first |
+| Raising size on the next trade to win it back | Revenge trading                    | Every trade at the same 1% risk               |
+| Calling a close right at 50% a dark cloud     | Measuring by eye                   | Calculate the penetration %                   |
+| Stop only above the second candle's high      | Forgetting the first candle's high | Above the higher high of the two              |
+
+## Pro tips
+
+<Callout type="tip">
+  To measure a pattern's expectancy, log results in R in your journal. Say
+  (hypothetically) 4 of 10 trades win 2R and 6 lose 1R: a total of +2R, or +0.2R
+  per trade on average. A system can be profitable even when 6 of 10 trades
+  lose.
+</Callout>
+
+<Callout type="warning">
+  Feeling bad after a losing streak is normal. But that is exactly when the urge
+  to break rules, raise size or skip the checklist is strongest. More in [FOMO
+  and Revenge Trading](/en/learn/12-trading-psychology/04-fomo-revenge-trading).
+</Callout>
+
+## Summary
+
+<KeyTakeaways>
+
+- Dark cloud cover = a long green candle, then a red candle closing below 50% of the green body but above the green open.
+- The deeper the penetration, the stronger; a close below the green open makes it a bearish engulfing.
+- In Forex the upper wick does the gap's job; enter on the low break, stop above the higher high of the two.
+- Losses after following every rule are normal; never judge a system by one trade.
+
+</KeyTakeaways>
+
+## Practice and your own backtest
+
+Open XAUUSD H1 or EURUSD D1 in TradingView. Find at least 30 dark cloud covers and count only those that tick all five checklist boxes as trades. Log each result in R. Then total R ÷ number of trades = average R per trade (expectancy). If it is positive, also note how long the losing streaks in between were: that is the measure of the mental preparation you need.
+
+## Quiz
+
+1. What is the difference between a dark cloud cover and a bearish engulfing?
+2. The first candle runs from 1.2000 to 1.2060. The second candle closes at 1.2035. Is it a dark cloud cover?
+3. A trade that followed every rule loses. What do you do next?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** A dark cloud cover closes below the middle of the green body but above its open. A bearish engulfing closes below the green open, covering the whole body.
+
+**2.** No. The middle is 1.2030; 1.2035 is above it. It is not a dark cloud cover.
+
+**3.** Log it in the journal, keep the rules unchanged, and take the next trade at the same 1% risk. Think about rule changes only after at least 30 samples.
+
+</details>
+
+## Next steps
+
+- Full walk-through: [Piercing Line](/en/patterns/piercing-line).
+- Accepting losses: [Accepting Losses](/en/learn/12-trading-psychology/03-accepting-losses).
+- Same family: [Bearish Engulfing](/en/patterns/bearish-engulfing), [Evening Star](/en/patterns/evening-star), [Shooting Star](/en/patterns/shooting-star).
+
+<Disclaimer />

@@ -1,0 +1,131 @@
+{
+  "id": "plan-week-review-equity-01",
+  "title": {
+    "en": "A Week in Ten Trades",
+    "bn": "দশটি trade-এ এক সপ্তাহ"
+  },
+  "symbol": "ACCOUNT",
+  "timeframe": "per trade",
+  "mode": "synthetic",
+  "type": "concept",
+  "bias": "neutral",
+  "outcome": "win",
+  "tags": [
+    "trading-plan",
+    "weekly-review"
+  ],
+  "module": "14-trading-plan-system",
+  "lessonSlugs": [
+    "04-daily-weekly-routine"
+  ],
+  "caption": {
+    "en": "Ten hypothetical trades at 1% risk: five winners, five losers, net about +3%. The weekly review reads the whole curve, not one day.",
+    "bn": "1% ঝুঁকিতে দশটি কাল্পনিক trade: পাঁচটি জেতা, পাঁচটি হারা, নিট প্রায় +3%। সাপ্তাহিক review পুরো curve দেখে, একটি দিন নয়।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data.",
+    "bn": "এটি শিক্ষামূলক কাল্পনিক ডেটা।"
+  },
+  "explanation": {
+    "en": "One red day is noise; the weekly curve shows whether the plan is working.",
+    "bn": "একটি লাল দিন noise; সপ্তাহের curve দেখায় plan কাজ করছে কি না।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Judge the plan by the week, not by one day",
+      "bn": "দিন নয়, সপ্তাহ দিয়ে plan বিচার করুন"
+    }
+  ],
+  "updatedAt": "2026-11-05T22:00:00Z",
+  "candles": [
+    {
+      "i": 0,
+      "o": 10000.0,
+      "h": 10112.0,
+      "l": 9988.0,
+      "c": 10100.0,
+      "v": 0
+    },
+    {
+      "i": 1,
+      "o": 10100.0,
+      "h": 10112.1,
+      "l": 9986.9,
+      "c": 9999.0,
+      "v": 0
+    },
+    {
+      "i": 2,
+      "o": 9999.0,
+      "h": 10220.98,
+      "l": 9977.0,
+      "c": 10198.98,
+      "v": 0
+    },
+    {
+      "i": 3,
+      "o": 10198.98,
+      "h": 10211.18,
+      "l": 10084.79,
+      "c": 10096.99,
+      "v": 0
+    },
+    {
+      "i": 4,
+      "o": 10096.99,
+      "h": 10109.09,
+      "l": 9983.92,
+      "c": 9996.02,
+      "v": 0
+    },
+    {
+      "i": 5,
+      "o": 9996.02,
+      "h": 10217.93,
+      "l": 9974.03,
+      "c": 10195.94,
+      "v": 0
+    },
+    {
+      "i": 6,
+      "o": 10195.94,
+      "h": 10310.1,
+      "l": 10183.74,
+      "c": 10297.9,
+      "v": 0
+    },
+    {
+      "i": 7,
+      "o": 10297.9,
+      "h": 10310.2,
+      "l": 10182.62,
+      "c": 10194.92,
+      "v": 0
+    },
+    {
+      "i": 8,
+      "o": 10194.92,
+      "h": 10421.21,
+      "l": 10172.53,
+      "c": 10398.82,
+      "v": 0
+    },
+    {
+      "i": 9,
+      "o": 10398.82,
+      "h": 10411.22,
+      "l": 10282.43,
+      "c": 10294.83,
+      "v": 0
+    }
+  ],
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 10000,
+      "label": "Start 10,000",
+      "color": "#3b82f6",
+      "style": "dotted"
+    }
+  ]
+}

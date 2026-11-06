@@ -1,0 +1,344 @@
+---
+title: "Dragonfly Doji: নিচে নেমে পুরোটা ফিরে আসা, support-এ sellers-এর ব্যর্থতা"
+description: "Dragonfly doji কীভাবে চিনবেন, hammer থেকে তফাত, কেন support-এ এটা bullish আর চূড়ায় সতর্কসংকেত, entry, বড় stop সামলানো ও target — chart example সহ।"
+type: bullish
+category: momentum-indecision
+level: beginner
+candleCount: 1
+signal: reversal
+chartId: dragonfly-doji-win-01
+tags: [pattern, candlestick, dragonfly-doji, doji, support]
+status: done
+sources:
+  - type: book
+    title: "Japanese Candlestick Charting Techniques - Steve Nison"
+    note: "Dragonfly doji, doji at tops vs bottoms"
+  - type: blog
+    title: "Dragonfly Doji - Investopedia"
+    url: "https://www.investopedia.com/terms/d/dragonfly-doji.asp"
+updated: 2026-11-06
+---
+
+Support-এর ঠিক নিচে দাম হঠাৎ অনেকটা নেমে গেল, আপনার buy-এর stop কেটে গেল। তারপর একই candle-এ দাম পুরোটা ফিরে এসে open-এর জায়গাতেই close করল। এই আকারটাই dragonfly doji। ঠিক জায়গায় এটা sellers-এর বড় ব্যর্থতার ছবি। ভুল জায়গায়, rally-র চূড়ায়, একই আকার বিপদের সংকেত।
+
+## এক নজরে
+
+| বিষয়                | Dragonfly Doji                                                                                    |
+| :------------------- | :------------------------------------------------------------------------------------------------ |
+| ধরন                  | Bullish reversal ঝোঁক (support-এ), একটি candle                                                    |
+| কোথায় খুঁজবেন       | Downtrend বা pullback-এর শেষে, চিহ্নিত support-এ                                                  |
+| চেনার মূল চিহ্ন      | Open ≈ close ≈ high, শুধু নিচে লম্বা wick, উপরে wick প্রায় নেই                                   |
+| Confirmation         | পরের candle dragonfly-র high-এর উপরে close করা                                                    |
+| Stop                 | লম্বা wick-এর low-এর নিচে, spread-সহ buffer                                                       |
+| বাতিল (invalidation) | Wick-এর low-এর নিচে close                                                                         |
+| দেখতে একই রকম        | [Hammer](/bn/patterns/hammer), [Hanging Man](/bn/patterns/hanging-man), [Doji](/bn/patterns/doji) |
+| বিপরীত pattern       | [Gravestone Doji](/bn/patterns/gravestone-doji) (শুধু উপরে লম্বা wick)                            |
+
+## এই লেখা পড়ে আপনি যা পারবেন
+
+- Dragonfly doji আর hammer-এর তফাত **মেপে বলতে পারবেন**।
+- একই আকার support-এ আর rally-র চূড়ায় কেন **উল্টো অর্থ দেয়**, ব্যাখ্যা করতে পারবেন।
+- লম্বা wick-এর জন্য বড় stop **size কমিয়ে সামলাতে পারবেন**।
+- Confirmation-এর পর entry ও target **ধাপে ধাপে বসাতে পারবেন**।
+
+## কেন জরুরি
+
+- **Rejection-এর সবচেয়ে চরম রূপ।** Hammer-এ buyers দামের বেশিরভাগ ফেরায়। Dragonfly-তে পুরোটা ফেরায়, open-এর জায়গা পর্যন্ত।
+- **Stop hunt চেনার চাবি।** Support-এর নিচে লম্বা wick প্রায়ই দেখায় সেখানে জমা stop কেটে দাম ফিরে এসেছে। বিস্তারিত: [Liquidity ও Stop Hunt](/bn/learn/03-market-structure/04-liquidity-stop-hunts)।
+- **ভুল জায়গায় উল্টো অর্থ।** "Dragonfly মানে bullish" মুখস্থ করলে চূড়ায় buy করে বসবেন। জায়গাই সব।
+
+পূর্বশর্ত: Doji পাতা (উপরের টেবিলে link) আর [Single Candle Patterns](/bn/learn/04-candlesticks/02-single-candle-patterns)।
+
+## Dragonfly Doji কী
+
+**Dragonfly doji হলো এমন একটি doji, যার open, close আর high প্রায় একই দামে, আর নিচে একটি লম্বা wick।** দেখতে ইংরেজি "T" অক্ষরের মতো, বা ফড়িংয়ের (dragonfly) মতো: উপরে ছোট ডানা, নিচে লম্বা শরীর।
+
+একটা বল পানিতে চেপে ধরার কথা ভাবুন। যত গভীরে চাপবেন, ছেড়ে দিলে তত জোরে ভেসে ওঠে। Sellers দাম অনেক নিচে চেপেছে, কিন্তু ধরে রাখতে পারেনি। দাম ঠিক শুরুর জায়গায় ভেসে উঠেছে।
+
+<CandleDiagram
+  title="Dragonfly doji বনাম hammer"
+  candles={[
+    { o: 60, h: 62, l: 55, c: 56, dim: true },
+    { o: 56, h: 57, l: 50, c: 51, dim: true },
+    {
+      o: 51,
+      h: 51.3,
+      l: 36,
+      c: 51.1,
+      label: "Dragonfly",
+      note: "body নেই, open ≈ close ≈ high",
+    },
+    { o: 51, h: 53, l: 48, c: 52, dim: true },
+    { o: 50, h: 52.5, l: 37, c: 52, label: "Hammer", note: "ছোট body আছে" },
+  ]}
+  caption="দুটোতেই নিচে লম্বা wick। Dragonfly-তে body প্রায় শূন্য; hammer-এ ছোট কিন্তু দৃশ্যমান body।"
+/>
+
+### চেনার নিয়ম
+
+| নিয়ম                                                           | বাধ্যতামূলক?          | কেন                                               |
+| :-------------------------------------------------------------- | :-------------------- | :------------------------------------------------ |
+| Open আর close প্রায় সমান                                       | হ্যাঁ                 | Body দেখা গেলে সেটা hammer বা hanging man         |
+| Open-close candle-এর high-এর কাছে (উপরে wick প্রায় নেই)        | হ্যাঁ                 | উপরে wick থাকলে সেটা long-legged doji-র দিকে যায় |
+| নিচের wick স্পষ্ট লম্বা, আশেপাশের candle-এর range-এর মতো বা বড় | হ্যাঁ                 | ছোট wick-এ rejection-এর গল্প নেই                  |
+| Candle বন্ধ হয়েছে                                              | হ্যাঁ                 | চলমান candle-এর wick শেষ মিনিটে আবার নামতে পারে   |
+| চিহ্নিত support-এ, আগে নিম্নমুখী move                           | না (কিন্তু খুব জরুরি) | এটাই bullish অর্থ দেয়; চূড়ায় অর্থ উল্টো        |
+
+## শক্তিশালী বনাম দুর্বল dragonfly doji
+
+<DiagramRow>
+  <CandleDiagram
+    title="শক্তিশালী"
+    verdict="good"
+    verdictLabel="trade-যোগ্য"
+    candles={[
+      { o: 62, h: 63, l: 56, c: 57, dim: true },
+      { o: 57, h: 58, l: 51, c: 52, dim: true },
+      { o: 52, h: 52.3, l: 40, c: 52.1, label: "support ভেদ করে ফেরা" },
+      { o: 52, h: 58, l: 51.5, c: 57, dim: true },
+    ]}
+    levels={[{ price: 46, label: "support", tone: "support" }]}
+    caption="Pullback-এর শেষে support-এ, wick level-এর নিচে, পরের candle high-এর উপরে close।"
+  />
+  <CandleDiagram
+    title="দুর্বল"
+    verdict="bad"
+    verdictLabel="এড়িয়ে চলুন"
+    candles={[
+      { o: 40, h: 46, l: 39.5, c: 45.5, dim: true },
+      { o: 45.5, h: 52, l: 45, c: 51.5, dim: true },
+      { o: 51.5, h: 58, l: 51, c: 57.5, dim: true },
+      { o: 57.5, h: 57.8, l: 49, c: 57.6, label: "চূড়ায়" },
+      { o: 57.6, h: 58.5, l: 52, c: 53, dim: true },
+    ]}
+    caption="Rally-র চূড়ায় একই আকার। নিচের wick দেখায় sellers ইতিমধ্যে দাম অনেক নামাতে পেরেছে।"
+  />
+</DiagramRow>
+
+| মান যাচাই    | শক্তিশালী                                  | দুর্বল                            |
+| :----------- | :----------------------------------------- | :-------------------------------- |
+| আগে কী ছিল   | Downtrend বা pullback                      | লম্বা rally                       |
+| কোথায়       | চিহ্নিত support-এ, wick level ভেদ করে ফেরে | Support ছাড়া, বা rally-র চূড়ায় |
+| Wick         | আশেপাশের candle-এর range-এর সমান বা বড়    | ছোট, অন্য candle-এর মতোই          |
+| পরের candle  | Dragonfly-র high-এর উপরে close             | High ছুঁয়ে নিচে close            |
+| Stop-এর আকার | Size কমিয়ে ১% ঝুঁকিতে রাখা যায়           | এত বড় যে size হাস্যকর ছোট হয়    |
+
+<Callout type="note">
+  Nison-এর বইয়ে rally-র পর চূড়ায় dragonfly doji-কে সতর্কসংকেত ধরা হয়,
+  hanging man-এর মতো: নিচের লম্বা wick দেখায় sellers দাম অনেক নামাতে পেরেছিল।
+  পরের candle নিচে close করলে সংকেত আরও জোরালো। এটা বইয়ের পর্যবেক্ষণ,
+  পরিসংখ্যান নয়।
+</Callout>
+
+### দেখতে একই রকম, অর্থ আলাদা
+
+| Pattern             | আকার                                           | তফাত                                        |
+| :------------------ | :--------------------------------------------- | :------------------------------------------ |
+| **Dragonfly Doji**  | Body নেই, open ≈ close ≈ high, নিচে লম্বা wick | পুরো rejection; support-এ bullish ঝোঁক      |
+| **Hammer**          | ছোট body উপরে, নিচে লম্বা wick                 | প্রায় একই গল্প, body থাকায় একটু কম নিখুঁত |
+| **Hanging Man**     | Hammer-এর আকার, কিন্তু uptrend-এর চূড়ায়      | একই আকার, উল্টো জায়গা, bearish সতর্কতা     |
+| **Gravestone Doji** | Body নেই, open ≈ close ≈ low, উপরে লম্বা wick  | উল্টো ছবি: উপরের দাম প্রত্যাখ্যাত           |
+
+## Candle-এর ভেতরের গল্প
+
+Support-এ একটি dragonfly doji সময় ধরে পড়লে একটি প্রচলিত ব্যাখ্যা এরকম:
+
+1. **Open-এর পরই sellers চাপ দেয়।** দাম support পর্যন্ত নামে, তারপর তার নিচেও।
+2. **Support-এর নিচে stop কাটে।** যারা support-এ buy করেছিল, তাদের sell stop কেটে দাম আরও নামে। নতুন breakout seller-রাও ঢোকে।
+3. **নিচে বড় buyers আসে।** কম দামে buy order আর short-দের profit নেওয়া মিলে দাম উঠতে থাকে।
+4. **Close ঠিক open-এ, candle-এর high-এ।** নিচে যারা sell করেছিল, তারা এখন লোকসানে। পুরো নিচের দাম প্রত্যাখ্যাত।
+
+ফল: sellers পুরো candle জুড়ে চেষ্টা করে শেষে খালি হাতে। কিন্তু buyers-ও open-এর উপরে নিতে পারেনি, তাই পরের candle-এর confirmation দরকার।
+
+<Callout type="note">
+  এটি একটি প্রচলিত ব্যাখ্যা, প্রমাণিত ঘটনা নয়। Chart দেখে কার stop কেটেছে বা কে
+  কিনেছে, তা জানা যায় না। আমরা শুধু দামের আচরণ দেখি।
+</Callout>
+
+## কোথায় কাজ করে, কোথায় করে না
+
+<Compare
+  leftLabel="যেখানে dragonfly-র ওজন বেশি"
+  rightLabel="যেখানে dragonfly প্রায়ই ফাঁদ"
+  left="- Downtrend বা pullback-এর শেষে চিহ্নিত support-এ
+- Wick support ভেদ করে নেমে আবার উপরে close করলে
+- Uptrend-এর ভেতরে pullback শেষে, trend-এর দিকে
+- Higher timeframe-এর demand zone-এ
+- পরের candle high-এর উপরে close করলে"
+  right="- লম্বা rally-র চূড়ায় (তখন এটা সতর্কসংকেত)
+- Support ছাড়া, downtrend-এর মাঝ পথে
+- খুব ছোট wick-এ, যখন আশেপাশের candle-ও এমন
+- News spike-এ, যেখানে wick পাতলা liquidity-র ফল
+- Stop এত বড় যে ১% ঝুঁকিতে size প্রায় শূন্য"
+/>
+
+## ধাপে ধাপে: dragonfly doji trade
+
+<Steps>
+
+### ধাপ ১: আগে level আর দিক
+
+Support আগেই আঁকুন। দাম নিচে নেমে সেখানে এসেছে কি না দেখুন। Rally-র চূড়ায় এই আকার এলে এই ধাপেই buy-এর চিন্তা বাদ।
+
+### ধাপ ২: Candle বন্ধ হওয়ার অপেক্ষা
+
+চলমান candle-এ wick আবার নিচে নামতে পারে, বা close high থেকে দূরে যেতে পারে। শুধু বন্ধ candle গুনুন।
+
+### ধাপ ৩: মাপুন
+
+Open আর close প্রায় সমান? দুটোই candle-এর high-এর কাছে? নিচের wick আশেপাশের candle-এর range-এর মতো বা বড়? Wick support-এর নিচে গিয়ে ফিরেছে?
+
+### ধাপ ৪: Entry-র ধরন বেছে নিন
+
+| Entry                    | কোথায়                                  | সুবিধা                 | অসুবিধা                        |
+| :----------------------- | :-------------------------------------- | :--------------------- | :----------------------------- |
+| **High break** (প্রচলিত) | Dragonfly-র high-এর একটু উপরে buy stop  | Buyers এগোলে তবেই ঢোকা | Stop পুরো wick-এর নিচে, বড়    |
+| **Confirmation close**   | পরের candle high-এর উপরে close করলে buy | ভুয়া break কম         | Entry আরও উপরে, stop আরও বড়   |
+| **Wick-এর 50% retest**   | Wick-এর মাঝামাঝি buy limit              | Stop অর্ধেক, R:R ভালো  | দাম না ফিরলে মিস; আগে ঢোকা হয় |
+
+### ধাপ ৫: Stop বসান
+
+Wick-এর low-এর নিচে, [spread](/bn/learn/01-foundations/04-spread-commission-swap) ও buffer-সহ। Wick লম্বা বলে stop বড় হবে। Stop ছোট করতে wick-এর মাঝখানে রাখবেন না; সেই এলাকাই sellers আগে একবার ছুঁয়েছে।
+
+### ধাপ ৬: Size ও target
+
+বড় stop মানে ছোট size: entry থেকে stop-এর দূরত্ব দিয়ে [position size](/bn/learn/08-risk-management/02-position-sizing) বের করুন, ঝুঁকি ১%-এর বেশি নয়। Target আগের swing high বা পরের resistance-এর আগে। সেখানে পর্যন্ত [risk reward](/bn/learn/08-risk-management/03-risk-reward) অন্তত 1:1.5 না হলে বাদ দিন।
+
+### ধাপ ৭: পরিচালনা
+
+দাম dragonfly-র wick-এর মাঝখানের নিচে টানা close করলে ধারণা দুর্বল হচ্ছে; exit ভাবুন। Wick-এর low-এর নিচে close হলে ধারণা ভুল।
+
+</Steps>
+
+### Trade-এর আগে checklist
+
+<Checklist
+  id="pattern-dragonfly-doji-pretrade-bn"
+  items={[
+    "Dragonfly আসার আগেই support চিহ্নিত ছিল, আর দাম নিচে নেমে সেখানে এসেছে (rally-র চূড়া নয়)?",
+    "আকার নিয়ম মানছে (open ≈ close ≈ high, নিচে লম্বা wick)?",
+    "Dragonfly আর confirmation candle দুটোই বন্ধ হয়েছে?",
+    "পরের resistance পর্যন্ত risk reward অন্তত 1:1.5?",
+    "Higher timeframe-এর কোনো level trade-এর ঠিক সামনে নেই?",
+  ]}
+/>
+
+একটি ঘরও খালি থাকলে trade বাদ দিন।
+
+## উদাহরণ ১: যখন কাজ করে (কাল্পনিক)
+
+<Chart
+  id="dragonfly-doji-win-01"
+  height={420}
+  caption="EURUSD H4 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — support-এর দ্বিতীয় পরীক্ষায় dragonfly doji, পরের candle high-এর উপরে close করলে long।"
+/>
+
+- **কী দেখা যাচ্ছিল:** ৫ নম্বর candle 1.0880-এ support চিহ্নিত করেছে। ৬-১০ নম্বর প্রায় 1.0970 পর্যন্ত ওঠে, ১১-১৫ নম্বর আবার support-এর ঠিক উপরে নামে।
+- **Dragonfly:** ১৬ নম্বর 1.0886-এ open, 1.08865-এ close, high 1.0887। নিচের wick 1.0858 পর্যন্ত, support-এর 22 pip নিচে, তারপর পুরোটা ফেরত।
+- **সিদ্ধান্ত:** Buy stop 1.0889 (high-এর 2 pip উপরে)। Stop 1.0853 (wick low-এর 5 pip নিচে), ঝুঁকি 36 pip। Target 1.0961 (2R), আগের bounce high 1.0970-এর ঠিক নিচে।
+- **ফল:** ১৭ নম্বর 1.0898-এ close করে, order fill হয়। ২৩ নম্বর candle target ছোঁয়।
+- **শিক্ষা:** Support-এর নিচে stop কেটে দাম পুরো ফিরে এসেছিল, আর পরের candle সেটা নিশ্চিত করেছিল। Target ঠিক বাধার আগে বসানো।
+
+<TradeSetup
+  direction="long"
+  pair="EURUSD"
+  entry={1.0889}
+  stop={1.0853}
+  target={1.0961}
+/>
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়। সব dragonfly doji জেতে না, আর কোনো ফল গ্যারান্টি নয়।)
+
+## উদাহরণ ২: যখন ফাঁদ হয় (কাল্পনিক)
+
+<Chart
+  id="dragonfly-doji-fail-01"
+  height={420}
+  caption="USDJPY D1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — নয় দিনের rally-র চূড়ায় dragonfly doji, 'bullish' ভেবে buy, তারপর stop।"
+/>
+
+- **কী দেখা যাচ্ছিল:** ০-৮ নম্বর candle 148.00 থেকে 151.05 পর্যন্ত টানা উঠেছে। নিচে কোনো support নেই, দাম চূড়ায়।
+- **Dragonfly:** ৯ নম্বর 151.05-এ open, 151.06-এ close, high 151.08। নিচের wick 150.35 পর্যন্ত, প্রায় 70 pip।
+- **ভুল সিদ্ধান্ত:** "Dragonfly মানে bullish।" Buy stop 151.12, stop 150.25, ঝুঁকি 87 pip, target 152.86।
+- **কী হলো:** ১০ নম্বর 151.24 পর্যন্ত উঠে order fill করে, কিন্তু 150.84-এ লাল close দেয়। ১১ নম্বর stop ভাঙে।
+- **কেন ব্যর্থ:** আকার ঠিক, জায়গা উল্টো। Rally-র চূড়ায় নিচের লম্বা wick দেখায় sellers ইতিমধ্যে দাম 70 pip নামাতে পেরেছে। Checklist-এর প্রথম ঘরেই trade বাদ পড়ত, আর তৃতীয় ঘরে (confirmation close) আবার।
+
+**শিক্ষা:** চূড়ায় একই আকার সতর্কসংকেত, buy signal নয়। Stop আগে বসানো ছিল বলে লোকসান 1R-এ আটকেছে।
+
+## সাধারণ ভুল
+
+| ভুল                                    | কেন হয়                      | কী করবেন                                             |
+| :------------------------------------- | :--------------------------- | :--------------------------------------------------- |
+| যেকোনো জায়গায় dragonfly দেখে buy     | "Dragonfly = bullish" মুখস্থ | আগে দিক আর level দেখুন; চূড়ায় এটা সতর্কতা          |
+| Stop wick-এর মাঝখানে রাখা              | বড় stop-এর ভয়              | Stop wick low-এর নিচে, size কমান                     |
+| Hammer আর dragonfly গুলিয়ে ফেলা       | Body মাপা হয় না             | Body দৃশ্যমান হলে hammer; প্রায় শূন্য হলে dragonfly |
+| News spike-এর wick-কে rejection ধরা    | আকার একই রকম                 | Economic calendar দেখুন; news candle আলাদা ধরুন      |
+| Confirmation ছাড়া candle close-এ ঢোকা | ভালো দামের লোভ               | পরের candle high-এর উপরে close করার অপেক্ষা করুন     |
+
+## Pro tips
+
+<Callout type="tip">
+  Dragonfly-র wick যদি কোনো স্পষ্ট পুরোনো low বা support-এর নিচে গিয়ে ফেরে,
+  সেটা stop hunt-এর ছবি। এমন জায়গায় confirmation এলে setup আরও পরিষ্কার। সেই
+  low-এর নিচে কতটা নেমেছিল, journal-এ লিখে রাখুন।
+</Callout>
+
+<Callout type="tip">
+  Stop খুব বড় লাগলে ছোট timeframe-এ নেমে দেখুন। H4-এর dragonfly-র পর H1-এ
+  প্রায়ই একটি ছোট higher low তৈরি হয়; তার নিচে stop রাখলে ঝুঁকি অনেক কমে। তবে
+  এতে stop-out-এর সম্ভাবনাও বাড়ে।
+</Callout>
+
+<Callout type="warning">
+  Spot Forex ও Gold-এ শুধু tick volume পাওয়া যায়। "লম্বা wick-এ বিশাল volume
+  মানে institution কিনেছে" জাতীয় দাবি chart থেকে প্রমাণ করা যায় না।
+</Callout>
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- Dragonfly doji = open ≈ close ≈ high, নিচে লম্বা wick; দেখতে "T"-এর মতো।
+- Support-এ, নিম্নমুখী move-এর পর এটা sellers-এর ব্যর্থতা; rally-র চূড়ায় একই আকার সতর্কসংকেত।
+- Entry পরের candle high-এর উপরে close করার পর; stop wick low-এর নিচে।
+- লম্বা wick মানে বড় stop: size কমান, stop ছোট করতে wick-এর মাঝে রাখবেন না।
+
+</KeyTakeaways>
+
+## অনুশীলন ও নিজের backtest
+
+TradingView-এ EURUSD H4 বা USDJPY D1 খুলুন। অন্তত ২০টি dragonfly doji খুঁজুন। প্রতিটির জন্য একটি সারি লিখুন:
+
+| তারিখ | আগে downtrend না rally? | Support-এ ছিল? | Wick level ভেদ করেছে? | Confirmation এসেছে? | ফল (R) |
+| :---- | :---------------------- | :------------- | :-------------------- | :------------------ | :----- |
+|       |                         |                |                       |                     |        |
+
+এরপর "support-এ" আর "চূড়ায়" দুই দলে ভাগ করুন। চূড়ার dragonfly-র পর দাম কতবার নিচে গেছে, সেটাও গুনুন। অন্তত ৩০টি নমুনা ছাড়া সিদ্ধান্ত নেবেন না।
+
+## কুইজ
+
+1. একটি candle-এর নিচে লম্বা wick, open আর close প্রায় সমান, কিন্তু উপরেও মাঝারি wick আছে। এটি কি dragonfly?
+2. নয় দিনের rally-র পর চূড়ায় dragonfly doji। এর অর্থ কী হতে পারে?
+3. Stop ছোট করতে wick-এর মাঝখানে রাখা কেন ঝুঁকিপূর্ণ?
+4. উদাহরণ ২-এর trade checklist-এর কোন ঘরে বাদ পড়ত?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** না। Dragonfly-তে উপরে wick প্রায় থাকে না। দুই দিকে wick থাকলে সেটা standard বা long-legged doji।
+
+**২.** সতর্কসংকেত। নিচের লম্বা wick দেখায় sellers দাম অনেক নামাতে পেরেছে। পরের candle নিচে close করলে সংকেত আরও জোরালো, hanging man-এর মতো।
+
+**৩.** Sellers সেই এলাকা আগেই একবার ছুঁয়েছে। দাম আবার সেখানে এলে stop কাটবে, অথচ ধারণা এখনো ভুল প্রমাণ হয়নি।
+
+**৪.** প্রথম ঘর (দাম নিচে নেমে support-এ আসেনি, rally-র চূড়ায় ছিল), আর তৃতীয় ঘর (confirmation candle লাল close করেছে)।
+
+</details>
+
+## পরের ধাপ
+
+- আগে: [Single Candle Patterns](/bn/learn/04-candlesticks/02-single-candle-patterns)।
+- Wick-এর পেছনের গল্প: [Fake Breakout](/bn/learn/06-trend-chart-patterns/04-fake-breakout)।
+- একই পরিবারের pattern: [Gravestone Doji](/bn/patterns/gravestone-doji), [Hammer](/bn/patterns/hammer), [Long-Legged Doji](/bn/patterns/long-legged-doji)।
+
+<Disclaimer />

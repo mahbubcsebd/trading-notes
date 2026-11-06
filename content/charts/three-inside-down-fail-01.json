@@ -1,0 +1,289 @@
+{
+  "id": "three-inside-down-fail-01",
+  "title": {
+    "en": "Three Inside Down Stopped by a Rollover Spread Spike",
+    "bn": "Rollover-এর spread spike-এ three inside down-এর stop"
+  },
+  "symbol": "EURUSD",
+  "timeframe": "H1",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bearish",
+  "outcome": "loss",
+  "tags": [
+    "three-inside-down",
+    "harami",
+    "candlestick",
+    "three-candle",
+    "fail",
+    "spread",
+    "pattern"
+  ],
+  "module": "patterns",
+  "lessonSlugs": [],
+  "caption": {
+    "en": "Illustrative synthetic EURUSD H1: a clean three inside down at an old high, shorted at the third close with a stop only 1 pip above the mother's high. At the daily rollover, spreads widen and a thin spike takes the stop; price then falls as expected.",
+    "bn": "শিক্ষামূলক কাল্পনিক EURUSD H1: পুরোনো high-এ পরিষ্কার three inside down, তৃতীয় close-এ short, stop mother-এর high-এর মাত্র 1 pip উপরে। Daily rollover-এ spread চওড়া হয়, একটি সরু spike stop নেয়; তারপর দাম প্রত্যাশামতো নামে।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data, not a real market record.",
+    "bn": "শিক্ষামূলক কাল্পনিক ডেটা, বাস্তব মার্কেটের রেকর্ড নয়।"
+  },
+  "updatedAt": "2026-11-06T12:00:00Z",
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 1.0964,
+      "label": "Old high (resistance)",
+      "color": "#3b82f6",
+      "style": "dashed"
+    },
+    {
+      "type": "marker",
+      "i": 14,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Mother"
+    },
+    {
+      "type": "marker",
+      "i": 15,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Harami"
+    },
+    {
+      "type": "marker",
+      "i": 16,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "3rd"
+    },
+    {
+      "type": "marker",
+      "i": 18,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Rollover spike"
+    },
+    {
+      "type": "hline",
+      "price": 1.094,
+      "label": "Entry (3rd close)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.0964,
+      "label": "Tight stop (+1 pip)",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.0969,
+      "label": "Stop with buffer",
+      "color": "#ef4444",
+      "style": "dotted"
+    },
+    {
+      "type": "hline",
+      "price": 1.0892,
+      "label": "Target 2R (tight)",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candles 14-16 form a clean three inside down at the old high. The stop sat just 1 pip above the mother's high. Candle 18 is the daily rollover hour, when spreads widen sharply: a thin spike touches the stop. Short trades are closed on the ask price, which rises with the spread. A buffer of about 6 pips would have survived and reached 2R.",
+    "bn": "১৪-১৬ নম্বর candle পুরোনো high-এ পরিষ্কার three inside down। Stop ছিল mother-এর high-এর মাত্র 1 pip উপরে। ১৮ নম্বর daily rollover-এর ঘণ্টা, যখন spread হঠাৎ চওড়া হয়: একটি সরু spike stop ছোঁয়। Short trade ask দামে বন্ধ হয়, যা spread-এর সঙ্গে ওঠে। প্রায় 6 pip buffer থাকলে trade টিকে 2R ছুঁত।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Put the spread into the stop buffer, especially around rollover",
+      "bn": "Stop-এর buffer-এ spread ধরুন, বিশেষ করে rollover-এর সময়"
+    }
+  ],
+  "entry": 1.094,
+  "stopLoss": 1.0964,
+  "takeProfit": 1.0892,
+  "rr": "1:2.0",
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.09,
+      "h": 1.09203,
+      "l": 1.08898,
+      "c": 1.0914
+    },
+    {
+      "i": 1,
+      "o": 1.0914,
+      "h": 1.09436,
+      "l": 1.0906,
+      "c": 1.0932
+    },
+    {
+      "i": 2,
+      "o": 1.0932,
+      "h": 1.09356,
+      "l": 1.09227,
+      "c": 1.0927
+    },
+    {
+      "i": 3,
+      "o": 1.0927,
+      "h": 1.09488,
+      "l": 1.09213,
+      "c": 1.0943
+    },
+    {
+      "i": 4,
+      "o": 1.0943,
+      "h": 1.09618,
+      "l": 1.09351,
+      "c": 1.0955
+    },
+    {
+      "i": 5,
+      "o": 1.0955,
+      "h": 1.0964,
+      "l": 1.0947,
+      "c": 1.0952
+    },
+    {
+      "i": 6,
+      "o": 1.0952,
+      "h": 1.09589,
+      "l": 1.09314,
+      "c": 1.0937
+    },
+    {
+      "i": 7,
+      "o": 1.0937,
+      "h": 1.09477,
+      "l": 1.09113,
+      "c": 1.0919
+    },
+    {
+      "i": 8,
+      "o": 1.0919,
+      "h": 1.09264,
+      "l": 1.09048,
+      "c": 1.0909
+    },
+    {
+      "i": 9,
+      "o": 1.0909,
+      "h": 1.09197,
+      "l": 1.09054,
+      "c": 1.0915
+    },
+    {
+      "i": 10,
+      "o": 1.0915,
+      "h": 1.09196,
+      "l": 1.08969,
+      "c": 1.0903
+    },
+    {
+      "i": 11,
+      "o": 1.0903,
+      "h": 1.09256,
+      "l": 1.08953,
+      "c": 1.0917
+    },
+    {
+      "i": 12,
+      "o": 1.0917,
+      "h": 1.09385,
+      "l": 1.09084,
+      "c": 1.0932
+    },
+    {
+      "i": 13,
+      "o": 1.0932,
+      "h": 1.09476,
+      "l": 1.09248,
+      "c": 1.0943
+    },
+    {
+      "i": 14,
+      "o": 1.0943,
+      "h": 1.0963,
+      "l": 1.0942,
+      "c": 1.0961
+    },
+    {
+      "i": 15,
+      "o": 1.0961,
+      "h": 1.09615,
+      "l": 1.09528,
+      "c": 1.09538
+    },
+    {
+      "i": 16,
+      "o": 1.09538,
+      "h": 1.09548,
+      "l": 1.0939,
+      "c": 1.094
+    },
+    {
+      "i": 17,
+      "o": 1.094,
+      "h": 1.0943,
+      "l": 1.0934,
+      "c": 1.0936
+    },
+    {
+      "i": 18,
+      "o": 1.0936,
+      "h": 1.09655,
+      "l": 1.0934,
+      "c": 1.0937
+    },
+    {
+      "i": 19,
+      "o": 1.0937,
+      "h": 1.09437,
+      "l": 1.09177,
+      "c": 1.0923
+    },
+    {
+      "i": 20,
+      "o": 1.0923,
+      "h": 1.09269,
+      "l": 1.09072,
+      "c": 1.0911
+    },
+    {
+      "i": 21,
+      "o": 1.0911,
+      "h": 1.09183,
+      "l": 1.09074,
+      "c": 1.0915
+    },
+    {
+      "i": 22,
+      "o": 1.0915,
+      "h": 1.09219,
+      "l": 1.08916,
+      "c": 1.0899
+    },
+    {
+      "i": 23,
+      "o": 1.0899,
+      "h": 1.09043,
+      "l": 1.08855,
+      "c": 1.0889
+    },
+    {
+      "i": 24,
+      "o": 1.0889,
+      "h": 1.08935,
+      "l": 1.0877,
+      "c": 1.0881
+    }
+  ]
+}

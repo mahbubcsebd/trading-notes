@@ -1,0 +1,211 @@
+{
+  "id": "bearish-harami-fail-01",
+  "title": {
+    "en": "Bearish Harami Inside a Sideways Range",
+    "bn": "পাশাপাশি range-এর ভেতরে bearish harami"
+  },
+  "symbol": "EURUSD",
+  "timeframe": "H1",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bearish",
+  "outcome": "loss",
+  "tags": [
+    "bearish-harami",
+    "harami",
+    "candlestick",
+    "fail",
+    "range",
+    "pattern"
+  ],
+  "module": "patterns",
+  "lessonSlugs": [],
+  "caption": {
+    "en": "Illustrative synthetic EURUSD H1: inside a choppy sideways range, a green candle is followed by a small red candle inside it. With no uptrend to reverse, the short below the midpoint is just one more swing of the chop and the stop goes.",
+    "bn": "শিক্ষামূলক কাল্পনিক EURUSD H1: এলোমেলো পাশাপাশি range-এর ভেতরে একটি সবুজ candle, তারপর তার ভেতরে ছোট লাল candle। উল্টানোর মতো কোনো uptrend নেই, তাই মাঝের নিচে short শুধু আরেকটি ঢেউ, আর stop যায়।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data, not a real market record.",
+    "bn": "শিক্ষামূলক কাল্পনিক ডেটা, বাস্তব মার্কেটের রেকর্ড নয়।"
+  },
+  "updatedAt": "2026-11-06T12:00:00Z",
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 1.09244,
+      "label": "Range high",
+      "color": "#3b82f6",
+      "style": "dotted"
+    },
+    {
+      "type": "hline",
+      "price": 1.08917,
+      "label": "Range low",
+      "color": "#3b82f6",
+      "style": "dotted"
+    },
+    {
+      "type": "marker",
+      "i": 10,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Harami (no trend)"
+    },
+    {
+      "type": "hline",
+      "price": 1.0923,
+      "label": "Entry (below 50%)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.094,
+      "label": "Stop",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.0889,
+      "label": "Target 2R",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candles 0-8 chop sideways with no direction. Candle 9 is a green candle that pushes up to the top of that range; candle 10 is a small red candle inside its body: a harami by shape. But there was no uptrend, so there is nothing to reverse. Candle 11 dips below the midpoint and fills the sell stop; the range swings back up and takes the stop.",
+    "bn": "০-৮ নম্বর candle কোনো দিক ছাড়া পাশাপাশি চলে। ৯ নম্বর একটি সবুজ candle, range-এর উপরের প্রান্ত পর্যন্ত ওঠে; ১০ নম্বর তার body-র ভেতরে ছোট লাল candle: আকারে harami। কিন্তু কোনো uptrend ছিল না, তাই উল্টানোর কিছু নেই। ১১ নম্বর মাঝের নিচে নেমে sell stop fill করে; range আবার উপরে ঢেউ দিয়ে stop নেয়।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "A reversal pattern needs a trend to reverse",
+      "bn": "Reversal pattern-এর জন্য উল্টানোর মতো trend লাগে"
+    }
+  ],
+  "entry": 1.0923,
+  "stopLoss": 1.094,
+  "takeProfit": 1.0889,
+  "rr": "1:2.0",
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.09,
+      "h": 1.09193,
+      "l": 1.0894,
+      "c": 1.0912
+    },
+    {
+      "i": 1,
+      "o": 1.0912,
+      "h": 1.09185,
+      "l": 1.08958,
+      "c": 1.0902
+    },
+    {
+      "i": 2,
+      "o": 1.0902,
+      "h": 1.09241,
+      "l": 1.08932,
+      "c": 1.0916
+    },
+    {
+      "i": 3,
+      "o": 1.0916,
+      "h": 1.09244,
+      "l": 1.08957,
+      "c": 1.0904
+    },
+    {
+      "i": 4,
+      "o": 1.0904,
+      "h": 1.09196,
+      "l": 1.08966,
+      "c": 1.0914
+    },
+    {
+      "i": 5,
+      "o": 1.0914,
+      "h": 1.09211,
+      "l": 1.08917,
+      "c": 1.09
+    },
+    {
+      "i": 6,
+      "o": 1.09,
+      "h": 1.09199,
+      "l": 1.08918,
+      "c": 1.0912
+    },
+    {
+      "i": 7,
+      "o": 1.0912,
+      "h": 1.09181,
+      "l": 1.08982,
+      "c": 1.0903
+    },
+    {
+      "i": 8,
+      "o": 1.0903,
+      "h": 1.09218,
+      "l": 1.08971,
+      "c": 1.0914
+    },
+    {
+      "i": 9,
+      "o": 1.0914,
+      "h": 1.0936,
+      "l": 1.0912,
+      "c": 1.0934
+    },
+    {
+      "i": 10,
+      "o": 1.0934,
+      "h": 1.0936,
+      "l": 1.0925,
+      "c": 1.0927
+    },
+    {
+      "i": 11,
+      "o": 1.0927,
+      "h": 1.0929,
+      "l": 1.0919,
+      "c": 1.0921
+    },
+    {
+      "i": 12,
+      "o": 1.0921,
+      "h": 1.0935,
+      "l": 1.0918,
+      "c": 1.0933
+    },
+    {
+      "i": 13,
+      "o": 1.0933,
+      "h": 1.0955,
+      "l": 1.09257,
+      "c": 1.0947
+    },
+    {
+      "i": 14,
+      "o": 1.0947,
+      "h": 1.0963,
+      "l": 1.09395,
+      "c": 1.0957
+    },
+    {
+      "i": 15,
+      "o": 1.0957,
+      "h": 1.09615,
+      "l": 1.0947,
+      "c": 1.0952
+    },
+    {
+      "i": 16,
+      "o": 1.0952,
+      "h": 1.09701,
+      "l": 1.09443,
+      "c": 1.0964
+    }
+  ]
+}

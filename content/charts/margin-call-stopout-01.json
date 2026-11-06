@@ -1,0 +1,130 @@
+{
+  "id": "margin-call-stopout-01",
+  "title": {
+    "en": "Equity Falling Through Margin Call and Stop-Out",
+    "bn": "Equity নেমে margin call ও stop-out পেরোয়"
+  },
+  "symbol": "ACCOUNT",
+  "timeframe": "per trade",
+  "mode": "synthetic",
+  "type": "concept",
+  "bias": "neutral",
+  "outcome": "loss",
+  "tags": [
+    "margin",
+    "margin-call",
+    "stop-out"
+  ],
+  "module": "02-broker-platform-setup",
+  "lessonSlugs": [
+    "05-lot-size-margin-call-stop-out"
+  ],
+  "caption": {
+    "en": "Hypothetical account of 1,000 with 400 used margin. Margin level = equity ÷ used margin. Example thresholds: margin call at 100% (equity 400), stop-out at 50% (equity 200). Eight oversized losing trades push equity through both.",
+    "bn": "কাল্পনিক 1,000 account, used margin 400। Margin level = equity ÷ used margin। উদাহরণ সীমা: margin call 100% (equity 400), stop-out 50% (equity 200)। আটটি অতি-বড় losing trade equity-কে দুটিই পার করায়।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data.",
+    "bn": "এটি শিক্ষামূলক কাল্পনিক ডেটা।"
+  },
+  "explanation": {
+    "en": "Margin level thresholds are set by the broker; once equity falls to them, positions can be closed automatically.",
+    "bn": "Margin level-এর সীমা broker ঠিক করে; equity সেখানে নামলে position স্বয়ংক্রিয়ভাবে বন্ধ হতে পারে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Keep risk small so equity never nears the margin thresholds",
+      "bn": "ঝুঁকি ছোট রাখুন, যাতে equity margin-সীমার কাছেও না যায়"
+    }
+  ],
+  "updatedAt": "2026-11-05T22:00:00Z",
+  "candles": [
+    {
+      "i": 0,
+      "o": 1000.0,
+      "h": 1006.0,
+      "l": 894.0,
+      "c": 900.0,
+      "v": 0
+    },
+    {
+      "i": 1,
+      "o": 900.0,
+      "h": 906.0,
+      "l": 786.0,
+      "c": 792.0,
+      "v": 0
+    },
+    {
+      "i": 2,
+      "o": 792.0,
+      "h": 798.0,
+      "l": 667.2,
+      "c": 673.2,
+      "v": 0
+    },
+    {
+      "i": 3,
+      "o": 673.2,
+      "h": 679.2,
+      "l": 546.02,
+      "c": 552.02,
+      "v": 0
+    },
+    {
+      "i": 4,
+      "o": 552.02,
+      "h": 558.02,
+      "l": 435.62,
+      "c": 441.62,
+      "v": 0
+    },
+    {
+      "i": 5,
+      "o": 441.62,
+      "h": 447.62,
+      "l": 325.22,
+      "c": 331.22,
+      "v": 0
+    },
+    {
+      "i": 6,
+      "o": 331.22,
+      "h": 337.22,
+      "l": 209.29,
+      "c": 215.29,
+      "v": 0
+    },
+    {
+      "i": 7,
+      "o": 215.29,
+      "h": 221.29,
+      "l": 166.23,
+      "c": 172.23,
+      "v": 0
+    }
+  ],
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 1000,
+      "label": "Start 1,000",
+      "color": "#3b82f6",
+      "style": "dotted"
+    },
+    {
+      "type": "hline",
+      "price": 400,
+      "label": "Margin call: equity = 400 (margin level 100%, example)",
+      "color": "#f97316",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 200,
+      "label": "Stop-out: equity = 200 (margin level 50%, example)",
+      "color": "#ef4444",
+      "style": "dashed"
+    }
+  ]
+}

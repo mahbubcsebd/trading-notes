@@ -1,0 +1,186 @@
+---
+title: "Trailing Stop: A Rule for Protecting Running Profit"
+description: "What a trailing stop is, how to move it with structure and ATR, and why a trail that is too close takes you out early, with two charts of the same trade."
+level: intermediate
+tags: [trailing-stop, trade-management, structure, atr, exit]
+instruments: [EURUSD]
+timeframes: [H1]
+status: done
+sources:
+  - type: blog
+    title: "Trailing Stop - Investopedia"
+    url: "https://www.investopedia.com/terms/t/trailingstop.asp"
+  - type: blog
+    title: "Trailing Stop - BabyPips"
+    url: "https://www.babypips.com/learn/forex/trailing-stop"
+updated: 2026-11-06
+---
+
+# Trailing Stop: A Rule for Protecting Running Profit
+
+The trade is going well and profit is growing. Now there are two fears: leaving early and missing the big move, or waiting too long and giving the profit back. A trailing stop is the road between the two.
+
+## What you will be able to do
+
+- **Explain how** a trailing stop works.
+- **Move the stop** using structure.
+- **Understand the harm** of a trail that is too close, and set your own distance.
+
+## Why it matters
+
+- **Protect profit and let the move run, both at once.** The stop goes up and the trade keeps running.
+- **A rule written earlier reduces emotion.** The thought "let me get out now" turns into a rule.
+- **A wrong trail costs money.** If it is too close you leave the move. If it is too far you give the profit back.
+
+Prerequisites: [Take Profit and Partial Close](/en/learn/10-trade-management-execution/02-take-profit-partial-close) and [ATR](/en/learn/07-technical-indicators/04-atr-stop-size).
+
+## What is a trailing stop
+
+**A trailing stop is a stop that moves along as soon as price goes in the direction of profit, but never moves the other way.**
+
+Think of climbing stairs. The step before the one you are stepping on is your safe place. If you slip, you stop at the earlier step, not all the way down.
+
+| Method          | How it moves                              | Benefit                         |
+| :-------------- | :---------------------------------------- | :------------------------------ |
+| Structure trail | Below each new higher low                 | Follows the shape of the move   |
+| ATR trail       | A multiple of ATR below the highest price | Matches the speed of the market |
+| Moving average  | When price closes below the MA            | Simple, trend-based             |
+
+## What it looks like on a chart
+
+<Chart
+  id="trail-structure-win-01"
+  height={440}
+  caption="EURUSD H1 (educational, imaginary example): buy at 1.0900, starting stop 1.0870. After each higher low the stop moves up (the red step line). When the trailing stop is hit, exit with about 64 pips of profit."
+/>
+
+The red line rose like a staircase and never came down.
+
+## Step by step: the structure trail
+
+<Steps>
+
+### Step 1: Place the starting stop
+
+[Beyond the structure](/en/learn/10-trade-management-execution/01-stop-loss-placement). Trailing starts once the trade is in profit.
+
+### Step 2: Wait for a new higher low
+
+Let price go up, pull back and form a new [higher low](/en/learn/03-market-structure/02-trend-range-hhhl).
+
+### Step 3: Move the stop
+
+A little below the new higher low. Leave a buffer for noise and spread.
+
+### Step 4: Never backward
+
+The stop moves only toward profit. Even if price falls, the stop does not fall.
+
+### Step 5: Exit when the stop is hit
+
+Leaving in profit is the rule. Not the thought "a little more".
+
+</Steps>
+
+## Example 1: when it works (synthetic)
+
+- **Set in advance:** risk 1%, starting stop 30 pips.
+- **Result:** the stop rose below two higher lows. Price went high, fell and touched the stop, for a profit of about 64 pips (more than 2R).
+- **Lesson:** the structure trail put up with the normal pullbacks and took you out on the real break.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Example 2: when it fails (synthetic)
+
+<Chart
+  id="trail-tight-fail-01"
+  height={440}
+  caption="EURUSD H1 (educational, imaginary example): same trade and same candles, but the stop trails only 12 pips below the highest price. A normal pullback takes you out with about 44 pips of profit, and then the trend rises further."
+/>
+
+- **What was visible:** same move, same entry.
+- **Result:** the close trail was hit on a small pullback and you exit, with about 44 pips of profit.
+- **Why it failed:** the trail was narrower than a normal pullback.
+- **Lesson:** the profit is safe, but you lose a large part of the move.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Common mistakes
+
+| Mistake                                  | Why it happens                | What to do                                  |
+| :--------------------------------------- | :---------------------------- | :------------------------------------------ |
+| Trailing below every candle              | A hurry to save profit        | Use structure or a multiple of ATR          |
+| Starting to trail before profit          | Fear                          | First follow the rule for the starting stop |
+| Moving the trail backward                | Not wanting to give up profit | The stop moves only one way                 |
+| Changing method in the middle of a trade | Uncertainty                   | Pick it first and stick to it to the end    |
+
+## Pro tips
+
+<Callout type="tip">
+  Set the trail distance by looking at the size of recent pullbacks. The trail
+  should be bigger than the usual pullback in pips.
+</Callout>
+
+<Callout type="note">
+  A trailing stop and a partial close can be used together: half closed early,
+  the rest trailed.
+</Callout>
+
+## When this does not work
+
+- **In a range market:** there is no trend, and the trail gets cut again and again.
+- **With a gap in a fast move:** the fill may not be at the stop price ([Slippage](/en/learn/10-trade-management-execution/04-slippage-requote-spread-widening)).
+- **If the trail is very short:** you exit only on noise.
+- **When the trend ends:** profit goes back, so keep a target too.
+
+## Summary
+
+<KeyTakeaways>
+
+- A trailing stop moves toward profit, never backward.
+- Trail with structure or ATR, not below every candle.
+- A trail that is too close leaves the move, and one that is too far gives profit back.
+- Write the trail rule before the trade.
+
+</KeyTakeaways>
+
+## Practice
+
+Pick a trend. Draw a trailing stop below each higher low, and draw an ATR-based trail. Compare where each would have taken you out and the results.
+
+## Quiz
+
+1. In which direction does a trailing stop move?
+2. What is the harm of a trail that is too close?
+3. Where does the stop go in a structure trail?
+4. Why does trailing not work well in a range market?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** Only toward profit.
+
+**2.** It takes you out on a normal pullback and you leave most of the move.
+
+**3.** A little below the new higher low.
+
+**4.** There is no trend, and price goes up and down and cuts the trail again and again.
+
+</details>
+
+## Next steps
+
+- Before: [Take Profit and Partial Close](/en/learn/10-trade-management-execution/02-take-profit-partial-close).
+- After: [Slippage, Requote and Spread Widening](/en/learn/10-trade-management-execution/04-slippage-requote-spread-widening).
+- Related: [Moving Average](/en/learn/07-technical-indicators/01-moving-averages-crossover).
+
+### Sources
+
+- <ExternalLink href="https://www.investopedia.com/terms/t/trailingstop.asp">
+    Trailing Stop, Investopedia
+  </ExternalLink>
+- <ExternalLink href="https://www.babypips.com/learn/forex/trailing-stop">
+    Trailing Stop, BabyPips
+  </ExternalLink>
+
+<Disclaimer />

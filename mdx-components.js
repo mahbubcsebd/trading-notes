@@ -1,7 +1,7 @@
-import { Callout } from '@/components/mdx/Callout';
-import { KeyTakeaways } from '@/components/mdx/KeyTakeaways';
-import { Figure } from '@/components/mdx/Figure';
-import { Checklist } from '@/components/mdx/Checklist';
+import { Callout } from "@/components/mdx/Callout";
+import { KeyTakeaways } from "@/components/mdx/KeyTakeaways";
+import { Figure } from "@/components/mdx/Figure";
+import { Checklist } from "@/components/mdx/Checklist";
 import {
   Steps,
   Compare,
@@ -9,7 +9,13 @@ import {
   TradeSetup,
   PatternCard,
   Chart,
-} from '@/components/mdx/index';
+} from "@/components/mdx/index";
+import {
+  Disclaimer,
+  ExternalLink,
+  ChartPlaceholder,
+} from "@/components/mdx/ArticleBlocks";
+import { CandleDiagram, DiagramRow } from "@/components/mdx/CandleDiagram";
 
 /** @type {Record<string, React.ComponentType<any>>} */
 const components = {
@@ -23,23 +29,28 @@ const components = {
   TradeSetup,
   PatternCard,
   Chart,
+  Disclaimer,
+  ExternalLink,
+  ChartPlaceholder,
+  CandleDiagram,
+  DiagramRow,
   // Placeholder for Phase 2
   ChartInline: Chart,
   TVWidget: ({ symbol, interval }) => (
-    <div className="my-6 rounded-xl border border-border bg-panel p-4 text-center text-sm text-muted-foreground">
+    <div className="border-border bg-panel text-muted-foreground my-6 rounded-xl border p-4 text-center text-sm">
       TradingView Widget: {symbol} ({interval}) — loads in Phase 2
     </div>
   ),
   Term: ({ children }) => (
     <abbr
       title="See glossary"
-      className="cursor-help underline decoration-dotted decoration-gold/60 text-foreground"
+      className="decoration-gold/60 text-foreground cursor-help underline decoration-dotted"
     >
       {children}
     </abbr>
   ),
   Mermaid: ({ children }) => (
-    <pre className="my-4 rounded-xl border border-border bg-panel p-4 text-sm font-mono text-muted-foreground overflow-x-auto">
+    <pre className="border-border bg-panel text-muted-foreground my-4 overflow-x-auto rounded-xl border p-4 font-mono text-sm">
       {children}
     </pre>
   ),

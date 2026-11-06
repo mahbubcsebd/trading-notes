@@ -1,0 +1,188 @@
+---
+title: "Slippage, Requote and Spread Widening: The Price Your Order Is Really Filled At"
+description: "What slippage, requote and spread widening are, when they are larger, and how to cut the damage with limit orders and sizing, with a news chart and a limit entry chart."
+level: intermediate
+tags: [slippage, requote, spread, execution, order-types, news]
+instruments: [EURUSD]
+timeframes: [H1]
+status: done
+sources:
+  - type: blog
+    title: "Slippage - Investopedia"
+    url: "https://www.investopedia.com/terms/s/slippage.asp"
+  - type: blog
+    title: "Slippage - BabyPips"
+    url: "https://www.babypips.com/learn/forex/slippage"
+updated: 2026-11-06
+---
+
+# Slippage, Requote and Spread Widening: The Price Your Order Is Really Filled At
+
+You placed a stop 30 pips away. In a news jolt the loss was about 58 pips. Did the broker cheat? Usually not. That is how the market moves.
+
+## What you will be able to do
+
+- **Tell the difference** between slippage, requote and spread widening.
+- **Recognize** when they are larger.
+- **Cut the damage** with order type and size.
+
+## Why it matters
+
+- **A stop is not a fixed price.** In a fast move it fills at the next price available.
+- **The risk on paper and the real risk can differ.** If you count [risk per trade](/en/learn/08-risk-management/01-risk-per-trade) as 1%, in reality it can be more.
+- **Costs weigh more on small stops.** Spread and slippage take a big share of a narrow stop.
+
+Prerequisites: [Order Types](/en/learn/02-broker-platform-setup/04-order-types) and [Spread, Commission and Swap](/en/learn/01-foundations/04-spread-commission-swap).
+
+## What are slippage, requote and spread widening
+
+**Slippage is the difference between the price you expected and the price actually filled. A requote is the broker showing a new price, because your order can no longer be taken at the price you asked for. Spread widening is the gap between bid and ask suddenly getting bigger.**
+
+Think of shouting prices in a crowded market. When everyone rushes to buy the same thing, the shopkeeper raises the price, and you do not get the price that was called. That is what happens when liquidity falls in a market.
+
+| Term            | What happens                                              | When it is larger                             |
+| :-------------- | :-------------------------------------------------------- | :-------------------------------------------- |
+| Slippage        | Filled at a different price                               | News, gaps, fast moves                        |
+| Requote         | The broker gives a new price, you decide whether to agree | Fast market, some account types               |
+| Spread widening | The gap grows                                             | News, the end of the day, low-liquidity times |
+
+## What it looks like on a chart
+
+<Chart
+  id="slippage-news-loss-01"
+  height={440}
+  caption="EURUSD H1 (educational, imaginary example): buy at 1.0900, stop 1.0870. The news candle jumps past the stop and the fill is at about 1.0842 (a loss of about 58 pips, not the planned 30)."
+/>
+
+The stop price is 1.0870, but the candle crossed it in one jolt. There was no trading in between.
+
+## Step by step: cutting execution risk
+
+<Steps>
+
+### Step 1: Know the news times
+
+Check the [economic calendar](/en/learn/11-fundamental-intermarket-analysis/02-economic-calendar-nfp-cpi-fomc). Avoid trading, or cut the size, around big news.
+
+### Step 2: Count the risk with slippage included
+
+During a big move, the real risk can be more than planned. So cut the size.
+
+### Step 3: Pick the order type
+
+In a fast move, chasing with a market order gives a bad fill. A limit order sets your price, but may not be filled.
+
+### Step 4: Check the spread
+
+What is the spread before entry? If it is more than normal, wait.
+
+### Step 5: Do not keep the stop too close
+
+A close stop is easily hit by spread and slippage. Keep it beyond the structure.
+
+</Steps>
+
+## Example 1: when it works (synthetic)
+
+<Chart
+  id="slippage-limit-entry-01"
+  height={440}
+  caption="EURUSD H1 (educational, imaginary example): price suddenly jumps to 1.0935. A market order at 1.0932 would have risked about 57 pips for the same target. A limit buy on the retest at 1.0905 risks 30 pips. Target 1.0995."
+/>
+
+- **Set in advance:** limit buy 1.0905, stop 1.0875, target 1.0995 (1:3).
+- **Result:** the limit was filled on the retest, and price touched the target.
+- **Lesson:** chasing with a market order would have put the stop far away and spoiled the ratio.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Example 2: when it fails (synthetic)
+
+The first (news) chart above:
+
+- **What was visible:** a normal setup, and the news was not thought about.
+- **Result:** the fill was about 58 pips down, past the stop. Instead of a 1% risk, the loss was about 1.9%.
+- **Why it failed:** a fill at the stop price was assumed.
+- **Lesson:** during news the stop is no guarantee. Cut the size or skip the trade.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Common mistakes
+
+| Mistake                              | Why it happens      | What to do                           |
+| :----------------------------------- | :------------------ | :----------------------------------- |
+| Entering in the minute of news       | Greed for the move  | Wait a few minutes, or skip          |
+| Treating the stop as guaranteed      | Dependence          | Set the size allowing for a bad fill |
+| Entering without checking the spread | Focus on the chart  | Check the spread before entry        |
+| Market order in a fast move          | Fear of missing out | A limit, or wait for the retest      |
+
+## Pro tips
+
+<Callout type="tip">
+  On a demo or with a small size, look at your own broker's fills around news.
+  Your own broker's experience helps more than ideas on paper.
+</Callout>
+
+<Callout type="warning">
+  Some brokers offer a "guaranteed stop", usually at an extra cost. Not every
+  account and market has it. Read your own broker's terms.
+</Callout>
+
+## When this does not work
+
+- **If the limit order is not filled:** price does not come back, and the trade is missed.
+- **In a very fast market:** even a limit is sometimes not filled or only partly filled.
+- **With a small account and a narrow stop:** the cost rate is high.
+- **If your broker's terms differ:** requote and slippage policies are different, so check your own broker.
+
+## Summary
+
+<KeyTakeaways>
+
+- A stop fills at the next price available, not at a fixed price.
+- Slippage and spread rise in news and low liquidity.
+- In a fast move a limit order holds the price, but may not be filled.
+- Set the size allowing for a bad fill.
+
+</KeyTakeaways>
+
+## Practice
+
+Pick one big news event on the economic calendar. Look at how the candles moved on the chart before and after it. Imagine what would have happened if a 30-pip stop had been there.
+
+## Quiz
+
+1. What is slippage?
+2. When does the spread widen most?
+3. What is the benefit of a limit order in a fast move?
+4. What is the drawback of a limit order?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** The difference between the expected price and the actual fill price.
+
+**2.** Usually at news, in low liquidity and at the end of the day.
+
+**3.** It fills at the price you set and avoids a bad price.
+
+**4.** If price does not come back it is not filled, and the trade is missed.
+
+</details>
+
+## Next steps
+
+- Before: [Trailing Stop](/en/learn/10-trade-management-execution/03-trailing-stop).
+- After: [When to Exit](/en/learn/10-trade-management-execution/05-trade-kokhon-exit-korbo).
+- Related: [Spread and Slippage in Gold](/en/learn/13-gold-xauusd/07-spread-slippage).
+
+### Sources
+
+- <ExternalLink href="https://www.investopedia.com/terms/s/slippage.asp">
+    Slippage, Investopedia
+  </ExternalLink>
+- <ExternalLink href="https://www.babypips.com/learn/forex/slippage">
+    Slippage, BabyPips
+  </ExternalLink>
+
+<Disclaimer />

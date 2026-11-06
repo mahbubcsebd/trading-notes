@@ -1,0 +1,197 @@
+{
+  "id": "evening-star-fail-01",
+  "title": {
+    "en": "Friday Evening Star, Monday Gap Over the Stop",
+    "bn": "শুক্রবারের evening star, সোমবার stop-এর ওপারে gap"
+  },
+  "symbol": "EURUSD",
+  "timeframe": "D1",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bearish",
+  "outcome": "loss",
+  "tags": [
+    "evening-star",
+    "candlestick",
+    "three-candle",
+    "fail",
+    "weekend-gap",
+    "pattern"
+  ],
+  "module": "patterns",
+  "lessonSlugs": [],
+  "caption": {
+    "en": "Illustrative synthetic EURUSD D1: an evening star completes on Friday and the short is taken at the close. Over the weekend news moves the market; Monday opens above the stop, so the stop fills at the open and the loss is larger than 1R.",
+    "bn": "শিক্ষামূলক কাল্পনিক EURUSD D1: শুক্রবার একটি evening star সম্পূর্ণ হয়, close-এ short। Weekend-এ খবরে বাজার নড়ে; সোমবার stop-এর উপরে open, তাই stop open-এর দামে fill হয় আর লোকসান 1R-এর বেশি।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data, not a real market record.",
+    "bn": "শিক্ষামূলক কাল্পনিক ডেটা, বাস্তব মার্কেটের রেকর্ড নয়।"
+  },
+  "updatedAt": "2026-11-06T12:00:00Z",
+  "annotations": [
+    {
+      "type": "marker",
+      "i": 7,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "1 (Wed)"
+    },
+    {
+      "type": "marker",
+      "i": 8,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Star (Thu)"
+    },
+    {
+      "type": "marker",
+      "i": 9,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "3 (Fri)"
+    },
+    {
+      "type": "marker",
+      "i": 10,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Monday gap"
+    },
+    {
+      "type": "hline",
+      "price": 1.09612,
+      "label": "Entry (Fri close)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.1011,
+      "label": "Stop",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.08616,
+      "label": "Target 2R",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candles 7-9 (Wednesday to Friday) form an evening star, and the short is opened at Friday's close. Candle 10, Monday, opens above the stop: Forex rarely gaps during the week, but it can at the weekend open. The stop order fills at the first available price, about 1.4R away instead of 1R.",
+    "bn": "৭-৯ নম্বর candle (বুধবার থেকে শুক্রবার) evening star বানায়, শুক্রবারের close-এ short। ১০ নম্বর, সোমবার, stop-এর উপরে open করে: সপ্তাহের মাঝে Forex-এ gap কম, কিন্তু weekend open-এ হতে পারে। Stop order প্রথম পাওয়া দামে fill হয়, 1R-এর বদলে প্রায় 1.4R।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "A stop is an order, not a guarantee; weekend gaps can skip it",
+      "bn": "Stop একটি order, গ্যারান্টি নয়; weekend gap তা টপকে যেতে পারে"
+    }
+  ],
+  "entry": 1.09612,
+  "stopLoss": 1.1011,
+  "takeProfit": 1.08616,
+  "rr": "1:2.0",
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.08,
+      "h": 1.08455,
+      "l": 1.07833,
+      "c": 1.083
+    },
+    {
+      "i": 1,
+      "o": 1.083,
+      "h": 1.08758,
+      "l": 1.0817,
+      "c": 1.0865
+    },
+    {
+      "i": 2,
+      "o": 1.0865,
+      "h": 1.08719,
+      "l": 1.08507,
+      "c": 1.0855
+    },
+    {
+      "i": 3,
+      "o": 1.0855,
+      "h": 1.09052,
+      "l": 1.08325,
+      "c": 1.0895
+    },
+    {
+      "i": 4,
+      "o": 1.0895,
+      "h": 1.09409,
+      "l": 1.08816,
+      "c": 1.0923
+    },
+    {
+      "i": 5,
+      "o": 1.0923,
+      "h": 1.09277,
+      "l": 1.09053,
+      "c": 1.0911
+    },
+    {
+      "i": 6,
+      "o": 1.0911,
+      "h": 1.09518,
+      "l": 1.08898,
+      "c": 1.0943
+    },
+    {
+      "i": 7,
+      "o": 1.0943,
+      "h": 1.0995,
+      "l": 1.0939,
+      "c": 1.0991
+    },
+    {
+      "i": 8,
+      "o": 1.0991,
+      "h": 1.1005,
+      "l": 1.0981,
+      "c": 1.0989
+    },
+    {
+      "i": 9,
+      "o": 1.0989,
+      "h": 1.0992,
+      "l": 1.09572,
+      "c": 1.09612
+    },
+    {
+      "i": 10,
+      "o": 1.1029,
+      "h": 1.1049,
+      "l": 1.1021,
+      "c": 1.1041
+    },
+    {
+      "i": 11,
+      "o": 1.1041,
+      "h": 1.10718,
+      "l": 1.10348,
+      "c": 1.1066
+    },
+    {
+      "i": 12,
+      "o": 1.1066,
+      "h": 1.10702,
+      "l": 1.10505,
+      "c": 1.1056
+    },
+    {
+      "i": 13,
+      "o": 1.1056,
+      "h": 1.10962,
+      "l": 1.1047,
+      "c": 1.1086
+    }
+  ]
+}

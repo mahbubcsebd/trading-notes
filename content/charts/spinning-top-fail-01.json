@@ -1,0 +1,211 @@
+{
+  "id": "spinning-top-fail-01",
+  "title": {
+    "en": "Spinning Top Mid-Trend With No Level",
+    "bn": "কোনো level ছাড়া trend-এর মাঝখানে spinning top"
+  },
+  "symbol": "EURUSD",
+  "timeframe": "D1",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bearish",
+  "outcome": "loss",
+  "tags": [
+    "spinning-top",
+    "candlestick",
+    "fail",
+    "location",
+    "trend",
+    "pattern"
+  ],
+  "module": "patterns",
+  "lessonSlugs": [],
+  "caption": {
+    "en": "Illustrative synthetic EURUSD D1: a spinning top appears inside a strong uptrend with no resistance nearby. A sell stop under its low fills on a wick, but the candle closes back up and the trend continues through the stop.",
+    "bn": "শিক্ষামূলক কাল্পনিক EURUSD D1: কাছে কোনো resistance নেই, শক্তিশালী uptrend-এর ভেতরে একটি spinning top। তার low-এর নিচের sell stop একটি wick-এ fill হয়, কিন্তু candle আবার উপরে close করে আর trend stop ভেঙে এগিয়ে যায়।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data, not a real market record.",
+    "bn": "শিক্ষামূলক কাল্পনিক ডেটা, বাস্তব মার্কেটের রেকর্ড নয়।"
+  },
+  "updatedAt": "2026-11-06T12:00:00Z",
+  "annotations": [
+    {
+      "type": "marker",
+      "i": 9,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Spinning top (no level)"
+    },
+    {
+      "type": "marker",
+      "i": 10,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Closes back up"
+    },
+    {
+      "type": "hline",
+      "price": 1.0843,
+      "label": "Entry (low break)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.0892,
+      "label": "Stop",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.0745,
+      "label": "Target 2R",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candles 0-8 are a clean uptrend of higher highs and higher lows. Candle 9 is a spinning top by shape, but nothing sits above it: no old high, no zone. Candle 10 dips below its low, fills the sell stop and closes near its open. Candle 11 breaks the stop; the trend simply rested for one candle.",
+    "bn": "০-৮ নম্বর candle পরিষ্কার uptrend, higher high ও higher low। ৯ নম্বর আকারে spinning top, কিন্তু উপরে কিছু নেই: পুরোনো high নেই, zone নেই। ১০ নম্বর তার low-এর নিচে নেমে sell stop fill করে, তারপর open-এর কাছে close করে। ১১ নম্বর stop ভাঙে; trend শুধু এক candle বিশ্রাম নিয়েছিল।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Inside a strong trend a spinning top is usually just a pause",
+      "bn": "শক্তিশালী trend-এর ভেতরে spinning top সাধারণত শুধু বিরতি"
+    }
+  ],
+  "entry": 1.0843,
+  "stopLoss": 1.0892,
+  "takeProfit": 1.0745,
+  "rr": "1:2.0",
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.07,
+      "h": 1.07394,
+      "l": 1.06918,
+      "c": 1.073
+    },
+    {
+      "i": 1,
+      "o": 1.073,
+      "h": 1.07343,
+      "l": 1.07115,
+      "c": 1.0718
+    },
+    {
+      "i": 2,
+      "o": 1.0718,
+      "h": 1.07653,
+      "l": 1.07047,
+      "c": 1.0753
+    },
+    {
+      "i": 3,
+      "o": 1.0753,
+      "h": 1.07911,
+      "l": 1.07441,
+      "c": 1.0781
+    },
+    {
+      "i": 4,
+      "o": 1.0781,
+      "h": 1.0788,
+      "l": 1.07596,
+      "c": 1.0766
+    },
+    {
+      "i": 5,
+      "o": 1.0766,
+      "h": 1.08218,
+      "l": 1.07514,
+      "c": 1.0806
+    },
+    {
+      "i": 6,
+      "o": 1.0806,
+      "h": 1.08515,
+      "l": 1.07957,
+      "c": 1.0838
+    },
+    {
+      "i": 7,
+      "o": 1.0838,
+      "h": 1.08419,
+      "l": 1.08241,
+      "c": 1.0828
+    },
+    {
+      "i": 8,
+      "o": 1.0828,
+      "h": 1.08779,
+      "l": 1.08191,
+      "c": 1.0864
+    },
+    {
+      "i": 9,
+      "o": 1.0864,
+      "h": 1.0884,
+      "l": 1.0846,
+      "c": 1.0868
+    },
+    {
+      "i": 10,
+      "o": 1.0868,
+      "h": 1.0876,
+      "l": 1.0837,
+      "c": 1.087
+    },
+    {
+      "i": 11,
+      "o": 1.087,
+      "h": 1.09048,
+      "l": 1.08604,
+      "c": 1.0895
+    },
+    {
+      "i": 12,
+      "o": 1.0895,
+      "h": 1.09319,
+      "l": 1.08826,
+      "c": 1.0925
+    },
+    {
+      "i": 13,
+      "o": 1.0925,
+      "h": 1.09286,
+      "l": 1.09093,
+      "c": 1.0915
+    },
+    {
+      "i": 14,
+      "o": 1.0915,
+      "h": 1.09646,
+      "l": 1.09059,
+      "c": 1.095
+    },
+    {
+      "i": 15,
+      "o": 1.095,
+      "h": 1.09919,
+      "l": 1.0938,
+      "c": 1.098
+    },
+    {
+      "i": 16,
+      "o": 1.098,
+      "h": 1.09835,
+      "l": 1.09675,
+      "c": 1.0972
+    },
+    {
+      "i": 17,
+      "o": 1.0972,
+      "h": 1.10071,
+      "l": 1.09594,
+      "c": 1.1
+    }
+  ]
+}

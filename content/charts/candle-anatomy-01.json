@@ -1,0 +1,82 @@
+{
+  "id": "candle-anatomy-01",
+  "title": { "en": "Reading Candle Shapes", "bn": "Candle-এর আকার পড়া" },
+  "symbol": "EURUSD",
+  "timeframe": "H4",
+  "mode": "synthetic",
+  "type": "concept",
+  "bias": "neutral",
+  "tags": ["candlestick", "anatomy", "body", "wick"],
+  "module": "04-candlesticks",
+  "lessonSlugs": ["01-anatomy-of-a-candle"],
+  "caption": {
+    "en": "Five candle shapes: strong bull body, upper-wick rejection, strong bear body, lower-wick rejection, small-body indecision.",
+    "bn": "পাঁচ ধরনের candle: শক্তিশালী bull body, উপরের wick, শক্তিশালী bear body, নিচের wick, ছোট body।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data.",
+    "bn": "এটি শিক্ষামূলক কাল্পনিক ডেটা।"
+  },
+  "updatedAt": "2026-11-05T12:00:00Z",
+  "candles": [
+    { "i": 0, "o": 1.08, "h": 1.0812, "l": 1.0795, "c": 1.0808 },
+    { "i": 1, "o": 1.0808, "h": 1.083, "l": 1.0806, "c": 1.0827 },
+    { "i": 2, "o": 1.0827, "h": 1.0852, "l": 1.0824, "c": 1.0832 },
+    { "i": 3, "o": 1.0832, "h": 1.0836, "l": 1.08, "c": 1.0804 },
+    { "i": 4, "o": 1.0804, "h": 1.0808, "l": 1.077, "c": 1.0802 },
+    { "i": 5, "o": 1.0802, "h": 1.0806, "l": 1.0798, "c": 1.0801 },
+    { "i": 6, "o": 1.0801, "h": 1.0825, "l": 1.0799, "c": 1.0823 },
+    { "i": 7, "o": 1.0823, "h": 1.0846, "l": 1.0821, "c": 1.0844 },
+    { "i": 8, "o": 1.0844, "h": 1.0848, "l": 1.0838, "c": 1.0841 },
+    { "i": 9, "o": 1.0841, "h": 1.085, "l": 1.082, "c": 1.0824 },
+    { "i": 10, "o": 1.0824, "h": 1.083, "l": 1.0815, "c": 1.0818 },
+    { "i": 11, "o": 1.0818, "h": 1.0834, "l": 1.0816, "c": 1.0832 }
+  ],
+  "annotations": [
+    {
+      "type": "marker",
+      "i": 1,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "A"
+    },
+    {
+      "type": "marker",
+      "i": 2,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "B"
+    },
+    {
+      "type": "marker",
+      "i": 3,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "C"
+    },
+    {
+      "type": "marker",
+      "i": 4,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "D"
+    },
+    {
+      "type": "marker",
+      "i": 5,
+      "position": "belowBar",
+      "shape": "circle",
+      "text": "E"
+    }
+  ],
+  "explanation": {
+    "en": "A = big body, tiny wicks (control). B = long upper wick (sellers pushed back). C = big bear body. D = long lower wick (buyers pushed back). E = tiny body (indecision).",
+    "bn": "A = বড় body, ছোট wick (নিয়ন্ত্রণ)। B = লম্বা উপরের wick। C = বড় bear body। D = লম্বা নিচের wick। E = ছোট body (দ্বিধা)।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Body = who won; wick = who got rejected",
+      "bn": "Body = কে জিতল; wick = কে ফিরে গেল"
+    }
+  ]
+}

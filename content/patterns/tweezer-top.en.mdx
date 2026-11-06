@@ -1,41 +1,278 @@
 ---
-title: "Tweezer Top"
-description: "A 2-candle reversal pattern where two consecutive candles hit the exact same price high at key resistance."
+title: "Tweezer Top: two pushes into the same high, a pinch-shaped peak at resistance"
+description: "How to spot a tweezer top, the mirror of the tweezer bottom, how it combines with engulfing, and why a tweezer from the thin Asian session often breaks at the London open, with charts."
 type: bearish
-category: "Tweezer Top"
-winrate: "69% - 74%"
-riskReward: "1:3 to 1:5"
-maxRisk: "1% - 2%"
-bestLocation: "Double Top Resistance / Premium Zone / Liquidity Grab"
-chartId: "tweezer-top-01"
-tags: [bearish, pattern, candlestick]
+category: two-candle
+level: intermediate
+candleCount: 2
+signal: reversal
+chartId: tweezer-top-win-01
+tags: [pattern, candlestick, tweezer-top, tweezer, resistance]
+status: done
+sources:
+  - type: book
+    title: "Japanese Candlestick Charting Techniques - Steve Nison"
+    note: "Tweezers tops and bottoms"
+  - type: blog
+    title: "Tweezer Top - Investopedia"
+    url: "https://www.investopedia.com/terms/t/tweezer-top.asp"
+updated: 2026-11-06
 ---
 
-<div className="flex gap-6 items-end my-8 p-8 bg-zinc-950 border border-border/50 rounded-2xl w-max relative overflow-hidden">
-  <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:20px_20px]"></div>
-  <div className="relative z-10 flex gap-6">
-    <Candle color="bull" bodyH="h-10" topW="h-10" botW="h-2" offset="mt-6" />
-    <Candle color="bear" bodyH="h-10" topW="h-10" botW="h-2" offset="mt-6" />
-  </div>
-</div>
+Overnight, in the Asian session, price drifts up and stops twice at the same high. A perfect tweezer top, so you go short. You wake up to find the London open blew through that high in its first hour and took your stop. "Held twice" in a thin market is really the decision of very few people. This page is the mirror of [Tweezer Bottom](/en/patterns/tweezer-bottom); the definition, measuring "almost equal" and the liquidity explanation are detailed there.
 
-## Market Psychology & Institutional Order Flow
-Buyers test resistance twice in succession and hit an insurmountable institutional sell wall at the exact same price. The failure to make a higher high triggers profit-taking and aggressive short entries, turning the trend downward rapidly.
+## At a glance
 
-## 5 Strict Anatomy & Recognition Rules
-1. **Matching Highs:** Identical or near-identical peak prices on both candles.
-2. **Candle 1 Bullish:** Green candle maintaining previous upside momentum.
-3. **Candle 2 Bearish:** Rejects the same high and closes decisively red.
-4. **Resistance Location:** Must occur at a confirmed supply zone or resistance barrier.
-5. **Upper Shadow:** Prominent upper wicks demonstrating price rejection.
+| Item          | Tweezer Top                                                                                                  |
+| :------------ | :----------------------------------------------------------------------------------------------------------- |
+| Type          | Bearish reversal, two (or more) candles                                                                      |
+| Where to look | At the top of an uptrend or pullback, at a marked resistance                                                 |
+| Key features  | Two consecutive candles with highs at almost the same price; usually the first bullish, the second bearish   |
+| Confirmation  | A break of the second candle's low, or the next candle closing below it                                      |
+| Stop          | Above the shared high, plus spread and a buffer                                                              |
+| Invalidation  | A close above the shared high                                                                                |
+| Look-alikes   | Double top, [Bearish Engulfing](/en/patterns/bearish-engulfing), [Shooting Star](/en/patterns/shooting-star) |
+| Opposite      | Tweezer Bottom                                                                                               |
 
-## 3 Proven Trade Execution Strategies
-**Strategy 1 (Candle 2 Close Short):** Sell immediately upon the close of the second bearish candle.
-**Strategy 2 (Break of Pattern Low):** Sell stop below the lowest low of the tweezer formation.
-**Strategy 3 (Equilibrium Retracement):** Place sell limit at the 50% retracement of Candle 2.
+## What you will be able to do
 
-## Where It Works vs Where It Fails
-- ✅ **A+ High Probability Setups:** Daily supply zone, Asian High liquidity grab, and Bearish RSI divergence.
-- ❌ **Low Probability Traps (AVOID):** Counter-trading strong macro fundamental tailwinds.
+- **Recognise** when a tweezer top coincides with an engulfing, to judge its strength.
+- **Explain** why the **session** a tweezer forms in matters.
+- **Place** a stop above the shared high with a buffer.
 
-> ⚠️ **Pro Risk Management & Mindset Rule:** A tweezer top with long upper shadows provides one of the cleanest stop-loss placements in technical analysis. Always limit risk to 1%–2% per trade and maintain a predefined Stop Loss.
+## Why it matters
+
+- **Higher prices rejected twice.** Two consecutive candles stopping at the same high is evidence buyers cannot get through there.
+- **Equal highs are liquidity too.** Shorts' buy stops often sit just above equal highs. Without a real level, that is the next move's target.
+- **The session is context too.** Highs made in the thin Asian session are often tested at the London or New York open. More in [Trading Sessions](/en/learn/01-foundations/05-trading-sessions).
+
+Prerequisite: the Tweezer Bottom page (linked above).
+
+## What is a tweezer top
+
+**A tweezer top is two (sometimes more) consecutive candles whose highs sit at almost the same price, at resistance at the top of an uptrend.** If the second candle is bearish and closes below the first one's body, it is also a bearish engulfing.
+
+<CandleDiagram
+  title="Tweezer top"
+  candles={[
+    { o: 40, h: 46, l: 39, c: 45, dim: true },
+    { o: 45, h: 51, l: 44, c: 50, dim: true },
+    { o: 50, h: 60, l: 49, c: 57, label: "A", note: "high 60" },
+    { o: 57, h: 59.9, l: 48, c: 49, label: "B", note: "high 59.9" },
+    { o: 49, h: 50, l: 44, c: 45, dim: true },
+  ]}
+  levels={[{ price: 60, label: "equal highs", tone: "resistance" }]}
+  caption="A and B both stop at about 60. B is red and closes below A's open: a tweezer and a bearish engulfing together."
+/>
+
+### Identification rules
+
+| Rule                                                      | Required?          | Why                                                   |
+| :-------------------------------------------------------- | :----------------- | :---------------------------------------------------- |
+| Two consecutive candles with almost equal highs           | Yes                | This is the "tweezer"                                 |
+| An uptrend or pullback before it                          | Yes                | Equal highs mid-range are ordinary                    |
+| At a marked resistance                                    | Yes                | Without a level, equal highs attract stops            |
+| Second candle bearish, closing below the first one's body | No (but important) | The colour change plus an engulfing make it stronger  |
+| In a session with normal volatility                       | No (but important) | Highs from a thin session often break in the next one |
+
+## Strong vs weak tweezer top
+
+<DiagramRow>
+  <CandleDiagram
+    title="Strong"
+    verdict="good"
+    verdictLabel="tradeable"
+    candles={[
+      { o: 40, h: 46, l: 39, c: 45, dim: true },
+      { o: 45, h: 58, l: 44, c: 56 },
+      { o: 56, h: 57.9, l: 46, c: 47, label: "engulfing too" },
+    ]}
+    levels={[{ price: 57, label: "old high", tone: "resistance" }]}
+    caption="Equal highs just above an old high, and the second candle covers the first."
+  />
+  <CandleDiagram
+    title="Weak"
+    verdict="bad"
+    verdictLabel="avoid"
+    candles={[
+      { o: 50, h: 50.8, l: 49.6, c: 50.5, dim: true },
+      { o: 50.5, h: 51, l: 50, c: 50.4, dim: true },
+      { o: 50.4, h: 51.4, l: 50.2, c: 51.2, label: "tiny" },
+      { o: 51.2, h: 51.38, l: 50.6, c: 50.7, label: "Asian high" },
+      { o: 50.7, h: 56, l: 50.5, c: 55.5, label: "London open" },
+    ]}
+    caption="A few-pip tweezer in a thin session; the next session's first candle blows through it."
+  />
+</DiagramRow>
+
+| Quality check | Strong                                             | Weak                                        |
+| :------------ | :------------------------------------------------- | :------------------------------------------ |
+| Location      | At a marked old high or supply zone                | Only a session high, not a major level      |
+| Size          | Like normal nearby candles or larger               | Tiny candles of a few pips                  |
+| Combination   | Second candle a bearish engulfing or shooting star | Only the two highs match                    |
+| Session       | Normal London or New York market                   | Quiet Asian session, just before a big open |
+
+## The story inside the candle
+
+The tweezer bottom story in reverse. One common interpretation: in the first candle buyers lift price to resistance, where sellers stop them. The second candle tests the same high again, cannot get a pip higher, and closes lower. The same price was defended twice. But in a thin session that "defence" comes from very few participants, so it carries little weight.
+
+<Callout type="note">
+  This is a common interpretation, not a proven fact. A chart does not show who
+  bought or sold.
+</Callout>
+
+## Where it works and where it does not
+
+<Compare
+  leftLabel="Where a tweezer top carries weight"
+  rightLabel="Where a tweezer top is often a trap"
+  left="- At a marked old high or supply zone
+- When the second candle is a bearish engulfing or shooting star
+- In a session with normal volatility
+- At the top of a downtrend pullback, in the trend direction"
+  right="- At the top of a narrow Asian-session range
+- Just before the London or New York open
+- Mid-way through a strong uptrend, no level
+- On tiny candles of a few pips"
+/>
+
+## Gaps in a 24-hour market
+
+<Callout type="note">
+  Tweezers need no gap, so the rule is the same in Forex. Highs can differ by a
+  few pipettes between brokers, so measure "almost equal", not "exactly equal".
+</Callout>
+
+## Step by step: trading a tweezer top
+
+The full steps are on the Tweezer Bottom page, reversed. Only what differs:
+
+<Steps>
+
+### Step 1: Check the session
+
+Which session did the tweezer form in? If it was the thin Asian session, especially just before the London open, watch the first hour or two of the next session before deciding.
+
+### Step 2: Entry and stop
+
+Sell stop just below the second candle's low. Stop above the shared high, plus the [spread](/en/learn/01-foundations/04-spread-commission-swap) and a buffer. Spreads widen at the start of a session, so keep the buffer a little larger.
+
+### Step 3: R:R
+
+If the [risk reward](/en/learn/08-risk-management/03-risk-reward) to the swing low below is under 1:1.5, skip it.
+
+</Steps>
+
+### Pre-trade checklist
+
+<Checklist
+  id="pattern-tweezer-top-pretrade-en"
+  items={[
+    "Was resistance marked before the tweezer, and are the equal highs at that level?",
+    "Does the shape pass the rules (highs almost equal, second candle bearish, normal-sized candles)?",
+    "Have both candles closed, and is this not a thin market just before a big session open?",
+    "Is the risk reward to the swing low below at least 1:1.5?",
+    "Is the higher-timeframe trend or level not against the trade?",
+  ]}
+/>
+
+If any box stays empty, skip the trade.
+
+## Example 1: when it works (illustrative)
+
+<Chart
+  id="tweezer-top-win-01"
+  height={420}
+  caption="EURUSD H4 (illustrative, synthetic) — a tweezer top just above an old high; short on the low break."
+/>
+
+- **What was visible:** Candle 5 left an old high at 1.0890. Candles 6-10 fell to about 1.0780, and 11-14 rallied again.
+- **The tweezer:** Candle 15 was bullish, high 1.0892. Candle 16's high was 1.08915, half a pip apart, and it closed at 1.0870, below candle 15's 1.0882 open: a tweezer and a bearish engulfing together.
+- **Decision:** Sell stop 1.0866, stop 1.0897 (5 pips above the shared high): 31 pips of risk. Target 1.0804 (2R); room to the swing low was about 2.8R.
+- **Result:** Candle 17 broke the low and filled the order. Candle 23 reached the target.
+- **Lesson:** A real level, normal-sized candles, and two patterns in one place.
+
+<TradeSetup
+  direction="short"
+  pair="EURUSD"
+  entry={1.0866}
+  stop={1.0897}
+  target={1.0804}
+/>
+
+(Illustrative example, not a real trade. Not every tweezer top wins, and no result is guaranteed.)
+
+## Example 2: when it is a trap (illustrative)
+
+<Chart
+  id="tweezer-top-fail-01"
+  height={420}
+  caption="USDJPY H1 (illustrative, synthetic) — a small Asian-session tweezer top, broken at the London open, stopped out."
+/>
+
+- **What was visible:** Candles 0-5 rallied from 150.20 to about 150.89. Candles 6-14 were the quiet Asian session, with ranges of only 5-8 pips.
+- **The tweezer:** Candle 11's high was 150.967, candle 12's 150.965, and candle 12 closed at 150.870. A perfect shape, but on candles of only a few pips.
+- **The wrong decision:** Sell stop 150.850, stop 151.027: about 18 pips of risk. Filled on candle 13.
+- **What happened:** Candle 15, the first hour of the London open, rose 30 pips and broke both the Asian high and the stop. The uptrend carried on.
+- **Why it failed:** No marked resistance, only an Asian-session high; and the trade came just before a big session open, against the uptrend. The first, third and fifth checklist boxes would have filtered it out.
+
+**Lesson:** A tweezer in a thin session is not a level; the next session decides. Because the stop was set in advance, the loss stayed at 1R.
+
+## Common mistakes
+
+| Mistake                                       | Why it happens                        | What to do instead                               |
+| :-------------------------------------------- | :------------------------------------ | :----------------------------------------------- |
+| Treating the Asian-session high as resistance | Ignoring session context              | Check whether the level holds after the big open |
+| Trading a tweezer of tiny candles             | Only checking "the highs match"       | Compare the size with normal nearby candles      |
+| Stop above the shared high with no buffer     | Wanting a small stop                  | Allow for session-open spread in the buffer      |
+| Shorting mid-uptrend without a level          | Treating every equal high as a signal | Only at marked resistance                        |
+
+## Pro tips
+
+<Callout type="tip">
+  The Asian-session high and low are marked on many traders' charts, and the
+  London open often tests one of them. A sweep above the Asian high that closes
+  back below is a far cleaner short setup than the Asian tweezer itself. More in
+  [London Breakout and NY
+  Reversal](/en/learn/13-gold-xauusd/10-london-breakout-ny-reversal-setup).
+</Callout>
+
+## Summary
+
+<KeyTakeaways>
+
+- Tweezer top = two consecutive candles with almost equal highs, at resistance at the top of an uptrend.
+- The signal is stronger when the second candle is a bearish engulfing or shooting star.
+- The session it forms in is context: a tweezer from the thin Asian session often breaks at the next open.
+- Stop above the shared high with a buffer; equal highs without a real level are a magnet for stops.
+
+</KeyTakeaways>
+
+## Practice and your own backtest
+
+Open EURUSD H4 or USDJPY H1 in TradingView. Find at least 20 tweezer tops. For each, log: date and time, session, whether it was at resistance, the second candle's pattern, whether the high broke at the next session's open, and result (R). Then compare the average R by session. Do not draw conclusions from fewer than 30 samples.
+
+## Quiz
+
+1. If the tweezer top's second candle closes below the first one's open, what other pattern forms?
+2. A tweezer top at the Asian-session high, one hour before the London open. What do you do?
+3. Which checklist boxes would have filtered out the trade in Example 2?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** A bearish engulfing (if its body fully covers the first).
+
+**2.** Wait. Watch whether that high holds in the first hour or two of the London open. A sweep that closes back below is a better setup.
+
+**3.** The first box (no marked resistance), the third box (a thin market just before a big session open) and the fifth box (against the uptrend).
+
+</details>
+
+## Next steps
+
+- Full walk-through: [Tweezer Bottom](/en/patterns/tweezer-bottom).
+- How sessions matter: [Trading Sessions](/en/learn/01-foundations/05-trading-sessions).
+- Same family: [Bearish Engulfing](/en/patterns/bearish-engulfing), [Shooting Star](/en/patterns/shooting-star), [Evening Star](/en/patterns/evening-star).
+
+<Disclaimer />

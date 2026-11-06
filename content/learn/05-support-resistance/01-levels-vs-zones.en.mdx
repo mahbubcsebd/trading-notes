@@ -1,0 +1,209 @@
+---
+title: "Levels vs Zones: Measure Where Price Stops as an Area"
+description: "Why support and resistance are a zone, not a line. How to draw a zone, where to put your stop and when a zone breaks, with two chart examples."
+level: beginner
+tags: [support, resistance, zone, level]
+instruments: [EURUSD]
+timeframes: [H4]
+status: done
+sources:
+  - type: blog
+    title: "Support and Resistance Basics - Investopedia"
+    url: "https://www.investopedia.com/trading/support-and-resistance-basics/"
+  - type: book
+    title: "Technical Analysis of the Financial Markets - John J. Murphy"
+    url: ""
+    note: "Support and resistance chapter"
+updated: 2026-11-06
+---
+
+# Levels vs Zones: Measure Where Price Stops as an Area
+
+You draw a clean resistance at 1.0850. Price comes up to 1.0848 and turns, and you are happy. Next time it rises to 1.0862, takes out your stop, and then falls. The level was right, so where was the mistake? The mistake was drawing a line.
+
+## What you will be able to do
+
+- **Draw** support and resistance **as zones, not lines**.
+- **Set the upper and lower edges of a zone** from several swings on the chart.
+- **Plan a trade with the stop outside** the zone.
+- **Tell** when a zone is weak or about to break.
+
+## Why it matters
+
+- **A thin line usually puts your stop in the wrong place.** Price moves a little above and below the line, and your stop sits right there.
+- **The distance between entry and stop comes from the zone.** If you do not know the size of the zone, your risk is a guess.
+- **It is the base of every later lesson.** [Role Reversal](/en/learn/05-support-resistance/02-role-reversal), supply and demand, and trendlines all rest on the idea of a zone.
+
+Prerequisites: recognising a [Swing High and Swing Low](/en/learn/03-market-structure/01-swing-high-low).
+
+## What support, resistance and a zone are
+
+**Support is an area below where price has stopped again and again and then risen. Resistance is an area above where price has stopped again and again and then fallen.**
+
+Think of a beach. The waves do not stop at exactly the same grain of sand each time. Sometimes a little earlier, sometimes a little later. But the edge of the waves is like a wide ribbon. A level is just that: **not a number, but a ribbon.**
+
+- **Level (line):** one exact price, for example 1.0850.
+- **Zone (area):** the range between two prices, for example 1.0840 to 1.0865.
+
+Many people think "there is one true price, and I will find it". But in reality the market has millions of orders, and each person's idea is slightly different. So the reaction is spread out too.
+
+## What it looks like on a chart
+
+<Chart
+  id="sr-zone-resistance-01"
+  height={420}
+  caption="EURUSD H4 (educational, synthetic example): the highs of three pushes are 1.0848, 1.0862 and 1.0856. A line (1.0850) cannot catch them, a zone (1.0840-1.0865) can"
+/>
+
+All three highs are different, but all are within 25 pips. **A zone says "sellers are active in this area"**, and a line says "at exactly this number". The second one never matches.
+
+| Point            | Thin line                               | Zone                                |
+| :--------------- | :-------------------------------------- | :---------------------------------- |
+| What it shows    | One price                               | A range                             |
+| Counting touches | Only a few match                        | Every swing is caught               |
+| Stop             | Just outside the line (often too tight) | Outside the whole zone (reasonable) |
+| Fit with reality | Poor                                    | Good                                |
+
+## Step by step: how to draw a zone
+
+<Steps>
+
+### Step 1: Start on a large timeframe
+
+Open D1 or H4. On small timeframes the real area gets lost in the noise.
+
+### Step 2: Find where price has turned more than once
+
+Look from left to right. Where has price stopped and reversed at least twice? Choose one or two clear areas, not a dozen.
+
+### Step 3: Mark the high or low of every touch
+
+For resistance, write down the highest price of each turn (including the wick). For support, the lowest price. On the chart above: 1.0848, 1.0862, 1.0856.
+
+### Step 4: Set the edges of the zone
+
+Take the place where most touches cluster as the centre and draw the edges from there. One extreme wick should not stretch the whole zone. You can leave out one or two isolated wicks.
+
+### Step 5: Look for confirmation before entry
+
+Price reaching the zone is not an entry. You need a confirmation candle, as in the [Candle Context](/en/learn/04-candlesticks/05-candle-context) lesson.
+
+### Step 6: Put the stop outside the zone
+
+For a sell, above the upper edge of the zone; for a buy, below the lower edge. Do not keep your stop inside the zone.
+
+</Steps>
+
+## Example 1: when it works (synthetic)
+
+Look at the chart above.
+
+- **What you could see:** Price touched the 1.0840-1.0865 area three times and fell. Candle 15 dropped from 1.0842 to 1.0822, bearish.
+- **Decision:** Candle 16 broke the low of candle 15 (1.0818), the sell trigger. Entry around 1.0818.
+- **Stop:** above the zone at 1.0868, so a risk of about 50 pips.
+- **Target:** the previous swing low at 1.0722, a gain of about 96 pips, about 1.9 times the risk. More on this in the [Risk/Reward Ratio](/en/learn/08-risk-management/03-risk-reward) lesson.
+- **Result:** Price reached near the target step by step.
+- **Lesson:** The wick at 1.0862 would not have hurt you, because the stop was outside the zone. With a line stop at 1.0855, you would have been hit right here.
+
+(Synthetic educational example. This is not a real trade, and no result is guaranteed.)
+
+## Example 2: when it fails (synthetic)
+
+A zone is not unbreakable just because it is a zone. This time, a support zone that broke in the end.
+
+<Chart
+  id="sr-zone-break-fail-01"
+  height={420}
+  caption="EURUSD H4 (educational, synthetic example): the support zone (1.0695-1.0722) holds three times, then candle 15 breaks through and closes below"
+/>
+
+- **What you could see:** Price stopped three times at 1.0715, 1.0702 and 1.0708 and rose. Candle 11 was bullish with a long lower wick.
+- **Decision:** A zone that held three times, plus confirmation. Buy at 1.0734. Stop below the zone at 1.0688, a risk of about 46 pips.
+- **What happened:** Price came back down into the zone. Candle 14 touched 1.0696. Candle 15 closed at 1.0672, broke through the zone, and the stop was filled.
+- **Why it failed:** When a zone is hit again and again, the orders below it slowly run out. On the fourth hit, nobody is left there.
+- **Lesson:** The loss was the planned 46 pips, no more. The zone was right, and it still broke. This is the day the stop is for.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Common mistakes
+
+| Mistake                                       | Why it happens                               | What to do                                          |
+| :-------------------------------------------- | :------------------------------------------- | :-------------------------------------------------- |
+| Drawing a thin line                           | The urge to find an exact number             | Gather all touches and draw a zone                  |
+| Dozens of zones on the chart                  | Thinking everything is important             | Keep 2-3 clear zones                                |
+| Putting the stop inside the zone              | Wanting to keep risk small                   | Stop outside the zone, and keep position size small |
+| Making the zone far too wide                  | Rushing to catch every wick                  | Take the central cluster, leave isolated wicks      |
+| Thinking a zone tested many times is stronger | "It held three times, it will hold a fourth" | Repeated hits weaken a zone; watch for a break      |
+
+## Pro tips
+
+<Callout type="tip">
+  To size a zone, look at how spread out the wicks and bodies of nearby swings
+  are. Make the zone wider or narrower based on the normal movement of your pair
+  and timeframe.
+</Callout>
+
+<Callout type="tip">
+  The first touch is the most reliable. A zone that has never been tested, or
+  has held once, is usually better than a zone that has been hit three or four
+  times.
+</Callout>
+
+<Callout type="warning">
+  A zone is not a wall, it is a map of probability. Price can go right through a
+  zone. Do not take a trade at any zone without a stop.
+</Callout>
+
+## When this does not work
+
+- **When there is big news near the zone:** On a data release, price can break through any zone.
+- **When the zone has been tested many times:** The more hits, the higher the chance of a break.
+- **When the trend is very strong:** Catching a reversal at a zone against a strong trend is hard. Look at [Trend and Range](/en/learn/03-market-structure/02-trend-range-hhhl) first.
+- **On very small timeframes:** On M1-M5, zones change in a moment, and the reasoning is shaky.
+
+## Summary
+
+<KeyTakeaways>
+
+- Support and resistance are not a number but an area (zone).
+- Set the upper and lower edges of a zone from several touches; leave out isolated wicks.
+- Put your stop outside the zone, not inside.
+- Even a zone that held three times can break; that is why you have a stop and a position size.
+
+</KeyTakeaways>
+
+## Practice
+
+Open a EUR/USD H4 chart on TradingView. Draw two resistance zones and two support zones from the last 3 months. For each, write down the high or low of every touch, then place the zone over them. Finally, check how many touches a thin line would have missed.
+
+## Quiz
+
+1. What is the main difference between a support level and a support zone?
+2. Why is it better to put your stop outside the zone?
+3. Will a zone that held three times surely hold a fourth time?
+4. What do you do with one isolated long wick when drawing a zone?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** A level is one exact price, a zone is a range. Price does not stop at one exact price, it stops in an area.
+
+**2.** A stop inside the zone or at its edge gets caught by normal movement. A stop outside is only hit when the idea of the zone itself is proven wrong.
+
+**3.** No. Repeated hits reduce the orders at the zone. The chance of a break goes up.
+
+**4.** Do not stretch the whole zone; mark it separately. Set the edges from the central cluster.
+
+</details>
+
+## Next steps
+
+- Before: [Candle Context](/en/learn/04-candlesticks/05-candle-context).
+- After: [Role Reversal](/en/learn/05-support-resistance/02-role-reversal), then [Supply & Demand](/en/learn/05-support-resistance/03-supply-demand).
+- More on stops: [Stop Loss Placement](/en/learn/10-trade-management-execution/01-stop-loss-placement).
+
+### Sources
+
+- [Support and Resistance Basics, Investopedia](https://www.investopedia.com/trading/support-and-resistance-basics/)
+
+<Disclaimer />

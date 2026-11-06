@@ -1,41 +1,356 @@
 ---
-title: "Marubozu (Full Body Momentum)"
-description: "A massive momentum candle with virtually no wicks, representing total and absolute directional dominance from open to close."
-type: reversal
-category: "Marubozu (Full Body Momentum)"
-winrate: "72% - 76%"
-riskReward: "1:2.5 to 1:4"
-maxRisk: "1%"
-bestLocation: "Key Support/Resistance Breakout / Fresh Trend Impulse"
-chartId: "marubozu-01"
-tags: [reversal, pattern, candlestick]
+title: "Marubozu: the no-wick candle where one side wins the whole session"
+description: "How to spot a marubozu, tell a fresh move from a last push, and place entry, stop and target, with a winning and a failing chart example."
+type: neutral
+category: momentum-indecision
+level: beginner
+candleCount: 1
+signal: continuation
+chartId: marubozu-win-01
+tags: [pattern, candlestick, marubozu, momentum, breakout]
+status: done
+sources:
+  - type: book
+    title: "Japanese Candlestick Charting Techniques - Steve Nison"
+    note: "Marubozu, opening and closing marubozu"
+  - type: blog
+    title: "Marubozu Candlestick - Investopedia"
+    url: "https://www.investopedia.com/terms/m/marubozu.asp"
+updated: 2026-11-06
 ---
 
-<div className="flex gap-6 items-end my-8 p-8 bg-zinc-950 border border-border/50 rounded-2xl w-max relative overflow-hidden">
-  <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:20px_20px]"></div>
-  <div className="relative z-10 flex gap-6">
-    <Candle color="bull" bodyH="h-20" topW="h-[1px]" botW="h-[1px]" offset="mt-2" />
-    <Candle color="bear" bodyH="h-20" topW="h-[1px]" botW="h-[1px]" offset="mt-2" />
-  </div>
-</div>
+A huge green candle with almost no wicks. It feels like the train is leaving and you have to jump on now. Many traders buy right at its top, and a few candles later price gives back half the candle and takes their stop. A marubozu really does show strength, but where it forms and when you enter decide the outcome.
 
-## Market Psychology & Institutional Order Flow
-The purest definition of institutional aggression. One side of the market dominated every single second of the session from open to close with zero opposition. The absolute lack of shadows proves that counter-orders were instantly wiped out.
+## At a glance
 
-## 5 Strict Anatomy & Recognition Rules
-1. **No Wicks:** Zero upper or lower shadows (or less than 2% negligible wicks).
-2. **Massive Real Body:** The candle body is 2 to 3 times larger than recent average candles.
-3. **Open Equals Extreme:** In a Bullish Marubozu, Open = Low and Close = High. In Bearish, Open = High and Close = Low.
-4. **Structural Breakout:** Commonly shatters key consolidation ranges or support/resistance barriers.
-5. **Explosive Volume:** High volume confirming true institutional commitment.
+| Item          | Marubozu                                                                                                                |
+| :------------ | :---------------------------------------------------------------------------------------------------------------------- |
+| Type          | Bullish or bearish momentum candle, one candle                                                                          |
+| Where to look | At the break of a range or level, at the start of a new trend                                                           |
+| Key features  | Large body, almost no wick on either side, clearly bigger than nearby candles                                           |
+| Confirmation  | Following candles do not give back more than half the body and stay beyond the broken level                             |
+| Stop          | Beyond the opposite end (below the low for a bullish one), plus spread and a buffer                                     |
+| Invalidation  | Close below a bullish marubozu's low (above a bearish one's high)                                                       |
+| Look-alikes   | News spike candle, big candle with a long wick, one candle of [Three White Soldiers](/en/patterns/three-white-soldiers) |
+| Opposite      | Doji and Spinning Top (small body, indecision)                                                                          |
 
-## 3 Proven Trade Execution Strategies
-**Strategy 1 (50% Equilibrium Retest - Recommended):** Place a Limit order at the 50% midpoint of the Marubozu body. Stop loss behind the candle extreme.
-**Strategy 2 (High/Low Continuation):** Enter on the break of the candle close tick with trend momentum.
-**Strategy 3 (Fair Value Gap Mitigation):** Drop to M15 and enter at the FVG created by the massive displacement.
+## What you will be able to do
 
-## Where It Works vs Where It Fails
-- ✅ **A+ High Probability Setups:** Major structural break, High-impact fundamental volume, and clean trending flow.
-- ❌ **Low Probability Traps (AVOID):** Appearing as an exhaustion climax after an overextended trend.
+- **Measure** the difference between a marubozu and an ordinary big candle.
+- **Separate** a marubozu that starts a move from one that ends it, by location.
+- **Place a 50% retest entry** instead of chasing the top of the candle.
+- **Set** stop and target step by step.
 
-> ⚠️ **Pro Risk Management & Mindset Rule:** The 50% midpoint of a Marubozu candle functions as a dynamic institutional order block. Always limit risk to 1%–2% per trade and maintain a predefined Stop Loss.
+## Why it matters
+
+- **The clearest picture of momentum.** One candle shows who is in control. It is one of the main checks for whether a breakout is real.
+- **Also the biggest chasing trap.** Big candles trigger fear of missing out. Entering at the end of the candle means a huge stop and a poor R:R.
+- **Same shape, two meanings.** A marubozu breaking a range often marks a start. A marubozu at the end of a long run often marks the finish. You need to tell them apart.
+
+Prerequisites: [Single Candle Patterns](/en/learn/04-candlesticks/02-single-candle-patterns) and [Range Breakout](/en/learn/06-trend-chart-patterns/03-range-breakout).
+
+## What is a marubozu
+
+**A marubozu is a candle whose body covers almost the entire range, with no wick or only a tiny one at either end.** "Marubozu" is Japanese for roughly "shaved head": no hair (wick) at the top or bottom.
+
+Picture a tug of war. In a normal candle both teams pull back and forth, which leaves wicks. In a marubozu one team dragged the rope from start to finish and the other never pulled it back.
+
+<CandleDiagram
+  title="Bullish and bearish marubozu"
+  candles={[
+    { o: 50, h: 54, l: 47, c: 52, dim: true },
+    { o: 52, h: 55, l: 49, c: 50, dim: true },
+    {
+      o: 50,
+      h: 70.3,
+      l: 49.8,
+      c: 70,
+      label: "Bullish",
+      note: "open ≈ low, close ≈ high",
+    },
+    { o: 70, h: 72, l: 66, c: 68, dim: true },
+    {
+      o: 68,
+      h: 68.2,
+      l: 47.7,
+      c: 48,
+      label: "Bearish",
+      note: "open ≈ high, close ≈ low",
+    },
+  ]}
+  caption="In a bullish marubozu the open is near the low and the close near the high. A bearish one is the reverse. Both are far bigger than nearby candles."
+/>
+
+### Identification rules
+
+| Rule                                                            | Required?               | Why                                                        |
+| :-------------------------------------------------------------- | :---------------------- | :--------------------------------------------------------- |
+| Body covers almost the full range                               | Yes                     | A wick means the other side pushed price back              |
+| Clearly bigger than the average body of the prior 10-20 candles | Yes                     | A small candle without wicks is not news                   |
+| Candle has closed                                               | Yes                     | A live candle can grow a wick in its last minute           |
+| Closes through a level or range                                 | No (but very important) | Momentum at the moment of a break carries the most meaning |
+| Tick volume above nearby candles                                | No                      | Forex only has tick volume, so it is a weak hint at best   |
+
+Nison also separates two variants: the **opening marubozu** (no wick at the open end) and the **closing marubozu** (no wick at the close end). For trading, the close end matters more: a close right at the extreme means that side was still winning at the bell.
+
+## Strong vs weak marubozu
+
+<DiagramRow>
+  <CandleDiagram
+    title="Strong"
+    verdict="good"
+    verdictLabel="tradeable"
+    candles={[
+      { o: 50, h: 53, l: 48, c: 51, dim: true },
+      { o: 51, h: 53, l: 48, c: 49, dim: true },
+      { o: 49, h: 52, l: 47, c: 51, dim: true },
+      { o: 51, h: 66.3, l: 50.8, c: 66, label: "closes out of range" },
+    ]}
+    levels={[{ price: 53, label: "range top", tone: "resistance" }]}
+    caption="A large body after a quiet range, closing well above the range top."
+  />
+  <CandleDiagram
+    title="Weak"
+    verdict="bad"
+    verdictLabel="avoid"
+    candles={[
+      { o: 40, h: 46, l: 39.5, c: 45.5, dim: true },
+      { o: 45.5, h: 51, l: 45, c: 50.5, dim: true },
+      { o: 50.5, h: 56, l: 50, c: 55.5, dim: true },
+      { o: 55.5, h: 61, l: 55, c: 60.5, dim: true },
+      { o: 60.5, h: 68.3, l: 60.3, c: 68, label: "end of a run" },
+    ]}
+    levels={[{ price: 69, label: "old high", tone: "resistance" }]}
+    caption="After a long streak of bullish candles, right at an old high. No room above."
+  />
+</DiagramRow>
+
+| Quality check    | Strong                                   | Weak                                         |
+| :--------------- | :--------------------------------------- | :------------------------------------------- |
+| What came before | Range, consolidation or a small pullback | Many candles in the same direction, no pause |
+| Where it closes  | Clearly beyond a marked level            | Right into a major level                     |
+| Size             | 3-4× the prior average body              | Similar to the candles before it             |
+| Room ahead       | At least 2R to the next level            | Next level within 1R                         |
+
+<Callout type="note">
+  "3-4×" and "almost no wick" are my working measures, not verified statistics.
+  Many traders use a wick below 5% of the range. Pick one measure in your own
+  backtest and keep it the same on every chart.
+</Callout>
+
+### Same look, different meaning
+
+| Pattern                         | Shape                                | Difference                                                    |
+| :------------------------------ | :----------------------------------- | :------------------------------------------------------------ |
+| **Marubozu**                    | Large body, almost no wicks          | One side in control the whole time                            |
+| **Big candle with a long wick** | Large body, clear wick on one side   | The other side pushed back at the extreme; momentum is weaker |
+| **News spike candle**           | Huge body, may or may not have wicks | Product of thin liquidity at a data release; often reverses   |
+| **Three White Soldiers**        | Three large bullish candles in a row | Sustained pressure across three candles, not one              |
+
+## The story inside the candle
+
+One common interpretation of a bullish marubozu, read through time:
+
+1. **Buyers lead from the open.** Price barely trades below the open. Sellers fail to push it down at all.
+2. **A level breaks and stops are triggered.** Sell stops above the range become buy orders. Breakout traders buy too. Pressure builds.
+3. **The close is at the very top.** Nobody pushed price back, even in the last minute. Traders who sold inside the range are now losing.
+
+The result: one side for the entire candle. But the same shape can appear at the end of a long run, driven by late buyers and shorts forced to cover. Then it is not a start, it is an ending.
+
+<Callout type="note">
+  This is a common interpretation, not a proven fact. A chart does not show who
+  bought. We only see how price behaved.
+</Callout>
+
+## Where it works and where it does not
+
+<Compare
+  leftLabel="Where a marubozu carries weight"
+  rightLabel="Where a marubozu is often a trap"
+  left="- Closing out of a long range or consolidation
+- At the break of a marked support or resistance
+- At the end of a pullback inside a trend, in the trend direction
+- At the London or New York open, in normal volatility
+- Aligned with the higher-timeframe direction"
+  right="- After 5-6 candles in the same direction
+- Right into a major old high or low
+- At a big news release
+- Inside a small range in a thin Asian session
+- In the middle of a range, breaking nothing"
+/>
+
+## Step by step: trading a marubozu
+
+<Steps>
+
+### Step 1: Level first
+
+Draw the range top and bottom or the marked support and resistance in advance. A marubozu only means something when it breaks something.
+
+### Step 2: Wait for the close
+
+A large live candle can grow a long wick in its last minute. Only count closed candles.
+
+### Step 3: Measure
+
+Is the body clearly bigger than the average body of the last 10-20 candles? Almost no wick on either side? Close clearly beyond the level? No long streak in the same direction before it?
+
+### Step 4: Choose an entry type
+
+| Entry                        | Where                                | Pro                         | Con                           |
+| :--------------------------- | :----------------------------------- | :-------------------------- | :---------------------------- |
+| **50% retest** (standard)    | Buy limit at the middle of the body  | Half the stop, better R:R   | Missed if price never returns |
+| **Next candle's high break** | Buy stop above the next small candle | Confirms momentum continues | Entry far away, bigger stop   |
+| **Close entry**              | Market buy as the marubozu closes    | Never missed                | Huge stop, often a poor price |
+
+With a marubozu the close entry is the most dangerous, because the stop sits beyond the whole large candle. The 50% retest suits beginners best: if price does not return, there is no trade and no loss.
+
+### Step 5: Place the stop
+
+Below the bullish marubozu's low, plus the [spread](/en/learn/01-foundations/04-spread-commission-swap) and a few pips. With a 50% retest entry, the risk is half the candle.
+
+### Step 6: Size and target
+
+Use the entry-to-stop distance to calculate [position size](/en/learn/08-risk-management/02-position-sizing), risking no more than 1% of the account. Put the target just before the next level. If the [risk reward](/en/learn/08-risk-management/03-risk-reward) to there is below 1:1.5, skip it.
+
+### Step 7: Manage
+
+Two consecutive closes below 50% of the body mean momentum is fading; consider a partial or an exit. A close below the marubozu low means the idea is wrong: get out.
+
+</Steps>
+
+### Pre-trade checklist
+
+<Checklist
+  id="pattern-marubozu-pretrade-en"
+  items={[
+    "Was the level or range marked before the marubozu, and did the candle close through it?",
+    "Does the shape pass the rules (large body, almost no wicks, clearly bigger than prior candles)?",
+    "Has the candle closed, and was there no long streak in the same direction before it?",
+    "Is the risk reward to the next level at least 1:1.5?",
+    "Is there no higher-timeframe level right in front of the trade?",
+  ]}
+/>
+
+If any box stays empty, skip the trade.
+
+## Example 1: when it works (illustrative)
+
+<Chart
+  id="marubozu-win-01"
+  height={420}
+  caption="EURUSD H1 (illustrative, synthetic) — a bullish marubozu breaks a range; entry on the 50% body retest."
+/>
+
+- **What was visible:** Candles 0 to 11 sat in a range from 1.0850 to 1.0885. Most bodies were 8-14 pips.
+- **The marubozu:** Candle 12 opened at 1.0861 and closed at 1.0903. Body 42 pips, only 1 pip of wick on each side. The close was about 18 pips above the range top.
+- **Decision:** Buy limit at 1.0882 (50% of the body). Stop at 1.0855 (5 pips below the low): 27 pips of risk. Target 1.0936, which is 2R. Buying the top of the candle would have nearly doubled the stop.
+- **Result:** Candles 13 and 14 drifted lower, candle 15 touched 1.0882, filled the order and closed higher. Candle 22 reached the target.
+- **Lesson:** A level broke, there was a range before it (not a run), and the entry came on a pullback instead of a chase. All three lined up.
+
+<TradeSetup
+  direction="long"
+  pair="EURUSD"
+  entry={1.0882}
+  stop={1.0855}
+  target={1.0936}
+/>
+
+(Illustrative example, not a real trade. Not every marubozu wins, and no result is guaranteed.)
+
+## Example 2: when it is a trap (illustrative)
+
+<Chart
+  id="marubozu-fail-01"
+  height={420}
+  caption="XAUUSD H4 (illustrative, synthetic) — a marubozu into an old high after an extended rally. The retest fills, then the stop is hit."
+/>
+
+- **What was visible:** Candles 0-3 left an old high near 2409. Candles 10 to 15 were six bullish candles in a row with no pullback.
+- **The marubozu:** Candle 16 opened at 2377.00 and closed at 2405.00. Body $28, wicks of 30-40 cents. A perfect shape.
+- **The wrong decision:** "Such a strong candle, it will go higher." Buy limit 2391.00, stop 2374.70: $16.30 of risk, target 2423.60 (2R). But the target lay beyond the old high, and the room to that high was only about 1.1R.
+- **What happened:** Candle 17 turned back just under the old high. Candle 18 filled the buy limit and closed weak. Candle 20 broke the stop.
+- **Why it failed:** The marubozu came at the end of the run, not the start, with a wall right in front of it. The fourth checklist box (R:R ≥ 1:1.5) would have filtered it out.
+
+**Lesson:** A marubozu at the end of a long run, into a level, is often the last push. Because the stop was set in advance, the loss stayed at 1R.
+
+## Common mistakes
+
+| Mistake                                | Why it happens             | What to do instead                                         |
+| :------------------------------------- | :------------------------- | :--------------------------------------------------------- |
+| Buying the marubozu close in a hurry   | Fear of missing out        | Use a 50% retest limit; let it go if price never returns   |
+| Calling any big candle a marubozu      | Wicks are not measured     | Measure both wicks against the range                       |
+| Buying a marubozu at the end of a run  | "Strength is building"     | Read the prior 10-20 candles; be careful after a streak    |
+| Treating a news candle as a marubozu   | Same shape                 | Check the economic calendar; treat news candles separately |
+| Stop in the middle of the candle       | Wanting a small stop       | Stop beyond the opposite end; reduce size instead          |
+| Target without checking the next level | Too much faith in momentum | Measure R:R to the next level before entering              |
+
+## Pro tips
+
+<Callout type="tip">
+  Measure "big" with [ATR](/en/learn/07-technical-indicators/04-atr-stop-size)
+  instead of your eye. A marubozu whose range is 1.5-2× ATR is genuinely
+  unusual. This is a working measure, not a statistic.
+</Callout>
+
+<Callout type="tip">
+  After a marubozu breaks a range, price often comes back to test the broken
+  level. When 50% of the body and the broken level sit close together, that area
+  is a stronger entry. More in [Breakout Retest
+  Entry](/en/learn/09-price-action-entries-strategies/01-breakout-retest-pullback-entry).
+</Callout>
+
+<Callout type="warning">
+  Do not accept claims like "marubozu wins 70%+ of the time" without checking.
+  Results depend on market, timeframe, location and how you count. Your own
+  backtest is the only number you can trust.
+</Callout>
+
+## Summary
+
+<KeyTakeaways>
+
+- Marubozu = large body, almost no wick on either side, clearly bigger than nearby candles.
+- At the break of a range or level it marks a start; at the end of a long run into a level it is often the last push.
+- Do not chase the close: enter on a 50% body retest, stop beyond the opposite end.
+- Measure R:R to the next level; with no room, even a perfect marubozu is a skip.
+
+</KeyTakeaways>
+
+## Practice and your own backtest
+
+Open EURUSD H1 or XAUUSD H4 in TradingView. Find at least 20 marubozu candles from the last 3 months. Log one row each:
+
+| Date | Range or run before? | Level broken? | Body ÷ average body | 50% retest came? | Result (R) |
+| :--- | :------------------- | :------------ | :------------------ | :--------------- | :--------- |
+|      |                      |               |                     |                  |            |
+
+Then split into "range before" and "run before" and compare the average R. Also count how many never retested 50%: that is the real cost of this entry. Do not draw conclusions from fewer than 30 samples.
+
+## Quiz
+
+1. A candle has a large body but an upper wick one third the size of the body. Is it a marubozu?
+2. After seven straight bullish candles, a bullish marubozu forms at an old high. What do you check first?
+3. What is the main difference between entering at the marubozu close and at the 50% retest?
+4. Which checklist box would have filtered out the trade in Example 2?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** No. A large upper wick means sellers pushed price back at the extreme. It is a big bullish candle, not a marubozu.
+
+**2.** How much room is left to the old high, i.e. the R:R. A marubozu at the end of a run, into a level, is often the last push.
+
+**3.** The close entry is never missed, but the stop sits beyond the whole candle, so R:R is poor. The 50% retest halves the stop, but you miss the trade if price does not return.
+
+**4.** The fourth box: R:R to the old high was about 1.1, below 1:1.5.
+
+</details>
+
+## Next steps
+
+- Before this: [Single Candle Patterns](/en/learn/04-candlesticks/02-single-candle-patterns).
+- Is the breakout real: [Range Breakout](/en/learn/06-trend-chart-patterns/03-range-breakout).
+- Same family: [Spinning Top](/en/patterns/spinning-top), [Doji](/en/patterns/doji), [Three White Soldiers](/en/patterns/three-white-soldiers).
+
+<Disclaimer />

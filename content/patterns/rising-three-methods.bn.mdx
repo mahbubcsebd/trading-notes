@@ -1,0 +1,328 @@
+---
+title: "Rising Three Methods: uptrend-এর ভেতরে শান্ত বিরতি, তারপর আবার যাত্রা"
+description: "Rising three methods কীভাবে চিনবেন, পাঁচ candle-এর নিয়ম, কেন pullback-এর গভীরতা আর পঞ্চম candle-এর শক্তিই মূল, continuation trade-এর entry, stop ও target — chart সহ।"
+type: bullish
+category: continuation
+level: advanced
+candleCount: 5
+signal: continuation
+chartId: rising-three-methods-win-01
+tags: [pattern, candlestick, rising-three-methods, continuation, trend]
+status: done
+sources:
+  - type: book
+    title: "Japanese Candlestick Charting Techniques - Steve Nison"
+    note: "Rising three methods, continuation patterns"
+  - type: blog
+    title: "Rising Three Methods - Investopedia"
+    url: "https://www.investopedia.com/terms/r/rising-three-methods.asp"
+updated: 2026-11-06
+---
+
+Uptrend-এ একটা বড় সবুজ candle, তারপর তিনটা ছোট লাল candle। "Trend শেষ?" অনেকে long বন্ধ করে দেন, কেউ short-ও নেন। তারপর আরেকটা বড় সবুজ candle আগের high ছাড়িয়ে যায়। এটা reversal ছিল না, বিশ্রাম ছিল। কিন্তু সব বিশ্রাম এক রকম নয়: কোনোটা শান্ত দম নেওয়া, কোনোটা আসল selling। তফাত বলে pullback-এর গভীরতা।
+
+## এক নজরে
+
+| বিষয়                | Rising Three Methods                                                                                                         |
+| :------------------- | :--------------------------------------------------------------------------------------------------------------------------- |
+| ধরন                  | Bullish continuation, পাঁচ candle (কখনো চার-ছয়)                                                                             |
+| কোথায় খুঁজবেন       | চলমান uptrend-এর মাঝে                                                                                                        |
+| চেনার মূল চিহ্ন      | ১: লম্বা bullish; ২-৪: ছোট candle (সাধারণত bearish), প্রথমটার range-এর ভেতরে; ৫: লম্বা bullish, প্রথমটার close-এর উপরে close |
+| Confirmation         | পঞ্চম candle-ই confirmation                                                                                                  |
+| Stop                 | ছোট candle-গুলোর low-এর নিচে (বা প্রথম candle-এর low-এর নিচে, রক্ষণশীল)                                                      |
+| বাতিল (invalidation) | ছোট candle-গুলোর low-এর নিচে close                                                                                           |
+| দেখতে একই রকম        | Bull flag, [Inside Bar](/bn/patterns/inside-bar)-এর সারি, ii pattern                                                         |
+| বিপরীত pattern       | [Falling Three Methods](/bn/patterns/falling-three-methods)                                                                  |
+
+## এই লেখা পড়ে আপনি যা পারবেন
+
+- পাঁচ candle-এর **প্রতিটির ভূমিকা** বলতে পারবেন।
+- Pullback-এর **গভীরতা মেপে** শান্ত বিরতি আর আসল selling আলাদা করতে পারবেন।
+- Trend-এর দিকে continuation trade **বসাতে** পারবেন।
+
+## কেন জরুরি
+
+- **Trend-এর মাঝে নতুনদের সবচেয়ে বড় ভুল ঠেকায়।** ছোট লাল candle দেখে reversal ভেবে long বন্ধ বা short নেওয়া।
+- **Trend-এর দিকে trade।** Continuation trade সাধারণত reversal-এর চেয়ে সহজ, কারণ বড় প্রবাহ আপনার পক্ষে।
+- **বিরল, কিন্তু শিক্ষণীয়।** নিখুঁত পাঁচ-candle রূপ খুব বেশি আসে না, কিন্তু "বড় candle, শান্ত বিরতি, আবার বড় candle" ধারণাটা সব trend-এ কাজে লাগে।
+
+পূর্বশর্ত: [Continuation Patterns](/bn/learn/06-trend-chart-patterns/02-continuation-patterns) এবং [Trend, Range ও HH-HL](/bn/learn/03-market-structure/02-trend-range-hhhl)।
+
+## Rising Three Methods কী
+
+**Rising three methods হলো পাঁচ candle-এর continuation pattern: uptrend-এ একটি লম্বা bullish candle, তারপর তিনটি (কখনো দুই বা চার) ছোট candle যারা প্রথম candle-এর range-এর ভেতরে থাকে, তারপর আরেকটি লম্বা bullish candle যা প্রথমটার close-এর উপরে close করে।**
+
+একটা সিঁড়ি ভাবুন। একটা বড় ধাপ উপরে, তারপর ছোট একটা চাতাল যেখানে একটু দাঁড়িয়ে দম নেওয়া, তারপর আবার বড় ধাপ। চাতালটা নিচে নামার জায়গা নয়, শুধু থামার জায়গা।
+
+<CandleDiagram
+  title="Rising three methods"
+  candles={[
+    { o: 40, h: 46, l: 39, c: 45, dim: true },
+    { o: 45, h: 61, l: 44.5, c: 60, label: "১" },
+    { o: 60, h: 60.5, l: 56.5, c: 57, label: "২" },
+    { o: 57, h: 58, l: 54.5, c: 55, label: "৩" },
+    { o: 55, h: 56, l: 52.5, c: 53.5, label: "৪" },
+    { o: 53.5, h: 66, l: 53, c: 65.5, label: "৫", note: "১-এর close-এর উপরে" },
+  ]}
+  caption="লম্বা সবুজ, তিনটি ছোট লাল candle প্রথমটার range-এর উপরের অংশে, তারপর আরেকটি লম্বা সবুজ যা প্রথমটার close ছাড়িয়ে যায়।"
+/>
+
+### চেনার নিয়ম
+
+| নিয়ম                                                        | বাধ্যতামূলক?          | কেন                                             |
+| :----------------------------------------------------------- | :-------------------- | :---------------------------------------------- |
+| আগে স্পষ্ট uptrend                                           | হ্যাঁ                 | Continuation-এর জন্য trend লাগে                 |
+| প্রথম candle লম্বা bullish                                   | হ্যাঁ                 | ধাক্কা                                          |
+| মাঝের candle-গুলো ছোট, প্রথম candle-এর low-এর নিচে close নয় | হ্যাঁ                 | এটাই "range-এর ভেতরে বিরতি"                     |
+| পঞ্চম candle লম্বা bullish, প্রথমটার close-এর উপরে close     | হ্যাঁ                 | Trend আবার চালু                                 |
+| Pullback প্রথম candle-এর অর্ধেকের বেশি নয়                   | না (কিন্তু খুব জরুরি) | গভীর pullback মানে আসল selling, শান্ত বিরতি নয় |
+| মাঝের candle-গুলোর range ছোট, volatility কম                  | না                    | শান্ত বিরতির চিহ্ন                              |
+
+<Callout type="note">
+  Nison-এর বইয়ে মাঝের candle সাধারণত তিনটি আর bearish, কিন্তু সংখ্যা দুই থেকে
+  চার হতে পারে। "অর্ধেকের বেশি নয়" আমার কাজ চালানোর মাপ, সংজ্ঞার অংশ নয়; নিজের
+  backtest-এ যাচাই করুন।
+</Callout>
+
+## শক্তিশালী বনাম দুর্বল rising three methods
+
+<DiagramRow>
+  <CandleDiagram
+    title="শক্তিশালী"
+    verdict="good"
+    verdictLabel="trade-যোগ্য"
+    candles={[
+      { o: 45, h: 61, l: 44.5, c: 60 },
+      { o: 60, h: 60.5, l: 57.5, c: 58 },
+      { o: 58, h: 59, l: 56, c: 56.5 },
+      { o: 56.5, h: 57.5, l: 55, c: 55.5 },
+      { o: 55.5, h: 67, l: 55, c: 66.5, label: "অগভীর বিরতি" },
+    ]}
+    caption="বিরতি প্রথম candle-এর উপরের অর্ধেকে, পঞ্চম candle জোরে প্রথমটার close ছাড়িয়ে যায়।"
+  />
+  <CandleDiagram
+    title="দুর্বল"
+    verdict="bad"
+    verdictLabel="এড়িয়ে চলুন"
+    candles={[
+      { o: 45, h: 61, l: 44.5, c: 60 },
+      { o: 60, h: 60.5, l: 54.5, c: 55 },
+      { o: 55, h: 55.5, l: 49.5, c: 50 },
+      { o: 50, h: 50.5, l: 46.5, c: 47 },
+      { o: 47, h: 61.5, l: 46.5, c: 60.4, label: "গভীর বিরতি" },
+    ]}
+    caption="বিরতি প্রথম candle-এর প্রায় পুরোটা ফিরিয়ে নেয়, পঞ্চম candle সবে প্রথমটার close-এর উপরে।"
+  />
+</DiagramRow>
+
+| মান যাচাই          | শক্তিশালী                                 | দুর্বল                              |
+| :----------------- | :---------------------------------------- | :---------------------------------- |
+| Pullback-এর গভীরতা | প্রথম candle-এর অর্ধেকের কম               | 70-90%, প্রায় low পর্যন্ত          |
+| মাঝের candle       | ছোট, শান্ত, ছোট range                     | মাঝারি bearish body, momentum নিয়ে |
+| পঞ্চম candle       | লম্বা, প্রথমটার close স্পষ্টভাবে ছাড়িয়ে | সবে প্রথমটার close-এর উপরে          |
+| Trend              | স্পষ্ট higher high ও higher low           | Trend দুর্বল বা range-এর ধারে       |
+
+### দেখতে একই রকম, অর্থ আলাদা
+
+| Pattern                  | আকার                                       | তফাত                                       |
+| :----------------------- | :----------------------------------------- | :----------------------------------------- |
+| **Rising Three Methods** | বড় সবুজ, ২-৪টি ছোট candle ভেতরে, বড় সবুজ | Candlestick সংজ্ঞা, পাঁচ candle            |
+| **Bull flag**            | তীক্ষ্ণ rally, তারপর ঢালু ছোট channel      | Chart pattern; বেশি candle, আরও ঢিলা নিয়ম |
+| **Inside bar-এর সারি**   | কয়েকটি inside bar বড় candle-এর ভেতরে     | Range-ভিত্তিক; রং লাগে না                  |
+| **Three Black Crows**    | তিনটি বড় লাল candle                       | বিরতি নয়, আক্রমণ                          |
+
+## Candle-এর ভেতরের গল্প
+
+একটি rising three methods-এর একটি প্রচলিত ব্যাখ্যা:
+
+1. **প্রথম candle: buyers বড় ধাক্কা দেয়।** Trend-এর দিকে লম্বা সবুজ candle।
+2. **মাঝের candle: কিছু buyer profit নেয়।** ছোট লাল candle, কিন্তু sellers বড় আক্রমণ করে না। দাম প্রথম candle-এর range-এর ভেতরেই থাকে।
+3. **পঞ্চম candle: নতুন buyers আসে।** Profit নেওয়া শেষ, দাম আবার প্রথম candle-এর close ছাড়িয়ে যায়। মাঝে যারা short নিয়েছিল, তারা লোকসানে।
+
+গভীর pullback হলে গল্পটা বদলায়: তখন এটা profit নেওয়া নয়, sellers-এর আসল আক্রমণ।
+
+<Callout type="note">
+  এটি একটি প্রচলিত ব্যাখ্যা, প্রমাণিত ঘটনা নয়। Chart দেখে কে কিনেছে বা বেচেছে,
+  তা জানা যায় না।
+</Callout>
+
+## কোথায় কাজ করে, কোথায় করে না
+
+<Compare
+  leftLabel="যেখানে rising three methods-এর ওজন বেশি"
+  rightLabel="যেখানে এটা প্রায়ই ফাঁদ"
+  left="- স্পষ্ট uptrend-এর মাঝে, higher high ও higher low
+- Pullback প্রথম candle-এর অর্ধেকের কম
+- মাঝের candle শান্ত, ছোট range
+- পঞ্চম candle লম্বা, প্রথমটার close স্পষ্টভাবে ছাড়িয়ে
+- সামনে পরের resistance পর্যন্ত খোলা জায়গা"
+  right="- Range-এর ভেতরে বা দুর্বল trend-এ
+- Pullback 70%-এর বেশি গভীর
+- পঞ্চম candle সবে প্রথমটার close-এর উপরে
+- ঠিক বড় resistance-এর নিচে
+- বড় news-এর আগে মাঝের বিরতি"
+/>
+
+## ধাপে ধাপে: rising three methods trade
+
+<Steps>
+
+### ধাপ ১: আগে trend
+
+শেষ ১০-২০ candle-এ higher high আর higher low আছে? না থাকলে এটা continuation pattern নয়।
+
+### ধাপ ২: পাঁচটি candle বন্ধ হওয়ার অপেক্ষা
+
+পঞ্চম candle-ই confirmation। চলমান অবস্থায় সেটা প্রথমটার close-এর নিচে ফিরতে পারে।
+
+### ধাপ ৩: Pullback-এর গভীরতা মাপুন
+
+গভীরতা = (প্রথম candle-এর close − মাঝের candle-গুলোর সবচেয়ে নিচু low) ÷ প্রথম candle-এর body। 0.5-এর কম হলে শান্ত বিরতি; 0.7-এর বেশি হলে বাদ।
+
+### ধাপ ৪: Entry-র ধরন
+
+| Entry                          | কোথায়                                    | সুবিধা                        | অসুবিধা                     |
+| :----------------------------- | :---------------------------------------- | :---------------------------- | :-------------------------- |
+| **পঞ্চম close** (প্রচলিত)      | পঞ্চম candle বন্ধ হতেই buy                | Confirmation pattern-এই আছে   | Stop বড় (পুরো বিরতির নিচে) |
+| **প্রথম candle-এর high break** | প্রথম candle-এর high-এর উপরে buy stop     | পঞ্চম candle বন্ধ হওয়ার আগেই | Wick-এ ভুয়া break হতে পারে |
+| **পঞ্চম body-র 50% retest**    | পঞ্চম candle-এর body-র মাঝামাঝি buy limit | Stop-এর তুলনায় entry ভালো    | দাম না ফিরলে মিস            |
+
+### ধাপ ৫: Stop বসান
+
+মাঝের candle-গুলোর সবচেয়ে নিচু low-এর নিচে, [spread](/bn/learn/01-foundations/04-spread-commission-swap)-সহ buffer। রক্ষণশীল হলে প্রথম candle-এর low-এর নিচে।
+
+### ধাপ ৬: Size ও target
+
+[Position size](/bn/learn/08-risk-management/02-position-sizing) entry থেকে stop-এর দূরত্ব দিয়ে, ঝুঁকি ১%-এর বেশি নয়। Target পরের resistance-এর আগে; [risk reward](/bn/learn/08-risk-management/03-risk-reward) অন্তত 1:1.5। Trend চললে [trailing stop](/bn/learn/10-trade-management-execution/03-trailing-stop) ভাবুন।
+
+### ধাপ ৭: পরিচালনা
+
+দাম আবার প্রথম candle-এর close-এর নিচে টানা close করলে continuation দুর্বল। মাঝের candle-গুলোর low-এর নিচে close হলে ধারণা ভুল।
+
+</Steps>
+
+### Trade-এর আগে checklist
+
+<Checklist
+  id="pattern-rising-three-methods-pretrade-bn"
+  items={[
+    "চলমান uptrend স্পষ্ট (higher high, higher low)?",
+    "আকার নিয়ম মানছে (লম্বা সবুজ, ভেতরে ছোট candle, পঞ্চমটা প্রথমটার close-এর উপরে)?",
+    "পাঁচটি candle-ই বন্ধ হয়েছে, আর pullback প্রথম candle-এর অর্ধেকের কম গভীর?",
+    "পরের resistance পর্যন্ত risk reward অন্তত 1:1.5?",
+    "Higher timeframe-এর কোনো বড় level ঠিক সামনে নেই?",
+  ]}
+/>
+
+একটি ঘরও খালি থাকলে trade বাদ দিন।
+
+## উদাহরণ ১: যখন কাজ করে (কাল্পনিক)
+
+<Chart
+  id="rising-three-methods-win-01"
+  height={420}
+  caption="GBPUSD D1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — uptrend-এ rising three methods, অগভীর বিরতি, পঞ্চম close-এ long।"
+/>
+
+- **কী দেখা যাচ্ছিল:** ০-৫ নম্বর candle 1.2600 থেকে প্রায় 1.2716 পর্যন্ত uptrend।
+- **Pattern:** ৬ নম্বর লম্বা সবুজ: 1.2716 থেকে 1.2794 (78 pip)। ৭-৯ নম্বর তিনটি ছোট লাল candle, low 1.2776, 1.2764, 1.2754, প্রথম candle-এর মাঝের (প্রায় 1.2755) প্রায় উপরেই। ১০ নম্বর লম্বা সবুজ, 1.2830-এ close, প্রথমটার close-এর 36 pip উপরে।
+- **সিদ্ধান্ত:** পঞ্চম close-এ buy 1.2830। Stop 1.2746 (বিরতির low-এর 8 pip নিচে), ঝুঁকি 84 pip। Target 1.2998 (2R); উপরে কোনো চিহ্নিত resistance নেই।
+- **ফল:** ১৯ নম্বর candle target ছোঁয়।
+- **শিক্ষা:** স্পষ্ট trend, অগভীর শান্ত বিরতি, আর জোরালো পঞ্চম candle।
+
+<TradeSetup
+  direction="long"
+  pair="GBPUSD"
+  entry={1.283}
+  stop={1.2746}
+  target={1.2998}
+/>
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়। সব rising three methods-এর পর trend চলে না, আর কোনো ফল গ্যারান্টি নয়।)
+
+## উদাহরণ ২: যখন ফাঁদ হয় (কাল্পনিক)
+
+<Chart
+  id="rising-three-methods-fail-01"
+  height={420}
+  caption="XAUUSD H4 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — গভীর pullback আর দুর্বল পঞ্চম candle, পঞ্চম close-এ buy, তারপর stop।"
+/>
+
+- **কী দেখা যাচ্ছিল:** ০-৪ নম্বর candle 2320 থেকে প্রায় 2337 পর্যন্ত ছোট uptrend।
+- **Pattern:** ৫ নম্বর লম্বা সবুজ: 2337 থেকে 2357 ($20)। ৬-৮ নম্বর তিনটি লাল candle 2339.50 পর্যন্ত নামে: প্রথম candle-এর প্রায় 90%। ৯ নম্বর 2357.80-এ close, প্রথমটার close-এর মাত্র 80 সেন্ট উপরে।
+- **ভুল সিদ্ধান্ত:** "আকার মিলেছে।" পঞ্চম close-এ buy 2357.80, stop 2337.50, ঝুঁকি $20.30, target 2398.40।
+- **কী হলো:** ১০ নম্বর নিচে ঘোরে, ১২ নম্বর stop ভাঙে।
+- **কেন ব্যর্থ:** বিরতি শান্ত ছিল না, আসল selling ছিল (প্রায় 90% ফেরত), আর পঞ্চম candle প্রথমটার close সবে ছাড়িয়েছে। Checklist-এর তৃতীয় ঘরেই trade বাদ পড়ত।
+
+**শিক্ষা:** গভীর pullback আর দুর্বল পঞ্চম candle continuation-কে ব্যর্থ করে। Stop আগে বসানো ছিল বলে লোকসান 1R-এ আটকেছে।
+
+## সাধারণ ভুল
+
+| ভুল                                      | কেন হয়                             | কী করবেন                                    |
+| :--------------------------------------- | :---------------------------------- | :------------------------------------------ |
+| মাঝের লাল candle দেখে long বন্ধ বা short | প্রতিটি লাল candle-কে reversal ভাবা | বিরতি প্রথম candle-এর range-এ থাকলে অপেক্ষা |
+| গভীর pullback-কেও rising three ধরা       | শুধু "range-এর ভেতরে" দেখা          | Pullback-এর গভীরতা হিসাব করুন               |
+| Range-এর ভেতরে এই pattern trade          | Trend না দেখা                       | আগে higher high ও higher low গুনুন          |
+| Stop পঞ্চম candle-এর low-এ               | ছোট stop-এর লোভ                     | মাঝের candle-গুলোর low-এর নিচে              |
+
+## Pro tips
+
+<Callout type="tip">
+  নিখুঁত পাঁচ-candle রূপের অপেক্ষায় বসে থাকবেন না। ধারণাটা মনে রাখুন: বড় trend
+  candle, তার ভেতরে শান্ত ছোট বিরতি, তারপর আবার trend-এর দিকে বড় candle। দুই বা
+  চারটি মাঝের candle-ও একই গল্প বলে।
+</Callout>
+
+<Callout type="tip">
+  মাঝের candle-গুলো প্রায়ই inside bar-এর সারি। প্রথম candle-এর high ভাঙার buy
+  stop দিয়ে আগে ঢোকা যায়, কিন্তু তখন Inside Bar-এর fakey ঝুঁকিও মনে রাখুন।
+</Callout>
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- Rising three methods = লম্বা সবুজ, তার range-এর ভেতরে ২-৪টি ছোট candle, তারপর প্রথমটার close ছাড়ানো লম্বা সবুজ।
+- এটা continuation: চলমান uptrend ছাড়া অর্থহীন।
+- Pullback-এর গভীরতা মূল মাপ: অর্ধেকের কম হলে শান্ত বিরতি, 70%-এর বেশি হলে আসল selling।
+- Entry পঞ্চম close-এ, stop মাঝের candle-গুলোর low-এর নিচে।
+
+</KeyTakeaways>
+
+## অনুশীলন ও নিজের backtest
+
+TradingView-এ GBPUSD D1 বা XAUUSD H4 খুলুন। Trend-এর ভেতরে অন্তত ২০টি "বড় candle, ছোট বিরতি, বড় candle" খুঁজুন (দুই থেকে চারটি মাঝের candle)। প্রতিটির জন্য একটি সারি লিখুন:
+
+| তারিখ | মাঝের candle সংখ্যা | Pullback-এর গভীরতা | পঞ্চম candle প্রথমটার close-এর কত উপরে | ফল (R) |
+| :---- | :------------------ | :----------------- | :------------------------------------- | :----- |
+|       |                     |                    |                                        |        |
+
+এরপর গভীরতা 0.5-এর কম আর 0.7-এর বেশি দুই দলে ভাগ করে গড় R তুলনা করুন। অন্তত ৩০টি নমুনা ছাড়া সিদ্ধান্ত নেবেন না।
+
+## কুইজ
+
+1. Rising three methods-এর পাঁচ candle-এর ভূমিকা কী?
+2. মাঝের candle-গুলো প্রথম candle-এর 85% ফিরিয়ে নিল। কী করবেন?
+3. এই pattern কেন range-এ অর্থহীন?
+4. উদাহরণ ২-এর trade checklist-এর কোন ঘরে বাদ পড়ত?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** প্রথম: trend-এর দিকে ধাক্কা। মাঝের: শান্ত বিরতি, profit নেওয়া। পঞ্চম: trend আবার চালু, প্রথমটার close ছাড়িয়ে।
+
+**২.** বাদ দিন। এত গভীর pullback মানে আসল selling, শান্ত বিরতি নয়।
+
+**৩.** এটা continuation pattern; চালিয়ে যাওয়ার মতো trend না থাকলে চালিয়ে যাওয়ার প্রশ্নও নেই।
+
+**৪.** তৃতীয় ঘর: pullback প্রায় 90% গভীর, অর্ধেকের অনেক বেশি।
+
+</details>
+
+## পরের ধাপ
+
+- আগে: [Continuation Patterns](/bn/learn/06-trend-chart-patterns/02-continuation-patterns)।
+- Trend-এর দিকে entry: [Breakout Retest Entry](/bn/learn/09-price-action-entries-strategies/01-breakout-retest-pullback-entry)।
+- একই পরিবারের pattern: [Falling Three Methods](/bn/patterns/falling-three-methods), [Three White Soldiers](/bn/patterns/three-white-soldiers), [Marubozu](/bn/patterns/marubozu)।
+
+<Disclaimer />

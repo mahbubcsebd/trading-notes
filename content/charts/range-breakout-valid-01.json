@@ -1,0 +1,358 @@
+{
+  "symbol": "EURUSD",
+  "timeframe": "H4",
+  "mode": "synthetic",
+  "module": "06-trend-chart-patterns",
+  "lessonSlugs": [
+    "03-range-breakout"
+  ],
+  "notes": {
+    "en": "Illustrative synthetic data.",
+    "bn": "এটি শিক্ষামূলক কাল্পনিক ডেটা।"
+  },
+  "updatedAt": "2026-11-05T21:00:00Z",
+  "type": "trade-setup",
+  "id": "range-breakout-valid-01",
+  "title": {
+    "en": "Range Breakout With Retest",
+    "bn": "Retest সহ range breakout"
+  },
+  "bias": "bullish",
+  "outcome": "win",
+  "tags": [
+    "range",
+    "breakout",
+    "retest"
+  ],
+  "caption": {
+    "en": "Range 1.0800-1.0900 with four touches on top. Candle 18 closes at 1.0935 with a big body, candle 20 retests 1.0900 and holds; buy 1.0930, stop 1.0890, target 1.1000.",
+    "bn": "1.0800-1.0900 range, ওপরে চারবার ছোঁয়া। ১৮ নম্বর candle বড় body নিয়ে 1.0935-এ close করে, ২০ নম্বর 1.0900 retest করে টিকে যায়; buy 1.0930, stop 1.0890, target 1.1000।"
+  },
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 1.09,
+      "label": "Range top 1.0900",
+      "color": "#3b82f6",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.08,
+      "label": "Range bottom 1.0800",
+      "color": "#3b82f6",
+      "style": "dashed"
+    },
+    {
+      "type": "marker",
+      "i": 2,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Touch"
+    },
+    {
+      "type": "marker",
+      "i": 6,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Touch"
+    },
+    {
+      "type": "marker",
+      "i": 10,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Touch"
+    },
+    {
+      "type": "marker",
+      "i": 14,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Touch"
+    },
+    {
+      "type": "marker",
+      "i": 18,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Breakout"
+    },
+    {
+      "type": "marker",
+      "i": 20,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Retest"
+    },
+    {
+      "type": "marker",
+      "i": 21,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Buy"
+    },
+    {
+      "type": "hline",
+      "price": 1.093,
+      "label": "Buy entry",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.089,
+      "label": "Stop (below retest)",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.1,
+      "label": "Target (range height)",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Range height = 100 pips. Target = 1.0900 + 100 = 1.1000. Risk 40 pips for 70 pips of target (about 1.75R). Breakout candle body was about 59 pips against roughly 25 pips for the candles inside the range.",
+    "bn": "Range-এর উচ্চতা = 100 pip। Target = 1.0900 + 100 = 1.1000। ঝুঁকি 40 pip, target 70 pip দূরে (প্রায় 1.75R)। Break candle-এর body প্রায় 59 pip, range-এর ভিতরের candle প্রায় 25 pip।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "A real breakout candle is much bigger than the candles inside the range",
+      "bn": "সত্যিকারের breakout candle range-এর ভিতরের candle-এর চেয়ে অনেক বড়"
+    },
+    {
+      "en": "Retest that holds the old top as support confirms it",
+      "bn": "পুরনো top support হিসেবে টিকে গেলে breakout নিশ্চিত"
+    }
+  ],
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.0842,
+      "h": 1.0856,
+      "l": 1.0836,
+      "c": 1.085
+    },
+    {
+      "i": 1,
+      "o": 1.085,
+      "h": 1.0881,
+      "l": 1.0842,
+      "c": 1.0873
+    },
+    {
+      "i": 2,
+      "o": 1.0873,
+      "h": 1.0901,
+      "l": 1.0863,
+      "c": 1.0895
+    },
+    {
+      "i": 3,
+      "o": 1.0895,
+      "h": 1.0901,
+      "l": 1.0846,
+      "c": 1.0852
+    },
+    {
+      "i": 4,
+      "o": 1.0852,
+      "h": 1.086,
+      "l": 1.08,
+      "c": 1.081
+    },
+    {
+      "i": 5,
+      "o": 1.081,
+      "h": 1.0861,
+      "l": 1.08,
+      "c": 1.0851
+    },
+    {
+      "i": 6,
+      "o": 1.0851,
+      "h": 1.0899,
+      "l": 1.0845,
+      "c": 1.0892
+    },
+    {
+      "i": 7,
+      "o": 1.0892,
+      "h": 1.09,
+      "l": 1.0841,
+      "c": 1.0849
+    },
+    {
+      "i": 8,
+      "o": 1.0849,
+      "h": 1.0859,
+      "l": 1.0799,
+      "c": 1.0806
+    },
+    {
+      "i": 9,
+      "o": 1.0806,
+      "h": 1.0854,
+      "l": 1.08,
+      "c": 1.0848
+    },
+    {
+      "i": 10,
+      "o": 1.0848,
+      "h": 1.0902,
+      "l": 1.084,
+      "c": 1.089
+    },
+    {
+      "i": 11,
+      "o": 1.089,
+      "h": 1.09,
+      "l": 1.0842,
+      "c": 1.0852
+    },
+    {
+      "i": 12,
+      "o": 1.0852,
+      "h": 1.0858,
+      "l": 1.0801,
+      "c": 1.0815
+    },
+    {
+      "i": 13,
+      "o": 1.0815,
+      "h": 1.086,
+      "l": 1.0807,
+      "c": 1.0852
+    },
+    {
+      "i": 14,
+      "o": 1.0852,
+      "h": 1.09,
+      "l": 1.0842,
+      "c": 1.0888
+    },
+    {
+      "i": 15,
+      "o": 1.0888,
+      "h": 1.0894,
+      "l": 1.0861,
+      "c": 1.0867
+    },
+    {
+      "i": 16,
+      "o": 1.0867,
+      "h": 1.0875,
+      "l": 1.0837,
+      "c": 1.0845
+    },
+    {
+      "i": 17,
+      "o": 1.0845,
+      "h": 1.0886,
+      "l": 1.0835,
+      "c": 1.0876
+    },
+    {
+      "i": 18,
+      "o": 1.0876,
+      "h": 1.094,
+      "l": 1.0872,
+      "c": 1.0935
+    },
+    {
+      "i": 19,
+      "o": 1.0935,
+      "h": 1.094,
+      "l": 1.0918,
+      "c": 1.0925
+    },
+    {
+      "i": 20,
+      "o": 1.0925,
+      "h": 1.0928,
+      "l": 1.0899,
+      "c": 1.0915
+    },
+    {
+      "i": 21,
+      "o": 1.0915,
+      "h": 1.0935,
+      "l": 1.0912,
+      "c": 1.093
+    },
+    {
+      "i": 22,
+      "o": 1.093,
+      "h": 1.0948,
+      "l": 1.0922,
+      "c": 1.094
+    },
+    {
+      "i": 23,
+      "o": 1.094,
+      "h": 1.096,
+      "l": 1.093,
+      "c": 1.095
+    },
+    {
+      "i": 24,
+      "o": 1.095,
+      "h": 1.0967,
+      "l": 1.0944,
+      "c": 1.0961
+    },
+    {
+      "i": 25,
+      "o": 1.0961,
+      "h": 1.098,
+      "l": 1.0953,
+      "c": 1.0972
+    },
+    {
+      "i": 26,
+      "o": 1.0972,
+      "h": 1.0992,
+      "l": 1.0962,
+      "c": 1.0982
+    },
+    {
+      "i": 27,
+      "o": 1.0982,
+      "h": 1.0998,
+      "l": 1.0976,
+      "c": 1.0992
+    },
+    {
+      "i": 28,
+      "o": 1.0992,
+      "h": 1.1004,
+      "l": 1.0984,
+      "c": 1.1
+    },
+    {
+      "i": 29,
+      "o": 1.1,
+      "h": 1.101,
+      "l": 1.0985,
+      "c": 1.0995
+    },
+    {
+      "i": 30,
+      "o": 1.0995,
+      "h": 1.1001,
+      "l": 1.0984,
+      "c": 1.099
+    },
+    {
+      "i": 31,
+      "o": 1.099,
+      "h": 1.0998,
+      "l": 1.0977,
+      "c": 1.0985
+    }
+  ],
+  "entry": 1.093
+}

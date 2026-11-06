@@ -1,0 +1,238 @@
+{
+  "id": "falling-three-methods-win-01",
+  "title": {
+    "en": "Falling Three Methods in a Downtrend, Entry at the Fifth Close",
+    "bn": "Downtrend-এ falling three methods, পঞ্চম close-এ entry"
+  },
+  "symbol": "EURUSD",
+  "timeframe": "H4",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bearish",
+  "outcome": "win",
+  "tags": [
+    "falling-three-methods",
+    "candlestick",
+    "continuation",
+    "trend",
+    "pattern"
+  ],
+  "module": "patterns",
+  "lessonSlugs": [],
+  "caption": {
+    "en": "Illustrative synthetic EURUSD H4: in a downtrend, a long bearish candle is followed by three small bullish candles in the lower half of its range, then a long bearish candle closing below the first one's close. Short at that close, stop above the pause; price falls to 2R.",
+    "bn": "শিক্ষামূলক কাল্পনিক EURUSD H4: downtrend-এ একটি লম্বা bearish candle, তারপর তিনটি ছোট bullish candle তার range-এর নিচের অর্ধেকে, তারপর একটি লম্বা bearish candle প্রথমটার close-এর নিচে close করে। সেই close-এ short, stop বিরতির উপরে; দাম 2R পর্যন্ত নামে।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data, not a real market record.",
+    "bn": "শিক্ষামূলক কাল্পনিক ডেটা, বাস্তব মার্কেটের রেকর্ড নয়।"
+  },
+  "updatedAt": "2026-11-06T12:00:00Z",
+  "annotations": [
+    {
+      "type": "marker",
+      "i": 6,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "1"
+    },
+    {
+      "type": "marker",
+      "i": 8,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Pause"
+    },
+    {
+      "type": "marker",
+      "i": 10,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "5"
+    },
+    {
+      "type": "hline",
+      "price": 1.0779,
+      "label": "Candle 1 close",
+      "color": "#3b82f6",
+      "style": "dotted"
+    },
+    {
+      "type": "hline",
+      "price": 1.0747,
+      "label": "Entry (5th close)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.0822,
+      "label": "Stop",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.0597,
+      "label": "Target 2R",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candles 0-5 are a downtrend. Candle 6 is a long bearish candle. Candles 7-9 are three small, calm bullish candles that stay in the lower half of candle 6. Candle 10 is a long bearish candle closing below candle 6's close. Short at that close, stop above the pause high.",
+    "bn": "০-৫ নম্বর candle downtrend। ৬ নম্বর লম্বা bearish candle। ৭-৯ নম্বর তিনটি ছোট, শান্ত bullish candle, ৬ নম্বরের নিচের অর্ধেকে থাকে। ১০ নম্বর লম্বা bearish candle, ৬ নম্বরের close-এর নিচে close করে। সেই close-এ short, stop বিরতির high-এর উপরে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "A calm, shallow pause inside the trend, then the trend resumes",
+      "bn": "Trend-এর ভেতরে শান্ত, অগভীর বিরতি, তারপর trend আবার চলে"
+    }
+  ],
+  "entry": 1.0747,
+  "stopLoss": 1.0822,
+  "takeProfit": 1.0597,
+  "rr": "1:2.0",
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.095,
+      "h": 1.09688,
+      "l": 1.09038,
+      "c": 1.092
+    },
+    {
+      "i": 1,
+      "o": 1.092,
+      "h": 1.0938,
+      "l": 1.09142,
+      "c": 1.093
+    },
+    {
+      "i": 2,
+      "o": 1.093,
+      "h": 1.09439,
+      "l": 1.08785,
+      "c": 1.0895
+    },
+    {
+      "i": 3,
+      "o": 1.0895,
+      "h": 1.09102,
+      "l": 1.08589,
+      "c": 1.0867
+    },
+    {
+      "i": 4,
+      "o": 1.0867,
+      "h": 1.0884,
+      "l": 1.08614,
+      "c": 1.0879
+    },
+    {
+      "i": 5,
+      "o": 1.0879,
+      "h": 1.08953,
+      "l": 1.08374,
+      "c": 1.0847
+    },
+    {
+      "i": 6,
+      "o": 1.0847,
+      "h": 1.0851,
+      "l": 1.0775,
+      "c": 1.0779
+    },
+    {
+      "i": 7,
+      "o": 1.0779,
+      "h": 1.0795,
+      "l": 1.0776,
+      "c": 1.0791
+    },
+    {
+      "i": 8,
+      "o": 1.0791,
+      "h": 1.0805,
+      "l": 1.0788,
+      "c": 1.0801
+    },
+    {
+      "i": 9,
+      "o": 1.0801,
+      "h": 1.0814,
+      "l": 1.0798,
+      "c": 1.081
+    },
+    {
+      "i": 10,
+      "o": 1.081,
+      "h": 1.0813,
+      "l": 1.0743,
+      "c": 1.0747
+    },
+    {
+      "i": 11,
+      "o": 1.0747,
+      "h": 1.0757,
+      "l": 1.0739,
+      "c": 1.0743
+    },
+    {
+      "i": 12,
+      "o": 1.0743,
+      "h": 1.07543,
+      "l": 1.07054,
+      "c": 1.0713
+    },
+    {
+      "i": 13,
+      "o": 1.0713,
+      "h": 1.0731,
+      "l": 1.07091,
+      "c": 1.0725
+    },
+    {
+      "i": 14,
+      "o": 1.0725,
+      "h": 1.07344,
+      "l": 1.0678,
+      "c": 1.0689
+    },
+    {
+      "i": 15,
+      "o": 1.0689,
+      "h": 1.06981,
+      "l": 1.0651,
+      "c": 1.0663
+    },
+    {
+      "i": 16,
+      "o": 1.0663,
+      "h": 1.06788,
+      "l": 1.06572,
+      "c": 1.0673
+    },
+    {
+      "i": 17,
+      "o": 1.0673,
+      "h": 1.06849,
+      "l": 1.06266,
+      "c": 1.0641
+    },
+    {
+      "i": 18,
+      "o": 1.0641,
+      "h": 1.06506,
+      "l": 1.06106,
+      "c": 1.0617
+    },
+    {
+      "i": 19,
+      "o": 1.0617,
+      "h": 1.06235,
+      "l": 1.05911,
+      "c": 1.0597
+    }
+  ]
+}

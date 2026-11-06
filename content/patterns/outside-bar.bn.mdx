@@ -1,0 +1,323 @@
+---
+title: "Outside Bar: আগের candle-এর দুই প্রান্তই ভেঙে ফেলা বড় candle"
+description: "Outside bar কীভাবে চিনবেন, engulfing থেকে তফাত, কেন close-এর জায়গাই সব, level sweep করে উল্টো প্রান্তে close, বড় stop সামলানো — জেতা ও হারা chart সহ।"
+type: neutral
+category: range-bars
+level: intermediate
+candleCount: 2
+signal: reversal
+chartId: outside-bar-win-01
+tags: [pattern, price-action, outside-bar, reversal, volatility]
+status: done
+sources:
+  - type: book
+    title: "Trading Price Action Trends - Al Brooks"
+    note: "Outside bars, ioi pattern, failed breakouts"
+updated: 2026-11-06
+---
+
+একটা candle আগের candle-এর low ভাঙল, তারপর high-ও ভাঙল। দুই দিকের trader-দের stop কেটে গেল। দেখে মনে হয় বিশাল শক্তি, কিন্তু কোন দিকে? Candle যদি নিজের এক প্রান্তে close করে, উত্তর স্পষ্ট। যদি মাঝখানে close করে, তাহলে এটা শক্তি নয়, শুধু দুই দিকের ঝড়। Outside bar-এ close-এর জায়গাই সব।
+
+## এক নজরে
+
+| বিষয়                | Outside Bar                                                                                 |
+| :------------------- | :------------------------------------------------------------------------------------------ |
+| ধরন                  | Neutral; level-এ close-এর দিকে reversal, দুই candle                                         |
+| কোথায় খুঁজবেন       | চিহ্নিত support বা resistance-এ, বিশেষ করে level sweep করলে                                 |
+| চেনার মূল চিহ্ন      | দ্বিতীয় candle-এর high আগের high-এর উপরে আর low আগের low-এর নিচে                           |
+| Confirmation         | Close নিজের range-এর এক প্রান্তে (উপরের বা নিচের এক-চতুর্থাংশে); পরের candle সেই দিকে break |
+| Stop                 | Outside bar-এর বিপরীত প্রান্তের বাইরে, spread-সহ buffer                                     |
+| বাতিল (invalidation) | Outside bar-এর বিপরীত প্রান্তের বাইরে close                                                 |
+| দেখতে একই রকম        | [Bullish Engulfing](/bn/patterns/bullish-engulfing) (body-ভিত্তিক), long-legged doji        |
+| বিপরীত pattern       | [Inside Bar](/bn/patterns/inside-bar)                                                       |
+
+## এই লেখা পড়ে আপনি যা পারবেন
+
+- Outside bar আর engulfing-এর **সংজ্ঞাগত তফাত** বলতে পারবেন।
+- **Close-এর জায়গা** মেপে outside bar-এর দিক আর শক্তি বিচার করতে পারবেন।
+- Level sweep-এর outside bar **চিনে** trade করতে পারবেন।
+- বড় range-এর জন্য বড় stop **size দিয়ে সামলাতে** পারবেন।
+
+## কেন জরুরি
+
+- **দুই দিকের liquidity এক candle-এ।** আগের high আর low দুটোর বাইরের stop একই candle-এ কাটে। কোথায় শেষ হলো, সেটাই বলে কোন পক্ষ সেই liquidity কাজে লাগিয়েছে।
+- **Engulfing-এর range-রূপ।** অনেক outside bar একই সঙ্গে engulfing-ও। কিন্তু সব outside bar engulfing নয়, আর উল্টোটাও না।
+- **বড় range, বড় stop।** Outside bar প্রায়ই আশেপাশের candle-এর চেয়ে অনেক বড়। Stop বিপরীত প্রান্তে রাখলে size অনেক কমাতে হয়।
+
+পূর্বশর্ত: Inside Bar পাতা (উপরের টেবিলে link) আর [Liquidity ও Stop Hunt](/bn/learn/03-market-structure/04-liquidity-stop-hunts)।
+
+## Outside Bar কী
+
+**Outside bar হলো এমন একটি candle, যার high আগের candle-এর high-এর উপরে আর low আগের candle-এর low-এর নিচে।** অর্থাৎ পুরো আগের range, wick-সহ, এর ভেতরে ঢুকে যায়। রং বাধ্যতামূলক নয়; দিক বলে close।
+
+একটা ঢেউ ভাবুন, যেটা আগের ঢেউয়ের দুই পাড়ই ছাপিয়ে যায়। জল কোন দিকে গড়িয়ে থামল, সেটাই আসল।
+
+<CandleDiagram
+  title="Outside bar: close-এর জায়গা"
+  candles={[
+    { o: 52, h: 55, l: 49, c: 50, label: "আগের" },
+    {
+      o: 50,
+      h: 58,
+      l: 45,
+      c: 57.5,
+      label: "শক্তিশালী",
+      note: "উপরের প্রান্তে close",
+    },
+    { o: 52, h: 55, l: 49, c: 50, label: "আগের" },
+    { o: 50, h: 58, l: 45, c: 51.5, label: "দুর্বল", note: "মাঝখানে close" },
+  ]}
+  caption="দুটোই outside bar: high আগের high-এর উপরে, low আগের low-এর নিচে। বাঁয়েরটা উপরের প্রান্তে close করে, ডানেরটা মাঝখানে।"
+/>
+
+### চেনার নিয়ম
+
+| নিয়ম                                                     | বাধ্যতামূলক?          | কেন                                                   |
+| :-------------------------------------------------------- | :-------------------- | :---------------------------------------------------- |
+| High > আগের high আর low < আগের low                        | হ্যাঁ                 | এটাই "outside"                                        |
+| Candle বন্ধ হয়েছে                                        | হ্যাঁ                 | Close-এর জায়গাই সিদ্ধান্ত, তাই বন্ধ হওয়া জরুরি      |
+| Close range-এর এক প্রান্তে (উপরের বা নিচের এক-চতুর্থাংশে) | হ্যাঁ (trade-এর জন্য) | মাঝখানে close মানে কেউ জেতেনি                         |
+| চিহ্নিত level-এ, আর একটি প্রান্ত সেই level sweep করে      | না (কিন্তু জরুরি)     | Sweep-এর পর উল্টো প্রান্তে close সবচেয়ে পরিষ্কার ছবি |
+| Body-ও আগের body ঢাকে                                     | না                    | তখন এটা engulfing-ও; আরেকটি কারণ যোগ হয়              |
+
+## শক্তিশালী বনাম দুর্বল outside bar
+
+<DiagramRow>
+  <CandleDiagram
+    title="শক্তিশালী"
+    verdict="good"
+    verdictLabel="trade-যোগ্য"
+    candles={[
+      { o: 62, h: 63, l: 56, c: 57, dim: true },
+      { o: 57, h: 58, l: 51, c: 52, dim: true },
+      { o: 52, h: 53, l: 49, c: 50 },
+      { o: 50, h: 55, l: 46, c: 54.5, label: "sweep + উপরে close" },
+    ]}
+    levels={[{ price: 48, label: "support", tone: "support" }]}
+    caption="Support-এর নিচে sweep, তারপর আগের high-এর উপরে উঠে প্রায় নিজের high-এ close।"
+  />
+  <CandleDiagram
+    title="দুর্বল"
+    verdict="bad"
+    verdictLabel="এড়িয়ে চলুন"
+    candles={[
+      { o: 50, h: 56, l: 45, c: 54, dim: true },
+      { o: 54, h: 57, l: 46, c: 48, dim: true },
+      { o: 48, h: 53, l: 47, c: 51 },
+      { o: 51, h: 57, l: 44, c: 51.5, label: "মাঝখানে close" },
+    ]}
+    caption="চওড়া এলোমেলো range-এ outside bar, close মাঝখানে। দুই দিকের ঝড়, কোনো বিজয়ী নেই।"
+  />
+</DiagramRow>
+
+| মান যাচাই       | শক্তিশালী                                    | দুর্বল                     |
+| :-------------- | :------------------------------------------- | :------------------------- |
+| Close-এর জায়গা | Range-এর উপরের বা নিচের এক-চতুর্থাংশে        | মাঝখানে (40-60%)           |
+| জায়গা          | চিহ্নিত level-এ, এক প্রান্তে sweep           | Range বা chop-এর মাঝে      |
+| আগের বাজার      | Trend বা level-এ আসা স্পষ্ট move             | দুই দিকে বড় বড় ওঠানামা   |
+| Stop ও জায়গা   | পুরো range-এর stop-এ পরের বাধা পর্যন্ত 1.5R+ | Stop এত বড় যে R:R মেলে না |
+
+### দেখতে একই রকম, অর্থ আলাদা
+
+| Pattern              | মাপে কী                              | তফাত                                         |
+| :------------------- | :----------------------------------- | :------------------------------------------- |
+| **Outside Bar**      | পুরো range (high ও low)              | Price action সংজ্ঞা; দিক বলে close           |
+| **Engulfing**        | শুধু body; রং বদল লাগে               | Wick ঢাকা জরুরি নয়                          |
+| **Long-Legged Doji** | দুই দিকে লম্বা wick, body প্রায় নেই | Outside bar না-ও হতে পারে; close সবসময় মাঝে |
+| **Inside Bar**       | পুরো range আগের range-এর ভেতরে       | ঠিক উল্টো: সংকোচন                            |
+
+## Candle-এর ভেতরের গল্প
+
+Support-এ একটি bullish outside bar-এর একটি প্রচলিত ব্যাখ্যা:
+
+1. **প্রথমে নিচে।** দাম আগের low আর support-এর নিচে নামে। সেখানকার sell stop কাটে, breakout seller-রা ঢোকে।
+2. **তারপর বড় buyers।** নিচের liquidity-তে buy order fill হয়, দাম জোরে ঘোরে।
+3. **আগের high-ও ভাঙে, close প্রায় high-এ।** নিচে যারা sell করেছিল, তারা লোকসানে; আগের high-এর উপরের buy stop-ও কাটে।
+
+ফল: sellers-এর ফাঁদ, আর buyers পুরো candle জিতেছে। কিন্তু close মাঝখানে হলে গল্পটা আলাদা: দুই দিকই কাটা গেছে, কেউ শেষ কথা বলেনি।
+
+<Callout type="note">
+  এটি একটি প্রচলিত ব্যাখ্যা, প্রমাণিত ঘটনা নয়। Chart দেখে কার stop কাটল বা কে
+  কিনল, তা জানা যায় না।
+</Callout>
+
+## কোথায় কাজ করে, কোথায় করে না
+
+<Compare
+  leftLabel="যেখানে outside bar-এর ওজন বেশি"
+  rightLabel="যেখানে outside bar প্রায়ই ফাঁদ"
+  left="- চিহ্নিত support বা resistance-এ, এক প্রান্তে sweep
+- Close উল্টো প্রান্তের এক-চতুর্থাংশে
+- Body-ও আগের body ঢাকলে (engulfing-ও)
+- D1 বা H4-এর মতো বড় timeframe-এ"
+  right="- চওড়া এলোমেলো range-এ
+- Close range-এর মাঝখানে
+- বড় news candle-এ (দুই দিকের spike)
+- Range এত বড় যে stop-এ R:R মেলে না"
+/>
+
+## ধাপে ধাপে: outside bar trade
+
+<Steps>
+
+### ধাপ ১: আগে level
+
+Support বা resistance আগেই আঁকুন। Outside bar-এর কোনো প্রান্ত সেই level-এর ওপারে গিয়ে ফিরেছে কি না দেখুন।
+
+### ধাপ ২: Candle বন্ধ হওয়ার অপেক্ষা
+
+Close-এর জায়গাই সিদ্ধান্ত। চলমান candle শেষ মিনিটে মাঝখানে ফিরে যেতে পারে।
+
+### ধাপ ৩: Close-এর জায়গা মাপুন
+
+Close position = (close − low) ÷ (high − low)। Bullish setup-এর জন্য 0.75 বা বেশি, bearish-এর জন্য 0.25 বা কম। মাঝখানে (0.4-0.6) হলে বাদ।
+
+### ধাপ ৪: Entry-র ধরন
+
+| Entry                        | কোথায়                                         | সুবিধা                       | অসুবিধা                    |
+| :--------------------------- | :--------------------------------------------- | :--------------------------- | :------------------------- |
+| **High/low break** (প্রচলিত) | Close-এর দিকের প্রান্তের একটু বাইরে stop order | দাম সেই দিকে এগোলে তবেই ঢোকা | Stop পুরো range-এর ওপারে   |
+| **50% retest**               | Outside bar-এর range-এর মাঝামাঝি limit         | Stop অর্ধেক                  | দাম না ফিরলে মিস           |
+| **Close entry**              | Candle বন্ধ হতেই                               | মিস হয় না                   | Confirmation নেই, stop বড় |
+
+### ধাপ ৫: Stop বসান
+
+Outside bar-এর বিপরীত প্রান্তের বাইরে, [spread](/bn/learn/01-foundations/04-spread-commission-swap)-সহ buffer। এটাই sweep-এর প্রান্ত, তাই এর ভেতরে stop রাখা বিপজ্জনক।
+
+### ধাপ ৬: Size ও target
+
+বড় range মানে ছোট size: [position size](/bn/learn/08-risk-management/02-position-sizing) entry থেকে stop-এর দূরত্ব দিয়ে, ঝুঁকি ১%-এর বেশি নয়। Target পরের level-এর আগে; [risk reward](/bn/learn/08-risk-management/03-risk-reward) অন্তত 1:1.5।
+
+### ধাপ ৭: পরিচালনা
+
+দাম আবার outside bar-এর মাঝের নিচে টানা close করলে ধারণা দুর্বল। বিপরীত প্রান্তের বাইরে close হলে ধারণা ভুল।
+
+</Steps>
+
+### Trade-এর আগে checklist
+
+<Checklist
+  id="pattern-outside-bar-pretrade-bn"
+  items={[
+    "Outside bar চিহ্নিত level-এ, আর একটি প্রান্ত সেই level sweep করেছে?",
+    "আকার নিয়ম মানছে (high আগের high-এর উপরে, low আগের low-এর নিচে)?",
+    "Candle বন্ধ হয়েছে, আর close range-এর এক-চতুর্থাংশ প্রান্তে (মাঝখানে নয়)?",
+    "পুরো range-এর stop নিয়েও পরের level পর্যন্ত risk reward অন্তত 1:1.5?",
+    "Higher timeframe-এর trend বা level trade-এর বিপরীতে নেই?",
+  ]}
+/>
+
+একটি ঘরও খালি থাকলে trade বাদ দিন।
+
+## উদাহরণ ১: যখন কাজ করে (কাল্পনিক)
+
+<Chart
+  id="outside-bar-win-01"
+  height={420}
+  caption="USDJPY H4 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — support-এর নিচে sweep করে high-এর কাছে close করা bullish outside bar, high ভাঙলে long।"
+/>
+
+- **কী দেখা যাচ্ছিল:** ৪ নম্বর candle 151.606-এ support চিহ্নিত করেছে। ৫-৯ নম্বর প্রায় 152.64 পর্যন্ত ওঠে, ১০-১৪ নম্বর আবার নামে।
+- **Outside bar:** ১৪ নম্বর ছোট bearish (151.726 থেকে 151.666)। ১৫ নম্বর 151.506 পর্যন্ত নেমে support আর আগের low-এর নিচে যায়, তারপর 151.786-এ আগের high পার হয়, 151.766-এ close: range-এর উপরের প্রায় 7%-এর মধ্যে।
+- **সিদ্ধান্ত:** Buy stop 151.806। Stop 151.466 (outside bar low-এর 4 pip নিচে), ঝুঁকি 34 pip। Target 152.486 (2R); swing high পর্যন্ত জায়গা প্রায় 2.4R।
+- **ফল:** ১৬ নম্বর high ভেঙে order fill করে। ২২ নম্বর candle target ছোঁয়।
+- **শিক্ষা:** Level sweep, উল্টো প্রান্তে close, আর সামনে খোলা জায়গা।
+
+<TradeSetup
+  direction="long"
+  pair="USDJPY"
+  entry={151.806}
+  stop={151.466}
+  target={152.486}
+/>
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়। সব outside bar জেতে না, আর কোনো ফল গ্যারান্টি নয়।)
+
+## উদাহরণ ২: যখন ফাঁদ হয় (কাল্পনিক)
+
+<Chart
+  id="outside-bar-fail-01"
+  height={420}
+  caption="EURUSD D1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — চওড়া এলোমেলো range-এ মাঝখানে close করা outside bar, high break-এ buy, তারপর stop।"
+/>
+
+- **কী দেখা যাচ্ছিল:** ০-৭ নম্বর candle প্রায় 1.0764 থেকে 1.0853-এর চওড়া range-এ দুই দিকে বড় বড় ওঠানামা করেছে। কোনো trend নেই।
+- **Outside bar:** ৯ নম্বর ৮ নম্বরের পুরো range ঢাকে: high 1.0845, low 1.0749। কিন্তু close 1.0799, range-এর ঠিক মাঝখানে (প্রায় 52%)।
+- **ভুল সিদ্ধান্ত:** "বড় outside bar, শক্তি দেখাচ্ছে।" Buy stop 1.0848, stop 1.0743, ঝুঁকি 105 pip।
+- **কী হলো:** ১০ নম্বর 1.0856 পর্যন্ত spike দিয়ে order fill করে, আবার মাঝখানে close করে। ১১-১২ নম্বর নেমে outside bar-এর low আর stop ভাঙে।
+- **কেন ব্যর্থ:** Close মাঝখানে, কোনো level নেই, আর বাজার দুই দিকে ঝড় তুলছিল। Checklist-এর প্রথম আর তৃতীয় ঘরে trade বাদ পড়ত।
+
+**শিক্ষা:** মাঝখানে close করা outside bar দুই দিকের volatility দেখায়, বিজয়ী নয়। Stop আগে বসানো ছিল বলে লোকসান 1R-এ আটকেছে।
+
+## সাধারণ ভুল
+
+| ভুল                                 | কেন হয়                    | কী করবেন                                 |
+| :---------------------------------- | :------------------------- | :--------------------------------------- |
+| বড় candle-কে শক্তি ভেবে দিক অনুমান | আকারে মুগ্ধ হওয়া          | Close position মাপুন                     |
+| Stop outside bar-এর মাঝখানে         | বড় stop-এর ভয়            | Stop বিপরীত প্রান্তে, size কমান          |
+| News spike-কে outside bar setup ধরা | আকার একই রকম               | Economic calendar দেখুন; news candle বাদ |
+| Engulfing আর outside bar একই ভাবা   | Body আর range গুলিয়ে ফেলা | Outside = পুরো range; engulfing = body   |
+
+## Pro tips
+
+<Callout type="tip">
+  Outside bar-এর পরের candle যদি একটি inside bar হয় (ioi-এর মাঝের অংশ), সেটা
+  প্রায়ই ছোট stop-এর সুযোগ দেয়: inside bar-এর প্রান্তে entry, outside bar-এর
+  মাঝে বা inside bar-এর বিপরীত প্রান্তে stop।
+</Callout>
+
+<Callout type="tip">
+  Outside bar-এর range-কে
+  [ATR](/bn/learn/07-technical-indicators/04-atr-stop-size) দিয়ে মাপুন। Range
+  ATR-এর দুই গুণের বেশি হলে পুরো range-এর stop প্রায়ই খুব বড়; তখন 50% retest
+  বা ছোট timeframe-এর structure দিয়ে entry ভাবুন।
+</Callout>
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- Outside bar = high আগের high-এর উপরে, low আগের low-এর নিচে; পুরো আগের range ভেতরে।
+- দিক বলে close: এক-চতুর্থাংশ প্রান্তে close হলে signal, মাঝখানে হলে শুধু ঝড়।
+- Level sweep করে উল্টো প্রান্তে close সবচেয়ে পরিষ্কার ছবি।
+- Stop বিপরীত প্রান্তের বাইরে; বড় range মানে ছোট size।
+
+</KeyTakeaways>
+
+## অনুশীলন ও নিজের backtest
+
+TradingView-এ USDJPY H4 বা EURUSD D1 খুলুন। অন্তত ২০টি outside bar খুঁজুন। প্রতিটির জন্য একটি সারি লিখুন:
+
+| তারিখ | Level-এ, sweep? | Close position (0-1) | Range ÷ ATR | Entry ধরন | ফল (R) |
+| :---- | :-------------- | :------------------- | :---------- | :-------- | :----- |
+|       |                 |                      |             |           |        |
+
+এরপর close position 0.75+ (বা 0.25-) আর 0.4-0.6 দুই দলে ভাগ করে গড় R তুলনা করুন। অন্তত ৩০টি নমুনা ছাড়া সিদ্ধান্ত নেবেন না।
+
+## কুইজ
+
+1. Outside bar আর engulfing-এর মূল তফাত কী?
+2. একটি outside bar-এর high 1.2100, low 1.2000, close 1.2090। Close position কত, আর এর অর্থ কী?
+3. Outside bar-এর stop কেন বিপরীত প্রান্তের বাইরে?
+4. উদাহরণ ২-এর trade checklist-এর কোন ঘরে বাদ পড়ত?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** Outside bar পুরো range মাপে, রং লাগে না। Engulfing শুধু body মাপে আর রং-বদল লাগে।
+
+**২.** (1.2090 − 1.2000) ÷ (1.2100 − 1.2000) = 0.9। উপরের প্রান্তে close: buyers জিতেছে, bullish signal।
+
+**৩.** ওটাই sweep-এর প্রান্ত। দাম আবার সেখানে গেলে ধারণা ভুল প্রমাণ হয়; তার ভেতরে stop রাখলে স্বাভাবিক retest-এই কাটবে।
+
+**৪.** প্রথম ঘর (কোনো level বা sweep ছিল না) আর তৃতীয় ঘর (close মাঝখানে, প্রায় 52%)।
+
+</details>
+
+## পরের ধাপ
+
+- আগে: [Inside Bar](/bn/patterns/inside-bar)।
+- Sweep-এর পেছনের গল্প: [Fake Breakout](/bn/learn/06-trend-chart-patterns/04-fake-breakout)।
+- একই পরিবারের pattern: [Bullish Engulfing](/bn/patterns/bullish-engulfing), [Bearish Engulfing](/bn/patterns/bearish-engulfing), [Long-Legged Doji](/bn/patterns/long-legged-doji)।
+
+<Disclaimer />

@@ -1,60 +1,66 @@
-'use client';
+"use client";
 
-import { useState, useEffect } from 'react';
-import { Search } from 'lucide-react';
-import dynamic from 'next/dynamic';
+import { useEffect, useState } from "react";
+import { Search } from "lucide-react";
+import {
+  SearchDialog,
+  type SearchLabels,
+} from "@/components/search/SearchDialog";
 
-const DefaultSearchDialog = dynamic(
-  () => import('fumadocs-ui/components/dialog/search-default'),
-  { ssr: false }
-);
+function isTypingTarget(target: EventTarget | null): boolean {
+  if (!(target instanceof HTMLElement)) return false;
+  return (
+    target.isContentEditable ||
+    ["INPUT", "TEXTAREA", "SELECT"].includes(target.tagName)
+  );
+}
 
-export function SearchButton({ label, lang }: { label: string; lang?: string }) {
+export function SearchButton({
+  lang,
+  labels,
+}: {
+  lang: string;
+  labels: SearchLabels;
+}) {
   const [open, setOpen] = useState(false);
-  const [mounted, setMounted] = useState(false);
+  const [isMac, setIsMac] = useState(true);
 
   useEffect(() => {
-    setMounted(true);
-    const down = (e: KeyboardEvent) => {
-      if (e.key === 'k' && (e.metaKey || e.ctrlKey)) {
-        e.preventDefault();
-        setOpen((open) => !open);
-      }
+    setIsMac(/Mac|iPhone|iPad/.test(navigator.platform || navigator.userAgent));
+    const onKeyDown = (e: KeyboardEvent) => {
+      const isModK = e.key.toLowerCase() === "k" && (e.metaKey || e.ctrlKey);
+      const isSlash = e.key === "/" && !isTypingTarget(e.target);
+      if (!isModK && !isSlash) return;
+      e.preventDefault();
+      setOpen((wasOpen) => (isModK ? !wasOpen : true));
     };
-    document.addEventListener('keydown', down);
-    return () => document.removeEventListener('keydown', down);
+    document.addEventListener("keydown", onKeyDown);
+    return () => document.removeEventListener("keydown", onKeyDown);
   }, []);
 
   return (
     <>
       <button
-        className="flex w-full max-w-sm items-center gap-2 rounded-md border border-input bg-muted/50 px-3 py-1.5 text-sm text-muted-foreground hover:bg-accent hover:text-accent-foreground transition-colors sm:w-64"
-        aria-label={label}
+        type="button"
         onClick={() => setOpen(true)}
+        aria-haspopup="dialog"
+        className="chip !w-[2.125rem] justify-center !px-0 sm:!w-52 sm:justify-start sm:!pr-2 sm:!pl-3"
       >
-        <Search size={14} className="shrink-0" />
-        <span className="flex-1 text-left line-clamp-1">{label}...</span>
-        <kbd className="hidden sm:inline-flex h-5 items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium opacity-100">
-          <span className="text-xs">⌘</span>K
+        <Search size={14} className="shrink-0" aria-hidden />
+        <span className="sr-only text-left sm:not-sr-only sm:flex-1 sm:truncate">
+          {labels.search}…
+        </span>
+        <kbd aria-hidden className="text-mute border-line hidden h-5 items-center rounded border px-1.5 font-mono text-[10px] font-medium sm:inline-flex">
+          {isMac ? "⌘" : "Ctrl"} K
         </kbd>
       </button>
 
-      {mounted && (
-        <DefaultSearchDialog
-          open={open}
-          onOpenChange={setOpen}
-          api="/api/search"
-          type="fetch"
-          links={[
-            ['Home', `/${lang || 'bn'}`],
-            ['Learn', `/${lang || 'bn'}/learn`],
-            ['Patterns', `/${lang || 'bn'}/patterns`],
-            ['Charts', `/${lang || 'bn'}/charts`],
-            ['Glossary', `/${lang || 'bn'}/glossary`],
-            ['Risk Calculator', `/${lang || 'bn'}/tools/risk-calculator`],
-          ]}
-        />
-      )}
+      <SearchDialog
+        open={open}
+        onOpenChange={setOpen}
+        lang={lang}
+        labels={labels}
+      />
     </>
   );
 }

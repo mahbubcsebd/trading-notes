@@ -1,42 +1,334 @@
 ---
-title: "মর্নিং স্টার (Morning Star)"
-description: "একটি ৩-ক্যান্ডেল বিশিষ্ট অত্যন্ত শক্তিশালী বুলিশ রিভার্সাল প্যাটার্ন যা ডাউনট্রেন্ডের পরিসমাপ্তি ঘটিয়ে নতুন আপট্রেন্ড শুরু করে।"
+title: "Morning Star: তিন candle-এ রাত শেষ হয়ে ভোর আসার গল্প"
+description: "Morning star কীভাবে চিনবেন, তিন candle-এর নিয়ম, morning doji star, Forex-এ gap ছাড়া সংজ্ঞা, entry, stop, আর কেন উপরের নিম্নমুখী moving average-ও বাধা — chart সহ।"
 type: bullish
-category: "মর্নিং স্টার (Morning Star)"
-winrate: "72% - 76%"
-riskReward: "1:3 to 1:5"
-maxRisk: "1% - 2%"
-bestLocation: "Daily/H4 Support Floor / Demand Zone / Post-Liquidity Sweep"
-chartId: "morning-star-01"
-tags: [pattern, candlestick, morning-star]
+category: three-candle
+level: intermediate
+candleCount: 3
+signal: reversal
+chartId: morning-star-win-01
+tags: [pattern, candlestick, morning-star, three-candle, reversal]
+status: done
+sources:
+  - type: book
+    title: "Japanese Candlestick Charting Techniques - Steve Nison"
+    note: "Morning star, morning doji star, abandoned baby"
+  - type: blog
+    title: "Morning Star - Investopedia"
+    url: "https://www.investopedia.com/terms/m/morningstar.asp"
+updated: 2026-11-06
 ---
 
-<div className="flex gap-6 items-end my-8 p-8 bg-zinc-950 border border-border/50 rounded-2xl w-max relative overflow-hidden">
-  <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:20px_20px]"></div>
-  <div className="relative z-10 flex gap-6">
-    <Candle color="bear" bodyH="h-16" topW="h-2" botW="h-2" offset="mt-2" />
-    <Candle color="neutral" bodyH="h-2" topW="h-4" botW="h-4" offset="mt-20" /> 
-    <Candle color="bull" bodyH="h-14" topW="h-3" botW="h-2" offset="mt-6" />
-  </div>
-</div>
+লম্বা লাল candle, তারপর একটা ছোট্ট candle, তারপর লম্বা সবুজ candle। বইয়ের নিখুঁত morning star। Buy করলেন, দাম কিছুটা উঠল, তারপর ঠিক সেই moving average-এ গিয়ে থামল যেটার নিচে গত বিশ দিন ধরে দাম ছিল। তিন candle-এর গল্প সুন্দর, কিন্তু chart-এর বাকি অংশও গল্প বলে।
 
-## Market Psychology & প্রাতিষ্ঠানিক অর্ডার ফ্লো
-প্রথম ক্যান্ডেলে সেলাররা পূর্ণ শক্তিতে মার্কেট নিচে নামায়। দ্বিতীয় ক্যান্ডেলে সেলিং প্রেসার হঠাৎ নিঃশেষ হয়ে মার্কেট সিদ্ধান্তহীনতায় ভোগে (ছোট বডি বা ডোজি)। তৃতীয় ক্যান্ডেলে প্রাতিষ্ঠানিক বায়াররা বিপুল ভলিউমে প্রবেশ করে এবং প্রথম লাল ক্যান্ডেলের ৫০% এর বেশি ওপরে প্রাইস তুলে ক্লোজ করায়। এটি নিশ্চিত করে যে স্মার্ট মানি বটম তৈরি করে ফেলেছে।
+## এক নজরে
 
-## ক্যান্ডেল অ্যানাটমির ৫টি অপরিহার্য শর্ত
-1. **Preceding Downtrend:** প্যাটার্নের পূর্বে অবশ্যই স্পষ্ট ডাউনট্রেন্ড বা পুলব্যাক থাকতে হবে।
-2. **Candle 1 (Bearish Thrust):** একটি দীর্ঘ বডির লাল ক্যান্ডেল যা পূর্ববর্তী বিয়ারিশ গতির চূড়ান্ত প্রকাশ।
-3. **Candle 2 (The Star):** একটি ছোট বডির স্পিনিং টপ বা ডোজি যা সেলারদের গতি হারানো নির্দেশ করে।
-4. **Candle 3 (Bullish Dominance):** একটি বৃহৎ সবুজ ক্যান্ডেল যা প্রথম লাল ক্যান্ডেলের বডির অন্তত ৫০% ওপরে গিয়ে ক্লোজ হতে হবে।
-5. **Volume Surge:** তৃতীয় ক্যান্ডেলে সুস্পষ্ট ভলিউম বৃদ্ধি দেখা যেতে হবে।
+| বিষয়                | Morning Star                                                                                                                                      |
+| :------------------- | :------------------------------------------------------------------------------------------------------------------------------------------------ |
+| ধরন                  | Bullish reversal, তিন candle                                                                                                                      |
+| কোথায় খুঁজবেন       | Downtrend-এর শেষে, চিহ্নিত support-এ                                                                                                              |
+| চেনার মূল চিহ্ন      | ১: লম্বা bearish; ২: ছোট body-র "star" (প্রায়ই doji), ১-এর close-এর কাছে বা নিচে; ৩: লম্বা bullish, ১-এর body-র মাঝের উপরে close                 |
+| Confirmation         | তৃতীয় candle-ই confirmation; সেটা প্রথম body-র 50%-এর উপরে close করা জরুরি                                                                       |
+| Stop                 | Star-এর low-এর নিচে (তিনটির সবচেয়ে নিচু low), spread-সহ buffer                                                                                   |
+| বাতিল (invalidation) | Star-এর low-এর নিচে close                                                                                                                         |
+| দেখতে একই রকম        | [Bullish Engulfing](/bn/patterns/bullish-engulfing), [Piercing Line](/bn/patterns/piercing-line), [Three Inside Up](/bn/patterns/three-inside-up) |
+| বিপরীত pattern       | [Evening Star](/bn/patterns/evening-star)                                                                                                         |
 
-## লাভজনক ট্রেড নেওয়ার ৩টি প্রমাণিত কৌশল (Execution Blueprint)
-**কৌশল ১ (৫০% ফিবোনাচি রিটেস্ট - সেরা পছন্দ):** তৃতীয় ক্যান্ডেলের ৫০% রিট্রেসমেন্টে Buy Limit সেট করুন। স্টপ লস স্টার ক্যান্ডেলের লো এর নিচে রাখুন। লক্ষ্য ১:৩ থেকে ১:৫ R:R।
-**কৌশল ২ (ক্যান্ডেল ৩ ক্লোজ এন্ট্রি):** তৃতীয় ক্যান্ডেল ক্লোজ হওয়ার সাথে সাথে মার্কেট বাই এক্সিকিউট করুন।
-**কৌশল ৩ (M15 CHoCH স্নাইপার এন্ট্রি):** H4 এ মর্নিং স্টার গঠিত হওয়ার পর M15 এ সুইচ করে বুলিশ চেঞ্জ অফ ক্যারেক্টার (CHoCH) রিটেস্টে বাই দিন।
+## এই লেখা পড়ে আপনি যা পারবেন
 
-## কোথায় সফল হবে বনাম কোথায় ফাঁদে পড়বেন
-- ✅ **A+ হাই-প্রোবাবিলিটি সেটআপ:** ডেইলি বা ৪-ঘণ্টা ডিমান্ড জোন, পূর্ববর্তী লো সুইপ, এবং আরএসআই বুলিশ ডাইভারজেন্স।
-- ❌ **লস খাওয়ার ট্র্যাপ (Avoid):** রেজিস্ট্যান্সের কাছে বা কোনো ক্লিয়ার সাপোর্ট লেভেল ছাড়া গঠিত হলে।
+- Morning star-এর তিন candle-এর **প্রতিটির ভূমিকা** বলতে পারবেন।
+- Forex-এ gap ছাড়া এই pattern **কীভাবে মাপবেন**, জানবেন।
+- তৃতীয় candle-এর close-এ entry আর star-এর নিচে stop **বসাতে** পারবেন।
+- Moving average-এর মতো **dynamic বাধা** মাপতে পারবেন।
 
-> ⚠️ **প্রো মানি ম্যানেজমেন্ট ও সাইকোলজি টিপ:** মর্নিং স্টারের দ্বিতীয় ক্যান্ডেলটি যদি একটি ডোজি হয় (Morning Doji Star), তবে এর রিভার্সাল শক্তি সাধারণ মর্নিং স্টারের চেয়েও বহুগুণ বেশি হয়। সর্বোচ্চ ১% থেকে ২% ঝুঁকি নিয়ে প্রতিটি ট্রেডে নির্ধারিত স্টপ লস ব্যবহার করুন।
+## কেন জরুরি
+
+- **পুরো reversal-এর গল্প এক জায়গায়।** প্রথম candle-এ sellers, দ্বিতীয়তে থমকে যাওয়া, তৃতীয়তে buyers। Doji বা engulfing-এর চেয়ে বেশি তথ্য।
+- **Confirmation pattern-এর ভেতরেই।** তৃতীয় candle নিজেই প্রমাণ, তাই আলাদা confirmation-এর অপেক্ষা কম।
+- **Stop সাধারণত বড়।** Stop star-এর নিচে, আর entry তৃতীয় candle-এর close-এ, তাই দূরত্ব বড়। R:R বিচার জরুরি।
+
+পূর্বশর্ত: [Doji](/bn/patterns/doji) পাতা আর [Candle Context](/bn/learn/04-candlesticks/05-candle-context)।
+
+## Morning Star কী
+
+**Morning star হলো তিন candle-এর pattern: downtrend-এ একটি লম্বা bearish candle, তারপর একটি ছোট body-র candle (star), তারপর একটি লম্বা bullish candle, যা প্রথম candle-এর body-র মাঝের উপরে close করে।** নাম এসেছে ভোরের তারা থেকে: রাতের শেষে সূর্য ওঠার আগে যে তারা দেখা যায়।
+
+<CandleDiagram
+  title="Morning star ও morning doji star"
+  candles={[
+    { o: 64, h: 65, l: 58, c: 59, dim: true },
+    { o: 59, h: 60, l: 45, c: 46, label: "১", note: "লম্বা লাল" },
+    { o: 46, h: 48, l: 42, c: 45, label: "২ star", note: "ছোট body" },
+    { o: 45, h: 57, l: 44.5, c: 56, label: "৩", note: "১-এর মাঝের উপরে" },
+    { o: 59, h: 60, l: 45, c: 46, label: "১" },
+    { o: 46, h: 49, l: 43, c: 46.1, label: "doji star" },
+    { o: 46.1, h: 57, l: 45.5, c: 56, label: "৩" },
+  ]}
+  caption="বাঁয়ে সাধারণ morning star, ডানে morning doji star (star-টা doji)। Nison doji star-কে বেশি শক্ত ধরেছেন।"
+/>
+
+### চেনার নিয়ম
+
+| নিয়ম                                                       | বাধ্যতামূলক? | কেন                                       |
+| :---------------------------------------------------------- | :----------- | :---------------------------------------- |
+| আগে downtrend, প্রথম candle লম্বা bearish                   | হ্যাঁ        | Sellers-এর শেষ জোরালো ধাক্কা              |
+| দ্বিতীয় candle-এর body ছোট, প্রথম close-এর কাছে বা নিচে    | হ্যাঁ        | Momentum থামার ছবি                        |
+| তৃতীয় candle লম্বা bullish, প্রথম body-র 50%-এর উপরে close | হ্যাঁ        | Buyers-এর জয়; মাঝের নিচে হলে দুর্বল      |
+| চিহ্নিত support-এ                                           | হ্যাঁ        | Level ছাড়া এটা downtrend-এর মাঝের bounce |
+| Star একটি doji (morning doji star)                          | না           | আরও স্পষ্ট সিদ্ধান্তহীনতা                 |
+
+## শক্তিশালী বনাম দুর্বল morning star
+
+<DiagramRow>
+  <CandleDiagram
+    title="শক্তিশালী"
+    verdict="good"
+    verdictLabel="trade-যোগ্য"
+    candles={[
+      { o: 64, h: 65, l: 58, c: 59, dim: true },
+      { o: 59, h: 60, l: 47, c: 48 },
+      { o: 48, h: 50, l: 44, c: 48.2 },
+      { o: 48.2, h: 57.5, l: 47.5, c: 57, label: "~75% গভীর" },
+    ]}
+    levels={[{ price: 46, label: "support", tone: "support" }]}
+    caption="Support-এর নিচে doji star, তৃতীয় candle প্রথম body-র প্রায় তিন-চতুর্থাংশ ফিরিয়ে নেয়।"
+  />
+  <CandleDiagram
+    title="দুর্বল"
+    verdict="bad"
+    verdictLabel="এড়িয়ে চলুন"
+    candles={[
+      { o: 70, h: 71, l: 64, c: 65, dim: true },
+      { o: 65, h: 66, l: 52, c: 53 },
+      { o: 53, h: 55, l: 51, c: 54 },
+      { o: 54, h: 60, l: 53.5, c: 59.5, label: "MA-র নিচে" },
+    ]}
+    levels={[{ price: 62, label: "নিম্নমুখী MA", tone: "resistance" }]}
+    caption="Level ছাড়া, ঠিক উপরে নিম্নমুখী moving average। Target-এর আগেই বাধা।"
+  />
+</DiagramRow>
+
+| মান যাচাই     | শক্তিশালী                                | দুর্বল                                 |
+| :------------ | :--------------------------------------- | :------------------------------------- |
+| জায়গা        | চিহ্নিত support, star তার নিচে উঁকি দেয় | Downtrend-এর মাঝে, level ছাড়া         |
+| Star          | Doji বা খুব ছোট                          | প্রায় মাঝারি body                     |
+| তৃতীয় candle | প্রথম body-র 60-75% বা বেশি              | সবে 50%                                |
+| উপরে বাধা     | Swing high বা MA অন্তত 1.5R দূরে         | নিম্নমুখী MA বা lower high 1R-এর মধ্যে |
+
+### দেখতে একই রকম, অর্থ আলাদা
+
+| Pattern               | আকার                                             | তফাত                                          |
+| :-------------------- | :----------------------------------------------- | :-------------------------------------------- |
+| **Morning Star**      | লম্বা লাল, ছোট star, লম্বা সবুজ                  | তিন candle-এর পুরো গল্প                       |
+| **Abandoned Baby**    | Star-এর দুই পাশে gap (wick-ও ছোঁয় না)           | বিরল, বিশেষত Forex-এ; morning star-এর চরম রূপ |
+| **Bullish Engulfing** | দুই candle; দ্বিতীয় body প্রথম body ঢাকে        | মাঝের star নেই                                |
+| **Three Inside Up**   | Harami, তারপর তৃতীয় candle mother-এর উপরে close | দ্বিতীয় candle প্রথমটার ভেতরে, নিচে নয়      |
+
+## Candle-এর ভেতরের গল্প
+
+Support-এ একটি morning star-এর একটি প্রচলিত ব্যাখ্যা:
+
+1. **প্রথম candle: sellers জোরে।** লম্বা লাল candle, downtrend-এর আরেকটি জোরালো ধাক্কা।
+2. **Star: থমকে যাওয়া।** দাম আরও একটু নামে (প্রায়ই support-এর নিচে), কিন্তু ছোট body-তে close। Sellers আর আগের মতো নামাতে পারছে না।
+3. **তৃতীয় candle: buyers আক্রমণ করে।** লম্বা সবুজ candle প্রথম candle-এর অর্ধেকের বেশি ফিরিয়ে নেয়।
+
+ফল: তিন candle মিলে sellers থেকে buyers-এর হাতে নিয়ন্ত্রণ। কিন্তু higher timeframe-এর বাধা (MA, lower high) এই গল্পের বাইরে, সেটা আলাদা মাপতে হয়।
+
+<Callout type="note">
+  এটি একটি প্রচলিত ব্যাখ্যা, প্রমাণিত ঘটনা নয়। Chart দেখে কে কিনেছে বা বেচেছে,
+  তা জানা যায় না।
+</Callout>
+
+## কোথায় কাজ করে, কোথায় করে না
+
+<Compare
+  leftLabel="যেখানে morning star-এর ওজন বেশি"
+  rightLabel="যেখানে morning star প্রায়ই ফাঁদ"
+  left="- চিহ্নিত support বা demand zone-এ
+- Star support-এর নিচে উঁকি দিয়ে ফিরলে
+- Star doji হলে
+- তৃতীয় candle প্রথম body-র 60%+ ফিরিয়ে নিলে
+- উপরে swing high বা MA পর্যন্ত যথেষ্ট জায়গা থাকলে"
+  right="- Downtrend-এর মাঝে, কোনো support ছাড়া
+- ঠিক উপরে নিম্নমুখী moving average বা lower high
+- তৃতীয় candle সবে 50%-এ close করলে
+- ছোট timeframe-এ, যেখানে তিন candle-এর আকার খুব সাধারণ"
+/>
+
+## 24 ঘণ্টার বাজারে gap
+
+<Callout type="note">
+  Nison-এর মূল সংজ্ঞায় star প্রথম candle-এর নিচে gap দিয়ে খোলে, আর তৃতীয়
+  candle star-এর উপরে gap দিয়ে। Forex-এ এই gap প্রায় হয় না। বাস্তব নিয়ম:
+  **star-এর body প্রথম candle-এর close-এর কাছে বা নিচে, আর star-এর low প্রথম
+  candle-এর low-এর নিচে হলে ভালো; তৃতীয় candle star-এর close থেকে শুরু করে
+  প্রথম body-র 50%-এর উপরে close করে।** Abandoned baby (দুই পাশে পুরো gap)
+  Forex-এ প্রায় দেখাই যায় না।
+</Callout>
+
+## ধাপে ধাপে: morning star trade
+
+<Steps>
+
+### ধাপ ১: আগে level আর বাধা
+
+Support আগেই আঁকুন। উপরের দিকে বাধা খুঁজুন: আগের swing high, lower high, আর আপনি যে moving average দেখেন সেটা। এগুলো কত দূরে, লিখে রাখুন।
+
+### ধাপ ২: তিনটি candle বন্ধ হওয়ার অপেক্ষা
+
+তৃতীয় candle-ই confirmation। চলমান অবস্থায় সেটা 50%-এর নিচে ফিরতে পারে।
+
+### ধাপ ৩: মাপুন
+
+প্রথম candle লম্বা? Star-এর body ছোট? তৃতীয় candle প্রথম body-র কত শতাংশ ফিরিয়েছে? (Piercing line-এর মতো একই হিসাব।)
+
+### ধাপ ৪: Entry-র ধরন
+
+| Entry                           | কোথায়                                     | সুবিধা                      | অসুবিধা            |
+| :------------------------------ | :----------------------------------------- | :-------------------------- | :----------------- |
+| **তৃতীয় close** (প্রচলিত)      | তৃতীয় candle বন্ধ হতেই buy                | Confirmation pattern-এই আছে | Stop বড়           |
+| **তৃতীয় candle-এর high break** | তৃতীয় candle-এর high-এর উপরে buy stop     | আরও নিশ্চিত                 | Entry উপরে, R:R কম |
+| **50% retest**                  | তৃতীয় candle-এর body-র মাঝামাঝি buy limit | Stop ছোট                    | দাম না ফিরলে মিস   |
+
+### ধাপ ৫: Stop বসান
+
+Star-এর low-এর নিচে, [spread](/bn/learn/01-foundations/04-spread-commission-swap) ও buffer-সহ।
+
+### ধাপ ৬: Size ও target
+
+[Position size](/bn/learn/08-risk-management/02-position-sizing) entry থেকে stop-এর দূরত্ব দিয়ে, ঝুঁকি ১%-এর বেশি নয়। Target সবচেয়ে কাছের বাধার আগে, swing high **বা moving average**, যেটা আগে আসে। [Risk reward](/bn/learn/08-risk-management/03-risk-reward) অন্তত 1:1.5।
+
+### ধাপ ৭: পরিচালনা
+
+দাম প্রথম candle-এর body-র মাঝের নিচে টানা close করলে ধারণা দুর্বল। Star-এর low-এর নিচে close হলে ধারণা ভুল।
+
+</Steps>
+
+### Trade-এর আগে checklist
+
+<Checklist
+  id="pattern-morning-star-pretrade-bn"
+  items={[
+    "Morning star আসার আগেই support চিহ্নিত ছিল, আর star সেই level-এ?",
+    "আকার নিয়ম মানছে (লম্বা লাল, ছোট star, তৃতীয় candle প্রথম body-র 50%-এর উপরে)?",
+    "তিনটি candle-ই বন্ধ হয়েছে?",
+    "সবচেয়ে কাছের বাধা (swing high, lower high বা moving average) পর্যন্ত risk reward অন্তত 1:1.5?",
+    "Higher timeframe-এর trend বা level trade-এর বিপরীতে নেই?",
+  ]}
+/>
+
+একটি ঘরও খালি থাকলে trade বাদ দিন।
+
+## উদাহরণ ১: যখন কাজ করে (কাল্পনিক)
+
+<Chart
+  id="morning-star-win-01"
+  height={420}
+  caption="GBPUSD H1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — একবার পরীক্ষিত support-এ morning doji star, তৃতীয় candle-এর close-এ long।"
+/>
+
+- **কী দেখা যাচ্ছিল:** ৪ নম্বর candle প্রায় 1.2679-এ support চিহ্নিত করেছে। ৫-৯ নম্বর প্রায় 1.2773 পর্যন্ত ওঠে, ১০-১৩ নম্বর আবার নামে।
+- **Morning star:** ১৪ নম্বর লম্বা লাল (1.2707 থেকে 1.2683)। ১৫ নম্বর doji (1.2683 থেকে 1.26835), low 1.2673, support-এর নিচে। ১৬ নম্বর লম্বা সবুজ, 1.27003-এ close: প্রথম body-র প্রায় 72%।
+- **সিদ্ধান্ত:** তৃতীয় close-এ buy 1.27003। Stop 1.2669 (star low-এর 4 pip নিচে), ঝুঁকি প্রায় 31 pip। Target 1.27629 (2R); swing high পর্যন্ত জায়গা প্রায় 2.3R।
+- **ফল:** ২৪ নম্বর candle target ছোঁয়।
+- **শিক্ষা:** তাজা level, doji star level-এর নিচে, গভীর তৃতীয় candle, আর উপরে খোলা জায়গা।
+
+<TradeSetup
+  direction="long"
+  pair="GBPUSD"
+  entry={1.27003}
+  stop={1.2669}
+  target={1.27629}
+/>
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়। সব morning star জেতে না, আর কোনো ফল গ্যারান্টি নয়।)
+
+## উদাহরণ ২: যখন ফাঁদ হয় (কাল্পনিক)
+
+<Chart
+  id="morning-star-fail-01"
+  height={420}
+  caption="XAUUSD D1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — নিম্নমুখী SMA 10-এর নিচে, support ছাড়া morning star। Long সোজা SMA-তে গিয়ে প্রত্যাখ্যাত।"
+/>
+
+- **কী দেখা যাচ্ছিল:** ০-১৯ নম্বর candle 2480 থেকে প্রায় 2390 পর্যন্ত downtrend, শেষ দিকে ধীর গতিতে নামা। দাম সবসময় নিম্নমুখী 10-day SMA-র নিচে। নিচে কোনো চিহ্নিত support নেই।
+- **Morning star:** ২০ নম্বর লম্বা লাল (2390 থেকে 2370)। ২১ নম্বর ছোট star (2370 থেকে 2371), low 2364। ২২ নম্বর 2383-এ close: প্রথম body-র 65%।
+- **ভুল সিদ্ধান্ত:** তৃতীয় close-এ buy 2383, stop 2361, ঝুঁকি $22, target 2427 (2R)। কিন্তু SMA তখন প্রায় 2388.50, entry-র মাত্র $5.50 উপরে, 0.25R।
+- **কী হলো:** ২৩ নম্বর SMA পর্যন্ত (2390) ওঠে, ২৪ নম্বর সেখান থেকে ফেরে, ২৫ নম্বর stop ভাঙে।
+- **কেন ব্যর্থ:** কোনো support ছিল না, আর সবচেয়ে কাছের বাধা (নিম্নমুখী SMA) 1.5R-এর অনেক ভেতরে। Checklist-এর প্রথম আর চতুর্থ ঘরে trade বাদ পড়ত।
+
+**শিক্ষা:** Entry-র ঠিক উপরে নিম্নমুখী average-ও একটি বাধা। Stop আগে বসানো ছিল বলে লোকসান 1R-এ আটকেছে।
+
+## সাধারণ ভুল
+
+| ভুল                              | কেন হয়                    | কী করবেন                                             |
+| :------------------------------- | :------------------------- | :--------------------------------------------------- |
+| শুধু তিন candle দেখে trade       | বাকি chart উপেক্ষা         | Level আর উপরের বাধা আগে মাপুন                        |
+| তৃতীয় candle সবে 50%-এ, তবু buy | চোখে মাপা                  | Penetration % হিসাব করুন; 60%-এর নিচে সতর্ক          |
+| Stop তৃতীয় candle-এর low-এ      | ছোট stop-এর লোভ            | Star-এর low-এর নিচে                                  |
+| Moving average-কে বাধা না ভাবা   | শুধু horizontal level দেখা | আপনি যে MA দেখেন, সেটা target-এর আগে আছে কি না দেখুন |
+| Abandoned baby খুঁজে বসে থাকা    | বইয়ের stock উদাহরণ        | Forex-এ প্রায় হয় না; morning star-ই যথেষ্ট         |
+
+## Pro tips
+
+<Callout type="tip">
+  Morning star-এর stop বড় লাগলে তৃতীয় candle-এর body-র মাঝামাঝি limit order
+  ভাবুন। তৃতীয় candle-এর পর প্রায়ই ছোট pullback আসে; না এলে trade মিস হবে,
+  কিন্তু R:R অনেক ভালো হয়।
+</Callout>
+
+<Callout type="tip">
+  Moving average নিয়ে বিস্তারিত: [Moving Averages ও
+  Crossover](/bn/learn/07-technical-indicators/01-moving-averages-crossover)।
+  কোন MA ব্যবহার করবেন, সেটা কম জরুরি; জরুরি হলো সব chart-এ একই MA রাখা আর
+  target-এর আগে সেটা আছে কি না দেখা।
+</Callout>
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- Morning star = লম্বা লাল candle, ছোট star, তারপর লম্বা সবুজ candle যা প্রথম body-র 50%-এর উপরে close করে।
+- Star doji হলে (morning doji star) আরও শক্ত; Forex-এ gap ছাড়া star-এর body প্রথম close-এর কাছে বা নিচে।
+- Entry তৃতীয় close-এ, stop star-এর low-এর নিচে; stop বড়, তাই R:R জরুরি।
+- সবচেয়ে কাছের বাধা মাপুন: swing high, lower high, বা নিম্নমুখী moving average।
+
+</KeyTakeaways>
+
+## অনুশীলন ও নিজের backtest
+
+TradingView-এ GBPUSD H1 বা XAUUSD D1 খুলুন, একটি moving average (যেমন 20 বা 50) যোগ করুন। অন্তত ২০টি morning star খুঁজুন। প্রতিটির জন্য একটি সারি লিখুন:
+
+| তারিখ | Support-এ? | Doji star? | তৃতীয় candle-এর penetration % | কাছের বাধা (MA বা high) পর্যন্ত R | ফল (R) |
+| :---- | :--------- | :--------- | :----------------------------- | :-------------------------------- | :----- |
+|       |            |            |                                |                                   |        |
+
+এরপর "MA 1.5R-এর বেশি দূরে" আর "1.5R-এর মধ্যে" দুই দলে ভাগ করে গড় R তুলনা করুন। অন্তত ৩০টি নমুনা ছাড়া সিদ্ধান্ত নেবেন না।
+
+## কুইজ
+
+1. Morning star-এর তিন candle-এর প্রতিটির ভূমিকা কী?
+2. তৃতীয় candle প্রথম body-র মাত্র 40% পর্যন্ত ফিরল। এটা কি morning star?
+3. Forex-এ star-এর আগে gap না থাকলে কী দেখবেন?
+4. উদাহরণ ২-এর trade checklist-এর কোন ঘরে বাদ পড়ত?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** প্রথম: sellers-এর জোরালো ধাক্কা। দ্বিতীয় (star): থমকে যাওয়া। তৃতীয়: buyers-এর জয়, প্রথম body-র অর্ধেকের বেশি ফিরিয়ে নেওয়া।
+
+**২.** না। তৃতীয় candle প্রথম body-র 50%-এর উপরে close করতে হবে।
+
+**৩.** Star-এর body প্রথম candle-এর close-এর কাছে বা নিচে, আর star-এর low প্রথম low-এর নিচে হলে ভালো।
+
+**৪.** প্রথম ঘর (কোনো support ছিল না) আর চতুর্থ ঘর (SMA মাত্র 0.25R দূরে)।
+
+</details>
+
+## পরের ধাপ
+
+- আগে: [Doji](/bn/patterns/doji)।
+- Signal কখন trade হয়: [Confirmation vs Trigger](/bn/learn/09-price-action-entries-strategies/04-confirmation-vs-trigger)।
+- একই পরিবারের pattern: [Evening Star](/bn/patterns/evening-star), [Three Inside Up](/bn/patterns/three-inside-up), [Piercing Line](/bn/patterns/piercing-line)।
+
+<Disclaimer />

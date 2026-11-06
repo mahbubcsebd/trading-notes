@@ -1,14 +1,187 @@
 ---
-title: "Trade kokhon exit korbo"
-description: "Detailed notes on Trade kokhon exit korbo"
-status: draft
-updated: 2026-10-10
+title: "কখন Exit করবেন: লিখিত কারণ ছাড়া trade বন্ধ নয়"
+description: "Target, stop, invalidation ও সময়ের নিয়মে exit, আর ভয়ে আগেই বন্ধ করার ক্ষতি — চার ধরনের exit ও দুটি chart সহ।"
+level: intermediate
+tags: [exit, trade-management, invalidation, time-stop, discipline]
+instruments: [EURUSD]
+timeframes: [H1]
+status: done
+sources:
+  - type: blog
+    title: "Exit Strategy - Investopedia"
+    url: "https://www.investopedia.com/terms/e/exitstrategy.asp"
+  - type: blog
+    title: "Trading Plan - Investopedia"
+    url: "https://www.investopedia.com/articles/trading/06/tradingplan.asp"
+updated: 2026-11-05
 ---
 
-# Trade kokhon exit korbo
+# কখন Exit করবেন: লিখিত কারণ ছাড়া trade বন্ধ নয়
 
-<div className="rounded-xl border border-border bg-card p-6 text-center text-muted-foreground my-8">
-  <p className="text-3xl mb-4">🚧</p>
-  <p className="font-semibold text-foreground">Coming in Phase 2</p>
-  <p className="text-sm mt-1">This module is under construction.</p>
-</div>
+Entry-র কারণ সবাই জানে। কিন্তু প্রশ্ন করুন, "আপনি এই trade কেন বন্ধ করলেন?" অনেকে বলবেন, "ভয় পেয়েছিলাম।" সেই উত্তর বদলাতে এই পাঠ।
+
+## এই লেখা পড়ে আপনি যা পারবেন
+
+- চার ধরনের **exit-এর নিয়ম চিনতে পারবেন**।
+- Idea ভুল প্রমাণ হলে **stop-এর আগেই বেরোনোর নিয়ম লিখতে পারবেন**।
+- ভয়ের exit আর নিয়মের exit-এর **তফাত ধরতে পারবেন**।
+
+## কেন এটি জরুরি
+
+- **Exit-এ আবেগ সবচেয়ে প্রবল।** লাভে লোভ, লোকসানে আশা।
+- **নিয়মের exit ফল তুলনাযোগ্য করে।** [Journal](/bn/learn/12-trading-psychology/05-journaling-habit)-এ কারণসহ লেখা যায়।
+- **Stop ছাড়াও বের হওয়ার উপায় আছে।** কখনো idea আগেই শেষ হয়।
+
+পূর্বশর্ত: [Stop Loss Placement](/bn/learn/10-trade-management-execution/01-stop-loss-placement) এবং [Break of Structure](/bn/learn/03-market-structure/03-break-of-structure)।
+
+## Exit কী
+
+**Exit হলো trade বন্ধ করার সিদ্ধান্ত, যার একটি লিখিত কারণ আছে: লাভ-লক্ষ্য পূরণ, stop লাগা, idea ভুল প্রমাণ হওয়া, বা সময় শেষ।**
+
+ভাবুন ট্রেনের টিকিট। গন্তব্য (target) আছে, দুর্ঘটনার জরুরি বেরোনোর পথ (stop) আছে, রুট বদলে গেলে নামার স্টেশন (invalidation) আছে, আর সময়সূচি (time stop) আছে। যেকোনো স্টেশনে নামা চলে না।
+
+| Exit ধরন     | কারণ                            | উদাহরণ                          |
+| :----------- | :------------------------------ | :------------------------------ |
+| Target       | পরিকল্পিত লাভ পূরণ              | target বা trail লাগা            |
+| Stop         | সর্বোচ্চ লোকসান সীমা            | stop order লাগা                 |
+| Invalidation | trade-এর কারণ শেষ, stop-এর আগেই | higher low-এর নিচে candle close |
+| Time stop    | নির্দিষ্ট সময়েও চাল আসেনি      | N candle পরে বন্ধ               |
+
+## Chart-এ কেমন দেখায়
+
+<Chart
+  id="exit-invalidation-01"
+  height={440}
+  caption="EURUSD H1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — Buy 1.0900, higher low 1.0870, পরিকল্পিত stop 1.0840। একটি candle 1.0870-এর নিচে close করলে (প্রায় 1.0867) trader বের হন। পরে দাম stop স্তরেও পৌঁছায়।"
+/>
+
+Exit-এর বিন্দু stop-এর আগে। Idea-র ভিত্তি (higher low) ভেঙেছে, তাই আর অপেক্ষা নয়।
+
+## ধাপে ধাপে: exit-এর নিয়ম লেখা
+
+<Steps>
+
+### ধাপ ১: Trade-এর কারণ এক বাক্যে লিখুন
+
+যেমন: "Higher low-এর ওপরে pullback শেষ।" এই কারণ শেষ হলেই exit।
+
+### ধাপ ২: Invalidation দাম ঠিক করুন
+
+যে দামে কারণ ভুল প্রমাণিত হয়। সাধারণত [structure](/bn/learn/03-market-structure/01-swing-high-low)-এর একটি স্তর। Close দিয়ে নাকি wick দিয়ে, তা-ও লিখুন।
+
+### ধাপ ৩: Target ও stop রাখুন
+
+Invalidation ঘটলে exit, না হলে target বা stop পর্যন্ত চলুক।
+
+### ধাপ ৪: সময়ের সীমা বসান (ঐচ্ছিক)
+
+যেমন 20 candle-এর মধ্যে চাল না এলে বন্ধ। Capital আটকে রাখা যায় না।
+
+### ধাপ ৫: Exit-এর কারণ journal-এ লিখুন
+
+Target, stop, invalidation, time, নাকি ভয়? শেষটি লিখতে হলে নিয়ম ভাঙা হয়েছে।
+
+</Steps>
+
+## উদাহরণ ১: যখন কাজ করে (কাল্পনিক)
+
+- **আগে থেকে ঠিক:** ঝুঁকি 1%, stop 1.0840, invalidation 1.0870 (close-ভিত্তিক)।
+- **ফল:** Candle 1.0870-এর নিচে close করে প্রায় 1.0867-এ। Exit প্রায় 33 pip লোকসানে, পরিকল্পিত stop-এর (60 pip) আগে।
+- **শিক্ষা:** Idea ভুল হলে পুরো stop-এর অপেক্ষা না করা যায়। নিয়ম আগে লেখা ছিল।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়।)
+
+## উদাহরণ ২: যখন ব্যর্থ হয় (কাল্পনিক)
+
+<Chart
+  id="exit-fear-early-01"
+  height={440}
+  caption="EURUSD H1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — Buy 1.0900, stop 1.0870, target 1.0990। +12 pip-এ trader ভয়ে বন্ধ করেন। Plan-এ কোনো exit-নিয়ম ছিল না। দাম পরে target 1.0990-এ পৌঁছায়।"
+/>
+
+- **কী দেখা যাচ্ছিল:** দাম সামান্য উঠে থেমেছে, trader অস্থির।
+- **ফল:** +12 pip লাভে বন্ধ। পরে target ছুঁয়েছে (পরিকল্পিত +90 pip)।
+- **কেন ব্যর্থ:** Exit এসেছে আবেগ থেকে। Invalidation হয়নি, stop লাগেনি, target আসেনি।
+- **শিক্ষা:** ছোট জয়, কিন্তু plan-এর হিসাব ভেঙেছে। বারবার হলে [Expectancy](/bn/learn/08-risk-management/07-expectancy) নষ্ট হয়।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়।)
+
+## সাধারণ ভুল
+
+| ভুল                           | কেন হয়         | কী করবেন                              |
+| :---------------------------- | :-------------- | :------------------------------------ |
+| ভয়ে আগে বন্ধ করা             | লাভ হারানোর ভয় | partial close বা trail-এর নিয়ম রাখুন |
+| Invalidation-এর পরেও ধরে রাখা | "ফিরে আসবে" আশা | লিখিত নিয়মে exit                     |
+| প্রতিটি exit-এর কারণ না লেখা  | অলসতা           | journal-এ একটি শব্দে কারণ             |
+| Stop ও exit গুলিয়ে ফেলা      | নিয়ম অস্পষ্ট   | চার ধরনের আলাদা সংজ্ঞা লিখুন          |
+
+## Pro tips
+
+<Callout type="tip">
+  Exit-এর আগে নিজেকে প্রশ্ন করুন: "এই exit-এর কারণ কি আমার লিখিত plan-এ আছে?" না
+  থাকলে exit-টি সম্ভবত আবেগের।
+</Callout>
+
+<Callout type="note">
+  Invalidation exit stop-এর চেয়ে কম লোকসান দিলেও সব সময় নয়। কখনো দাম
+  invalidation ছুঁয়ে ফিরে যায়। এই লেনদেন ফল দীর্ঘ মেয়াদে নমুনায় দেখুন।
+</Callout>
+
+## কখন এটা কাজ করে না
+
+- **Invalidation অস্পষ্ট হলে:** সিদ্ধান্ত আবার অনুমানে ফেরে।
+- **Wick-এ বারবার স্তর ছুঁলে:** close-ভিত্তিক নিয়ম বেছে নিন।
+- **দ্রুত বাজারে:** exit-এর দামও পরিকল্পনার চেয়ে খারাপ হতে পারে ([Slippage](/bn/learn/10-trade-management-execution/04-slippage-requote-spread-widening))।
+- **খুব সংক্ষিপ্ত সময়ের সীমা হলে:** ভালো trade-ও কেটে যায়।
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- চার ধরনের exit: target, stop, invalidation, সময়।
+- Idea ভুল প্রমাণ হলে stop-এর আগেও বের হওয়া যায়, তবে নিয়ম আগে লিখে।
+- ভয়ের exit নিয়মের exit নয়।
+- প্রতিটি exit-এর কারণ journal-এ লিখুন।
+
+</KeyTakeaways>
+
+## অনুশীলন
+
+আপনার শেষ পাঁচটি trade-এর exit-এর কারণ লিখুন: target, stop, invalidation, সময়, নাকি আবেগ? আবেগের exit থাকলে সেখানে কোন নিয়ম থাকলে ফল ভিন্ন হতো ভাবুন।
+
+## কুইজ
+
+1. Exit-এর চারটি লিখিত কারণ কী কী?
+2. Invalidation exit কখন ঘটে?
+3. ভয়ের exit কীভাবে চেনা যায়?
+4. Exit-এর কারণ journal-এ কেন লিখবেন?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** Target, stop, invalidation, সময়।
+
+**২.** Trade-এর পেছনের কারণ ভেঙে গেলে, stop লাগার আগেই।
+
+**৩.** লিখিত plan-এর কোনো কারণ মেলে না।
+
+**৪.** পরে বিশ্লেষণ করা যায়, আবেগের exit গুনে ধরা পড়ে।
+
+</details>
+
+## পরের ধাপ
+
+- আগে: [Slippage, Requote ও Spread Widening](/bn/learn/10-trade-management-execution/04-slippage-requote-spread-widening)।
+- পরে: [Fundamental ও Intermarket Analysis](/bn/learn/11-fundamental-intermarket-analysis/01-central-bank-interest-rate-inflation)।
+- সম্পর্কিত: [Trading Plan Template](/bn/learn/14-trading-plan-system/01-trading-plan-template)।
+
+### সূত্র
+
+- <ExternalLink href="https://www.investopedia.com/terms/e/exitstrategy.asp">
+    Exit Strategy, Investopedia
+  </ExternalLink>
+- <ExternalLink href="https://www.investopedia.com/articles/trading/06/tradingplan.asp">
+    Trading Plan, Investopedia
+  </ExternalLink>
+
+<Disclaimer />

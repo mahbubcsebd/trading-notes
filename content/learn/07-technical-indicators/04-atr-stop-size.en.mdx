@@ -1,0 +1,202 @@
+---
+title: "ATR: Set Stop and Position Size by Volatility"
+description: "What ATR is, how to place a 2 x ATR stop, why a stop inside the noise gets hit, and how to change lot size while keeping risk fixed, with chart examples."
+level: intermediate
+tags: [atr, volatility, stop-loss, position-sizing, indicators]
+instruments: [EURUSD]
+timeframes: [H4]
+status: done
+sources:
+  - type: blog
+    title: "Average True Range (ATR) - Investopedia"
+    url: "https://www.investopedia.com/terms/a/atr.asp"
+  - type: book
+    title: "New Concepts in Technical Trading Systems - J. Welles Wilder"
+    url: ""
+    note: "Original definition of ATR"
+updated: 2026-11-06
+---
+
+# ATR: Set Stop and Position Size by Volatility
+
+Your idea was right. Price went your way. But before that, one quick jolt hit your stop. The idea was not wrong; the stop distance was.
+
+## What you will be able to do
+
+- **Explain** what ATR measures.
+- Use ATR to **place the stop outside the noise**.
+- When the stop is further away, **cut lot size to keep risk fixed**.
+- **Understand from the chart** why a very close stop loses even when the idea is right.
+
+## Why it matters
+
+- **Stop distance is not a guess.** A fixed 15 pips does not mean the same thing in every market.
+- **Volatility changes.** On a quiet day 15 pips is a lot; on a wild day it is small.
+- **Size and stop are set together.** This is the base for the next chapter, [Risk Management](/en/learn/08-risk-management/01-risk-per-trade).
+
+Prerequisites: [Swing High and Swing Low](/en/learn/03-market-structure/01-swing-high-low) and [Pips, Lots, Leverage](/en/learn/01-foundations/03-pips-lots-leverage-margin).
+
+## What is ATR
+
+**ATR (Average True Range) measures how far each candle moves on average. It does not give direction, only the size of the move.**
+
+Think of a river current. On a calm river even a small boat is fine; in a fast current big waves come. ATR tells you how restless the river is today.
+
+The calculation in short:
+
+- **True Range** = the largest of these three: high − low; |high − previous close|; |low − previous close|.
+- **ATR** = the average True Range of the last 14 candles (with Wilder's smoothing).
+- The result is in price units. On EURUSD, 0.0019 means 19 pips.
+
+## What it looks like on a chart: same entry, two kinds of stop
+
+<Chart
+  id="atr-stop-wide-01"
+  height={460}
+  caption="EURUSD H4 (educational, synthetic example) — buy 1.0952 at candle 52. ATR 19.4 pips. Stop 2 x ATR below at 1.0913 (38.8 pips), target 1.1030."
+/>
+
+Here ATR is 19.4 pips. That means each H4 candle moves about this much on average. If you place the stop at **half that distance** (about 10 pips), one normal candle can hit it.
+
+## Step by step: ATR stop and size
+
+<Steps>
+
+### Step 1: Set the entry
+
+The entry comes from price structure (pullback, breakout and so on). ATR does not give the entry.
+
+### Step 2: Read the ATR
+
+What is ATR on the entry candle? In the example, 19.4 pips.
+
+### Step 3: Pick a multiplier and place the stop
+
+Usually 1.5 to 3 times ATR. In the example, 2 times: 38.8 pips. If possible, the stop should also fall below the swing low.
+
+### Step 4: Set the size
+
+Lots = risk amount ÷ (stop pips × value per pip). On EURUSD, the pip value for 1 standard lot is about $10.
+
+(Example, synthetic) With a risk of $10: 10 ÷ (38.8 × 10) = 0.026, so round down to 0.02 lots.
+
+### Step 5: Set the target
+
+At least twice the risk. In the example, 1.1030, about 78 pips away.
+
+</Steps>
+
+Notice: if the stop is twice as far, the lot size is roughly halved to keep risk fixed. **An ATR stop does not mean more risk; it means smaller size.** Details in [Position Sizing](/en/learn/08-risk-management/02-position-sizing).
+
+## Example 1: when it works (synthetic)
+
+The chart above:
+
+- **Entry:** buy 1.0952.
+- **Stop:** 1.0913 (2 x ATR). Risk 38.8 pips.
+- **Target:** 1.1030 (about 1:2).
+- **Result:** price pulled back for a while but did not touch the stop. Candle 65 hit the target.
+- **Lesson:** the stop was outside the noise, so the idea had a chance to work.
+
+(Synthetic educational example. This is not a real trade, and no result is guaranteed.)
+
+## Example 2: when it fails (synthetic)
+
+Same candle, same entry. Only the stop changed:
+
+<Chart
+  id="atr-stop-tight-01"
+  height={460}
+  caption="EURUSD H4 (educational, synthetic example) — same buy at 1.0952, but the stop is only 0.5 x ATR below at 1.0942 (about 10 pips). Candle 53 hits it, then price moves up."
+/>
+
+- **What you could see:** the same setup. ATR 19.4 pips, yet the stop is 10 pips away.
+- **Result:** the very next candle (53) hits the stop. Then price goes up and reaches the target from the previous example.
+- **Why it was wrong:** the stop was inside normal noise. The idea was right, but it still lost.
+- **Lesson:** pulling the stop closer to show "less risk" is a mistake. You reduce risk by making the size smaller.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Common mistakes
+
+| Mistake                                    | Why it happens         | What to do                 |
+| :----------------------------------------- | :--------------------- | :------------------------- |
+| Fixed pip stop all the time                | It seems simple        | Adjust it by ATR           |
+| Pulling the stop close to show "less risk" | Wanting smaller losses | Cut the size, not the stop |
+| Looking for entries with ATR               | Misunderstanding ATR   | Entry comes from structure |
+| Stop further away but same size            | Not doing the math     | Recalculate the lots       |
+| Treating ATR as a forecast                 | ATR is a past average  | Be careful before big news |
+
+## Pro tips
+
+<Callout type="tip">
+  Match the stop to both the ATR multiple and structure. If 2 x ATR falls inside
+  the swing low, put the stop below the swing low.
+</Callout>
+
+<Callout type="tip">
+  Rising ATR means the market is heating up; falling ATR means it is calming
+  down. A move comes after a quiet period; you will see another form of this in
+  [Bollinger Bands](/en/learn/07-technical-indicators/05-bollinger-bands).
+</Callout>
+
+<Callout type="warning">
+  ATR does not see a big news spike in advance. Before the event, it is safer to
+  cut size or stay out.
+</Callout>
+
+## When this does not work
+
+- **A sudden jump in volatility:** ATR lags, so your stop is too small for the first spike.
+- **Assets with very little data:** the average is unstable.
+- **When structure is unclear:** ATR gives the stop distance, but not where to measure it from.
+- **On small timeframes:** the spread can eat a large part of the ATR.
+
+## Summary
+
+<KeyTakeaways>
+
+- ATR is the average size of each candle's move, not its direction.
+- Place the stop 1.5-3 x ATR away, outside the noise.
+- If the stop is further away, cut the lots and keep risk fixed.
+- You can lose even with the right idea if the stop is inside the noise.
+
+</KeyTakeaways>
+
+## Practice
+
+On TradingView, put ATR 14 on an EUR/USD H4 chart. For the last 20 swing trades, note the ATR at entry, then check how many would have been stopped out with a 2 x ATR stop.
+
+## Quiz
+
+1. What does ATR measure?
+2. If ATR is 20 pips, how many pips is a 2 x ATR stop?
+3. If the stop is twice as far, what do you do with the lot size to keep risk the same?
+4. Why does a trade lose even when the idea is right?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** The average size of each candle's move, that is, volatility.
+
+**2.** 40 pips.
+
+**3.** Cut it roughly in half.
+
+**4.** If the stop is inside normal noise, a small jolt hits it.
+
+</details>
+
+## Next steps
+
+- Before: [MACD](/en/learn/07-technical-indicators/03-macd).
+- Next: [Bollinger Bands](/en/learn/07-technical-indicators/05-bollinger-bands).
+- On risk: [Risk per Trade](/en/learn/08-risk-management/01-risk-per-trade).
+
+### Sources
+
+- <ExternalLink href="https://www.investopedia.com/terms/a/atr.asp">
+    ATR, Investopedia
+  </ExternalLink>
+
+<Disclaimer />

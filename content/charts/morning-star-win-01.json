@@ -1,0 +1,273 @@
+{
+  "id": "morning-star-win-01",
+  "title": {
+    "en": "Morning Doji Star at Tested Support, Entry at the Third Close",
+    "bn": "পরীক্ষিত support-এ morning doji star, তৃতীয় candle-এর close-এ entry"
+  },
+  "symbol": "GBPUSD",
+  "timeframe": "H1",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bullish",
+  "outcome": "win",
+  "tags": [
+    "morning-star",
+    "candlestick",
+    "three-candle",
+    "support",
+    "pattern"
+  ],
+  "module": "patterns",
+  "lessonSlugs": [],
+  "caption": {
+    "en": "Illustrative synthetic GBPUSD H1: a long bearish candle into support, a doji that dips below it, then a long bullish candle closing about 72% into the first candle's body. Long at the third close, stop under the star; price reaches 2R.",
+    "bn": "শিক্ষামূলক কাল্পনিক GBPUSD H1: support পর্যন্ত লম্বা bearish candle, তার নিচে উঁকি দেওয়া একটি doji, তারপর প্রথম candle-এর body-র প্রায় 72% পর্যন্ত ওঠা লম্বা bullish candle। তৃতীয় close-এ long, stop star-এর নিচে; দাম 2R পর্যন্ত যায়।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data, not a real market record.",
+    "bn": "শিক্ষামূলক কাল্পনিক ডেটা, বাস্তব মার্কেটের রেকর্ড নয়।"
+  },
+  "updatedAt": "2026-11-06T12:00:00Z",
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 1.2679,
+      "label": "Support",
+      "color": "#3b82f6",
+      "style": "dashed"
+    },
+    {
+      "type": "marker",
+      "i": 14,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "1"
+    },
+    {
+      "type": "marker",
+      "i": 15,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Star"
+    },
+    {
+      "type": "marker",
+      "i": 16,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "3"
+    },
+    {
+      "type": "hline",
+      "price": 1.27003,
+      "label": "Entry (3rd close)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.2669,
+      "label": "Stop",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.27629,
+      "label": "Target 2R",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candle 4 marks support. Candle 14 is a long bearish candle into it. Candle 15 is a doji that trades below support: the star. Candle 16 is a long bullish candle that closes about 72% back into candle 14's body. The three together form a morning doji star. Long at candle 16's close, stop under the star's low.",
+    "bn": "৪ নম্বর candle support চিহ্নিত করে। ১৪ নম্বর সেখানে লম্বা bearish candle। ১৫ নম্বর একটি doji, support-এর নিচে যায়: star। ১৬ নম্বর লম্বা bullish candle, ১৪ নম্বরের body-র প্রায় 72% পর্যন্ত ফিরে close করে। তিনটি মিলে morning doji star। ১৬ নম্বরের close-এ long, stop star-এর low-এর নিচে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Three candles tell the full story: selling, stalling, buying",
+      "bn": "তিন candle পুরো গল্প বলে: বিক্রি, থমকে যাওয়া, কেনা"
+    }
+  ],
+  "entry": 1.27003,
+  "stopLoss": 1.2669,
+  "takeProfit": 1.27629,
+  "rr": "1:2.0",
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.275,
+      "h": 1.27576,
+      "l": 1.27258,
+      "c": 1.2736
+    },
+    {
+      "i": 1,
+      "o": 1.2736,
+      "h": 1.27462,
+      "l": 1.27076,
+      "c": 1.2718
+    },
+    {
+      "i": 2,
+      "o": 1.2718,
+      "h": 1.27231,
+      "l": 1.26972,
+      "c": 1.2706
+    },
+    {
+      "i": 3,
+      "o": 1.2706,
+      "h": 1.27114,
+      "l": 1.26816,
+      "c": 1.269
+    },
+    {
+      "i": 4,
+      "o": 1.269,
+      "h": 1.2695,
+      "l": 1.2679,
+      "c": 1.2691
+    },
+    {
+      "i": 5,
+      "o": 1.2691,
+      "h": 1.27238,
+      "l": 1.26794,
+      "c": 1.2711
+    },
+    {
+      "i": 6,
+      "o": 1.2711,
+      "h": 1.27441,
+      "l": 1.27001,
+      "c": 1.2735
+    },
+    {
+      "i": 7,
+      "o": 1.2735,
+      "h": 1.27398,
+      "l": 1.27227,
+      "c": 1.2727
+    },
+    {
+      "i": 8,
+      "o": 1.2727,
+      "h": 1.27632,
+      "l": 1.27162,
+      "c": 1.2749
+    },
+    {
+      "i": 9,
+      "o": 1.2749,
+      "h": 1.27728,
+      "l": 1.27414,
+      "c": 1.2765
+    },
+    {
+      "i": 10,
+      "o": 1.2765,
+      "h": 1.27742,
+      "l": 1.27397,
+      "c": 1.2749
+    },
+    {
+      "i": 11,
+      "o": 1.2749,
+      "h": 1.27609,
+      "l": 1.27219,
+      "c": 1.2731
+    },
+    {
+      "i": 12,
+      "o": 1.2731,
+      "h": 1.2739,
+      "l": 1.2712,
+      "c": 1.2717
+    },
+    {
+      "i": 13,
+      "o": 1.2717,
+      "h": 1.272,
+      "l": 1.2705,
+      "c": 1.2707
+    },
+    {
+      "i": 14,
+      "o": 1.2707,
+      "h": 1.2709,
+      "l": 1.2681,
+      "c": 1.2683
+    },
+    {
+      "i": 15,
+      "o": 1.2683,
+      "h": 1.2687,
+      "l": 1.2673,
+      "c": 1.26835
+    },
+    {
+      "i": 16,
+      "o": 1.26835,
+      "h": 1.27023,
+      "l": 1.26825,
+      "c": 1.27003
+    },
+    {
+      "i": 17,
+      "o": 1.27003,
+      "h": 1.27063,
+      "l": 1.26943,
+      "c": 1.27033
+    },
+    {
+      "i": 18,
+      "o": 1.27033,
+      "h": 1.27245,
+      "l": 1.26959,
+      "c": 1.27173
+    },
+    {
+      "i": 19,
+      "o": 1.27173,
+      "h": 1.27207,
+      "l": 1.27085,
+      "c": 1.27123
+    },
+    {
+      "i": 20,
+      "o": 1.27123,
+      "h": 1.27355,
+      "l": 1.27058,
+      "c": 1.27283
+    },
+    {
+      "i": 21,
+      "o": 1.27283,
+      "h": 1.27462,
+      "l": 1.27234,
+      "c": 1.27403
+    },
+    {
+      "i": 22,
+      "o": 1.27403,
+      "h": 1.27445,
+      "l": 1.27302,
+      "c": 1.27343
+    },
+    {
+      "i": 23,
+      "o": 1.27343,
+      "h": 1.27555,
+      "l": 1.27277,
+      "c": 1.27493
+    },
+    {
+      "i": 24,
+      "o": 1.27493,
+      "h": 1.27633,
+      "l": 1.27443,
+      "c": 1.27593
+    }
+  ]
+}

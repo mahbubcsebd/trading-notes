@@ -1,0 +1,321 @@
+---
+title: "Inside Bar: বড় candle-এর range-এর ভেতরে বাজারের দম নেওয়া"
+description: "Inside bar কীভাবে চিনবেন, harami থেকে তফাত, trend-এর দিকে breakout trade, stop কোথায়, আর কেন resistance-এর দিকে break প্রায়ই fakey হয় — জেতা ও হারা chart সহ।"
+type: neutral
+category: range-bars
+level: beginner
+candleCount: 2
+signal: continuation
+chartId: inside-bar-win-01
+tags: [pattern, price-action, inside-bar, continuation, breakout]
+status: done
+sources:
+  - type: book
+    title: "Trading Price Action Trends - Al Brooks"
+    note: "Inside bars, ii ও ioi pattern, breakout ও failed breakout"
+updated: 2026-11-06
+---
+
+একটা বড় candle-এর পর ছোট একটা candle, পুরোটা আগেরটার ভেতরে। দেখে মনে হয় বাজার শক্তি জমাচ্ছে, যেকোনো দিকে ছুটবে। উপরে buy stop রাখলেন, দাম সত্যিই উপরে উঁকি দিল, order fill হলো, তারপর সেই candle-ই ফিরে এসে নিচের দিকে ভাঙল। Inside bar দিক বলে না; break-এর দিক trend আর level-এর সঙ্গে মিলছে কি না, সেটাই আসল।
+
+## এক নজরে
+
+| বিষয়                | Inside Bar                                                                                              |
+| :------------------- | :------------------------------------------------------------------------------------------------------ |
+| ধরন                  | Neutral, সাধারণত continuation; দুই candle (mother bar + inside bar)                                     |
+| কোথায় খুঁজবেন       | Trend-এর মধ্যে বড় ধাক্কার পর, বা চিহ্নিত level-এর গায়ে                                                |
+| চেনার মূল চিহ্ন      | দ্বিতীয় candle-এর high আর low দুটোই আগের candle-এর range-এর ভেতরে                                      |
+| Confirmation         | Inside bar-এর (বা mother bar-এর) high বা low ভেঙে close                                                 |
+| Stop                 | Inside bar-এর বিপরীত প্রান্তের বাইরে (আক্রমণাত্মক) বা mother bar-এর বিপরীত প্রান্তে (রক্ষণশীল)          |
+| বাতিল (invalidation) | Break-এর পর দাম আবার range-এ ফিরে বিপরীত প্রান্ত ভাঙা (fakey)                                           |
+| দেখতে একই রকম        | [Bullish Harami](/bn/patterns/bullish-harami) (body-ভিত্তিক), [Spinning Top](/bn/patterns/spinning-top) |
+| বিপরীত pattern       | [Outside Bar](/bn/patterns/outside-bar)                                                                 |
+
+## এই লেখা পড়ে আপনি যা পারবেন
+
+- Inside bar আর harami-র **সংজ্ঞাগত তফাত** বলতে পারবেন।
+- Trend-এর দিকে inside bar breakout **ধাপে ধাপে trade** করতে পারবেন।
+- দুই রকম stop-এর **সুবিধা-অসুবিধা** বুঝে বেছে নিতে পারবেন।
+- Fakey (ভুয়া break) **চিনতে** পারবেন।
+
+## কেন জরুরি
+
+- **Price action-এর সবচেয়ে জনপ্রিয় setup-গুলোর একটি।** Candle-এর রং লাগে না, শুধু high আর low।
+- **ছোট stop, পরিষ্কার trigger।** Inside bar-এর range ছোট, তাই stop প্রায়ই ছোট আর entry level স্পষ্ট।
+- **ভুল দিকে ভাঙলে সমান স্পষ্ট ফাঁদ।** Range ছোট বলে দুই দিকেই ভুয়া break সহজ। তাই trend আর level-এর সঙ্গে মেলানো জরুরি।
+
+পূর্বশর্ত: [Reading a Chart](/bn/learn/01-foundations/06-reading-a-chart) এবং [Range Breakout](/bn/learn/06-trend-chart-patterns/03-range-breakout)।
+
+## Inside Bar কী
+
+**Inside bar হলো এমন একটি candle, যার high আগের candle-এর high-এর নিচে আর low আগের candle-এর low-এর উপরে।** আগের বড় candle-কে বলা হয় **mother bar**। রং কোনো ব্যাপার না।
+
+দৌড় প্রতিযোগিতার পর বিশ্রাম ভাবুন। একজন দৌড়বিদ অনেকটা দৌড়ে থেমে জায়গায় দাঁড়িয়ে একটু হাঁটে। পরের দৌড় আগের দিকেই হতে পারে, আবার দিক বদলাতেও পারে, কিন্তু বিশ্রামের জায়গাটা আগের দৌড়ের ভেতরেই।
+
+<CandleDiagram
+  title="Mother bar ও inside bar"
+  candles={[
+    { o: 40, h: 45, l: 39, c: 44, dim: true },
+    { o: 44, h: 49, l: 43, c: 48, dim: true },
+    { o: 48, h: 63, l: 47, c: 62, label: "mother", note: "বড় range" },
+    { o: 62, h: 61.5, l: 54, c: 56, label: "inside", note: "high ও low ভেতরে" },
+    { o: 56, h: 64, l: 55.5, c: 63.5, dim: true },
+  ]}
+  caption="Inside bar-এর high (61.5) mother-এর high (63)-এর নিচে, low (54) mother-এর low (47)-এর উপরে। পরের candle inside bar-এর high ভেঙে উপরে close।"
+/>
+
+### চেনার নিয়ম
+
+| নিয়ম                                               | বাধ্যতামূলক?      | কেন                                          |
+| :-------------------------------------------------- | :---------------- | :------------------------------------------- |
+| দ্বিতীয় candle-এর high < আগের high, low > আগের low | হ্যাঁ             | এটাই "inside"; wick-সহ পুরো range            |
+| Candle বন্ধ হয়েছে                                  | হ্যাঁ             | চলমান candle শেষে mother-এর বাইরে যেতে পারে  |
+| Mother bar আশেপাশের candle-এর চেয়ে বড়             | না (কিন্তু জরুরি) | বড় ধাক্কার পরের বিশ্রামই অর্থবহ             |
+| আগে স্পষ্ট trend                                    | না (কিন্তু জরুরি) | Range-এর ভেতরে inside bar প্রায়ই শুধু noise |
+| Inside bar খুব ছোট (mother range-এর অর্ধেকের কম)    | না                | যত ছোট, stop তত ছোট আর বিশ্রাম তত স্পষ্ট     |
+
+<Callout type="note">
+  High বা low আগের candle-এর **সমান** হলে অনেকে inside bar ধরেন, অনেকে ধরেন না।
+  একটি নিয়ম বেছে নিন আর সব chart-এ সেটাই রাখুন।
+</Callout>
+
+## শক্তিশালী বনাম দুর্বল inside bar
+
+<DiagramRow>
+  <CandleDiagram
+    title="শক্তিশালী"
+    verdict="good"
+    verdictLabel="trade-যোগ্য"
+    candles={[
+      { o: 40, h: 46, l: 39, c: 45, dim: true },
+      { o: 45, h: 51, l: 44, c: 50, dim: true },
+      { o: 50, h: 63, l: 49, c: 62 },
+      { o: 62, h: 62, l: 57, c: 59, label: "trend-এ বিরতি" },
+    ]}
+    caption="Uptrend-এ বড় bullish mother, তার উপরের অর্ধেকে ছোট inside bar।"
+  />
+  <CandleDiagram
+    title="দুর্বল"
+    verdict="bad"
+    verdictLabel="এড়িয়ে চলুন"
+    candles={[
+      { o: 50, h: 53, l: 48, c: 52, dim: true },
+      { o: 52, h: 54, l: 49, c: 50, dim: true },
+      { o: 50, h: 53, l: 48.5, c: 51.5 },
+      { o: 51.5, h: 52.5, l: 49, c: 50, label: "range-এ" },
+    ]}
+    levels={[{ price: 54, label: "range top", tone: "resistance" }]}
+    caption="পাশাপাশি range-এ ছোট mother, ঠিক উপরে range top। কোনো দিক নেই।"
+  />
+</DiagramRow>
+
+| মান যাচাই            | শক্তিশালী                        | দুর্বল                                    |
+| :------------------- | :------------------------------- | :---------------------------------------- |
+| আগে কী ছিল           | স্পষ্ট trend, বড় mother bar     | পাশাপাশি range, ছোট mother                |
+| Inside bar-এর জায়গা | Mother-এর trend-দিকের অর্ধেকে    | Mother-এর বিপরীত দিকে, প্রায় low-এর কাছে |
+| Break-এর দিক         | Trend-এর দিকে, সামনে খোলা জায়গা | ঠিক কোনো resistance বা support-এর দিকে    |
+| আকার                 | Mother range-এর অর্ধেকের কম      | প্রায় mother-এর সমান                     |
+
+### দেখতে একই রকম, অর্থ আলাদা
+
+| Pattern                  | মাপে কী                                 | তফাত                                     |
+| :----------------------- | :-------------------------------------- | :--------------------------------------- |
+| **Inside Bar**           | পুরো range (high ও low)                 | Price action সংজ্ঞা; রং, trend লাগে না   |
+| **Harami**               | শুধু body                               | Candlestick সংজ্ঞা; wick বাইরে যেতে পারে |
+| **Outside Bar**          | দ্বিতীয় candle আগেরটার পুরো range ঢাকে | ঠিক উল্টো: সংকোচন নয়, প্রসারণ           |
+| **ii (দুটি inside bar)** | পরপর দুটি inside bar                    | আরও বেশি সংকোচন; break প্রায়ই জোরালো    |
+
+## Candle-এর ভেতরের গল্প
+
+Uptrend-এ একটি inside bar-এর একটি প্রচলিত ব্যাখ্যা:
+
+1. **Mother bar: buyers বড় ধাক্কা দেয়।** অনেকটা উপরে ওঠে, অনেকে profit নেয়।
+2. **Inside bar: কেউ নতুন কিছু করে না।** Buyers আরও উপরে নিতে পারে না, sellers-ও mother-এর low পর্যন্ত নামাতে পারে না। বাজার মাপছে।
+3. **Break: যে পক্ষ আগে range ছাড়ে।** Trend-এর দিকে break মানে buyers আবার এগোল; বিপরীতে break মানে ধাক্কা ফুরিয়েছে।
+
+<Callout type="note">
+  এটি একটি প্রচলিত ব্যাখ্যা, প্রমাণিত ঘটনা নয়। Chart দেখে কে কিনেছে বা বেচেছে,
+  তা জানা যায় না।
+</Callout>
+
+## কোথায় কাজ করে, কোথায় করে না
+
+<Compare
+  leftLabel="যেখানে inside bar-এর ওজন বেশি"
+  rightLabel="যেখানে inside bar প্রায়ই ফাঁদ"
+  left="- স্পষ্ট trend-এ বড় ধাক্কার পর, trend-এর দিকে break
+- ভাঙা level-এর retest-এ
+- D1 বা H4-এর মতো বড় timeframe-এ
+- Break-এর দিকে পরের level পর্যন্ত খোলা জায়গা থাকলে"
+  right="- পাশাপাশি range-এর ভেতরে
+- Break ঠিক কোনো resistance বা support-এর দিকে
+- M5-M15-এর মতো ছোট timeframe-এ, যেখানে inside bar খুব সাধারণ
+- বড় news-এর ঠিক আগে (break এলোমেলো)"
+/>
+
+## ধাপে ধাপে: inside bar trade
+
+<Steps>
+
+### ধাপ ১: আগে trend আর level
+
+Trend কোন দিকে? Break-এর দিকে সবচেয়ে কাছের level কোথায়? Trend-এর দিকে খোলা জায়গা না থাকলে এখানেই থামুন।
+
+### ধাপ ২: দুটি candle বন্ধ হওয়ার অপেক্ষা
+
+চলমান inside bar শেষ মিনিটে mother-এর বাইরে যেতে পারে।
+
+### ধাপ ৩: চারটি রেখা
+
+Inside bar-এর high ও low, mother bar-এর high ও low। এগুলোই entry, stop আর প্রথম বাধা।
+
+### ধাপ ৪: Entry-র ধরন
+
+| Entry                           | কোথায়                                                 | সুবিধা               | অসুবিধা                 |
+| :------------------------------ | :----------------------------------------------------- | :------------------- | :---------------------- |
+| **IB high/low break** (প্রচলিত) | Trend-এর দিকে inside bar-এর প্রান্তের বাইরে stop order | Entry কাছে, stop ছোট | Wick-এ ভুয়া break বেশি |
+| **Mother break**                | Mother bar-এর প্রান্তের বাইরে                          | ভুয়া break কম       | Entry দূরে, R:R ছোট     |
+| **Break-এর পর close**           | Break candle inside bar-এর বাইরে close করলে            | Wick-এর ফাঁদ এড়ায়  | Entry আরও দূরে          |
+
+### ধাপ ৫: Stop বসান
+
+**আক্রমণাত্মক:** inside bar-এর বিপরীত প্রান্তের বাইরে (ছোট stop, বেশি stop-out)। **রক্ষণশীল:** mother bar-এর বিপরীত প্রান্তের বাইরে (বড় stop, কম stop-out)। দুটোতেই [spread](/bn/learn/01-foundations/04-spread-commission-swap)-সহ buffer।
+
+### ধাপ ৬: Size ও target
+
+[Position size](/bn/learn/08-risk-management/02-position-sizing) entry থেকে stop-এর দূরত্ব দিয়ে, ঝুঁকি ১%-এর বেশি নয়। Target পরের level-এর আগে; [risk reward](/bn/learn/08-risk-management/03-risk-reward) অন্তত 1:1.5।
+
+### ধাপ ৭: পরিচালনা
+
+Break-এর পর দাম আবার inside bar-এর ভেতরে close করলে সাবধান: fakey হতে পারে। বিপরীত প্রান্ত ভাঙলে stop-এর অপেক্ষা না করে বেরোনোর কথা ভাবুন।
+
+</Steps>
+
+### Trade-এর আগে checklist
+
+<Checklist
+  id="pattern-inside-bar-pretrade-bn"
+  items={[
+    "Trend স্পষ্ট, আর break-এর দিক trend-এর দিকে?",
+    "আকার নিয়ম মানছে (high আর low দুটোই mother-এর ভেতরে, mother আশেপাশের চেয়ে বড়)?",
+    "দুটি candle-ই বন্ধ হয়েছে, আর stop-এর ধরন (IB না mother) আগেই ঠিক করেছেন?",
+    "Break-এর দিকে পরের level পর্যন্ত risk reward অন্তত 1:1.5?",
+    "Break-এর দিকে ঠিক সামনে কোনো higher timeframe level নেই?",
+  ]}
+/>
+
+একটি ঘরও খালি থাকলে trade বাদ দিন।
+
+## উদাহরণ ১: যখন কাজ করে (কাল্পনিক)
+
+<Chart
+  id="inside-bar-win-01"
+  height={420}
+  caption="GBPUSD D1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — uptrend-এ বড় mother bar-এর পর inside bar, inside bar-এর high ভাঙলে long।"
+/>
+
+- **কী দেখা যাচ্ছিল:** ০-৬ নম্বর candle 1.2500 থেকে প্রায় 1.2655 পর্যন্ত uptrend।
+- **Mother ও inside bar:** ৭ নম্বর বড় bullish mother: 1.2655 থেকে 1.2721, high 1.2727, low 1.2649। ৮ নম্বর inside bar: high 1.2721, low 1.2683, দুটোই mother-এর ভেতরে।
+- **সিদ্ধান্ত:** Buy stop 1.2724 (inside bar high-এর 3 pip উপরে)। Stop 1.2677 (inside bar low-এর 6 pip নিচে, আক্রমণাত্মক), ঝুঁকি 47 pip। Target 1.2818 (2R); উপরে কোনো চিহ্নিত resistance নেই।
+- **ফল:** ৯ নম্বর inside bar-এর high ভেঙে order fill করে। ১৩ নম্বর candle target ছোঁয়।
+- **শিক্ষা:** Trend-এর দিকে break, সামনে খোলা জায়গা, আর ছোট inside bar মানে ছোট stop।
+
+<TradeSetup
+  direction="long"
+  pair="GBPUSD"
+  entry={1.2724}
+  stop={1.2677}
+  target={1.2818}
+/>
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়। সব inside bar breakout জেতে না, আর কোনো ফল গ্যারান্টি নয়।)
+
+## উদাহরণ ২: যখন ফাঁদ হয় (কাল্পনিক)
+
+<Chart
+  id="inside-bar-fail-01"
+  height={420}
+  caption="XAUUSD H1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — পুরোনো high-এর ঠিক নিচে inside bar, উপরে ভুয়া break, তারপর নিচে: fakey।"
+/>
+
+- **কী দেখা যাচ্ছিল:** ৫ নম্বর candle 2404.88-এ পুরোনো high রেখে গেছে। ৬-৯ নম্বর নেমে, ১০-১২ নম্বর আবার ওঠে।
+- **Mother ও inside bar:** ১২ নম্বর mother: 2390.88 থেকে 2402.38, high 2403.88, পুরোনো high-এর ঠিক নিচে। ১৩ নম্বর inside bar: high 2402.38, low 2397.38।
+- **ভুল সিদ্ধান্ত:** Buy stop 2402.88, stop 2395.88, ঝুঁকি $7, target 2416.88। Target পুরোনো high-এর ওপারে, আর break ঠিক resistance-এর দিকে।
+- **কী হলো:** ১৪ নম্বর 2407.38 পর্যন্ত উঠে order fill করে, পুরোনো high-এর উপরেও যায়, কিন্তু 2398.88-এ inside bar-এর ভেতরে close করে। ১৫ নম্বর inside bar-এর low ভেঙে stop নেয়, তারপর দাম আরও নামে।
+- **কেন ব্যর্থ:** Break ছিল resistance-এর দিকে, সামনে কোনো খোলা জায়গা ছিল না। Checklist-এর চতুর্থ আর পঞ্চম ঘরে trade বাদ পড়ত।
+
+**শিক্ষা:** Resistance-এর দিকে inside bar break প্রায়ই ব্যর্থ। আর এই ব্যর্থতা নিজেই একটি setup: **fakey**, যেটা উল্টো দিকে trade করা হয়। Stop আগে বসানো ছিল বলে লোকসান 1R-এ আটকেছে।
+
+## সাধারণ ভুল
+
+| ভুল                                | কেন হয়                          | কী করবেন                                    |
+| :--------------------------------- | :------------------------------- | :------------------------------------------ |
+| দুই দিকে order রেখে দুই দিকেই stop | দিক বাছতে না চাওয়া              | Trend-এর দিকে একটি order                    |
+| Range-এর ভেতরে inside bar trade    | প্রতিটি inside bar-কে setup ভাবা | শুধু trend-এ বড় ধাক্কার পর                 |
+| Resistance-এর দিকে break-এ buy     | সামনের level না দেখা             | Break-এর দিকে খোলা জায়গা মাপুন             |
+| Harami আর inside bar একই ভাবা      | Body আর range গুলিয়ে ফেলা       | Inside bar = পুরো range; harami = শুধু body |
+| ছোট TF-এর প্রতিটি inside bar গোনা  | খুব সাধারণ ঘটনা                  | D1 বা H4-এ                                  |
+
+## Pro tips
+
+<Callout type="tip">
+  **Fakey উল্টো দিকে।** Inside bar-এর এক দিকে ভুয়া break হয়ে দাম ভেতরে close
+  করলে, অনেক trader বিপরীত দিকে trade নেন, stop ভুয়া break-এর wick-এর বাইরে।
+  উদাহরণ ২-এ ১৪ নম্বরের wick-এর উপরে stop রেখে short ছিল সেই setup। বিস্তারিত:
+  [Fake Breakout](/bn/learn/06-trend-chart-patterns/04-fake-breakout)।
+</Callout>
+
+<Callout type="tip">
+  পরপর দুটি inside bar (ii) বা inside-outside-inside (ioi) মানে আরও বেশি সংকোচন।
+  Al Brooks এগুলোকে breakout pattern হিসেবে দেখিয়েছেন। Break প্রায়ই জোরালো,
+  কিন্তু দিক এখনো trend আর level দিয়েই বিচার করুন।
+</Callout>
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- Inside bar = দ্বিতীয় candle-এর high আর low দুটোই আগের (mother) candle-এর range-এর ভেতরে।
+- এটা বিরতি, দিক নয়; trend-এর দিকে break-এ trade।
+- Stop inside bar-এর (আক্রমণাত্মক) বা mother-এর (রক্ষণশীল) বিপরীত প্রান্তে; আগেই ঠিক করুন।
+- Resistance বা support-এর দিকে break প্রায়ই fakey হয়; fakey নিজেই উল্টো দিকের setup।
+
+</KeyTakeaways>
+
+## অনুশীলন ও নিজের backtest
+
+TradingView-এ GBPUSD D1 বা XAUUSD H1 খুলুন। অন্তত ২০টি inside bar খুঁজুন। প্রতিটির জন্য একটি সারি লিখুন:
+
+| তারিখ | Trend-এর দিকে break? | Break-এর দিকে পরের level পর্যন্ত R | Fakey হয়েছে? | Stop ধরন | ফল (R) |
+| :---- | :------------------- | :--------------------------------- | :------------ | :------- | :----- |
+|       |                      |                                    |               |          |        |
+
+এরপর IB-stop আর mother-stop দুই নিয়মে একই trade-গুলোর ফল হিসাব করে তুলনা করুন। অন্তত ৩০টি নমুনা ছাড়া সিদ্ধান্ত নেবেন না।
+
+## কুইজ
+
+1. Inside bar আর harami-র মূল তফাত কী?
+2. Uptrend-এ inside bar, ঠিক উপরে পুরোনো high। কী করবেন?
+3. Fakey কী?
+4. আক্রমণাত্মক আর রক্ষণশীল stop-এর তফাত কী?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** Inside bar পুরো range মাপে (high ও low)। Harami শুধু body মাপে; wick বাইরে যেতে পারে।
+
+**২.** Buy বাদ, কারণ break resistance-এর দিকে আর সামনে জায়গা নেই। পুরোনো high-এর উপরে ভুয়া break হলে বরং fakey short-এর কথা ভাবুন।
+
+**৩.** Inside bar-এর এক দিকে ভুয়া break, দাম আবার ভেতরে close, তারপর বিপরীত দিকে move। এটা নিজেই একটি setup।
+
+**৪.** আক্রমণাত্মক stop inside bar-এর বিপরীত প্রান্তে: ছোট stop, বেশি stop-out। রক্ষণশীল stop mother bar-এর বিপরীত প্রান্তে: বড় stop, কম stop-out।
+
+</details>
+
+## পরের ধাপ
+
+- আগে: [Range Breakout](/bn/learn/06-trend-chart-patterns/03-range-breakout)।
+- Break-এর পর entry: [Breakout Retest Entry](/bn/learn/09-price-action-entries-strategies/01-breakout-retest-pullback-entry)।
+- একই পরিবারের pattern: [Outside Bar](/bn/patterns/outside-bar), [Bullish Harami](/bn/patterns/bullish-harami), [Rising Three Methods](/bn/patterns/rising-three-methods)।
+
+<Disclaimer />

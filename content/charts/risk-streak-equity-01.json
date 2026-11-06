@@ -1,0 +1,150 @@
+{
+  "id": "risk-streak-equity-01",
+  "title": {
+    "en": "10 Losses in a Row: 1% vs 5% Risk",
+    "bn": "টানা 10টি লোকসান: 1% বনাম 5% ঝুঁকি"
+  },
+  "symbol": "ACCOUNT",
+  "timeframe": "per trade",
+  "mode": "synthetic",
+  "type": "concept",
+  "bias": "bearish",
+  "outcome": "loss",
+  "tags": [
+    "risk",
+    "losing-streak",
+    "drawdown"
+  ],
+  "module": "08-risk-management",
+  "lessonSlugs": [
+    "01-risk-per-trade"
+  ],
+  "caption": {
+    "en": "Candles show an account risking 1% per trade through 10 straight losses. The orange line shows 5% risk.",
+    "bn": "Candle-এ দেখা যাচ্ছে প্রতি trade-এ 1% ঝুঁকিতে টানা 10টি লোকসান। কমলা রেখা 5% ঝুঁকির account।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data.",
+    "bn": "এটি শিক্ষামূলক কাল্পনিক ডেটা।"
+  },
+  "explanation": {
+    "en": "1% risk ends near 9,044. 5% risk ends near 5,987, so it needs about 67% gain to get back.",
+    "bn": "1% ঝুঁকিতে শেষে প্রায় 9,044। 5% ঝুঁকিতে প্রায় 5,987, ফিরতে প্রায় 67% লাগে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Small risk makes a losing streak survivable",
+      "bn": "ছোট ঝুঁকি হলে লোকসানের ধারা সহ্য করা যায়"
+    }
+  ],
+  "updatedAt": "2026-11-05T22:00:00Z",
+  "candles": [
+    {
+      "i": 0,
+      "o": 10000,
+      "h": 10008,
+      "l": 9892.0,
+      "c": 9900.0,
+      "v": 0
+    },
+    {
+      "i": 1,
+      "o": 9900.0,
+      "h": 9908.0,
+      "l": 9793.0,
+      "c": 9801.0,
+      "v": 0
+    },
+    {
+      "i": 2,
+      "o": 9801.0,
+      "h": 9809.0,
+      "l": 9694.99,
+      "c": 9702.99,
+      "v": 0
+    },
+    {
+      "i": 3,
+      "o": 9702.99,
+      "h": 9710.99,
+      "l": 9597.96,
+      "c": 9605.96,
+      "v": 0
+    },
+    {
+      "i": 4,
+      "o": 9605.96,
+      "h": 9613.96,
+      "l": 9501.9,
+      "c": 9509.9,
+      "v": 0
+    },
+    {
+      "i": 5,
+      "o": 9509.9,
+      "h": 9517.9,
+      "l": 9406.8,
+      "c": 9414.8,
+      "v": 0
+    },
+    {
+      "i": 6,
+      "o": 9414.8,
+      "h": 9422.8,
+      "l": 9312.65,
+      "c": 9320.65,
+      "v": 0
+    },
+    {
+      "i": 7,
+      "o": 9320.65,
+      "h": 9328.65,
+      "l": 9219.45,
+      "c": 9227.45,
+      "v": 0
+    },
+    {
+      "i": 8,
+      "o": 9227.45,
+      "h": 9235.45,
+      "l": 9127.17,
+      "c": 9135.17,
+      "v": 0
+    },
+    {
+      "i": 9,
+      "o": 9135.17,
+      "h": 9143.17,
+      "l": 9035.82,
+      "c": 9043.82,
+      "v": 0
+    }
+  ],
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 10000,
+      "label": "Start 10,000",
+      "color": "#3b82f6",
+      "style": "dotted"
+    }
+  ],
+  "overlays": [
+    {
+      "label": "5% risk equity",
+      "color": "#f97316",
+      "values": [
+        9500.0,
+        9025.0,
+        8573.75,
+        8145.06,
+        7737.81,
+        7350.92,
+        6983.37,
+        6634.2,
+        6302.49,
+        5987.37
+      ]
+    }
+  ]
+}

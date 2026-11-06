@@ -1,0 +1,281 @@
+{
+  "id": "bearish-engulfing-win-01",
+  "title": {
+    "en": "Bearish Engulfing at Broken Support, Downtrend Continuation",
+    "bn": "ভাঙা support-এ bearish engulfing, downtrend-এর ধারাবাহিকতা"
+  },
+  "symbol": "USDJPY",
+  "timeframe": "D1",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bearish",
+  "outcome": "win",
+  "tags": [
+    "bearish-engulfing",
+    "engulfing",
+    "candlestick",
+    "retest",
+    "trend",
+    "pattern"
+  ],
+  "module": "patterns",
+  "lessonSlugs": [],
+  "caption": {
+    "en": "Illustrative synthetic USDJPY D1: price breaks a floor, falls, then pulls back up into the old floor and prints a bearish engulfing there. A short at the engulfing close runs to 2R as the downtrend resumes.",
+    "bn": "শিক্ষামূলক কাল্পনিক USDJPY D1: দাম একটি floor ভেঙে নামে, তারপর পুরোনো floor-এ ফিরে সেখানে bearish engulfing দেয়। Engulfing-এর close-এ short, downtrend আবার চললে 2R।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data, not a real market record.",
+    "bn": "শিক্ষামূলক কাল্পনিক ডেটা, বাস্তব মার্কেটের রেকর্ড নয়।"
+  },
+  "updatedAt": "2026-11-06T12:00:00Z",
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 151.828,
+      "label": "Old floor (now resistance)",
+      "color": "#3b82f6",
+      "style": "dashed"
+    },
+    {
+      "type": "marker",
+      "i": 7,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Breakdown"
+    },
+    {
+      "type": "marker",
+      "i": 18,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Bearish engulfing"
+    },
+    {
+      "type": "hline",
+      "price": 151.308,
+      "label": "Entry (close)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 151.948,
+      "label": "Stop",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 150.028,
+      "label": "Target 2R",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candles 0-6 range above a floor; candle 7 breaks it. Candles 13-17 pull back into the old floor, now resistance. Candle 18 is a bearish engulfing: its body covers candle 17's body about four times over and closes near its low. Short at that close, stop above the engulfing high; candle 19 follows through and price reaches 2R.",
+    "bn": "০-৬ নম্বর candle একটি floor-এর উপরে range; ৭ নম্বর তা ভাঙে। ১৩-১৭ নম্বর পুরোনো floor-এ ফেরে, যা এখন resistance। ১৮ নম্বর bearish engulfing: body ১৭ নম্বরের body-র প্রায় চার গুণ বড় হয়ে তাকে ঢাকে, close low-এর কাছে। সেই close-এ short, stop engulfing high-এর উপরে; ১৯ নম্বর follow-through দেয়, দাম 2R পর্যন্ত নামে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "With the trend, at a broken level, the engulfing is the trigger",
+      "bn": "Trend-এর দিকে, ভাঙা level-এ, engulfing-ই trigger"
+    }
+  ],
+  "entry": 151.308,
+  "stopLoss": 151.948,
+  "takeProfit": 150.028,
+  "rr": "1:2.0",
+  "candles": [
+    {
+      "i": 0,
+      "o": 152.0,
+      "h": 152.054,
+      "l": 151.86,
+      "c": 151.92
+    },
+    {
+      "i": 1,
+      "o": 151.92,
+      "h": 152.013,
+      "l": 151.867,
+      "c": 151.98
+    },
+    {
+      "i": 2,
+      "o": 151.98,
+      "h": 152.032,
+      "l": 151.858,
+      "c": 151.91
+    },
+    {
+      "i": 3,
+      "o": 151.91,
+      "h": 152.068,
+      "l": 151.86,
+      "c": 152.0
+    },
+    {
+      "i": 4,
+      "o": 152.0,
+      "h": 152.051,
+      "l": 151.892,
+      "c": 151.94
+    },
+    {
+      "i": 5,
+      "o": 151.94,
+      "h": 152.048,
+      "l": 151.886,
+      "c": 152.01
+    },
+    {
+      "i": 6,
+      "o": 152.01,
+      "h": 152.052,
+      "l": 151.914,
+      "c": 151.96
+    },
+    {
+      "i": 7,
+      "o": 151.96,
+      "h": 152.0,
+      "l": 151.228,
+      "c": 151.278
+    },
+    {
+      "i": 8,
+      "o": 151.278,
+      "h": 151.511,
+      "l": 150.672,
+      "c": 150.878
+    },
+    {
+      "i": 9,
+      "o": 150.878,
+      "h": 151.031,
+      "l": 150.387,
+      "c": 150.578
+    },
+    {
+      "i": 10,
+      "o": 150.578,
+      "h": 150.751,
+      "l": 150.526,
+      "c": 150.698
+    },
+    {
+      "i": 11,
+      "o": 150.698,
+      "h": 150.926,
+      "l": 150.017,
+      "c": 150.248
+    },
+    {
+      "i": 12,
+      "o": 150.248,
+      "h": 150.473,
+      "l": 149.708,
+      "c": 149.898
+    },
+    {
+      "i": 13,
+      "o": 149.898,
+      "h": 150.343,
+      "l": 149.71,
+      "c": 150.198
+    },
+    {
+      "i": 14,
+      "o": 150.198,
+      "h": 150.656,
+      "l": 150.074,
+      "c": 150.548
+    },
+    {
+      "i": 15,
+      "o": 150.548,
+      "h": 150.966,
+      "l": 150.407,
+      "c": 150.798
+    },
+    {
+      "i": 16,
+      "o": 150.798,
+      "h": 151.788,
+      "l": 150.718,
+      "c": 151.708
+    },
+    {
+      "i": 17,
+      "o": 151.708,
+      "h": 151.888,
+      "l": 151.658,
+      "c": 151.848
+    },
+    {
+      "i": 18,
+      "o": 151.848,
+      "h": 151.888,
+      "l": 151.268,
+      "c": 151.308
+    },
+    {
+      "i": 19,
+      "o": 151.308,
+      "h": 151.408,
+      "l": 151.088,
+      "c": 151.128
+    },
+    {
+      "i": 20,
+      "o": 151.128,
+      "h": 151.241,
+      "l": 150.724,
+      "c": 150.828
+    },
+    {
+      "i": 21,
+      "o": 150.828,
+      "h": 150.988,
+      "l": 150.779,
+      "c": 150.948
+    },
+    {
+      "i": 22,
+      "o": 150.948,
+      "h": 151.049,
+      "l": 150.443,
+      "c": 150.548
+    },
+    {
+      "i": 23,
+      "o": 150.548,
+      "h": 150.662,
+      "l": 150.116,
+      "c": 150.198
+    },
+    {
+      "i": 24,
+      "o": 150.198,
+      "h": 150.353,
+      "l": 150.159,
+      "c": 150.298
+    },
+    {
+      "i": 25,
+      "o": 150.298,
+      "h": 150.386,
+      "l": 149.703,
+      "c": 149.848
+    },
+    {
+      "i": 26,
+      "o": 149.848,
+      "h": 149.933,
+      "l": 149.467,
+      "c": 149.548
+    }
+  ]
+}

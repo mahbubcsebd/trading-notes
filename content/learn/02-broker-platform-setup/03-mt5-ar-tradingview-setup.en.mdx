@@ -1,0 +1,194 @@
+---
+title: "MT5 and TradingView Setup: First Setup and Safety Settings"
+description: "What MetaTrader 5 and TradingView are used for, how to set up your charts the first time, how to place alerts, which settings to check before placing an order, and common dangers such as lot-size mistakes."
+level: beginner
+tags: [mt5, tradingview, platform, setup, alerts, safety]
+instruments: [EURUSD]
+timeframes: [H1]
+status: done
+sources:
+  - type: blog
+    title: "MetaTrader 5 - Investopedia"
+    url: "https://www.investopedia.com/terms/m/metatrader-4-mt4.asp"
+updated: 2026-11-06
+---
+
+# MT5 and TradingView Setup: First Setup and Safety Settings
+
+The platform is your desk. On a messy desk, work is slow and you press the wrong button. Spend a little time setting it up on day one and it pays off all year. This lesson gives general steps; menu names can differ slightly by version and app.
+
+## What you will be able to do
+
+- **Tell apart** the roles of MT5 and TradingView.
+- **Set up** your first chart.
+- **Place** alerts.
+- **Check** the safety settings before an order.
+
+## Why it matters
+
+- **Wrong settings cause real losses.** The wrong lot, the wrong symbol, the wrong direction — each is one button away.
+- **A good setup saves attention.** With alerts, you don't have to sit in front of the chart.
+- **It is where you apply [Order Types](/en/learn/02-broker-platform-setup/04-order-types) and risk calculations.**
+
+Prerequisites: [Demo vs Live](/en/learn/02-broker-platform-setup/02-demo-vs-live-account).
+
+## Two platforms
+
+| Item     | MetaTrader 5 (MT5)                            | TradingView                                      |
+| :------- | :-------------------------------------------- | :----------------------------------------------- |
+| Main job | Trading directly with the broker, running EAs | Advanced charts, analysis, alerts, sharing ideas |
+| Orders   | Directly with the broker                      | From the chart, if a supported broker is linked  |
+| Strength | Execution, automation                         | Chart quality, drawing tools, easy alerts        |
+| Limit    | Charts are relatively basic                   | Not every broker is supported                    |
+
+Many people analyse on TradingView and place orders on MT5. Both are fine; choose what suits you.
+
+## First setup: general steps
+
+**MT5:**
+
+1. Connect with the **demo login details** your broker gave you (server name, login, password).
+2. Show your pair (for example, EURUSD) in **Market Watch**.
+3. Open a chart and choose a timeframe (M15, H1, H4, D1).
+4. Keep the Navigator and Terminal panels open (they show your orders and account).
+5. Always double-check the **volume (lot)** in the order form.
+
+**TradingView:**
+
+1. Choose the symbol (for example, EURUSD) and timeframe.
+2. Mark swings and levels with the drawing tools.
+3. Place an **alert** (for when price touches or breaks a level).
+4. If a broker is linked, open the trading panel, but use demo first.
+
+## What it looks like on a chart
+
+Your chart should have: clean candles, few indicators, lines for your levels, and alert markers. The chart below shows a clean setup: only swings and the levels you need.
+
+<Chart
+  id="chart-reading-trend-01"
+  height={440}
+  caption="EURUSD H1 (educational, synthetic example) — a clean setup: only candles and swing markers. No extra indicators, so decisions are easier."
+/>
+
+## Step by step: a safe setup
+
+<Steps>
+
+### Step 1: Connect to demo
+
+Not to a real account. Keep your login details safe and don't give them to anyone.
+
+### Step 2: Keep the chart simple
+
+Candlesticks, one timeframe, one or two indicators. ([Indicators](/en/learn/07-technical-indicators/00-overview) come later.)
+
+### Step 3: Place alerts
+
+At important levels. You will need to sit at the screen less.
+
+### Step 4: Check the order form settings
+
+Is the symbol right? The direction? **The lot size?** Are the stop and target set? Keep one-click trading off until you are sure.
+
+### Step 5: Place one small demo order
+
+At the smallest lot size, then close it. Get to know the process.
+
+</Steps>
+
+## Example 1: when it works (synthetic)
+
+- **What they did:** The trader marked levels on TradingView and set alerts, and kept MT5 connected to demo.
+- **During the session:** The alert went off; they opened the chart and went through their checklist, then placed the order on MT5 after double-checking the lot and stop.
+- **Result:** The trade was taken at the planned 1% risk.
+- **Lesson:** Alerts save attention, and a second look catches mistakes.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Example 2: when it fails (synthetic)
+
+- **What happened:** Instead of 0.10 lot, the trader typed 1.00 in the volume box by mistake (ten times larger), with one-click trading switched on.
+- **Result:** When the 30-pip stop was hit, the loss was 300 USD instead of the planned 30 USD (on a 3,000 account, 10% instead of 1%).
+- **Why it failed:** A one-decimal-place mistake, and no second look.
+- **Lesson:** Always read the lot box twice. Switch on one-click trading only once you are used to the platform.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Common mistakes
+
+| Mistake                                  | Why it happens         | What to do                                   |
+| :--------------------------------------- | :--------------------- | :------------------------------------------- |
+| Not reading the lot box                  | Rushing                | Check it twice, every time                   |
+| Filling the chart with indicators        | Hunting for signals    | A simple chart                               |
+| Logging into live on an unknown computer | Convenience            | A safe device, two-factor security           |
+| Not using alerts                         | Not knowing about them | Alerts at important levels                   |
+| Leaving the default settings             | Saving time            | Check one-click, notifications and time zone |
+
+## Pro tips
+
+<Callout type="tip">
+  Save a chart template (your colours, timeframe, minimum indicators). Every new
+  chart then opens with the same simple look, which means fewer mistakes even
+  when you are in a hurry.
+</Callout>
+
+<Callout type="warning">
+  Keep your platform password strong and two-factor authentication (2FA) on.
+  Don't download fake "software" or "EAs"; your account details could be stolen.
+  This is educational material.
+</Callout>
+
+## When this does not work
+
+- **Menus differ by version:** The steps here are general; see the help pages for your version.
+- **If your broker doesn't offer MT5:** You will use MT4, cTrader or its own platform; the ideas are much the same.
+- **If TradingView doesn't support your broker:** Use it for analysis only, and place orders on MT5.
+
+## Summary
+
+<KeyTakeaways>
+
+- MT5 = trading and execution; TradingView = charts, analysis, alerts.
+- Connect to demo and set up a simple chart.
+- Double-check the lot, stop and direction before an order.
+- Security: password, 2FA, no unknown software.
+
+</KeyTakeaways>
+
+## Practice
+
+Connect to demo, set up a EURUSD H1 chart, place one alert, then open and close an order at the smallest lot size, writing down every step.
+
+## Quiz
+
+1. What is the main difference between MT5 and TradingView?
+2. Which three things should you check twice before an order?
+3. What went wrong in the failure example above?
+4. Why keep 2FA switched on?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** MT5 is for trading directly with the broker and automation; TradingView is strong on advanced charts and alerts.
+
+**2.** Symbol/direction, lot, stop and target.
+
+**3.** A lot ten times too large in the volume box (1.00 instead of 0.10), and no second look.
+
+**4.** It adds an extra layer against theft of your account details.
+
+</details>
+
+## Next steps
+
+- Previous: [Demo vs Live](/en/learn/02-broker-platform-setup/02-demo-vs-live-account).
+- Next: [Order Types](/en/learn/02-broker-platform-setup/04-order-types).
+- Related: [Position Sizing](/en/learn/08-risk-management/02-position-sizing).
+
+### Sources
+
+- <ExternalLink href="https://www.investopedia.com/terms/m/metatrader-4-mt4.asp">
+    MetaTrader, Investopedia
+  </ExternalLink>
+
+<Disclaimer />

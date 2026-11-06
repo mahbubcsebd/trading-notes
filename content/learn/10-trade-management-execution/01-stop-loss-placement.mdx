@@ -1,14 +1,182 @@
 ---
-title: "Stop loss placement"
-description: "Detailed notes on Stop loss placement"
-status: draft
-updated: 2026-10-10
+title: "Stop Loss Placement: কোথায় বসালে idea ভুল প্রমাণ হয়"
+description: "Stop loss structure-এর ওপারে কীভাবে বসাবেন, কেন খুব কাছের stop noise-এ কাটে এবং stop বসানোর পর lot হিসাব করার ধাপ — chart সহ।"
+level: beginner
+tags: [stop-loss, trade-management, structure, swing-low, risk]
+instruments: [EURUSD]
+timeframes: [H1]
+status: done
+sources:
+  - type: blog
+    title: "Stop-Loss Order - Investopedia"
+    url: "https://www.investopedia.com/terms/s/stop-lossorder.asp"
+  - type: blog
+    title: "Stop Loss - BabyPips"
+    url: "https://www.babypips.com/learn/forex/stop-loss"
+updated: 2026-11-05
 ---
 
-# Stop loss placement
+# Stop Loss Placement: কোথায় বসালে idea ভুল প্রমাণ হয়
 
-<div className="rounded-xl border border-border bg-card p-6 text-center text-muted-foreground my-8">
-  <p className="text-3xl mb-4">🚧</p>
-  <p className="font-semibold text-foreground">Coming in Phase 2</p>
-  <p className="text-sm mt-1">This module is under construction.</p>
-</div>
+Stop loss বসালেন, দাম ঠিক সেটি ছুঁয়ে ফিরে গেল, আর আপনার trade-এর idea-ই ঠিক ছিল। এই অভিজ্ঞতা বহু trader-এর। প্রায়ই সমস্যা stop থাকায় নয়, stop-এর জায়গায়।
+
+## এই লেখা পড়ে আপনি যা পারবেন
+
+- Stop **structure-এর ওপারে বসাতে পারবেন**।
+- খুব কাছের stop-এর **ক্ষতি দেখাতে পারবেন**।
+- Stop ঠিক করার পর **lot হিসাব করার ক্রম বলতে পারবেন**।
+
+## কেন এটি জরুরি
+
+- **Stop-ই আপনার সর্বোচ্চ লোকসান ঠিক করে।** আগে ঠিক না থাকলে আবেগে ঠিক হয়।
+- **ভুল জায়গার stop দুই দিকেই ক্ষতি করে।** কাছে হলে noise-এ কাটে, দূরে হলে ঝুঁকি বাড়ে।
+- **Lot stop-এর ওপর নির্ভর করে।** Stop বদলালে lot বদলাতে হয়।
+
+পূর্বশর্ত: [Swing High ও Swing Low](/bn/learn/03-market-structure/01-swing-high-low) এবং [Position Sizing](/bn/learn/08-risk-management/02-position-sizing)।
+
+## Stop Loss কী
+
+**Stop loss হলো আগে থেকে ঠিক করা একটি দাম, যেখানে trade বন্ধ হবে। সঠিক stop হলো সেই জায়গা, যেখানে পৌঁছালে trade-এর পেছনের idea ভুল প্রমাণিত হয়।**
+
+ভাবুন নদীর বাঁধ। জল কতটা উঠলে বাঁধ ভাঙবে তা ঠিক না থাকলে বন্যা আসার পরে সিদ্ধান্ত নিতে হয়। Stop হলো সেই আগে ঠিক করা সীমা।
+
+Buy trade-এ stop সাধারণত গুরুত্বপূর্ণ swing low-এর নিচে, sell-এ swing high-এর ওপরে। সেখানে দাম পৌঁছালে structure ভেঙে গেছে।
+
+## Chart-এ কেমন দেখায়
+
+<Chart
+  id="sl-structure-win-01"
+  height={440}
+  caption="EURUSD H1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — Buy 1.0930। Stop 1.0868, swing low 1.0880-এর সামান্য নিচে। Target 1.1054 (1:2)।"
+/>
+
+Swing low-এর ঠিক গায়ে নয়, কিছুটা নিচে। এই ফাঁকটি noise-এর জন্য।
+
+## ধাপে ধাপে: stop বসানো
+
+<Steps>
+
+### ধাপ ১: Entry-র আগে stop ঠিক করুন
+
+আগে জানুন কোথায় আপনি ভুল প্রমাণিত হন। সেটিই stop।
+
+### ধাপ ২: Structure খুঁজুন
+
+শেষ গুরুত্বপূর্ণ swing low (buy) বা swing high (sell)। বা [support zone](/bn/learn/05-support-resistance/01-levels-vs-zones)-এর ওপারে।
+
+### ধাপ ৩: Buffer যোগ করুন
+
+ঠিক level-এ নয়। [ATR](/bn/learn/07-technical-indicators/04-atr-stop-size) দেখে সামান্য ফাঁক রাখুন। Spread-ও মাথায় রাখুন।
+
+### ধাপ ৪: দূরত্ব মাপুন ও ratio দেখুন
+
+Entry থেকে stop কত pip? [Ratio](/bn/learn/08-risk-management/03-risk-reward) ন্যূনতমের নিচে হলে trade বাদ।
+
+### ধাপ ৫: তারপর lot হিসাব করুন
+
+ঝুঁকি টাকায় ঠিক রেখে stop-এর দূরত্ব দিয়ে lot বের করুন। উল্টোটা করবেন না।
+
+</Steps>
+
+## উদাহরণ ১: যখন কাজ করে (কাল্পনিক)
+
+- **আগে থেকে ঠিক:** ঝুঁকি 1%, stop swing low-এর 12 pip নিচে, ratio 1:2।
+- **ফল:** Pullback swing low পর্যন্ত যায়নি, দাম target ছুঁয়েছে।
+- **শিক্ষা:** Stop-এর জায়গা চার্ট থেকে এসেছে, ইচ্ছা থেকে নয়।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়।)
+
+## উদাহরণ ২: যখন ব্যর্থ হয় (কাল্পনিক)
+
+<Chart
+  id="sl-too-tight-fail-01"
+  height={440}
+  caption="EURUSD H1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — একই buy 1.0930, কিন্তু stop মাত্র 18 pip দূরে 1.0912। স্বাভাবিক pullback-এ stop কাটে, পরে দাম আগের target-এ পৌঁছায়।"
+/>
+
+- **কী দেখা যাচ্ছিল:** একই setup, trader "ঝুঁকি কম" দেখাতে stop কাছে টেনেছেন।
+- **ফল:** Pullback-এ stop লেগেছে, তারপর দাম ওপরে গেছে।
+- **কেন ব্যর্থ:** Stop স্বাভাবিক noise-এর ভেতরে ছিল, structure-এর বাইরে নয়।
+- **শিক্ষা:** Idea ঠিক থাকলেও ভুল stop লোকসান ঘটায়।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়।)
+
+## সাধারণ ভুল
+
+| ভুল                           | কেন হয়               | কী করবেন                            |
+| :---------------------------- | :-------------------- | :---------------------------------- |
+| Stop খুব কাছে টানা            | ঝুঁকি ছোট দেখানো      | structure-এর ওপারে, তারপর lot কমান  |
+| Stop না বসানো                 | "দেখে নেব"            | entry-র সঙ্গেই order-এ বসান         |
+| Trade চলাকালে stop দূরে সরানো | লোকসান মেনে না নেওয়া | stop শুধু ঝুঁকি কমানোর দিকে সরে     |
+| Level-এর ঠিক গায়ে stop       | নিখুঁত জায়গা খোঁজা   | noise ও spread-এর জন্য buffer রাখুন |
+
+## Pro tips
+
+<Callout type="tip">
+  Stop সরানোর নিয়ম: শুধু লাভের দিকে (ঝুঁকি কমানোর দিকে)। লোকসানের দিকে সরানো
+  মানে আগের সিদ্ধান্ত অস্বীকার করা।
+</Callout>
+
+<Callout type="warning">
+  "Mental stop" (মনে মনে রাখা) বিপজ্জনক। চাপের সময় সেটি সরে যায়। Broker-এ
+  order হিসেবে বসান।
+</Callout>
+
+## কখন এটা কাজ করে না
+
+- **খবরের সময়:** দাম stop টপকে যেতে পারে ([Slippage](/bn/learn/10-trade-management-execution/04-slippage-requote-spread-widening))।
+- **Structure অস্পষ্ট হলে:** কোথায় idea ভুল তা বোঝা যায় না, trade এড়ান।
+- **Stop অত্যন্ত দূরে গেলে:** ratio বা lot অগ্রহণযোগ্য, trade বাদ দিন।
+- **Spread বেশি থাকলে:** stop আগেই লেগে যেতে পারে।
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- Stop বসে সেখানে, যেখানে trade-এর idea ভুল প্রমাণিত হয়।
+- Structure-এর ওপারে সামান্য buffer রাখুন।
+- আগে stop, তারপর lot। উল্টো নয়।
+- Stop শুধু ঝুঁকি কমানোর দিকে সরে।
+
+</KeyTakeaways>
+
+## অনুশীলন
+
+Demo চার্টে তিনটি buy setup খুঁজুন। প্রতিটির stop structure-এর নিচে বসান, দূরত্ব মাপুন, তারপর 1% ঝুঁকিতে lot হিসাব করুন।
+
+## কুইজ
+
+1. Buy trade-এ stop সাধারণত কোথায়?
+2. খুব কাছের stop-এর ক্ষতি কী?
+3. Lot কখন হিসাব করবেন?
+4. Trade চলাকালে stop কোন দিকে সরানো যায়?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** গুরুত্বপূর্ণ swing low বা support-এর নিচে।
+
+**২.** Noise-এ কেটে যায়, idea ঠিক থাকলেও লোকসান হয়।
+
+**৩.** Stop ঠিক হওয়ার পরে।
+
+**৪.** শুধু ঝুঁকি কমানোর (লাভের) দিকে।
+
+</details>
+
+## পরের ধাপ
+
+- আগে: [Position Sizing](/bn/learn/08-risk-management/02-position-sizing)।
+- পরে: [Take Profit ও Partial Close](/bn/learn/10-trade-management-execution/02-take-profit-partial-close)।
+- সম্পর্কিত: [ATR ও Stop Size](/bn/learn/07-technical-indicators/04-atr-stop-size)।
+
+### সূত্র
+
+- <ExternalLink href="https://www.investopedia.com/terms/s/stop-lossorder.asp">
+    Stop-Loss Order, Investopedia
+  </ExternalLink>
+- <ExternalLink href="https://www.babypips.com/learn/forex/stop-loss">
+    Stop Loss, BabyPips
+  </ExternalLink>
+
+<Disclaimer />

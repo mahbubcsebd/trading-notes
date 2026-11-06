@@ -1,0 +1,307 @@
+{
+  "id": "hammer-win-01",
+  "title": {
+    "en": "Hammer at Tested Support, Break of Hammer High",
+    "bn": "পরীক্ষিত support-এ hammer, hammer high ভাঙলে entry"
+  },
+  "symbol": "GBPUSD",
+  "timeframe": "H4",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bullish",
+  "outcome": "win",
+  "tags": [
+    "hammer",
+    "candlestick",
+    "support",
+    "pattern"
+  ],
+  "module": "patterns",
+  "lessonSlugs": [],
+  "caption": {
+    "en": "Illustrative synthetic GBPUSD H4: price returns to a support that already held once, prints a hammer that dips below it and closes back above. The next candle breaks the hammer high.",
+    "bn": "শিক্ষামূলক কাল্পনিক GBPUSD H4: দাম আগে একবার ধরে রাখা support-এ ফেরে, hammer সামান্য নিচে নেমে আবার উপরে close করে। পরের candle hammer-এর high ভাঙে।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data, not a real market record.",
+    "bn": "শিক্ষামূলক কাল্পনিক ডেটা, বাস্তব মার্কেটের রেকর্ড নয়।"
+  },
+  "updatedAt": "2026-11-06T12:00:00Z",
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 1.27,
+      "label": "Support",
+      "color": "#3b82f6",
+      "style": "dashed"
+    },
+    {
+      "type": "marker",
+      "i": 5,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "1st touch"
+    },
+    {
+      "type": "marker",
+      "i": 19,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Hammer"
+    },
+    {
+      "type": "hline",
+      "price": 1.2739,
+      "label": "Entry (high break)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.266,
+      "label": "Stop",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.2897,
+      "label": "Target 2R",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candle 5 marks support at 1.2700. Candles 11-18 fall back to it. Candle 19 dips to 1.2668, below support, and closes near its high: a hammer. Candle 20 breaks the hammer high, filling a buy stop. The stop sits under the hammer low; price reaches 2R.",
+    "bn": "৫ নম্বর candle 1.2700-এ support তৈরি করে। ১১-১৮ নম্বর আবার সেখানে নামে। ১৯ নম্বর 1.2668 পর্যন্ত নেমে, support-এর নিচে গিয়ে, নিজের high-এর কাছে close করে: hammer। ২০ নম্বর hammer-এর high ভাঙে, buy stop fill হয়। Stop hammer low-এর নিচে; দাম 2R পর্যন্ত যায়।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Level first, shape second, trigger third",
+      "bn": "আগে level, তারপর আকার, তারপর trigger"
+    }
+  ],
+  "entry": 1.2739,
+  "stopLoss": 1.266,
+  "takeProfit": 1.2897,
+  "rr": "1:2.0",
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.279,
+      "h": 1.27973,
+      "l": 1.27681,
+      "c": 1.2776
+    },
+    {
+      "i": 1,
+      "o": 1.2776,
+      "h": 1.27883,
+      "l": 1.2749,
+      "c": 1.2758
+    },
+    {
+      "i": 2,
+      "o": 1.2758,
+      "h": 1.27648,
+      "l": 1.27388,
+      "c": 1.2746
+    },
+    {
+      "i": 3,
+      "o": 1.2746,
+      "h": 1.27535,
+      "l": 1.27159,
+      "c": 1.2726
+    },
+    {
+      "i": 4,
+      "o": 1.2726,
+      "h": 1.27352,
+      "l": 1.26997,
+      "c": 1.271
+    },
+    {
+      "i": 5,
+      "o": 1.271,
+      "h": 1.2719,
+      "l": 1.2701,
+      "c": 1.2719
+    },
+    {
+      "i": 6,
+      "o": 1.2719,
+      "h": 1.27408,
+      "l": 1.27119,
+      "c": 1.2735
+    },
+    {
+      "i": 7,
+      "o": 1.2735,
+      "h": 1.27642,
+      "l": 1.27215,
+      "c": 1.2757
+    },
+    {
+      "i": 8,
+      "o": 1.2757,
+      "h": 1.27797,
+      "l": 1.2752,
+      "c": 1.2771
+    },
+    {
+      "i": 9,
+      "o": 1.2771,
+      "h": 1.28017,
+      "l": 1.27585,
+      "c": 1.2789
+    },
+    {
+      "i": 10,
+      "o": 1.2789,
+      "h": 1.28042,
+      "l": 1.2783,
+      "c": 1.2798
+    },
+    {
+      "i": 11,
+      "o": 1.2798,
+      "h": 1.28021,
+      "l": 1.27864,
+      "c": 1.279
+    },
+    {
+      "i": 12,
+      "o": 1.279,
+      "h": 1.27982,
+      "l": 1.27696,
+      "c": 1.2775
+    },
+    {
+      "i": 13,
+      "o": 1.2775,
+      "h": 1.278,
+      "l": 1.27587,
+      "c": 1.2764
+    },
+    {
+      "i": 14,
+      "o": 1.2764,
+      "h": 1.27696,
+      "l": 1.27384,
+      "c": 1.2747
+    },
+    {
+      "i": 15,
+      "o": 1.2747,
+      "h": 1.27524,
+      "l": 1.27312,
+      "c": 1.2738
+    },
+    {
+      "i": 16,
+      "o": 1.2738,
+      "h": 1.27457,
+      "l": 1.27156,
+      "c": 1.2724
+    },
+    {
+      "i": 17,
+      "o": 1.2724,
+      "h": 1.27308,
+      "l": 1.27044,
+      "c": 1.2712
+    },
+    {
+      "i": 18,
+      "o": 1.2712,
+      "h": 1.27195,
+      "l": 1.27088,
+      "c": 1.2716
+    },
+    {
+      "i": 19,
+      "o": 1.2716,
+      "h": 1.2737,
+      "l": 1.2668,
+      "c": 1.2732
+    },
+    {
+      "i": 20,
+      "o": 1.2732,
+      "h": 1.2768,
+      "l": 1.2728,
+      "c": 1.2763
+    },
+    {
+      "i": 21,
+      "o": 1.2763,
+      "h": 1.27846,
+      "l": 1.27554,
+      "c": 1.2777
+    },
+    {
+      "i": 22,
+      "o": 1.2777,
+      "h": 1.27812,
+      "l": 1.2767,
+      "c": 1.2771
+    },
+    {
+      "i": 23,
+      "o": 1.2771,
+      "h": 1.27976,
+      "l": 1.27649,
+      "c": 1.2791
+    },
+    {
+      "i": 24,
+      "o": 1.2791,
+      "h": 1.28126,
+      "l": 1.27863,
+      "c": 1.2807
+    },
+    {
+      "i": 25,
+      "o": 1.2807,
+      "h": 1.28117,
+      "l": 1.2795,
+      "c": 1.2799
+    },
+    {
+      "i": 26,
+      "o": 1.2799,
+      "h": 1.2831,
+      "l": 1.27916,
+      "c": 1.2821
+    },
+    {
+      "i": 27,
+      "o": 1.2821,
+      "h": 1.2848,
+      "l": 1.28125,
+      "c": 1.2839
+    },
+    {
+      "i": 28,
+      "o": 1.2839,
+      "h": 1.28686,
+      "l": 1.28321,
+      "c": 1.2863
+    },
+    {
+      "i": 29,
+      "o": 1.2863,
+      "h": 1.28926,
+      "l": 1.28557,
+      "c": 1.2883
+    },
+    {
+      "i": 30,
+      "o": 1.2883,
+      "h": 1.29017,
+      "l": 1.2878,
+      "c": 1.2895
+    }
+  ]
+}

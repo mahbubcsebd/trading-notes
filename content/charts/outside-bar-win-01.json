@@ -1,0 +1,259 @@
+{
+  "id": "outside-bar-win-01",
+  "title": {
+    "en": "Bullish Outside Bar Sweeps Support, High Break Entry",
+    "bn": "Support-এর নিচে ঘুরে আসা bullish outside bar, high ভাঙলে entry"
+  },
+  "symbol": "USDJPY",
+  "timeframe": "H4",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bullish",
+  "outcome": "win",
+  "tags": [
+    "outside-bar",
+    "price-action",
+    "reversal",
+    "support",
+    "pattern"
+  ],
+  "module": "patterns",
+  "lessonSlugs": [],
+  "caption": {
+    "en": "Illustrative synthetic USDJPY H4: on the second test of support, a candle trades below the previous low and the support, then above the previous high, and closes near its own high: a bullish outside bar. A buy stop above it fills and price rallies to 2R.",
+    "bn": "শিক্ষামূলক কাল্পনিক USDJPY H4: support-এর দ্বিতীয় পরীক্ষায় একটি candle আগের low আর support-এর নিচে নামে, তারপর আগের high-এর উপরে ওঠে, আর নিজের high-এর কাছে close করে: bullish outside bar। তার উপরে buy stop fill হয়, দাম 2R পর্যন্ত যায়।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data, not a real market record.",
+    "bn": "শিক্ষামূলক কাল্পনিক ডেটা, বাস্তব মার্কেটের রেকর্ড নয়।"
+  },
+  "updatedAt": "2026-11-06T12:00:00Z",
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 151.606,
+      "label": "Support",
+      "color": "#3b82f6",
+      "style": "dashed"
+    },
+    {
+      "type": "marker",
+      "i": 4,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "1st touch"
+    },
+    {
+      "type": "marker",
+      "i": 15,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Outside bar"
+    },
+    {
+      "type": "hline",
+      "price": 151.806,
+      "label": "Entry (high break)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 151.466,
+      "label": "Stop",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 152.486,
+      "label": "Target 2R",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candle 4 marks support. Candles 10-14 fall back to it. Candle 15 takes out candle 14's low (and support), then its high, and closes in the top fifth of its range. Stops below support were swept and the whole range was reclaimed. Candle 16 breaks the outside bar high and fills the buy stop.",
+    "bn": "৪ নম্বর candle support চিহ্নিত করে। ১০-১৪ নম্বর আবার সেখানে নামে। ১৫ নম্বর ১৪ নম্বরের low (আর support) ভাঙে, তারপর high-ও, আর নিজের range-এর উপরের এক-পঞ্চমাংশে close করে। Support-এর নিচের stop sweep হয়ে পুরো range ফিরে এসেছে। ১৬ নম্বর outside bar-এর high ভেঙে buy stop fill করে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "An outside bar means most when it sweeps a level and closes at the far extreme",
+      "bn": "Level sweep করে উল্টো প্রান্তে close করলেই outside bar সবচেয়ে অর্থবহ"
+    }
+  ],
+  "entry": 151.806,
+  "stopLoss": 151.466,
+  "takeProfit": 152.486,
+  "rr": "1:2.0",
+  "candles": [
+    {
+      "i": 0,
+      "o": 152.4,
+      "h": 152.469,
+      "l": 152.175,
+      "c": 152.25
+    },
+    {
+      "i": 1,
+      "o": 152.25,
+      "h": 152.359,
+      "l": 151.913,
+      "c": 152.05
+    },
+    {
+      "i": 2,
+      "o": 152.05,
+      "h": 152.141,
+      "l": 151.871,
+      "c": 151.93
+    },
+    {
+      "i": 3,
+      "o": 151.93,
+      "h": 152.058,
+      "l": 151.636,
+      "c": 151.75
+    },
+    {
+      "i": 4,
+      "o": 151.75,
+      "h": 151.81,
+      "l": 151.606,
+      "c": 151.746
+    },
+    {
+      "i": 5,
+      "o": 151.746,
+      "h": 152.034,
+      "l": 151.628,
+      "c": 151.966
+    },
+    {
+      "i": 6,
+      "o": 151.966,
+      "h": 152.357,
+      "l": 151.816,
+      "c": 152.226
+    },
+    {
+      "i": 7,
+      "o": 152.226,
+      "h": 152.286,
+      "l": 152.097,
+      "c": 152.146
+    },
+    {
+      "i": 8,
+      "o": 152.146,
+      "h": 152.455,
+      "l": 152.066,
+      "c": 152.386
+    },
+    {
+      "i": 9,
+      "o": 152.386,
+      "h": 152.636,
+      "l": 152.267,
+      "c": 152.566
+    },
+    {
+      "i": 10,
+      "o": 152.566,
+      "h": 152.657,
+      "l": 152.326,
+      "c": 152.386
+    },
+    {
+      "i": 11,
+      "o": 152.386,
+      "h": 152.495,
+      "l": 152.081,
+      "c": 152.166
+    },
+    {
+      "i": 12,
+      "o": 152.166,
+      "h": 152.272,
+      "l": 151.907,
+      "c": 152.006
+    },
+    {
+      "i": 13,
+      "o": 152.006,
+      "h": 152.036,
+      "l": 151.696,
+      "c": 151.726
+    },
+    {
+      "i": 14,
+      "o": 151.726,
+      "h": 151.746,
+      "l": 151.656,
+      "c": 151.666
+    },
+    {
+      "i": 15,
+      "o": 151.666,
+      "h": 151.786,
+      "l": 151.506,
+      "c": 151.766
+    },
+    {
+      "i": 16,
+      "o": 151.766,
+      "h": 151.906,
+      "l": 151.736,
+      "c": 151.876
+    },
+    {
+      "i": 17,
+      "o": 151.876,
+      "h": 152.147,
+      "l": 151.798,
+      "c": 152.056
+    },
+    {
+      "i": 18,
+      "o": 152.056,
+      "h": 152.095,
+      "l": 151.955,
+      "c": 151.996
+    },
+    {
+      "i": 19,
+      "o": 151.996,
+      "h": 152.289,
+      "l": 151.936,
+      "c": 152.216
+    },
+    {
+      "i": 20,
+      "o": 152.216,
+      "h": 152.434,
+      "l": 152.154,
+      "c": 152.376
+    },
+    {
+      "i": 21,
+      "o": 152.376,
+      "h": 152.421,
+      "l": 152.255,
+      "c": 152.296
+    },
+    {
+      "i": 22,
+      "o": 152.296,
+      "h": 152.56,
+      "l": 152.205,
+      "c": 152.496
+    },
+    {
+      "i": 23,
+      "o": 152.496,
+      "h": 152.701,
+      "l": 152.437,
+      "c": 152.636
+    }
+  ]
+}

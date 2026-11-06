@@ -1,41 +1,339 @@
 ---
-title: "Inverted Hammer"
-description: "A bullish reversal single candle pattern with a small lower body and a long upper shadow at key support."
+title: "Inverted Hammer: buyers' first attempt at the bottom of a downtrend"
+description: "How to spot an inverted hammer, how it differs from a shooting star, why it is weak without a close above its high, and where to enter and stop, with a winning and a failing chart."
 type: bullish
-category: "Inverted Hammer"
-winrate: "66% - 71%"
-riskReward: "1:2.5 to 1:4"
-maxRisk: "1%"
-bestLocation: "Major Support Floor / Demand Zone / Bottom of Downtrend"
-chartId: "inverted-hammer-01"
-tags: [bullish, pattern, candlestick]
+category: rejection
+level: intermediate
+candleCount: 1
+signal: reversal
+chartId: inverted-hammer-win-01
+tags: [pattern, candlestick, inverted-hammer, reversal, support]
+status: done
+sources:
+  - type: book
+    title: "Japanese Candlestick Charting Techniques - Steve Nison"
+    note: "Inverted hammer and shooting star, bullish confirmation"
+  - type: blog
+    title: "Inverted Hammer - Investopedia"
+    url: "https://www.investopedia.com/terms/i/invertedhammer.asp"
+updated: 2026-11-06
 ---
 
-<div className="flex gap-6 items-end my-8 p-8 bg-zinc-950 border border-border/50 rounded-2xl w-max relative overflow-hidden">
-  <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:20px_20px]"></div>
-  <div className="relative z-10 flex gap-6">
-    <Candle color="bear" bodyH="h-10" topW="h-2" botW="h-2" offset="mt-4" />
-    <Candle color="bull" bodyH="h-4" topW="h-14" botW="h-2" offset="mt-14" />
-  </div>
-</div>
+A downtrend is running. Suddenly a candle climbs a long way, but closes almost at its low, leaving a long wick on top. One trader says "buyers are here, buy!", another says "it was sold up there, sell!" Each is half right. An inverted hammer is buyers' first attempt, not their win. The next candle supplies the proof.
 
-## Market Psychology & Institutional Order Flow
-After an extended decline, buyers test the upside by aggressively driving prices higher, leaving a tall upper wick. Even though sellers pushed price back near the open, the test proved that significant demand exists at this level. Confirmation on the next bar unleashes the full reversal.
+## At a glance
 
-## 5 Strict Anatomy & Recognition Rules
-1. **Downtrend Context:** Must form at the bottom of a downtrend or at a defined support floor.
-2. **Upper Wick:** Upper shadow must be at least twice the height of the real body.
-3. **Lower Wick:** Little to no lower shadow (< 10% of total candle height).
-4. **Body Position:** The real body is located in the bottom third of the candle range.
-5. **Bullish Confirmation:** The subsequent candle must close green above the Inverted Hammer body.
+| Item          | Inverted Hammer                                                                                                                     |
+| :------------ | :---------------------------------------------------------------------------------------------------------------------------------- |
+| Type          | Bullish reversal lean, one candle (weak without confirmation)                                                                       |
+| Where to look | At the bottom of a downtrend, at a marked support                                                                                   |
+| Key features  | Small body at the bottom, upper wick at least twice the body, almost no lower wick                                                  |
+| Confirmation  | Next candle closes **above the inverted hammer high**                                                                               |
+| Stop          | Below the inverted hammer low (and below support), plus spread and a buffer                                                         |
+| Invalidation  | A close below the inverted hammer low                                                                                               |
+| Look-alikes   | [Shooting Star](/en/patterns/shooting-star) (same shape, at the top of an uptrend), [Gravestone Doji](/en/patterns/gravestone-doji) |
+| Opposite      | [Hanging Man](/en/patterns/hanging-man)                                                                                             |
 
-## 3 Proven Trade Execution Strategies
-**Strategy 1 (Break of High Confirmation):** Enter Buy Stop 2 pips above the high of the Inverted Hammer with Stop Loss below the low.
-**Strategy 2 (Retracement Limit Entry):** Buy the 50% pullback of the candle on a 15-minute timeframe for tighter risk.
-**Strategy 3 (Demand Zone Confluence):** Wait for price to touch the lower support boundary and enter when the hammer closes.
+## What you will be able to do
 
-## Where It Works vs Where It Fails
-- ✅ **A+ High Probability Setups:** Daily support floor, Sell-Side Liquidity (SSL) sweep, and RSI Bullish divergence.
-- ❌ **Low Probability Traps (AVOID):** Forming near resistance (where it becomes a Shooting Star) or during strong downtrend momentum.
+- **Tell** an inverted hammer from a shooting star by location.
+- **Explain** why its confirmation should be stricter than a hammer's.
+- **Place** an entry on a close above the high and a stop below the low.
+- **Recognise** the half-confirmation trap.
 
-> ⚠️ **Pro Risk Management & Mindset Rule:** Always wait for the next candle to confirm that buyers are ready to follow through. Always limit risk to 1%–2% per trade and maintain a predefined Stop Loss.
+## Why it matters
+
+- **A wick with two meanings.** The long upper wick says two things at once: buyers could lift price, and sellers pushed it back. The close is low, so judged alone, sellers won this candle.
+- **So confirmation matters more.** In a [Hammer](/en/patterns/hammer) the close is high and buyers already won the candle. In an inverted hammer they have to win the next one.
+- **The stop is on the short side.** There is almost no lower wick, so a stop below the low usually keeps risk manageable.
+
+Prerequisites: [Single Candle Patterns](/en/learn/04-candlesticks/02-single-candle-patterns) and [Confirmation vs Trigger](/en/learn/09-price-action-entries-strategies/04-confirmation-vs-trigger).
+
+## What is an inverted hammer
+
+**An inverted hammer is a candle at the bottom of a downtrend with a small body in the lower part of the candle and an upper wick at least twice the length of the body.** It looks like a hammer turned upside down: handle up, head down.
+
+Picture a swimmer who has been under water for a while, lifts their head for a first breath, then sinks a little again. Still under water, but they have shown the strength to rise. Only if they keep their head up next time are they safe.
+
+<CandleDiagram
+  title="Same shape, two places"
+  candles={[
+    { o: 62, h: 63, l: 56, c: 57, dim: true },
+    { o: 57, h: 58, l: 51, c: 52, dim: true },
+    {
+      o: 50,
+      h: 61,
+      l: 49.5,
+      c: 52,
+      label: "Inverted hammer",
+      note: "bottom of a downtrend",
+    },
+    { o: 52, h: 60, l: 51, c: 59, dim: true },
+    { o: 59, h: 66, l: 58, c: 65, dim: true },
+    {
+      o: 65,
+      h: 76,
+      l: 64.5,
+      c: 67,
+      label: "Shooting star",
+      note: "top of an uptrend",
+    },
+  ]}
+  caption="Both candles have the same shape. At a bottom it is an inverted hammer, at a top a shooting star."
+/>
+
+### Identification rules
+
+| Rule                                               | Required?      | Why                                                 |
+| :------------------------------------------------- | :------------- | :-------------------------------------------------- |
+| Small body in the lower part of the candle         | Yes            | A body in the middle makes it a spinning top        |
+| Upper wick at least twice the body                 | Yes            | A short wick carries no story of buyers trying      |
+| No lower wick, or a very small one                 | Yes            | A long lower wick is a different shape              |
+| A clear downtrend before it, near a marked support | Yes            | This is what separates it from a shooting star      |
+| Next candle closes above the high                  | Yes (to trade) | A close above the body is not enough; see Example 2 |
+
+<Callout type="note">
+  Nison's book asks for bullish confirmation after an inverted hammer: the next
+  candle opening above the inverted hammer body, and especially closing higher.
+  On this page I use a stricter rule: **a close above the high**. It moves the
+  entry further away but cuts the half-confirmation trap. This is my working
+  rule, not a statistic.
+</Callout>
+
+## Strong vs weak inverted hammer
+
+<DiagramRow>
+  <CandleDiagram
+    title="Strong"
+    verdict="good"
+    verdictLabel="tradeable"
+    candles={[
+      { o: 62, h: 63, l: 56, c: 57, dim: true },
+      { o: 57, h: 58, l: 50, c: 51, dim: true },
+      { o: 50, h: 59, l: 49.6, c: 51.5, label: "at support" },
+      { o: 51.5, h: 62, l: 51, c: 61, label: "closes above high" },
+    ]}
+    levels={[{ price: 49, label: "support", tone: "support" }]}
+    caption="An inverted hammer at support; the next candle closes above its high."
+  />
+  <CandleDiagram
+    title="Weak"
+    verdict="bad"
+    verdictLabel="avoid"
+    candles={[
+      { o: 70, h: 71, l: 64, c: 65, dim: true },
+      { o: 65, h: 66, l: 59, c: 60, dim: true },
+      { o: 60, h: 66, l: 59.6, c: 61, label: "no level" },
+      { o: 61, h: 63, l: 60.5, c: 62.5, label: "half confirmation" },
+      { o: 62.5, h: 63, l: 55, c: 56, dim: true },
+    ]}
+    caption="Mid-downtrend; the next candle closes above the body but below the high. Then the trend resumes."
+  />
+</DiagramRow>
+
+| Quality check | Strong                                       | Weak                                        |
+| :------------ | :------------------------------------------- | :------------------------------------------ |
+| Where         | At a marked support or demand zone           | Mid-downtrend, no level                     |
+| Upper wick    | Reaches into the prior bearish candle's body | Short; stops well below the last lower high |
+| Next candle   | Closes above the high                        | Closes above the body but below the high    |
+| Room above    | At least 1.5R to the prior swing high        | Nearest lower high very close               |
+
+## The story inside the candle
+
+One common interpretation of an inverted hammer at support at the bottom of a downtrend, read through time:
+
+1. **Buyers lift price from the open.** For the first time in a while price rises a good distance. Some shorts take profit.
+2. **Sellers push it back.** New sell orders arrive higher up and price falls back to close near the open.
+3. **But no new low.** In the downtrend every candle made a new low; this one did not.
+
+The result: selling pressure is still there, but buyers have woken up. If the next candle closes above the inverted hammer high, those who sold up there are now losing, and buyers really have won.
+
+<Callout type="note">
+  This is a common interpretation, not a proven fact. A chart does not show who
+  bought or sold. We only see how price behaved.
+</Callout>
+
+## Where it works and where it does not
+
+<Compare
+  leftLabel="Where an inverted hammer carries weight"
+  rightLabel="Where an inverted hammer is often a trap"
+  left="- At a marked support after a long downtrend
+- At a higher-timeframe demand zone
+- At the bottom of a pullback inside an uptrend, in the trend direction
+- When the next candle closes above the high
+- When there is enough room to the prior swing high"
+  right="- Mid-way through a steady downtrend, no support
+- When the upper wick stops at the last lower high or a falling resistance
+- When the next candle only closes above the body, below the high
+- On a big news candle
+- When the nearest lower high is within 1R"
+/>
+
+## Step by step: trading an inverted hammer
+
+<Steps>
+
+### Step 1: Level first
+
+Draw support in advance. Check that price came down into it and that the inverted hammer made no new low, or only a slight one before returning.
+
+### Step 2: Wait for the close
+
+A live candle's wick or body can change in the last minute. Only count closed candles.
+
+### Step 3: Measure
+
+Body at the bottom? Upper wick at least twice the body? Almost no lower wick? Does the upper wick reach into the prior candle's body?
+
+### Step 4: Confirmation and entry
+
+| Entry                                       | Where                                          | Pro                        | Con                              |
+| :------------------------------------------ | :--------------------------------------------- | :------------------------- | :------------------------------- |
+| **Close above the high** (this page's rule) | Buy when the next candle closes above the high | Proof that buyers won      | Entry far away, bigger stop      |
+| **High break**                              | Buy stop just above the inverted hammer high   | In before the close        | Can fill on a wick and snap back |
+| **Close above the body**                    | Buy when the next candle closes above the body | Closer entry, smaller stop | Half a confirmation; more traps  |
+
+### Step 5: Place the stop
+
+Below the inverted hammer low and below support too, plus the [spread](/en/learn/01-foundations/04-spread-commission-swap) and a buffer.
+
+### Step 6: Size and target
+
+Use the entry-to-stop distance to calculate [position size](/en/learn/08-risk-management/02-position-sizing), risking no more than 1%. A close-above-the-high entry is far away, so always check the [risk reward](/en/learn/08-risk-management/03-risk-reward) to the prior swing high is at least 1:1.5 before setting a target.
+
+### Step 7: Manage
+
+Repeated closes back below the inverted hammer high mean the idea is weakening. A close below the low means it is wrong: get out.
+
+</Steps>
+
+### Pre-trade checklist
+
+<Checklist
+  id="pattern-inverted-hammer-pretrade-en"
+  items={[
+    "Was support marked before the inverted hammer, and did the downtrend stall there?",
+    "Does the shape pass the rules (small body at the bottom, upper wick at least twice the body, almost no lower wick)?",
+    "Has the next candle closed, and did it close above the inverted hammer high?",
+    "Is the risk reward to the prior swing high at least 1:1.5?",
+    "Is there no higher-timeframe level right in front of the trade?",
+  ]}
+/>
+
+If any box stays empty, skip the trade.
+
+## Example 1: when it works (illustrative)
+
+<Chart
+  id="inverted-hammer-win-01"
+  height={420}
+  caption="EURUSD D1 (illustrative, synthetic) — an inverted hammer at a once-tested support; long when the next candle closes above its high."
+/>
+
+- **What was visible:** Candle 4 marked support at 1.0854. Candles 5-9 rallied to about 1.1086, and 10-14 fell back near support.
+- **The inverted hammer:** Candle 15 opened at 1.0866, closed at 1.0876, low 1.0860. The upper wick reached 1.0916: 40 pips, four times the body. No new low.
+- **Confirmation:** Candle 16 closed at 1.0924, above the inverted hammer high.
+- **Decision:** Buy on that close at 1.0924. Stop 1.0850 (below both the low and support): 74 pips of risk. Target 1.1072 (2R), just under the prior swing high at 1.1086.
+- **Result:** Candle 23 reached the target.
+- **Lesson:** A level, the shape, and a clear close above the high. The entry was far away, but there was about 2.2R of room above.
+
+<TradeSetup
+  direction="long"
+  pair="EURUSD"
+  entry={1.0924}
+  stop={1.085}
+  target={1.1072}
+/>
+
+(Illustrative example, not a real trade. Not every inverted hammer leads to a reversal, and no result is guaranteed.)
+
+## Example 2: when it is a trap (illustrative)
+
+<Chart
+  id="inverted-hammer-fail-01"
+  height={420}
+  caption="GBPUSD H4 (illustrative, synthetic) — an inverted hammer mid-downtrend, bought on half a confirmation, then stopped out."
+/>
+
+- **What was visible:** Candles 0-7 were a steady downtrend from 1.2900 to 1.2742, a series of lower highs. No marked support below.
+- **The inverted hammer:** Candle 8 opened at 1.2742, closed at 1.2748, low 1.2739, high 1.2776. The upper wick stopped well below the last lower high (about 1.2805).
+- **The wrong decision:** Candle 9 closed above the body at 1.2758, but far below the 1.2776 high. "Confirmation is in," so buy at 1.2758, stop 1.2733: 25 pips of risk.
+- **What happened:** Candle 10, a large bearish candle, broke the stop and the downtrend carried on.
+- **Why it failed:** There was no level, and the confirmation was only half: a close above the body, not above the high. The first and third checklist boxes would have filtered it out.
+
+**Lesson:** Mid-downtrend, an upper wick means sellers rejected higher prices. Because the stop was set in advance, the loss stayed at 1R.
+
+## Common mistakes
+
+| Mistake                                              | Why it happens                  | What to do instead                                     |
+| :--------------------------------------------------- | :------------------------------ | :----------------------------------------------------- |
+| Buying at the inverted hammer close                  | Treating it like a hammer       | The close is low; the next candle has to prove the win |
+| Treating a close above the body as full confirmation | Wanting a small stop            | Wait for a close above the high                        |
+| Buying the same shape at a top                       | Not recognising a shooting star | Location first; at a top it is a shooting star         |
+| Buying mid-downtrend without a level                 | Reading every wick as buyers    | Only at marked support                                 |
+| Not measuring R:R when the entry is far              | Too much faith in confirmation  | Measure R:R to the swing high; skip below 1.5          |
+
+## Pro tips
+
+<Callout type="tip">
+  The deeper the upper wick reaches into the prior bearish candle's body, the
+  stronger the buyers' attempt. A wick up to that candle's open is the clearest.
+  This is a working measure, not a statistic.
+</Callout>
+
+<Callout type="tip">
+  If a close-above-the-high entry feels too far, consider a limit order on the
+  first small pullback after confirmation. If price does not return you miss the
+  trade, but the R:R is much better. More in [Breakout Retest
+  Entry](/en/learn/09-price-action-entries-strategies/01-breakout-retest-pullback-entry).
+</Callout>
+
+## Summary
+
+<KeyTakeaways>
+
+- Inverted hammer = small body at the bottom, long upper wick, at the bottom of a downtrend; at a top the same shape is a shooting star.
+- The close is low, so alone it is weak: buyers' attempt, not their win.
+- Trade it only when the next candle closes above the high; a close above the body is half a confirmation.
+- Stop below the low and support; the entry is far, so always measure R:R to the swing high.
+
+</KeyTakeaways>
+
+## Practice and your own backtest
+
+Open EURUSD D1 or GBPUSD H4 in TradingView. Find at least 20 inverted hammers. Log one row each:
+
+| Date | At support? | Where the next candle closed (above body / above high / below) | R to swing high | Result (R) |
+| :--- | :---------- | :------------------------------------------------------------- | :-------------- | :--------- |
+|      |             |                                                                |                 |            |
+
+Then split into "close above the high" and "close above the body only" and compare the average R. Do not draw conclusions from fewer than 30 samples.
+
+## Quiz
+
+1. Which needs confirmation more, an inverted hammer or a hammer, and why?
+2. The next candle closes above the inverted hammer body but below its high. Under this page's rule, what do you do?
+3. What is the same shape called at the top of an uptrend?
+4. Which checklist boxes would have filtered out the trade in Example 2?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** The inverted hammer. Its close is low, so sellers won that candle. A hammer closes high; buyers already won the candle.
+
+**2.** Wait. That is half a confirmation. No close above the high, no trade.
+
+**3.** A shooting star.
+
+**4.** The first box (no support) and the third box (the next candle did not close above the high).
+
+</details>
+
+## Next steps
+
+- Before this: [Single Candle Patterns](/en/learn/04-candlesticks/02-single-candle-patterns).
+- Why location gives the name: [Candle Context](/en/learn/04-candlesticks/05-candle-context).
+- Same family: [Hammer](/en/patterns/hammer), [Shooting Star](/en/patterns/shooting-star), [Bullish Engulfing](/en/patterns/bullish-engulfing).
+
+<Disclaimer />

@@ -1,0 +1,280 @@
+{
+  "id": "marubozu-win-01",
+  "title": {
+    "en": "Bullish Marubozu Range Breakout, 50% Body Retest",
+    "bn": "Range ভাঙা bullish marubozu, body-র 50% retest-এ entry"
+  },
+  "symbol": "EURUSD",
+  "timeframe": "H1",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bullish",
+  "outcome": "win",
+  "tags": [
+    "marubozu",
+    "candlestick",
+    "breakout",
+    "range",
+    "pattern"
+  ],
+  "module": "patterns",
+  "lessonSlugs": [],
+  "caption": {
+    "en": "Illustrative synthetic EURUSD H1: after twelve candles inside a range, a bullish marubozu closes well above the range top. Price pulls back to the middle of its body, fills a buy limit and continues higher.",
+    "bn": "শিক্ষামূলক কাল্পনিক EURUSD H1: বারোটি candle range-এর ভেতরে থাকার পর একটি bullish marubozu range-এর উপরে স্পষ্টভাবে close করে। দাম তার body-র মাঝামাঝি ফিরে buy limit fill করে, তারপর উপরে যায়।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data, not a real market record.",
+    "bn": "শিক্ষামূলক কাল্পনিক ডেটা, বাস্তব মার্কেটের রেকর্ড নয়।"
+  },
+  "updatedAt": "2026-11-06T12:00:00Z",
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 1.08851,
+      "label": "Range top",
+      "color": "#3b82f6",
+      "style": "dashed"
+    },
+    {
+      "type": "marker",
+      "i": 12,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Marubozu"
+    },
+    {
+      "type": "marker",
+      "i": 15,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "50% retest"
+    },
+    {
+      "type": "hline",
+      "price": 1.0882,
+      "label": "Entry (50% body)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.0855,
+      "label": "Stop",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.0936,
+      "label": "Target 2R",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candles 0-11 build a range. Candle 12 is a marubozu: almost no wicks, body about four times the earlier candles, close far above the range top. The buy limit sits at 50% of its body, the stop under its low. Candle 15 fills the order; price reaches 2R.",
+    "bn": "০-১১ নম্বর candle একটি range তৈরি করে। ১২ নম্বর marubozu: প্রায় wick নেই, body আগের candle-গুলোর প্রায় চার গুণ, close range-এর অনেক উপরে। Buy limit body-র 50%-এ, stop তার low-এর নিচে। ১৫ নম্বর order fill করে; দাম 2R পর্যন্ত যায়।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "A marubozu that breaks a level is a fact; the entry comes on the pullback",
+      "bn": "Level ভাঙা marubozu একটি তথ্য; entry আসে pullback-এ"
+    }
+  ],
+  "entry": 1.0882,
+  "stopLoss": 1.0855,
+  "takeProfit": 1.0936,
+  "rr": "1:2.0",
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.086,
+      "h": 1.08731,
+      "l": 1.08546,
+      "c": 1.0868
+    },
+    {
+      "i": 1,
+      "o": 1.0868,
+      "h": 1.08844,
+      "l": 1.08612,
+      "c": 1.0878
+    },
+    {
+      "i": 2,
+      "o": 1.0878,
+      "h": 1.08851,
+      "l": 1.08583,
+      "c": 1.0866
+    },
+    {
+      "i": 3,
+      "o": 1.0866,
+      "h": 1.08699,
+      "l": 1.08519,
+      "c": 1.0857
+    },
+    {
+      "i": 4,
+      "o": 1.0857,
+      "h": 1.08753,
+      "l": 1.08507,
+      "c": 1.0868
+    },
+    {
+      "i": 5,
+      "o": 1.0868,
+      "h": 1.08832,
+      "l": 1.08639,
+      "c": 1.0877
+    },
+    {
+      "i": 6,
+      "o": 1.0877,
+      "h": 1.08838,
+      "l": 1.08572,
+      "c": 1.0863
+    },
+    {
+      "i": 7,
+      "o": 1.0863,
+      "h": 1.08679,
+      "l": 1.085,
+      "c": 1.0855
+    },
+    {
+      "i": 8,
+      "o": 1.0855,
+      "h": 1.0869,
+      "l": 1.08503,
+      "c": 1.0865
+    },
+    {
+      "i": 9,
+      "o": 1.0865,
+      "h": 1.08824,
+      "l": 1.08573,
+      "c": 1.0877
+    },
+    {
+      "i": 10,
+      "o": 1.0877,
+      "h": 1.08833,
+      "l": 1.08625,
+      "c": 1.0867
+    },
+    {
+      "i": 11,
+      "o": 1.0867,
+      "h": 1.08716,
+      "l": 1.08576,
+      "c": 1.0861
+    },
+    {
+      "i": 12,
+      "o": 1.0861,
+      "h": 1.0904,
+      "l": 1.086,
+      "c": 1.0903
+    },
+    {
+      "i": 13,
+      "o": 1.0903,
+      "h": 1.091,
+      "l": 1.0899,
+      "c": 1.0907
+    },
+    {
+      "i": 14,
+      "o": 1.0907,
+      "h": 1.0909,
+      "l": 1.0886,
+      "c": 1.089
+    },
+    {
+      "i": 15,
+      "o": 1.089,
+      "h": 1.0893,
+      "l": 1.0879,
+      "c": 1.0889
+    },
+    {
+      "i": 16,
+      "o": 1.0889,
+      "h": 1.09067,
+      "l": 1.08848,
+      "c": 1.0901
+    },
+    {
+      "i": 17,
+      "o": 1.0901,
+      "h": 1.09122,
+      "l": 1.08961,
+      "c": 1.0909
+    },
+    {
+      "i": 18,
+      "o": 1.0909,
+      "h": 1.0912,
+      "l": 1.0901,
+      "c": 1.0904
+    },
+    {
+      "i": 19,
+      "o": 1.0904,
+      "h": 1.09255,
+      "l": 1.08968,
+      "c": 1.0918
+    },
+    {
+      "i": 20,
+      "o": 1.0918,
+      "h": 1.09322,
+      "l": 1.09121,
+      "c": 1.0928
+    },
+    {
+      "i": 21,
+      "o": 1.0928,
+      "h": 1.09317,
+      "l": 1.09181,
+      "c": 1.0922
+    },
+    {
+      "i": 22,
+      "o": 1.0922,
+      "h": 1.09384,
+      "l": 1.09154,
+      "c": 1.0934
+    },
+    {
+      "i": 23,
+      "o": 1.0934,
+      "h": 1.09479,
+      "l": 1.09285,
+      "c": 1.0943
+    },
+    {
+      "i": 24,
+      "o": 1.0943,
+      "h": 1.09546,
+      "l": 1.09394,
+      "c": 1.095
+    },
+    {
+      "i": 25,
+      "o": 1.095,
+      "h": 1.09656,
+      "l": 1.09459,
+      "c": 1.0961
+    },
+    {
+      "i": 26,
+      "o": 1.0961,
+      "h": 1.09701,
+      "l": 1.0958,
+      "c": 1.0967
+    }
+  ]
+}

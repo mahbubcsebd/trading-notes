@@ -1,0 +1,194 @@
+---
+title: "নিজের Strategy লেখা: নিয়মগুলো এক পাতায়"
+description: "Strategy মানে কী, কোন নিয়মগুলো লিখতে হয়, কেন একটি জয় বা হার কিছুই প্রমাণ করে না এবং এক পাতার strategy কার্ড বানানোর ধাপ — chart সহ।"
+level: intermediate
+tags: [strategy, rules, price-action, entry, plan]
+instruments: [EURUSD]
+timeframes: [H4]
+status: done
+sources:
+  - type: blog
+    title: "Trading Strategy - Investopedia"
+    url: "https://www.investopedia.com/terms/t/trading-strategy.asp"
+  - type: blog
+    title: "Trading Plan - Investopedia"
+    url: "https://www.investopedia.com/articles/trading/06/tradingplan.asp"
+updated: 2026-11-05
+---
+
+# নিজের Strategy লেখা: নিয়মগুলো এক পাতায়
+
+"আমি price action করি" বললে কিছুই বলা হয় না। কোথায় ঢোকেন? কখন বেরোন? কত ঝুঁকি? লিখতে না পারলে সেটি strategy নয়, অভ্যাস।
+
+## এই লেখা পড়ে আপনি যা পারবেন
+
+- Strategy-র **প্রয়োজনীয় অংশগুলো বলতে পারবেন**।
+- নিজের নিয়ম **এক পাতার কার্ডে লিখতে পারবেন**।
+- একটি জয় বা হার দিয়ে strategy বিচার করা যে ভুল, তা **বুঝিয়ে বলতে পারবেন**।
+
+## কেন এটি জরুরি
+
+- **নিয়ম না থাকলে যাচাই নেই।** Backtest-এর জন্য লিখিত নিয়ম লাগে।
+- **আবেগ নিয়ম বদলায়।** লিখিত কার্ড চাপের মধ্যে আপনাকে ফিরিয়ে আনে।
+- **একই ভুল ধরা যায়।** নিয়ম ভাঙলে সেটি দেখা যায়।
+
+পূর্বশর্ত: [Entry Model Checklist](/bn/learn/09-price-action-entries-strategies/05-entry-model-checklist) এবং [Expectancy](/bn/learn/08-risk-management/07-expectancy)।
+
+## Strategy কী
+
+**Strategy হলো লিখিত নিয়মের সেট, যা বলে কখন trade নেবেন, কীভাবে ঝুঁকি সামলাবেন, কখন বেরোবেন এবং কখন নেবেন না।**
+
+ভাবুন রান্নার রেসিপি। "ভালো রান্না করি" রেসিপি নয়। উপকরণ, পরিমাণ, সময়, ধাপ থাকলে অন্য কেউও পুনরায় বানাতে পারে। আপনার strategy-ও পুনরায় চালানো যেতে হবে।
+
+| অংশ          | প্রশ্ন                                |
+| :----------- | :------------------------------------ |
+| বাজার ও সময় | কোন pair, কোন timeframe, কোন session? |
+| দিক          | কখন buy, কখন sell, কখন কিছুই না?      |
+| Entry        | setup, confirmation, trigger কী?      |
+| Stop         | কোথায়, কীসের ভিত্তিতে?               |
+| Target       | কোথায়, ন্যূনতম ratio কত?             |
+| ঝুঁকি        | প্রতি trade ও দিনে কত?                |
+| বাদ দেওয়া   | কখন trade নেই (খবর, range)?           |
+
+## Chart-এ কেমন দেখায়
+
+<Chart
+  id="strategy-sample-win-01"
+  height={440}
+  caption="EURUSD H4 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — নিয়ম: H4 uptrend, শেষ higher low-এ pullback, bullish trigger candle, low-এর নিচে stop, 1:3 target। এই নমুনা সব নিয়ম মেনে জিতেছে। Buy 1.0935, stop 1.0905, target 1.1025।"
+/>
+
+নিয়ম এখানে সংক্ষিপ্ত: trend, pullback, trigger, stop, target। প্রতিটির উত্তর আগে থেকে জানা।
+
+## ধাপে ধাপে: strategy কার্ড বানান
+
+<Steps>
+
+### ধাপ ১: একটি pair ও একটি timeframe বাছুন
+
+শুরুতে এক জোড়া। বেশি হলে নমুনা ছড়িয়ে যায়।
+
+### ধাপ ২: Entry-র নিয়ম লিখুন
+
+[Setup, confirmation ও trigger](/bn/learn/09-price-action-entries-strategies/04-confirmation-vs-trigger) আলাদা করে। "ভালো লাগলে" লেখা যাবে না।
+
+### ধাপ ৩: Stop ও target-এর নিয়ম
+
+Stop structure-এর ওপারে, target পরের বাধার আগে, ন্যূনতম [ratio](/bn/learn/08-risk-management/03-risk-reward) কত তা লিখুন।
+
+### ধাপ ৪: ঝুঁকির নিয়ম
+
+[Risk per trade](/bn/learn/08-risk-management/01-risk-per-trade) ও [দৈনিক limit](/bn/learn/08-risk-management/05-daily-weekly-limits) লিখুন।
+
+### ধাপ ৫: "কখন নয়" লিখুন
+
+খবরের সময়, range বাজার, সীমা পেরোলে। এই অংশটিই প্রায়ই ভুলে যাওয়া হয়।
+
+### ধাপ ৬: নমুনা জমান
+
+কমপক্ষে বহু trade (demo বা backtest) জমা না হওয়া পর্যন্ত strategy-কে ভালো বা খারাপ বলবেন না। যাচাই পদ্ধতি: [How to Backtest](/bn/learn/15-backtesting-journal/01-how-to-backtest)।
+
+</Steps>
+
+## উদাহরণ ১: যখন কাজ করে (কাল্পনিক)
+
+- **আগে থেকে ঠিক:** ঝুঁকি 1%, stop 30 pip, target 90 pip (1:3)।
+- **ফল:** সব নিয়ম মেনে trade, দাম target ছুঁয়েছে।
+- **শিক্ষা:** এক জয় প্রমাণ নয়, শুধু একটি নমুনা।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়।)
+
+## উদাহরণ ২: যখন ব্যর্থ হয় (কাল্পনিক)
+
+<Chart
+  id="strategy-sample-loss-01"
+  height={440}
+  caption="EURUSD H4 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — একই strategy, একই নিয়ম, একই entry 1.0935। এবার higher low ভেঙেছে, stop 1.0905 লেগেছে।"
+/>
+
+- **কী দেখা যাচ্ছিল:** নিয়মের সব ঘর সবুজ।
+- **ফল:** Higher low ভেঙে stop লেগেছে। লোকসান 1% (পরিকল্পিত)।
+- **কেন ব্যর্থ:** কোনো ভুল নেই। এটি strategy-র স্বাভাবিক লোকসান।
+- **শিক্ষা:** নিয়ম মেনে হারা ভুল নয়, নিয়ম ভেঙে জেতাই ভুল।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়।)
+
+## সাধারণ ভুল
+
+| ভুল                           | কেন হয়              | কী করবেন                           |
+| :---------------------------- | :------------------- | :--------------------------------- |
+| অস্পষ্ট নিয়ম ("ভালো লাগলে")  | লেখার আলস্য          | হ্যাঁ/না-তে উত্তরযোগ্য নিয়ম লিখুন |
+| দুটি হারের পর strategy বদলানো | ফলের ওপর আবেগ        | বহু নমুনা না হওয়া পর্যন্ত রাখুন   |
+| বেশি strategy একসঙ্গে         | সবকিছু চেষ্টার ইচ্ছা | একটি strategy, একটি pair           |
+| "কখন নয়" না লেখা             | শুধু entry ভাবা      | বাদ দেওয়ার নিয়ম আলাদা অংশ        |
+
+## Pro tips
+
+<Callout type="tip">
+  Strategy-র নিয়ম এক পাতায় ধরাতে না পারলে সেটি জটিল। এক পাতায় ধরা না গেলে
+  চাপের সময় মনে থাকবে না।
+</Callout>
+
+<Callout type="warning">
+  অন্যের strategy নকল করলে তাদের পরিস্থিতিও নকল হয় না। নিজের সময়,
+  ঝুঁকি-সহনশীলতা ও নমুনায় যাচাই করুন।
+</Callout>
+
+## কখন এটা কাজ করে না
+
+- **নমুনা কম হলে:** দশটি trade-এ ফল ভাগ্যও হতে পারে।
+- **বাজার চরিত্র বদলালে:** trend থেকে range-এ গেলে পুরোনো নিয়ম দুর্বল হতে পারে।
+- **নিয়ম না মানলে:** লিখিত strategy কাগজেই থেকে যায়।
+- **খরচ বাদ দিলে:** spread ও commission ফল নষ্ট করতে পারে।
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- Strategy মানে লিখিত নিয়ম: বাজার, entry, stop, target, ঝুঁকি ও "কখন নয়"।
+- এক জয় বা এক হার strategy প্রমাণ করে না।
+- নিয়ম মেনে হারা স্বাভাবিক, নিয়ম ভেঙে জেতা বিপজ্জনক।
+- এক পাতার কার্ড চাপের সময় আপনাকে ফিরিয়ে আনে।
+
+</KeyTakeaways>
+
+## অনুশীলন
+
+আপনার strategy-র জন্য এক পাতার কার্ড লিখুন: pair, timeframe, entry, stop, target, ঝুঁকি, "কখন নয়"। তারপর আগের এক মাসের চার্টে সেটি প্রয়োগ করে কয়টি trade হতো ও ফল কী গুনুন।
+
+## কুইজ
+
+1. Strategy-র অপরিহার্য অংশগুলো কী কী?
+2. এক জয় দেখে strategy ভালো বলা কেন ভুল?
+3. "কখন trade নয়" কেন লিখতে হয়?
+4. নিয়ম মেনে হারলে কী করবেন?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** বাজার ও সময়, entry, stop, target, ঝুঁকি, কখন নয়।
+
+**২.** একটি ফল ভাগ্যও হতে পারে। বহু নমুনা দরকার।
+
+**৩.** বাজারের খারাপ পরিস্থিতি এড়াতে, নইলে একই ভুল বারবার হয়।
+
+**৪.** Journal-এ লিখে এগিয়ে যান। নিয়ম বদলানোর আগে বহু নমুনা দেখুন।
+
+</details>
+
+## পরের ধাপ
+
+- আগে: [Entry Model Checklist](/bn/learn/09-price-action-entries-strategies/05-entry-model-checklist)।
+- পরে: [Trade Management ও Execution](/bn/learn/10-trade-management-execution/01-stop-loss-placement)।
+- সম্পর্কিত: [Trading Plan Template](/bn/learn/14-trading-plan-system/01-trading-plan-template)।
+
+### সূত্র
+
+- <ExternalLink href="https://www.investopedia.com/terms/t/trading-strategy.asp">
+    Trading Strategy, Investopedia
+  </ExternalLink>
+- <ExternalLink href="https://www.investopedia.com/articles/trading/06/tradingplan.asp">
+    Trading Plan, Investopedia
+  </ExternalLink>
+
+<Disclaimer />

@@ -1,0 +1,271 @@
+---
+title: "Falling Three Methods: downtrend-এর ভেতরে শান্ত বিরতি, তারপর আবার পতন"
+description: "Falling three methods কীভাবে চিনবেন, rising three methods-এর উল্টো ছবি, কেন বিরতির candle শান্ত হওয়া জরুরি, continuation short-এর entry, stop ও target — chart সহ।"
+type: bearish
+category: continuation
+level: advanced
+candleCount: 5
+signal: continuation
+chartId: falling-three-methods-win-01
+tags: [pattern, candlestick, falling-three-methods, continuation, trend]
+status: done
+sources:
+  - type: book
+    title: "Japanese Candlestick Charting Techniques - Steve Nison"
+    note: "Falling three methods, continuation patterns"
+  - type: blog
+    title: "Falling Three Methods - Investopedia"
+    url: "https://www.investopedia.com/terms/f/falling-three-methods.asp"
+updated: 2026-11-06
+---
+
+Downtrend-এ বড় লাল candle-এর পর তিনটা candle range-এর ভেতরে থাকল, তারপর আবার লাল candle নিচে close করল। বইয়ের falling three methods, short নিলেন। কিন্তু মাঝের তিনটা candle শান্ত ছিল না: প্রতিটি দুই দিকে ত্রিশ-চল্লিশ pip দোল খেয়েছিল। এটা বিশ্রাম ছিল না, দুই পক্ষের লড়াই ছিল, আর পরের candle-এই buyers জিতল। এই পাতা [Rising Three Methods](/bn/patterns/rising-three-methods)-এর mirror; নিয়ম আর গভীরতা মাপার বিস্তারিত সেখানে।
+
+## এক নজরে
+
+| বিষয়                | Falling Three Methods                                                                                                        |
+| :------------------- | :--------------------------------------------------------------------------------------------------------------------------- |
+| ধরন                  | Bearish continuation, পাঁচ candle (কখনো চার-ছয়)                                                                             |
+| কোথায় খুঁজবেন       | চলমান downtrend-এর মাঝে                                                                                                      |
+| চেনার মূল চিহ্ন      | ১: লম্বা bearish; ২-৪: ছোট candle (সাধারণত bullish), প্রথমটার range-এর ভেতরে; ৫: লম্বা bearish, প্রথমটার close-এর নিচে close |
+| Confirmation         | পঞ্চম candle-ই confirmation                                                                                                  |
+| Stop                 | মাঝের candle-গুলোর high-এর উপরে (বা প্রথম candle-এর high-এর উপরে, রক্ষণশীল)                                                  |
+| বাতিল (invalidation) | মাঝের candle-গুলোর high-এর উপরে close                                                                                        |
+| দেখতে একই রকম        | Bear flag, inside bar-এর সারি                                                                                                |
+| বিপরীত pattern       | Rising Three Methods                                                                                                         |
+
+## এই লেখা পড়ে আপনি যা পারবেন
+
+- Downtrend-এর মাঝে **শান্ত বিরতি আর এলোমেলো লড়াই** আলাদা করতে পারবেন।
+- বিরতির candle-গুলোর **range মেপে** pattern-এর মান বিচার করতে পারবেন।
+- Trend-এর দিকে continuation short **বসাতে** পারবেন।
+
+## কেন জরুরি
+
+- **Downtrend-এ তাড়াতাড়ি long নেওয়ার ভুল ঠেকায়।** ছোট সবুজ candle দেখে "তলা হয়ে গেছে" ভাবা।
+- **বিরতির চরিত্রই আসল তথ্য।** ছোট body আর ছোট range মানে sellers শুধু বিশ্রাম নিচ্ছে। দুই দিকে বড় wick মানে buyers লড়ছে।
+- **Trend-এর দিকে trade।** বড় প্রবাহ আপনার পক্ষে, তাই reversal-এর চেয়ে সাধারণত সহজ।
+
+পূর্বশর্ত: Rising Three Methods পাতা (উপরে link) আর [Continuation Patterns](/bn/learn/06-trend-chart-patterns/02-continuation-patterns)।
+
+## Falling Three Methods কী
+
+**Falling three methods হলো পাঁচ candle-এর continuation pattern: downtrend-এ একটি লম্বা bearish candle, তারপর তিনটি (কখনো দুই বা চার) ছোট candle যারা প্রথম candle-এর range-এর ভেতরে থাকে, তারপর আরেকটি লম্বা bearish candle যা প্রথমটার close-এর নিচে close করে।**
+
+<CandleDiagram
+  title="Falling three methods"
+  candles={[
+    { o: 70, h: 71, l: 64, c: 65, dim: true },
+    { o: 65, h: 66, l: 49.5, c: 50, label: "১" },
+    { o: 50, h: 53.5, l: 49.5, c: 53, label: "২" },
+    { o: 53, h: 55.5, l: 52, c: 55, label: "৩" },
+    { o: 55, h: 57.5, l: 54, c: 56.5, label: "৪" },
+    { o: 56.5, h: 57, l: 44, c: 44.5, label: "৫", note: "১-এর close-এর নিচে" },
+  ]}
+  caption="লম্বা লাল, তিনটি ছোট সবুজ candle প্রথমটার range-এর নিচের অংশে, তারপর আরেকটি লম্বা লাল যা প্রথমটার close ছাড়িয়ে নিচে যায়।"
+/>
+
+### চেনার নিয়ম
+
+| নিয়ম                                                             | বাধ্যতামূলক?          | কেন                              |
+| :---------------------------------------------------------------- | :-------------------- | :------------------------------- |
+| আগে স্পষ্ট downtrend                                              | হ্যাঁ                 | Continuation-এর জন্য trend লাগে  |
+| প্রথম candle লম্বা bearish                                        | হ্যাঁ                 | ধাক্কা                           |
+| মাঝের candle-গুলো প্রথমটার range-এর ভেতরে, high-এর উপরে close নয় | হ্যাঁ                 | "Range-এর ভেতরে বিরতি"           |
+| পঞ্চম candle লম্বা bearish, প্রথমটার close-এর স্পষ্ট নিচে close   | হ্যাঁ                 | Trend আবার চালু                  |
+| মাঝের candle-গুলোর range ছোট, wick ছোট                            | না (কিন্তু খুব জরুরি) | শান্ত বিরতি; বড় wick মানে লড়াই |
+| বিরতি প্রথম candle-এর অর্ধেকের বেশি ফেরায় না                     | না (কিন্তু খুব জরুরি) | গভীর বিরতি মানে আসল buying       |
+
+## শক্তিশালী বনাম দুর্বল falling three methods
+
+<DiagramRow>
+  <CandleDiagram
+    title="শক্তিশালী"
+    verdict="good"
+    verdictLabel="trade-যোগ্য"
+    candles={[
+      { o: 65, h: 66, l: 49.5, c: 50 },
+      { o: 50, h: 52.5, l: 49.5, c: 52 },
+      { o: 52, h: 54, l: 51.5, c: 53.5 },
+      { o: 53.5, h: 55, l: 53, c: 54.5 },
+      { o: 54.5, h: 55, l: 43, c: 43.5, label: "শান্ত বিরতি" },
+    ]}
+    caption="বিরতির candle ছোট, wick ছোট, প্রথম candle-এর নিচের অর্ধেকে; পঞ্চম candle জোরে নিচে।"
+  />
+  <CandleDiagram
+    title="দুর্বল"
+    verdict="bad"
+    verdictLabel="এড়িয়ে চলুন"
+    candles={[
+      { o: 65, h: 66, l: 49.5, c: 50 },
+      { o: 50, h: 58, l: 49.8, c: 53 },
+      { o: 53, h: 57.5, l: 49.8, c: 52 },
+      { o: 52, h: 58.5, l: 50, c: 54 },
+      { o: 54, h: 54.5, l: 49, c: 49.5, label: "এলোমেলো বিরতি" },
+    ]}
+    caption="বিরতির প্রতিটি candle দুই দিকে বড় wick দেয়; পঞ্চম candle সবে প্রথমটার close-এর নিচে।"
+  />
+</DiagramRow>
+
+| মান যাচাই     | শক্তিশালী                                 | দুর্বল                                |
+| :------------ | :---------------------------------------- | :------------------------------------ |
+| বিরতির candle | ছোট body, ছোট range, ছোট wick             | ছোট body, কিন্তু দুই দিকে বড় wick    |
+| বিরতির range  | প্রথম candle-এর range-এর অনেক কম          | প্রথম candle-এর প্রায় অর্ধেক বা বেশি |
+| পঞ্চম candle  | লম্বা, প্রথমটার close স্পষ্টভাবে ছাড়িয়ে | সবে প্রথমটার close-এর নিচে            |
+| Trend         | স্পষ্ট lower high ও lower low             | দুর্বল বা support-এর কাছে             |
+
+## Candle-এর ভেতরের গল্প
+
+Rising three methods-এর গল্পই উল্টো দিকে। একটি প্রচলিত ব্যাখ্যা: প্রথম candle-এ sellers বড় ধাক্কা দেয়। মাঝের candle-এ কিছু seller profit নেয়, buyers ছোট করে তোলে, কিন্তু বড় আক্রমণ নেই। পঞ্চম candle-এ নতুন sellers আসে। কিন্তু মাঝের candle-গুলো দুই দিকে বড় দোল খেলে গল্পটা বদলায়: buyers প্রতিটি নিচের দামে জোরে কিনছে।
+
+<Callout type="note">
+  এটি একটি প্রচলিত ব্যাখ্যা, প্রমাণিত ঘটনা নয়। Chart দেখে কে কিনেছে বা বেচেছে,
+  তা জানা যায় না।
+</Callout>
+
+## কোথায় কাজ করে, কোথায় করে না
+
+<Compare
+  leftLabel="যেখানে falling three methods-এর ওজন বেশি"
+  rightLabel="যেখানে এটা প্রায়ই ফাঁদ"
+  left="- স্পষ্ট downtrend-এ, lower high ও lower low
+- বিরতির candle শান্ত: ছোট body, ছোট range
+- বিরতি প্রথম candle-এর নিচের অর্ধেকে
+- পঞ্চম candle প্রথমটার close স্পষ্টভাবে ছাড়িয়ে
+- নিচে পরের support পর্যন্ত খোলা জায়গা"
+  right="- বিরতির candle দুই দিকে বড় wick দিলে
+- বিরতি প্রথম candle-এর অর্ধেকের বেশি ফেরালে
+- পঞ্চম candle সবে প্রথমটার close-এর নিচে
+- ঠিক বড় support-এর উপরে"
+/>
+
+## ধাপে ধাপে: falling three methods trade
+
+পুরো ধাপ Rising Three Methods পাতায় আছে, উল্টো দিকে। শুধু যা আলাদা:
+
+<Steps>
+
+### ধাপ ১: বিরতির volatility মাপুন
+
+মাঝের candle-গুলোর গড় range ÷ প্রথম candle-এর range। কাজ চালানোর মাপ: 0.3-এর কম হলে শান্ত; 0.5-এর কাছে বা বেশি হলে এলোমেলো, বাদ। এটা পরিসংখ্যান নয়; নিজের backtest-এ ঠিক করুন।
+
+### ধাপ ২: Entry ও stop
+
+পঞ্চম close-এ sell, বা প্রথম candle-এর low-এর নিচে sell stop। Stop মাঝের candle-গুলোর সবচেয়ে উঁচু high-এর উপরে, [spread](/bn/learn/01-foundations/04-spread-commission-swap)-সহ।
+
+### ধাপ ৩: Size
+
+Stop পুরো বিরতির উপরে, তাই দূরত্ব বড়। [Position size](/bn/learn/08-risk-management/02-position-sizing) সেই দূরত্ব দিয়েই বের করুন, fixed lot-এ নয়। নিচের support পর্যন্ত [risk reward](/bn/learn/08-risk-management/03-risk-reward) অন্তত 1:1.5।
+
+</Steps>
+
+### Trade-এর আগে checklist
+
+<Checklist
+  id="pattern-falling-three-methods-pretrade-bn"
+  items={[
+    "চলমান downtrend স্পষ্ট (lower high, lower low)?",
+    "আকার নিয়ম মানছে (লম্বা লাল, ভেতরে ছোট candle, পঞ্চমটা প্রথমটার close-এর নিচে)?",
+    "পাঁচটি candle-ই বন্ধ হয়েছে, আর বিরতি শান্ত (ছোট range, ছোট wick)?",
+    "নিচের support পর্যন্ত risk reward অন্তত 1:1.5?",
+    "Higher timeframe-এর বড় support ঠিক নিচে নেই?",
+  ]}
+/>
+
+একটি ঘরও খালি থাকলে trade বাদ দিন।
+
+## উদাহরণ ১: যখন কাজ করে (কাল্পনিক)
+
+<Chart
+  id="falling-three-methods-win-01"
+  height={420}
+  caption="EURUSD H4 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — downtrend-এ falling three methods, শান্ত বিরতি, পঞ্চম close-এ short।"
+/>
+
+- **কী দেখা যাচ্ছিল:** ০-৫ নম্বর candle 1.0950 থেকে প্রায় 1.0847 পর্যন্ত downtrend।
+- **Pattern:** ৬ নম্বর লম্বা লাল: 1.0847 থেকে 1.0779 (68 pip)। ৭-৯ নম্বর তিনটি ছোট সবুজ candle, প্রতিটির range 16-19 pip, high 1.0795, 1.0805, 1.0814, প্রথম candle-এর নিচের অর্ধেকে। ১০ নম্বর লম্বা লাল, 1.0747-এ close, প্রথমটার close-এর 32 pip নিচে।
+- **সিদ্ধান্ত:** পঞ্চম close-এ sell 1.0747। Stop 1.0822 (বিরতির high-এর 8 pip উপরে), ঝুঁকি 75 pip। Target 1.0597 (2R)।
+- **ফল:** ১৯ নম্বর candle target ছোঁয়।
+- **শিক্ষা:** স্পষ্ট trend, শান্ত ছোট বিরতি, আর জোরালো পঞ্চম candle।
+
+<TradeSetup
+  direction="short"
+  pair="EURUSD"
+  entry={1.0747}
+  stop={1.0822}
+  target={1.0597}
+/>
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়। সব falling three methods-এর পর পতন চলে না, আর কোনো ফল গ্যারান্টি নয়।)
+
+## উদাহরণ ২: যখন ফাঁদ হয় (কাল্পনিক)
+
+<Chart
+  id="falling-three-methods-fail-01"
+  height={420}
+  caption="USDJPY H1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — এলোমেলো, দুই দিকের বিরতি আর দুর্বল পঞ্চম candle। পঞ্চম close-এ short, তারপর stop।"
+/>
+
+- **কী দেখা যাচ্ছিল:** ০-৪ নম্বর candle 151.80 থেকে প্রায় 151.38 পর্যন্ত downtrend।
+- **Pattern:** ৫ নম্বর লম্বা লাল: 151.38 থেকে 150.72 (range প্রায় 73 pip)। ৬-৮ নম্বর প্রথমটার range-এর ভেতরে থাকে, কিন্তু প্রতিটির range 34-37 pip, দুই দিকে বড় wick: প্রথম candle-এর প্রায় অর্ধেক। ৯ নম্বর 150.69-এ close, প্রথমটার close-এর মাত্র 3 pip নিচে।
+- **ভুল সিদ্ধান্ত:** "আকার মিলেছে।" পঞ্চম close-এ sell 150.69, stop 151.12, ঝুঁকি 43 pip, target 149.83।
+- **কী হলো:** ১০ নম্বর ফিরে ওঠে, ১২ নম্বর stop ভাঙে।
+- **কেন ব্যর্থ:** বিরতি শান্ত ছিল না, দুই পক্ষের লড়াই ছিল, আর পঞ্চম candle সবে প্রথমটার close ছাড়িয়েছে। Checklist-এর তৃতীয় ঘরেই trade বাদ পড়ত।
+
+**শিক্ষা:** দুই দিকে বড় wick-ওয়ালা বিরতি বিশ্রাম নয়, লড়াই। Size stop-এর দূরত্ব থেকে বের করা ছিল বলে লোকসান 1R, অর্থাৎ ১%। Fixed lot-এ ঢুকলে একই trade-এ ঝুঁকি অনেক বেশি হতে পারত।
+
+## সাধারণ ভুল
+
+| ভুল                              | কেন হয়                      | কী করবেন                                    |
+| :------------------------------- | :--------------------------- | :------------------------------------------ |
+| মাঝের সবুজ candle দেখে long      | "তলা হয়ে গেছে" ভাবা         | বিরতি প্রথম candle-এর range-এ থাকলে অপেক্ষা |
+| এলোমেলো বিরতিকেও pattern ধরা     | শুধু body দেখা, wick না দেখা | বিরতির range ÷ প্রথম candle-এর range মাপুন  |
+| বড় stop-এ fixed lot             | Size হিসাব না করা            | Stop-এর দূরত্ব দিয়ে size, ঝুঁকি ১%         |
+| পঞ্চম candle সবে নিচে, তবু short | নিয়ম "পূরণ" হয়েছে ভাবা     | প্রথমটার close স্পষ্টভাবে ছাড়াতে হবে       |
+
+## Pro tips
+
+<Callout type="tip">
+  Bear flag আর falling three methods একই পরিবারের। Chart pattern হিসেবে বিস্তারিত: উপরে link করা Continuation Patterns lesson। Candle-এর
+  ভাষায় যা পাঁচ candle, chart-এর ভাষায় তা প্রায়ই একটি ছোট flag।
+</Callout>
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- Falling three methods = লম্বা লাল candle, তার range-এর ভেতরে ২-৪টি ছোট candle, তারপর প্রথমটার close ছাড়ানো লম্বা লাল candle।
+- চলমান downtrend ছাড়া অর্থহীন; এটা continuation pattern।
+- বিরতির চরিত্রই মূল: শান্ত ছোট candle মানে বিশ্রাম, দুই দিকে বড় wick মানে লড়াই।
+- Entry পঞ্চম close-এ, stop বিরতির high-এর উপরে, size সেই দূরত্ব থেকে।
+
+</KeyTakeaways>
+
+## অনুশীলন ও নিজের backtest
+
+TradingView-এ EURUSD H4 বা USDJPY H1 খুলুন। Downtrend-এর ভেতরে অন্তত ২০টি "বড় লাল, ছোট বিরতি, বড় লাল" খুঁজুন। প্রতিটির জন্য লিখুন: তারিখ, মাঝের candle সংখ্যা, বিরতির গড় range ÷ প্রথম candle-এর range, পঞ্চম candle প্রথমটার close-এর কত নিচে, ফল (R)। এরপর "শান্ত বিরতি" (0.3-এর কম) আর "এলোমেলো বিরতি" (0.5-এর কাছে বা বেশি) দুই দলে ভাগ করে গড় R তুলনা করুন। অন্তত ৩০টি নমুনা ছাড়া সিদ্ধান্ত নেবেন না।
+
+## কুইজ
+
+1. Falling three methods-এ মাঝের candle-গুলোর কোন বৈশিষ্ট্য সবচেয়ে জরুরি?
+2. বিরতির candle-গুলোর range প্রথম candle-এর প্রায় অর্ধেক। কী করবেন?
+3. উদাহরণ ২-এর trade checklist-এর কোন ঘরে বাদ পড়ত?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** শান্ত হওয়া: ছোট body, ছোট range, ছোট wick, আর প্রথম candle-এর range-এর ভেতরে থাকা।
+
+**২.** বাদ দিন। এত বড় দোল মানে দুই পক্ষের লড়াই, শান্ত বিরতি নয়।
+
+**৩.** তৃতীয় ঘর: বিরতি শান্ত ছিল না।
+
+</details>
+
+## পরের ধাপ
+
+- পুরো walk-through: [Rising Three Methods](/bn/patterns/rising-three-methods)।
+- Size কীভাবে হিসাব করবেন: [Risk per Trade](/bn/learn/08-risk-management/01-risk-per-trade)।
+- একই পরিবারের pattern: [Three Black Crows](/bn/patterns/three-black-crows), [Bearish Engulfing](/bn/patterns/bearish-engulfing), [Inside Bar](/bn/patterns/inside-bar)।
+
+<Disclaimer />

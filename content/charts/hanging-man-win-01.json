@@ -1,0 +1,273 @@
+{
+  "id": "hanging-man-win-01",
+  "title": {
+    "en": "Hanging Man at an Old High, Short on the Confirming Close",
+    "bn": "পুরোনো high-এ hanging man, body-র নিচে confirmation close-এ short"
+  },
+  "symbol": "XAUUSD",
+  "timeframe": "H4",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bearish",
+  "outcome": "win",
+  "tags": [
+    "hanging-man",
+    "candlestick",
+    "resistance",
+    "confirmation",
+    "pattern"
+  ],
+  "module": "patterns",
+  "lessonSlugs": [],
+  "caption": {
+    "en": "Illustrative synthetic XAUUSD H4: price rallies back under an old high and prints a hanging man. The next candle closes well below the hanging man's body; the short is taken on that close. Price falls to 2R.",
+    "bn": "শিক্ষামূলক কাল্পনিক XAUUSD H4: দাম আবার পুরোনো high-এর নিচে ফিরে একটি hanging man দেয়। পরের candle hanging man-এর body-র অনেক নিচে close করে; সেই close-এ short। দাম 2R পর্যন্ত নামে।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data, not a real market record.",
+    "bn": "শিক্ষামূলক কাল্পনিক ডেটা, বাস্তব মার্কেটের রেকর্ড নয়।"
+  },
+  "updatedAt": "2026-11-06T12:00:00Z",
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 2449.92,
+      "label": "Old high (resistance)",
+      "color": "#3b82f6",
+      "style": "dashed"
+    },
+    {
+      "type": "marker",
+      "i": 16,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Hanging man"
+    },
+    {
+      "type": "marker",
+      "i": 17,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Close below body"
+    },
+    {
+      "type": "hline",
+      "price": 2439.42,
+      "label": "Entry (confirming close)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 2451.62,
+      "label": "Stop",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 2415.02,
+      "label": "Target 2R",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candle 5 makes the old high. Candles 11-15 rally back under it. Candle 16 is a hanging man: small body at the top, lower wick about five times the body, almost no upper wick. Candle 17 closes well below its body, the confirmation. Short on that close, stop above the hanging man high; price reaches 2R.",
+    "bn": "৫ নম্বর candle পুরোনো high বানায়। ১১-১৫ নম্বর আবার তার নিচে ওঠে। ১৬ নম্বর hanging man: উপরে ছোট body, নিচের wick body-র প্রায় পাঁচ গুণ, উপরে wick প্রায় নেই। ১৭ নম্বর তার body-র অনেক নিচে close করে, এটাই confirmation। সেই close-এ short, stop hanging man-এর high-এর উপরে; দাম 2R পর্যন্ত নামে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "A hanging man needs a bearish close below its body before it means anything",
+      "bn": "Body-র নিচে bearish close না এলে hanging man কিছু বোঝায় না"
+    }
+  ],
+  "entry": 2439.42,
+  "stopLoss": 2451.62,
+  "takeProfit": 2415.02,
+  "rr": "1:2.0",
+  "candles": [
+    {
+      "i": 0,
+      "o": 2410.0,
+      "h": 2423.94,
+      "l": 2403.43,
+      "c": 2419.0
+    },
+    {
+      "i": 1,
+      "o": 2419.0,
+      "h": 2435.82,
+      "l": 2413.22,
+      "c": 2431.0
+    },
+    {
+      "i": 2,
+      "o": 2431.0,
+      "h": 2434.42,
+      "l": 2422.77,
+      "c": 2427.0
+    },
+    {
+      "i": 3,
+      "o": 2427.0,
+      "h": 2442.39,
+      "l": 2420.62,
+      "c": 2437.0
+    },
+    {
+      "i": 4,
+      "o": 2437.0,
+      "h": 2448.92,
+      "l": 2432.85,
+      "c": 2445.0
+    },
+    {
+      "i": 5,
+      "o": 2445.0,
+      "h": 2449.92,
+      "l": 2439.0,
+      "c": 2440.92
+    },
+    {
+      "i": 6,
+      "o": 2440.92,
+      "h": 2447.72,
+      "l": 2424.71,
+      "c": 2430.92
+    },
+    {
+      "i": 7,
+      "o": 2430.92,
+      "h": 2439.75,
+      "l": 2409.65,
+      "c": 2416.92
+    },
+    {
+      "i": 8,
+      "o": 2416.92,
+      "h": 2422.08,
+      "l": 2404.68,
+      "c": 2408.92
+    },
+    {
+      "i": 9,
+      "o": 2408.92,
+      "h": 2417.37,
+      "l": 2405.82,
+      "c": 2413.92
+    },
+    {
+      "i": 10,
+      "o": 2413.92,
+      "h": 2418.32,
+      "l": 2399.5,
+      "c": 2404.92
+    },
+    {
+      "i": 11,
+      "o": 2404.92,
+      "h": 2419.85,
+      "l": 2398.46,
+      "c": 2413.92
+    },
+    {
+      "i": 12,
+      "o": 2413.92,
+      "h": 2431.95,
+      "l": 2406.13,
+      "c": 2424.92
+    },
+    {
+      "i": 13,
+      "o": 2424.92,
+      "h": 2437.38,
+      "l": 2421.5,
+      "c": 2431.92
+    },
+    {
+      "i": 14,
+      "o": 2431.92,
+      "h": 2449.47,
+      "l": 2425.93,
+      "c": 2441.92
+    },
+    {
+      "i": 15,
+      "o": 2441.92,
+      "h": 2447.92,
+      "l": 2438.92,
+      "c": 2445.92
+    },
+    {
+      "i": 16,
+      "o": 2445.92,
+      "h": 2449.12,
+      "l": 2429.92,
+      "c": 2448.52
+    },
+    {
+      "i": 17,
+      "o": 2448.52,
+      "h": 2449.02,
+      "l": 2437.92,
+      "c": 2439.42
+    },
+    {
+      "i": 18,
+      "o": 2439.42,
+      "h": 2443.75,
+      "l": 2426.87,
+      "c": 2430.42
+    },
+    {
+      "i": 19,
+      "o": 2430.42,
+      "h": 2434.68,
+      "l": 2414.42,
+      "c": 2418.42
+    },
+    {
+      "i": 20,
+      "o": 2418.42,
+      "h": 2425.11,
+      "l": 2415.03,
+      "c": 2422.42
+    },
+    {
+      "i": 21,
+      "o": 2422.42,
+      "h": 2426.85,
+      "l": 2406.97,
+      "c": 2412.42
+    },
+    {
+      "i": 22,
+      "o": 2412.42,
+      "h": 2417.59,
+      "l": 2399.97,
+      "c": 2404.42
+    },
+    {
+      "i": 23,
+      "o": 2404.42,
+      "h": 2410.02,
+      "l": 2401.85,
+      "c": 2407.42
+    },
+    {
+      "i": 24,
+      "o": 2407.42,
+      "h": 2413.72,
+      "l": 2391.42,
+      "c": 2396.42
+    },
+    {
+      "i": 25,
+      "o": 2396.42,
+      "h": 2400.06,
+      "l": 2384.7,
+      "c": 2389.42
+    }
+  ]
+}

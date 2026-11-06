@@ -1,0 +1,329 @@
+---
+title: "Rising Three Methods: a quiet pause inside an uptrend, then the journey resumes"
+description: "How to spot rising three methods, the five-candle rule, why pullback depth and the fifth candle's strength matter most, and continuation entry, stop and target, with charts."
+type: bullish
+category: continuation
+level: advanced
+candleCount: 5
+signal: continuation
+chartId: rising-three-methods-win-01
+tags: [pattern, candlestick, rising-three-methods, continuation, trend]
+status: done
+sources:
+  - type: book
+    title: "Japanese Candlestick Charting Techniques - Steve Nison"
+    note: "Rising three methods, continuation patterns"
+  - type: blog
+    title: "Rising Three Methods - Investopedia"
+    url: "https://www.investopedia.com/terms/r/rising-three-methods.asp"
+updated: 2026-11-06
+---
+
+A big green candle in an uptrend, then three small red ones. "Is the trend over?" Many traders close their longs, and some even go short. Then another big green candle clears the earlier high. It was not a reversal; it was a rest. But not every rest is the same: some are a calm breather, others are real selling. The depth of the pullback tells you which.
+
+## At a glance
+
+| Item          | Rising Three Methods                                                                                                                     |
+| :------------ | :--------------------------------------------------------------------------------------------------------------------------------------- |
+| Type          | Bullish continuation, five candles (sometimes four to six)                                                                               |
+| Where to look | In the middle of an ongoing uptrend                                                                                                      |
+| Key features  | 1: long bullish; 2-4: small candles (usually bearish) inside the first one's range; 5: long bullish, closing above the first one's close |
+| Confirmation  | The fifth candle is the confirmation                                                                                                     |
+| Stop          | Below the small candles' low (or below the first candle's low, conservative)                                                             |
+| Invalidation  | A close below the small candles' low                                                                                                     |
+| Look-alikes   | Bull flag, a run of [Inside Bar](/en/patterns/inside-bar) candles, the ii pattern                                                        |
+| Opposite      | [Falling Three Methods](/en/patterns/falling-three-methods)                                                                              |
+
+## What you will be able to do
+
+- **Explain** the role of each of the five candles.
+- **Measure** the pullback depth to tell a quiet pause from real selling.
+- **Place** a continuation trade in the trend direction.
+
+## Why it matters
+
+- **It prevents beginners' biggest mid-trend mistake.** Closing longs or going short on a few small red candles, thinking it is a reversal.
+- **A trade with the trend.** Continuation trades are usually easier than reversals, because the larger flow is on your side.
+- **Rare, but instructive.** The perfect five-candle form does not appear often, but the idea "big candle, calm pause, big candle again" applies to every trend.
+
+Prerequisites: [Continuation Patterns](/en/learn/06-trend-chart-patterns/02-continuation-patterns) and [Trend, Range and HH-HL](/en/learn/03-market-structure/02-trend-range-hhhl).
+
+## What are rising three methods
+
+**Rising three methods is a five-candle continuation pattern: a long bullish candle in an uptrend, then three (sometimes two or four) small candles that stay inside the first one's range, then another long bullish candle that closes above the first one's close.**
+
+Picture a staircase. A big step up, then a small landing where you stand and catch your breath, then another big step. The landing is not a place to go down; it is only a place to stop.
+
+<CandleDiagram
+  title="Rising three methods"
+  candles={[
+    { o: 40, h: 46, l: 39, c: 45, dim: true },
+    { o: 45, h: 61, l: 44.5, c: 60, label: "1" },
+    { o: 60, h: 60.5, l: 56.5, c: 57, label: "2" },
+    { o: 57, h: 58, l: 54.5, c: 55, label: "3" },
+    { o: 55, h: 56, l: 52.5, c: 53.5, label: "4" },
+    { o: 53.5, h: 66, l: 53, c: 65.5, label: "5", note: "above 1's close" },
+  ]}
+  caption="A long green candle, three small red candles in the upper part of its range, then another long green candle clearing the first one's close."
+/>
+
+### Identification rules
+
+| Rule                                                                   | Required?               | Why                                                  |
+| :--------------------------------------------------------------------- | :---------------------- | :--------------------------------------------------- |
+| A clear uptrend before it                                              | Yes                     | Continuation needs a trend                           |
+| The first candle long and bullish                                      | Yes                     | The push                                             |
+| The middle candles small, never closing below the first one's low      | Yes                     | This is the "pause inside the range"                 |
+| The fifth candle long and bullish, closing above the first one's close | Yes                     | The trend restarts                                   |
+| The pullback no deeper than half of the first candle                   | No (but very important) | A deep pullback means real selling, not a calm pause |
+| The middle candles have small ranges and low volatility                | No                      | A sign of a calm pause                               |
+
+<Callout type="note">
+  In Nison's book the middle candles are usually three and bearish, but there
+  can be two to four. "No deeper than half" is my working measure, not part of
+  the definition; check it in your own backtest.
+</Callout>
+
+## Strong vs weak rising three methods
+
+<DiagramRow>
+  <CandleDiagram
+    title="Strong"
+    verdict="good"
+    verdictLabel="tradeable"
+    candles={[
+      { o: 45, h: 61, l: 44.5, c: 60 },
+      { o: 60, h: 60.5, l: 57.5, c: 58 },
+      { o: 58, h: 59, l: 56, c: 56.5 },
+      { o: 56.5, h: 57.5, l: 55, c: 55.5 },
+      { o: 55.5, h: 67, l: 55, c: 66.5, label: "shallow pause" },
+    ]}
+    caption="The pause stays in the upper half of the first candle; the fifth candle clears its close with force."
+  />
+  <CandleDiagram
+    title="Weak"
+    verdict="bad"
+    verdictLabel="avoid"
+    candles={[
+      { o: 45, h: 61, l: 44.5, c: 60 },
+      { o: 60, h: 60.5, l: 54.5, c: 55 },
+      { o: 55, h: 55.5, l: 49.5, c: 50 },
+      { o: 50, h: 50.5, l: 46.5, c: 47 },
+      { o: 47, h: 61.5, l: 46.5, c: 60.4, label: "deep pause" },
+    ]}
+    caption="The pause takes back almost all of the first candle; the fifth only just clears its close."
+  />
+</DiagramRow>
+
+| Quality check  | Strong                                       | Weak                                  |
+| :------------- | :------------------------------------------- | :------------------------------------ |
+| Pullback depth | Under half of the first candle               | 70-90%, nearly to its low             |
+| Middle candles | Small, calm, small ranges                    | Medium bearish bodies with momentum   |
+| Fifth candle   | Long, clearly clearing the first one's close | Only just above the first one's close |
+| Trend          | Clear higher highs and higher lows           | A weak trend or the edge of a range   |
+
+### Same look, different meaning
+
+| Pattern                  | Shape                                          | Difference                                  |
+| :----------------------- | :--------------------------------------------- | :------------------------------------------ |
+| **Rising Three Methods** | Big green, 2-4 small candles inside, big green | Candlestick definition, five candles        |
+| **Bull flag**            | A sharp rally, then a small sloping channel    | A chart pattern; more candles, looser rules |
+| **Run of inside bars**   | Several inside bars within a big candle        | Range-based; no colours needed              |
+| **Three Black Crows**    | Three big red candles                          | Not a pause but an attack                   |
+
+## The story inside the candle
+
+One common interpretation of rising three methods:
+
+1. **First candle: buyers make a big push.** A long green candle in the trend direction.
+2. **Middle candles: some buyers take profit.** Small red candles, but sellers do not attack hard. Price stays inside the first candle's range.
+3. **Fifth candle: new buyers arrive.** The profit-taking is done and price clears the first candle's close again. Those who shorted in the middle are now losing.
+
+With a deep pullback the story changes: it is no longer profit-taking but a real attack by sellers.
+
+<Callout type="note">
+  This is a common interpretation, not a proven fact. A chart does not show who
+  bought or sold.
+</Callout>
+
+## Where it works and where it does not
+
+<Compare
+  leftLabel="Where rising three methods carry weight"
+  rightLabel="Where it is often a trap"
+  left="- In a clear uptrend with higher highs and higher lows
+- With a pullback under half of the first candle
+- With calm middle candles and small ranges
+- With a long fifth candle clearly clearing the first one's close
+- With open space ahead to the next resistance"
+  right="- Inside a range or a weak trend
+- With a pullback deeper than 70%
+- When the fifth candle only just clears the first one's close
+- Right under a major resistance
+- With the middle pause sitting ahead of big news"
+/>
+
+## Step by step: trading rising three methods
+
+<Steps>
+
+### Step 1: Trend first
+
+Are there higher highs and higher lows over the last 10-20 candles? If not, this is not a continuation pattern.
+
+### Step 2: Wait for all five candles to close
+
+The fifth candle is the confirmation. While live, it can still fall back below the first one's close.
+
+### Step 3: Measure the pullback depth
+
+Depth = (first candle's close − lowest low of the middle candles) ÷ first candle's body. Under 0.5 is a calm pause; above 0.7, skip it.
+
+### Step 4: Entry type
+
+| Entry                                | Where                                     | Pro                            | Con                               |
+| :----------------------------------- | :---------------------------------------- | :----------------------------- | :-------------------------------- |
+| **Fifth close** (standard)           | Buy as the fifth candle closes            | Confirmation is in the pattern | Wide stop (below the whole pause) |
+| **Break of the first candle's high** | Buy stop above the first candle's high    | Before the fifth candle closes | Can false-break on a wick         |
+| **50% retest of the fifth body**     | Buy limit at the middle of the fifth body | Better entry for the stop      | Missed if price never returns     |
+
+### Step 5: Place the stop
+
+Below the lowest low of the middle candles, plus the [spread](/en/learn/01-foundations/04-spread-commission-swap) and a buffer. Conservatively, below the first candle's low.
+
+### Step 6: Size and target
+
+[Position size](/en/learn/08-risk-management/02-position-sizing) from the entry-to-stop distance, risking no more than 1%. Target before the next resistance, with a [risk reward](/en/learn/08-risk-management/03-risk-reward) of at least 1:1.5. If the trend runs, consider a [trailing stop](/en/learn/10-trade-management-execution/03-trailing-stop).
+
+### Step 7: Manage
+
+Repeated closes back below the first candle's close mean the continuation is weakening. A close below the middle candles' low means the idea is wrong.
+
+</Steps>
+
+### Pre-trade checklist
+
+<Checklist
+  id="pattern-rising-three-methods-pretrade-en"
+  items={[
+    "Is the ongoing uptrend clear (higher highs, higher lows)?",
+    "Does the shape pass the rules (long green, small candles inside, the fifth closing above the first one's close)?",
+    "Have all five candles closed, and is the pullback less than half of the first candle?",
+    "Is the risk reward to the next resistance at least 1:1.5?",
+    "Is there no major higher-timeframe level right ahead?",
+  ]}
+/>
+
+If any box stays empty, skip the trade.
+
+## Example 1: when it works (illustrative)
+
+<Chart
+  id="rising-three-methods-win-01"
+  height={420}
+  caption="GBPUSD D1 (illustrative, synthetic) — rising three methods in an uptrend, a shallow pause, long at the fifth close."
+/>
+
+- **What was visible:** Candles 0-5 rallied from 1.2600 to about 1.2716.
+- **The pattern:** Candle 6 was a long green candle: 1.2716 to 1.2794 (78 pips). Candles 7-9 were three small red candles with lows of 1.2776, 1.2764 and 1.2754, staying around the first candle's middle (about 1.2755) or above. Candle 10 was a long green candle closing at 1.2830, 36 pips above the first one's close.
+- **Decision:** Buy at the fifth close at 1.2830. Stop 1.2746 (8 pips below the pause low): 84 pips of risk. Target 1.2998 (2R); no marked resistance above.
+- **Result:** Candle 19 reached the target.
+- **Lesson:** A clear trend, a shallow calm pause, and a forceful fifth candle.
+
+<TradeSetup
+  direction="long"
+  pair="GBPUSD"
+  entry={1.283}
+  stop={1.2746}
+  target={1.2998}
+/>
+
+(Illustrative example, not a real trade. The trend does not always continue after rising three methods, and no result is guaranteed.)
+
+## Example 2: when it is a trap (illustrative)
+
+<Chart
+  id="rising-three-methods-fail-01"
+  height={420}
+  caption="XAUUSD H4 (illustrative, synthetic) — a deep pullback and a weak fifth candle; bought at the fifth close, then stopped out."
+/>
+
+- **What was visible:** Candles 0-4 were a small uptrend from 2320 to about 2337.
+- **The pattern:** Candle 5 was a long green candle: 2337 to 2357 ($20). Candles 6-8 were three red candles falling to 2339.50: almost 90% of the first candle. Candle 9 closed at 2357.80, only 80 cents above the first one's close.
+- **The wrong decision:** "The shape matches." Buy at the fifth close at 2357.80, stop 2337.50: $20.30 of risk, target 2398.40.
+- **What happened:** Candle 10 turned down and candle 12 broke the stop.
+- **Why it failed:** The pause was not calm; it was real selling (almost 90% given back), and the fifth candle barely cleared the first one's close. The third checklist box would have filtered it out.
+
+**Lesson:** Deep pullbacks and weak fifth candles turn a continuation into a failure. Because the stop was set in advance, the loss stayed at 1R.
+
+## Common mistakes
+
+| Mistake                                                 | Why it happens                          | What to do instead                                     |
+| :------------------------------------------------------ | :-------------------------------------- | :----------------------------------------------------- |
+| Closing a long or going short on the middle red candles | Treating every red candle as a reversal | Wait while the pause stays in the first candle's range |
+| Calling a deep pullback rising three methods            | Only checking "it is inside the range"  | Calculate the pullback depth                           |
+| Trading the pattern inside a range                      | Not checking the trend                  | Count higher highs and higher lows first               |
+| Stop at the fifth candle's low                          | Wanting a small stop                    | Below the middle candles' low                          |
+
+## Pro tips
+
+<Callout type="tip">
+  Do not wait for the perfect five-candle form. Remember the idea: a big trend
+  candle, a calm small pause inside it, then another big candle in the trend
+  direction. Two or four middle candles tell the same story.
+</Callout>
+
+<Callout type="tip">
+  The middle candles are often a run of inside bars. A buy stop above the first
+  candle's high gets you in earlier, but then remember the fakey risk of the
+  Inside Bar.
+</Callout>
+
+## Summary
+
+<KeyTakeaways>
+
+- Rising three methods = a long green candle, 2-4 small candles inside its range, then a long green candle clearing the first one's close.
+- It is a continuation pattern: meaningless without an ongoing uptrend.
+- Pullback depth is the key measure: under half is a calm pause, above 70% is real selling.
+- Enter at the fifth close, stop below the middle candles' low.
+
+</KeyTakeaways>
+
+## Practice and your own backtest
+
+Open GBPUSD D1 or XAUUSD H4 in TradingView. Inside trends, find at least 20 sequences of "big candle, small pause, big candle" (two to four middle candles). Log one row each:
+
+| Date | Number of middle candles | Pullback depth | How far the fifth closes above the first one's close | Result (R) |
+| :--- | :----------------------- | :------------- | :--------------------------------------------------- | :--------- |
+|      |                          |                |                                                      |            |
+
+Then split into depth under 0.5 and above 0.7 and compare the average R. Do not draw conclusions from fewer than 30 samples.
+
+## Quiz
+
+1. What is the role of each of the five candles in rising three methods?
+2. The middle candles take back 85% of the first candle. What do you do?
+3. Why is this pattern meaningless in a range?
+4. Which checklist box would have filtered out the trade in Example 2?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** First: the push in the trend direction. Middle: a calm pause, profit-taking. Fifth: the trend restarts, clearing the first one's close.
+
+**2.** Skip it. A pullback that deep means real selling, not a calm pause.
+
+**3.** It is a continuation pattern; with no trend to continue, there is nothing to continue.
+
+**4.** The third box: the pullback was almost 90% deep, far more than half.
+
+</details>
+
+## Next steps
+
+- Before this: [Continuation Patterns](/en/learn/06-trend-chart-patterns/02-continuation-patterns).
+- Entering in the trend direction: [Breakout Retest Entry](/en/learn/09-price-action-entries-strategies/01-breakout-retest-pullback-entry).
+- Same family: [Falling Three Methods](/en/patterns/falling-three-methods), [Three White Soldiers](/en/patterns/three-white-soldiers), [Marubozu](/en/patterns/marubozu).
+
+<Disclaimer />

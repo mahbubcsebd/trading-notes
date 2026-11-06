@@ -1,5 +1,9 @@
 // source.config.ts
-import { defineConfig, defineDocs, frontmatterSchema } from "fumadocs-mdx/config/zod-3";
+import {
+  defineConfig,
+  defineDocs,
+  frontmatterSchema
+} from "fumadocs-mdx/config/zod-3";
 import { z } from "zod";
 var customSchema = frontmatterSchema.extend({
   description: z.string().optional(),
@@ -20,6 +24,10 @@ var customSchema = frontmatterSchema.extend({
 });
 var patternSchema = customSchema.extend({
   category: z.string().optional(),
+  type: z.enum(["bullish", "bearish", "neutral"]).optional(),
+  candleCount: z.number().int().min(1).max(5).optional(),
+  signal: z.enum(["reversal", "continuation", "indecision"]).optional(),
+  // Legacy fields (old pages). New pattern articles must not use them: no unverified stats.
   winrate: z.string().optional(),
   riskReward: z.string().optional(),
   maxRisk: z.string().optional(),

@@ -1,0 +1,286 @@
+---
+title: "Dark Cloud Cover: সবুজ body-র অর্ধেকের বেশি মুছে দেওয়া কালো মেঘ"
+description: "Dark cloud cover কীভাবে চিনবেন, piercing line-এর উল্টো ছবি, penetration মাপা, Forex-এ gap ছাড়া নিয়ম, আর কেন সব নিয়ম মেনেও লোকসান স্বাভাবিক — chart সহ।"
+type: bearish
+category: two-candle
+level: intermediate
+candleCount: 2
+signal: reversal
+chartId: dark-cloud-cover-win-01
+tags: [pattern, candlestick, dark-cloud-cover, reversal, resistance]
+status: done
+sources:
+  - type: book
+    title: "Japanese Candlestick Charting Techniques - Steve Nison"
+    note: "Dark cloud cover, engulfing-এর সঙ্গে তুলনা"
+  - type: blog
+    title: "Dark Cloud Cover - Investopedia"
+    url: "https://www.investopedia.com/terms/d/darkcloud.asp"
+updated: 2026-11-06
+---
+
+পুরোনো high-এ গভীর dark cloud cover, পরের candle low ভাঙল, নিচে জায়গাও আছে। Checklist-এর পাঁচটি ঘরই পূর্ণ। Short নিলেন, আর তিন দিন পরে stop। ভুল কোথায়? কোথাও না। ভালো setup-ও হারে। এই পাতা [Piercing Line](/bn/patterns/piercing-line)-এর mirror; 50% নিয়ম, penetration মাপা আর gap-এর ব্যাখ্যা সেখানে বিস্তারিত। এখানে শুধু যা আলাদা, আর একটি জরুরি কথা: লোকসান কীভাবে মেনে নেবেন।
+
+## এক নজরে
+
+| বিষয়                | Dark Cloud Cover                                                                                      |
+| :------------------- | :---------------------------------------------------------------------------------------------------- |
+| ধরন                  | Bearish reversal, দুই candle                                                                          |
+| কোথায় খুঁজবেন       | Uptrend বা pullback-এর চূড়ায়, চিহ্নিত resistance-এ                                                  |
+| চেনার মূল চিহ্ন      | লম্বা সবুজ candle-এর পর লাল candle, যা সবুজ body-র মাঝের (50%) নিচে কিন্তু তার open-এর উপরে close করে |
+| Confirmation         | পরের candle dark cloud candle-এর low ভাঙা বা তার নিচে close                                           |
+| Stop                 | দুই candle-এর উঁচু high-এর উপরে, spread-সহ buffer                                                     |
+| বাতিল (invalidation) | Pattern-এর high-এর উপরে close                                                                         |
+| দেখতে একই রকম        | [Bearish Engulfing](/bn/patterns/bearish-engulfing) (শক্ত রূপ), ঠিক 50%-এর উপরে close (দুর্বল)        |
+| বিপরীত pattern       | Piercing Line                                                                                         |
+
+## এই লেখা পড়ে আপনি যা পারবেন
+
+- Dark cloud cover-এর penetration **মেপে** শক্তি বিচার করতে পারবেন।
+- Bearish engulfing থেকে **আলাদা করতে** পারবেন।
+- সব নিয়ম মেনেও লোকসানকে **expectancy-র চোখে দেখতে** পারবেন।
+
+## কেন জরুরি
+
+- **Piercing line-এর আয়না।** একই 50% নিয়ম, শুধু চূড়ায় আর উল্টো দিকে।
+- **Engulfing-এর আধা রূপ।** লাল candle পুরো সবুজ body ঢাকে না, তাই engulfing-এর চেয়ে একটু দুর্বল। Close যত গভীরে, তত শক্ত।
+- **লোকসানও system-এর অংশ।** কোনো pattern সব সময় জেতে না। এক trade-এর ফল দিয়ে নিয়ম বদলালে system-ই ভেঙে যায়। বিস্তারিত: [Expectancy](/bn/learn/08-risk-management/07-expectancy)।
+
+পূর্বশর্ত: Piercing Line পাতা (উপরে link) আর [Accepting Losses](/bn/learn/12-trading-psychology/03-accepting-losses)।
+
+## Dark Cloud Cover কী
+
+**Dark cloud cover হলো দুই candle-এর pattern: uptrend-এ একটি লম্বা bullish candle, তারপর একটি bearish candle, যা আগের body-র মাঝের নিচে কিন্তু আগের open-এর উপরে close করে।** রোদ ঝলমলে আকাশে হঠাৎ কালো মেঘ: পুরো আকাশ ঢাকেনি, কিন্তু অর্ধেকের বেশি।
+
+<CandleDiagram
+  title="Dark cloud cover: 50% নিয়ম"
+  candles={[
+    { o: 40, h: 46, l: 39, c: 45, dim: true },
+    { o: 45, h: 51, l: 44, c: 50, dim: true },
+    { o: 50, h: 64, l: 49, c: 63, label: "১", note: "লম্বা সবুজ body" },
+    { o: 63, h: 66, l: 53, c: 54, label: "২", note: "মাঝের (56.5) নিচে close" },
+  ]}
+  levels={[{ price: 56.5, label: "সবুজ body-র 50%", tone: "neutral" }]}
+  caption="প্রথম body 50 থেকে 63, মাঝ 56.5। দ্বিতীয় candle 54-এ close করে: মাঝের নিচে, কিন্তু 50-এর উপরে।"
+/>
+
+### চেনার নিয়ম
+
+| নিয়ম                                                   | বাধ্যতামূলক?      | কেন                                   |
+| :------------------------------------------------------ | :---------------- | :------------------------------------ |
+| আগে uptrend, প্রথম candle লম্বা bullish                 | হ্যাঁ             | ছোট সবুজ candle মুছে দেওয়া কম প্রমাণ |
+| দ্বিতীয় candle bearish, প্রথম body-র 50%-এর নিচে close | হ্যাঁ             | এটাই "dark cloud"                     |
+| দ্বিতীয় close প্রথম open-এর উপরে                       | হ্যাঁ             | নিচে হলে সেটা bearish engulfing       |
+| চিহ্নিত resistance-এ                                    | হ্যাঁ             | Level ছাড়া এটা uptrend-এর ছোট dip    |
+| Penetration 60-75% বা বেশি                              | না (কিন্তু জরুরি) | যত গভীর, তত শক্ত                      |
+
+## শক্তিশালী বনাম দুর্বল dark cloud cover
+
+<DiagramRow>
+  <CandleDiagram
+    title="শক্তিশালী"
+    verdict="good"
+    verdictLabel="trade-যোগ্য"
+    candles={[
+      { o: 40, h: 46, l: 39, c: 45, dim: true },
+      { o: 45, h: 58, l: 44, c: 57 },
+      { o: 57, h: 61, l: 47, c: 48, label: "~75% গভীর" },
+    ]}
+    levels={[{ price: 58, label: "পুরোনো high", tone: "resistance" }]}
+    caption="পুরোনো high-এর উপরে wick, সবুজ body-র প্রায় তিন-চতুর্থাংশ নেমে close।"
+  />
+  <CandleDiagram
+    title="দুর্বল"
+    verdict="bad"
+    verdictLabel="এড়িয়ে চলুন"
+    candles={[
+      { o: 30, h: 41, l: 29, c: 40, dim: true },
+      { o: 40, h: 51, l: 39, c: 50, dim: true },
+      { o: 50, h: 61, l: 49, c: 60 },
+      { o: 60, h: 61, l: 54, c: 54.5, label: "সবে 50%" },
+    ]}
+    caption="টানা বড় সবুজ candle-এর পর, কোনো level নেই, close ঠিক মাঝের গায়ে।"
+  />
+</DiagramRow>
+
+| Pattern               | দ্বিতীয় candle-এর close               | শক্তি              |
+| :-------------------- | :------------------------------------- | :----------------- |
+| **Bearish Engulfing** | প্রথম open-এর নিচে                     | বেশি               |
+| **Dark Cloud Cover**  | প্রথম body-র 50%-এর নিচে, open-এর উপরে | মাঝারি             |
+| **50%-এর উপরে close** | প্রথম body-র ভেতরে, কিন্তু মাঝের উপরে  | দুর্বল; signal নয় |
+
+## Candle-এর ভেতরের গল্প
+
+Piercing line-এর গল্পই, চূড়ায় আর উল্টো দিকে। একটি প্রচলিত ব্যাখ্যা: লম্বা সবুজ candle-এ buyers পুরো নিয়ন্ত্রণে। দ্বিতীয় candle শুরুতে আরও ওঠে, প্রায়ই resistance-এর উপরে উঁকি দেয়। তারপর sellers জোরে নামায়, সবুজ body-র অর্ধেকের বেশি পার হয়ে close করে। শেষের দিকে যারা কিনেছিল, তারা লোকসানে।
+
+<Callout type="note">
+  এটি একটি প্রচলিত ব্যাখ্যা, প্রমাণিত ঘটনা নয়। Chart দেখে কে কিনেছে বা বেচেছে,
+  তা জানা যায় না।
+</Callout>
+
+## কোথায় কাজ করে, কোথায় করে না
+
+<Compare
+  leftLabel="যেখানে dark cloud cover-এর ওজন বেশি"
+  rightLabel="যেখানে dark cloud cover প্রায়ই ফাঁদ"
+  left="- চিহ্নিত পুরোনো high বা supply zone-এ
+- দ্বিতীয় candle resistance-এর উপরে উঁকি দিয়ে নিচে close করলে
+- Penetration 60-75% বা বেশি হলে
+- Downtrend-এর pullback-এর চূড়ায়, trend-এর দিকে"
+  right="- টানা বড় সবুজ candle-এর momentum-এর মাঝে
+- কোনো level ছাড়া uptrend-এর মাঝ পথে
+- Close ঠিক 50%-এর গায়ে বা উপরে
+- ঠিক নিচে higher low বা support থাকলে"
+/>
+
+## 24 ঘণ্টার বাজারে gap
+
+<Callout type="note">
+  Nison-এর মূল সংজ্ঞায় দ্বিতীয় candle প্রথমটার high-এর উপরে gap দিয়ে open
+  করে। Forex-এ দ্বিতীয় open সাধারণত প্রথম close-এর সমান। বাস্তব নিয়ম:
+  **দ্বিতীয় candle প্রথম close-এর কাছে open করে, প্রথমে আরও ওঠে (high প্রথম
+  high-এর উপরে হলে ভালো), তারপর প্রথম body-র 50%-এর নিচে close করে।** Gap-এর
+  কাজটা উপরের wick করে।
+</Callout>
+
+## ধাপে ধাপে: dark cloud cover trade
+
+পুরো ধাপ Piercing Line পাতায় আছে, উল্টো দিকে। শুধু যা আলাদা:
+
+<Steps>
+
+### ধাপ ১: Penetration হিসাব
+
+Penetration % = (প্রথম close − দ্বিতীয় close) ÷ (প্রথম close − প্রথম open)। 50%-এর নিচে হলে বাদ, 60%-এর নিচে হলে সতর্ক।
+
+### ধাপ ২: Entry ও stop
+
+Dark cloud candle-এর low-এর একটু নিচে sell stop। Stop দুই candle-এর উঁচু high-এর উপরে, [spread](/bn/learn/01-foundations/04-spread-commission-swap)-সহ।
+
+### ধাপ ৩: Target বাধার আগে
+
+প্রথম বাধা প্রায়ই প্রথম candle-এর open; তারপর আগের swing low। Target সেই বাধার ঠিক আগে, [risk reward](/bn/learn/08-risk-management/03-risk-reward) অন্তত 1:1.5।
+
+### ধাপ ৪: ঝুঁকি আগে মেনে নিন
+
+Entry-র আগেই বলুন: "এই trade হারলে লোকসান 1R, আর সেটা স্বাভাবিক।" ১% ঝুঁকিতে টানা কয়েকটি লোকসানও account-এর ছোট অংশ।
+
+</Steps>
+
+### Trade-এর আগে checklist
+
+<Checklist
+  id="pattern-dark-cloud-cover-pretrade-bn"
+  items={[
+    "Dark cloud আসার আগেই resistance চিহ্নিত ছিল, আর এটা সেই level-এ বসেছে?",
+    "আকার নিয়ম মানছে (লম্বা সবুজ candle, লাল close 50%-এর নিচে কিন্তু সবুজ open-এর উপরে)?",
+    "দুটি candle-ই বন্ধ হয়েছে, আর penetration অন্তত 60%?",
+    "নিচের swing low পর্যন্ত risk reward অন্তত 1:1.5?",
+    "Higher timeframe-এর trend বা level trade-এর বিপরীতে নেই?",
+  ]}
+/>
+
+একটি ঘরও খালি থাকলে trade বাদ দিন।
+
+## উদাহরণ ১: যখন কাজ করে (কাল্পনিক)
+
+<Chart
+  id="dark-cloud-cover-win-01"
+  height={420}
+  caption="XAUUSD H1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — পুরোনো high-এ গভীর dark cloud cover, low ভাঙলে short।"
+/>
+
+- **কী দেখা যাচ্ছিল:** ৫ নম্বর candle 2354.44-এ পুরোনো high রেখে গেছে। ৬-১০ নম্বর প্রায় 2321 পর্যন্ত নামে, ১১-১৫ নম্বর আবার ওঠে।
+- **Dark cloud:** ১৬ নম্বর লম্বা সবুজ (2347.44 থেকে 2356.44), পুরোনো high-এর সামান্য উপরে close। ১৭ নম্বর 2356.44-এ open, 2358.44 পর্যন্ত উঁকি দিয়ে 2350.14-এ close: সবুজ body-র প্রায় 70%।
+- **সিদ্ধান্ত:** Sell stop 2349.14। Stop 2359.94 (দুই candle-এর high-এর উপরে), ঝুঁকি $10.80। Target 2327.54 (2R); swing low পর্যন্ত জায়গা প্রায় 2.6R।
+- **ফল:** ১৮ নম্বর low ভেঙে order fill করে। ২৪ নম্বর candle target ছোঁয়।
+- **শিক্ষা:** Level-এর উপরে wick, গভীর penetration, low break-এ entry।
+
+<TradeSetup
+  direction="short"
+  pair="XAUUSD"
+  entry={2349.14}
+  stop={2359.94}
+  target={2327.54}
+/>
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়। সব dark cloud cover জেতে না, আর কোনো ফল গ্যারান্টি নয়।)
+
+## উদাহরণ ২: যখন হারে, ভুল ছাড়াই (কাল্পনিক)
+
+<Chart
+  id="dark-cloud-cover-fail-01"
+  height={420}
+  caption="EURUSD D1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — স্পষ্ট পুরোনো high-এ গভীর dark cloud cover, সব ঘর পূর্ণ, তবু stop।"
+/>
+
+- **কী দেখা যাচ্ছিল:** ৫ নম্বর candle প্রায় 1.0836-এ পুরোনো high রেখে গেছে। ১০ নম্বর প্রায় 1.0673-এ swing low।
+- **Dark cloud:** ১৫ নম্বর লম্বা সবুজ (1.0776 থেকে 1.0826, body 50 pip)। ১৬ নম্বর 1.0826-এ open, 1.0848 পর্যন্ত উঠে পুরোনো high-এর উপরে উঁকি দেয়, 1.0792-এ close: প্রায় 68%।
+- **সিদ্ধান্ত:** Sell stop 1.0786, ১৭ নম্বরে fill। Stop 1.0856, ঝুঁকি 70 pip। Target 1.06756, swing low-এর ঠিক উপরে, প্রায় 1.6R। পাঁচটি ঘরই পূর্ণ।
+- **কী হলো:** ১৮ নম্বর থেমে যায়, ১৯ নম্বর থেকে buyers ফেরে, ২১ নম্বর stop ভাঙে।
+- **কেন হারল:** কোনো নিয়ম ভাঙা হয়নি। এটা ভালো setup-এর স্বাভাবিক লোকসান।
+
+**শিক্ষা:** একটি trade-এর ফল setup-এর মান বলে না। ১% ঝুঁকিতে এই লোকসান account-এর ১%। ভুল হতো যদি এর পরে "dark cloud কাজ করে না" ভেবে নিয়ম বদলাতেন, বা পরের trade-এ লোকসান তুলতে size বাড়াতেন।
+
+## সাধারণ ভুল
+
+| ভুল                                    | কেন হয়                          | কী করবেন                                   |
+| :------------------------------------- | :------------------------------- | :----------------------------------------- |
+| এক লোকসানের পর নিয়ম বদলে ফেলা         | ছোট নমুনায় সিদ্ধান্ত            | অন্তত ৩০টি নমুনার journal দেখে তারপর ভাবুন |
+| লোকসান তুলতে পরের trade-এ size বাড়ানো | Revenge trading                  | প্রতিটি trade একই ১% ঝুঁকিতে               |
+| 50%-এর গায়ে close-কে dark cloud ধরা   | চোখে মাপা                        | Penetration % হিসাব করুন                   |
+| Stop শুধু দ্বিতীয় candle-এর high-এ    | প্রথম candle-এর high ভুলে যাওয়া | দুই candle-এর উঁচু high-এর উপরে            |
+
+## Pro tips
+
+<Callout type="tip">
+  একটি pattern-এর expectancy মাপতে নিজের journal-এ R-এ ফল লিখুন। যেমন ধরুন
+  (কাল্পনিক) ১০টি trade-এর ৪টি 2R জেতে আর ৬টি 1R হারে: মোট +2R, প্রতি trade-এ
+  গড়ে +0.2R। ১০টির ৬টি হারলেও system লাভজনক হতে পারে।
+</Callout>
+
+<Callout type="warning">
+  টানা লোকসানের পর মন খারাপ হওয়া স্বাভাবিক। কিন্তু তখনই নিয়ম ভাঙা, size
+  বাড়ানো বা checklist বাদ দেওয়ার প্রবণতা সবচেয়ে বেশি। বিস্তারিত: [FOMO ও
+  Revenge Trading](/bn/learn/12-trading-psychology/04-fomo-revenge-trading)।
+</Callout>
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- Dark cloud cover = লম্বা সবুজ candle-এর পর লাল candle, যা সবুজ body-র 50%-এর নিচে কিন্তু সবুজ open-এর উপরে close করে।
+- যত গভীর penetration, তত শক্ত; সবুজ open-এর নিচে close হলে সেটা bearish engulfing।
+- Forex-এ gap-এর কাজ উপরের wick করে; entry low break-এ, stop দুই candle-এর উঁচু high-এর উপরে।
+- সব নিয়ম মেনেও লোকসান স্বাভাবিক; এক trade দিয়ে system বিচার নয়।
+
+</KeyTakeaways>
+
+## অনুশীলন ও নিজের backtest
+
+TradingView-এ XAUUSD H1 বা EURUSD D1 খুলুন। অন্তত ৩০টি dark cloud cover খুঁজুন, আর শুধু সেগুলো trade হিসেবে গুনুন যেগুলো checklist-এর পাঁচটি ঘরই পূর্ণ করে। প্রতিটির ফল R-এ লিখুন। তারপর মোট R ÷ trade সংখ্যা = প্রতি trade-এর গড় R (expectancy)। সংখ্যাটা ধনাত্মক হলে, মাঝের টানা লোকসানগুলো কত লম্বা ছিল, সেটাও লিখুন: এটাই আপনার মানসিক প্রস্তুতির মাপ।
+
+## কুইজ
+
+1. Dark cloud cover আর bearish engulfing-এর তফাত কী?
+2. প্রথম candle 1.2000 থেকে 1.2060। দ্বিতীয় candle 1.2035-এ close করল। এটা কি dark cloud cover?
+3. সব নিয়ম মেনে trade হারল। এরপর কী করবেন?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** Dark cloud cover সবুজ body-র মাঝের নিচে কিন্তু open-এর উপরে close করে। Bearish engulfing সবুজ open-এর নিচে close করে, পুরো body ঢাকে।
+
+**২.** না। মাঝ 1.2030; 1.2035 মাঝের উপরে। এটা dark cloud cover নয়।
+
+**৩.** Journal-এ লিখুন, নিয়ম অপরিবর্তিত রাখুন, পরের trade একই ১% ঝুঁকিতে। অন্তত ৩০টি নমুনা দেখে তারপর নিয়ম নিয়ে ভাবুন।
+
+</details>
+
+## পরের ধাপ
+
+- পুরো walk-through: [Piercing Line](/bn/patterns/piercing-line)।
+- লোকসান মানা: [Accepting Losses](/bn/learn/12-trading-psychology/03-accepting-losses)।
+- একই পরিবারের pattern: [Bearish Engulfing](/bn/patterns/bearish-engulfing), [Evening Star](/bn/patterns/evening-star), [Shooting Star](/bn/patterns/shooting-star)।
+
+<Disclaimer />

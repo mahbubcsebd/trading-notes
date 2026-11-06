@@ -1,0 +1,131 @@
+{
+  "id": "plan-v2-filtered-equity-01",
+  "title": {
+    "en": "Plan v2: Only Setup A",
+    "bn": "Plan v2: শুধু Setup A"
+  },
+  "symbol": "EURUSD",
+  "timeframe": "H1",
+  "mode": "synthetic",
+  "type": "concept",
+  "bias": "neutral",
+  "outcome": "win",
+  "tags": [
+    "plan",
+    "version-2"
+  ],
+  "module": "15-backtesting-journal",
+  "lessonSlugs": [
+    "05-building-a-plan"
+  ],
+  "caption": {
+    "en": "Hypothetical: the same period traded with only setup A (10 trades, +8R). Past data only; it must be confirmed by forward testing.",
+    "bn": "কাল্পনিক: একই সময়ে শুধু setup A নিলে (১০টি trade, +8R)। এটি অতীতের তথ্য; forward test দিয়ে নিশ্চিত করতে হবে।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data.",
+    "bn": "এটি শিক্ষামূলক কাল্পনিক ডেটা।"
+  },
+  "explanation": {
+    "en": "Dropping the weak setup improves the past curve, but a past improvement is a hypothesis, not proof.",
+    "bn": "দুর্বল setup বাদ দিলে অতীতের curve ভালো দেখায়, কিন্তু অতীতের উন্নতি অনুমান, প্রমাণ নয়।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "A change that improves the past still needs a forward test",
+      "bn": "অতীত ভালো করা বদলও forward test চায়"
+    }
+  ],
+  "updatedAt": "2026-11-05T22:00:00Z",
+  "candles": [
+    {
+      "i": 0,
+      "o": 10000.0,
+      "h": 10222.0,
+      "l": 9978.0,
+      "c": 10200.0,
+      "v": 0
+    },
+    {
+      "i": 1,
+      "o": 10200.0,
+      "h": 10212.2,
+      "l": 10085.8,
+      "c": 10098.0,
+      "v": 0
+    },
+    {
+      "i": 2,
+      "o": 10098.0,
+      "h": 10322.16,
+      "l": 10075.8,
+      "c": 10299.96,
+      "v": 0
+    },
+    {
+      "i": 3,
+      "o": 10299.96,
+      "h": 10528.56,
+      "l": 10277.36,
+      "c": 10505.96,
+      "v": 0
+    },
+    {
+      "i": 4,
+      "o": 10505.96,
+      "h": 10518.47,
+      "l": 10388.39,
+      "c": 10400.9,
+      "v": 0
+    },
+    {
+      "i": 5,
+      "o": 10400.9,
+      "h": 10631.72,
+      "l": 10378.1,
+      "c": 10608.92,
+      "v": 0
+    },
+    {
+      "i": 6,
+      "o": 10608.92,
+      "h": 10621.53,
+      "l": 10490.22,
+      "c": 10502.83,
+      "v": 0
+    },
+    {
+      "i": 7,
+      "o": 10502.83,
+      "h": 10735.9,
+      "l": 10479.82,
+      "c": 10712.89,
+      "v": 0
+    },
+    {
+      "i": 8,
+      "o": 10712.89,
+      "h": 10725.6,
+      "l": 10593.05,
+      "c": 10605.76,
+      "v": 0
+    },
+    {
+      "i": 9,
+      "o": 10605.76,
+      "h": 10841.09,
+      "l": 10582.55,
+      "c": 10817.88,
+      "v": 0
+    }
+  ],
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 10000,
+      "label": "Start 10,000",
+      "color": "#3b82f6",
+      "style": "dotted"
+    }
+  ]
+}

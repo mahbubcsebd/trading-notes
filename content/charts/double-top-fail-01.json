@@ -1,0 +1,329 @@
+{
+  "symbol": "EURUSD",
+  "timeframe": "H4",
+  "mode": "synthetic",
+  "module": "06-trend-chart-patterns",
+  "lessonSlugs": [
+    "01-reversal-patterns"
+  ],
+  "notes": {
+    "en": "Illustrative synthetic data.",
+    "bn": "এটি শিক্ষামূলক কাল্পনিক ডেটা।"
+  },
+  "updatedAt": "2026-11-05T20:00:00Z",
+  "type": "trade-setup",
+  "id": "double-top-fail-01",
+  "title": {
+    "en": "Double Top That Fails",
+    "bn": "যে double top ব্যর্থ হলো"
+  },
+  "bias": "bearish",
+  "outcome": "loss",
+  "tags": [
+    "double-top",
+    "failed-setup",
+    "neckline"
+  ],
+  "caption": {
+    "en": "Same shape, weak break. Candle 21 barely closes under the neckline, sell triggers at 1.0864, but candle 23 closes at 1.0912, above the 1.0898 stop, and price keeps going above both peaks.",
+    "bn": "একই আকৃতি, কিন্তু দুর্বল break। ২১ নম্বর candle কোনোমতে neckline-এর নিচে close করে, 1.0864-এ sell trigger হয়, কিন্তু ২৩ নম্বর candle 1.0912-এ close করে 1.0898 stop-এর ওপরে; দাম দুই peak-এর ওপরেও যায়।"
+  },
+  "annotations": [
+    {
+      "type": "zone",
+      "from": {
+        "price": 1.0984,
+        "i": 7
+      },
+      "to": {
+        "price": 1.097,
+        "i": 19
+      },
+      "label": "Double Top",
+      "color": "#f5b301"
+    },
+    {
+      "type": "hline",
+      "price": 1.088,
+      "label": "Neckline 1.0880",
+      "color": "#3b82f6",
+      "style": "dashed"
+    },
+    {
+      "type": "marker",
+      "i": 8,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Peak 1"
+    },
+    {
+      "type": "marker",
+      "i": 18,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Peak 2"
+    },
+    {
+      "type": "marker",
+      "i": 21,
+      "position": "belowBar",
+      "shape": "arrowDown",
+      "text": "Weak break"
+    },
+    {
+      "type": "marker",
+      "i": 22,
+      "position": "belowBar",
+      "shape": "arrowDown",
+      "text": "Sell"
+    },
+    {
+      "type": "marker",
+      "i": 23,
+      "position": "aboveBar",
+      "shape": "arrowUp",
+      "text": "Reclaim"
+    },
+    {
+      "type": "hline",
+      "price": 1.0864,
+      "label": "Sell entry",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.0898,
+      "label": "Stop",
+      "color": "#ef4444",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Break candle body is small (only 6 pips below neckline), the trigger candle has no follow-through, and one strong bullish candle reclaims the neckline. Stop fills at 1.0898 for the planned 34 pips.",
+    "bn": "Break candle-এর body ছোট (neckline-এর মাত্র 6 pip নিচে), trigger candle-এর পরে কোনো গতি নেই, আর একটি জোরালো bullish candle neckline ফিরিয়ে নেয়। Stop 1.0898-এ fill হয়, পরিকল্পিত 34 pip ক্ষতি।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "A weak neckline break is a warning, not a signal",
+      "bn": "দুর্বল neckline break সংকেত নয়, সতর্কতা"
+    },
+    {
+      "en": "Close back above the neckline = pattern cancelled",
+      "bn": "Neckline-এর ওপরে ফিরে close = pattern বাতিল"
+    }
+  ],
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.0792,
+      "h": 1.0806,
+      "l": 1.0786,
+      "c": 1.08
+    },
+    {
+      "i": 1,
+      "o": 1.08,
+      "h": 1.0828,
+      "l": 1.0792,
+      "c": 1.082
+    },
+    {
+      "i": 2,
+      "o": 1.082,
+      "h": 1.085,
+      "l": 1.081,
+      "c": 1.084
+    },
+    {
+      "i": 3,
+      "o": 1.084,
+      "h": 1.0866,
+      "l": 1.0834,
+      "c": 1.086
+    },
+    {
+      "i": 4,
+      "o": 1.086,
+      "h": 1.0888,
+      "l": 1.0852,
+      "c": 1.088
+    },
+    {
+      "i": 5,
+      "o": 1.088,
+      "h": 1.0914,
+      "l": 1.087,
+      "c": 1.0904
+    },
+    {
+      "i": 6,
+      "o": 1.0904,
+      "h": 1.0934,
+      "l": 1.0898,
+      "c": 1.0928
+    },
+    {
+      "i": 7,
+      "o": 1.0928,
+      "h": 1.096,
+      "l": 1.092,
+      "c": 1.0952
+    },
+    {
+      "i": 8,
+      "o": 1.0952,
+      "h": 1.098,
+      "l": 1.0942,
+      "c": 1.0976
+    },
+    {
+      "i": 9,
+      "o": 1.0976,
+      "h": 1.0982,
+      "l": 1.0945,
+      "c": 1.0951
+    },
+    {
+      "i": 10,
+      "o": 1.0951,
+      "h": 1.0959,
+      "l": 1.0917,
+      "c": 1.0925
+    },
+    {
+      "i": 11,
+      "o": 1.0925,
+      "h": 1.0935,
+      "l": 1.089,
+      "c": 1.09
+    },
+    {
+      "i": 12,
+      "o": 1.09,
+      "h": 1.0906,
+      "l": 1.0887,
+      "c": 1.0893
+    },
+    {
+      "i": 13,
+      "o": 1.0893,
+      "h": 1.0901,
+      "l": 1.088,
+      "c": 1.0886
+    },
+    {
+      "i": 14,
+      "o": 1.0886,
+      "h": 1.0917,
+      "l": 1.0876,
+      "c": 1.0907
+    },
+    {
+      "i": 15,
+      "o": 1.0907,
+      "h": 1.0935,
+      "l": 1.0901,
+      "c": 1.0929
+    },
+    {
+      "i": 16,
+      "o": 1.0929,
+      "h": 1.0958,
+      "l": 1.0921,
+      "c": 1.095
+    },
+    {
+      "i": 17,
+      "o": 1.095,
+      "h": 1.097,
+      "l": 1.094,
+      "c": 1.096
+    },
+    {
+      "i": 18,
+      "o": 1.096,
+      "h": 1.0976,
+      "l": 1.0954,
+      "c": 1.097
+    },
+    {
+      "i": 19,
+      "o": 1.097,
+      "h": 1.0978,
+      "l": 1.0932,
+      "c": 1.094
+    },
+    {
+      "i": 20,
+      "o": 1.094,
+      "h": 1.095,
+      "l": 1.09,
+      "c": 1.091
+    },
+    {
+      "i": 21,
+      "o": 1.091,
+      "h": 1.0914,
+      "l": 1.087,
+      "c": 1.0874
+    },
+    {
+      "i": 22,
+      "o": 1.0874,
+      "h": 1.088,
+      "l": 1.0864,
+      "c": 1.087
+    },
+    {
+      "i": 23,
+      "o": 1.087,
+      "h": 1.092,
+      "l": 1.0868,
+      "c": 1.0912
+    },
+    {
+      "i": 24,
+      "o": 1.0912,
+      "h": 1.0942,
+      "l": 1.0906,
+      "c": 1.0936
+    },
+    {
+      "i": 25,
+      "o": 1.0936,
+      "h": 1.0968,
+      "l": 1.0928,
+      "c": 1.096
+    },
+    {
+      "i": 26,
+      "o": 1.096,
+      "h": 1.0985,
+      "l": 1.095,
+      "c": 1.0975
+    },
+    {
+      "i": 27,
+      "o": 1.0975,
+      "h": 1.0996,
+      "l": 1.0969,
+      "c": 1.099
+    },
+    {
+      "i": 28,
+      "o": 1.099,
+      "h": 1.1008,
+      "l": 1.0982,
+      "c": 1.1
+    },
+    {
+      "i": 29,
+      "o": 1.1,
+      "h": 1.102,
+      "l": 1.099,
+      "c": 1.101
+    }
+  ],
+  "entry": 1.0864
+}

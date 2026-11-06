@@ -1,0 +1,316 @@
+{
+  "symbol": "EURUSD",
+  "timeframe": "H4",
+  "mode": "synthetic",
+  "module": "06-trend-chart-patterns",
+  "lessonSlugs": [
+    "03-range-breakout"
+  ],
+  "notes": {
+    "en": "Illustrative synthetic data.",
+    "bn": "এটি শিক্ষামূলক কাল্পনিক ডেটা।"
+  },
+  "updatedAt": "2026-11-05T21:00:00Z",
+  "type": "trade-setup",
+  "id": "range-breakout-weak-01",
+  "title": {
+    "en": "Weak Breakout That Fails",
+    "bn": "যে দুর্বল breakout ব্যর্থ হলো"
+  },
+  "bias": "bullish",
+  "outcome": "loss",
+  "tags": [
+    "range",
+    "breakout",
+    "failed-setup"
+  ],
+  "caption": {
+    "en": "Candle 18 closes only 8 pips over the top with a long upper wick. Buy triggers at 1.0927, but candle 19 closes back at 1.0884 and the stop at 1.0884 is hit.",
+    "bn": "১৮ নম্বর candle ওপরে মাত্র 8 pip close করে, ওপরে লম্বা wick। 1.0927-এ buy trigger হয়, কিন্তু ১৯ নম্বর candle 1.0884-এ ফিরে close করে ও stop কাটে।"
+  },
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 1.09,
+      "label": "Range top 1.0900",
+      "color": "#3b82f6",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.08,
+      "label": "Range bottom 1.0800",
+      "color": "#3b82f6",
+      "style": "dashed"
+    },
+    {
+      "type": "marker",
+      "i": 18,
+      "position": "aboveBar",
+      "shape": "arrowUp",
+      "text": "Weak break"
+    },
+    {
+      "type": "marker",
+      "i": 19,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Back inside"
+    },
+    {
+      "type": "hline",
+      "price": 1.0927,
+      "label": "Buy entry",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.0884,
+      "label": "Stop",
+      "color": "#ef4444",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "The breakout candle body was small and the long wick showed sellers defending the top. Candle 19 closed back inside the range: the breakout failed. Planned loss 43 pips.",
+    "bn": "Break candle-এর body ছোট, লম্বা wick দেখাচ্ছে বিক্রেতারা top রক্ষা করছে। ১৯ নম্বর candle range-এর ভিতরে ফিরে close করল: breakout ব্যর্থ। পরিকল্পিত ক্ষতি 43 pip।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Small body plus long wick at the edge is a warning",
+      "bn": "প্রান্তে ছোট body ও লম্বা wick একটি সতর্কতা"
+    },
+    {
+      "en": "Close back inside the range = breakout failed",
+      "bn": "Range-এর ভিতরে ফিরে close = breakout ব্যর্থ"
+    }
+  ],
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.0842,
+      "h": 1.0856,
+      "l": 1.0836,
+      "c": 1.085
+    },
+    {
+      "i": 1,
+      "o": 1.085,
+      "h": 1.0881,
+      "l": 1.0842,
+      "c": 1.0873
+    },
+    {
+      "i": 2,
+      "o": 1.0873,
+      "h": 1.0901,
+      "l": 1.0863,
+      "c": 1.0895
+    },
+    {
+      "i": 3,
+      "o": 1.0895,
+      "h": 1.0901,
+      "l": 1.0846,
+      "c": 1.0852
+    },
+    {
+      "i": 4,
+      "o": 1.0852,
+      "h": 1.086,
+      "l": 1.08,
+      "c": 1.081
+    },
+    {
+      "i": 5,
+      "o": 1.081,
+      "h": 1.0861,
+      "l": 1.08,
+      "c": 1.0851
+    },
+    {
+      "i": 6,
+      "o": 1.0851,
+      "h": 1.0899,
+      "l": 1.0845,
+      "c": 1.0892
+    },
+    {
+      "i": 7,
+      "o": 1.0892,
+      "h": 1.09,
+      "l": 1.0841,
+      "c": 1.0849
+    },
+    {
+      "i": 8,
+      "o": 1.0849,
+      "h": 1.0859,
+      "l": 1.0799,
+      "c": 1.0806
+    },
+    {
+      "i": 9,
+      "o": 1.0806,
+      "h": 1.0854,
+      "l": 1.08,
+      "c": 1.0848
+    },
+    {
+      "i": 10,
+      "o": 1.0848,
+      "h": 1.0902,
+      "l": 1.084,
+      "c": 1.089
+    },
+    {
+      "i": 11,
+      "o": 1.089,
+      "h": 1.09,
+      "l": 1.0842,
+      "c": 1.0852
+    },
+    {
+      "i": 12,
+      "o": 1.0852,
+      "h": 1.0858,
+      "l": 1.0801,
+      "c": 1.0815
+    },
+    {
+      "i": 13,
+      "o": 1.0815,
+      "h": 1.086,
+      "l": 1.0807,
+      "c": 1.0852
+    },
+    {
+      "i": 14,
+      "o": 1.0852,
+      "h": 1.09,
+      "l": 1.0842,
+      "c": 1.0888
+    },
+    {
+      "i": 15,
+      "o": 1.0888,
+      "h": 1.0894,
+      "l": 1.0861,
+      "c": 1.0867
+    },
+    {
+      "i": 16,
+      "o": 1.0867,
+      "h": 1.0875,
+      "l": 1.0837,
+      "c": 1.0845
+    },
+    {
+      "i": 17,
+      "o": 1.0845,
+      "h": 1.0886,
+      "l": 1.0835,
+      "c": 1.0876
+    },
+    {
+      "i": 18,
+      "o": 1.0876,
+      "h": 1.0925,
+      "l": 1.0872,
+      "c": 1.0908
+    },
+    {
+      "i": 19,
+      "o": 1.0908,
+      "h": 1.0932,
+      "l": 1.088,
+      "c": 1.0884
+    },
+    {
+      "i": 20,
+      "o": 1.0884,
+      "h": 1.0894,
+      "l": 1.086,
+      "c": 1.087
+    },
+    {
+      "i": 21,
+      "o": 1.087,
+      "h": 1.0876,
+      "l": 1.0855,
+      "c": 1.0861
+    },
+    {
+      "i": 22,
+      "o": 1.0861,
+      "h": 1.0869,
+      "l": 1.0844,
+      "c": 1.0852
+    },
+    {
+      "i": 23,
+      "o": 1.0852,
+      "h": 1.0862,
+      "l": 1.0835,
+      "c": 1.0845
+    },
+    {
+      "i": 24,
+      "o": 1.0845,
+      "h": 1.0851,
+      "l": 1.0832,
+      "c": 1.0838
+    },
+    {
+      "i": 25,
+      "o": 1.0838,
+      "h": 1.0846,
+      "l": 1.0826,
+      "c": 1.0834
+    },
+    {
+      "i": 26,
+      "o": 1.0834,
+      "h": 1.0844,
+      "l": 1.082,
+      "c": 1.083
+    },
+    {
+      "i": 27,
+      "o": 1.083,
+      "h": 1.0836,
+      "l": 1.0821,
+      "c": 1.0827
+    },
+    {
+      "i": 28,
+      "o": 1.0827,
+      "h": 1.0835,
+      "l": 1.0816,
+      "c": 1.0824
+    },
+    {
+      "i": 29,
+      "o": 1.0824,
+      "h": 1.0834,
+      "l": 1.0811,
+      "c": 1.0821
+    },
+    {
+      "i": 30,
+      "o": 1.0821,
+      "h": 1.0827,
+      "l": 1.0812,
+      "c": 1.0818
+    },
+    {
+      "i": 31,
+      "o": 1.0818,
+      "h": 1.0826,
+      "l": 1.0807,
+      "c": 1.0815
+    }
+  ],
+  "entry": 1.0927
+}

@@ -1,0 +1,305 @@
+---
+title: "Gravestone Doji: উপরে উঠে পুরোটা ফেরত, resistance-এ buyers-এর ব্যর্থতা"
+description: "Gravestone doji কীভাবে চিনবেন, dragonfly-র উল্টো ছবি, কেন resistance-এ এটা bearish আর trend-এর বিপরীতে কখন ফাঁদ — entry, stop, target ও chart example সহ।"
+type: bearish
+category: momentum-indecision
+level: beginner
+candleCount: 1
+signal: reversal
+chartId: gravestone-doji-win-01
+tags: [pattern, candlestick, gravestone-doji, doji, resistance]
+status: done
+sources:
+  - type: book
+    title: "Japanese Candlestick Charting Techniques - Steve Nison"
+    note: "Gravestone doji, doji at tops"
+  - type: blog
+    title: "Gravestone Doji - Investopedia"
+    url: "https://www.investopedia.com/terms/g/gravestone-doji.asp"
+updated: 2026-11-06
+---
+
+পুরোনো high ভেঙে দাম উপরে ছুটল, আপনি breakout ভেবে buy করলেন। কিন্তু candle শেষ হওয়ার আগেই দাম পুরোটা নেমে এসে ঠিক open-এ close করল, উপরে রেখে গেল একটি লম্বা wick। এটা gravestone doji: উপরের সব দাম প্রত্যাখ্যাত। [Dragonfly Doji](/bn/patterns/dragonfly-doji)-র হুবহু উল্টো ছবি, তাই এই পাতায় শুধু যা আলাদা, তা-ই বিস্তারিত।
+
+## এক নজরে
+
+| বিষয়                | Gravestone Doji                                                                                    |
+| :------------------- | :------------------------------------------------------------------------------------------------- |
+| ধরন                  | Bearish reversal ঝোঁক (resistance-এ), একটি candle                                                  |
+| কোথায় খুঁজবেন       | Uptrend বা pullback-এর শেষে, চিহ্নিত resistance-এ                                                  |
+| চেনার মূল চিহ্ন      | Open ≈ close ≈ low, শুধু উপরে লম্বা wick, নিচে wick প্রায় নেই                                     |
+| Confirmation         | পরের candle gravestone-এর low-এর নিচে close করা                                                    |
+| Stop                 | লম্বা wick-এর high-এর উপরে, spread-সহ buffer                                                       |
+| বাতিল (invalidation) | Wick-এর high-এর উপরে close                                                                         |
+| দেখতে একই রকম        | [Shooting Star](/bn/patterns/shooting-star), [Inverted Hammer](/bn/patterns/inverted-hammer), Doji |
+| বিপরীত pattern       | Dragonfly Doji (শুধু নিচে লম্বা wick)                                                              |
+
+## এই লেখা পড়ে আপনি যা পারবেন
+
+- Gravestone doji আর shooting star-এর তফাত **মেপে বলতে পারবেন**।
+- Resistance-এ ভুয়া breakout-এর ছবি হিসেবে gravestone **চিনতে পারবেন**।
+- শক্তিশালী uptrend-এর বিপরীতে gravestone short কখন ফাঁদ, তা **কাছের support মেপে বুঝতে পারবেন**।
+
+## কেন জরুরি
+
+- **ভুয়া breakout-এর এক-candle ছবি।** Resistance-এর উপরে wick আর নিচে close মানে breakout buyers আটকে গেছে। বিস্তারিত: [Fake Breakout](/bn/learn/06-trend-chart-patterns/04-fake-breakout)।
+- **Top-এ doji বেশি অর্থবহ।** Nison-এর পর্যবেক্ষণ: uptrend-এর শেষে doji-র ওজন বেশি, আর gravestone সেই top-এর doji-র সবচেয়ে স্পষ্ট রূপ।
+- **Trend-এর বিপরীতে signal।** তাই কাছের support পর্যন্ত জায়গা না থাকলে নিখুঁত gravestone-ও লোকসান আনে।
+
+পূর্বশর্ত: [Doji](/bn/patterns/doji) পাতা আর [Support Resistance Role Reversal](/bn/learn/05-support-resistance/02-role-reversal)।
+
+## Gravestone Doji কী
+
+**Gravestone doji হলো এমন একটি doji, যার open, close আর low প্রায় একই দামে, আর উপরে একটি লম্বা wick।** দেখতে উল্টো "T", বা কবরের ফলকের মতো (তাই নাম gravestone): মাটিতে সমতল ভিত্তি, উপরে খাড়া পাথর।
+
+একটা বল উপরে ছুড়ে দেওয়ার কথা ভাবুন। যত জোরেই ছুড়ুন, শেষে সে হাতেই ফিরে আসে। Buyers দাম অনেক উপরে তুলেছে, কিন্তু ধরে রাখতে পারেনি।
+
+<CandleDiagram
+  title="Gravestone doji বনাম shooting star"
+  candles={[
+    { o: 40, h: 46, l: 39, c: 45, dim: true },
+    { o: 45, h: 51, l: 44, c: 50, dim: true },
+    {
+      o: 50,
+      h: 65,
+      l: 49.8,
+      c: 50.1,
+      label: "Gravestone",
+      note: "body নেই, open ≈ close ≈ low",
+    },
+    { o: 50, h: 52, l: 47, c: 48, dim: true },
+    {
+      o: 50,
+      h: 64,
+      l: 49.5,
+      c: 48.5,
+      label: "Shooting star",
+      note: "ছোট body আছে",
+    },
+  ]}
+  caption="দুটোতেই উপরে লম্বা wick। Gravestone-এ body প্রায় শূন্য; shooting star-এ ছোট কিন্তু দৃশ্যমান body।"
+/>
+
+### চেনার নিয়ম
+
+| নিয়ম                                                   | বাধ্যতামূলক?          | কেন                                                  |
+| :------------------------------------------------------ | :-------------------- | :--------------------------------------------------- |
+| Open আর close প্রায় সমান                               | হ্যাঁ                 | Body দেখা গেলে সেটা shooting star বা inverted hammer |
+| Open-close candle-এর low-এর কাছে (নিচে wick প্রায় নেই) | হ্যাঁ                 | নিচে wick থাকলে সেটা long-legged doji-র দিকে যায়    |
+| উপরের wick স্পষ্ট লম্বা                                 | হ্যাঁ                 | ছোট wick-এ rejection-এর গল্প নেই                     |
+| Candle বন্ধ হয়েছে                                      | হ্যাঁ                 | চলমান candle আবার উপরে উঠে close করতে পারে           |
+| চিহ্নিত resistance-এ, আগে ঊর্ধ্বমুখী move               | না (কিন্তু খুব জরুরি) | এটাই bearish অর্থ দেয়                               |
+
+## শক্তিশালী বনাম দুর্বল gravestone doji
+
+<DiagramRow>
+  <CandleDiagram
+    title="শক্তিশালী"
+    verdict="good"
+    verdictLabel="trade-যোগ্য"
+    candles={[
+      { o: 40, h: 46, l: 39, c: 45, dim: true },
+      { o: 45, h: 51, l: 44, c: 50, dim: true },
+      { o: 50, h: 63, l: 49.7, c: 49.9, label: "resistance ভেদ করে ফেরা" },
+      { o: 50, h: 50.5, l: 43, c: 44, dim: true },
+    ]}
+    levels={[{ price: 56, label: "পুরোনো high", tone: "resistance" }]}
+    caption="Rally-র শেষে পুরোনো high-এ, wick level-এর উপরে, পরের candle low-এর নিচে close।"
+  />
+  <CandleDiagram
+    title="দুর্বল"
+    verdict="bad"
+    verdictLabel="এড়িয়ে চলুন"
+    candles={[
+      { o: 40, h: 47, l: 39.5, c: 46, dim: true },
+      { o: 46, h: 53, l: 45.5, c: 52, dim: true },
+      { o: 52, h: 53, l: 47, c: 48, dim: true },
+      { o: 48, h: 55, l: 47.8, c: 48.1, label: "ছোট high-এ" },
+      { o: 48.1, h: 50, l: 46, c: 49.5, dim: true },
+    ]}
+    levels={[{ price: 46.5, label: "higher low", tone: "support" }]}
+    caption="শক্তিশালী uptrend-এ একটি ছোট high-এ। ঠিক নিচে higher low, target-এর জায়গা নেই।"
+  />
+</DiagramRow>
+
+| মান যাচাই   | শক্তিশালী                            | দুর্বল                                |
+| :---------- | :----------------------------------- | :------------------------------------ |
+| আগে কী ছিল  | Rally বা pullback-এর উপরের দিকে move | শক্তিশালী uptrend-এর মাঝ পথ           |
+| কোথায়      | চিহ্নিত পুরোনো high বা supply zone-এ | ছোট, অচিহ্নিত high-এ                  |
+| Wick        | Level-এর ওপারে গিয়ে ফেরে            | কোনো level ছোঁয় না                   |
+| নিচে জায়গা | কাছের support পর্যন্ত অন্তত 1.5R     | Higher low বা support 1-1.2R-এর মধ্যে |
+
+### দেখতে একই রকম, অর্থ আলাদা
+
+| Pattern             | আকার                                             | তফাত                                        |
+| :------------------ | :----------------------------------------------- | :------------------------------------------ |
+| **Gravestone Doji** | Body নেই, open ≈ close ≈ low, উপরে লম্বা wick    | পুরো rejection; resistance-এ bearish ঝোঁক   |
+| **Shooting Star**   | ছোট body নিচে, উপরে লম্বা wick                   | প্রায় একই গল্প, body থাকায় একটু কম নিখুঁত |
+| **Inverted Hammer** | Shooting star-এর আকার, কিন্তু downtrend-এর তলায় | একই আকার, উল্টো জায়গা, bullish ঝোঁক        |
+
+## Candle-এর ভেতরের গল্প
+
+Dragonfly-র গল্পটাই উল্টো দিকে। একটি প্রচলিত ব্যাখ্যা: buyers open থেকে দাম তোলে, resistance ভাঙে, breakout buyers ঢোকে আর short-দের buy stop কাটে। উপরে বড় sell order আসে, দাম পুরোটা নেমে open-এ close করে। উপরে যারা কিনেছিল, তারা এখন লোকসানে। পরের candle low-এর নিচে close করলে sellers প্রথম স্পষ্ট জয় পায়।
+
+<Callout type="note">
+  এটি একটি প্রচলিত ব্যাখ্যা, প্রমাণিত ঘটনা নয়। Chart দেখে কার stop কেটেছে বা কে
+  বেচেছে, তা জানা যায় না।
+</Callout>
+
+## কোথায় কাজ করে, কোথায় করে না
+
+<Compare
+  leftLabel="যেখানে gravestone-এর ওজন বেশি"
+  rightLabel="যেখানে gravestone প্রায়ই ফাঁদ"
+  left="- Rally-র শেষে চিহ্নিত পুরোনো high বা supply zone-এ
+- Wick resistance-এর উপরে গিয়ে নিচে close করলে
+- Downtrend-এর ভেতরে pullback শেষে, trend-এর দিকে
+- নিচে কাছের support পর্যন্ত যথেষ্ট জায়গা থাকলে"
+  right="- শক্তিশালী uptrend-এর ভেতরে ছোট, অচিহ্নিত high-এ
+- ঠিক নিচে higher low বা support থাকলে
+- Downtrend-এর তলায় (তখন এটা inverted hammer-এর মতো)
+- News spike-এ, যেখানে wick পাতলা liquidity-র ফল"
+/>
+
+## ধাপে ধাপে: gravestone doji trade
+
+পুরো ধাপগুলো Dragonfly Doji পাতায় (শুরুতে link) আছে; এখানে সবকিছু উল্টো দিকে। শুধু যা আলাদা:
+
+<Steps>
+
+### ধাপ ১: Trend-এর দিক যাচাই
+
+Higher timeframe শক্তিশালী uptrend-এ থাকলে gravestone short মানে trend-এর বিপরীতে trade। তখন শুধু বড়, চিহ্নিত resistance-এ ভাবুন।
+
+### ধাপ ২: নিচের কাছের support খুঁজুন
+
+শেষ higher low, ভাঙা resistance (এখন support), round number। Entry থেকে সেখানে পর্যন্ত দূরত্ব মাপুন।
+
+### ধাপ ৩: Entry ও stop
+
+Gravestone-এর low-এর একটু নিচে sell stop, বা confirmation candle বন্ধ হলে sell। Stop wick-এর high-এর উপরে, [spread](/bn/learn/01-foundations/04-spread-commission-swap)-সহ। Wick লম্বা বলে size কমান।
+
+### ধাপ ৪: R:R যাচাই
+
+কাছের support পর্যন্ত [risk reward](/bn/learn/08-risk-management/03-risk-reward) অন্তত 1:1.5 না হলে বাদ দিন, আকার যত নিখুঁতই হোক।
+
+</Steps>
+
+### Trade-এর আগে checklist
+
+<Checklist
+  id="pattern-gravestone-doji-pretrade-bn"
+  items={[
+    "Gravestone আসার আগেই resistance চিহ্নিত ছিল, আর দাম উপরে উঠে সেখানে এসেছে?",
+    "আকার নিয়ম মানছে (open ≈ close ≈ low, উপরে লম্বা wick)?",
+    "Gravestone আর confirmation candle দুটোই বন্ধ হয়েছে?",
+    "কাছের support পর্যন্ত risk reward অন্তত 1:1.5?",
+    "Higher timeframe-এর trend বা level trade-এর বিপরীতে নেই?",
+  ]}
+/>
+
+একটি ঘরও খালি থাকলে trade বাদ দিন।
+
+## উদাহরণ ১: যখন কাজ করে (কাল্পনিক)
+
+<Chart
+  id="gravestone-doji-win-01"
+  height={420}
+  caption="GBPUSD H1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — পুরোনো high ভেদ করে ফেরা gravestone doji, পরের candle low ভাঙলে short।"
+/>
+
+- **কী দেখা যাচ্ছিল:** ৫ নম্বর candle 1.2723-এ পুরোনো high রেখে গেছে। ৬-১০ নম্বর প্রায় 1.2648 পর্যন্ত নামে, ১১-১৫ নম্বর আবার high-এর নিচে ফেরে।
+- **Gravestone:** ১৬ নম্বর 1.2717-এ open, 1.27165-এ close, low 1.2716। উপরের wick 1.2743 পর্যন্ত, পুরোনো high-এর 20 pip ওপারে, তারপর পুরোটা ফেরত।
+- **সিদ্ধান্ত:** Sell stop 1.2714 (low-এর 2 pip নিচে)। Stop 1.2748 (wick high-এর 5 pip উপরে), ঝুঁকি 34 pip। Target 1.2646 (2R), আগের pullback low 1.2648-এর কাছে; সেখান পর্যন্ত জায়গা প্রায় 1.95R।
+- **ফল:** ১৭ নম্বর 1.2707-এ close করে order fill করে। ২৪ নম্বর candle target ছোঁয়।
+- **শিক্ষা:** চিহ্নিত level, level-এর ওপারে wick, confirmation close, আর নিচে যথেষ্ট জায়গা: চারটিই মিলেছে।
+
+<TradeSetup
+  direction="short"
+  pair="GBPUSD"
+  entry={1.2714}
+  stop={1.2748}
+  target={1.2646}
+/>
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়। সব gravestone doji জেতে না, আর কোনো ফল গ্যারান্টি নয়।)
+
+## উদাহরণ ২: যখন ফাঁদ হয় (কাল্পনিক)
+
+<Chart
+  id="gravestone-doji-fail-01"
+  height={420}
+  caption="XAUUSD H1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — শক্তিশালী uptrend-এ ছোট high-এ gravestone, confirmation-এর পরও stop।"
+/>
+
+- **কী দেখা যাচ্ছিল:** ০-৭ নম্বর candle 2300 থেকে প্রায় 2337 পর্যন্ত শক্তিশালী uptrend। ৮-১০ নম্বর 2318.82-এ একটি higher low রেখে গেছে।
+- **Gravestone:** ১৪ নম্বর 2337.00-এ open, 2336.80-এ close, low 2336.60, high 2349.00। আকারে নিখুঁত।
+- **ভুল সিদ্ধান্ত:** ১৫ নম্বর 2334.60-এ close করে, sell stop 2336.10 fill হয়। Stop 2350.50, ঝুঁকি $14.40, target 2307.30 (2R)। কিন্তু higher low 2318.82 মাত্র প্রায় 1.2R দূরে, আর target সেই support-এর অনেক ওপারে।
+- **কী হলো:** ১৬ নম্বর থেমে যায়, ১৭ নম্বর আবার উঠে, ১৮ নম্বর stop ভাঙে।
+- **কেন ব্যর্থ:** Trend-এর বিপরীতে, ছোট অচিহ্নিত high-এ, আর কাছের support 1.5R-এর মধ্যে। Checklist-এর প্রথম, চতুর্থ আর পঞ্চম ঘরে trade বাদ পড়ত।
+
+**শিক্ষা:** Trend-এর বিপরীতের signal-এর জন্য কাছের support পর্যন্ত জায়গা লাগে। Stop আগে বসানো ছিল বলে লোকসান 1R-এ আটকেছে।
+
+## সাধারণ ভুল
+
+| ভুল                                          | কেন হয়                       | কী করবেন                                                     |
+| :------------------------------------------- | :---------------------------- | :----------------------------------------------------------- |
+| শক্তিশালী uptrend-এ প্রতিটি gravestone short | "Gravestone = bearish" মুখস্থ | শুধু চিহ্নিত resistance-এ, কাছের support মেপে                |
+| Shooting star আর gravestone গুলিয়ে ফেলা     | Body মাপা হয় না              | Body দৃশ্যমান হলে shooting star; প্রায় শূন্য হলে gravestone |
+| Stop wick-এর মাঝখানে রাখা                    | বড় stop-এর ভয়               | Stop wick high-এর উপরে, size কমান                            |
+| Downtrend-এর তলায় gravestone short          | জায়গা না দেখা                | তলায় এই আকার inverted hammer-এর মতো; bullish ঝোঁক           |
+
+## Pro tips
+
+<Callout type="tip">
+  Gravestone-এর wick যদি স্পষ্ট পুরোনো high-এর উপরে গিয়ে ফেরে, সেটা breakout
+  buyers আটকে যাওয়ার ছবি। এমন জায়গায় পরের candle confirm করলে setup সবচেয়ে
+  পরিষ্কার।
+</Callout>
+
+<Callout type="warning">
+  শক্তিশালী trend-এর বিপরীতে প্রতিটি rejection candle short করা নতুনদের সবচেয়ে
+  দামি অভ্যাসগুলোর একটি। আগে trend-এর দিকে pullback trade শিখুন: [Trend
+  Continuation vs
+  Reversal](/bn/learn/09-price-action-entries-strategies/02-trend-continuation-vs-reversal)।
+</Callout>
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- Gravestone doji = open ≈ close ≈ low, উপরে লম্বা wick; dragonfly-র উল্টো ছবি।
+- Rally-র শেষে চিহ্নিত resistance-এ, wick level-এর ওপারে গেলে এটা buyers-এর ব্যর্থতা।
+- Entry confirmation-এর পর; stop wick high-এর উপরে, size কমিয়ে।
+- Trend-এর বিপরীতে হলে কাছের support পর্যন্ত অন্তত 1.5R না থাকলে বাদ।
+
+</KeyTakeaways>
+
+## অনুশীলন ও নিজের backtest
+
+TradingView-এ GBPUSD H1 বা XAUUSD H1 খুলুন। অন্তত ২০টি gravestone doji খুঁজুন। প্রতিটির জন্য লিখুন: তারিখ, চিহ্নিত resistance ছিল কি না, higher timeframe trend-এর দিক, কাছের support পর্যন্ত কত R, confirmation এসেছে কি না, ফল (R)। এরপর "trend-এর দিকে" আর "trend-এর বিপরীতে" দুই দলে ভাগ করে গড় R তুলনা করুন। অন্তত ৩০টি নমুনা ছাড়া সিদ্ধান্ত নেবেন না।
+
+## কুইজ
+
+1. Gravestone আর shooting star-এর মূল তফাত কী?
+2. শক্তিশালী uptrend-এ একটি ছোট high-এ gravestone, নিচে 1R দূরে higher low। কী করবেন?
+3. Downtrend-এর তলায় gravestone-এর আকার এলে কী ভাববেন?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** Gravestone-এ open আর close প্রায় সমান, body নেই। Shooting star-এ ছোট কিন্তু দৃশ্যমান body আছে। গল্প প্রায় একই।
+
+**২.** Trade বাদ। কাছের support পর্যন্ত R:R 1:1.5-এর কম, আর trade trend-এর বিপরীতে।
+
+**৩.** Short নয়। তলায় উপরের লম্বা wick দেখায় buyers দাম তুলতে পেরেছে; এটা inverted hammer-এর মতো bullish ঝোঁক, confirmation লাগবে।
+
+</details>
+
+## পরের ধাপ
+
+- পুরো walk-through: [Dragonfly Doji](/bn/patterns/dragonfly-doji)।
+- Wick-এর পেছনের গল্প: [Liquidity ও Stop Hunt](/bn/learn/03-market-structure/04-liquidity-stop-hunts)।
+- একই পরিবারের pattern: [Shooting Star](/bn/patterns/shooting-star), [Doji](/bn/patterns/doji), [Long-Legged Doji](/bn/patterns/long-legged-doji)।
+
+<Disclaimer />

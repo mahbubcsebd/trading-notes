@@ -1,41 +1,332 @@
 ---
-title: "টুইজার বটম (Tweezer Bottom)"
-description: "২টি ক্যান্ডেলের রিভার্সাল প্যাটার্ন যেখানে পরপর দুটি ক্যান্ডেল একই সর্বনিম্ন মূল্যে (লো) সাপোর্ট পেয়ে বাউন্স করে।"
+title: "Tweezer Bottom: একই দামে দুইবার ফিরে আসা, support-এ চিমটির মতো তলা"
+description: "Tweezer bottom কীভাবে চিনবেন, 'সমান low' কতটা সমান হতে হবে, কেন আসল level ছাড়া সমান low stop-এর চুম্বক, অন্য pattern-এর সঙ্গে মিল, entry, stop ও target — chart সহ।"
 type: bullish
-category: "টুইজার বটম"
-winrate: "68% - 73%"
-riskReward: "1:3 to 1:5"
-maxRisk: "1% - 2%"
-bestLocation: "Double Bottom Support / Liquidity Sweep / Discount Zone"
-chartId: "tweezer-bottom-01"
-tags: [bullish, pattern, candlestick]
+category: two-candle
+level: intermediate
+candleCount: 2
+signal: reversal
+chartId: tweezer-bottom-win-01
+tags: [pattern, candlestick, tweezer-bottom, tweezer, support]
+status: done
+sources:
+  - type: book
+    title: "Japanese Candlestick Charting Techniques - Steve Nison"
+    note: "Tweezers tops and bottoms, অন্য pattern-এর সঙ্গে মিলিয়ে পড়া"
+  - type: blog
+    title: "Tweezer Bottom - Investopedia"
+    url: "https://www.investopedia.com/terms/t/tweezer-bottom.asp"
+updated: 2026-11-06
 ---
 
-<div className="flex gap-6 items-end my-8 p-8 bg-zinc-950 border border-border/50 rounded-2xl w-max relative overflow-hidden">
-  <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:20px_20px]"></div>
-  <div className="relative z-10 flex gap-6">
-    <Candle color="bear" bodyH="h-10" topW="h-2" botW="h-10" offset="mt-2" />
-    <Candle color="bull" bodyH="h-10" topW="h-2" botW="h-10" offset="mt-2" />
-  </div>
-</div>
+দুটি candle পরপর ঠিক একই দামে low দিল, যেন কেউ মেঝেতে দুইবার পা রেখে দেখল মেঝে শক্ত কি না। "Double bottom, tweezer, এখানে buyers আছে!" অনেক সময় সত্যি। কিন্তু downtrend-এর মাঝে সমান low মানে প্রায়ই উল্টোটা: সবাই সেই low-এর ঠিক নিচে stop রেখেছে, আর বাজার সেই stop নিতে ফিরে আসে। কোন tweezer কোনটা, সেটা ঠিক করে level।
 
-## Market Psychology & প্রাতিষ্ঠানিক অর্ডার ফ্লো
-সেলাররা পরপর দুটি ক্যান্ডেলে একটি নির্দিষ্ট প্রাইস লেভেল ভাঙার চেষ্টা করে ব্যর্থ হয়। একই লো থেকে দুইবার রিজেকশন প্রমাণ করে যে প্রাতিষ্ঠানিক বায়াররা এই লেভেলে সব সেলিং প্রেসার শুষে নিচ্ছে (Absorption)। দ্বিতীয় ক্যান্ডেল বুলিশ হলে বায়ারদের বিজয়ের নিশ্চয়তা পাওয়া যায়।
+## এক নজরে
 
-## ক্যান্ডেল অ্যানাটমির ৫টি অপরিহার্য শর্ত
-1. **Matching Lows:** প্রথম এবং দ্বিতীয় ক্যান্ডেলের লো পয়েন্ট হুবহু এক অথবা ১-২ পিপ্স ব্যবধানে হতে হবে।
-2. **Candle 1 (Bearish):** প্রথম ক্যান্ডেলটি বিয়ারিশ এবং ট্রেন্ডের দিকে থাকবে।
-3. **Candle 2 (Bullish):** দ্বিতীয় ক্যান্ডেলটি একই লো ছুয়ে বুলিশ গতি নিয়ে ক্লোজ হতে হবে।
-4. **Support Level:** প্যাটার্নটি অবশ্যই গুরুত্বপূর্ণ হরিজন্টাল সাপোর্ট বা ডিসকাউন্ট জোনে গঠিত হতে হবে।
-5. **Lower Shadow Rejection:** উভয় ক্যান্ডেলে নিচের দিকে সুস্পষ্ট উইক বা শ্যাডো থাকতে হবে।
+| বিষয়                | Tweezer Bottom                                                                                                       |
+| :------------------- | :------------------------------------------------------------------------------------------------------------------- |
+| ধরন                  | Bullish reversal, দুই (বা বেশি) candle                                                                               |
+| কোথায় খুঁজবেন       | Downtrend বা pullback-এর শেষে, চিহ্নিত support-এ                                                                     |
+| চেনার মূল চিহ্ন      | পরপর দুটি candle-এর low প্রায় একই দামে; সাধারণত প্রথমটি bearish, দ্বিতীয়টি bullish                                 |
+| Confirmation         | দ্বিতীয় candle-এর high ভাঙা, বা পরের candle তার উপরে close                                                          |
+| Stop                 | যৌথ low-এর নিচে, spread-সহ buffer                                                                                    |
+| বাতিল (invalidation) | যৌথ low-এর নিচে close                                                                                                |
+| দেখতে একই রকম        | Double bottom (অনেক candle দূরে), [Bullish Engulfing](/bn/patterns/bullish-engulfing), [Hammer](/bn/patterns/hammer) |
+| বিপরীত pattern       | [Tweezer Top](/bn/patterns/tweezer-top)                                                                              |
 
-## লাভজনক ট্রেড নেওয়ার ৩টি প্রমাণিত কৌশল (Execution Blueprint)
-**কৌশল ১ (দ্বিতীয় ক্যান্ডেল ক্লোজ এন্ট্রি):** দ্বিতীয় বুলিশ ক্যান্ডেল ক্লোজ হওয়ার সাথে সাথে বাই দিন। স্টপ লস টুইজার লো এর নিচে।
-**কৌশল ২ (হাই ব্রেক এন্ট্রি):** প্যাটার্নটির সর্বোচ্চ হাই ব্রেক করার পর পরবর্তী পুলব্যাকে এন্ট্রি নিন।
-**কৌশল ৩ (M5 লিকুইডিটি সুইপ এন্ট্রি):** দ্বিতীয় উইকে সেল-সাইড লিকুইডিটি গ্র্যাব নিশ্চিত হলে স্নাইপার বাই দিন।
+## এই লেখা পড়ে আপনি যা পারবেন
 
-## কোথায় সফল হবে বনাম কোথায় ফাঁদে পড়বেন
-- ✅ **A+ হাই-প্রোবাবিলিটি সেটআপ:** ডেইলি বা ৪-ঘণ্টা সাপোর্ট জোন, এশিয়ান সেশন লো সুইপ, এবং বুলিশ স্টোকাস্টিক ক্রসওভার।
-- ❌ **লস খাওয়ার ট্র্যাপ (Avoid):** রেঞ্জের মাঝখানে বা কোনো শক্তিশালী ট্রেন্ডলাইনের বিপরীতে উইক থাকলে।
+- "সমান low" কতটা সমান হলে tweezer, তা **মেপে ঠিক করতে** পারবেন।
+- Tweezer-এর সঙ্গে অন্য pattern (engulfing, hammer, harami) **মিলিয়ে** শক্তি বিচার করতে পারবেন।
+- আসল level ছাড়া সমান low কেন **liquidity pool**, ব্যাখ্যা করতে পারবেন।
 
-> ⚠️ **প্রো মানি ম্যানেজমেন্ট ও সাইকোলজি টিপ:** টুইজার বটমে স্টপ লস সবসময় লো থেকে ৫ পিপ্স নিচে বাফার দিয়ে রাখবেন যাতে প্রাতিষ্ঠানিক স্প্রেড হান্টিংয়ে হিট না হয়। সর্বোচ্চ ১% থেকে ২% ঝুঁকি নিয়ে প্রতিটি ট্রেডে নির্ধারিত স্টপ লস ব্যবহার করুন।
+## কেন জরুরি
+
+- **দুইবার প্রত্যাখ্যান।** একটি candle একটি দাম প্রত্যাখ্যান করা এক কথা; পরপর দুটি candle একই দাম প্রত্যাখ্যান করা আরও জোরালো প্রমাণ।
+- **একা দুর্বল, মিলে শক্ত।** Nison-এর পর্যবেক্ষণ: tweezer অন্য candle pattern-এর সঙ্গে মিলে এলে বেশি অর্থবহ, যেমন দ্বিতীয় candle hammer বা bullish engulfing হলে।
+- **সমান low = stop-এর জায়গা।** অনেক trader সমান low-এর ঠিক নিচে stop রাখে। তাই ভুল জায়গায় tweezer হলে সেটাই sweep-এর লক্ষ্য। বিস্তারিত: [Liquidity ও Stop Hunt](/bn/learn/03-market-structure/04-liquidity-stop-hunts)।
+
+পূর্বশর্ত: [Two Candle Patterns](/bn/learn/04-candlesticks/03-two-candle-patterns)।
+
+## Tweezer Bottom কী
+
+**Tweezer bottom হলো পরপর দুটি (কখনো বেশি) candle, যাদের low প্রায় একই দামে, downtrend-এর শেষে support-এ।** নামটা চিমটা (tweezer) থেকে: দুটি সমান ডাঁটা পাশাপাশি নিচে নেমে একই জায়গায় থামে।
+
+<CandleDiagram
+  title="Tweezer bottom"
+  candles={[
+    { o: 64, h: 65, l: 58, c: 59, dim: true },
+    { o: 59, h: 60, l: 53, c: 54, dim: true },
+    { o: 54, h: 55, l: 44, c: 47, label: "A", note: "low 44" },
+    { o: 47, h: 56, l: 44.1, c: 55, label: "B", note: "low 44.1" },
+    { o: 55, h: 60, l: 54, c: 59, dim: true },
+  ]}
+  levels={[{ price: 44, label: "সমান low", tone: "support" }]}
+  caption="A আর B দুটোই প্রায় 44-এ থামে। B সবুজ, A-র body-র উপরে close করে।"
+/>
+
+### চেনার নিয়ম
+
+| নিয়ম                                             | বাধ্যতামূলক?      | কেন                                         |
+| :------------------------------------------------ | :---------------- | :------------------------------------------ |
+| পরপর দুটি candle-এর low প্রায় সমান               | হ্যাঁ             | এটাই "tweezer"                              |
+| আগে downtrend বা pullback                         | হ্যাঁ             | Range-এর মাঝে সমান low সাধারণ ঘটনা          |
+| চিহ্নিত support-এ                                 | হ্যাঁ             | Level ছাড়া সমান low প্রায়ই stop-এর চুম্বক |
+| প্রথম candle bearish, দ্বিতীয়টি bullish          | না (কিন্তু জরুরি) | রং-বদল দেখায় নিয়ন্ত্রণ বদলেছে             |
+| দ্বিতীয় candle নিজেও pattern (hammer, engulfing) | না                | Nison-এর মতে মিলে এলে বেশি শক্ত             |
+
+<Callout type="note">
+  "প্রায় সমান" মাপার একটি কাজ চালানোর নিয়ম: দুই low-এর ফারাক ATR-এর ১০%-এর কম,
+  বা EURUSD H1-এ ২-৩ pip-এর মতো। এটা আদর্শ সংজ্ঞা নয়; নিজের backtest-এ ঠিক
+  করুন।
+</Callout>
+
+## শক্তিশালী বনাম দুর্বল tweezer bottom
+
+<DiagramRow>
+  <CandleDiagram
+    title="শক্তিশালী"
+    verdict="good"
+    verdictLabel="trade-যোগ্য"
+    candles={[
+      { o: 62, h: 63, l: 56, c: 57, dim: true },
+      { o: 57, h: 58, l: 46, c: 48 },
+      { o: 48, h: 58, l: 46.1, c: 57.5, label: "engulfing-ও" },
+    ]}
+    levels={[{ price: 47, label: "support", tone: "support" }]}
+    caption="Support-এর সামান্য নিচে সমান low, দ্বিতীয় candle প্রথমটাকে ঢেকে দেয়: দুটি pattern এক জায়গায়।"
+  />
+  <CandleDiagram
+    title="দুর্বল"
+    verdict="bad"
+    verdictLabel="এড়িয়ে চলুন"
+    candles={[
+      { o: 80, h: 81, l: 73, c: 74, dim: true },
+      { o: 74, h: 75, l: 66, c: 67, dim: true },
+      { o: 67, h: 68, l: 60, c: 61 },
+      { o: 61, h: 64, l: 60.1, c: 63, label: "level নেই" },
+      { o: 63, h: 63.5, l: 55, c: 56, dim: true },
+    ]}
+    caption="Downtrend-এর মাঝে সমান low, কোনো support নেই। পরের candle সেই low-এর নিচে নেমে stop নেয়।"
+  />
+</DiagramRow>
+
+| মান যাচাই       | শক্তিশালী                           | দুর্বল                         |
+| :-------------- | :---------------------------------- | :----------------------------- |
+| জায়গা          | চিহ্নিত support বা demand zone-এ    | Downtrend-এর মাঝে, level ছাড়া |
+| দ্বিতীয় candle | Bullish, প্রথমটার body-র উপরে close | ছোট, প্রথমটার body-র ভেতরে     |
+| মিল             | Hammer বা engulfing-ও তৈরি হয়েছে   | শুধু দুটি low মিলেছে           |
+| আগের momentum   | ধীর হয়ে আসা                        | টানা বড় লাল candle            |
+
+### দেখতে একই রকম, অর্থ আলাদা
+
+| Pattern                          | আকার                                    | তফাত                                        |
+| :------------------------------- | :-------------------------------------- | :------------------------------------------ |
+| **Tweezer Bottom**               | পরপর দুটি candle-এর low সমান            | দুই candle-এর তাৎক্ষণিক দুইবার প্রত্যাখ্যান |
+| **Double Bottom**                | দুটি low সমান, কিন্তু মাঝে অনেক candle  | Chart pattern; বড় কাঠামো                   |
+| **Bullish Engulfing**            | দ্বিতীয় body প্রথম body ঢাকে           | Low সমান হওয়া জরুরি নয়                    |
+| **Equal lows (sweep-এর লক্ষ্য)** | Downtrend-এর মাঝে সমান low, level ছাড়া | Stop জমার জায়গা, support নয়               |
+
+## Candle-এর ভেতরের গল্প
+
+Support-এ একটি tweezer bottom-এর একটি প্রচলিত ব্যাখ্যা:
+
+1. **Candle A: sellers support পর্যন্ত নামায়।** একটি low তৈরি হয়, সেখানে buyers থামায়।
+2. **Candle B: sellers আবার সেই low পরীক্ষা করে।** কিন্তু এক পয়সাও নিচে নিতে পারে না।
+3. **Buyers জেতে।** দ্বিতীয় candle উপরে close করে। দুইবার একই দাম রক্ষা হয়েছে।
+
+ফল: sellers দুইবার চেষ্টা করে ব্যর্থ। কিন্তু level ছাড়া একই ছবির উল্টো ব্যাখ্যাও আছে: দুই low-এর নিচে সবার stop জমেছে, আর বড় player-রা ঠিক সেটা নিতে ফিরে আসতে পারে।
+
+<Callout type="note">
+  এটি একটি প্রচলিত ব্যাখ্যা, প্রমাণিত ঘটনা নয়। Chart দেখে কার stop কোথায়, তা
+  জানা যায় না।
+</Callout>
+
+## কোথায় কাজ করে, কোথায় করে না
+
+<Compare
+  leftLabel="যেখানে tweezer bottom-এর ওজন বেশি"
+  rightLabel="যেখানে tweezer bottom প্রায়ই ফাঁদ"
+  left="- চিহ্নিত support বা demand zone-এ
+- সমান low support-এর সামান্য নিচে, তারপর উপরে close
+- দ্বিতীয় candle hammer বা bullish engulfing হলে
+- Uptrend-এর pullback শেষে, trend-এর দিকে"
+  right="- একটানা downtrend-এর মাঝে, কোনো level ছাড়া
+- টানা বড় লাল candle-এর পরে
+- দ্বিতীয় candle ছোট, প্রথমটার body-র ভেতরে
+- ছোট timeframe-এ, যেখানে সমান low খুব সাধারণ"
+/>
+
+## 24 ঘণ্টার বাজারে gap
+
+<Callout type="note">
+  Tweezer-এর সংজ্ঞায় gap লাগে না, তাই Forex-এ নিয়ম বদলায় না। শুধু মনে রাখুন:
+  broker-ভেদে low কয়েক pipette আলাদা হতে পারে, কারণ প্রতিটি broker-এর data feed
+  আলাদা। তাই "হুবহু সমান" নয়, "প্রায় সমান" মাপুন।
+</Callout>
+
+## ধাপে ধাপে: tweezer bottom trade
+
+<Steps>
+
+### ধাপ ১: আগে level
+
+Support আগেই আঁকুন। সমান low যদি সেই support-এ বা তার সামান্য নিচে না হয়, এখানেই থামুন।
+
+### ধাপ ২: দুটি candle বন্ধ হওয়ার অপেক্ষা
+
+চলমান দ্বিতীয় candle শেষে প্রথম low ভেঙে close করতে পারে। দুটোই বন্ধ হলে তবেই গুনুন।
+
+### ধাপ ৩: মাপুন
+
+দুই low-এর ফারাক কত (ATR-এর তুলনায়)? দ্বিতীয় candle bullish? প্রথমটার body-র উপরে close? দ্বিতীয় candle নিজে hammer বা engulfing?
+
+### ধাপ ৪: Entry-র ধরন
+
+| Entry                    | কোথায়                                        | সুবিধা                 | অসুবিধা          |
+| :----------------------- | :-------------------------------------------- | :--------------------- | :--------------- |
+| **High break** (প্রচলিত) | দ্বিতীয় candle-এর high-এর একটু উপরে buy stop | Buyers এগোলে তবেই ঢোকা | Entry একটু উপরে  |
+| **Close entry**          | দ্বিতীয় candle বন্ধ হতেই buy                 | Entry কাছে             | Confirmation নেই |
+| **Retest limit**         | দ্বিতীয় candle-এর body-র মাঝামাঝি buy limit  | Stop ছোট               | দাম না ফিরলে মিস |
+
+### ধাপ ৫: Stop বসান
+
+যৌথ low-এর নিচে, [spread](/bn/learn/01-foundations/04-spread-commission-swap) ও buffer-সহ। Buffer খুব ছোট রাখবেন না: সমান low-এর ঠিক নিচে অনেকের stop, আর সেখানে wick আসা সাধারণ।
+
+### ধাপ ৬: Size ও target
+
+[Position size](/bn/learn/08-risk-management/02-position-sizing) entry থেকে stop-এর দূরত্ব দিয়ে, ঝুঁকি ১%-এর বেশি নয়। Target আগের swing high-এর আগে; [risk reward](/bn/learn/08-risk-management/03-risk-reward) অন্তত 1:1.5।
+
+### ধাপ ৭: পরিচালনা
+
+যৌথ low-এর নিচে close হলে ধারণা ভুল, বেরিয়ে যান।
+
+</Steps>
+
+### Trade-এর আগে checklist
+
+<Checklist
+  id="pattern-tweezer-bottom-pretrade-bn"
+  items={[
+    "Tweezer আসার আগেই support চিহ্নিত ছিল, আর সমান low সেই level-এ?",
+    "আকার নিয়ম মানছে (দুই low প্রায় সমান, দ্বিতীয় candle bullish)?",
+    "দুটি candle-ই বন্ধ হয়েছে, আর দ্বিতীয়টা প্রথম low ভেঙে close করেনি?",
+    "আগের swing high পর্যন্ত risk reward অন্তত 1:1.5?",
+    "Higher timeframe-এর trend বা level trade-এর বিপরীতে নেই?",
+  ]}
+/>
+
+একটি ঘরও খালি থাকলে trade বাদ দিন।
+
+## উদাহরণ ১: যখন কাজ করে (কাল্পনিক)
+
+<Chart
+  id="tweezer-bottom-win-01"
+  height={420}
+  caption="XAUUSD H4 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — একবার পরীক্ষিত support-এর সামান্য নিচে tweezer bottom, high ভাঙলে long।"
+/>
+
+- **কী দেখা যাচ্ছিল:** ৪ নম্বর candle 2373.87-এ support চিহ্নিত করেছে। ৫-৯ নম্বর প্রায় 2430 পর্যন্ত ওঠে, ১০-১৩ নম্বর আবার নামে।
+- **Tweezer:** ১৪ নম্বর bearish, low 2372.37 (support-এর $1.50 নিচে)। ১৫ নম্বর low 2372.57, মাত্র 20 সেন্ট ফারাক, আর 2383.37-এ close করে ১৪ নম্বরের open-এর উপরে: tweezer আর bullish engulfing এক জায়গায়।
+- **সিদ্ধান্ত:** Buy stop 2384.87। Stop 2369.87 (যৌথ low-এর $2.50 নিচে), ঝুঁকি $15। Target 2414.87 (2R); swing high পর্যন্ত জায়গা প্রায় 3R।
+- **ফল:** ১৬ নম্বর high ভেঙে order fill করে। ২২ নম্বর candle target ছোঁয়।
+- **শিক্ষা:** আসল level, দুইবার প্রত্যাখ্যান, আর দ্বিতীয় candle নিজেও শক্তিশালী pattern।
+
+<TradeSetup
+  direction="long"
+  pair="XAUUSD"
+  entry={2384.87}
+  stop={2369.87}
+  target={2414.87}
+/>
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়। সব tweezer bottom জেতে না, আর কোনো ফল গ্যারান্টি নয়।)
+
+## উদাহরণ ২: যখন ফাঁদ হয় (কাল্পনিক)
+
+<Chart
+  id="tweezer-bottom-fail-01"
+  height={420}
+  caption="GBPUSD H1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — downtrend-এর মাঝে সমান low, কোনো support নেই। High break-এ buy, তারপর sweep।"
+/>
+
+- **কী দেখা যাচ্ছিল:** ০-৬ নম্বর candle 1.2750 থেকে 1.2670 পর্যন্ত একটানা downtrend। নিচে কোনো চিহ্নিত support নেই।
+- **Tweezer:** ৭ নম্বর low 1.2656, ৮ নম্বর low 1.2657, আর ৮ নম্বর 1.2672-এ close করে ৭ নম্বরের open-এর উপরে। আকারে নিখুঁত।
+- **ভুল সিদ্ধান্ত:** Buy stop 1.2676, stop 1.2651, ঝুঁকি 25 pip।
+- **কী হলো:** ৯ নম্বর order fill করে। ১০ নম্বর নিচে ঘোরে, ১১ নম্বর সমান low-এর নিচে 1.2644 পর্যন্ত নেমে stop নেয়, তারপর downtrend চলতে থাকে।
+- **কেন ব্যর্থ:** সমান low ছিল কোনো level ছাড়া, downtrend-এর মাঝে। সেখানে অনেকের stop জমেছিল, আর বাজার সেটাই নিয়েছে। Checklist-এর প্রথম ঘরেই trade বাদ পড়ত।
+
+**শিক্ষা:** আসল level ছাড়া সমান low stop-এর চুম্বক, support নয়। Stop আগে বসানো ছিল বলে লোকসান 1R-এ আটকেছে।
+
+## সাধারণ ভুল
+
+| ভুল                                     | কেন হয়                     | কী করবেন                           |
+| :-------------------------------------- | :-------------------------- | :--------------------------------- |
+| যেকোনো সমান low-কে support ভাবা         | "দুইবার ধরে রেখেছে"         | আগে চিহ্নিত level আছে কি না দেখুন  |
+| Stop ঠিক সমান low-এর নিচে, buffer ছাড়া | ছোট stop-এর লোভ             | ATR-এর অংশ বা কয়েক pip buffer দিন |
+| হুবহু সমান low খোঁজা                    | Broker feed-এর তফাত না জানা | "প্রায় সমান" মাপুন                |
+| ছোট TF-এর প্রতিটি tweezer গোনা          | সমান low খুব সাধারণ         | H1 বা বড় TF, আর শুধু level-এ      |
+
+## Pro tips
+
+<Callout type="tip">
+  উল্টো দিক থেকে ভাবুন: downtrend-এ level ছাড়া সমান low দেখলে long নয়, বরং
+  ভাবুন দাম এর নিচে sweep করে ফিরে আসবে কি না। Sweep-এর পর support-এ ফেরা candle
+  প্রায়ই আরও পরিষ্কার setup দেয়। বিস্তারিত: [Fake
+  Breakout](/bn/learn/06-trend-chart-patterns/04-fake-breakout)।
+</Callout>
+
+<Callout type="tip">
+  Tweezer-এর দ্বিতীয় candle নিজে hammer, bullish engulfing বা piercing line হলে
+  সেই pattern-এর মান-যাচাইও করুন। দুটি pattern-এর নিয়ম একসঙ্গে পাস করলে signal
+  বেশি শক্ত।
+</Callout>
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- Tweezer bottom = পরপর দুটি candle-এর low প্রায় সমান, downtrend-এর শেষে support-এ।
+- "প্রায় সমান" মাপুন (ATR-এর ছোট অংশ); broker-ভেদে low সামান্য আলাদা হয়।
+- অন্য pattern-এর সঙ্গে মিলে এলে শক্ত; একা দুর্বল।
+- আসল level ছাড়া সমান low stop-এর চুম্বক; সেখানে long নয়।
+
+</KeyTakeaways>
+
+## অনুশীলন ও নিজের backtest
+
+TradingView-এ XAUUSD H4 বা GBPUSD H1 খুলুন। অন্তত ২০টি tweezer bottom খুঁজুন। প্রতিটির জন্য একটি সারি লিখুন:
+
+| তারিখ | Support-এ? | Low-এর ফারাক ÷ ATR | দ্বিতীয় candle-এর pattern | পরে sweep হয়েছে? | ফল (R) |
+| :---- | :--------- | :----------------- | :------------------------- | :---------------- | :----- |
+|       |            |                    |                            |                   |        |
+
+এরপর "level-এ" আর "level ছাড়া" দুই দলে ভাগ করে দেখুন, কতগুলোতে পরে সমান low-এর নিচে sweep হয়েছে। অন্তত ৩০টি নমুনা ছাড়া সিদ্ধান্ত নেবেন না।
+
+## কুইজ
+
+1. Tweezer bottom আর double bottom-এর তফাত কী?
+2. Downtrend-এর মাঝে, কোনো level ছাড়া সমান low। কী ভাববেন?
+3. দুই low-এর ফারাক কত হলে "প্রায় সমান"?
+4. উদাহরণ ১-এ tweezer ছাড়া আর কোন pattern ছিল?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** Tweezer-এ সমান low পরপর দুটি candle-এ। Double bottom-এ দুটি low-এর মাঝে অনেক candle, এটা বড় chart pattern।
+
+**২.** Support নয়, সম্ভাব্য liquidity pool। এর নিচে stop জমেছে, sweep হতে পারে। Long নয়।
+
+**৩.** কোনো সর্বজনীন সংখ্যা নেই। কাজ চালানোর নিয়ম: ATR-এর ১০%-এর কম। নিজের backtest-এ ঠিক করুন।
+
+**৪.** Bullish engulfing: ১৫ নম্বর ১৪ নম্বরের body ঢেকে উপরে close করেছিল।
+
+</details>
+
+## পরের ধাপ
+
+- আগে: [Two Candle Patterns](/bn/learn/04-candlesticks/03-two-candle-patterns)।
+- সমান low-এর নিচে কী ঘটে: [Liquidity ও Stop Hunt lesson](/bn/learn/03-market-structure/04-liquidity-stop-hunts)।
+- একই পরিবারের pattern: [Tweezer Top](/bn/patterns/tweezer-top), [Bullish Engulfing](/bn/patterns/bullish-engulfing), [Hammer](/bn/patterns/hammer)।
+
+<Disclaimer />

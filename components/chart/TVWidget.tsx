@@ -45,7 +45,7 @@ export function TVWidget() {
   }, [selectedSymbol]);
 
   return (
-    <div className="rounded-2xl border border-border/80 bg-card overflow-hidden shadow-xl space-y-4 p-4">
+    <div className="rounded-2xl border border-border/80 bg-card overflow-hidden space-y-4 p-4">
       {/* Symbol Tabs */}
       <div className="flex flex-wrap items-center gap-2">
         {SYMBOLS.map((s) => (

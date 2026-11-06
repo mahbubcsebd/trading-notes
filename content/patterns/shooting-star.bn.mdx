@@ -1,42 +1,280 @@
 ---
-title: "শুটিং স্টার (Shooting Star)"
-description: "একটি ছোট বডি এবং দীর্ঘ আপার শ্যাডোযুক্ত বিয়ারিশ রিভার্সাল ক্যান্ডেল যা উপরের প্রাইস রিজেকশন নির্দেশ করে।"
+title: "Shooting Star: চূড়ায় উপরে ছুটে আবার নিচে পড়া, buyers-এর ব্যর্থতা"
+description: "Shooting star কীভাবে চিনবেন, inverted hammer-এর সঙ্গে তফাত, resistance-এ কখন trade-যোগ্য, আর কেন stop wick-এর মাঝে রাখলে সঠিক ধারণাতেও লোকসান — chart সহ।"
 type: bearish
-category: "শুটিং স্টার (Shooting Star)"
-winrate: "69% - 73%"
-riskReward: "1:3 to 1:4"
-maxRisk: "1%"
-bestLocation: "Major Resistance / Supply Zone / Swing High Liquidity Grab"
-chartId: "shooting-star-01"
-tags: [pattern, candlestick, shooting-star]
+category: rejection
+level: beginner
+candleCount: 1
+signal: reversal
+chartId: shooting-star-win-01
+tags: [pattern, candlestick, shooting-star, reversal, resistance]
+status: done
+sources:
+  - type: book
+    title: "Japanese Candlestick Charting Techniques - Steve Nison"
+    note: "Shooting star ও inverted hammer"
+  - type: blog
+    title: "Shooting Star Candlestick - Investopedia"
+    url: "https://www.investopedia.com/terms/s/shootingstar.asp"
+updated: 2026-11-06
 ---
 
-<div className="flex gap-6 items-end my-8 p-8 bg-zinc-950 border border-border/50 rounded-2xl w-max relative overflow-hidden">
-  <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:20px_20px]"></div>
-  <div className="relative z-10 flex gap-6">
-    <Candle color="bull" bodyH="h-10" topW="h-2" botW="h-2" offset="mt-12" />
-    <Candle color="bull" bodyH="h-8" topW="h-4" botW="h-2" offset="mt-8" />
-    <Candle color="bear" bodyH="h-4" topW="h-12" botW="h-2" offset="mt-2" />
-  </div>
-</div>
+Uptrend-এর চূড়ায় দাম হঠাৎ অনেক উপরে ছুটল, তারপর একই candle-এ সব ফেরত দিয়ে low-এর কাছে close করল। আপনি ঠিকই চিনলেন: shooting star। Short নিলেন, কিন্তু stop রাখলেন wick-এর মাঝখানে, কারণ পুরো wick-এর উপরে stop দিলে অনেক বড় লাগে। দাম আবার wick-এ উঠে stop নিল, তারপর ঠিক আপনার ধারণা মতো নিচে নামল। এই পাতা [Inverted Hammer](/bn/patterns/inverted-hammer)-এর mirror; এখানে শুধু যা আলাদা, তা-ই বিস্তারিত।
 
-## Market Psychology & প্রাতিষ্ঠানিক অর্ডার ফ্লো
-বায়াররা মার্কেটকে প্রবল বেগে নতুন উচ্চতায় নিয়ে যায়। কিন্তু সর্বোচ্চ লেভেলে পৌঁছানোর পর প্রাতিষ্ঠানিক সেলাররা ভারী ভলিউমে শর্ট সেল শুরু করে এবং প্রাইসকে একনাগাড়ে নিচে নামিয়ে ওপেনিংয়ের কাছে ক্লোজ করায়। লম্বা আপার উইকটি প্রমাণ করে বায়াররা উপরের দাম ধরে রাখতে ব্যর্থ এবং সেলাররা বিজয়ী হয়েছে।
+## এক নজরে
 
-## ক্যান্ডেল অ্যানাটমির ৫টি অপরিহার্য শর্ত
-1. **Uptrend Context:** আপট্রেন্ডের শীর্ষে বা উচ্চ টাইমফ্রেমের রেজিস্ট্যান্সে গঠিত হতে হবে।
-2. **Upper Shadow:** উপরের উইকটি রিয়েল বডির আকারের কমপক্ষে ২ থেকে ৩ গুণ দীর্ঘ হতে হবে।
-3. **Lower Shadow:** নিচের দিকে কোনো উইক থাকবে না অথবা খুব ক্ষুদ্র উইক থাকতে পারে।
-4. **Body Placement:** রিয়েল বডি ক্যান্ডেলের নিচের দিকে অবস্থান করবে।
-5. **Bearish Confirmation:** পরবর্তী ক্যান্ডেলটি অবশ্যই শুটিং স্টারের লো এর নিচে ক্লোজ হতে হবে।
+| বিষয়                | Shooting Star                                                                                   |
+| :------------------- | :---------------------------------------------------------------------------------------------- |
+| ধরন                  | Bearish reversal, একটি candle                                                                   |
+| কোথায় খুঁজবেন       | Uptrend-এর চূড়ায়, চিহ্নিত resistance বা supply zone-এ                                         |
+| চেনার মূল চিহ্ন      | নিচে ছোট body, উপরে body-র অন্তত দুই গুণ লম্বা wick, নিচে wick প্রায় নেই                       |
+| Confirmation         | পরের candle shooting star-এর low ভাঙা বা তার নিচে close                                         |
+| Stop                 | পুরো wick-এর high-এর উপরে, spread-সহ buffer                                                     |
+| বাতিল (invalidation) | Wick-এর high-এর উপরে close                                                                      |
+| দেখতে একই রকম        | Inverted Hammer (একই আকার, downtrend-এর তলায়), [Gravestone Doji](/bn/patterns/gravestone-doji) |
+| বিপরীত pattern       | [Hammer](/bn/patterns/hammer)                                                                   |
 
-## লাভজনক ট্রেড নেওয়ার ৩টি প্রমাণিত কৌশল (Execution Blueprint)
-**কৌশল ১ (লো ব্রেকআউট সেল):** শুটিং স্টারের লো পার হওয়ার সাথে সাথে Sell Stop দিন। স্টপ লস হাই এর উপরে।
-**কৌশল ২ (৫০% আপার উইক রিটেস্ট):** লম্বা আপার উইকের ৫০% রিট্রেসমেন্টে Sell Limit বসান (টাইট স্টপ লস ও হাই R:R)।
-**কৌশল ৩ (M15 CHoCH স্নাইপার):** H4 এ শুটিং স্টার দেখে M15 এ সুইচ করে একটি বিয়ারিশ অর্ডার ব্লকের রিটেস্টে সেল দিন।
+## এই লেখা পড়ে আপনি যা পারবেন
 
-## কোথায় সফল হবে বনাম কোথায় ফাঁদে পড়বেন
-- ✅ **A+ হাই-প্রোবাবিলিটি সেটআপ:** ডেইলি রেজিস্ট্যান্স জোন, পূর্ববর্তী ডে-হাই লিকুইডিটি সুইপ, এবং RSI বিয়ারিশ ডাইভারজেন্স।
-- ❌ **লস খাওয়ার ট্র্যাপ (Avoid):** সাপোর্টের কাছে গঠিত হলে (তখন এটি ইনভার্টেড হ্যামার) অথবা সাইডওয়েজ মার্কেটের মাঝে।
+- Shooting star আর inverted hammer-এর তফাত **জায়গা দেখে বলতে পারবেন**।
+- কেন shooting star-এর confirmation inverted hammer-এর চেয়ে সহজ, **ব্যাখ্যা করতে পারবেন**।
+- Stop **পুরো wick-এর উপরে** রেখে size দিয়ে ঝুঁকি সামলাতে পারবেন।
 
-> ⚠️ **প্রো মানি ম্যানেজমেন্ট ও সাইকোলজি টিপ:** শুটিং স্টারের হাই যদি পূর্ববর্তী সুইং হাইকে সামান্য সুইপ করে ফিরে আসে, তবে এটি ৯৫% ক্ষেত্রে একটি নিখুঁত প্রাতিষ্ঠানিক ফাঁদ। সর্বোচ্চ ১% থেকে ২% ঝুঁকি নিয়ে প্রতিটি ট্রেডে নির্ধারিত স্টপ লস ব্যবহার করুন।
+## কেন জরুরি
+
+- **Close ইতিমধ্যে sellers-এর দিকে।** Inverted hammer-এ close নিচে থাকায় buyers-কে পরের candle জিততে হয়। Shooting star-এ একই নিচের close sellers-এর পক্ষে, তাই low ভাঙাই যথেষ্ট confirmation।
+- **ভুয়া breakout-এর ছবি।** Resistance-এর উপরে লম্বা wick আর নিচে close মানে breakout buyers আটকে গেছে। বিস্তারিত: [Fake Breakout](/bn/learn/06-trend-chart-patterns/04-fake-breakout)।
+- **Stop-এর ফাঁদ।** লম্বা wick মানে বড় stop। Stop ছোট করতে wick-এর মাঝে রাখা এই pattern-এর সবচেয়ে দামি ভুল।
+
+পূর্বশর্ত: Inverted Hammer পাতা (উপরে link) আর [Stop Loss Placement](/bn/learn/10-trade-management-execution/01-stop-loss-placement)।
+
+## Shooting Star কী
+
+**Shooting star হলো uptrend-এর চূড়ায় আসা এমন একটি candle, যার body ছোট আর candle-এর নিচের দিকে, আর উপরের wick body-র অন্তত দুই গুণ লম্বা।** নামটা আকাশের উল্কা থেকে: উজ্জ্বল লেজ উপরে রেখে নিচে পড়ে যাওয়া।
+
+<CandleDiagram
+  title="Resistance-এ shooting star"
+  candles={[
+    { o: 40, h: 46, l: 39, c: 45, dim: true },
+    { o: 45, h: 51, l: 44, c: 50, dim: true },
+    { o: 50, h: 56, l: 49, c: 55, dim: true },
+    {
+      o: 55,
+      h: 70,
+      l: 54.6,
+      c: 54,
+      label: "Shooting star",
+      note: "wick level ভেদ করে ফেরে",
+    },
+    { o: 54, h: 55, l: 47, c: 48, dim: true },
+  ]}
+  levels={[{ price: 60, label: "পুরোনো high", tone: "resistance" }]}
+  caption="উপরের wick পুরোনো high-এর অনেক ওপারে যায়, close candle-এর low-এর কাছে।"
+/>
+
+### চেনার নিয়ম
+
+| নিয়ম                                          | বাধ্যতামূলক?          | কেন                                    |
+| :--------------------------------------------- | :-------------------- | :------------------------------------- |
+| ছোট body candle-এর নিচের অংশে                  | হ্যাঁ                 | Body মাঝখানে হলে সেটা spinning top     |
+| উপরের wick body-র অন্তত দুই গুণ                | হ্যাঁ                 | ছোট wick-এ rejection-এর গল্প নেই       |
+| নিচে wick নেই বা খুব ছোট                       | হ্যাঁ                 | নিচে লম্বা wick হলে অন্য আকার          |
+| আগে স্পষ্ট uptrend, চিহ্নিত resistance-এর কাছে | হ্যাঁ                 | এটাই inverted hammer থেকে তফাত         |
+| Wick level-এর ওপারে গিয়ে ফেরে                 | না (কিন্তু খুব জরুরি) | ভুয়া breakout-এর ছবি সবচেয়ে পরিষ্কার |
+
+## শক্তিশালী বনাম দুর্বল shooting star
+
+<DiagramRow>
+  <CandleDiagram
+    title="শক্তিশালী"
+    verdict="good"
+    verdictLabel="trade-যোগ্য"
+    candles={[
+      { o: 40, h: 46, l: 39, c: 45, dim: true },
+      { o: 45, h: 51, l: 44, c: 50, dim: true },
+      { o: 50, h: 64, l: 49.6, c: 49, label: "level-এর ওপারে wick" },
+      { o: 49, h: 50, l: 43, c: 44, dim: true },
+    ]}
+    levels={[{ price: 55, label: "পুরোনো high", tone: "resistance" }]}
+    caption="Rally-র শেষে পুরোনো high-এ, wick অনেক ওপারে, পরের candle low ভাঙে।"
+  />
+  <CandleDiagram
+    title="দুর্বল"
+    verdict="bad"
+    verdictLabel="এড়িয়ে চলুন"
+    candles={[
+      { o: 40, h: 46, l: 39.5, c: 45.5, dim: true },
+      { o: 45.5, h: 51, l: 45, c: 50.5, dim: true },
+      { o: 50.5, h: 54, l: 50, c: 50, label: "ছোট wick, level নেই" },
+      { o: 50, h: 56, l: 49.5, c: 55.5, dim: true },
+    ]}
+    caption="Trend-এর মাঝে ছোট wick, কোনো level ছোঁয় না; পরের candle উপরে চলে যায়।"
+  />
+</DiagramRow>
+
+| মান যাচাই   | শক্তিশালী                               | দুর্বল                          |
+| :---------- | :-------------------------------------- | :------------------------------ |
+| কোথায়      | চিহ্নিত পুরোনো high বা supply zone-এ    | Trend-এর মাঝে, কোনো level ছাড়া |
+| উপরের wick  | Body-র ৪-৬ গুণ, level-এর ওপারে যায়     | মাত্র দুই গুণ, level ছোঁয় না   |
+| নিচে জায়গা | কাছের support পর্যন্ত অন্তত 1.5R        | ঠিক নিচে higher low             |
+| Stop        | Wick high-এর উপরে, size কমিয়ে ১% ঝুঁকি | Wick-এর মাঝে লুকানো             |
+
+## Candle-এর ভেতরের গল্প
+
+Inverted hammer-এর গল্পই, কিন্তু চূড়ায়। একটি প্রচলিত ব্যাখ্যা: buyers শুরুতে জোরে তোলে, পুরোনো high ভাঙে, breakout buyers ঢোকে। উপরে বড় sell order আসে, দাম পুরোটা নেমে open-এর নিচে close করে। উপরে যারা কিনেছিল, তারা লোকসানে, আর তাদের stop shooting star-এর low-এর নিচে। Low ভাঙলে সেই stop-ও selling-এ যোগ হতে পারে।
+
+<Callout type="note">
+  এটি একটি প্রচলিত ব্যাখ্যা, প্রমাণিত ঘটনা নয়। Chart দেখে কার stop কোথায়, তা
+  জানা যায় না।
+</Callout>
+
+## কোথায় কাজ করে, কোথায় করে না
+
+<Compare
+  leftLabel="যেখানে shooting star-এর ওজন বেশি"
+  rightLabel="যেখানে shooting star প্রায়ই ফাঁদ"
+  left="- লম্বা rally-র পর চিহ্নিত পুরোনো high বা supply zone-এ
+- Wick resistance-এর ওপারে গিয়ে নিচে close করলে
+- Downtrend-এর ভেতরে pullback-এর চূড়ায়, trend-এর দিকে
+- নিচে কাছের support পর্যন্ত যথেষ্ট জায়গা থাকলে"
+  right="- শক্তিশালী uptrend-এর মাঝে, কোনো level ছাড়া
+- ঠিক নিচে higher low বা ভাঙা resistance থাকলে
+- Downtrend-এর তলায় (তখন এটা inverted hammer)
+- Stop wick-এর মাঝে রাখলে"
+/>
+
+## ধাপে ধাপে: shooting star trade
+
+পুরো ধাপ Inverted Hammer পাতায় আছে, উল্টো দিকে। শুধু যা আলাদা:
+
+<Steps>
+
+### ধাপ ১: Confirmation সহজ, কিন্তু অপেক্ষা জরুরি
+
+Shooting star-এর close ইতিমধ্যে নিচে, তাই পরের candle-এর **low break**-ই প্রচলিত entry: low-এর একটু নিচে sell stop। আরও নিশ্চিত হতে চাইলে low-এর নিচে close-এর অপেক্ষা করুন।
+
+### ধাপ ২: Stop পুরো wick-এর উপরে
+
+Stop wick-এর high-এর উপরে, [spread](/bn/learn/01-foundations/04-spread-commission-swap)-সহ। Wick লম্বা বলে stop বড় লাগবে। সমাধান stop সরানো নয়, **size কমানো**: [position size](/bn/learn/08-risk-management/02-position-sizing) সেই বড় দূরত্ব দিয়েই বের করুন।
+
+### ধাপ ৩: R:R পুরো stop দিয়ে মাপুন
+
+বড় stop দিয়ে কাছের support পর্যন্ত [risk reward](/bn/learn/08-risk-management/03-risk-reward) অন্তত 1:1.5 না হলে trade বাদ, stop ছোট করে R:R বানাবেন না।
+
+</Steps>
+
+### Trade-এর আগে checklist
+
+<Checklist
+  id="pattern-shooting-star-pretrade-bn"
+  items={[
+    "Shooting star আসার আগেই resistance চিহ্নিত ছিল, আর এটা uptrend-এর চূড়ায় সেই level-এ?",
+    "আকার নিয়ম মানছে (নিচে ছোট body, উপরের wick body-র অন্তত দুই গুণ, নিচে wick প্রায় নেই)?",
+    "Shooting star বন্ধ হয়েছে, আর পরের candle low ভেঙেছে?",
+    "পুরো wick-এর উপরের stop দিয়েও কাছের support পর্যন্ত risk reward অন্তত 1:1.5?",
+    "Higher timeframe-এর trend বা level trade-এর বিপরীতে নেই?",
+  ]}
+/>
+
+একটি ঘরও খালি থাকলে trade বাদ দিন।
+
+## উদাহরণ ১: যখন কাজ করে (কাল্পনিক)
+
+<Chart
+  id="shooting-star-win-01"
+  height={420}
+  caption="XAUUSD D1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — পুরোনো high ভেদ করা shooting star, পরের candle low ভাঙলে short।"
+/>
+
+- **কী দেখা যাচ্ছিল:** ৫ নম্বর candle 2403.97-এ পুরোনো high রেখে গেছে। ৬-১০ নম্বর প্রায় 2290 পর্যন্ত নামে, ১১-১৫ নম্বর আবার high-এর নিচে ওঠে।
+- **Shooting star:** ১৬ নম্বর 2394.97-এ open, 2388.97-এ close (এটাই low)। উপরের wick 2433.97 পর্যন্ত, পুরোনো high-এর $30 ওপারে, body-র প্রায় সাড়ে ছয় গুণ।
+- **সিদ্ধান্ত:** Sell stop 2387.47। Stop 2436.97 (wick high-এর $3 উপরে), ঝুঁকি $49.50, বড় তাই size ছোট। Target 2288.47 (2R), আগের pullback low 2290-এর কাছে; জায়গা প্রায় 1.97R।
+- **ফল:** ১৭ নম্বর low ভেঙে order fill করে। ২৪ নম্বর candle target ছোঁয়।
+- **শিক্ষা:** Level-এর ওপারে wick, নিচে close, পুরো wick-এর উপরে stop, আর নিচে যথেষ্ট জায়গা।
+
+<TradeSetup
+  direction="short"
+  pair="XAUUSD"
+  entry={2387.47}
+  stop={2436.97}
+  target={2288.47}
+/>
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়। সব shooting star reversal আনে না, আর কোনো ফল গ্যারান্টি নয়।)
+
+## উদাহরণ ২: যখন ফাঁদ হয় (কাল্পনিক)
+
+<Chart
+  id="shooting-star-fail-01"
+  height={420}
+  caption="USDJPY H4 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — সঠিক shooting star, কিন্তু stop wick-এর মাঝে। Retest-এ stop, তারপর দাম নিচে।"
+/>
+
+- **কী দেখা যাচ্ছিল:** পুরোনো high প্রায় 151.91। ১৫ নম্বর পরিষ্কার shooting star: 151.807-এ open, 151.757-এ close, wick 152.307 পর্যন্ত।
+- **সিদ্ধান্ত:** Sell stop 151.737, ১৬ নম্বরে fill। কিন্তু stop wick-এর মাঝে 152.057, যাতে ঝুঁকি 32 pip থাকে আর 2R target 151.097 কাছে লাগে। সঠিক stop (wick high-এর উপরে) হতো 152.357, ঝুঁকি 62 pip।
+- **কী হলো:** ১৭ নম্বর wick-এর ভেতরে 152.117 পর্যন্ত উঠে stop নেয়। তারপর দাম টানা নামে, আর ২২ নম্বর candle সঠিক stop-এর 2R target 150.497-ও ছোঁয়।
+- **কেন ব্যর্থ:** ধারণা ঠিক ছিল, stop ভুল জায়গায়। Wick-এর ভেতরের দাম আগেই trade হয়েছে, তাই retest সেখানে আসা স্বাভাবিক।
+
+**শিক্ষা:** Stop ছোট করতে চাইলে size কমান, stop সরাবেন না। সঠিক stop-এ এই trade 2R জিতত, যদিও size অর্ধেক হতো।
+
+## সাধারণ ভুল
+
+| ভুল                                | কেন হয়                       | কী করবেন                                    |
+| :--------------------------------- | :---------------------------- | :------------------------------------------ |
+| Stop wick-এর মাঝে লুকানো           | বড় stop-এর ভয়               | Stop wick high-এর উপরে, size কমান           |
+| ছোট stop দিয়ে R:R হিসাব করা       | সংখ্যা সুন্দর দেখানো          | পুরো stop দিয়ে R:R মাপুন                   |
+| Downtrend-এর তলায় একই আকারে short | Inverted hammer চিনতে না পারা | আগে trend-এর কোথায়; তলায় এটা bullish ঝোঁক |
+| Trend-এর মাঝে level ছাড়া short    | প্রতিটি wick-কে signal ভাবা   | শুধু চিহ্নিত resistance-এ                   |
+
+## Pro tips
+
+<Callout type="tip">
+  Wick খুব লম্বা হলে low break-এর বদলে wick-এর 50%-এ sell limit ভাবুন। Stop একই
+  জায়গায় (wick high-এর উপরে) থাকে, কিন্তু entry উপরে বলে ঝুঁকি প্রায় অর্ধেক।
+  দাম না ফিরলে trade মিস।
+</Callout>
+
+<Callout type="tip">
+  Shooting star-এর পর দাম প্রায়ই wick-এর নিচের অংশে একবার ফেরে। সেটা স্বাভাবিক;
+  stop wick high-এর উপরে থাকলে এই retest আপনার trade-এর ক্ষতি করে না।
+</Callout>
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- Shooting star = নিচে ছোট body, উপরে লম্বা wick, uptrend-এর চূড়ায়; তলায় একই আকার inverted hammer।
+- Close ইতিমধ্যে sellers-এর দিকে, তাই পরের candle-এর low break-ই প্রচলিত entry।
+- Stop পুরো wick-এর উপরে; ঝুঁকি কমাতে size কমান, stop নয়।
+- পুরো stop দিয়ে কাছের support পর্যন্ত অন্তত 1.5R না থাকলে বাদ।
+
+</KeyTakeaways>
+
+## অনুশীলন ও নিজের backtest
+
+TradingView-এ XAUUSD D1 বা USDJPY H4 খুলুন। অন্তত ২০টি shooting star খুঁজুন। প্রতিটির জন্য লিখুন: তারিখ, resistance-এ ছিল কি না, wick ÷ body, পরের candle low ভেঙেছে কি না, পরে দাম wick-এর কত দূর পর্যন্ত retest করেছে, ফল (R)। শেষ কলাম থেকেই দেখবেন wick-এর মাঝে stop রাখলে কতগুলো trade অকারণে stop হতো। অন্তত ৩০টি নমুনা ছাড়া সিদ্ধান্ত নেবেন না।
+
+## কুইজ
+
+1. Shooting star-এর confirmation inverted hammer-এর চেয়ে সহজ কেন?
+2. Wick-এর উপরে stop দিলে R:R 1.2 আসছে। Stop wick-এর মাঝে সরিয়ে 2R বানানো কি ঠিক?
+3. উদাহরণ ২-এ সঠিক stop থাকলে কী হতো?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** Shooting star-এর close নিচে, যা sellers-এর পক্ষে; candle-টা sellers ইতিমধ্যে জিতেছে। Inverted hammer-এর একই নিচের close buyers-এর বিপক্ষে, তাই সেখানে পরের candle-এ বড় প্রমাণ লাগে।
+
+**২.** না। R:R পুরো stop দিয়ে মাপতে হবে। 1.2 মানে trade বাদ।
+
+**৩.** Stop 152.357 পর্যন্ত দাম যায়নি। Trade টিকে থাকত আর ২২ নম্বর candle-এ 2R target ছুঁত, তবে size প্রায় অর্ধেক হতো।
+
+</details>
+
+## পরের ধাপ
+
+- পুরো walk-through: [Inverted Hammer](/bn/patterns/inverted-hammer)।
+- Stop কোথায় রাখবেন: [Stop Loss Placement](/bn/learn/10-trade-management-execution/01-stop-loss-placement)।
+- একই পরিবারের pattern: [Gravestone Doji](/bn/patterns/gravestone-doji), [Hanging Man](/bn/patterns/hanging-man), [Bearish Engulfing](/bn/patterns/bearish-engulfing)।
+
+<Disclaimer />

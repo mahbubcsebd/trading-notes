@@ -1,50 +1,60 @@
-import { Inter, Hind_Siliguri, JetBrains_Mono } from 'next/font/google';
-import { ThemeProvider } from '@/components/layout/ThemeProvider';
-import { RootProvider } from 'fumadocs-ui/provider';
-import 'fumadocs-ui/style.css';
-import { Header } from '@/components/layout/Header';
-import { Footer } from '@/components/layout/Footer';
-import '../globals.css';
-import { i18n } from '@/lib/i18n';
+import {
+  Fraunces,
+  Hanken_Grotesk,
+  JetBrains_Mono,
+  Hind_Siliguri,
+} from "next/font/google";
+import { ThemeProvider } from "@/components/layout/ThemeProvider";
+import { RootProvider } from "fumadocs-ui/provider";
+import "fumadocs-ui/style.css";
+import { Header } from "@/components/layout/Header";
+import { Footer } from "@/components/layout/Footer";
+import "../globals.css";
+import { i18n } from "@/lib/i18n";
 
 export function generateStaticParams() {
   return i18n.languages.map((lang) => ({ lang }));
 }
 
-const inter = Inter({
-  variable: '--font-inter',
-  subsets: ['latin'],
-  display: 'swap',
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
+  subsets: ["latin"],
+  style: ["normal", "italic"],
+  display: "swap",
+});
+
+const hanken = Hanken_Grotesk({
+  variable: "--font-hanken",
+  subsets: ["latin"],
+  display: "swap",
 });
 
 const hindSiliguri = Hind_Siliguri({
-  variable: '--font-hind-siliguri',
-  subsets: ['bengali', 'latin'],
-  weight: ['300', '400', '500', '600', '700'],
-  display: 'swap',
+  variable: "--font-hind-siliguri",
+  subsets: ["bengali", "latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  display: "swap",
 });
 
 const jetbrainsMono = JetBrains_Mono({
-  variable: '--font-jetbrains-mono',
-  subsets: ['latin'],
-  display: 'swap',
+  variable: "--font-jetbrains",
+  subsets: ["latin"],
+  display: "swap",
 });
 
-import type { Metadata } from 'next';
+import type { Metadata } from "next";
+import { SITE_NAME, SITE_URL, isIndexable } from "@/lib/seo";
 
 export const metadata: Metadata = {
+  metadataBase: SITE_URL,
   title: {
-    template: '%s | TradeNotes',
-    default: 'TradeNotes — Personal Trading Learning Platform',
+    template: `%s | ${SITE_NAME}`,
+    default: `${SITE_NAME} — Personal Trading Learning Platform`,
   },
   description:
-    'Personal trading notes and structured learning for Forex and Gold (XAUUSD) — Bengali & English.',
-  robots: process.env.NEXT_PUBLIC_INDEXABLE === 'true' ? 'index,follow' : 'noindex,nofollow',
-  openGraph: {
-    siteName: 'TradeNotes',
-    type: 'website',
-    locale: 'bn_BD',
-  },
+    "Personal trading notes and structured learning for Forex and Gold (XAUUSD) — Bengali & English.",
+  robots: isIndexable ? "index,follow" : "noindex,nofollow",
+  openGraph: { siteName: SITE_NAME, type: "website" },
 };
 
 export default async function RootLayout({ children, params }) {
@@ -52,12 +62,16 @@ export default async function RootLayout({ children, params }) {
   return (
     <html
       lang={lang}
-      className={`${inter.variable} ${hindSiliguri.variable} ${jetbrainsMono.variable} h-full`}
+      className={`${fraunces.variable} ${hanken.variable} ${hindSiliguri.variable} ${jetbrainsMono.variable} h-full`}
       suppressHydrationWarning
     >
-      <body suppressHydrationWarning className="min-h-full flex flex-col antialiased bg-background text-foreground">
+      <body
+        suppressHydrationWarning
+        className="bg-background text-foreground flex min-h-full flex-col antialiased"
+      >
         <ThemeProvider>
-          <RootProvider theme={{ enabled: false }}>
+          {/* Site search is our own (components/search); fumadocs' default dialog would double-bind ⌘K. */}
+          <RootProvider theme={{ enabled: false }} search={{ enabled: false }}>
             <Header lang={lang} />
             <main className="flex-1">{children}</main>
             <Footer lang={lang} />

@@ -1,19 +1,222 @@
 ---
-title: "Role Reversal"
-description: "Support resistance e convert hoy ar vice versa"
+title: "Role Reversal: ভাঙা support কীভাবে resistance হয়"
+description: "Break হওয়া support কেন resistance হয়ে যায় (আর উল্টোটাও), retest-এ কীভাবে entry নেবেন এবং flip কখন ব্যর্থ হয় — দুটি chart example সহ।"
 level: beginner
-tags: []
-status: draft
-updated: 2026-10-10
+tags: [support, resistance, role-reversal, retest, flip]
+instruments: [EURUSD]
+timeframes: [H4]
+status: done
+sources:
+  - type: blog
+    title: "Support and Resistance Basics - Investopedia"
+    url: "https://www.investopedia.com/trading/support-and-resistance-basics/"
+  - type: book
+    title: "Technical Analysis of the Financial Markets - John J. Murphy"
+    url: ""
+    note: "Support ও resistance অধ্যায়, role reversal অংশ"
+updated: 2026-11-05
 ---
 
-# Role Reversal
+# Role Reversal: ভাঙা support কীভাবে resistance হয়
+
+Support zone ভেঙে দাম নেমে গেল। আপনি ভাবলেন, "এই তো সুযোগ, দাম ফিরে এলে কিনব, আগে তো এখানে থেমেছিল।" দাম ফিরে এল, আর আপনার buy-এর ওপর দিয়েই আবার নেমে গেল। ভুল ছিল একটি ধারণায়: **ভাঙার পর ওই zone আর আগের ভূমিকায় নেই।**
+
+## এই লেখা পড়ে আপনি যা পারবেন
+
+- Role reversal কী এবং **কেন ঘটে** তা বলতে পারবেন।
+- **সত্যিকারের break আর মিথ্যে break** আলাদা করতে পারবেন।
+- Retest-এ **entry, stop ও target** সাজাতে পারবেন।
+- Flip কখন **ব্যর্থ হলো** তা চিনে নিয়ে ক্ষতি ছোট রাখতে পারবেন।
+
+## কেন এটি জরুরি
+
+- **অর্ধেক trade-ই ভাঙা level ঘিরে।** Breakout পরে আসল সুযোগ retest-এ।
+- **ভুল দিকে trade এড়ানো যায়।** ভাঙা support-এ buy খোঁজা সবচেয়ে সাধারণ ফাঁদ।
+- **Stop-এর যুক্তি পরিষ্কার হয়।** Flip ভুল প্রমাণিত হওয়ার জায়গাই আপনার stop।
+
+পূর্বশর্ত: [Levels vs Zones](/bn/learn/05-support-resistance/01-levels-vs-zones) পাঠে zone আঁকা।
+
+## Role Reversal কী
+
+**Role reversal হলো এমন ঘটনা যেখানে ভেঙে যাওয়া support পরে resistance হিসেবে কাজ করে, অথবা ভেঙে যাওয়া resistance পরে support হিসেবে কাজ করে।**
+
+কেন ঘটে? তিনটি কারণ:
+
+- **আটকে পড়া ক্রেতারা:** Support-এ যারা buy করেছিল, দাম নিচে গেলে তারা লোকসানে। দাম ফিরে এলে "break even-এ বেরিয়ে যাই" বলে তারা sell করে।
+- **নতুন বিক্রেতারা:** Break দেখে যারা sell ধরেনি, তারা দাম ফিরে এলে ভালো দামে ঢোকে।
+- **পুরনো অর্ডারের ফাঁকা জায়গা:** আগের buy অর্ডার শেষ বা সরে গেছে, উপরে তাই দাম আটকানোর ক্রেতা কম।
+
+ভাবুন একটি মেঝে। আপনি মেঝে ভেঙে নিচের তলায় পড়লেন। এবার ওপরে উঠতে গেলে সেই ভাঙা মেঝেই আপনার মাথায় ছাদ হয়ে ঠেকে। **যে এলাকা একসময় বাঁচিয়েছিল, সেটিই এখন আটকাচ্ছে।**
+
+## Chart-এ কেমন দেখায়
+
+<Chart
+  id="role-reversal-flip-01"
+  height={420}
+  caption="EURUSD H4 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — support zone (1.0820-1.0842) তিনবার টিকে, ১০ নম্বর candle নিচে ভাঙে, ১৩ নম্বর candle নিচ থেকে retest করে ফিরে যায়"
+/>
+
+পুরো ঘটনা চারটি ধাপে:
+
+1. **Hold:** zone তিনবার দাম ঠেকাল।
+2. **Break:** ১০ নম্বর candle zone-এর নিচে **close** করল।
+3. **Retest:** দাম নিচ থেকে zone-এ ফিরে এল (১৩ নম্বর)।
+4. **Rejection:** zone পার হতে না পেরে আবার নিচে নামল।
+
+নিচে দুই দিকের তুলনা:
+
+| বিষয়        | Support → Resistance             | Resistance → Support             |
+| :----------- | :------------------------------- | :------------------------------- |
+| Break-এর ধরন | Zone-এর নিচে close               | Zone-এর উপরে close               |
+| Retest       | নিচ থেকে zone ছোঁয়া             | উপর থেকে zone ছোঁয়া             |
+| Entry        | Sell, retest candle-এর low ভাঙলে | Buy, retest candle-এর high ভাঙলে |
+| Stop         | Zone-এর উপরের সীমার ওপরে         | Zone-এর নিচের সীমার নিচে         |
+| ভুল প্রমাণিত | Zone-এর উপরে ফিরে close          | Zone-এর নিচে ফিরে close          |
+
+## ধাপে ধাপে: flip trade-এর পদ্ধতি
+
+<Steps>
+
+### ধাপ ১: আগে zone আঁকুন
+
+কমপক্ষে দুই-তিনবার দাম থেমেছে এমন zone। এক touch-এর zone-এর flip বিশ্বাস করা কঠিন।
+
+### ধাপ ২: Break-এর মান যাচাই করুন
+
+Wick দিয়ে ছুঁয়ে ফিরে এলে break নয়। দেখুন candle zone-এর বাইরে **close** করেছে কি না, আর body জোরালো কি না। উপরের chart-এ ১০ নম্বর candle প্রায় পুরো zone-এর নিচে বড় body নিয়ে close করেছে।
+
+### ধাপ ৩: তাড়াহুড়ো করবেন না, retest-এর অপেক্ষা করুন
+
+Break-এর candle-এ ঢুকলে আপনি সবচেয়ে খারাপ দামে ঢোকেন, আর stop অনেক দূরে পড়ে। দাম zone-এ ফিরে আসা পর্যন্ত বসে থাকুন। সব break-এ retest আসে না; না এলে trade ছেড়ে দিন।
+
+### ধাপ ৪: Retest-এ rejection খুঁজুন
+
+Zone-এ ঢুকে লম্বা wick, বা bearish engulfing, বা zone-এর অপর পারে close। [Candle Context](/bn/learn/04-candlesticks/05-candle-context) পাঠের সেই confirmation।
+
+### ধাপ ৫: Trigger-এ entry নিন
+
+Sell হলে retest candle-এর low ভাঙলে (chart-এ ১৪ নম্বর candle, entry 1.0806)। Buy হলে retest candle-এর high ভাঙলে।
+
+### ধাপ ৬: Stop বসান zone-এর বাইরে
+
+Sell হলে zone-এর উপরের সীমার ওপরে (1.0848)। দাম zone-এর উপরে ফিরে close করলে flip-এর ধারণাই ভুল।
+
+### ধাপ ৭: Target ঠিক করুন
+
+পরের পরিষ্কার zone বা আগের swing। Stop-এর অন্তত দ্বিগুণ দূরে না হলে trade-টি বাদ দিন।
+
+</Steps>
+
+## উদাহরণ ১: যখন কাজ করে (কাল্পনিক)
+
+উপরের chart-টি দেখুন।
+
+- **কী দেখা যাচ্ছিল:** Support zone 1.0820-1.0842 তিনবার টিকেছে। ১০ নম্বর candle 1.0796-এ close করে zone ভেঙেছে।
+- **অপেক্ষা:** ১১-১২ নম্বরে দাম নিচে গিয়ে আবার ওপরে উঠল। ১৩ নম্বর candle zone-এ ঢুকে 1.0834 পর্যন্ত গিয়ে 1.0809-এ close করল, লম্বা upper wick সহ।
+- **সিদ্ধান্ত:** ১৪ নম্বর candle ১৩-এর low (1.0806) ভাঙল, sell trigger। Entry প্রায় 1.0806।
+- **Stop:** zone-এর ওপরে 1.0848, ঝুঁকি প্রায় 42 pip।
+- **Target:** আগের swing 1.0722, লাভ প্রায় 84 pip, অর্থাৎ ২ গুণ ঝুঁকি। বিস্তারিত [Risk/Reward Ratio](/bn/learn/08-risk-management/03-risk-reward) পাঠে।
+- **ফল:** দাম ধাপে ধাপে target ছুঁয়ে ফেলল।
+- **শিক্ষা:** Break-এর সময় sell ধরলে stop কোথায় হতো আর entry কত খারাপ হতো, তা ভাবুন। Retest আপনাকে ছোট stop আর ভালো দাম দিয়েছে।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়, কোনো ফলই গ্যারান্টি নয়।)
+
+## উদাহরণ ২: যখন ফাঁদ হয় (কাল্পনিক)
+
+এবার উল্টো দিক: একটি resistance ভেঙে support হওয়ার আশা, যা পূরণ হয়নি।
+
+<Chart
+  id="role-reversal-fail-01"
+  height={420}
+  caption="EURUSD H4 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — resistance zone (1.0920-1.0942) ভেঙে ওপরে close, retest-এ bounce, তারপর ১৬ নম্বর candle zone-এর নিচে ফিরে close করে"
+/>
+
+- **কী দেখা যাচ্ছিল:** Resistance তিনবার ঠেকিয়েছে। ১০ নম্বর candle 1.0968-এ close করে ভেঙেছে। ১৩ নম্বর candle zone-এ নেমে 1.0924 ছুঁয়ে bullish close।
+- **সিদ্ধান্ত:** ১৪ নম্বর candle ১৩-এর high (1.0966) ভাঙল। Buy 1.0966-এ, stop zone-এর নিচে 1.0912-এ, ঝুঁকি প্রায় 54 pip।
+- **কী হলো:** ১৫ নম্বর candle নিচে নামল। ১৬ নম্বর candle 1.0902-এ close করে zone-এর নিচে চলে গেল। Stop fill হলো।
+- **কেন ব্যর্থ:** Bounce-এ কোনো জোর ছিল না, ১৪ নম্বর candle-এর body ছোট। Retest-এ ক্রেতারা zone ধরে রাখতে পারেনি, ভেঙে ঢোকা দাম আসলে ফাঁদ ছিল।
+- **শিক্ষা:** Flip যুক্তিসংগত দেখালেও নিশ্চিত নয়। ক্ষতি ছিল পরিকল্পিত 54 pip। Zone-এর ভেতর দিয়ে ফিরে close করা মানেই ধারণা ভুল; stop সরিয়ে আশা করার জায়গা নয়।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়।)
+
+## সাধারণ ভুল
+
+| ভুল                                    | কেন হয়                       | কী করবেন                                 |
+| :------------------------------------- | :---------------------------- | :--------------------------------------- |
+| Wick-এর break-কে সত্যিকারের break ভাবা | Level ভাঙার তাড়া             | Close দেখুন, body-র জোর দেখুন            |
+| Break-এর candle-এই ঢুকে পড়া           | সুযোগ হারানোর ভয়             | Retest-এর অপেক্ষা করুন, না এলে ছেড়ে দিন |
+| Retest-এ rejection ছাড়াই entry        | "Zone তো আছেই"                | Confirmation candle ও trigger লাগবে      |
+| Retest ছোঁয়ার আগেই limit অর্ডার বসানো | আগে থেকে সাজিয়ে রাখার অভ্যাস | Reaction দেখে তবে entry                  |
+| Flip ব্যর্থ হলেও stop সরিয়ে রাখা      | "একটু পরে ঘুরবে"              | Zone-এর বাইরে close মানেই বাতিল          |
+
+## Pro tips
+
+<Callout type="tip">
+  Break যত জোরালো (বড় body, অল্প wick), retest-এ flip-এর সম্ভাবনা তত ভালো।
+  দুর্বল break প্রায়ই ফিরে এসে zone-এর ভেতরেই ঘোরে।
+</Callout>
+
+<Callout type="tip">
+  একই zone যত পুরনো ও যত বেশিবার টেস্ট হয়েছে, তার flip তত বিশ্বাসযোগ্য। তবে
+  retest-এও বারবার ঘা খেলে flip দুর্বল হয়: দ্বিতীয় retest সাধারণত প্রথমের
+  চেয়ে কম নির্ভরযোগ্য।
+</Callout>
+
+<Callout type="warning">
+  Role reversal নিয়ম নয়, প্রবণতা। অনেক zone ভেঙে আর ফিরে আসে না, আবার অনেকে
+  ফিরে এসে ভেদ করেই চলে যায়। Stop ছাড়া flip trade নেবেন না।
+</Callout>
+
+## কখন এটা কাজ করে না
+
+- **News-এর পর:** হঠাৎ spike-এ দাম zone ভেদ করে ফিরে আসে, ফলে break আর retest আলাদা করা যায় না।
+- **Range-এর ভেতরে:** Range-এ দাম প্রান্তে ঠেকে ফেরে। [Trend ও Range](/bn/learn/03-market-structure/02-trend-range-hhhl) পাঠে দেখুন, সেখানে প্রতিটি break আসল নয়।
+- **Break-এর পরেই খুব দ্রুত ফেরা:** কয়েক candle-এর মধ্যে দাম zone-এর ওপারে ফিরলে সেটি false break, flip নয়।
+- **খুব ছোট timeframe-এ:** M1-M5-এ zone ও retest অস্থির, যুক্তি নড়বড়ে।
+
+## সারসংক্ষেপ
 
 <KeyTakeaways>
-- এই lesson টি এখনো লেখা হয়নি।
-- পরবর্তীতে বিস্তারিত যোগ করা হবে।
+
+- ভাঙা support সাধারণত resistance হয়, আর ভাঙা resistance support।
+- Wick নয়, zone-এর বাইরে close দেখে break নিশ্চিত করুন।
+- Break-এ নয়, retest-এ rejection দেখে entry নিন।
+- Stop zone-এর বাইরে; zone-এর ভেতর দিয়ে ফিরে close করলে flip বাতিল।
+
 </KeyTakeaways>
 
-## Introduction
+## অনুশীলন
 
-*এই section টি draft আছে। শীঘ্রই বিস্তারিত content যোগ করা হবে।*
+TradingView-এ EUR/USD-এর H4 chart খুলুন। গত ৩ মাসে এমন দুটি zone খুঁজুন যেগুলো ভেঙেছে। প্রতিটির জন্য লিখুন: break-এর candle কোনটি, retest এসেছিল কি না, retest-এ rejection ছিল কি না। শেষে গুনুন কয়টি flip কাজ করেছে আর কয়টি করেনি।
+
+## কুইজ
+
+1. Role reversal কেন ঘটে, দুটি কারণ বলুন।
+2. Break নিশ্চিত করতে wick না দেখে close কেন দেখব?
+3. Break-এর candle-এই না ঢুকে retest-এর অপেক্ষা করা ভালো কেন?
+4. Retest-এর পর দাম zone-এর বিপরীত দিকে ফিরে close করলে কী বুঝবেন?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** আটকে পড়া ক্রেতারা ফিরতি দামে বেরিয়ে যেতে sell করে, আর নতুন বিক্রেতারা ভালো দামে ঢোকে। এছাড়া নিচে আগের buy অর্ডার আর বাকি থাকে না।
+
+**২.** Wick ক্ষণিকের ছোঁয়া, দাম ফিরে আসতে পারে। Close দেখায় candle শেষে দাম কোথায় থিতু হলো।
+
+**৩.** Retest-এ আপনি ভালো দামে ঢোকেন, আর stop zone-এর কাছে ছোট থাকে। Break-এর candle-এ ঢুকলে entry খারাপ ও stop দূরে পড়ে।
+
+**৪.** Flip ব্যর্থ হয়েছে। Stop-এ বেরিয়ে যান, ধারণা ভুল প্রমাণিত।
+
+</details>
+
+## পরের ধাপ
+
+- আগে: [Levels vs Zones](/bn/learn/05-support-resistance/01-levels-vs-zones)।
+- পরে: [Supply & Demand](/bn/learn/05-support-resistance/03-supply-demand)।
+- Stop নিয়ে বিস্তারিত: [Stop Loss Placement](/bn/learn/10-trade-management-execution/01-stop-loss-placement)।
+
+### সূত্র
+
+- [Support and Resistance Basics, Investopedia](https://www.investopedia.com/trading/support-and-resistance-basics/)
+
+<Disclaimer />

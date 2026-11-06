@@ -1,14 +1,182 @@
 ---
-title: "Famous gold move analysis"
-description: "Detailed notes on Famous gold move analysis"
-status: draft
-updated: 2026-10-10
+title: "বড় Gold Move বিশ্লেষণ: ঘটনার পর কীভাবে পড়বেন, আর live-এ কী করতেন"
+description: "একটি বড় gold rally-কে চারটি প্রশ্নে ভেঙে পড়ার পদ্ধতি: কারণ, কাঠামো, live-এ trade করার জায়গা ও hindsight-এর ফাঁদ। কাল্পনিক পুনর্গঠন ও দুটি chart সহ।"
+level: advanced
+tags: [case-study, gold, xauusd, event-analysis, hindsight-bias]
+instruments: [XAUUSD]
+timeframes: [H1]
+status: done
+sources:
+  - type: blog
+    title: "What Drives Gold Prices - Investopedia"
+    url: "https://www.investopedia.com/articles/investing/071114/what-drives-gold-prices.asp"
+updated: 2026-11-05
 ---
 
-# Famous gold move analysis
+# বড় Gold Move বিশ্লেষণ: ঘটনার পর কীভাবে পড়বেন, আর live-এ কী করতেন
 
-<div className="rounded-xl border border-border bg-card p-6 text-center text-muted-foreground my-8">
-  <p className="text-3xl mb-4">🚧</p>
-  <p className="font-semibold text-foreground">Coming in Phase 2</p>
-  <p className="text-sm mt-1">This module is under construction.</p>
-</div>
+"গত বছর gold এত উঠেছিল, আমি তো বলেছিলামই।" ঘটনার পর সবার কাছেই সবকিছু স্পষ্ট। এই পাঠ শেখায় একটি বড় move-কে এমনভাবে পড়তে, যাতে **তখন কী জানা ছিল** আর **এখন কী জানা আছে**, তা আলাদা থাকে।
+
+**গুরুত্বপূর্ণ:** এই পাঠে কোনো বাস্তব তারিখ, দাম বা ঘটনার সংখ্যা ব্যবহার করা হয়নি। chart দুটি **কাল্পনিক পুনর্গঠন**। বাস্তব ঘটনা আপনি নিজে নির্ভরযোগ্য উৎসে (যেমন World Gold Council-এর প্রকাশনা) যাচাই করে একই ছকে বসাবেন।
+
+## এই লেখা পড়ে আপনি যা পারবেন
+
+- বড় move-কে **চার প্রশ্নে** ভেঙে পড়তে পারবেন।
+- **Hindsight bias** চিনে আলাদা করতে পারবেন।
+- Live-এ **কোথায় trade করা যেত**, আর কোথায় নয়, বলতে পারবেন।
+
+## কেন এটি জরুরি
+
+- **বড় move-এই সবচেয়ে বড় ভুল।** তাড়া, FOMO, বড় size। [FOMO ও Revenge](/bn/learn/12-trading-psychology/04-fomo-revenge-trading) এখানেই সবচেয়ে ক্ষতি করে।
+- **Gold-এর চালিকাশক্তি কয়েকটি পরিচিত নামে সীমাবদ্ধ।** [Gold কেন নড়ে](/bn/learn/13-gold-xauusd/01-why-gold-moves) পাঠের ধারণা এখানে বাস্তব কেসে প্রয়োগ হয়।
+- **পরের বড় ঘটনার প্রস্তুতি।** ছক আগে থেকে তৈরি থাকলে ঘটনার সময় মাথা ঠান্ডা থাকে।
+
+পূর্বশর্ত: [DXY ও US Yield](/bn/learn/13-gold-xauusd/03-dxy-us-yields) এবং [News Events](/bn/learn/13-gold-xauusd/06-news-events)।
+
+## Event বিশ্লেষণ কী
+
+**Event বিশ্লেষণ হলো একটি বড় move-এর কারণ, কাঠামো, বাস্তবে trade করার জায়গা ও আমাদের পক্ষপাত আলাদা করে লেখা।**
+
+| প্রশ্ন      | কী লিখবেন                                                               |
+| :---------- | :---------------------------------------------------------------------- |
+| ১. কারণ কী? | Yield, USD, ভূ-রাজনীতি, কেন্দ্রীয় ব্যাংকের পদক্ষেপ, কোনটি কতটা ভূমিকা? |
+| ২. কাঠামো?  | Move-এর আগে কী ছিল (range)? Move কেমন (সরল, লাফ)? পরে কী (higher low)?  |
+| ৩. Live-এ?  | তখন কোন দামে ঢোকা যেত, stop কত, কেন?                                    |
+| ৪. পক্ষপাত? | "এখন যা জানি, তখন তা জানতাম না" কোথায় ফাঁক?                            |
+
+## Chart-এ কেমন দেখায়
+
+<Chart
+  id="case-gold-surge-01"
+  height={500}
+  caption="XAUUSD H1 (কাল্পনিক পুনর্গঠন, বাস্তব ঘটনা নয়) — ছোট range, তারপর খবরে লাফ, নিচের pane-এ US10Y (কাল্পনিক) নামছে। Spike-এর পর higher low 2341-এ buy, stop 2327, target 2369 (2R)।"
+/>
+
+Move-এর আগে ছিল ছোট range, লাফের সময় yield নামছে, আর spike-এর পর দাম পিছিয়ে একটি **higher low** গড়েছে। Live-এ trade করার যোগ্য জায়গা সেটিই।
+
+## ধাপে ধাপে: বিশ্লেষণ
+
+<Steps>
+
+### ধাপ ১: Move-এর আগের অবস্থা
+
+Range কত ছোট ছিল? [Session ও volatility](/bn/learn/13-gold-xauusd/05-sessions-volatility) কেমন? স্তব্ধতার পর বড় move আসে, কিন্তু কখন, আগে থেকে জানা যায় না।
+
+### ধাপ ২: Trigger-এর ক্ষণ
+
+কোন খবর বা ঘটনা? News পাঠের নিয়ম: spike-এর মুহূর্তে ঢুকবেন না।
+
+### ধাপ ৩: Cross-market দেখুন
+
+Yield, USD একই সময়ে কী করছে? এতে move-এর পিছনের কারণ পরীক্ষা করা যায়।
+
+### ধাপ ৪: Live-এ trade-এর জায়গা খুঁজুন
+
+Spike-এর পর pullback ও higher low। Stop ছোট, structure স্পষ্ট।
+
+### ধাপ ৫: নিজের পক্ষপাত লিখুন
+
+"আমি spike-এ ঢুকতাম?" সৎ উত্তর লিখুন। পরের ঘটনার জন্য এটাই পাঠ।
+
+</Steps>
+
+## উদাহরণ ১: যখন কাজ করে (কাল্পনিক)
+
+- **Context:** দীর্ঘ range, তারপর খবরে লাফ; yield একই সময়ে নামছে।
+- **Live-এ:** Spike-এ ঢোকেননি। অপেক্ষা, higher low 2341। Buy 2341, stop 2327 (14 পয়েন্ট), target 2369 (28 পয়েন্ট)।
+- **ফল:** Target ছুঁয়েছে, +2R।
+- **শিক্ষা:** বড় move-এর একটি ছোট অংশ trade করেছেন, যেখানে stop ছোট ও কারণ স্পষ্ট। পুরো move ধরতে হবে এমন নয়।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়।)
+
+## উদাহরণ ২: যখন ব্যর্থ হয় (কাল্পনিক)
+
+<Chart
+  id="case-gold-chase-fail-01"
+  height={500}
+  caption="XAUUSD H1 (কাল্পনিক পুনর্গঠন, বাস্তব ঘটনা নয়) — একই দৃশ্য। Spike-এর পরেই 2347.36-এ buy, stop 12 পয়েন্ট নিচে; pullback-এ stop লাগে, তারপর দাম আরও ওঠে।"
+/>
+
+- **কী ঘটল:** Spike দেখে FOMO। 2347.36-এ buy, stop 2335.36, target 2371.36।
+- **ফল:** Pullback-এ stop লেগেছে, -1R। তারপর দাম আরও উঠেছে।
+- **কেন ব্যর্থ:** দিক ঠিক ছিল, কিন্তু entry-র দাম ছিল সবচেয়ে খারাপ জায়গায়। স্বাভাবিক pullback-ই stop ছুঁয়ে দিল।
+- **শিক্ষা:** দিক ঠিক হওয়া যথেষ্ট নয়; entry-র দাম ও stop-এর জায়গাও ঠিক হতে হবে।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়।)
+
+## সাধারণ ভুল
+
+| ভুল                            | কেন হয়               | কী করবেন                                                             |
+| :----------------------------- | :-------------------- | :------------------------------------------------------------------- |
+| ঘটনার পর কারণ "জেনে" ফেলা      | Hindsight bias        | "তখন কী জানা ছিল" আলাদা লিখুন                                        |
+| Spike-এর পরেই ধাওয়া           | FOMO                  | Higher low বা retest-এর অপেক্ষা                                      |
+| একটি কারণে সবকিছু ব্যাখ্যা     | সরল গল্পের আকর্ষণ     | একাধিক সম্ভাব্য কারণ রাখুন                                           |
+| বাস্তব ঘটনার তথ্য যাচাই না করা | অনলাইন পোস্টে বিশ্বাস | নির্ভরযোগ্য উৎস মিলিয়ে নিন                                          |
+| Size বাড়িয়ে "এবার ধরব" ভাবা  | আগের মিসের আক্ষেপ     | [ঝুঁকির নিয়ম](/bn/learn/08-risk-management/01-risk-per-trade) স্থির |
+
+## Pro tips
+
+<Callout type="tip">
+  প্রতিটি বড় ঘটনার পর এক পাতার বিশ্লেষণ লিখুন: চার প্রশ্ন, ছোট উত্তর। পাঁচটি
+  ঘটনা পর নিজের পক্ষপাতের ধরন দেখতে পাবেন।
+</Callout>
+
+<Callout type="warning">
+  বাস্তব ঘটনার দাম, তারিখ ও কারণ এই পাঠে নেই, ইচ্ছা করেই। যাচাই না করা তথ্যে
+  বিশ্লেষণ দাঁড় করাবেন না। এটি শিক্ষামূলক লেখা, বিনিয়োগ পরামর্শ নয়।
+</Callout>
+
+## কখন এটা কাজ করে না
+
+- **ঘটনার সময় live-এ:** বিশ্লেষণ ঘটনার পর; spike-এর মুহূর্তে এত ভাবার সময় নেই। তাই নিয়ম আগে।
+- **কারণ অস্পষ্ট হলে:** সব move-এর পরিষ্কার কারণ থাকে না।
+- **অল্প ঘটনায়:** দু-তিনটি কেস থেকে সাধারণ সিদ্ধান্ত নয়।
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- চার প্রশ্ন: কারণ, কাঠামো, live-এ জায়গা, পক্ষপাত।
+- Spike-এ নয়, higher low বা retest-এ।
+- Hindsight bias আলাদা করে লিখুন।
+- বাস্তব তথ্য নিজে যাচাই করুন; এখানকার chart কাল্পনিক।
+
+</KeyTakeaways>
+
+## অনুশীলন
+
+আপনার জানা একটি বড় gold move নির্ভরযোগ্য উৎস থেকে যাচাই করে এই ছকে চার প্রশ্নের উত্তর লিখুন। শেষে লিখুন: আমি live-এ কোন জায়গায় ঢুকতাম, আর কোথায় ঢুকতাম না?
+
+## কুইজ
+
+1. Hindsight bias কী?
+2. বড় move-এ কোথায় trade করা তুলনামূলক নিরাপদ?
+3. ওপরের ব্যর্থ উদাহরণে দিক ঠিক ছিল, তবু loss কেন?
+4. এই পাঠের chart কেন বাস্তব নয়?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** ঘটনার পর মনে হওয়া যে ফল আগেই স্পষ্ট ছিল।
+
+**২.** Spike-এর পর higher low বা retest-এ, যেখানে stop ছোট ও structure স্পষ্ট।
+
+**৩.** Entry-র দাম ছিল spike-এর মাথায়; স্বাভাবিক pullback stop ছুঁয়ে দিল।
+
+**৪.** যাচাইকৃত বাস্তব ডেটা এখানে নেই; কাঠামো বোঝানোর জন্য তৈরি পুনর্গঠন।
+
+</details>
+
+## পরের ধাপ
+
+- আগে: [নিজের Trade Breakdown](/bn/learn/17-case-studies-trade-reviews/01-nijer-winning-losing-trade-breakdown)।
+- পরে: [Weekly Review Template](/bn/learn/17-case-studies-trade-reviews/03-weekly-review-template)।
+- সম্পর্কিত: [Gold-এ News Events](/bn/learn/13-gold-xauusd/06-news-events)।
+
+### সূত্র
+
+- <ExternalLink href="https://www.investopedia.com/articles/investing/071114/what-drives-gold-prices.asp">
+    What Drives Gold Prices, Investopedia
+  </ExternalLink>
+
+<Disclaimer />

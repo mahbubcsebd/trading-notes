@@ -1,0 +1,337 @@
+---
+title: "Three Inside Up: harami-র পর নিশ্চিত হওয়া reversal"
+description: "Three inside up কীভাবে চিনবেন, harami থেকে কেন শক্ত, তৃতীয় candle mother-এর open পার হওয়ার গুরুত্ব, entry, stop, আর কেন higher timeframe zone দেখা জরুরি — chart সহ।"
+type: bullish
+category: three-candle
+level: intermediate
+candleCount: 3
+signal: reversal
+chartId: three-inside-up-win-01
+tags: [pattern, candlestick, three-inside-up, harami, three-candle]
+status: done
+sources:
+  - type: book
+    title: "Candlestick Charting Explained - Gregory L. Morris"
+    note: "Three inside up / down, harami-র confirmation"
+  - type: blog
+    title: "Three Inside Up/Down - Investopedia"
+    url: "https://www.investopedia.com/terms/t/three-inside-updown.asp"
+updated: 2026-11-06
+---
+
+Bullish harami দেখে অপেক্ষা করলেন, কারণ জানেন harami শুধু বিরতি। পরের candle mother-এর open পার হয়ে close করল: এবার নিশ্চিত! Buy করলেন। দাম উঠল, ঠিক daily chart-এর একটি supply zone পর্যন্ত, যেখান থেকে এক সপ্তাহ আগেও দাম ফিরেছিল। H4-এর গল্প নিখুঁত ছিল, কিন্তু daily chart অন্য গল্প বলছিল।
+
+## এক নজরে
+
+| বিষয়                | Three Inside Up                                                                                                          |
+| :------------------- | :----------------------------------------------------------------------------------------------------------------------- |
+| ধরন                  | Bullish reversal, তিন candle (harami + confirmation)                                                                     |
+| কোথায় খুঁজবেন       | Downtrend-এর শেষে, চিহ্নিত support-এ                                                                                     |
+| চেনার মূল চিহ্ন      | ১: লম্বা bearish mother; ২: ছোট candle mother-এর body-র ভেতরে (bullish harami); ৩: bullish, mother-এর open-এর উপরে close |
+| Confirmation         | তৃতীয় candle-ই confirmation                                                                                             |
+| Stop                 | Mother-এর low-এর নিচে, spread-সহ buffer                                                                                  |
+| বাতিল (invalidation) | Mother-এর low-এর নিচে close                                                                                              |
+| দেখতে একই রকম        | [Bullish Harami](/bn/patterns/bullish-harami) (প্রথম দুই candle), [Morning Star](/bn/patterns/morning-star)              |
+| বিপরীত pattern       | [Three Inside Down](/bn/patterns/three-inside-down)                                                                      |
+
+## এই লেখা পড়ে আপনি যা পারবেন
+
+- Three inside up কেন harami-র চেয়ে **শক্ত**, ব্যাখ্যা করতে পারবেন।
+- Morning star থেকে **আলাদা করতে** পারবেন।
+- তৃতীয় close-এ entry আর mother-এর low-এর নিচে stop **বসাতে** পারবেন।
+- Higher timeframe zone **আগেই মেপে** trade বাছাই করতে পারবেন।
+
+## কেন জরুরি
+
+- **Harami-র সমস্যার সমাধান।** Harami শুধু বিরতি; তার প্রথম বাধা mother-এর open। Three inside up মানে সেই বাধা ইতিমধ্যে পার হয়েছে।
+- **Confirmation pattern-এর ভেতরে।** আলাদা confirmation-এর অপেক্ষা লাগে না।
+- **Entry দেরিতে, তাই জায়গা কম।** তৃতীয় candle-এর close-এ দাম ইতিমধ্যে অনেকটা উঠেছে। উপরের বাধা, বিশেষ করে higher timeframe-এর, না মাপলে R:R ফাঁকি দেয়।
+
+পূর্বশর্ত: Bullish Harami পাতা (উপরের টেবিলে link) আর [Multi-Timeframe Analysis](/bn/learn/03-market-structure/05-multi-timeframe-analysis)।
+
+## Three Inside Up কী
+
+**Three inside up হলো তিন candle-এর pattern: একটি লম্বা bearish candle, তার body-র ভেতরে একটি ছোট candle (bullish harami), তারপর একটি bullish candle যা প্রথম candle-এর open-এর উপরে close করে।** "Inside" কারণ দ্বিতীয় candle প্রথমটার ভেতরে; "up" কারণ তৃতীয়টা উপরে বেরিয়ে যায়।
+
+<CandleDiagram
+  title="Harami থেকে three inside up"
+  candles={[
+    { o: 64, h: 65, l: 58, c: 59, dim: true },
+    { o: 59, h: 60, l: 47, c: 48, label: "১ mother" },
+    { o: 48, h: 54, l: 47.5, c: 53.5, label: "২ harami" },
+    {
+      o: 53.5,
+      h: 62,
+      l: 53,
+      c: 61,
+      label: "৩",
+      note: "mother open (59)-এর উপরে",
+    },
+  ]}
+  caption="প্রথম দুই candle একটি bullish harami। তৃতীয় candle mother-এর open পার হয়ে close করে, harami নিশ্চিত করে।"
+/>
+
+### চেনার নিয়ম
+
+| নিয়ম                                               | বাধ্যতামূলক?          | কেন                                       |
+| :-------------------------------------------------- | :-------------------- | :---------------------------------------- |
+| আগে downtrend, mother লম্বা bearish                 | হ্যাঁ                 | Harami-র ভিত্তি                           |
+| দ্বিতীয় candle-এর body mother-এর body-র ভেতরে      | হ্যাঁ                 | এটাই harami                               |
+| তৃতীয় candle bullish, mother-এর open-এর উপরে close | হ্যাঁ                 | এটাই "up": প্রথম বাধা পার                 |
+| চিহ্নিত support-এ                                   | হ্যাঁ                 | Level ছাড়া এটা downtrend-এর মাঝের bounce |
+| Higher timeframe-এর বাধা অন্তত 1.5R দূরে            | না (কিন্তু খুব জরুরি) | Entry দেরিতে, তাই উপরের জায়গা কম         |
+
+<Callout type="note">
+  তৃতীয় candle শুধু mother body-র মাঝ পার হলে সেটা harami-র confirmation,
+  কিন্তু three inside up নয়। Three inside up-এর জন্য mother-এর **open** পার হতে
+  হবে।
+</Callout>
+
+## শক্তিশালী বনাম দুর্বল three inside up
+
+<DiagramRow>
+  <CandleDiagram
+    title="শক্তিশালী"
+    verdict="good"
+    verdictLabel="trade-যোগ্য"
+    candles={[
+      { o: 64, h: 65, l: 58, c: 59, dim: true },
+      { o: 59, h: 60, l: 48, c: 49 },
+      { o: 49, h: 53, l: 48.5, c: 52.5 },
+      { o: 52.5, h: 61, l: 52, c: 60.5, label: "উপরে খোলা" },
+    ]}
+    levels={[{ price: 48, label: "support", tone: "support" }]}
+    caption="Support-এ, তৃতীয় candle mother-এর open পার হয়ে high-এর কাছে close, উপরে কোনো বড় বাধা নেই।"
+  />
+  <CandleDiagram
+    title="দুর্বল"
+    verdict="bad"
+    verdictLabel="এড়িয়ে চলুন"
+    candles={[
+      { o: 64, h: 65, l: 58, c: 59, dim: true },
+      { o: 59, h: 60, l: 50, c: 51 },
+      { o: 51, h: 55, l: 50.5, c: 54.5 },
+      { o: 54.5, h: 60.5, l: 54, c: 60, label: "zone-এর নিচে" },
+    ]}
+    levels={[{ price: 63, label: "daily supply", tone: "resistance" }]}
+    caption="তৃতীয় candle-এর ঠিক উপরে daily supply zone। Target-এর আগেই দেয়াল।"
+  />
+</DiagramRow>
+
+| মান যাচাই     | শক্তিশালী                                   | দুর্বল                                 |
+| :------------ | :------------------------------------------ | :------------------------------------- |
+| জায়গা        | চিহ্নিত support-এ                           | Downtrend-এর মাঝে, level ছাড়া         |
+| তৃতীয় candle | Mother-এর open-এর স্পষ্ট উপরে, high-এর কাছে | Open-এর সামান্য উপরে, লম্বা upper wick |
+| উপরে বাধা     | Higher timeframe zone অন্তত 1.5R দূরে       | Daily বা weekly zone 1.5R-এর মধ্যে     |
+
+### দেখতে একই রকম, অর্থ আলাদা
+
+| Pattern             | দ্বিতীয় candle                    | তৃতীয় candle                      |
+| :------------------ | :--------------------------------- | :--------------------------------- |
+| **Three Inside Up** | Mother-এর body-র **ভেতরে**         | Mother-এর open-এর উপরে close       |
+| **Morning Star**    | প্রথমটার close-এর কাছে বা **নিচে** | প্রথম body-র 50%-এর উপরে close     |
+| **Bullish Harami**  | Mother-এর body-র ভেতরে             | এখনো আসেনি (দুই candle-এর pattern) |
+
+## Candle-এর ভেতরের গল্প
+
+Support-এ একটি three inside up-এর একটি প্রচলিত ব্যাখ্যা:
+
+1. **Mother: sellers জোরে নামায়।** লম্বা লাল candle support পর্যন্ত।
+2. **Harami: sellers থামে।** নতুন low নেই, ছোট candle mother-এর ভেতরে।
+3. **তৃতীয়: buyers mother-এর পুরো লাভ মুছে দেয়।** Mother-এর open-এর উপরে close মানে mother candle-এ যারা sell করেছিল, সবাই লোকসানে।
+
+ফল: তিন candle মিলে sellers-এর আক্রমণ, থামা, আর পুরো ফেরত। কিন্তু higher timeframe-এ বড় seller-রা কোথায় অপেক্ষা করছে, সেটা এই তিন candle বলে না।
+
+<Callout type="note">
+  এটি একটি প্রচলিত ব্যাখ্যা, প্রমাণিত ঘটনা নয়। Chart দেখে কে কিনেছে বা বেচেছে,
+  তা জানা যায় না।
+</Callout>
+
+## কোথায় কাজ করে, কোথায় করে না
+
+<Compare
+  leftLabel="যেখানে three inside up-এর ওজন বেশি"
+  rightLabel="যেখানে three inside up প্রায়ই ফাঁদ"
+  left="- চিহ্নিত support বা demand zone-এ
+- তৃতীয় candle mother-এর open-এর স্পষ্ট উপরে close করলে
+- Higher timeframe trend-এর দিকে pullback শেষে
+- উপরে higher timeframe zone অন্তত 1.5R দূরে"
+  right="- Daily বা weekly supply zone-এর ঠিক নিচে
+- কোনো level ছাড়া downtrend-এর মাঝে
+- তৃতীয় candle লম্বা upper wick নিয়ে সামান্য উপরে close করলে
+- বড় news-এর ঠিক আগে"
+/>
+
+## 24 ঘণ্টার বাজারে gap
+
+<Callout type="note">
+  Harami-র মতোই: Forex-এ দ্বিতীয় candle সাধারণত mother-এর close-এ open করে, তাই
+  তার body mother-এর body-র প্রান্ত থেকে শুরু হয়। তৃতীয় candle দ্বিতীয়টার
+  close থেকে শুরু করে mother-এর open পার হয়। কোনো gap লাগে না।
+</Callout>
+
+## ধাপে ধাপে: three inside up trade
+
+<Steps>
+
+### ধাপ ১: আগে level, তারপর higher timeframe
+
+Support আগেই আঁকুন। তারপর এক ধাপ বড় timeframe খুলুন (H4 হলে D1): উপরে কোনো supply zone বা resistance আছে? কত দূরে?
+
+### ধাপ ২: তিনটি candle বন্ধ হওয়ার অপেক্ষা
+
+তৃতীয় candle শেষ মিনিটে mother-এর open-এর নিচে ফিরে যেতে পারে।
+
+### ধাপ ৩: মাপুন
+
+Mother লম্বা? দ্বিতীয় candle-এর body ভেতরে আর ছোট? তৃতীয় candle mother-এর open-এর উপরে, high-এর কাছে close?
+
+### ধাপ ৪: Entry-র ধরন
+
+| Entry                      | কোথায়                                 | সুবিধা                      | অসুবিধা              |
+| :------------------------- | :------------------------------------- | :-------------------------- | :------------------- |
+| **তৃতীয় close** (প্রচলিত) | তৃতীয় candle বন্ধ হতেই buy            | Confirmation pattern-এই আছে | Entry উপরে, stop বড় |
+| **Mother open-এর retest**  | Mother-এর open-এ buy limit             | Stop ছোট, R:R ভালো          | দাম না ফিরলে মিস     |
+| **তৃতীয় high break**      | তৃতীয় candle-এর high-এর উপরে buy stop | Momentum নিশ্চিত            | Entry আরও উপরে       |
+
+### ধাপ ৫: Stop বসান
+
+Mother-এর low-এর নিচে (দ্বিতীয় candle-এর low নিচে হলে তার নিচে), [spread](/bn/learn/01-foundations/04-spread-commission-swap)-সহ buffer।
+
+### ধাপ ৬: Size ও target
+
+[Position size](/bn/learn/08-risk-management/02-position-sizing) entry থেকে stop-এর দূরত্ব দিয়ে, ঝুঁকি ১%-এর বেশি নয়। Target সবচেয়ে কাছের বাধার আগে, **higher timeframe zone সহ**। [Risk reward](/bn/learn/08-risk-management/03-risk-reward) অন্তত 1:1.5।
+
+### ধাপ ৭: পরিচালনা
+
+দাম আবার mother-এর open-এর নিচে টানা close করলে confirmation দুর্বল হচ্ছে। Mother-এর low-এর নিচে close হলে ধারণা ভুল।
+
+</Steps>
+
+### Trade-এর আগে checklist
+
+<Checklist
+  id="pattern-three-inside-up-pretrade-bn"
+  items={[
+    "Pattern আসার আগেই support চিহ্নিত ছিল, আর mother সেখানে থেমেছে?",
+    "আকার নিয়ম মানছে (লম্বা লাল mother, ভেতরে ছোট harami, তৃতীয়টা mother-এর open-এর উপরে close)?",
+    "তিনটি candle-ই বন্ধ হয়েছে?",
+    "সবচেয়ে কাছের বাধা পর্যন্ত risk reward অন্তত 1:1.5?",
+    "এক ধাপ বড় timeframe-এ কোনো zone বা level trade-এর ঠিক সামনে নেই?",
+  ]}
+/>
+
+একটি ঘরও খালি থাকলে trade বাদ দিন।
+
+## উদাহরণ ১: যখন কাজ করে (কাল্পনিক)
+
+<Chart
+  id="three-inside-up-win-01"
+  height={420}
+  caption="XAUUSD H1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — একবার পরীক্ষিত support-এ three inside up, তৃতীয় close-এ long।"
+/>
+
+- **কী দেখা যাচ্ছিল:** ৪ নম্বর candle প্রায় 2332.44-এ support চিহ্নিত করেছে। ৫-১০ নম্বর প্রায় 2387 পর্যন্ত ওঠে, ১১-১৫ নম্বর আবার নামে।
+- **Pattern:** ১৬ নম্বর mother: 2344.44 থেকে 2333.94। ১৭ নম্বর harami: 2333.94 থেকে 2338.66, body-র ভেতরে। ১৮ নম্বর 2346.94-এ close, mother-এর open 2344.44-এর উপরে।
+- **সিদ্ধান্ত:** তৃতীয় close-এ buy 2346.94। Stop 2331.44 (mother low-এর নিচে), ঝুঁকি $15.50। Target 2377.94 (2R); swing high পর্যন্ত জায়গা প্রায় 2.6R, উপরে কোনো higher timeframe zone নেই।
+- **ফল:** ২৭ নম্বর candle target ছোঁয়।
+- **শিক্ষা:** Level, harami, mother-এর open পার, আর উপরে খোলা জায়গা।
+
+<TradeSetup
+  direction="long"
+  pair="XAUUSD"
+  entry={2346.94}
+  stop={2331.44}
+  target={2377.94}
+/>
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়। সব three inside up জেতে না, আর কোনো ফল গ্যারান্টি নয়।)
+
+## উদাহরণ ২: যখন ফাঁদ হয় (কাল্পনিক)
+
+<Chart
+  id="three-inside-up-fail-01"
+  height={420}
+  caption="GBPUSD H4 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — পরিষ্কার three inside up, কিন্তু ঠিক উপরে daily supply zone। Long zone-এ গিয়ে প্রত্যাখ্যাত, stop।"
+/>
+
+- **কী দেখা যাচ্ছিল:** ০-৫ নম্বর candle প্রায় 1.2899-1.2929-এর একটি daily supply zone পর্যন্ত উঠে প্রত্যাখ্যাত হয়েছে। ৬-৮ নম্বর নামে।
+- **Pattern:** ৯ নম্বর mother: 1.2836 থেকে 1.2808। ১০ নম্বর harami: 1.2808 থেকে 1.28206। ১১ নম্বর 1.2840-এ close, mother-এর open-এর উপরে। H4-এ নিখুঁত।
+- **ভুল সিদ্ধান্ত:** তৃতীয় close-এ buy 1.2840, stop 1.2800, ঝুঁকি 40 pip, target 1.2920 (2R)। কিন্তু daily zone-এর তলা 1.2899, মাত্র প্রায় 1.48R দূরে, আর target zone-এর ভেতরে।
+- **কী হলো:** ১৩ নম্বর zone-এ পৌঁছায়, ১৪ নম্বর প্রত্যাখ্যাত হয়, ১৮ নম্বর stop ভাঙে।
+- **কেন ব্যর্থ:** Higher timeframe zone ঠিক সামনে, আর support-ও ছিল না। Checklist-এর প্রথম, চতুর্থ আর পঞ্চম ঘরে trade বাদ পড়ত।
+
+**শিক্ষা:** Higher timeframe দেখুন: মাথার উপরের daily zone trade আটকে দেয়। Stop আগে বসানো ছিল বলে লোকসান 1R-এ আটকেছে।
+
+## সাধারণ ভুল
+
+| ভুল                                               | কেন হয়                               | কী করবেন                               |
+| :------------------------------------------------ | :------------------------------------ | :------------------------------------- |
+| শুধু নিজের timeframe দেখা                         | Higher timeframe-কে অপ্রয়োজনীয় ভাবা | এক ধাপ বড় timeframe-এর zone আগে আঁকুন |
+| Mother body-র মাঝ পার হওয়াকে three inside up ধরা | নিয়ম গুলিয়ে ফেলা                    | Mother-এর **open** পার হতে হবে         |
+| Stop দ্বিতীয় candle-এর low-এ                     | ছোট stop-এর লোভ                       | Mother-এর low-এর নিচে                  |
+| Morning star আর three inside up একই ভাবা          | দ্বিতীয় candle-এর জায়গা না দেখা     | ভেতরে = inside; নিচে = star            |
+
+## Pro tips
+
+<Callout type="tip">
+  তৃতীয় close-এ entry উপরে মনে হলে mother-এর open-এ limit order দিন। ভাঙা বাধা
+  প্রায়ই একবার retest হয়, আর সেখানে entry দিলে stop একই থাকে কিন্তু ঝুঁকি অনেক
+  কমে। বিস্তারিত: [Role
+  Reversal](/bn/learn/05-support-resistance/02-role-reversal)।
+</Callout>
+
+<Callout type="tip">
+  Supply ও demand zone কীভাবে আঁকবেন: [Supply ও
+  Demand](/bn/learn/05-support-resistance/03-supply-demand)। H4-এ trade করলে
+  D1-এর zone, H1-এ trade করলে H4-এর zone, এভাবে এক ধাপ উপরে দেখুন।
+</Callout>
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- Three inside up = লম্বা লাল mother, ভেতরে ছোট harami, তারপর mother-এর open-এর উপরে close করা সবুজ candle।
+- এটা নিশ্চিত হওয়া harami: প্রথম বাধা (mother-এর open) ইতিমধ্যে পার।
+- Entry তৃতীয় close-এ বা mother-এর open-এর retest-এ, stop mother-এর low-এর নিচে।
+- Entry দেরিতে, তাই higher timeframe zone সহ উপরের বাধা আগেই মাপুন।
+
+</KeyTakeaways>
+
+## অনুশীলন ও নিজের backtest
+
+TradingView-এ XAUUSD H1 বা GBPUSD H4 খুলুন, পাশে এক ধাপ বড় timeframe। অন্তত ২০টি three inside up খুঁজুন। প্রতিটির জন্য একটি সারি লিখুন:
+
+| তারিখ | Support-এ? | বড় timeframe zone পর্যন্ত R | Mother open retest এসেছে? | Entry ধরন | ফল (R) |
+| :---- | :--------- | :--------------------------- | :------------------------ | :-------- | :----- |
+|       |            |                              |                           |           |        |
+
+এরপর "zone 1.5R-এর বেশি দূরে" আর "1.5R-এর মধ্যে" দুই দলে ভাগ করে গড় R তুলনা করুন। অন্তত ৩০টি নমুনা ছাড়া সিদ্ধান্ত নেবেন না।
+
+## কুইজ
+
+1. Three inside up আর bullish harami-র তফাত কী?
+2. তৃতীয় candle mother body-র মাঝ পার হয়ে close করল, কিন্তু mother-এর open-এর নিচে। এটা কি three inside up?
+3. Three inside up আর morning star-এর মূল তফাত কোন candle-এ?
+4. উদাহরণ ২-এর trade checklist-এর কোন ঘরে বাদ পড়ত?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** Bullish harami দুই candle-এর pattern, শুধু বিরতি। Three inside up-এ তৃতীয় candle mother-এর open পার হয়ে harami নিশ্চিত করে।
+
+**২.** না। এটা harami-র আংশিক confirmation। Three inside up-এর জন্য mother-এর open-এর উপরে close লাগে।
+
+**৩.** দ্বিতীয় candle-এ। Three inside up-এ সেটা mother-এর body-র ভেতরে; morning star-এ প্রথম candle-এর close-এর কাছে বা নিচে।
+
+**৪.** প্রথম ঘর (support ছিল না), চতুর্থ ঘর (zone পর্যন্ত প্রায় 1.48R) আর পঞ্চম ঘর (daily zone ঠিক সামনে)।
+
+</details>
+
+## পরের ধাপ
+
+- আগে: [Bullish Harami](/bn/patterns/bullish-harami)।
+- এক ধাপ বড় timeframe কীভাবে দেখবেন: [Multi-Timeframe Entry](/bn/learn/09-price-action-entries-strategies/03-multi-timeframe-entry-top-down)।
+- একই পরিবারের pattern: [Three Inside Down](/bn/patterns/three-inside-down), [Morning Star](/bn/patterns/morning-star), [Bullish Engulfing](/bn/patterns/bullish-engulfing)।
+
+<Disclaimer />

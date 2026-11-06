@@ -1,0 +1,207 @@
+---
+title: "Position Sizing: Work Out the Right Lot Size From Your Stop"
+description: "The position sizing formula, how many lots for a 40-pip stop, why a fixed lot is dangerous, and the steps to change size while keeping risk fixed, with charts and calculations."
+level: beginner
+tags: [risk-management, position-sizing, lot-size, stop-loss]
+instruments: [EURUSD]
+timeframes: [H4]
+status: done
+sources:
+  - type: blog
+    title: "Position Sizing - Investopedia"
+    url: "https://www.investopedia.com/terms/p/positionsizing.asp"
+  - type: blog
+    title: "Position Sizing - BabyPips"
+    url: "https://www.babypips.com/learn/forex/position-sizing"
+updated: 2026-11-06
+---
+
+# Position Sizing: Work Out the Right Lot Size From Your Stop
+
+Same stop, same analysis. One day the loss was 100, another day 400. The difference was not in the stop. It was in the lot. The lot size decides how much a single loss will hurt.
+
+## What you will be able to do
+
+- **Use the position sizing formula yourself** to work out the lot.
+- **Understand how the lot changes** when the stop is larger or smaller.
+- **Explain from a chart** why a fixed lot is dangerous.
+- **Set up the calculation** using your own broker's pip value.
+
+## Why it matters
+
+- **Stop and risk are two separate things.** The stop says where price proves you wrong. The lot says how much money goes when it does.
+- **A fixed lot is hidden risk.** A lot that is safe with a 20-pip stop is three times the risk with a 60-pip stop.
+- **This is math, not feeling.** Once you learn the formula, you do not need to guess.
+
+Prerequisites: [Risk per Trade](/en/learn/08-risk-management/01-risk-per-trade) and [Pips and Lots](/en/learn/01-foundations/03-pips-lots-leverage-margin).
+
+## What is position sizing
+
+**Position sizing means deciding how many lots you can take at a given stop distance without going over your risk limit.**
+
+Think of carrying a load up a staircase. The steeper the path (the bigger the stop), the less you carry at once, so that a fall hurts the same.
+
+Formula:
+
+**Lot = risk amount ÷ (stop in pips × pip value per lot)**
+
+On EURUSD, the pip value for 1 standard lot is about 10 (if the account currency is USD). It is different for other pairs or metals, so check with your broker's calculator.
+
+## What it looks like on a chart
+
+<Chart
+  id="size-wide-stop-01"
+  height={440}
+  caption="EURUSD H4 (educational, imaginary example): buy at 1.0890 on candle 42. Stop 40 pips below (1.0850), target 80 pips above (1.0970). Account 10,000, risk 1% = 100, so the lot is 0.25."
+/>
+
+Calculation: 100 ÷ (40 × 10) = 0.25 lot. If the stop is hit, exactly 100 is lost. With the target 80 pips away, the profit is 200, which is 1:2. The ratio has its own lesson: [Risk:Reward](/en/learn/08-risk-management/03-risk-reward).
+
+## Step by step: working out the lot
+
+<Steps>
+
+### Step 1: Know the risk in money
+
+With an account of 10,000 and risk of 1%, it is 100.
+
+### Step 2: Measure the stop in pips
+
+With entry 1.0890 and stop 1.0850, it is 40 pips. (On EURUSD, 0.0001 = 1 pip.)
+
+### Step 3: Take the pip value
+
+For a standard lot it is about 10 per pip. For a mini lot (0.1) it is 1, for a micro lot (0.01) it is 0.1.
+
+### Step 4: Put it in the formula
+
+100 ÷ (40 × 10) = 0.25 lot.
+
+### Step 5: Round down to your broker's step
+
+If the lot moves in steps of 0.01 and you get 0.256, take 0.25. Never round up.
+
+### Step 6: Check the result
+
+0.25 × 40 × 10 = 100. Check that the risk is within your limit.
+
+</Steps>
+
+## When the stop changes, the lot changes
+
+| Stop (pips) | Lot to keep risk at 100 |
+| :---------- | :---------------------- |
+| 20          | 0.50                    |
+| 40          | 0.25                    |
+| 80          | 0.125 (0.12)            |
+
+**Double the stop, half the lot.** This relationship is most useful when you set the stop with [ATR](/en/learn/07-technical-indicators/04-atr-stop-size).
+
+## Example 1: when it works (synthetic)
+
+The chart above:
+
+- **Set in advance:** risk 100, stop 40 pips, lot 0.25.
+- **Result:** price did not touch the stop. It reached the target at 1.0970. Profit about 200.
+- **Lesson:** the stop was where the structure said it should be, and the lot was worked out to fit it.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Example 2: when it fails (synthetic)
+
+Same entry, same stop. But the trader always takes 1 lot out of habit.
+
+<Chart
+  id="size-fixed-lot-loss-01"
+  height={440}
+  caption="EURUSD H4 (educational, imaginary example): same buy at 1.0890, stop 1.0850, but 1 lot. The stop is hit on candle 49 and the loss is 400 (4%)."
+/>
+
+- **What was visible:** same setup, same stop. Whether the analysis is right or wrong, the risk is different if the stop is hit.
+- **Result:** 40 pips × 10 × 1 = 400, which is 4%. Four times the plan.
+- **Why it was wrong:** the lot was chosen without looking at the stop distance.
+- **Lesson:** whatever the stop distance, the lot must change to match it.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Common mistakes
+
+| Mistake                                  | Why it happens               | What to do                                    |
+| :--------------------------------------- | :--------------------------- | :-------------------------------------------- |
+| A fixed lot on every trade               | It is easy                   | Calculate with the formula each time          |
+| Rounding the lot up                      | The difference seems small   | Always round down                             |
+| Getting the pip value wrong              | Assuming all pairs are alike | Use your broker's calculator                  |
+| Ignoring the spread                      | It seems small               | Add the spread to the stop in the calculation |
+| Pulling the stop closer to raise the lot | Greed for more profit        | Keep the stop where the structure says        |
+
+## Pro tips
+
+<Callout type="tip">
+  Build a small spreadsheet: give it the risk in money and the stop in pips and
+  it returns the lot. It is faster and has fewer mistakes than working it out by
+  hand before every entry.
+</Callout>
+
+<Callout type="warning">
+  Gold (XAUUSD), indices and crypto have different contract sizes. Do not take a
+  lot without knowing the pip or point value. First check the profit and loss of
+  1 lot on a demo account.
+</Callout>
+
+## When this does not work
+
+- **With slippage or a gap:** there is no guarantee of exiting exactly at the stop, and the loss can be bigger than the formula says.
+- **With a very small account:** even the minimum lot can give more risk than your limit. Then skipping the trade is right.
+- **When the pip value changes:** if the account currency and the pair's currency differ, the value changes with the rate.
+
+## Summary
+
+<KeyTakeaways>
+
+- Lot = risk amount ÷ (stop in pips × pip value).
+- Double the stop, half the lot, same risk.
+- A fixed lot does not give the same risk at every stop.
+- Always round the calculation down.
+
+</KeyTakeaways>
+
+## Practice
+
+Take an account of 5,000 and risk of 1%. On EURUSD, work out the lot for stops of 25, 50 and 100 pips. Then on a demo account, try any one of them and see exactly how much is lost if the stop is hit.
+
+## Quiz
+
+1. Risk is 50, stop is 25 pips, pip value is 10. What is the lot?
+2. If the stop goes from 20 to 40 pips, what do you do to the lot?
+3. With 1 lot and a 40-pip stop, what is the loss?
+4. If the lot comes out at 0.256, what do you take?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** 50 ÷ (25 × 10) = 0.2 lot.
+
+**2.** Cut it in half.
+
+**3.** 40 × 10 × 1 = 400.
+
+**4.** 0.25, rounding down.
+
+</details>
+
+## Next steps
+
+- Before: [Risk per Trade](/en/learn/08-risk-management/01-risk-per-trade).
+- After: [Risk:Reward](/en/learn/08-risk-management/03-risk-reward).
+- Where to place the stop: [Stop Loss Placement](/en/learn/10-trade-management-execution/01-stop-loss-placement).
+
+### Sources
+
+- <ExternalLink href="https://www.investopedia.com/terms/p/positionsizing.asp">
+    Position Sizing, Investopedia
+  </ExternalLink>
+- <ExternalLink href="https://www.babypips.com/learn/forex/position-sizing">
+    Position Sizing, BabyPips
+  </ExternalLink>
+
+<Disclaimer />

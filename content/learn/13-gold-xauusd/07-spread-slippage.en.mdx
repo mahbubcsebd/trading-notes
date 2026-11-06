@@ -1,0 +1,175 @@
+---
+title: "Spread and Slippage in Gold: Counting the Hidden Cost"
+description: "What spread and slippage are in gold, when they rise, and how to count the cost before entry, with two slippage charts."
+level: beginner
+tags: [gold, spread, slippage, execution, cost]
+instruments: [XAUUSD]
+timeframes: [M5]
+status: done
+sources:
+  - type: blog
+    title: "Slippage - Investopedia"
+    url: "https://www.investopedia.com/terms/s/slippage.asp"
+updated: 2026-11-06
+---
+
+# Spread and Slippage in Gold: Counting the Hidden Cost
+
+The moment you open a trade, the account is a little red. But no loss has happened? That is the spread. And the stop closed at an unexpected price? That is slippage. Both can be big in gold.
+
+## What you will be able to do
+
+- **Say the difference** between spread and slippage.
+- **Recognize when they rise.**
+- **Count the cost** in the calculation of the stop and target.
+
+## Why it matters
+
+- **The price of gold is large, so the dollar amount of the spread is large too.**
+- **On a small stop the cost is huge in proportion.** The spread can eat a big part of the stop.
+- **It rises on news and in low liquidity.** Directly linked to [News Events](/en/learn/13-gold-xauusd/06-news-events).
+
+Prerequisites: [Slippage and Execution](/en/learn/10-trade-management-execution/04-slippage-requote-spread-widening).
+
+## What are spread and slippage
+
+**The spread is the difference between the buy (ask) and sell (bid) prices, counted as a cost as soon as the trade opens. Slippage is the difference between the price you asked for and the price you actually got.**
+
+Think of a currency exchange counter. The buying price is higher and the selling price is lower. The gap in between is the shopkeeper's income. The moment you open a trade, you are on one side of that gap.
+
+| Item     | What                                        | When it is larger                         |
+| :------- | :------------------------------------------ | :---------------------------------------- |
+| Spread   | The difference between ask and bid          | News, the end of a session, low liquidity |
+| Slippage | The gap between the asked and the got price | Fast market, news, stop orders            |
+
+## What it looks like on a chart
+
+<Chart
+  id="slippage-news-loss-01"
+  height={420}
+  caption="Imaginary EURUSD: stop 1.0870, the news candle jumps past it and fills at about 1.0842. The loss is about 58 pips instead of 30."
+/>
+
+<Chart
+  id="slippage-limit-entry-01"
+  height={420}
+  caption="Imaginary EURUSD: a limit order on the 1.0905 retest. The risk is 30 pips instead of 57."
+/>
+
+(These two charts are the forex examples from the earlier chapter. The idea is the same in gold, but the dollar amounts are bigger.)
+
+## Step by step: counting the cost
+
+<Steps>
+
+### Step 1: Write your broker's usual spread
+
+How much in a quiet time and how much in a busy time: two numbers.
+
+### Step 2: Compare it with the stop
+
+If the spread is a big part of the stop (for example 20% or more), the cost of the trade is high.
+
+### Step 3: Avoid news times or use a limit
+
+A market order fills at a bad price during news. A limit order controls the price, but gives no certainty of being filled.
+
+### Step 4: Leave room for slippage in the risk
+
+Plan allowing for small slippage. On news it can be more than that.
+
+</Steps>
+
+## Example 1: when it works (synthetic)
+
+- **Set in advance:** spread an imaginary $0.30, stop $6.
+- **Calculation:** the spread is 5% of the stop, acceptable.
+- **Result:** the trade runs by the rules, and the cost is within the calculation.
+- **Lesson:** if you know the cost first, the stop and target are realistic.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Example 2: when it fails (synthetic)
+
+- **Set in advance:** spread an imaginary $0.30, stop only $1.5.
+- **Calculation:** the spread is 20% of the stop. In a busy time, when the spread grows, even more.
+- **What happened:** right at entry about one-fifth of the risk is cost. A small move hit the stop.
+- **Why it failed:** the cost was far too big in proportion to the stop.
+- **Lesson:** on a very small stop the cost eats it. Set the size of the stop from ATR.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Common mistakes
+
+| Mistake                         | Why it happens           | What to do                          |
+| :------------------------------ | :----------------------- | :---------------------------------- |
+| Ignoring the spread             | The advertised "low"     | Measure it on your own platform     |
+| A market order on news          | Hurry                    | Stay out, or enter on the retest    |
+| A very small stop               | The illusion of low risk | Check the spread ratio              |
+| Trading at the end of a session | Seeing it as a chance    | Liquidity is low, the spread is big |
+
+## Pro tips
+
+<Callout type="tip">
+  Write down the spread for a week: morning, noon, night. If you know your own
+  broker's average and maximum, the cost will not surprise you.
+</Callout>
+
+<Callout type="warning">
+  A low spread is not always good. At some brokers the spread is low but there
+  is a commission. Compare the total cost.
+</Callout>
+
+## When this does not work
+
+- **By broker type:** fixed or variable spreads behave differently.
+- **On a very big position:** extra slippage because of size.
+- **When the market opens after being closed:** with a gap, the stop may not work.
+
+## Summary
+
+<KeyTakeaways>
+
+- Spread is the cost at the moment of entry, and slippage is the gap between asked and got price.
+- Both rise on news and in low liquidity.
+- When the stop is small, the share of the spread is big.
+- Count the cost before the trade.
+
+</KeyTakeaways>
+
+## Practice
+
+On your broker, write the XAUUSD spread at three different times: quiet, London open, and during some news. For each, work out what percent it is of a $5 stop.
+
+## Quiz
+
+1. What is the difference between spread and slippage?
+2. When does the spread rise?
+3. What is the problem with the spread on a very small stop?
+4. What does a limit order give, and what does it not give?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** Spread is the ask-bid gap. Slippage is the gap between the asked and the got price.
+
+**2.** On news, in low liquidity and at the end of a session.
+
+**3.** A big part of the stop goes just to the cost.
+
+**4.** It gives control of the price, and does not give certainty of being filled.
+
+</details>
+
+## Next steps
+
+- Before: [News Events](/en/learn/13-gold-xauusd/06-news-events).
+- After: [Gold Risk and Lot Size](/en/learn/13-gold-xauusd/08-gold-risk-lot-size).
+
+### Sources
+
+- <ExternalLink href="https://www.investopedia.com/terms/s/slippage.asp">
+    Slippage, Investopedia
+  </ExternalLink>
+
+<Disclaimer />

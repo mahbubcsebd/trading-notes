@@ -1,42 +1,279 @@
 ---
-title: "থ্রি ব্ল্যাক ক্রোজ (Three Black Crows)"
-description: "৩টি শক্তিশালী দীর্ঘ বিয়ারিশ ক্যান্ডেলের সমন্বয়ে গঠিত প্যাটার্ন যা শক্তিশালী ডাউনট্রেন্ড বা রিভার্সাল নির্দেশ করে।"
+title: "Three Black Crows: পরপর তিনটি শক্তিশালী লাল candle, sellers-এর দখল"
+description: "Three black crows কীভাবে চিনবেন, three white soldiers-এর উল্টো ছবি, কেন চূড়া থেকে এলে শক্ত আর লম্বা পতনের শেষে প্রায়ই দেরি, pullback entry, stop ও target — chart সহ।"
 type: bearish
-category: "থ্রি ব্ল্যাক ক্রোজ"
-winrate: "73% - 77%"
-riskReward: "1:2.5 to 1:4"
-maxRisk: "1%"
-bestLocation: "Breakdown from Distribution / Supply Zone Reversal"
-chartId: "three-black-crows-01"
-tags: [bearish, pattern, candlestick]
+category: three-candle
+level: intermediate
+candleCount: 3
+signal: reversal
+chartId: three-black-crows-win-01
+tags: [pattern, candlestick, three-black-crows, three-candle, momentum]
+status: done
+sources:
+  - type: book
+    title: "Japanese Candlestick Charting Techniques - Steve Nison"
+    note: "Three black crows, লম্বা পতনের পর oversold সতর্কতা"
+  - type: blog
+    title: "Three Black Crows - Investopedia"
+    url: "https://www.investopedia.com/terms/t/three_black_crows.asp"
+updated: 2026-11-06
 ---
 
-<div className="flex gap-6 items-end my-8 p-8 bg-zinc-950 border border-border/50 rounded-2xl w-max relative overflow-hidden">
-  <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:20px_20px]"></div>
-  <div className="relative z-10 flex gap-6">
-    <Candle color="bear" bodyH="h-14" topW="h-2" botW="h-2" offset="mt-2" />
-    <Candle color="bear" bodyH="h-12" topW="h-2" botW="h-2" offset="mt-8" />
-    <Candle color="bear" bodyH="h-10" topW="h-2" botW="h-2" offset="mt-14" />
-  </div>
-</div>
+দশ দিন ধরে দাম নামছে, তারপর আরও তিনটি বড় লাল দিন। "Three black crows, আরও নামবে!" Short নিলেন ঠিক যেখানে সবাই নিচ্ছে। পরের দিনই দাম লাফিয়ে উঠল, কারণ যারা অনেক আগে short নিয়েছিল তারা profit তুলছিল। একই তিনটি crow চূড়ায় এলে শুরু, লম্বা পতনের শেষে এলে প্রায়ই শেষ। এই পাতা [Three White Soldiers](/bn/patterns/three-white-soldiers)-এর mirror; নিয়ম আর entry-র বিস্তারিত সেখানে।
 
-## Market Psychology & প্রাতিষ্ঠানিক অর্ডার ফ্লো
-প্রাতিষ্ঠানিক সেলারদের অপ্রতিরোধ্য ডাউনওয়ার্ড প্রেশার। পরপর ৩টি দীর্ঘ লাল ক্যান্ডেল যা পূর্ববর্তী ক্যান্ডেলের বডির ভেতর শুরু হয়ে নতুন লো তৈরি করে লো এর কাছাকাছি ক্লোজ হয়। বায়ারদের কোনো সাপোর্ট অবশিষ্ট না থাকায় এটি তীব্র মার্কেট পতনের সংকেত দেয়।
+## এক নজরে
 
-## ক্যান্ডেল অ্যানাটমির ৫টি অপরিহার্য শর্ত
-1. **Three Consecutive Red Bars:** পরপর ৩টি স্পষ্ট লাল ক্যান্ডেল গঠিত হতে হবে।
-2. **Lower Closes:** প্রতিটি ক্যান্ডেল পূর্ববর্তী ক্যান্ডেলের লো এর চেয়ে নিচে ক্লোজ হতে হবে।
-3. **Open Within Previous Body:** প্রতিটি ক্যান্ডেল আগের ক্যান্ডেলের বডির ভেতর ওপেন হতে হবে।
-4. **Minimal Lower Shadows:** নিচের দিকে কোনো উইক থাকবে না বা খুব ক্ষুদ্র উইক থাকবে (ফুল বডি)।
-5. **Heavy Volume:** সেলিং ভলিউম ধারাবাহিকভাবে বৃদ্ধি পেতে হবে।
+| বিষয়                | Three Black Crows                                                                                                    |
+| :------------------- | :------------------------------------------------------------------------------------------------------------------- |
+| ধরন                  | Bearish reversal বা breakdown momentum, তিন candle                                                                   |
+| কোথায় খুঁজবেন       | Uptrend-এর চূড়ায় বা উপরের range ভাঙার মুহূর্তে                                                                     |
+| চেনার মূল চিহ্ন      | তিনটি লম্বা bearish candle, প্রতিটি আগের body-র ভেতরে বা close-এ open, low-এর কাছে close, প্রতিটি close আগেরটার নিচে |
+| Confirmation         | তিনটি candle-ই confirmation; পরে pullback ভাঙা level-এর নিচে থাকা                                                    |
+| Stop                 | দ্বিতীয় crow-এর open-এর উপরে (মাঝারি) বা প্রথম crow-এর high-এর উপরে (রক্ষণশীল)                                      |
+| বাতিল (invalidation) | দ্বিতীয় crow-এর open-এর উপরে close                                                                                  |
+| দেখতে একই রকম        | Identical three crows, [Bearish Engulfing](/bn/patterns/bearish-engulfing)-এর সারি                                   |
+| বিপরীত pattern       | Three White Soldiers                                                                                                 |
 
-## লাভজনক ট্রেড নেওয়ার ৩টি প্রমাণিত কৌশল (Execution Blueprint)
-**কৌশল ১ (ফার্স্ট রিটেস্ট সেল এন্ট্রি - সেরা পছন্দ):** ৩টি ক্যান্ডেল শেষ হওয়ার পর ছোট পুলব্যাকে ক্যান্ডেল ৩ এর ৫০% রিট্রেসমেন্টে Sell Limit বসান।
-**কৌশল ২ (লো ব্রেকআউট সেল):** ক্যান্ডেল ৩ এর লো পার হলে Sell Stop দিয়ে এন্ট্রি নিন।
-**কৌশল ৩ (M15 সাপ্লাই জোন রিটেস্ট):** H4 এ প্যাটার্ন দেখে M15 এ শিফট করে M15 বেয়ারিশ অর্ডার ব্লকে সেল দিন।
+## এই লেখা পড়ে আপনি যা পারবেন
 
-## কোথায় সফল হবে বনাম কোথায় ফাঁদে পড়বেন
-- ✅ **A+ হাই-প্রোবাবিলিটি সেটআপ:** ডিস্ট্রিবিউশন রেঞ্জ ব্রেকডাউন, ডেইলি রেজিস্ট্যান্স রিজেকশন, এবং হাই ভলিউম সেল প্রেসার।
-- ❌ **লস খাওয়ার ট্র্যাপ (Avoid):** ইতিমধ্যে দীর্ঘ ডাউনট্রেন্ডের পর ওভারসোল্ড সাপোর্টে পৌঁছালে।
+- চূড়া থেকে আসা crows আর **লম্বা পতনের শেষের crows** আলাদা করতে পারবেন।
+- তৃতীয় close-এ তাড়া না করে **pullback-এ sell** বসাতে পারবেন।
+- নিচের বড় support **আগেই মেপে** trade বাদ দিতে পারবেন।
 
-> ⚠️ **প্রো মানি ম্যানেজমেন্ট ও সাইকোলজি টিপ:** ৩ নম্বর ক্যান্ডেলের নিচে চেজ করে সেল না দিয়ে সবসময় প্রথম পুলব্যাকে সেল দেওয়াই প্রফেশনাল অ্যাপ্রোচ। সর্বোচ্চ ১% থেকে ২% ঝুঁকি নিয়ে প্রতিটি ট্রেডে নির্ধারিত স্টপ লস ব্যবহার করুন।
+## কেন জরুরি
+
+- **চূড়া থেকে sellers-এর দখলের পরিষ্কার ছবি।** তিন session ধরে sellers নিয়ন্ত্রণে, প্রতিবার আরও নিচে close।
+- **দেরিতে এলে উল্টো অর্থ।** Nison সতর্ক করেছেন: লম্বা পতনের পর crows মানে বাজার oversold হতে পারে। শেষের দিকে নতুন seller কম, আর profit নেওয়া short অনেক।
+- **Soldiers-এর মতোই তাড়ার প্রলোভন।** তিন বড় লাল candle-এর পর দাম অনেকটা নেমে গেছে; সেখানে ঢুকলে stop বিশাল।
+
+পূর্বশর্ত: Three White Soldiers পাতা (উপরে link) আর [Trend Continuation vs Reversal](/bn/learn/09-price-action-entries-strategies/02-trend-continuation-vs-reversal)।
+
+## Three Black Crows কী
+
+**Three black crows হলো পরপর তিনটি লম্বা bearish candle, যাদের প্রতিটি আগের body-র ভেতরে বা close-এ open করে, নিজের low-এর কাছে close করে, আর প্রতিটির close আগেরটার চেয়ে নিচু।** গাছের ডালে বসা তিনটি কাক, অশুভের প্রতীক।
+
+<CandleDiagram
+  title="চূড়া থেকে three black crows"
+  candles={[
+    { o: 40, h: 46, l: 39, c: 45, dim: true },
+    { o: 45, h: 51, l: 44, c: 50, dim: true },
+    { o: 50, h: 52, l: 48, c: 51, dim: true },
+    { o: 51, h: 51.5, l: 43, c: 43.5, label: "১" },
+    { o: 43.5, h: 44, l: 35.5, c: 36, label: "২" },
+    { o: 36, h: 36.5, l: 28.5, c: 29, label: "৩" },
+  ]}
+  caption="Rally-র মাথায় থেমে যাওয়ার পর তিনটি সমান বড় লাল candle, প্রতিটি আগের close-এ open করে low-এর কাছে close।"
+/>
+
+### চেনার নিয়ম
+
+| নিয়ম                                               | বাধ্যতামূলক?          | কেন                                     |
+| :-------------------------------------------------- | :-------------------- | :-------------------------------------- |
+| পরপর তিনটি লম্বা bearish candle, প্রতিটি নিচে close | হ্যাঁ                 | ধারাবাহিক পতন                           |
+| প্রতিটি low-এর কাছে close (lower wick ছোট)          | হ্যাঁ                 | লম্বা lower wick মানে নিচে buyers       |
+| Body ছোট হয়ে আসছে না                               | হ্যাঁ                 | ছোট হলে sellers ক্লান্ত                 |
+| আগে uptrend বা উপরের range, আর একটি level ভাঙা      | হ্যাঁ                 | লম্বা পতনের শেষে একই আকার প্রায়ই দেরি  |
+| নিচে বড় support অন্তত 1.5R দূরে                    | না (কিন্তু খুব জরুরি) | ঠিক support-এ নামা crows bounce-এর মুখে |
+
+## শক্তিশালী বনাম দুর্বল three black crows
+
+<DiagramRow>
+  <CandleDiagram
+    title="শক্তিশালী"
+    verdict="good"
+    verdictLabel="trade-যোগ্য"
+    candles={[
+      { o: 58, h: 60, l: 57, c: 59, dim: true },
+      { o: 59, h: 60.5, l: 57.5, c: 58, dim: true },
+      { o: 58, h: 58.5, l: 50.5, c: 51 },
+      { o: 51, h: 51.5, l: 43.5, c: 44 },
+      { o: 44, h: 44.5, l: 36.5, c: 37, label: "range থেকে" },
+    ]}
+    levels={[{ price: 56, label: "range floor", tone: "support" }]}
+    caption="উপরের সমতল range-এর তলা ভেঙে তিনটি সমান বড় লাল candle।"
+  />
+  <CandleDiagram
+    title="দুর্বল"
+    verdict="bad"
+    verdictLabel="এড়িয়ে চলুন"
+    candles={[
+      { o: 80, h: 81, l: 72, c: 73, dim: true },
+      { o: 73, h: 74, l: 65, c: 66, dim: true },
+      { o: 66, h: 67, l: 59, c: 60 },
+      { o: 60, h: 61, l: 53, c: 54 },
+      { o: 54, h: 55, l: 47.5, c: 48, label: "support-এ" },
+    ]}
+    levels={[{ price: 47, label: "বড় support", tone: "support" }]}
+    caption="ইতিমধ্যে লম্বা পতন, তৃতীয় crow ঠিক বড় support-এ। নিচে জায়গা নেই।"
+  />
+</DiagramRow>
+
+| মান যাচাই   | শক্তিশালী                       | দুর্বল                                  |
+| :---------- | :------------------------------ | :-------------------------------------- |
+| আগে কী ছিল  | Uptrend বা উপরের range          | ইতিমধ্যে লম্বা, খাড়া পতন               |
+| জায়গা      | Range floor বা support ভেঙে     | ঠিক বড় support-এর গায়ে                |
+| Body        | তিনটি প্রায় সমান               | ক্রমশ ছোট, বা তৃতীয়টার নিচে লম্বা wick |
+| নিচে জায়গা | পরের support পর্যন্ত অন্তত 1.5R | Support 1R-এর মধ্যে বা ঠিক নিচে         |
+
+## Candle-এর ভেতরের গল্প
+
+Soldiers-এর গল্পই উল্টো দিকে। একটি প্রচলিত ব্যাখ্যা: চূড়ায় buyers থেমে গেছে, তারপর তিন session ধরে sellers প্রতিবার আরও নিচে close করে, buyers একবারও দাম ফেরাতে পারে না। কিন্তু লম্বা পতনের শেষে একই তিন candle প্রায়ই শেষ মুহূর্তের ভয়ে বিক্রি আর late seller-দের প্রবেশ। তখন যারা আগে short নিয়েছিল, তাদের profit নেওয়াই পরের bounce তৈরি করে।
+
+<Callout type="note">
+  এটি একটি প্রচলিত ব্যাখ্যা, প্রমাণিত ঘটনা নয়। Chart দেখে কে কিনেছে বা বেচেছে,
+  তা জানা যায় না।
+</Callout>
+
+## কোথায় কাজ করে, কোথায় করে না
+
+<Compare
+  leftLabel="যেখানে three black crows-এর ওজন বেশি"
+  rightLabel="যেখানে crows প্রায়ই দেরি"
+  left="- Uptrend-এর চূড়ায় বা উপরের সমতল range থেকে
+- Range floor বা support ভেঙে
+- তিনটি body প্রায় সমান, lower wick ছোট
+- নিচে পরের support পর্যন্ত খোলা জায়গা"
+  right="- ইতিমধ্যে লম্বা, খাড়া পতনের পর
+- তৃতীয় crow ঠিক বড় support-এ নামলে
+- Body ছোট হতে থাকলে বা lower wick বড় হলে
+- তৃতীয় close-এ তাড়াহুড়ো sell"
+/>
+
+## ধাপে ধাপে: three black crows trade
+
+পুরো ধাপ Three White Soldiers পাতায় আছে, উল্টো দিকে। শুধু যা আলাদা:
+
+<Steps>
+
+### ধাপ ১: পতনের বয়স মাপুন
+
+Crows-এর আগে দাম কত candle ধরে, কতটা নেমেছে? ইতিমধ্যে লম্বা পতন হলে সাবধান। নিচের বড় support (D1 বা weekly) কত দূরে, লিখুন।
+
+### ধাপ ২: Entry ও stop
+
+তৃতীয় body-র 50%-এ sell limit, বা ভাঙা level-এর retest-এ। Stop দ্বিতীয় crow-এর open-এর উপরে, [spread](/bn/learn/01-foundations/04-spread-commission-swap)-সহ।
+
+### ধাপ ৩: R:R
+
+নিচের সবচেয়ে কাছের support পর্যন্ত [risk reward](/bn/learn/08-risk-management/03-risk-reward) অন্তত 1:1.5 না হলে বাদ।
+
+</Steps>
+
+### Trade-এর আগে checklist
+
+<Checklist
+  id="pattern-three-black-crows-pretrade-bn"
+  items={[
+    "আগে uptrend বা উপরের range ছিল (লম্বা পতন নয়), আর crows একটি level ভেঙেছে?",
+    "আকার নিয়ম মানছে (তিনটি লম্বা লাল, ছোট lower wick, body ছোট হচ্ছে না)?",
+    "তিনটি candle-ই বন্ধ হয়েছে, আর entry তাড়া না করে pullback-এ?",
+    "নিচের সবচেয়ে কাছের support পর্যন্ত risk reward অন্তত 1:1.5?",
+    "Higher timeframe-এর বড় support ঠিক নিচে নেই?",
+  ]}
+/>
+
+একটি ঘরও খালি থাকলে trade বাদ দিন।
+
+## উদাহরণ ১: যখন কাজ করে (কাল্পনিক)
+
+<Chart
+  id="three-black-crows-win-01"
+  height={420}
+  caption="EURUSD H1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — উপরের সমতল range থেকে three black crows, তৃতীয় body-র 50% pullback-এ short।"
+/>
+
+- **কী দেখা যাচ্ছিল:** ০-৩ নম্বর candle rally, ৪-১১ নম্বর প্রায় 1.0861-এর floor-এর উপরে সমতল range।
+- **Crows:** ১২ নম্বর 1.0871 থেকে 1.0843, ১৩ নম্বর 1.0843 থেকে 1.0810, ১৪ নম্বর 1.0810 থেকে 1.0779। Body 28, 33, 31 pip, lower wick মাত্র 2 pip।
+- **সিদ্ধান্ত:** Sell limit 1.07945 (তৃতীয় body-র 50%)। Stop 1.0847 (দ্বিতীয় crow-এর open-এর উপরে), ঝুঁকি প্রায় 52 pip। Target 1.06895 (2R)।
+- **ফল:** ১৫ নম্বর থামে, ১৬ নম্বর 1.07945 ছুঁয়ে order fill করে। ২৬ নম্বর candle target ছোঁয়।
+- **শিক্ষা:** চূড়া থেকে, range ভেঙে, সমান শক্তির crows, আর pullback-এ entry।
+
+<TradeSetup
+  direction="short"
+  pair="EURUSD"
+  entry={1.07945}
+  stop={1.0847}
+  target={1.06895}
+/>
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়। সব three black crows-এর পর পতন চলে না, আর কোনো ফল গ্যারান্টি নয়।)
+
+## উদাহরণ ২: যখন ফাঁদ হয় (কাল্পনিক)
+
+<Chart
+  id="three-black-crows-fail-01"
+  height={420}
+  caption="USDJPY D1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — লম্বা পতনের শেষে, বড় support-এ three black crows। তৃতীয় close-এ sell, তারপর bounce-এ stop।"
+/>
+
+- **কী দেখা যাচ্ছিল:** ০-৯ নম্বর candle 152.00 থেকে 148.87 পর্যন্ত লম্বা, খাড়া পতন। নিচে প্রায় 147.74-এ একটি পুরোনো weekly support (chart-এর বাইরের ইতিহাস থেকে চিহ্নিত)।
+- **Crows:** ১০ নম্বর 148.87 থেকে 148.57, ১১ নম্বর 148.57 থেকে 148.25, ১২ নম্বর 148.25 থেকে 147.802, low ঠিক support-এর গায়ে।
+- **ভুল সিদ্ধান্ত:** "তিনটি crow, আরও নামবে।" তৃতীয় close-এ sell 147.802, stop 148.62, ঝুঁকি 82 pip, target 146.166, support-এর অনেক নিচে।
+- **কী হলো:** ১৩ নম্বর support থেকে জোরে ওঠে, ১৫ নম্বর stop ভাঙে।
+- **কেন ব্যর্থ:** Crows দেরিতে এসেছিল (লম্বা পতনের শেষে), আর ঠিক বড় support-এ। Checklist-এর প্রথম, তৃতীয়, চতুর্থ আর পঞ্চম ঘরে trade বাদ পড়ত।
+
+**শিক্ষা:** দেরিতে, support-এ আসা crows প্রায়ই পতনের শেষ চিহ্ন। Stop আগে বসানো ছিল বলে লোকসান 1R-এ আটকেছে।
+
+## সাধারণ ভুল
+
+| ভুল                            | কেন হয়                   | কী করবেন                                |
+| :----------------------------- | :------------------------ | :-------------------------------------- |
+| লম্বা পতনের শেষে crows-এ sell  | "Momentum চলছে" ভাবা      | Crows-এর আগে কতটা নেমেছে, মাপুন         |
+| তৃতীয় close-এ তাড়াহুড়ো sell | মিস করার ভয়              | তৃতীয় body-র 50% বা ভাঙা level-এ limit |
+| নিচের weekly support না দেখা   | শুধু নিজের timeframe দেখা | Trade-এর আগে D1 আর weekly chart দেখুন   |
+| Stop তৃতীয় candle-এর high-এ   | ছোট stop-এর লোভ           | দ্বিতীয় crow-এর open-এর উপরে           |
+
+## Pro tips
+
+<Callout type="tip">
+  তৃতীয় crow-এর নিচে লম্বা lower wick থাকলে, বা তৃতীয়টা আগের দুটোর চেয়ে অনেক
+  ছোট হলে, সেটা soldiers-এর advance block-এর উল্টো রূপ: sellers ক্লান্ত। চলমান
+  short থাকলে profit রক্ষার কথা ভাবুন।
+</Callout>
+
+<Callout type="tip">
+  Higher timeframe-এ দেখুন: H1-এর তিনটি crow D1-এ প্রায়ই একটি বড় লাল candle।
+  D1-এর সেই candle কোথায় বসেছে, support-এর মাঝখানে না উপরে, সেটাই আসল
+  প্রেক্ষাপট। বিস্তারিত: [Multi-Timeframe
+  Analysis](/bn/learn/03-market-structure/05-multi-timeframe-analysis)।
+</Callout>
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- Three black crows = পরপর তিনটি লম্বা লাল candle, প্রতিটি নিচে close, low-এর কাছে, lower wick ছোট।
+- চূড়া বা উপরের range থেকে এলে শক্ত; লম্বা পতনের শেষে, বড় support-এ এলে প্রায়ই দেরি।
+- তৃতীয় close-এ তাড়া নয়: তৃতীয় body-র 50% বা ভাঙা level-এ entry, stop দ্বিতীয় crow-এর open-এর উপরে।
+- নিচের D1 আর weekly support trade-এর আগেই মাপুন।
+
+</KeyTakeaways>
+
+## অনুশীলন ও নিজের backtest
+
+TradingView-এ EURUSD H1 বা USDJPY D1 খুলুন। অন্তত ২০টি তিন-লাল-candle-এর সারি খুঁজুন। প্রতিটির জন্য লিখুন: তারিখ, আগে কত candle ধরে পতন চলছিল, নিচের বড় support পর্যন্ত কত R, 50% retest এসেছে কি না, ফল (R)। এরপর "চূড়া থেকে" আর "লম্বা পতনের শেষে" দুই দলে ভাগ করে গড় R তুলনা করুন। অন্তত ৩০টি নমুনা ছাড়া সিদ্ধান্ত নেবেন না।
+
+## কুইজ
+
+1. একই three black crows কখন শুরুর আর কখন শেষের চিহ্ন হতে পারে?
+2. তৃতীয় crow ঠিক weekly support-এ close করল। কী করবেন?
+3. Crows-এর stop কোথায় বসাবেন?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** চূড়া বা উপরের range ভেঙে এলে শুরুর চিহ্ন। লম্বা, খাড়া পতনের শেষে, বিশেষ করে বড় support-এ এলে প্রায়ই শেষ।
+
+**২.** Short বাদ। নিচে জায়গা নেই, আর bounce-এর ঝুঁকি বেশি।
+
+**৩.** দ্বিতীয় crow-এর open-এর উপরে (মাঝারি), বা প্রথম crow-এর high-এর উপরে (রক্ষণশীল), spread-সহ।
+
+</details>
+
+## পরের ধাপ
+
+- পুরো walk-through: [Three White Soldiers](/bn/patterns/three-white-soldiers)।
+- কখন trend শেষ হচ্ছে: [Trend Continuation vs Reversal lesson](/bn/learn/09-price-action-entries-strategies/02-trend-continuation-vs-reversal)।
+- একই পরিবারের pattern: [Evening Star](/bn/patterns/evening-star), [Bearish Engulfing](/bn/patterns/bearish-engulfing), [Falling Three Methods](/bn/patterns/falling-three-methods)।
+
+<Disclaimer />

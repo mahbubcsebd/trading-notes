@@ -1,17 +1,11 @@
 {
   "compilerOptions": {
     "paths": {
-      "@/*": [
-        "./*"
-      ]
+      "@/*": ["./*"]
     },
     "strict": false,
     "target": "ES2017",
-    "lib": [
-      "dom",
-      "dom.iterable",
-      "es2024"
-    ],
+    "lib": ["dom", "dom.iterable", "es2024"],
     "allowJs": true,
     "skipLibCheck": true,
     "noEmit": true,
@@ -37,7 +31,5 @@
     "**/*.ts",
     "**/*.tsx"
   ],
-  "exclude": [
-    "node_modules"
-  ]
+  "exclude": ["node_modules", "tradenotes"]
 }

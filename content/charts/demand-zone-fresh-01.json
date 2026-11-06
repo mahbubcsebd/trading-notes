@@ -1,0 +1,230 @@
+{
+  "symbol": "EURUSD",
+  "timeframe": "H4",
+  "mode": "synthetic",
+  "module": "05-support-resistance",
+  "lessonSlugs": [
+    "03-supply-demand"
+  ],
+  "notes": {
+    "en": "Illustrative synthetic data.",
+    "bn": "এটি শিক্ষামূলক কাল্পনিক ডেটা।"
+  },
+  "updatedAt": "2026-11-05T19:00:00Z",
+  "type": "trade-setup",
+  "id": "demand-zone-fresh-01",
+  "title": {
+    "en": "Fresh Demand Zone Holds",
+    "bn": "Fresh demand zone টিকে গেল"
+  },
+  "bias": "bullish",
+  "outcome": "win",
+  "tags": [
+    "support-resistance",
+    "demand",
+    "fresh-zone"
+  ],
+  "caption": {
+    "en": "A tight base (candles 3-5) is followed by a strong impulse up. Price returns once, taps the zone with a long lower wick, and rallies.",
+    "bn": "৩-৫ নম্বর candle-এ সরু base, তারপর জোরালো impulse উপরে। দাম একবার ফিরে লম্বা lower wick নিয়ে zone ছুঁয়ে আবার উঠে যায়।"
+  },
+  "annotations": [
+    {
+      "type": "zone",
+      "from": {
+        "price": 1.0782,
+        "i": 3
+      },
+      "to": {
+        "price": 1.0758,
+        "i": 17
+      },
+      "label": "Demand Zone",
+      "color": "#22c55e"
+    },
+    {
+      "type": "marker",
+      "i": 4,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Base"
+    },
+    {
+      "type": "marker",
+      "i": 7,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Impulse"
+    },
+    {
+      "type": "marker",
+      "i": 13,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "First return"
+    },
+    {
+      "type": "hline",
+      "price": 1.0796,
+      "label": "Buy entry",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.0752,
+      "label": "Stop (below zone)",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.0884,
+      "label": "Target",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candles 3-5 form a base at 1.0758-1.0782, then candle 6-8 launch price up 100+ pips without looking back: buyers overwhelmed sellers. Price returns once at candle 13, dips to 1.0764 inside the zone and closes back above. Candle 14 breaks the high, buy at 1.0796, stop 1.0752 (44 pips), target 1.0884 (88 pips, 2R).",
+    "bn": "৩-৫ নম্বর candle 1.0758-1.0782-এ base বানায়, তারপর ৬-৮ নম্বর candle দাম 100+ pip উপরে ছুড়ে দেয়: ক্রেতারা বিক্রেতাদের ছাপিয়ে গেছে। ১৩ নম্বরে দাম প্রথমবার ফিরে zone-এর ভেতরে 1.0764 পর্যন্ত নেমে ওপরে close করে। ১৪ নম্বর high ভাঙে, buy 1.0796-এ, stop 1.0752 (44 pip), target 1.0884 (88 pip, ২R)।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Strong departure from a tight base marks real demand",
+      "bn": "সরু base থেকে জোরালো প্রস্থান আসল demand-এর চিহ্ন"
+    },
+    {
+      "en": "The first return to a zone is the best one",
+      "bn": "Zone-এ প্রথমবার ফেরাই সবচেয়ে ভালো"
+    }
+  ],
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.082,
+      "h": 1.0826,
+      "l": 1.08,
+      "c": 1.0806
+    },
+    {
+      "i": 1,
+      "o": 1.0806,
+      "h": 1.081,
+      "l": 1.0784,
+      "c": 1.079
+    },
+    {
+      "i": 2,
+      "o": 1.079,
+      "h": 1.0794,
+      "l": 1.077,
+      "c": 1.0776
+    },
+    {
+      "i": 3,
+      "o": 1.0776,
+      "h": 1.0782,
+      "l": 1.0762,
+      "c": 1.077
+    },
+    {
+      "i": 4,
+      "o": 1.077,
+      "h": 1.078,
+      "l": 1.0758,
+      "c": 1.0774
+    },
+    {
+      "i": 5,
+      "o": 1.0774,
+      "h": 1.0781,
+      "l": 1.0762,
+      "c": 1.0768
+    },
+    {
+      "i": 6,
+      "o": 1.0768,
+      "h": 1.083,
+      "l": 1.0766,
+      "c": 1.0826
+    },
+    {
+      "i": 7,
+      "o": 1.0826,
+      "h": 1.0875,
+      "l": 1.0822,
+      "c": 1.087
+    },
+    {
+      "i": 8,
+      "o": 1.087,
+      "h": 1.089,
+      "l": 1.0862,
+      "c": 1.0884
+    },
+    {
+      "i": 9,
+      "o": 1.0884,
+      "h": 1.0892,
+      "l": 1.086,
+      "c": 1.0866
+    },
+    {
+      "i": 10,
+      "o": 1.0866,
+      "h": 1.087,
+      "l": 1.0838,
+      "c": 1.0842
+    },
+    {
+      "i": 11,
+      "o": 1.0842,
+      "h": 1.0846,
+      "l": 1.0812,
+      "c": 1.0818
+    },
+    {
+      "i": 12,
+      "o": 1.0818,
+      "h": 1.0822,
+      "l": 1.078,
+      "c": 1.0788
+    },
+    {
+      "i": 13,
+      "o": 1.0788,
+      "h": 1.0796,
+      "l": 1.0764,
+      "c": 1.0792
+    },
+    {
+      "i": 14,
+      "o": 1.0792,
+      "h": 1.083,
+      "l": 1.079,
+      "c": 1.0826
+    },
+    {
+      "i": 15,
+      "o": 1.0826,
+      "h": 1.086,
+      "l": 1.0822,
+      "c": 1.0856
+    },
+    {
+      "i": 16,
+      "o": 1.0856,
+      "h": 1.0888,
+      "l": 1.085,
+      "c": 1.0884
+    },
+    {
+      "i": 17,
+      "o": 1.0884,
+      "h": 1.0912,
+      "l": 1.0878,
+      "c": 1.0908
+    }
+  ]
+}

@@ -1,0 +1,302 @@
+{
+  "id": "three-inside-up-win-01",
+  "title": {
+    "en": "Three Inside Up at Tested Support, Entry at the Third Close",
+    "bn": "পরীক্ষিত support-এ three inside up, তৃতীয় close-এ entry"
+  },
+  "symbol": "XAUUSD",
+  "timeframe": "H1",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bullish",
+  "outcome": "win",
+  "tags": [
+    "three-inside-up",
+    "harami",
+    "candlestick",
+    "three-candle",
+    "support",
+    "pattern"
+  ],
+  "module": "patterns",
+  "lessonSlugs": [],
+  "caption": {
+    "en": "Illustrative synthetic XAUUSD H1: a long bearish candle into a support that held once, a small harami inside it, then a third candle that closes above the first candle's open. Long at the third close, stop under the mother's low; price reaches 2R.",
+    "bn": "শিক্ষামূলক কাল্পনিক XAUUSD H1: আগে একবার ধরে রাখা support-এ একটি লম্বা bearish candle, তার ভেতরে ছোট harami, তারপর তৃতীয় candle প্রথমটার open-এর উপরে close করে। তৃতীয় close-এ long, stop mother-এর low-এর নিচে; দাম 2R পর্যন্ত যায়।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data, not a real market record.",
+    "bn": "শিক্ষামূলক কাল্পনিক ডেটা, বাস্তব মার্কেটের রেকর্ড নয়।"
+  },
+  "updatedAt": "2026-11-06T12:00:00Z",
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 2332.44,
+      "label": "Support",
+      "color": "#3b82f6",
+      "style": "dashed"
+    },
+    {
+      "type": "marker",
+      "i": 16,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Mother"
+    },
+    {
+      "type": "marker",
+      "i": 17,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Harami"
+    },
+    {
+      "type": "marker",
+      "i": 18,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Close above mother open"
+    },
+    {
+      "type": "hline",
+      "price": 2346.94,
+      "label": "Entry (3rd close)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 2331.44,
+      "label": "Stop",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 2377.94,
+      "label": "Target 2R",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candle 4 marks support. Candle 16 is a long bearish mother into it; candle 17 is a small bullish harami inside its body. Candle 18 closes above candle 16's open: the harami has been confirmed, forming three inside up. Long at that close, stop under the mother's low.",
+    "bn": "৪ নম্বর candle support চিহ্নিত করে। ১৬ নম্বর সেখানে লম্বা bearish mother; ১৭ নম্বর তার body-র ভেতরে ছোট bullish harami। ১৮ নম্বর ১৬ নম্বরের open-এর উপরে close করে: harami নিশ্চিত হলো, three inside up। সেই close-এ long, stop mother-এর low-এর নিচে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Three inside up is a harami that has already been confirmed",
+      "bn": "Three inside up হলো ইতিমধ্যে নিশ্চিত হওয়া harami"
+    }
+  ],
+  "entry": 2346.94,
+  "stopLoss": 2331.44,
+  "takeProfit": 2377.94,
+  "rr": "1:2.0",
+  "candles": [
+    {
+      "i": 0,
+      "o": 2360.0,
+      "h": 2364.96,
+      "l": 2350.12,
+      "c": 2355.0
+    },
+    {
+      "i": 1,
+      "o": 2355.0,
+      "h": 2358.59,
+      "l": 2343.77,
+      "c": 2348.0
+    },
+    {
+      "i": 2,
+      "o": 2348.0,
+      "h": 2351.54,
+      "l": 2340.68,
+      "c": 2344.0
+    },
+    {
+      "i": 3,
+      "o": 2344.0,
+      "h": 2347.79,
+      "l": 2333.94,
+      "c": 2338.0
+    },
+    {
+      "i": 4,
+      "o": 2338.0,
+      "h": 2340.0,
+      "l": 2332.44,
+      "c": 2336.44
+    },
+    {
+      "i": 5,
+      "o": 2336.44,
+      "h": 2350.74,
+      "l": 2330.32,
+      "c": 2346.44
+    },
+    {
+      "i": 6,
+      "o": 2346.44,
+      "h": 2365.93,
+      "l": 2337.53,
+      "c": 2358.44
+    },
+    {
+      "i": 7,
+      "o": 2358.44,
+      "h": 2361.37,
+      "l": 2352.0,
+      "c": 2355.44
+    },
+    {
+      "i": 8,
+      "o": 2355.44,
+      "h": 2375.75,
+      "l": 2346.62,
+      "c": 2367.44
+    },
+    {
+      "i": 9,
+      "o": 2367.44,
+      "h": 2383.06,
+      "l": 2362.57,
+      "c": 2377.44
+    },
+    {
+      "i": 10,
+      "o": 2377.44,
+      "h": 2387.5,
+      "l": 2373.72,
+      "c": 2383.44
+    },
+    {
+      "i": 11,
+      "o": 2383.44,
+      "h": 2387.36,
+      "l": 2369.13,
+      "c": 2374.44
+    },
+    {
+      "i": 12,
+      "o": 2374.44,
+      "h": 2379.43,
+      "l": 2356.65,
+      "c": 2363.44
+    },
+    {
+      "i": 13,
+      "o": 2363.44,
+      "h": 2367.49,
+      "l": 2349.27,
+      "c": 2355.44
+    },
+    {
+      "i": 14,
+      "o": 2355.44,
+      "h": 2359.2,
+      "l": 2345.53,
+      "c": 2349.44
+    },
+    {
+      "i": 15,
+      "o": 2349.44,
+      "h": 2350.94,
+      "l": 2343.44,
+      "c": 2344.44
+    },
+    {
+      "i": 16,
+      "o": 2344.44,
+      "h": 2345.44,
+      "l": 2332.94,
+      "c": 2333.94
+    },
+    {
+      "i": 17,
+      "o": 2333.94,
+      "h": 2339.16,
+      "l": 2333.34,
+      "c": 2338.66
+    },
+    {
+      "i": 18,
+      "o": 2338.66,
+      "h": 2347.74,
+      "l": 2338.16,
+      "c": 2346.94
+    },
+    {
+      "i": 19,
+      "o": 2346.94,
+      "h": 2348.94,
+      "l": 2344.44,
+      "c": 2347.94
+    },
+    {
+      "i": 20,
+      "o": 2347.94,
+      "h": 2357.32,
+      "l": 2344.82,
+      "c": 2353.94
+    },
+    {
+      "i": 21,
+      "o": 2353.94,
+      "h": 2356.25,
+      "l": 2349.6,
+      "c": 2351.94
+    },
+    {
+      "i": 22,
+      "o": 2351.94,
+      "h": 2363.04,
+      "l": 2347.83,
+      "c": 2358.94
+    },
+    {
+      "i": 23,
+      "o": 2358.94,
+      "h": 2367.14,
+      "l": 2355.93,
+      "c": 2363.94
+    },
+    {
+      "i": 24,
+      "o": 2363.94,
+      "h": 2366.64,
+      "l": 2359.15,
+      "c": 2361.94
+    },
+    {
+      "i": 25,
+      "o": 2361.94,
+      "h": 2371.5,
+      "l": 2358.38,
+      "c": 2367.94
+    },
+    {
+      "i": 26,
+      "o": 2367.94,
+      "h": 2376.73,
+      "l": 2364.3,
+      "c": 2372.94
+    },
+    {
+      "i": 27,
+      "o": 2372.94,
+      "h": 2379.9,
+      "l": 2370.16,
+      "c": 2376.94
+    },
+    {
+      "i": 28,
+      "o": 2376.94,
+      "h": 2383.14,
+      "l": 2374.23,
+      "c": 2379.94
+    }
+  ]
+}

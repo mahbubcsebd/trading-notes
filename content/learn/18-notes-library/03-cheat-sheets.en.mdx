@@ -1,0 +1,220 @@
+---
+title: "Cheat Sheets: Formulas for Risk, R and Recovery on One Page"
+description: "Formulas and tables for lot size, R-multiple, expectancy, breakeven win rate and drawdown recovery, with short checklist links beside them. Every number can be calculated."
+level: beginner
+tags: [cheat-sheet, formulas, risk, r-multiple, expectancy, drawdown]
+instruments: [ACCOUNT]
+timeframes: [per-trade]
+status: done
+sources:
+  - type: blog
+    title: "Risk-Reward Ratio - Investopedia"
+    url: "https://www.investopedia.com/terms/r/riskrewardratio.asp"
+updated: 2026-11-06
+---
+
+# Cheat Sheets: Formulas for Risk, R and Recovery on One Page
+
+If you have to open a book to look up a formula in the middle of trading, you lose both time and attention. This page is for printing and keeping on the desk. Every number comes from simple math, and you can check it yourself.
+
+## What you will be able to do
+
+- **Use the five main formulas** quickly.
+- **Read the breakeven win rate and recovery tables.**
+- **Build your own cheat sheet.**
+
+## Why it matters
+
+- **Calculations go wrong under pressure.** A formula ready on paper cuts mistakes.
+- **Numbers change ideas.** For example, a 50% loss needs a 100% gain to make up.
+- **The risk rules are easy to remember.**
+
+Prerequisites: [Risk per Trade](/en/learn/08-risk-management/01-risk-per-trade) and [Expectancy](/en/learn/08-risk-management/07-expectancy).
+
+## What is a cheat sheet
+
+**A cheat sheet is a short list of the formulas, tables and checklist links you need again and again.** You remember more when you make it with your own hands.
+
+## Formula 1: R and the money at risk
+
+- **Money at risk** = account × risk percent. 10,000 × 1% = 100.
+- **R** = the unit of the money at risk in one trade. If the stop is hit, −1R; if the profit is twice the risk, +2R.
+
+## Formula 2: Lot size
+
+**Lot = money at risk ÷ (stop in pips × value per pip on one lot)**
+
+Example (imaginary): account 10,000, risk 1% = 100. Stop 25 pips. On EURUSD, one standard lot is about 10 USD per pip. Lot = 100 ÷ (25 × 10) = 0.4 lot.
+
+The value of a pip can differ by pair, your account currency and broker. Check on your own platform. Details: [Position Sizing](/en/learn/08-risk-management/02-position-sizing).
+
+## Formula 3: Expectancy
+
+**Expectancy (R) = (win rate × average win in R) − (loss rate × average loss in R)**
+
+Example (imaginary): win rate 45%, average win 2R, average loss 1R. (0.45 × 2) − (0.55 × 1) = 0.90 − 0.55 = **+0.35R per trade**.
+
+## Formula 4: Breakeven win rate
+
+**Breakeven win rate = 1 ÷ (1 + R:R)**, where R:R = profit ÷ risk (costs not counted).
+
+| Risk : Reward | Breakeven win rate |
+| :------------ | :----------------- |
+| 1 : 1         | 50%                |
+| 1 : 1.5       | 40%                |
+| 1 : 2         | 33.3%              |
+| 1 : 3         | 25%                |
+
+If you count spread and commission, the breakeven rises a little.
+
+## Formula 5: Recovering from a drawdown
+
+**Gain needed to recover = loss ÷ (1 − loss)**
+
+| Loss of the account | Gain needed |
+| :------------------ | :---------- |
+| 10%                 | 11.1%       |
+| 20%                 | 25%         |
+| 30%                 | 42.9%       |
+| 40%                 | 66.7%       |
+| 50%                 | 100%        |
+
+The deeper the loss, the steeper the way back. That is why the [drawdown rules](/en/learn/08-risk-management/04-drawdown-rules) are written in advance.
+
+## What it looks like on a chart
+
+<Chart
+  id="expectancy-positive-01"
+  height={420}
+  caption="ACCOUNT, per trade (educational, imaginary example): 30 trades at 1% risk, average win 2R, average loss 1R. Only 13 win, yet the curve rises."
+/>
+
+Formulas 3 and 4 together: at 1:2 the breakeven is about 33%, so if 43% win (13 ÷ 30), the curve rises.
+
+## Step by step: your own cheat sheet
+
+<Steps>
+
+### Step 1: Pick your five formulas
+
+Start with the five above, and add later.
+
+### Step 2: Put in your own numbers
+
+Account, risk %, pip value, usual stop. With one worked example.
+
+### Step 3: Keep the checklist links
+
+The [pre-trade checklist](/en/learn/14-trading-plan-system/03-pre-trade-checklist) and the [stopping rules](/en/learn/14-trading-plan-system/05-kokhon-trading-bondho-korbo) in one line.
+
+### Step 4: Print it on one page
+
+On the desk or beside the monitor.
+
+### Step 5: Revisit once a month
+
+Has any number changed? (such as the risk or the account).
+
+</Steps>
+
+## Example 1: when it works (synthetic)
+
+- **Situation:** a setup came, stop 25 pips.
+- **While running:** the trader worked out the lot from the cheat sheet: 100 ÷ (25 × 10) = 0.4 lot. It matched the platform's calculator.
+- **Result:** if the stop is hit, −100, exactly 1R. There is no mistake in the calculation.
+- **Lesson:** a ready formula cuts mistakes in a moment of hurry.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Example 2: when it fails (synthetic)
+
+<Chart
+  id="drawdown-nolimit-01"
+  height={420}
+  caption="ACCOUNT, per trade (educational, imaginary example): a bad run at 2% risk. The orange line is the highest point of equity, and the gap below it is the drawdown."
+/>
+
+- **What happened:** the trader kept no risk limit, and in a bad run the account went into a deep drawdown.
+- **Result:** Formula 5 says a 30% loss needs about a 43% gain to make up. The way back is steep.
+- **Why it failed:** with no limit the loss grew, and they did not know in advance how harsh the numbers are.
+- **Lesson:** if you remember Formula 5, the "I'll win it back" mindset falls.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Common mistakes
+
+| Mistake                                  | Why it happens        | What to do                            |
+| :--------------------------------------- | :-------------------- | :------------------------------------ |
+| Taking the pip value as 10 on every pair | Assuming it simple    | Match each pair on your own platform  |
+| Forgetting costs in the breakeven        | The formula is simple | Subtract spread/commission separately |
+| Trusting expectancy on a small sample    | The number looks nice | Collect enough trades                 |
+| The cheat sheet going out of date        | The account changes   | Update once a month                   |
+| Relying only on paper, not memorizing    | To save time          | Constant use makes you remember       |
+
+## Pro tips
+
+<Callout type="tip">
+  Print the table of Formula 5 separately. When the mind is restless saying "let
+  me win it back", looking at the table makes it easy to return to rhythm.
+</Callout>
+
+<Callout type="note">
+  All the formulas are simple math; in reality slippage, spread and currency
+  conversion move the numbers a little. The formula sets the direction, not the
+  last digit.
+</Callout>
+
+## When this does not work
+
+- **On an account in a different currency:** the pip value needs conversion; see the platform's calculator.
+- **On gold, indices or crypto:** the contract spec is different; the [gold lot calculation](/en/learn/13-gold-xauusd/08-gold-risk-lot-size) is separate.
+- **On trades of irregular size:** the R-based formulas do not apply properly.
+
+## Summary
+
+<KeyTakeaways>
+
+- Five formulas: money at risk and R, lot size, expectancy, breakeven win rate, drawdown recovery.
+- At 1:2 the breakeven is about 33%.
+- A 50% loss needs a 100% gain to recover.
+- Check the numbers on your own platform.
+
+</KeyTakeaways>
+
+## Practice
+
+Put in your account, risk % and usual stop and work out a lot. Match it with the platform's calculator. Then, with Formula 5, write how much money a 10% loss on your account is.
+
+## Quiz
+
+1. What is the breakeven win rate at 1:3?
+2. What gain is needed to recover a 20% loss?
+3. With an account of 5,000, risk 2%, stop 20 pips and pip value 10, what is the lot?
+4. How is expectancy worked out?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** 1 ÷ (1 + 3) = 25%.
+
+**2.** 0.20 ÷ 0.80 = 25%.
+
+**3.** Risk = 100. Lot = 100 ÷ (20 × 10) = 0.5 lot.
+
+**4.** (win rate × average win in R) − (loss rate × average loss in R).
+
+</details>
+
+## Next steps
+
+- Before: [Video Notes](/en/learn/18-notes-library/02-video-notes).
+- After: [Mistakes Log](/en/learn/18-notes-library/04-mistakes-log).
+- Related: [Risk-Reward](/en/learn/08-risk-management/03-risk-reward).
+
+### Sources
+
+- <ExternalLink href="https://www.investopedia.com/terms/r/riskrewardratio.asp">
+    Risk/Reward Ratio, Investopedia
+  </ExternalLink>
+
+<Disclaimer />

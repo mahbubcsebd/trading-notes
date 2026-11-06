@@ -1,0 +1,273 @@
+{
+  "id": "dragonfly-doji-win-01",
+  "title": {
+    "en": "Dragonfly Doji Sweeps Below Support, Long on Confirmation",
+    "bn": "Support-এর নিচে ঘুরে আসা dragonfly doji, confirmation-এর পর long"
+  },
+  "symbol": "EURUSD",
+  "timeframe": "H4",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bullish",
+  "outcome": "win",
+  "tags": [
+    "dragonfly-doji",
+    "doji",
+    "candlestick",
+    "support",
+    "pattern"
+  ],
+  "module": "patterns",
+  "lessonSlugs": [],
+  "caption": {
+    "en": "Illustrative synthetic EURUSD H4: on the second test of support, a dragonfly doji dips well below the level and closes back at its open and high. The next candle closes above it, filling a buy stop. Price reaches 2R.",
+    "bn": "শিক্ষামূলক কাল্পনিক EURUSD H4: support-এর দ্বিতীয় পরীক্ষায় একটি dragonfly doji level-এর অনেক নিচে নেমে আবার নিজের open ও high-এ close করে। পরের candle তার উপরে close করে buy stop fill করে। দাম 2R পর্যন্ত যায়।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data, not a real market record.",
+    "bn": "শিক্ষামূলক কাল্পনিক ডেটা, বাস্তব মার্কেটের রেকর্ড নয়।"
+  },
+  "updatedAt": "2026-11-06T12:00:00Z",
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 1.088,
+      "label": "Support",
+      "color": "#3b82f6",
+      "style": "dashed"
+    },
+    {
+      "type": "marker",
+      "i": 5,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "1st touch"
+    },
+    {
+      "type": "marker",
+      "i": 16,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Dragonfly doji"
+    },
+    {
+      "type": "hline",
+      "price": 1.0889,
+      "label": "Entry (high break)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.0853,
+      "label": "Stop",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.0961,
+      "label": "Target 2R",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candle 5 marks support. Candles 11-15 fall back to it. Candle 16 is a dragonfly doji: open, high and close almost equal, a long lower wick through support. Candle 17 closes above its high and fills the buy stop. The stop sits under the wick low; price reaches 2R.",
+    "bn": "৫ নম্বর candle support চিহ্নিত করে। ১১-১৫ নম্বর আবার সেখানে নামে। ১৬ নম্বর dragonfly doji: open, high আর close প্রায় সমান, support ভেদ করে লম্বা নিচের wick। ১৭ নম্বর তার high-এর উপরে close করে buy stop fill করে। Stop wick-এর low-এর নিচে; দাম 2R পর্যন্ত যায়।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "The long lower wick is the story; the next close confirms it",
+      "bn": "লম্বা নিচের wick-ই গল্প; পরের close তা নিশ্চিত করে"
+    }
+  ],
+  "entry": 1.0889,
+  "stopLoss": 1.0853,
+  "takeProfit": 1.0961,
+  "rr": "1:2.0",
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.098,
+      "h": 1.09879,
+      "l": 1.09519,
+      "c": 1.0962
+    },
+    {
+      "i": 1,
+      "o": 1.0962,
+      "h": 1.09685,
+      "l": 1.0925,
+      "c": 1.094
+    },
+    {
+      "i": 2,
+      "o": 1.094,
+      "h": 1.09499,
+      "l": 1.0914,
+      "c": 1.0925
+    },
+    {
+      "i": 3,
+      "o": 1.0925,
+      "h": 1.09346,
+      "l": 1.0891,
+      "c": 1.09
+    },
+    {
+      "i": 4,
+      "o": 1.09,
+      "h": 1.09047,
+      "l": 1.08827,
+      "c": 1.0888
+    },
+    {
+      "i": 5,
+      "o": 1.0888,
+      "h": 1.0896,
+      "l": 1.088,
+      "c": 1.0894
+    },
+    {
+      "i": 6,
+      "o": 1.0894,
+      "h": 1.09202,
+      "l": 1.08825,
+      "c": 1.0914
+    },
+    {
+      "i": 7,
+      "o": 1.0914,
+      "h": 1.0951,
+      "l": 1.08983,
+      "c": 1.094
+    },
+    {
+      "i": 8,
+      "o": 1.094,
+      "h": 1.09631,
+      "l": 1.09332,
+      "c": 1.0954
+    },
+    {
+      "i": 9,
+      "o": 1.0954,
+      "h": 1.09581,
+      "l": 1.09413,
+      "c": 1.0946
+    },
+    {
+      "i": 10,
+      "o": 1.0946,
+      "h": 1.09698,
+      "l": 1.09357,
+      "c": 1.0964
+    },
+    {
+      "i": 11,
+      "o": 1.0964,
+      "h": 1.09699,
+      "l": 1.09444,
+      "c": 1.095
+    },
+    {
+      "i": 12,
+      "o": 1.095,
+      "h": 1.09631,
+      "l": 1.09205,
+      "c": 1.093
+    },
+    {
+      "i": 13,
+      "o": 1.093,
+      "h": 1.09389,
+      "l": 1.09089,
+      "c": 1.0918
+    },
+    {
+      "i": 14,
+      "o": 1.0918,
+      "h": 1.09284,
+      "l": 1.08926,
+      "c": 1.09
+    },
+    {
+      "i": 15,
+      "o": 1.09,
+      "h": 1.0904,
+      "l": 1.0883,
+      "c": 1.0886
+    },
+    {
+      "i": 16,
+      "o": 1.0886,
+      "h": 1.0887,
+      "l": 1.0858,
+      "c": 1.08865
+    },
+    {
+      "i": 17,
+      "o": 1.08865,
+      "h": 1.0901,
+      "l": 1.08835,
+      "c": 1.0898
+    },
+    {
+      "i": 18,
+      "o": 1.0898,
+      "h": 1.0919,
+      "l": 1.08926,
+      "c": 1.0914
+    },
+    {
+      "i": 19,
+      "o": 1.0914,
+      "h": 1.0918,
+      "l": 1.09043,
+      "c": 1.0908
+    },
+    {
+      "i": 20,
+      "o": 1.0908,
+      "h": 1.09345,
+      "l": 1.09029,
+      "c": 1.0928
+    },
+    {
+      "i": 21,
+      "o": 1.0928,
+      "h": 1.09473,
+      "l": 1.09225,
+      "c": 1.0942
+    },
+    {
+      "i": 22,
+      "o": 1.0942,
+      "h": 1.09453,
+      "l": 1.09303,
+      "c": 1.0934
+    },
+    {
+      "i": 23,
+      "o": 1.0934,
+      "h": 1.09629,
+      "l": 1.09264,
+      "c": 1.0956
+    },
+    {
+      "i": 24,
+      "o": 1.0956,
+      "h": 1.09733,
+      "l": 1.09505,
+      "c": 1.0968
+    },
+    {
+      "i": 25,
+      "o": 1.0968,
+      "h": 1.09945,
+      "l": 1.0962,
+      "c": 1.0986
+    }
+  ]
+}

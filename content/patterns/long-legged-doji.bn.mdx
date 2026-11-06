@@ -1,0 +1,351 @@
+---
+title: "Long-Legged Doji: দুই দিকে লম্বা wick, তীব্র লড়াই কিন্তু কোনো বিজয়ী নেই"
+description: "Long-legged doji কীভাবে চিনবেন, সাধারণ doji ও news candle থেকে তফাত, এর range ভাঙার দিকে কীভাবে trade করবেন, বড় stop সামলানো — জেতা ও হারা chart সহ।"
+type: neutral
+category: momentum-indecision
+level: intermediate
+candleCount: 1
+signal: indecision
+chartId: long-legged-doji-win-01
+tags: [pattern, candlestick, long-legged-doji, doji, volatility]
+status: done
+sources:
+  - type: book
+    title: "Japanese Candlestick Charting Techniques - Steve Nison"
+    note: "Long-legged doji, rickshaw man"
+  - type: blog
+    title: "Long-Legged Doji - Investopedia"
+    url: "https://www.investopedia.com/terms/l/long-legged-doji.asp"
+updated: 2026-11-06
+---
+
+একটি candle-এ দাম 40 pip উঠল, তারপর 50 pip নামল, শেষে ঠিক open-এর জায়গায় close। দুই দিকেই trader-দের stop কেটেছে, আর chart-এ রয়ে গেল একটি বিশাল যোগ চিহ্ন। এটা long-legged doji: বাজার জোরে লড়েছে, কিন্তু কেউ জেতেনি। প্রশ্ন হলো, পরের candle কোন দিকে এই লড়াইয়ের ফল ঘোষণা করে।
+
+## এক নজরে
+
+| বিষয়                | Long-Legged Doji                                                                          |
+| :------------------- | :---------------------------------------------------------------------------------------- |
+| ধরন                  | Neutral, উচ্চ volatility-র indecision candle, একটি candle                                 |
+| কোথায় খুঁজবেন       | লম্বা move-এর পর, চিহ্নিত level-এ, বা trend-এর pullback শেষে                              |
+| চেনার মূল চিহ্ন      | Body প্রায় শূন্য, উপরে-নিচে দুই দিকেই খুব লম্বা wick, range আশেপাশের candle-এর চেয়ে বড় |
+| Confirmation         | পরের candle doji-র high-এর উপরে বা low-এর নিচে close করা                                  |
+| Stop                 | ভাঙার বিপরীত দিকের wick-এর বাইরে, spread-সহ buffer                                        |
+| বাতিল (invalidation) | ভাঙার পর দাম আবার doji-র range-এর ভেতরে ঢুকে বিপরীত প্রান্তের বাইরে close                 |
+| দেখতে একই রকম        | [Doji](/bn/patterns/doji), [Spinning Top](/bn/patterns/spinning-top), news spike candle   |
+| বিপরীত pattern       | [Marubozu](/bn/patterns/marubozu) (বড় body, wick নেই)                                    |
+
+## এই লেখা পড়ে আপনি যা পারবেন
+
+- Long-legged doji আর সাধারণ doji-র তফাত **range মেপে বলতে পারবেন**।
+- News release-এর candle আর আসল long-legged doji **আলাদা করতে পারবেন**।
+- Doji-র range-কে একটি ছোট range ধরে **ভাঙার দিকে trade করতে পারবেন**।
+- বড় stop **size কমিয়ে সামলাতে পারবেন**।
+
+## কেন জরুরি
+
+- **Volatility বেড়েছে, দিক ঠিক হয়নি।** দুই দিকে বড় wick মানে দুই পক্ষই শক্তি দেখিয়েছে। প্রায়ই এর পরে বড় move আসে, কিন্তু কোন দিকে, তা জানা যায় না।
+- **দুই দিকের stop-ই কাটে।** ভুল জায়গায় ভুল দিকে থাকলে এই একটি candle-ই দুই দিকের trader-কে বের করে দিতে পারে।
+- **News candle-এর সঙ্গে গুলিয়ে যায়।** Data release-এর মুহূর্তে প্রায় একই আকার আসে, কিন্তু সেটা পাতলা liquidity-র ফল।
+
+পূর্বশর্ত: Doji পাতা (উপরের টেবিলে link) আর [Range Breakout](/bn/learn/06-trend-chart-patterns/03-range-breakout)।
+
+## Long-Legged Doji কী
+
+**Long-legged doji হলো এমন একটি doji, যার open আর close প্রায় সমান, আর উপরে-নিচে দুই দিকেই খুব লম্বা wick, যা আশেপাশের candle-এর range-এর চেয়ে স্পষ্ট বড়।** Open-close যদি range-এর মাঝামাঝি থাকে, Nison একে **rickshaw man** বলেছেন।
+
+একটি কুস্তি ম্যাচ ভাবুন। দুই কুস্তিগীর একবার একে অন্যকে মাটিতে ফেলে, আবার উঠে দাঁড়ায়। পুরো সময় জোর লড়াই, শেষে ড্র। সাধারণ doji যদি দুই জনের হাত মেলানো হয়, long-legged doji হলো ক্লান্ত দুই কুস্তিগীর।
+
+<CandleDiagram
+  title="Standard doji বনাম long-legged doji"
+  candles={[
+    { o: 50, h: 54, l: 47, c: 52, dim: true },
+    { o: 52, h: 55, l: 49, c: 50, dim: true },
+    {
+      o: 50,
+      h: 54,
+      l: 46,
+      c: 50.2,
+      label: "Standard",
+      note: "range আশেপাশের মতো",
+    },
+    { o: 50, h: 53, l: 48, c: 51, dim: true },
+    {
+      o: 51,
+      h: 64,
+      l: 37,
+      c: 51.2,
+      label: "Long-legged",
+      note: "range অনেক বড়",
+    },
+  ]}
+  caption="দুটোতেই body প্রায় শূন্য। Long-legged-এর wick আশেপাশের candle-এর range-এর চেয়ে অনেক লম্বা।"
+/>
+
+### চেনার নিয়ম
+
+| নিয়ম                                              | বাধ্যতামূলক?          | কেন                                                     |
+| :------------------------------------------------- | :-------------------- | :------------------------------------------------------ |
+| Open আর close প্রায় সমান                          | হ্যাঁ                 | Body দেখা গেলে সেটা high-wave spinning top              |
+| দুই দিকেই লম্বা wick                               | হ্যাঁ                 | এক দিকে wick হলে সেটা dragonfly বা gravestone           |
+| Range আশেপাশের candle-এর range-এর চেয়ে স্পষ্ট বড় | হ্যাঁ                 | এটাই "long-legged" অংশ: সাধারণ doji থেকে তফাত           |
+| Candle বন্ধ হয়েছে                                 | হ্যাঁ                 | চলমান candle-এর যেকোনো দিকে body তৈরি হতে পারে          |
+| বড় news-এর মুহূর্তে নয়                           | না (কিন্তু খুব জরুরি) | News candle-এর wick পাতলা বাজারের ফল, লড়াইয়ের ছবি নয় |
+
+## শক্তিশালী বনাম দুর্বল long-legged doji
+
+<DiagramRow>
+  <CandleDiagram
+    title="অর্থবহ"
+    verdict="good"
+    verdictLabel="নজর দিন"
+    candles={[
+      { o: 40, h: 49, l: 39, c: 48, dim: true },
+      { o: 48, h: 57, l: 47, c: 56, dim: true },
+      { o: 56, h: 57, l: 50, c: 51, dim: true },
+      { o: 51, h: 57, l: 44, c: 51.2, label: "ভাঙা level-এ" },
+      { o: 51.2, h: 58, l: 50.5, c: 57.5, dim: true },
+    ]}
+    levels={[{ price: 49, label: "পুরোনো ceiling", tone: "support" }]}
+    caption="Uptrend-এর pullback শেষে পুরোনো ceiling-এ, পরের candle high-এর উপরে close।"
+  />
+  <CandleDiagram
+    title="দুর্বল"
+    verdict="bad"
+    verdictLabel="এড়িয়ে চলুন"
+    candles={[
+      { o: 50, h: 51, l: 49, c: 50.5, dim: true },
+      { o: 50.5, h: 51.5, l: 49.5, c: 50, dim: true },
+      { o: 50, h: 51, l: 49, c: 49.5, dim: true },
+      { o: 49.5, h: 62, l: 38, c: 49.7, label: "news-এর candle" },
+      { o: 49.7, h: 56, l: 45, c: 46, dim: true },
+    ]}
+    caption="শান্ত বাজারে হঠাৎ data release। দুই দিকে বিশাল wick, কিন্তু কোনো level-এর লড়াই নয়।"
+  />
+</DiagramRow>
+
+| মান যাচাই      | অর্থবহ                                       | দুর্বল                                   |
+| :------------- | :------------------------------------------- | :--------------------------------------- |
+| কখন            | স্বাভাবিক বাজারে, news ছাড়া                 | বড় data release-এর মুহূর্তে             |
+| কোথায়         | চিহ্নিত level বা trend-এর pullback শেষে      | Range-এর মাঝে, কোনো level ছাড়া          |
+| Trend-এর সঙ্গে | ভাঙার দিক trend-এর দিকে                      | ভাঙার দিক trend-এর বিপরীতে               |
+| Stop ও জায়গা  | পুরো range-এর stop-এ পরের বাধা পর্যন্ত 1.5R+ | Stop এত বড় যে কোনো target-এ R:R মেলে না |
+
+<Callout type="note">
+  "Range আশেপাশের চেয়ে স্পষ্ট বড়" মাপতে অনেকে আগের ১০টি candle-এর গড় range-এর
+  দেড়-দুই গুণ ধরেন। এটা কাজ চালানোর মাপ, আদর্শ সংজ্ঞা নয়। নিজের backtest-এ ঠিক
+  করুন।
+</Callout>
+
+### দেখতে একই রকম, অর্থ আলাদা
+
+| Pattern               | আকার                                       | তফাত                                            |
+| :-------------------- | :----------------------------------------- | :---------------------------------------------- |
+| **Long-Legged Doji**  | Body প্রায় শূন্য, দুই দিকে খুব লম্বা wick | তীব্র লড়াই, volatility বেশি                    |
+| **Standard Doji**     | Body প্রায় শূন্য, মাঝারি wick             | শান্ত সমতা; range আশেপাশের মতো                  |
+| **High-wave candle**  | ছোট কিন্তু দৃশ্যমান body, খুব লম্বা wick   | প্রায় একই অর্থ; spinning top পরিবারের          |
+| **News spike candle** | যেকোনো আকার, প্রায়ই বিশাল wick            | Release-এর মুহূর্তে পাতলা liquidity; আলাদা ধরুন |
+
+## Candle-এর ভেতরের গল্প
+
+Uptrend-এর pullback শেষে ভাঙা resistance-এ (এখন support) একটি long-legged doji সময় ধরে পড়লে একটি প্রচলিত ব্যাখ্যা এরকম:
+
+1. **Buyers শুরুতে ঠেলে তোলে।** Support-এ buy order আসে, দাম অনেকটা ওঠে।
+2. **Sellers জোরে নামায়।** উপরে profit নেওয়া আর নতুন sell মিলে দাম support-এর নিচেও চলে যায়, যারা আগে কিনেছিল তাদের stop কাটে।
+3. **Buyers আবার ফেরায়।** নিচে নতুন buyers আসে, দাম উঠে ঠিক open-এর কাছে close করে।
+
+ফল: দুই পক্ষই বড় চেষ্টা করেছে, দুই দিকের দুর্বল trader-রা বেরিয়ে গেছে। পরের candle যে দিকে doji-র range ভেঙে close করে, সেই পক্ষ প্রথম স্পষ্ট জয় পেল।
+
+<Callout type="note">
+  এটি একটি প্রচলিত ব্যাখ্যা, প্রমাণিত ঘটনা নয়। Chart দেখে কার stop কেটেছে, তা
+  জানা যায় না। আমরা শুধু দামের আচরণ দেখি।
+</Callout>
+
+## কোথায় কাজ করে, কোথায় করে না
+
+<Compare
+  leftLabel="যেখানে long-legged doji-তে নজর দেবেন"
+  rightLabel="যেখানে এটা প্রায়ই noise"
+  left="- লম্বা move-এর পর চিহ্নিত level-এ
+- Trend-এর pullback শেষে, ভাঙা level-এর retest-এ
+- স্বাভাবিক session-এ, news ছাড়া
+- পরের candle range ভেঙে trend-এর দিকে close করলে"
+  right="- NFP, CPI, rate decision-এর মতো বড় release-এর candle-এ
+- Range-এর মাঝখানে
+- এমন জায়গায় যেখানে পুরো range-এর stop নিলে R:R মেলে না
+- ভাঙার পর দাম আবার doji-র range-এ ফিরে এলে"
+/>
+
+## ধাপে ধাপে: long-legged doji trade
+
+<Steps>
+
+### ধাপ ১: News আগে যাচাই
+
+[Economic calendar](/bn/learn/11-fundamental-intermarket-analysis/02-economic-calendar-nfp-cpi-fomc) দেখুন। Doji যদি বড় release-এর candle হয়, এখানেই থামুন। পরের কয়েক candle-এ বাজার শান্ত হলে নতুন করে দেখুন।
+
+### ধাপ ২: Level আর trend
+
+চিহ্নিত level কোথায়, আর higher timeframe trend কোন দিকে? Trend-এর দিকে ভাঙা সাধারণত পরিষ্কার setup।
+
+### ধাপ ৩: Doji-র range চিহ্নিত করুন
+
+Doji-র high আর low-এ দুটি রেখা আঁকুন। এখন এটা একটি ছোট range। আকার যাচাই করুন: body প্রায় শূন্য, range আশেপাশের চেয়ে স্পষ্ট বড়।
+
+### ধাপ ৪: ভাঙার অপেক্ষা ও entry
+
+| Entry                     | কোথায়                                         | সুবিধা                   | অসুবিধা                       |
+| :------------------------ | :--------------------------------------------- | :----------------------- | :---------------------------- |
+| **Range break** (প্রচলিত) | Trend-এর দিকের প্রান্তের একটু বাইরে stop order | দাম দিক দেখালে তবেই ঢোকা | Stop পুরো range-এর ওপারে, বড় |
+| **Confirmation close**    | পরের candle প্রান্তের বাইরে close করলে         | Wick-এ ভুয়া break কম    | Entry আরও দূরে                |
+| **দুই দিকে order (OCO)**  | High-এর উপরে buy stop, low-এর নিচে sell stop   | দিক অনুমান করতে হয় না   | দুই দিকেই whipsaw-এর ঝুঁকি    |
+
+নতুনদের জন্য শুধু trend-এর দিকের একটি order সবচেয়ে সহজ।
+
+### ধাপ ৫: Stop বসান
+
+ভাঙার বিপরীত দিকের wick-এর বাইরে, [spread](/bn/learn/01-foundations/04-spread-commission-swap) ও buffer-সহ। পুরো doji-র range-ই stop-এর দূরত্ব, তাই এটা বড় হবে।
+
+### ধাপ ৬: Size ও target
+
+বড় stop মানে ছোট size: [position size](/bn/learn/08-risk-management/02-position-sizing) entry থেকে stop-এর দূরত্ব দিয়ে, ঝুঁকি ১%-এর বেশি নয়। Target পরের বাধার ঠিক আগে। সেখানে পর্যন্ত [risk reward](/bn/learn/08-risk-management/03-risk-reward) অন্তত 1:1.5 না হলে বাদ দিন।
+
+### ধাপ ৭: পরিচালনা
+
+ভাঙার পর দাম আবার doji-র range-এর মাঝখানে ফিরে টানা close করলে break দুর্বল; exit ভাবুন। বিপরীত প্রান্তের বাইরে close হলে ধারণা ভুল।
+
+</Steps>
+
+### Trade-এর আগে checklist
+
+<Checklist
+  id="pattern-long-legged-doji-pretrade-bn"
+  items={[
+    "Doji চিহ্নিত level-এ বসেছে, আর এটা বড় news release-এর candle নয়?",
+    "আকার নিয়ম মানছে (body প্রায় শূন্য, দুই দিকে লম্বা wick, range আশেপাশের চেয়ে বড়)?",
+    "Doji আর ভাঙার candle দুটোই বন্ধ হয়েছে?",
+    "পুরো range-এর stop নিয়েও পরের বাধা পর্যন্ত risk reward অন্তত 1:1.5?",
+    "ভাঙার দিক higher timeframe trend-এর বিপরীতে নয়?",
+  ]}
+/>
+
+একটি ঘরও খালি থাকলে trade বাদ দিন।
+
+## উদাহরণ ১: যখন কাজ করে (কাল্পনিক)
+
+<Chart
+  id="long-legged-doji-win-01"
+  height={420}
+  caption="USDJPY H4 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — range breakout-এর পর পুরোনো ceiling-এর retest-এ long-legged doji, trend-এর দিকে high break-এ long।"
+/>
+
+- **কী দেখা যাচ্ছিল:** ০-৬ নম্বর candle প্রায় 149.44-এর ceiling-এর নিচে range-এ। ৭ নম্বর range ভেঙে 149.72-এ close করে। ১২ নম্বর 150.90-এ swing high বানায়, ১৩-১৬ নম্বর পুরোনো ceiling-এ ফিরে আসে।
+- **Long-legged doji:** ১৭ নম্বর 149.518-এ open, 149.528-এ close। High 149.798, low 149.238: দুই দিকে প্রায় 28 pip wick, low ceiling-এর নিচে উঁকি দিয়ে ফিরেছে।
+- **সিদ্ধান্ত:** Uptrend, তাই শুধু উপরের দিকে order। Buy stop 149.818, stop 149.198 (low-এর 4 pip নিচে), ঝুঁকি 62 pip। Target 150.865, swing high-এর ঠিক নিচে, প্রায় 1.7R।
+- **ফল:** ১৮ নম্বর 149.868-এ close করে order fill করে। ২৬ নম্বর candle target ছোঁয়।
+- **শিক্ষা:** Trend-এর দিকে, ভাঙা level-এর retest-এ, news ছাড়া। Stop বড় ছিল, তাই target-ও বাস্তব বাধার আগে রাখা হয়েছে, বইয়ের 2R নয়।
+
+<TradeSetup
+  direction="long"
+  pair="USDJPY"
+  entry={149.818}
+  stop={149.198}
+  target={150.865}
+/>
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়। সব long-legged doji-র পর move আসে না, আর কোনো ফল গ্যারান্টি নয়।)
+
+## উদাহরণ ২: যখন ফাঁদ হয় (কাল্পনিক)
+
+<Chart
+  id="long-legged-doji-fail-01"
+  height={420}
+  caption="EURUSD H1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — data release-এর candle-এ long-legged doji, high break-এ buy, তারপর stop।"
+/>
+
+- **কী দেখা যাচ্ছিল:** ০-১০ নম্বর candle প্রায় 1.0834-1.0860-এর মধ্যে শান্তভাবে চলেছে, body বেশিরভাগ 2-6 pip।
+- **Doji:** ১১ নম্বর একটি বড় data release-এর candle: 1.0837-এ open, 1.0839-এ close, high 1.0885, low 1.0792। দুই দিকে প্রায় 45 pip wick।
+- **ভুল সিদ্ধান্ত:** "Support-এর কাছে long-legged doji, high ভাঙলে buy।" Buy stop 1.0887, stop 1.0788, ঝুঁকি 99 pip।
+- **কী হলো:** ১২ নম্বর 1.0893 পর্যন্ত spike দিয়ে order fill করে, কিন্তু 1.0824-এ close করে। ১৩ নম্বর stop ভাঙে।
+- **কেন ব্যর্থ:** এটা level-এর লড়াই নয়, news-এর মুহূর্তের পাতলা liquidity। Checklist-এর প্রথম ঘরেই trade বাদ পড়ত। তার ওপর 99 pip stop শান্ত বাজারের তুলনায় অস্বাভাবিক বড়।
+
+**শিক্ষা:** News candle-এর wick noise, signal নয়। Stop আগে বসানো ছিল বলে লোকসান 1R-এ আটকেছে, কিন্তু news-এ [slippage](/bn/learn/10-trade-management-execution/04-slippage-requote-spread-widening) হলে বাস্তবে আরও বেশি হতে পারত।
+
+## সাধারণ ভুল
+
+| ভুল                                        | কেন হয়                       | কী করবেন                                       |
+| :----------------------------------------- | :---------------------------- | :--------------------------------------------- |
+| News candle-কে long-legged doji ধরা        | আকার একই রকম                  | Economic calendar দেখুন; release-এর candle বাদ |
+| Doji-র মাঝখানে stop রাখা                   | বড় stop-এর ভয়               | Stop বিপরীত wick-এর বাইরে, size কমান           |
+| দুই দিকে order দিয়ে দুই দিকেই stop খাওয়া | দিক বাছতে না চাওয়া           | Trend-এর দিকে একটি order বেছে নিন              |
+| Target শুধু 2R ধরা                         | বড় stop-এ 2R অনেক দূর        | পরের বাধা পর্যন্ত R:R মাপুন, 1.5-এর কম হলে বাদ |
+| Range-এর মাঝে long-legged doji trade       | সব বড় wick-কে signal মনে করা | শুধু level-এ বা pullback শেষে                  |
+
+## Pro tips
+
+<Callout type="tip">
+  Long-legged doji-র range-কে
+  [ATR](/bn/learn/07-technical-indicators/04-atr-stop-size) দিয়ে মাপুন। Range
+  যদি ATR-এর দ্বিগুণের বেশি হয়, পুরো range-এর stop প্রায়ই খুব বড়। তখন ছোট
+  timeframe-এ ভাঙার পরের প্রথম pullback-এ ঢোকার কথা ভাবুন।
+</Callout>
+
+<Callout type="tip">
+  Trend-এর শীর্ষে টানা দুই-তিনটি long-legged doji বা high-wave candle এলে
+  momentum ফুরিয়ে আসছে। নতুন trend-এর দিকের trade-এর চেয়ে চলমান trade-এর
+  profit রক্ষা তখন বেশি জরুরি।
+</Callout>
+
+<Callout type="warning">
+  News-এর সময় spread অনেক বাড়ে আর stop order প্রায়ই খারাপ দামে fill হয়।
+  Long-legged doji দেখে release-এর মুহূর্তে ঢোকা নতুনদের জন্য সবচেয়ে ঝুঁকিপূর্ণ
+  কাজগুলোর একটি।
+</Callout>
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- Long-legged doji = body প্রায় শূন্য, দুই দিকে খুব লম্বা wick, range আশেপাশের চেয়ে স্পষ্ট বড়।
+- এটা তীব্র লড়াই দেখায়, দিক নয়; পরের candle-এর ভাঙার দিকই উত্তর।
+- News release-এর candle বাদ দিন; সেটা পাতলা liquidity-র ছবি।
+- Trend-এর দিকে range break-এ ঢুকুন; stop বিপরীত wick-এর বাইরে, size কমিয়ে, target বাস্তব বাধার আগে।
+
+</KeyTakeaways>
+
+## অনুশীলন ও নিজের backtest
+
+TradingView-এ USDJPY H4 বা EURUSD H1 খুলুন। অন্তত ২০টি long-legged doji খুঁজুন। প্রতিটির জন্য একটি সারি লিখুন:
+
+| তারিখ | News candle? | Range ÷ ATR | ভাঙার দিক trend-এর দিকে? | পরের বাধা পর্যন্ত R | ফল (R) |
+| :---- | :----------- | :---------- | :----------------------- | :------------------ | :----- |
+|       |              |             |                          |                     |        |
+
+এরপর news candle আর সাধারণ candle আলাদা করে গড় R তুলনা করুন। কতবার ভাঙার পর দাম আবার range-এ ফিরে এসেছে, সেটাও গুনুন। অন্তত ৩০টি নমুনা ছাড়া সিদ্ধান্ত নেবেন না।
+
+## কুইজ
+
+1. Long-legged doji আর standard doji-র মূল তফাত কী?
+2. NFP release-এর candle-এ একটি নিখুঁত long-legged doji। কী করবেন?
+3. Long-legged doji-র stop কেন বড় হয়, আর কীভাবে সামলাবেন?
+4. উদাহরণ ১-এ target 2R না রেখে swing high-এর নিচে রাখা হলো কেন?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** দুটোতেই body প্রায় শূন্য। Long-legged-এর wick আর range আশেপাশের candle-এর চেয়ে স্পষ্ট বড়; standard doji-র range আশেপাশের মতো।
+
+**২.** Trade নয়। এটা release-এর মুহূর্তের পাতলা liquidity-র ফল। বাজার শান্ত হলে নতুন করে level আর structure দেখুন।
+
+**৩.** Stop বিপরীত wick-এর বাইরে, তাই পুরো বড় range-ই ঝুঁকি। Size কমিয়ে ঝুঁকি ১%-এ রাখুন, আর পরের বাধা পর্যন্ত R:R 1.5-এর কম হলে বাদ দিন।
+
+**৪.** 2R target swing high-এর ওপারে পড়ত। বাস্তব বাধার ঠিক আগে target রাখলে R:R প্রায় 1.7, যা এখনো 1.5-এর উপরে।
+
+</details>
+
+## পরের ধাপ
+
+- আগে: [Doji](/bn/patterns/doji)।
+- News-এর সময় কী করবেন: [News Trade Avoid](/bn/learn/11-fundamental-intermarket-analysis/06-news-trade-avoid-korbo)।
+- একই পরিবারের pattern: [Spinning Top](/bn/patterns/spinning-top), [Dragonfly Doji](/bn/patterns/dragonfly-doji), [Gravestone Doji](/bn/patterns/gravestone-doji)।
+
+<Disclaimer />

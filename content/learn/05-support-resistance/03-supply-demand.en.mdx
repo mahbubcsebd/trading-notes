@@ -1,0 +1,223 @@
+---
+title: "Supply & Demand: Recognise the Zones of Big Orders"
+description: "What supply and demand zones are, how to draw them from the base and impulse, why a fresh zone is better and what happens when it is tested again and again, with two chart examples."
+level: intermediate
+tags: [supply, demand, zone, base, impulse, fresh-zone]
+instruments: [EURUSD]
+timeframes: [H4]
+status: done
+sources:
+  - type: blog
+    title: "Supply and Demand Zones - Investopedia"
+    url: "https://www.investopedia.com/terms/s/supplyanddemand.asp"
+  - type: book
+    title: "Technical Analysis of the Financial Markets - John J. Murphy"
+    url: ""
+    note: "Support and resistance chapter"
+updated: 2026-11-06
+---
+
+# Supply & Demand: Recognise the Zones of Big Orders
+
+A dozen support and resistance zones are drawn on the chart, and they all look the same. Which one will turn price, and which one will price pass by? One clue to the answer: **how hard price shot away from the zone.** A strong exit means there were big orders there.
+
+## What you will be able to do
+
+- **Say** what supply and demand zones mean.
+- **Draw** zones from the **base and impulse**.
+- **Spot** the difference between a fresh zone and a tested zone.
+- **Plan the entry, stop and target** when price returns to a zone.
+
+## Why it matters
+
+- **Not all zones are equal.** In the [Levels vs Zones](/en/learn/05-support-resistance/01-levels-vs-zones) lesson you learned to draw zones. Here you will learn which ones to choose.
+- **The place is set in advance.** Your plan is ready before price arrives.
+- **The place for your stop is clear.** Outside the zone, and if the zone breaks, the idea is off.
+
+Prerequisites: Levels vs Zones and [Role Reversal](/en/learn/05-support-resistance/02-role-reversal).
+
+## What supply and demand are
+
+**A demand zone is an area from which price rose strongly, because buy orders there were much larger than sell orders. A supply zone is an area from which price fell strongly, because sell orders were larger.**
+
+Think of an auction house. If someone suddenly places a very large buy order, the sellers run out and the price jumps. The area where this jump starts is the demand zone. Some orders may still be left, so if price returns there, it may react again.
+
+The difference between support and demand is subtle:
+
+| Point           | Support / Resistance                      | Demand / Supply                     |
+| :-------------- | :---------------------------------------- | :---------------------------------- |
+| Origin          | Stopping again and again                  | One strong exit                     |
+| How many needed | At least 2-3 touches                      | One clear exit is enough            |
+| Size            | The range of wicks of two or three swings | The range of the small base candles |
+| Strength        | Can even grow with tests                  | Usually falls with each test        |
+
+## How a zone is built: base and impulse
+
+Every supply or demand zone has two parts:
+
+- **Base:** a few small candles, with price paused in a narrow range. This is where big players build up orders.
+- **Impulse:** one big-bodied candle after another leaving the base, as if price shot away.
+
+The zone is drawn **from the high to the low of the base**. How strong the impulse is decides the quality of the zone.
+
+## What it looks like on a chart
+
+<Chart
+  id="demand-zone-fresh-01"
+  height={420}
+  caption="EURUSD H4 (educational, synthetic example): candles 3-5 are the base (1.0758-1.0782), candles 6-8 the impulse up, and on candle 13 price returns for the first time, touches the zone and rises"
+/>
+
+The base candles are small and side by side. The three candles after them rose with big bodies and almost no pullback. This is an **imbalance**: buyers were so many that sellers could no longer resist.
+
+## Step by step: how to choose a zone
+
+<Steps>
+
+### Step 1: Find the impulse
+
+On a large timeframe (H4, D1), find a place from which price went a long way in a few candles. Skip small moves.
+
+### Step 2: Mark the base before the impulse
+
+Look at the cluster of small candles just before the exit. On the chart above, candles 3-5.
+
+### Step 3: Draw the zone
+
+Draw a box between the highest and lowest prices of the base. For demand, from the low of the base to the high; for supply, the same way.
+
+### Step 4: Check the quality
+
+Three questions:
+
+- Was the exit strong (big bodies, small wicks)?
+- Is the zone fresh, meaning price has not come back yet?
+- Is the base narrow, meaning only a few candles?
+
+If all three are "yes", the zone is strong.
+
+### Step 5: Wait for price to return
+
+Do not chase toward the zone. When price arrives, look for a confirmation as in [Candle Context](/en/learn/04-candlesticks/05-candle-context), such as a long wick or an engulfing.
+
+### Step 6: Entry, stop and target
+
+Enter when the high or low of the confirmation candle breaks. Stop outside the zone. Target the next opposite zone or the previous swing. If the target is not at least twice the stop distance away, skip the trade.
+
+</Steps>
+
+## Example 1: when it works (synthetic)
+
+Look at the chart above.
+
+- **What you could see:** From the base at 1.0758-1.0782, price rose about 100 pips in 3 candles. Price has come back for the first time.
+- **Decision:** Candle 13 dropped into the zone to 1.0764 and closed higher with a long lower wick. Candle 14 broke its high (1.0796), the buy trigger.
+- **Stop:** below the zone at 1.0752, a risk of about 44 pips.
+- **Target:** the previous high at 1.0884, a gain of about 88 pips, which is 2 times the risk. More in the [Risk/Reward Ratio](/en/learn/08-risk-management/03-risk-reward) lesson.
+- **Result:** Price passed the target and rose further.
+- **Lesson:** The zone was fresh, the exit strong and the base narrow. All three conditions were met. Price came and reacted right at the zone you drew in advance.
+
+(Synthetic educational example. This is not a real trade, and no result is guaranteed.)
+
+## Example 2: when it fails (synthetic)
+
+Even a good zone gets tired when it is tested again and again.
+
+<Chart
+  id="supply-zone-tested-01"
+  height={420}
+  caption="EURUSD H4 (educational, synthetic example): the supply zone (1.0936-1.0958) worked on the first test; on the second test, candle 18 breaks through and closes above"
+/>
+
+- **What you could see:** From the base at 1.0936-1.0958, price fell about 120 pips in 4 candles. The first test (candle 12) touched the zone and fell again.
+- **Decision:** Price came back a second time (candles 16-17). Candle 17 was bearish; sell as soon as its low (1.0924) broke, stop above the zone at 1.0966, a risk of about 42 pips.
+- **What happened:** Right after the sell triggered, candle 18 shot up, broke through the zone and closed at 1.0972. The stop was filled.
+- **Why it failed:** Each test uses up the waiting orders in the zone. The second time, there were no sellers left to hold price down.
+- **Lesson:** The loss was the planned 42 pips. A fresh zone and a tested zone are not the same: on the second test the risk is higher, so trade smaller or skip it.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Common mistakes
+
+| Mistake                                                       | Why it happens                               | What to do                                        |
+| :------------------------------------------------------------ | :------------------------------------------- | :------------------------------------------------ |
+| Treating every small pause as a zone                          | Every place on the chart looks like a chance | No strong impulse, then no zone                   |
+| Mixing impulse candles in with the base                       | The urge to make the zone bigger             | Take only the small base candles                  |
+| Trading a zone that has been tested many times                | "It worked before"                           | Prefer fresh zones; be careful if tested          |
+| Entering as soon as the zone is touched, without confirmation | Fear of missing the price                    | You need a rejection candle and a trigger         |
+| Small-timeframe zones that ignore the bigger trend            | The close-up chart feels like everything     | Check the direction on the larger timeframe first |
+
+## Pro tips
+
+<Callout type="tip">
+  A zone whose impulse broke the previous swing high or low is especially
+  strong. Price did not just run from that place, it also changed the structure.
+  More in the [Break of
+  Structure](/en/learn/03-market-structure/03-break-of-structure) lesson.
+</Callout>
+
+<Callout type="tip">
+  When an old support or resistance zone and a new supply or demand zone meet in
+  the same area, the place is more important. The more independent reasons that
+  meet, the better.
+</Callout>
+
+<Callout type="warning">
+  The idea of "big players' orders" in supply and demand is a guess; you cannot
+  see them. The chance is judged from how the chart behaves. Do not take a trade
+  at any zone without a stop.
+</Callout>
+
+## When this does not work
+
+- **Just before and after big news:** Data can flip the zone and the balance of orders.
+- **Against a very strong trend:** In a trend, counter-trend zones break quickly.
+- **When the zone has been tested many times:** The more hits, the less you can trust it.
+- **When the impulse is weak:** Drawing a zone from price that drifted away slowly is pointless.
+
+## Summary
+
+<KeyTakeaways>
+
+- Demand and supply zones come from a base followed by a strong impulse.
+- Draw the zone from the high and low of the base, leaving out the impulse candles.
+- Fresh, a narrow base and a strong exit: when all three are met, the zone is strong.
+- Each test weakens a zone; be careful the second time.
+
+</KeyTakeaways>
+
+## Practice
+
+Open a EUR/USD H4 chart on TradingView. Find three places from the last 3 months from which price moved away fast. Mark the base of each, then check whether price came back and, if it did, what happened. Draw fresh and tested zones in different colours.
+
+## Quiz
+
+1. How is a demand zone different from ordinary support?
+2. When drawing a zone, do you take the base or the impulse candles?
+3. Why is a fresh zone better than a tested zone?
+4. Name three conditions that make a zone strong.
+
+<details>
+<summary>Show answers</summary>
+
+**1.** Demand comes from one strong exit and does not need several touches. Support comes from price stopping again and again.
+
+**2.** The base. If you take the impulse candles, the zone becomes too big for no reason, and the stop ends up far away.
+
+**3.** Each test uses up the waiting orders in the zone. A fresh zone still has all its orders.
+
+**4.** A strong exit, a fresh zone and a narrow base.
+
+</details>
+
+## Next steps
+
+- Before: [Role Reversal](/en/learn/05-support-resistance/02-role-reversal).
+- After: [Trendlines & Channels](/en/learn/05-support-resistance/04-trendlines-channels).
+- More on stops: [Stop Loss Placement](/en/learn/10-trade-management-execution/01-stop-loss-placement).
+
+### Sources
+
+- [Supply and Demand, Investopedia](https://www.investopedia.com/terms/s/supplyanddemand.asp)
+
+<Disclaimer />

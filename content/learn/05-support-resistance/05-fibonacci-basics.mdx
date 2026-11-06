@@ -1,19 +1,217 @@
 ---
-title: "Fibonacci Basics"
-description: "Fib retracement ar extension khibhabe use korbo"
-level: beginner
-tags: []
-status: draft
-updated: 2026-10-10
+title: "Fibonacci Retracement: pullback কোথায় থামতে পারে"
+description: "Fibonacci retracement কী, swing low-high-এ কীভাবে বসাবেন, 38.2%, 50%, 61.8% level কীভাবে পড়বেন এবং কেন একা Fibonacci যথেষ্ট নয় — দুটি chart example সহ।"
+level: intermediate
+tags: [fibonacci, retracement, pullback, confluence, swing]
+instruments: [EURUSD]
+timeframes: [H4]
+status: done
+sources:
+  - type: blog
+    title: "Fibonacci Retracement - Investopedia"
+    url: "https://www.investopedia.com/terms/f/fibonacciretracement.asp"
+  - type: book
+    title: "Technical Analysis of the Financial Markets - John J. Murphy"
+    url: ""
+    note: "Percentage retracements"
+updated: 2026-11-05
 ---
 
-# Fibonacci Basics
+# Fibonacci Retracement: pullback কোথায় থামতে পারে
+
+দাম জোরে উঠল, তারপর নামতে শুরু করল। আপনি জানেন trend এখনো আছে, কিন্তু কোথায় কিনবেন? প্রতিটি candle-এ মনে হয় "এখানেই ঘুরবে।" Fibonacci retracement এই প্রশ্নের জন্য কয়েকটি আগে-থেকে-ঠিক-করা জায়গা দেয়। তবে ওই জায়গাগুলো ভবিষ্যদ্বাণী নয়, শুধু দেখার তালিকা।
+
+## এই লেখা পড়ে আপনি যা পারবেন
+
+- Fibonacci retracement-এর অর্থ নিজের ভাষায় **বলতে পারবেন**।
+- Swing low ও swing high ঠিকমতো বেছে tool **বসাতে পারবেন**।
+- 38.2%, 50%, 61.8% ও 78.6% level-এর **মানে পড়তে পারবেন**।
+- Fibonacci-কে অন্য level-এর সঙ্গে মিলিয়ে entry, stop ও target **সাজাতে পারবেন**।
+
+## কেন এটি জরুরি
+
+- **Pullback-এ entry ভালো হয়।** Trend-এর মাঝখানে ছুটে কিনলে stop দূরে পড়ে। Pullback-এর শেষে কিনলে stop ছোট, লাভের সুযোগ বড়।
+- **অপেক্ষার জায়গা ঠিক হয়।** দাম নামছে, আপনি জানেন কোন এলাকায় নজর রাখবেন।
+- **ভুল বোঝার দাম কম।** Pullback কত গভীর হলে trend-এর ধারণা বাতিল, সেটিও level থেকে বোঝা যায়।
+
+পূর্বশর্ত: [Market Structure](/bn/learn/03-market-structure/02-trend-range-hhhl) থেকে swing high-low চেনা, আর [Role Reversal](/bn/learn/05-support-resistance/02-role-reversal)।
+
+## Fibonacci retracement কী
+
+**Fibonacci retracement হলো একটি tool যা কোনো impulse leg-এর swing low থেকে swing high পর্যন্ত দূরত্বকে কয়েকটি শতাংশে ভাগ করে। দাম যেখানে pullback করে থামতে পারে, সেই সম্ভাব্য জায়গাগুলো দেখায়।**
+
+ভাবুন একটি সিঁড়ি। দাম দৌড়ে উপরে উঠে হাঁপিয়ে গেছে। নামার সময় সে সিঁড়ির কোন ধাপে দাঁড়িয়ে দম নেবে? Fibonacci সেই ধাপগুলো আগে থেকে আঁকে। দাম সব ধাপে থামে না, কিছু ধাপ সে এড়িয়ে যায়।
+
+প্রধান level:
+
+| Level | সাধারণ অর্থ                                                         |
+| :---- | :------------------------------------------------------------------ |
+| 23.6% | অগভীর pullback, trend খুব জোরালো                                    |
+| 38.2% | সুস্থ pullback, trend-এ সাধারণ জায়গা                               |
+| 50%   | Impulse-এর মাঝামাঝি। এটি Fibonacci সংখ্যা থেকে আসেনি, তবু সবাই দেখে |
+| 61.8% | গভীর pullback, অনেকের প্রিয় এলাকা                                  |
+| 78.6% | শেষ সুযোগ, এরপর trend দুর্বল                                        |
+
+Level-গুলোর উৎস Fibonacci সংখ্যামালার অনুপাত (যেমন 61.8%, 38.2%)। কেন এই অনুপাতে বাজার থামে, তার কোনো প্রমাণিত ব্যাখ্যা নেই। Level কাজ করার সম্ভাব্য কারণ হলো **অনেক trader একই level দেখে**, তাই সেখানে অর্ডারও জমে। এটি আত্মপূর্ণ ভবিষ্যদ্বাণীর মতো।
+
+## Chart-এ কেমন দেখায়
+
+<Chart
+  id="fib-retracement-hold-01"
+  height={440}
+  caption="EURUSD H4 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — swing low 1.0800 (২ নম্বর) থেকে swing high 1.0960 (৭ নম্বর)। দাম 61.8% (1.0861) এলাকায় নেমে ১৩ নম্বরে লম্বা lower wick নিয়ে ফিরে যায়"
+/>
+
+Impulse leg-এ প্রায় কোনো pullback নেই। তারপর দাম ছোট ছোট ধাপে নেমেছে, প্রতিটি candle-এর body ছোট। এই "ধীরে নামা" pullback-ই স্বাস্থ্যকর। বিপরীত ছবি পাবেন উদাহরণ ২-এ।
+
+## ধাপে ধাপে: ব্যবহার করার পদ্ধতি
+
+<Steps>
+
+### ধাপ ১: Trend ও impulse leg খুঁজুন
+
+পরিষ্কার একটি leg চাই যেখানে দাম এক দিকে জোরে গেছে। Range বা এলোমেলো দামে Fibonacci টানবেন না।
+
+### ধাপ ২: Swing low ও swing high চিহ্নিত করুন
+
+Uptrend হলে **swing low থেকে swing high** টানুন। Downtrend হলে উল্টো, swing high থেকে swing low। Wick-এর শেষ প্রান্ত ধরুন। একটি খুব ছোট swing নয়, চোখে স্পষ্ট swing বাছুন।
+
+### ধাপ ৩: Tool বসান
+
+TradingView-এ Fib Retracement tool নিন। ০ বসান যেখানে leg শেষ (swing high), ১০০ বসান যেখানে leg শুরু (swing low)। Level-গুলো আপনাআপনি আসবে।
+
+### ধাপ ৪: Confluence খুঁজুন
+
+শুধু Fibonacci level যথেষ্ট নয়। একই এলাকায় আর কিছু আছে কি? পুরনো swing high-low, role reversal zone, [demand zone](/bn/learn/05-support-resistance/03-supply-demand), trendline। যত বেশি স্বতন্ত্র কারণ, তত শক্ত জায়গা।
+
+### ধাপ ৫: Pullback-এর চরিত্র দেখুন
+
+দাম কীভাবে নামছে? ছোট body ও ধীর গতি ভালো। বড় bearish body একের পর এক এলে সাবধান, বিক্রেতারা নিয়ন্ত্রণে।
+
+### ধাপ ৬: Rejection-এর জন্য অপেক্ষা করুন
+
+Level ছুঁতেই কিনবেন না। [Candle Context](/bn/learn/04-candlesticks/05-candle-context)-এর মতো একটি rejection candle (লম্বা lower wick বা engulfing) দেখুন।
+
+### ধাপ ৭: Entry, stop ও target
+
+Entry rejection candle-এর high ভাঙলে। Stop পরের level ও confluence zone-এর নিচে। Target আগের swing high। Reward অন্তত ঝুঁকির দ্বিগুণ না হলে ছাড়ুন।
+
+</Steps>
+
+## উদাহরণ ১: যখন কাজ করে (কাল্পনিক)
+
+উপরের chart-টিই দেখুন।
+
+- **কী দেখা যাচ্ছিল:** Leg 160 pip (1.0800-1.0960)। Level-গুলো: 38.2% = 1.0899, 50% = 1.0880, 61.8% = 1.0861, 78.6% = 1.0834। দাম ৫ candle ধরে ধীরে নেমে 61.8% এলাকায় পৌঁছাল।
+- **Confluence:** 1.0856-1.0868 এলাকায় আগের (০ ও ৩ নম্বর) high-ও ছিল, অর্থাৎ পুরনো resistance এখন support-এর কাজ করছে।
+- **সিদ্ধান্ত:** ১৩ নম্বর candle 1.0852 পর্যন্ত নেমে লম্বা lower wick নিয়ে ওপরে close করল। ১৪ নম্বর তার high (1.0872) ভাঙতেই buy, entry 1.0873।
+- **Stop:** 78.6% level-এর ঠিক নিচে 1.0844, ঝুঁকি প্রায় 29 pip।
+- **Target:** আগের swing high 1.0960, লাভ প্রায় 87 pip, অর্থাৎ ৩ গুণ ঝুঁকি। বিস্তারিত [Risk/Reward Ratio](/bn/learn/08-risk-management/03-risk-reward) পাঠে।
+- **ফল:** ১৭ নম্বর candle target ছুঁল।
+- **শিক্ষা:** দুটি স্বতন্ত্র কারণ (Fibonacci ও পুরনো high) মিলেছিল, pullback ধীর ছিল, আর rejection candle এসেছিল। তিনটির যেকোনো একটি না থাকলে ঝুঁকি বাড়ত।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়, কোনো ফলই গ্যারান্টি নয়।)
+
+## উদাহরণ ২: যখন ফাঁদ হয় (কাল্পনিক)
+
+Level ঠিক থাকলেও pullback-এর চরিত্র ভুল হলে trade টেকে না।
+
+<Chart
+  id="fib-retracement-fail-01"
+  height={440}
+  caption="EURUSD H4 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — swing low 1.0700 থেকে swing high 1.0880। ৮-১২ নম্বরে পাঁচটি জোরালো bearish candle, ১৩ নম্বরে 61.8% (1.0769) এলাকায় ছোট bounce, তারপর stop ও swing low ভেঙে দাম নেমে যায়"
+/>
+
+- **কী দেখা যাচ্ছিল:** Leg 180 pip। 61.8% = 1.0769, 78.6% = 1.0739। দাম পাঁচটি বড় body-র bearish candle-এ সোজা নেমে এসেছে, কোনো pause নেই।
+- **সিদ্ধান্ত:** ১৩ নম্বর candle 61.8% ছুঁয়ে 1.0758 পর্যন্ত গেল, কিন্তু body ছোট, bounce দুর্বল। ১৪ নম্বর তার high (1.0774) ভাঙতেই buy, entry 1.0775, stop 78.6%-এর নিচে 1.0732, ঝুঁকি প্রায় 43 pip।
+- **কী হলো:** দাম আবার নামল। ১৬ নম্বর candle stop ছুঁল। পরে swing low 1.0700 ভেঙে 1.0682 পর্যন্ত গেল।
+- **কেন ব্যর্থ:** Level-ই একমাত্র কারণ ছিল, কোনো confluence নেই। তার ওপর pullback ছিল বিক্রেতার দখলে: পাঁচটি জোরালো bearish candle, বিপরীতে কেউ দাঁড়ায়নি।
+- **শিক্ষা:** ক্ষতি পরিকল্পিত 43 pip-এই থেমেছে। Stop না থাকলে 78.6% ভেঙে দাম swing low-এর নিচে গিয়ে বড় ক্ষতি হতো। Fibonacci level একটি জায়গা, কারণ নয়।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়।)
+
+## সাধারণ ভুল
+
+| ভুল                                  | কেন হয়                           | কী করবেন                                 |
+| :----------------------------------- | :-------------------------------- | :--------------------------------------- |
+| Level ছুঁতেই entry                   | দাম ছেড়ে দেওয়ার ভয়             | Rejection candle ও trigger-এর অপেক্ষা    |
+| ভুল swing বেছে নেওয়া                | যেকোনো উঁচু-নিচু ধরে নেওয়ার ঝোঁক | চোখে স্পষ্ট, বড় swing ধরুন              |
+| Confluence ছাড়া শুধু Fibonacci      | Tool সহজ, তাই যথেষ্ট মনে হয়      | অন্তত আরেকটি স্বতন্ত্র কারণ খুঁজুন       |
+| Range বা sideways বাজারে tool টানা   | সব জায়গায় leg আছে ভাবা          | আগে trend নিশ্চিত করুন                   |
+| ৫টি level একসঙ্গে দেখে সবকটিতে trade | Chart ভরে গেলে সবই সুযোগ লাগে     | ২-৩টি level-এর বেশি নয়, বাকি মুছে ফেলুন |
+| Pullback-এর গতি উপেক্ষা করা          | শুধু level-এর দিকে নজর            | বড় body একের পর এক এলে trade বাদ দিন    |
+
+## Pro tips
+
+<Callout type="tip">
+  সবচেয়ে জনপ্রিয় এলাকা 50% থেকে 61.8%। অনেকে এই এলাকাকে একটি zone ভেবে দেখেন,
+  একটি রেখা নয়। [Premium ও
+  Discount](/bn/learn/03-market-structure/06-premium-discount-zones) পাঠের 50%
+  (equilibrium) ধারণার সঙ্গে এটি সরাসরি মেলে।
+</Callout>
+
+<Callout type="tip">
+  Fibonacci-কে higher timeframe-এ টানুন (H4, D1)। ছোট timeframe-এ swing ছোট হয়,
+  level একে অপরের কাছাকাছি এসে যায়, আর "মিলে যাওয়া" আসল নাকি কাকতালীয় বোঝা
+  যায় না।
+</Callout>
+
+<Callout type="warning">
+  Fibonacci level কেন কাজ করে তার কোনো প্রমাণিত ব্যাখ্যা নেই। এটি একটি
+  অনুমান-ভিত্তিক tool, নিশ্চিত সংকেত নয়। Stop ছাড়া কোনো level-এ trade নেবেন
+  না।
+</Callout>
+
+## কখন এটা কাজ করে না
+
+- **Trend নেই:** Sideways বাজারে impulse leg পরিষ্কার নয়, level অর্থহীন।
+- **বড় news-এর আশপাশে:** Data এসে সব level পেরিয়ে যেতে পারে।
+- **Pullback খুব গভীর:** 78.6% ভেঙে গেলে impulse leg-এর ধারণাই দুর্বল।
+- **Swing বেছে নেওয়া অস্পষ্ট:** দুজন দুটি আলাদা swing ধরলে দুটি আলাদা level পাবেন। বাছাই নিজেই সাবজেক্টিভ।
+
+## সারসংক্ষেপ
 
 <KeyTakeaways>
-- এই lesson টি এখনো লেখা হয়নি।
-- পরবর্তীতে বিস্তারিত যোগ করা হবে।
+
+- Fibonacci retracement impulse leg-এর swing low-high-এ pullback-এর সম্ভাব্য জায়গা দেখায়।
+- 38.2%, 50% ও 61.8% সবচেয়ে বেশি দেখা হয়। 78.6% পেরোলে trend দুর্বল।
+- Level একা কারণ নয়। পুরনো swing, role reversal বা zone-এর সঙ্গে মিললে জায়গা শক্ত।
+- ধীর pullback আর rejection candle লাগে। জোরালো ধাক্কায় নামা দাম level মানে না।
+
 </KeyTakeaways>
 
-## Introduction
+## অনুশীলন
 
-*এই section টি draft আছে। শীঘ্রই বিস্তারিত content যোগ করা হবে।*
+TradingView-এ EUR/USD-এর H4 chart খুলুন। গত ৩ মাসে ৩টি পরিষ্কার impulse leg খুঁজুন। প্রতিটিতে Fibonacci টানুন, তারপর লিখুন: pullback কোন level-এ থেমেছিল, সেখানে আর কোনো confluence ছিল কি না, আর pullback ধীর ছিল নাকি জোরালো।
+
+## কুইজ
+
+1. Uptrend-এ Fibonacci retracement কোথা থেকে কোথায় টানবেন?
+2. 61.8% level-এ দাম ছুঁতেই কেন entry নেওয়া ঠিক নয়?
+3. Fibonacci level কাজ করার সম্ভাব্য কারণ কী?
+4. উদাহরণ ২-এ কোন দুটি সংকেত ছিল যা trade বাদ দেওয়ার ইঙ্গিত দিত?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** Swing low থেকে swing high পর্যন্ত।
+
+**২.** Level শুধু সম্ভাব্য জায়গা। Rejection candle ছাড়া দাম থামবে কি না জানা যায় না।
+
+**৩.** অনেক trader একই level দেখে, তাই সেখানে অর্ডার জমে। এটি প্রমাণিত নিয়ম নয়।
+
+**৪.** Confluence-এর অভাব, আর পাঁচটি জোরালো bearish candle-এর pullback, যেখানে bounce ছিল দুর্বল।
+
+</details>
+
+## পরের ধাপ
+
+- আগে: [Trendlines & Channels](/bn/learn/05-support-resistance/04-trendlines-channels)।
+- পরে: [Trend ও Chart Patterns](/bn/learn/06-trend-chart-patterns/00-overview)।
+- Stop নিয়ে বিস্তারিত: [Stop Loss Placement](/bn/learn/10-trade-management-execution/01-stop-loss-placement)।
+
+### সূত্র
+
+- [Fibonacci Retracement, Investopedia](https://www.investopedia.com/terms/f/fibonacciretracement.asp)
+
+<Disclaimer />

@@ -1,42 +1,281 @@
 ---
-title: "Shooting Star"
-description: "A bearish reversal pattern featuring a small lower body and an elongated upper shadow, demonstrating fierce price rejection at resistance."
+title: "Shooting Star: a spike up at the top, then the fall, as buyers fail"
+description: "How to spot a shooting star, how it differs from an inverted hammer, when it is tradeable at resistance, and why a stop mid-wick loses even when the idea is right, with charts."
 type: bearish
-category: "Shooting Star"
-winrate: "69% - 73%"
-riskReward: "1:3 to 1:4"
-maxRisk: "1%"
-bestLocation: "Major Resistance / Supply Zone / Swing High Liquidity Grab"
-chartId: "shooting-star-01"
-tags: [pattern, candlestick, shooting-star]
+category: rejection
+level: beginner
+candleCount: 1
+signal: reversal
+chartId: shooting-star-win-01
+tags: [pattern, candlestick, shooting-star, reversal, resistance]
+status: done
+sources:
+  - type: book
+    title: "Japanese Candlestick Charting Techniques - Steve Nison"
+    note: "Shooting star and inverted hammer"
+  - type: blog
+    title: "Shooting Star Candlestick - Investopedia"
+    url: "https://www.investopedia.com/terms/s/shootingstar.asp"
+updated: 2026-11-06
 ---
 
-<div className="flex gap-6 items-end my-8 p-8 bg-zinc-950 border border-border/50 rounded-2xl w-max relative overflow-hidden">
-  <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:20px_20px]"></div>
-  <div className="relative z-10 flex gap-6">
-    <Candle color="bull" bodyH="h-10" topW="h-2" botW="h-2" offset="mt-12" />
-    <Candle color="bull" bodyH="h-8" topW="h-4" botW="h-2" offset="mt-8" />
-    <Candle color="bear" bodyH="h-4" topW="h-12" botW="h-2" offset="mt-2" />
-  </div>
-</div>
+At the top of an uptrend price suddenly spikes far up, then gives it all back in the same candle and closes near the low. You recognise it correctly: a shooting star. You go short, but put the stop in the middle of the wick, because a stop above the whole wick feels too big. Price climbs back into the wick, takes the stop, then falls exactly as you expected. This page is the mirror of [Inverted Hammer](/en/patterns/inverted-hammer); only what differs is detailed here.
 
-## Market Psychology & Institutional Order Flow
-Buyers drove prices up to new session highs. However, at peak resistance, institutional smart money heavily offloaded positions, slamming the price back down to the lower range. The extended upper wick exposes complete buyer exhaustion.
+## At a glance
 
-## 5 Strict Anatomy & Recognition Rules
-1. **Peak Location:** Must occur at the peak of an uptrend or at defined HTF supply.
-2. **Upper Shadow:** Upper wick must be at least twice the size of the real body.
-3. **Lower Shadow:** Little to no lower shadow (< 10% of candle range).
-4. **Body Position:** Body sits strictly at the bottom of the total price range.
-5. **Follow-through:** The next candle must confirm with a downward close below the star body.
+| Item          | Shooting Star                                                                                               |
+| :------------ | :---------------------------------------------------------------------------------------------------------- |
+| Type          | Bearish reversal, one candle                                                                                |
+| Where to look | At the top of an uptrend, at a marked resistance or supply zone                                             |
+| Key features  | Small body at the bottom, upper wick at least twice the body, almost no lower wick                          |
+| Confirmation  | Next candle breaks the shooting star low or closes below it                                                 |
+| Stop          | Above the high of the whole wick, plus spread and a buffer                                                  |
+| Invalidation  | A close above the wick high                                                                                 |
+| Look-alikes   | Inverted Hammer (same shape, at the bottom of a downtrend), [Gravestone Doji](/en/patterns/gravestone-doji) |
+| Opposite      | [Hammer](/en/patterns/hammer)                                                                               |
 
-## 3 Proven Trade Execution Strategies
-**Strategy 1 (Break of Low):** Place Sell Stop 2 pips below the Shooting Star low with Stop Loss above the wick.
-**Strategy 2 (50% Upper Shadow Retest):** Place Sell Limit at the 50% midpoint of the upper tail.
-**Strategy 3 (Order Block Confirmation):** Drop to M15 and short the mitigation of the M15 Bearish Order Block.
+## What you will be able to do
 
-## Where It Works vs Where It Fails
-- ✅ **A+ High Probability Setups:** Daily resistance level, Buy-Side Liquidity (BSL) grab, and Bearish RSI divergence.
-- ❌ **Low Probability Traps (AVOID):** Occurring at a key support floor (where it acts as Inverted Hammer).
+- **Tell** a shooting star from an inverted hammer by location.
+- **Explain** why a shooting star's confirmation is easier than an inverted hammer's.
+- **Keep** the stop **above the whole wick** and handle risk through size.
 
-> ⚠️ **Pro Risk Management & Mindset Rule:** When a shooting star sweeps liquidity above an old high and snaps back, it is one of the highest win-rate setups in trading. Always limit risk to 1%–2% per trade and maintain a predefined Stop Loss.
+## Why it matters
+
+- **The close is already on the sellers' side.** In an inverted hammer the low close means buyers must win the next candle. In a shooting star the same low close favours sellers, so a break of the low is enough confirmation.
+- **The picture of a false breakout.** A long wick above resistance and a close back below means breakout buyers got trapped. More in [Fake Breakout](/en/learn/06-trend-chart-patterns/04-fake-breakout).
+- **The stop trap.** A long wick means a wide stop. Hiding the stop mid-wick to shrink it is this pattern's most expensive mistake.
+
+Prerequisites: the Inverted Hammer page (linked above) and [Stop Loss Placement](/en/learn/10-trade-management-execution/01-stop-loss-placement).
+
+## What is a shooting star
+
+**A shooting star is a candle at the top of an uptrend with a small body in the lower part of the candle and an upper wick at least twice the length of the body.** The name comes from a meteor: a bright tail left above as it falls.
+
+<CandleDiagram
+  title="Shooting star at resistance"
+  candles={[
+    { o: 40, h: 46, l: 39, c: 45, dim: true },
+    { o: 45, h: 51, l: 44, c: 50, dim: true },
+    { o: 50, h: 56, l: 49, c: 55, dim: true },
+    {
+      o: 55,
+      h: 70,
+      l: 54.6,
+      c: 54,
+      label: "Shooting star",
+      note: "wick pierces the level",
+    },
+    { o: 54, h: 55, l: 47, c: 48, dim: true },
+  ]}
+  levels={[{ price: 60, label: "old high", tone: "resistance" }]}
+  caption="The upper wick goes far beyond the old high; the close is near the candle's low."
+/>
+
+### Identification rules
+
+| Rule                                                | Required?               | Why                                               |
+| :-------------------------------------------------- | :---------------------- | :------------------------------------------------ |
+| Small body in the lower part of the candle          | Yes                     | A body in the middle makes it a spinning top      |
+| Upper wick at least twice the body                  | Yes                     | A short wick carries no rejection story           |
+| No lower wick, or a very small one                  | Yes                     | A long lower wick is a different shape            |
+| A clear uptrend before it, near a marked resistance | Yes                     | This is what separates it from an inverted hammer |
+| Wick goes beyond the level and returns              | No (but very important) | The clearest picture of a false breakout          |
+
+## Strong vs weak shooting star
+
+<DiagramRow>
+  <CandleDiagram
+    title="Strong"
+    verdict="good"
+    verdictLabel="tradeable"
+    candles={[
+      { o: 40, h: 46, l: 39, c: 45, dim: true },
+      { o: 45, h: 51, l: 44, c: 50, dim: true },
+      { o: 50, h: 64, l: 49.6, c: 49, label: "wick beyond the level" },
+      { o: 49, h: 50, l: 43, c: 44, dim: true },
+    ]}
+    levels={[{ price: 55, label: "old high", tone: "resistance" }]}
+    caption="At an old high after a rally, wick far beyond it, next candle breaks the low."
+  />
+  <CandleDiagram
+    title="Weak"
+    verdict="bad"
+    verdictLabel="avoid"
+    candles={[
+      { o: 40, h: 46, l: 39.5, c: 45.5, dim: true },
+      { o: 45.5, h: 51, l: 45, c: 50.5, dim: true },
+      { o: 50.5, h: 54, l: 50, c: 50, label: "short wick, no level" },
+      { o: 50, h: 56, l: 49.5, c: 55.5, dim: true },
+    ]}
+    caption="A short wick mid-trend that touches no level; the next candle moves higher."
+  />
+</DiagramRow>
+
+| Quality check | Strong                                   | Weak                      |
+| :------------ | :--------------------------------------- | :------------------------ |
+| Where         | At a marked old high or supply zone      | Mid-trend, no level       |
+| Upper wick    | 4-6× the body, beyond the level          | Just 2×, touches no level |
+| Room below    | At least 1.5R to the nearest support     | A higher low right below  |
+| Stop          | Above the wick high, size cut to 1% risk | Hidden mid-wick           |
+
+## The story inside the candle
+
+The inverted hammer's story, but at a top. One common interpretation: buyers lift price hard at first, the old high breaks and breakout buyers join. Large sell orders arrive up there and price falls all the way back to close below the open. Those who bought high are losing, and their stops sit below the shooting star low. If the low breaks, those stops can add to the selling.
+
+<Callout type="note">
+  This is a common interpretation, not a proven fact. A chart does not show
+  where anyone's stop is.
+</Callout>
+
+## Where it works and where it does not
+
+<Compare
+  leftLabel="Where a shooting star carries weight"
+  rightLabel="Where a shooting star is often a trap"
+  left="- At a marked old high or supply zone after a long rally
+- When the wick pierces resistance and closes back below
+- At the top of a pullback inside a downtrend, in the trend direction
+- When there is enough room to the nearest support below"
+  right="- Mid-way through a strong uptrend, no level
+- With a higher low or broken resistance right below
+- At the bottom of a downtrend (then it is an inverted hammer)
+- When the stop is placed mid-wick"
+/>
+
+## Step by step: trading a shooting star
+
+The full steps are on the Inverted Hammer page, reversed. Only what differs:
+
+<Steps>
+
+### Step 1: Easier confirmation, but still wait
+
+The shooting star already closed low, so a **low break** on the next candle is the standard entry: a sell stop just below the low. For more certainty, wait for a close below the low.
+
+### Step 2: Stop above the whole wick
+
+Stop above the wick high, plus the [spread](/en/learn/01-foundations/04-spread-commission-swap). The wick is long, so the stop is wide. The fix is not moving the stop but **cutting size**: calculate [position size](/en/learn/08-risk-management/02-position-sizing) from that wide distance.
+
+### Step 3: Measure R:R with the full stop
+
+If the [risk reward](/en/learn/08-risk-management/03-risk-reward) to the nearest support with the wide stop is below 1:1.5, skip the trade; do not shrink the stop to make the R:R work.
+
+</Steps>
+
+### Pre-trade checklist
+
+<Checklist
+  id="pattern-shooting-star-pretrade-en"
+  items={[
+    "Was resistance marked before the shooting star, and is it at that level at the top of an uptrend?",
+    "Does the shape pass the rules (small body at the bottom, upper wick at least twice the body, almost no lower wick)?",
+    "Has the shooting star closed, and has the next candle broken its low?",
+    "With the stop above the whole wick, is the risk reward to the nearest support still at least 1:1.5?",
+    "Is the higher-timeframe trend or level not against the trade?",
+  ]}
+/>
+
+If any box stays empty, skip the trade.
+
+## Example 1: when it works (illustrative)
+
+<Chart
+  id="shooting-star-win-01"
+  height={420}
+  caption="XAUUSD D1 (illustrative, synthetic) — a shooting star pierces an old high; short when the next candle breaks its low."
+/>
+
+- **What was visible:** Candle 5 left an old high at 2403.97. Candles 6-10 fell to about 2290, and 11-15 rallied back under the high.
+- **The shooting star:** Candle 16 opened at 2394.97 and closed at 2388.97 (also its low). The upper wick reached 2433.97, $30 beyond the old high, about six and a half times the body.
+- **Decision:** Sell stop at 2387.47. Stop at 2436.97 ($3 above the wick high): $49.50 of risk, so a small size. Target 2288.47 (2R), near the earlier pullback low at 2290; room was about 1.97R.
+- **Result:** Candle 17 broke the low and filled the order. Candle 24 reached the target.
+- **Lesson:** A wick beyond the level, a low close, a stop above the whole wick and enough room below.
+
+<TradeSetup
+  direction="short"
+  pair="XAUUSD"
+  entry={2387.47}
+  stop={2436.97}
+  target={2288.47}
+/>
+
+(Illustrative example, not a real trade. Not every shooting star leads to a reversal, and no result is guaranteed.)
+
+## Example 2: when it is a trap (illustrative)
+
+<Chart
+  id="shooting-star-fail-01"
+  height={420}
+  caption="USDJPY H4 (illustrative, synthetic) — a valid shooting star, but the stop sits mid-wick. A retest takes it, then price falls."
+/>
+
+- **What was visible:** An old high near 151.91. Candle 15 was a clean shooting star: open 151.807, close 151.757, wick up to 152.307.
+- **Decision:** Sell stop 151.737, filled on candle 16. But the stop went mid-wick at 152.057, so the risk was 32 pips and the 2R target at 151.097 looked close. The proper stop (above the wick high) would have been 152.357: 62 pips of risk.
+- **What happened:** Candle 17 rose into the wick to 152.117 and took the stop. Then price fell steadily, and candle 22 even reached the proper stop's 2R target at 150.497.
+- **Why it failed:** The idea was right; the stop was in the wrong place. Prices inside the wick had already traded, so a retest there was normal.
+
+**Lesson:** To shrink risk, cut size; do not move the stop. With the proper stop this trade would have won 2R, at about half the size.
+
+## Common mistakes
+
+| Mistake                                       | Why it happens                     | What to do instead                           |
+| :-------------------------------------------- | :--------------------------------- | :------------------------------------------- |
+| Hiding the stop mid-wick                      | Fear of a wide stop                | Stop above the wick high; cut size           |
+| Calculating R:R with the small stop           | Making the numbers look good       | Measure R:R with the full stop               |
+| Shorting the same shape at a downtrend bottom | Not recognising an inverted hammer | Location first; at a bottom it leans bullish |
+| Shorting mid-trend without a level            | Treating every wick as a signal    | Only at marked resistance                    |
+
+## Pro tips
+
+<Callout type="tip">
+  With a very long wick, consider a sell limit at 50% of the wick instead of the
+  low break. The stop stays in the same place (above the wick high), but the
+  higher entry roughly halves the risk. If price does not return, you miss it.
+</Callout>
+
+<Callout type="tip">
+  After a shooting star, price often returns once into the lower part of the
+  wick. That is normal; with the stop above the wick high, this retest does not
+  hurt your trade.
+</Callout>
+
+## Summary
+
+<KeyTakeaways>
+
+- Shooting star = small body at the bottom, long upper wick, at the top of an uptrend; at a bottom the same shape is an inverted hammer.
+- The close already favours sellers, so a break of the next candle's low is the standard entry.
+- Stop above the whole wick; cut size to reduce risk, never the stop.
+- Skip it unless the full stop still leaves at least 1.5R to the nearest support.
+
+</KeyTakeaways>
+
+## Practice and your own backtest
+
+Open XAUUSD D1 or USDJPY H4 in TradingView. Find at least 20 shooting stars. For each, log: date, whether it was at resistance, wick ÷ body, whether the next candle broke the low, how far into the wick price later retested, and result (R). The retest column alone shows how many trades a mid-wick stop would have lost for no reason. Do not draw conclusions from fewer than 30 samples.
+
+## Quiz
+
+1. Why is a shooting star's confirmation easier than an inverted hammer's?
+2. With the stop above the wick, R:R comes out at 1.2. Is it fine to move the stop mid-wick to make 2R?
+3. In Example 2, what would have happened with the proper stop?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** The shooting star's low close favours sellers; they already won the candle. The same low close in an inverted hammer works against buyers, so there the next candle has to show stronger proof.
+
+**2.** No. R:R must be measured with the full stop. 1.2 means skip the trade.
+
+**3.** Price never reached 152.357. The trade would have survived and hit the 2R target on candle 22, at about half the size.
+
+</details>
+
+## Next steps
+
+- Full walk-through: [Inverted Hammer](/en/patterns/inverted-hammer).
+- Where to put stops: [Stop Loss Placement](/en/learn/10-trade-management-execution/01-stop-loss-placement).
+- Same family: [Gravestone Doji](/en/patterns/gravestone-doji), [Hanging Man](/en/patterns/hanging-man), [Bearish Engulfing](/en/patterns/bearish-engulfing).
+
+<Disclaimer />

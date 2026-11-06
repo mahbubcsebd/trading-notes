@@ -1,0 +1,204 @@
+---
+title: "Volume and VWAP: Check Whether a Breakout Has Participation"
+description: "What volume is, the limits of tick volume in forex, how to read VWAP, and volume confirmation on a breakout versus the weak-volume trap, with chart examples."
+level: intermediate
+tags: [volume, vwap, tick-volume, breakout, indicators]
+instruments: [EURUSD]
+timeframes: [H4]
+status: done
+sources:
+  - type: blog
+    title: "Volume Definition - Investopedia"
+    url: "https://www.investopedia.com/terms/v/volume.asp"
+  - type: blog
+    title: "Volume Weighted Average Price (VWAP) - Investopedia"
+    url: "https://www.investopedia.com/terms/v/vwap.asp"
+updated: 2026-11-06
+---
+
+# Volume and VWAP: Check Whether a Breakout Has Participation
+
+Price broke a level. Everyone says "breakout!". But how many people actually joined in? A goal in an empty stadium is not like a goal in a full one. Volume measures that crowd.
+
+## What you will be able to do
+
+- Explain what volume tells you and **why tick volume has limits in forex**.
+- Look for **volume confirmation** on a breakout.
+- Read **VWAP** to see where the average buyer and seller stand.
+- **Reduce risk** on a weak-volume breakout.
+
+## Why it matters
+
+- **The force behind price.** Price tells you what happened; volume tells you how many were part of it.
+- **A breakout filter.** It works well combined with the third condition of Range Breakout.
+- **It avoids wrong expectations.** Forex has no central volume; if you do not know this, you will misread it.
+
+Prerequisites: [Range Breakout](/en/learn/06-trend-chart-patterns/03-range-breakout) and [Moving Averages](/en/learn/07-technical-indicators/01-moving-averages-crossover).
+
+## What are volume and VWAP
+
+**Volume measures how much was traded in a period. VWAP (Volume Weighted Average Price) is the average price of that trading, where prices with more volume carry more weight.**
+
+Think of mangoes sold at a market. The price at which the most mangoes sold is the "real" price. VWAP is that average.
+
+**Caution for forex:** spot forex does not trade on a central exchange, so there is no single real volume. What you see on the chart is usually **tick volume**, that is, how many times price changed during that candle. It is an estimate of actual trading, but not a reliable measure. Volume in futures or stocks is more direct.
+
+VWAP is usually calculated from the start of a day. On this lesson's charts we use an "anchored VWAP", which starts from a chosen candle.
+
+## What it looks like on a chart: a confirmed breakout
+
+<Chart
+  id="volume-breakout-confirm-01"
+  height={460}
+  caption="EURUSD H4 (educational, synthetic example) — candle 39 breaks the range top at 1.0894 and closes at 1.0911, with tick volume 2.75 times the average of the last 20 candles. Anchored VWAP is the orange line."
+/>
+
+Notice:
+
+1. The volume bar at candle 39 is clearly bigger than the rest (3054 versus an average of 1111).
+2. Anchored VWAP is at 1.0870; price above it means price is above the recent average buyer.
+3. Volume is also relatively high on the next candle.
+
+## Step by step: checking a breakout with volume
+
+<Steps>
+
+### Step 1: Set the range and level
+
+In the example, the range top is 1.0894.
+
+### Step 2: Compare the breakout candle's volume with the average
+
+Check whether it is clearly higher than the average of the last 20 candles. "Clearly higher" means a big gap by your own judgement, not a small one.
+
+### Step 3: Check the position relative to VWAP
+
+Price above VWAP means recent buyers are in profit.
+
+### Step 4: Place entry and stop
+
+Entry 1.0911. Stop inside the range at 1.0882, a risk of 29 pips.
+
+### Step 5: Set the target
+
+At least twice the risk. In the example, 1.0969.
+
+</Steps>
+
+## Example 1: when it works (synthetic)
+
+The chart above:
+
+- **What you could see:** a high-volume candle breaking the range top, price above VWAP.
+- **Entry:** buy 1.0911.
+- **Stop:** 1.0882. Risk 29 pips.
+- **Target:** 1.0969, about 1:2.
+- **Result:** price hit the target.
+- **Lesson:** volume raised confidence in the breakout, but the stop was still placed.
+
+(Synthetic educational example. This is not a real trade, and no result is guaranteed.)
+
+## Example 2: when it fails (synthetic)
+
+The same range, but weak volume on the breakout:
+
+<Chart
+  id="volume-low-breakout-01"
+  height={460}
+  caption="EURUSD H4 (educational, synthetic example) — candle 39 breaks the range top and closes at 1.0909, but tick volume is only 0.85 times the average. Price comes back and the stop is hit at candle 44."
+/>
+
+- **What you could see:** price broke the range top, but the volume bar is ordinary.
+- **Decision:** buy 1.0909, stop 1.0882, risk 27 pips.
+- **Result:** price came back inside the range and hit the stop at candle 44.
+- **Why it failed:** there was no crowd behind the break. Everyone was still standing on the side.
+- **Lesson:** weak volume does not guarantee failure, but there is no extra confirmation. Cut the size or wait.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Common mistakes
+
+| Mistake                                 | Why it happens                 | What to do                           |
+| :-------------------------------------- | :----------------------------- | :----------------------------------- |
+| Treating tick volume as real volume     | It looks the same on the chart | Remember its limits                  |
+| Picking direction from volume           | Volume does not give direction | Price structure first                |
+| Trusting the volume of one bar          | It looks dramatic              | Compare it with the average          |
+| Treating VWAP as a forecast             | The line looks neat            | It is an average, not a target       |
+| Always assuming the volume filter works | The rule is simple             | News and session opens are different |
+
+## Pro tips
+
+<Callout type="tip">
+  After the breakout, also check volume on the retest. If volume is low on the
+  retest and high on the bounce, the strength is holding.
+</Callout>
+
+<Callout type="tip">
+  Volume naturally rises at session opens ([Trading
+  Sessions](/en/learn/01-foundations/05-trading-sessions)). Consider the time,
+  not just the number.
+</Callout>
+
+<Callout type="warning">
+  Low volume does not mean automatic failure. It only means a lack of
+  confirmation. No trade without a stop.
+</Callout>
+
+## When this does not work
+
+- **Forex tick volume:** it does not always match actual trading.
+- **At session opens or on news:** volume is high anyway, so comparisons mislead.
+- **Thinly traded assets:** one big order changes the whole picture.
+- **On small timeframes:** volume bars are very unstable.
+
+## Summary
+
+<KeyTakeaways>
+
+- Volume shows how many took part; in forex it is tick volume, only an estimate.
+- VWAP is the volume-weighted average price.
+- Volume clearly above average on a breakout gives confirmation.
+- If volume is weak, cut the size or wait.
+
+</KeyTakeaways>
+
+## Practice
+
+On TradingView, turn on volume and VWAP on an EUR/USD H4 chart. In the last 3 months, find five range breakouts. Compare each one's volume with the average and note which ones held.
+
+## Quiz
+
+1. What is volume on a forex chart, really?
+2. What is VWAP?
+3. What do you do if volume is weak on a breakout?
+4. Why can you not set direction from volume alone?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** Tick volume: how many times price changed, not actual trading.
+
+**2.** The volume-weighted average price.
+
+**3.** Cut the size or wait for confirmation, and always place a stop.
+
+**4.** Volume tells you how many were there, not whether they were buyers or sellers.
+
+</details>
+
+## Next steps
+
+- Before: [Bollinger Bands](/en/learn/07-technical-indicators/05-bollinger-bands).
+- Next: [Indicator Overload](/en/learn/07-technical-indicators/07-indicator-overload).
+- On breakouts: [Fake Breakout](/en/learn/06-trend-chart-patterns/04-fake-breakout).
+
+### Sources
+
+- <ExternalLink href="https://www.investopedia.com/terms/v/volume.asp">
+    Volume, Investopedia
+  </ExternalLink>
+- <ExternalLink href="https://www.investopedia.com/terms/v/vwap.asp">
+    VWAP, Investopedia
+  </ExternalLink>
+
+<Disclaimer />

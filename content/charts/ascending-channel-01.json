@@ -1,0 +1,248 @@
+{
+  "id": "ascending-channel-01",
+  "title": {
+    "en": "Ascending Channel — Buy Low Edge, Take Profit at Top",
+    "bn": "অ্যাসেন্ডিং চ্যানেল — নিচের সীমায় বাই, উপরে প্রফিট"
+  },
+  "symbol": "EURUSD",
+  "timeframe": "H1",
+  "mode": "synthetic",
+  "type": "educational",
+  "bias": "bullish",
+  "tags": [
+    "channel",
+    "ascending"
+  ],
+  "module": "05-support-resistance",
+  "lessonSlugs": [
+    "04-trendlines-channels"
+  ],
+  "caption": {
+    "en": "Parallel lines: support trendline below, parallel resistance above.",
+    "bn": "দুটি সমান্তরাল লাইন: নিচে সাপোর্ট ট্রেন্ডলাইন, উপরে সমান্তরাল রেজিস্ট্যান্স।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data.",
+    "bn": "এটি শিক্ষামূলক কাল্পনিক ডেটা।"
+  },
+  "updatedAt": "2026-11-05T10:00:00Z",
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.2406,
+      "h": 1.242,
+      "l": 1.2402,
+      "c": 1.2414
+    },
+    {
+      "i": 1,
+      "o": 1.2414,
+      "h": 1.2458,
+      "l": 1.2412,
+      "c": 1.245
+    },
+    {
+      "i": 2,
+      "o": 1.245,
+      "h": 1.2505,
+      "l": 1.2445,
+      "c": 1.25
+    },
+    {
+      "i": 3,
+      "o": 1.25,
+      "h": 1.2536,
+      "l": 1.2494,
+      "c": 1.253
+    },
+    {
+      "i": 4,
+      "o": 1.253,
+      "h": 1.2538,
+      "l": 1.2498,
+      "c": 1.2506
+    },
+    {
+      "i": 5,
+      "o": 1.2506,
+      "h": 1.2511,
+      "l": 1.2475,
+      "c": 1.248
+    },
+    {
+      "i": 6,
+      "o": 1.248,
+      "h": 1.2486,
+      "l": 1.246,
+      "c": 1.2468
+    },
+    {
+      "i": 7,
+      "o": 1.2473,
+      "h": 1.2518,
+      "l": 1.2472,
+      "c": 1.251
+    },
+    {
+      "i": 8,
+      "o": 1.251,
+      "h": 1.2581,
+      "l": 1.2505,
+      "c": 1.2576
+    },
+    {
+      "i": 9,
+      "o": 1.2576,
+      "h": 1.2602,
+      "l": 1.257,
+      "c": 1.2596
+    },
+    {
+      "i": 10,
+      "o": 1.2596,
+      "h": 1.2604,
+      "l": 1.2552,
+      "c": 1.256
+    },
+    {
+      "i": 11,
+      "o": 1.256,
+      "h": 1.2565,
+      "l": 1.2529,
+      "c": 1.2534
+    },
+    {
+      "i": 12,
+      "o": 1.2534,
+      "h": 1.254,
+      "l": 1.252,
+      "c": 1.2528
+    },
+    {
+      "i": 13,
+      "o": 1.2533,
+      "h": 1.2572,
+      "l": 1.2532,
+      "c": 1.2564
+    },
+    {
+      "i": 14,
+      "o": 1.2564,
+      "h": 1.2635,
+      "l": 1.2559,
+      "c": 1.263
+    },
+    {
+      "i": 15,
+      "o": 1.263,
+      "h": 1.2666,
+      "l": 1.2624,
+      "c": 1.266
+    },
+    {
+      "i": 16,
+      "o": 1.266,
+      "h": 1.2668,
+      "l": 1.2618,
+      "c": 1.2626
+    },
+    {
+      "i": 17,
+      "o": 1.2626,
+      "h": 1.2631,
+      "l": 1.2595,
+      "c": 1.26
+    },
+    {
+      "i": 18,
+      "o": 1.26,
+      "h": 1.2606,
+      "l": 1.258,
+      "c": 1.2588
+    },
+    {
+      "i": 19,
+      "o": 1.2593,
+      "h": 1.2642,
+      "l": 1.2592,
+      "c": 1.2634
+    },
+    {
+      "i": 20,
+      "o": 1.2634,
+      "h": 1.2701,
+      "l": 1.2629,
+      "c": 1.2696
+    },
+    {
+      "i": 21,
+      "o": 1.2696,
+      "h": 1.2724,
+      "l": 1.269,
+      "c": 1.2718
+    }
+  ],
+  "annotations": [
+    {
+      "type": "trendline",
+      "from": {
+        "i": 0,
+        "price": 1.24
+      },
+      "to": {
+        "i": 21,
+        "price": 1.261
+      },
+      "color": "#22c55e",
+      "label": "Channel Support"
+    },
+    {
+      "type": "trendline",
+      "from": {
+        "i": 0,
+        "price": 1.252
+      },
+      "to": {
+        "i": 21,
+        "price": 1.273
+      },
+      "color": "#ef4444",
+      "label": "Channel Resistance"
+    },
+    {
+      "type": "marker",
+      "i": 6,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Buy edge"
+    },
+    {
+      "type": "marker",
+      "i": 12,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Buy edge"
+    },
+    {
+      "type": "marker",
+      "i": 15,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Take profit"
+    }
+  ],
+  "explanation": {
+    "en": "Draw the trendline first, then copy it parallel to the opposite swing highs. Price rotates between the two edges. Buy near the lower edge with a stop below it; take profit near the upper edge. A close outside either edge warns the channel is ending.",
+    "bn": "আগে ট্রেন্ডলাইন আঁকুন, তারপর সেটি সমান্তরালভাবে বিপরীত সুইং হাইতে কপি করুন। প্রাইস দুই সীমার মধ্যে ঘোরে। নিচের সীমায় বাই, স্টপ তার নিচে; উপরের সীমায় প্রফিট। যেকোনো সীমার বাইরে ক্লোজ মানে চ্যানেল শেষ হতে পারে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Channel = trendline + parallel copy",
+      "bn": "চ্যানেল = ট্রেন্ডলাইন + সমান্তরাল কপি"
+    },
+    {
+      "en": "Close outside an edge = warning",
+      "bn": "সীমার বাইরে ক্লোজ = সতর্কতা"
+    }
+  ]
+}

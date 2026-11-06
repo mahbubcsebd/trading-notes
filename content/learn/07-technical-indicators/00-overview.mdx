@@ -1,0 +1,100 @@
+---
+title: "Technical Indicators: দাম থেকে তৈরি সহায়ক যন্ত্র (চ্যাপ্টার পরিচিতি)"
+description: "Indicator কী, কেন দামের জায়গা নিতে পারে না, এই অধ্যায়ে MA, RSI, MACD, ATR, Bollinger Bands ও volume কীভাবে শেখানো হবে এবং কোন ক্রমে পড়বেন।"
+level: beginner
+tags: [indicators, overview, roadmap, technical-analysis]
+status: done
+updated: 2026-11-05
+---
+
+# Technical Indicators: দাম থেকে তৈরি সহায়ক যন্ত্র
+
+গাড়ির ড্যাশবোর্ডে speedometer আছে, কিন্তু রাস্তা দেখেন আপনি নিজে। Speedometer বলে আপনি কত দ্রুত যাচ্ছেন, কোথায় যাবেন তা বলে না। Indicator ঠিক তেমন।
+
+## Technical Indicator কী
+
+**Technical indicator হলো দাম (এবং কখনো volume) থেকে গণনা করা একটি সংখ্যা বা রেখা, যা chart-এ দেখে দামের আচরণের একটি দিক সহজে পড়া যায়।**
+
+এই অধ্যায় একটি প্রশ্নের উত্তর দেয়: **"কোন প্রশ্নের জন্য কোন indicator, আর কখন তা বিভ্রান্ত করে?"**
+
+প্রতিটি indicator দামের পরে আসে, দামের আগে নয়। তাই এটি সিদ্ধান্তের বদলে সিদ্ধান্তের সহায়ক।
+
+## কেন এটি এখন শিখবেন
+
+- **আপনি এখন structure পড়তে পারেন।** [Market Structure](/bn/learn/03-market-structure/00-overview), [Support ও Resistance](/bn/learn/05-support-resistance/00-overview) এবং [Chart Pattern](/bn/learn/06-trend-chart-patterns/00-overview) জানার পর indicator কোথায় সাহায্য করে ও কোথায় করে না, তা বোঝা সহজ।
+- **নতুনরা উল্টো ক্রমে শেখেন।** আগে indicator, পরে দাম। ফলে ১০টি রেখা থাকে কিন্তু সিদ্ধান্ত থাকে না।
+- **ATR সরাসরি stop ও size ঠিক করে।** পরের [Risk Management](/bn/learn/08-risk-management/01-risk-per-trade) অধ্যায়ের জন্য এটি দরকার।
+- **ভুল ব্যবহার ব্যয়বহুল।** যেমন trend-এ RSI দেখে sell, বা range-এ crossover দেখে buy।
+
+## এই অধ্যায় শেষে আপনি যা পারবেন
+
+- Moving average দিয়ে **trend-এর দিক ও pullback-এর জায়গা চিনতে পারবেন**।
+- RSI দিয়ে **momentum পড়তে এবং divergence চিনতে পারবেন**।
+- MACD-র তিনটি অংশ **আলাদা করে বুঝে সঠিক পরিস্থিতিতে ব্যবহার করতে পারবেন**।
+- ATR দিয়ে **volatility অনুযায়ী stop ও size বসাতে পারবেন**।
+- Bollinger Bands ও volume দিয়ে **squeeze, breakout ও তার নিশ্চিতকরণ পড়তে পারবেন**।
+- অপ্রয়োজনীয় indicator **ছেঁটে একটি পরিষ্কার chart সাজাতে পারবেন**।
+
+## পড়ার ক্রম: কোন পাঠে কী আছে
+
+| #   | পাঠ                                                                               | মূল প্রশ্ন                                  | কঠিনতা |
+| :-- | :-------------------------------------------------------------------------------- | :------------------------------------------ | :----- |
+| ১   | [Moving Averages](/bn/learn/07-technical-indicators/01-moving-averages-crossover) | Trend কোন দিকে, pullback কোথায় থামতে পারে? | সহজ    |
+| ২   | [RSI ও Divergence](/bn/learn/07-technical-indicators/02-rsi-divergence)           | Momentum শক্ত না দুর্বল?                    | মাঝারি |
+| ৩   | [MACD](/bn/learn/07-technical-indicators/03-macd)                                 | Momentum কখন দিক পাল্টায়?                  | মাঝারি |
+| ৪   | [ATR ও Stop Size](/bn/learn/07-technical-indicators/04-atr-stop-size)             | Stop কত দূরে বসালে noise কাটবে না?          | মাঝারি |
+| ৫   | [Bollinger Bands](/bn/learn/07-technical-indicators/05-bollinger-bands)           | Volatility কম না বেশি, চাল আসছে কি?         | মাঝারি |
+| ৬   | [Volume ও VWAP](/bn/learn/07-technical-indicators/06-volume-vwap)                 | Breakout-এ অংশগ্রহণ আছে কি?                 | মাঝারি |
+| ৭   | [Indicator Overload](/bn/learn/07-technical-indicators/07-indicator-overload)     | কয়টি indicator যথেষ্ট?                     | সহজ    |
+
+## এই পাঠগুলো কীভাবে একসঙ্গে কাজ করে
+
+Chart খুলে প্রশ্নগুলো এই ক্রমে আসে:
+
+1. **দিক কী?** Moving average (পাঠ ১) বা structure বলে trend আছে কি না।
+2. **Momentum কেমন?** RSI ও MACD (পাঠ ২-৩) গতি বাড়ছে না কমছে তা দেখায়।
+3. **Volatility কত?** ATR ও Bollinger Bands (পাঠ ৪-৫) stop-এর দূরত্ব ও আসন্ন চাল নির্দেশ করে।
+4. **অংশগ্রহণ আছে কি?** Volume (পাঠ ৬) breakout-এর শক্তি যাচাই করে।
+5. **কয়টি tool দরকার?** শেষ পাঠ আপনাকে প্রতি প্রশ্নে একটিই tool রাখতে শেখায়।
+
+## এই অধ্যায়ে যা নেই
+
+- **Swing, trend ও structure:** Market Structure অধ্যায়ে।
+- **Level, trendline ও Fibonacci:** Support & Resistance অধ্যায়ে।
+- **Candle ও price pattern:** [Candlesticks](/bn/learn/04-candlesticks/00-overview) এবং Chart Patterns অধ্যায়ে।
+- **Position size ও ঝুঁকির হিসাব:** Risk Management অধ্যায়ে।
+
+## কীভাবে এই অধ্যায় পড়বেন
+
+- **একবারে একটি indicator যোগ করুন।** প্রতিটি পাঠের পর chart পরিষ্কার করুন।
+- **Demo account-এ অনুশীলন করুন।** Real টাকায় নয়।
+- **Settings বদলাবেন না।** শুরুতে প্রচলিত মান (যেমন RSI 14, MACD 12-26-9) ব্যবহার করুন।
+- **প্রতিটি indicator-এর ব্যর্থতার ছবিও দেখুন।** শিক্ষা সেখানেই বেশি।
+
+<Callout type="note">
+  এই অধ্যায়ের chart শিক্ষামূলক synthetic ডেটায় তৈরি এবং প্রতিটির নিচে তা লেখা
+  আছে। এখানে কোনো indicator-এর সাফল্যের হার দেওয়া হয়নি, কারণ ফল বাজার,
+  timeframe ও সংজ্ঞার ওপর নির্ভর করে। Forex-এ volume বলতে tick volume বোঝায়,
+  প্রকৃত লেনদেন নয়।
+</Callout>
+
+## নিজেকে যাচাই করুন
+
+<Checklist
+  items={[
+    "আমি কি Swing High ও Swing Low চিনি?",
+    "আমি কি Trend ও Range-এর তফাত বলতে পারি?",
+    "আমি কি Support ও Resistance আঁকতে পারি?",
+    "আমি কি stop loss কী ও কেন তা জানি?",
+  ]}
+/>
+
+কোনোটিতে "না" হলে আগে Market Structure অধ্যায় পড়ে আসুন।
+
+## পরের ধাপ
+
+- শুরু করুন: [Moving Averages](/bn/learn/07-technical-indicators/01-moving-averages-crossover)।
+- আগের অধ্যায়: [Chart Patterns](/bn/learn/06-trend-chart-patterns/00-overview)।
+- এই অধ্যায়ের পর: [Risk Management](/bn/learn/08-risk-management/01-risk-per-trade)।
+
+<Disclaimer />

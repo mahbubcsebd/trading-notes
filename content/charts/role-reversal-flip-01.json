@@ -1,0 +1,244 @@
+{
+  "symbol": "EURUSD",
+  "timeframe": "H4",
+  "mode": "synthetic",
+  "module": "05-support-resistance",
+  "lessonSlugs": [
+    "02-role-reversal"
+  ],
+  "notes": {
+    "en": "Illustrative synthetic data.",
+    "bn": "এটি শিক্ষামূলক কাল্পনিক ডেটা।"
+  },
+  "updatedAt": "2026-11-05T18:00:00Z",
+  "type": "trade-setup",
+  "id": "role-reversal-flip-01",
+  "title": {
+    "en": "Broken Support Flips to Resistance",
+    "bn": "ভাঙা support হয়ে গেল resistance"
+  },
+  "bias": "bearish",
+  "outcome": "win",
+  "tags": [
+    "support-resistance",
+    "role-reversal",
+    "retest"
+  ],
+  "caption": {
+    "en": "Support zone holds three times, candle 10 closes below it, candle 13 retests from below and is rejected. Sell with stop above the zone.",
+    "bn": "Support zone তিনবার টিকে, ১০ নম্বর candle নিচে close করে ভাঙে, ১৩ নম্বর candle নিচ থেকে retest করে ফিরে যায়। Zone-এর ওপরে stop দিয়ে sell।"
+  },
+  "annotations": [
+    {
+      "type": "zone",
+      "from": {
+        "price": 1.0842,
+        "i": 1
+      },
+      "to": {
+        "price": 1.082,
+        "i": 17
+      },
+      "label": "Old Support / New Resistance",
+      "color": "#f59e0b"
+    },
+    {
+      "type": "marker",
+      "i": 1,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Touch 1"
+    },
+    {
+      "type": "marker",
+      "i": 5,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Touch 2"
+    },
+    {
+      "type": "marker",
+      "i": 8,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Touch 3"
+    },
+    {
+      "type": "marker",
+      "i": 10,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Break"
+    },
+    {
+      "type": "marker",
+      "i": 13,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Retest"
+    },
+    {
+      "type": "hline",
+      "price": 1.0806,
+      "label": "Sell entry",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.0848,
+      "label": "Stop (above zone)",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.0722,
+      "label": "Target",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Three touches build a support zone at 1.0820-1.0842. Candle 10 closes at 1.0796, below the zone: support is broken. Candle 13 pulls back into the zone, prints a long upper wick and closes at 1.0809, below the zone. Candle 14 breaks the retest candle low, sell at 1.0806. Stop at 1.0848 above the zone is 42 pips; target 1.0722 is 84 pips, about 2R.",
+    "bn": "তিনবার ধাক্কায় 1.0820-1.0842 support zone তৈরি হয়। ১০ নম্বর candle 1.0796-এ close করে zone-এর নিচে, support ভাঙল। ১৩ নম্বর candle zone-এ ফিরে লম্বা upper wick রেখে 1.0809-এ close করে, zone-এর নিচে। ১৪ নম্বর candle retest candle-এর low ভাঙে, sell 1.0806-এ। Zone-এর ওপরে 1.0848 stop, ঝুঁকি 42 pip; target 1.0722, লাভ 84 pip, প্রায় ২R।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Break alone is not entry; wait for the retest",
+      "bn": "শুধু ভাঙা entry নয়; retest-এর অপেক্ষা করুন"
+    },
+    {
+      "en": "Old support zone now acts as resistance",
+      "bn": "পুরনো support zone এখন resistance"
+    }
+  ],
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.089,
+      "h": 1.0895,
+      "l": 1.0862,
+      "c": 1.0868
+    },
+    {
+      "i": 1,
+      "o": 1.0868,
+      "h": 1.0872,
+      "l": 1.0838,
+      "c": 1.0845
+    },
+    {
+      "i": 2,
+      "o": 1.0845,
+      "h": 1.088,
+      "l": 1.0842,
+      "c": 1.0876
+    },
+    {
+      "i": 3,
+      "o": 1.0876,
+      "h": 1.0898,
+      "l": 1.087,
+      "c": 1.0892
+    },
+    {
+      "i": 4,
+      "o": 1.0892,
+      "h": 1.0896,
+      "l": 1.086,
+      "c": 1.0866
+    },
+    {
+      "i": 5,
+      "o": 1.0866,
+      "h": 1.0868,
+      "l": 1.0828,
+      "c": 1.0835
+    },
+    {
+      "i": 6,
+      "o": 1.0835,
+      "h": 1.0872,
+      "l": 1.0832,
+      "c": 1.0868
+    },
+    {
+      "i": 7,
+      "o": 1.0868,
+      "h": 1.088,
+      "l": 1.0858,
+      "c": 1.0862
+    },
+    {
+      "i": 8,
+      "o": 1.0862,
+      "h": 1.0865,
+      "l": 1.0822,
+      "c": 1.083
+    },
+    {
+      "i": 9,
+      "o": 1.083,
+      "h": 1.085,
+      "l": 1.0826,
+      "c": 1.0846
+    },
+    {
+      "i": 10,
+      "o": 1.0846,
+      "h": 1.0848,
+      "l": 1.0788,
+      "c": 1.0796
+    },
+    {
+      "i": 11,
+      "o": 1.0796,
+      "h": 1.08,
+      "l": 1.077,
+      "c": 1.0778
+    },
+    {
+      "i": 12,
+      "o": 1.0778,
+      "h": 1.0818,
+      "l": 1.0775,
+      "c": 1.0814
+    },
+    {
+      "i": 13,
+      "o": 1.0814,
+      "h": 1.0834,
+      "l": 1.0806,
+      "c": 1.0809
+    },
+    {
+      "i": 14,
+      "o": 1.0809,
+      "h": 1.0812,
+      "l": 1.077,
+      "c": 1.0775
+    },
+    {
+      "i": 15,
+      "o": 1.0775,
+      "h": 1.078,
+      "l": 1.0745,
+      "c": 1.075
+    },
+    {
+      "i": 16,
+      "o": 1.075,
+      "h": 1.0758,
+      "l": 1.0725,
+      "c": 1.0732
+    },
+    {
+      "i": 17,
+      "o": 1.0732,
+      "h": 1.0745,
+      "l": 1.0715,
+      "c": 1.0722
+    }
+  ]
+}

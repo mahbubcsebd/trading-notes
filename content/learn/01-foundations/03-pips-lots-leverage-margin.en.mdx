@@ -1,0 +1,210 @@
+---
+title: "Pips, Lots, Leverage and Margin: Measuring Distance, Size and Borrowing"
+description: "What pips, lots, leverage and margin are, how to calculate them, how profit and loss change on the same 50-pip move when lot size changes, and the danger of too much leverage — with a chart and worked numbers."
+level: beginner
+tags: [pips, lots, leverage, margin, position-size]
+instruments: [EURUSD]
+timeframes: [H1]
+status: done
+sources:
+  - type: blog
+    title: "Pip - Investopedia"
+    url: "https://www.investopedia.com/terms/p/pip.asp"
+updated: 2026-11-06
+---
+
+# Pips, Lots, Leverage and Margin: Measuring Distance, Size and Borrowing
+
+On the road you measure distance in kilometres, but the fare depends on the size of the vehicle. In trading, the **pip** is the distance, the **lot** is the size of the vehicle, and **leverage** is borrowed power. Unless you understand all three together, your money maths will be wrong.
+
+## What you will be able to do
+
+- **Measure** pips.
+- **Work out** the money value of a pip from the lot size.
+- **Calculate** margin.
+- **Understand** the risk of leverage.
+
+## Why it matters
+
+- **The wrong lot size causes the biggest losses.** Even with the right direction, the wrong size can wipe out an account.
+- **It is the base of [Risk Management](/en/learn/08-risk-management/00-overview).** Position size rests on these calculations.
+- **You need to understand your broker's terms (margin, free margin).**
+
+Prerequisites: [Market Participants](/en/learn/01-foundations/02-market-participants).
+
+## Pip
+
+**A pip is the smallest standard step in price:** the fourth decimal place on most pairs (0.0001), and the second on JPY pairs (0.01).
+
+- EURUSD from 1.0850 to 1.0900 = **50 pips** (0.0050).
+- USDJPY from 150.00 to 150.50 = **50 pips** (0.50).
+- Many brokers also show a fifth decimal place (a **pipette**, or fractional pip).
+
+## Lot
+
+**A lot is the unit of trade size.**
+
+| Name                | Units of base currency | Value per pip on EURUSD (USD account) |
+| :------------------ | :--------------------- | :------------------------------------ |
+| Standard lot (1.00) | 100,000                | About 10 USD                          |
+| Mini lot (0.10)     | 10,000                 | About 1 USD                           |
+| Micro lot (0.01)    | 1,000                  | About 0.10 USD                        |
+
+Pip value varies a little with the pair, the account currency and the price. Check it with your platform's calculator. (More detail: [Position Sizing](/en/learn/08-risk-management/02-position-sizing))
+
+## Leverage and margin
+
+**Leverage is the broker's facility that lets you open a position larger than your own capital.** **Margin** is the deposit locked up to keep that position open.
+
+**Margin = total value of the position ÷ leverage**
+
+Example (synthetic): 0.10 lot of EURUSD at 1.0900. Position value = 10,000 × 1.0900 = 10,900 USD.
+
+| Leverage | Margin required |
+| :------- | :-------------- |
+| 1:30     | About 363 USD   |
+| 1:100    | 109 USD         |
+| 1:500    | About 21.8 USD  |
+
+**Margin is not a cost.** It is a deposit, returned when the trade closes. But **losses are real.** More leverage makes it easy to open bigger positions, and losses come faster.
+
+## What it looks like on a chart
+
+<Chart
+  id="pip-move-eurusd-01"
+  height={420}
+  caption="EURUSD H1 (educational, synthetic example) — 1.0850 to 1.0900 = 50 pips. The same move, but the money amount differs with lot size."
+/>
+
+The same 50-pip move:
+
+| Lot  | Approx. profit (USD) | Loss if the stop is 30 pips (USD) |
+| :--- | :------------------- | :-------------------------------- |
+| 0.01 | 5                    | 3                                 |
+| 0.10 | 50                   | 30                                |
+| 1.00 | 500                  | 300                               |
+
+## Step by step: sizing a trade
+
+<Steps>
+
+### Step 1: Decide how many pips the stop is
+
+Based on the setup. For example, 30 pips.
+
+### Step 2: How much are you willing to lose?
+
+1% of the account = 100 USD on 10,000. ([Risk per Trade](/en/learn/08-risk-management/01-risk-per-trade))
+
+### Step 3: Work out the lot size
+
+Lot = money at risk ÷ (stop in pips × value per pip). 100 ÷ (30 × 10) = 0.33 lot.
+
+### Step 4: Check the margin
+
+Use the platform's figure. Is there enough free margin?
+
+### Step 5: Size by risk, not by leverage
+
+Leverage is a limit, not a target.
+
+</Steps>
+
+## Example 1: when it works (synthetic)
+
+- **Account:** 10,000 USD. Risk 1% = 100.
+- **Trade:** EURUSD, stop 30 pips. Lot = 100 ÷ (30 × 10) ≈ 0.33.
+- **Result:** If the stop is hit, the loss is about 100 USD = 1%; with a 60-pip target, about +200 USD.
+- **Lesson:** Stop first, then lot size. The loss stays within the planned limit.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Example 2: when it fails (synthetic)
+
+- **Account:** 1,000 USD. The trader opened 1.00 lot (possible because leverage was 1:500).
+- **Trade:** Stop 30 pips.
+- **Result:** If the stop is hit, the loss = 30 × 10 = 300 USD = 30% of the account. Two such trades in a row take about 60% of the account.
+- **Why it failed:** Leverage made it easy to open a big lot, but there was no risk limit.
+- **Lesson:** The question is not how much leverage you have. The question is what % you will lose per trade.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Common mistakes
+
+| Mistake                                  | Why it happens           | What to do                              |
+| :--------------------------------------- | :----------------------- | :-------------------------------------- |
+| Thinking more leverage = more profit     | Greed                    | Think in risk %, not leverage           |
+| Assuming a pip is worth 10 on every pair | Oversimplifying          | Check with a calculator                 |
+| Treating margin as a cost                | Confusing terms          | It is a deposit; losses are separate    |
+| Picking a lot size "by feel"             | Rushing                  | Use the formula                         |
+| Counting JPY pips wrongly                | Different decimal places | On USDJPY, the second decimal = one pip |
+
+## Pro tips
+
+<Callout type="tip">
+  On a demo account, try the same 20-pip stop with different lot sizes and see
+  how much money you lose. Experience sticks better than a formula.
+</Callout>
+
+<Callout type="warning">
+  With leverage, in some regions and with some brokers, you can lose more than
+  you deposited. Know your broker's negative balance policy. This is educational
+  material, not investment advice.
+</Callout>
+
+## When this does not work
+
+- **On gold, indices and crypto:** The contract specs differ, so these numbers don't apply directly. [Gold's maths](/en/learn/13-gold-xauusd/02-gold-contract-spec-pip-value) is different.
+- **In an account in another currency:** Pip value has to be converted.
+- **Lot definitions differ by broker:** Some brokers offer "cent accounts", where a lot is smaller.
+
+## Summary
+
+<KeyTakeaways>
+
+- Pip = a small step; lot = size; leverage = borrowed power; margin = deposit.
+- Margin = position value ÷ leverage.
+- Set the lot size from the stop and your risk %.
+- More leverage raises risk; it does not guarantee profit.
+
+</KeyTakeaways>
+
+## Practice
+
+With a 2,000 USD account, 1% risk, a 25-pip stop and a pip value of 10 (per standard lot), work out the lot size. Then calculate the approximate margin at 1:100 leverage (EURUSD 1.0900).
+
+## Quiz
+
+1. If USDJPY moves from 150.00 to 150.30, how many pips is that?
+2. On 0.10 lot of EURUSD, about how many USD is one pip worth?
+3. Is margin a cost?
+4. At 1:100 leverage, what is the margin on a 10,900 USD position?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** 30 pips (0.30).
+
+**2.** About 1 USD.
+
+**3.** No, it is a deposit; it is returned when the trade closes.
+
+**4.** 109 USD.
+
+</details>
+
+**Practice answer:** Risk = 20 USD; lot = 20 ÷ (25 × 10) = 0.08 lot. Position value = 8,000 × 1.09 = 8,720; margin (1:100) = 87.2 USD.
+
+## Next steps
+
+- Previous: [Market Participants](/en/learn/01-foundations/02-market-participants).
+- Next: [Spread, Commission and Swap](/en/learn/01-foundations/04-spread-commission-swap).
+- Related: [Lot Size, Margin Call and Stop-out](/en/learn/02-broker-platform-setup/05-lot-size-margin-call-stop-out).
+
+### Sources
+
+- <ExternalLink href="https://www.investopedia.com/terms/p/pip.asp">
+    Pip, Investopedia
+  </ExternalLink>
+
+<Disclaimer />

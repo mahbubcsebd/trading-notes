@@ -1,14 +1,192 @@
 ---
-title: "Economic calendar NFP CPI FOMC"
-description: "Detailed notes on Economic calendar NFP CPI FOMC"
-status: draft
-updated: 2026-10-10
+title: "Economic Calendar: NFP, CPI ও FOMC কীভাবে পড়বেন"
+description: "Economic calendar-এর impact রং, forecast-previous-actual, এবং NFP, CPI ও FOMC কেন বাজারে সবচেয়ে বড় ঝাঁকুনি আনে — release candle-এর whipsaw সহ।"
+level: intermediate
+tags: [economic-calendar, nfp, cpi, fomc, volatility, news]
+instruments: [EURUSD]
+timeframes: [M5]
+status: done
+sources:
+  - type: blog
+    title: "Economic Calendar - Investopedia"
+    url: "https://www.investopedia.com/terms/e/economic-calendar.asp"
+  - type: blog
+    title: "Economic Indicators - BabyPips"
+    url: "https://www.babypips.com/learn/forex/economic-indicators"
+updated: 2026-11-05
 ---
 
-# Economic calendar NFP CPI FOMC
+# Economic Calendar: NFP, CPI ও FOMC কীভাবে পড়বেন
 
-<div className="rounded-xl border border-border bg-card p-6 text-center text-muted-foreground my-8">
-  <p className="text-3xl mb-4">🚧</p>
-  <p className="font-semibold text-foreground">Coming in Phase 2</p>
-  <p className="text-sm mt-1">This module is under construction.</p>
-</div>
+শুক্রবার বিকেলে সুন্দর একটি setup, আর হঠাৎ এক candle-এ 40 pip, stop উড়ে গেছে। Calendar আগেই বলে দিয়েছিল। এই পাঠ সেই calendar পড়ার।
+
+## এই লেখা পড়ে আপনি যা পারবেন
+
+- Calendar-এর **impact, forecast, previous ও actual** পড়তে পারবেন।
+- **NFP, CPI ও FOMC কী** তা সংক্ষেপে বলতে পারবেন।
+- Release-এর **আগে ও পরে দাম কেমন আচরণ করে** বুঝবেন।
+
+## কেন এটি জরুরি
+
+- **সবচেয়ে বড় ঝুঁকি আগে থেকে জানা যায়।** Calendar-এ সময় লেখা থাকে।
+- **Spread ও slippage বাড়ে।** [Spread widening](/bn/learn/10-trade-management-execution/04-slippage-requote-spread-widening) release-এর ঠিক মুহূর্তে সবচেয়ে বেশি।
+- **ভুল সময়ে entry অকারণ লোকসান আনে।** পরিকল্পনা বাঁচায়।
+
+পূর্বশর্ত: [Central Bank, সুদ ও Inflation](/bn/learn/11-fundamental-intermarket-analysis/01-central-bank-interest-rate-inflation)।
+
+## Calendar-এর কলাম
+
+**Economic calendar হলো আসন্ন অর্থনৈতিক ঘোষণার সময়সূচি, যেখানে প্রতিটির সম্ভাব্য প্রভাব ও প্রত্যাশা লেখা থাকে।**
+
+| কলাম     | অর্থ                              | কীভাবে ব্যবহার করবেন           |
+| :------- | :-------------------------------- | :----------------------------- |
+| সময়     | ঘোষণার ঠিক সময় (আপনার time zone) | আগে থেকে সতর্ক হোন             |
+| মুদ্রা   | কোন দেশের খবর                     | আপনার pair-এর সঙ্গে মেলান      |
+| Impact   | কম / মাঝারি / বেশি (রং দিয়ে)     | "বেশি" মানে বড় ঝাঁকুনির ঝুঁকি |
+| Forecast | বিশ্লেষকদের প্রত্যাশা             | বাজার এটাই ধরে বসে আছে         |
+| Previous | আগের মান                          | তুলনার ভিত্তি                  |
+| Actual   | ঘোষিত মান                         | forecast-এর সঙ্গে ফারাক দেখুন  |
+
+Time zone মিলিয়ে নিন। Calendar আপনার broker-এর বা নিজের time zone-এ দেখান কিনা যাচাই করুন, নইলে ভুল সময়ে সতর্ক হবেন।
+
+## তিনটি বড় ঘোষণা
+
+| নাম  | পূর্ণরূপ                      | কী মাপে                             | কত ঘন ঘন                              |
+| :--- | :---------------------------- | :---------------------------------- | :------------------------------------ |
+| NFP  | Non-Farm Payrolls             | US-এ কৃষি-বহির্ভূত নতুন চাকরি       | মাসে একবার                            |
+| CPI  | Consumer Price Index          | ভোক্তার জিনিসপত্রের দাম (inflation) | মাসে একবার                            |
+| FOMC | Federal Open Market Committee | US-এর সুদের হার সিদ্ধান্ত           | বছরে কয়েকবার (সময়সূচি আগে প্রকাশিত) |
+
+এগুলো USD-র ওপর প্রভাব ফেলে বলে EURUSD, GBPUSD, USDJPY ও XAUUSD সবই নড়ে। সঠিক তারিখ ও সময় সবসময় নিজের calendar থেকে দেখে নিন।
+
+## Chart-এ কেমন দেখায়
+
+<Chart
+  id="calendar-nfp-whipsaw-01"
+  height={440}
+  caption="EURUSD M5 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — ঘোষণার আগে range সংকীর্ণ (নীল জোন)। Release-এ প্রায় 40 pip নিচে spike, কয়েক মিনিটে উল্টে ওপরে, তারপর শান্ত চাল।"
+/>
+
+আগের নীরবতা ও পরের ঝাঁকুনি, এই দুই ছবি মনে রাখুন।
+
+## ধাপে ধাপে: সকালে calendar পরীক্ষা
+
+<Steps>
+
+### ধাপ ১: আজকের "বেশি impact" খবর বের করুন
+
+আপনার pair-এর দুই মুদ্রার সব খবর দেখুন।
+
+### ধাপ ২: সময় লিখে রাখুন
+
+Release-এর 30 মিনিট আগে ও 30 মিনিট পর চিহ্নিত করুন। এই জানালায় নিয়ম আগে থেকে ঠিক রাখুন।
+
+### ধাপ ৩: খোলা trade থাকলে সিদ্ধান্ত নিন
+
+Stop কাছে আনবেন, অর্ধেক বন্ধ করবেন, নাকি বন্ধ করে দেবেন, আগেই ঠিক করুন।
+
+### ধাপ ৪: Forecast ও actual তুলনা করুন
+
+ফারাক বড় হলে বড় চালের সম্ভাবনা।
+
+### ধাপ ৫: পরের গঠন দেখুন
+
+প্রথম spike নয়। ধুলো থিতোলে [structure](/bn/learn/03-market-structure/03-break-of-structure) দেখুন।
+
+</Steps>
+
+## উদাহরণ ১: যখন কাজ করে (কাল্পনিক)
+
+- **আগে থেকে ঠিক:** সকালে calendar-এ NFP চিহ্নিত, release-এর 30 মিনিট আগে থেকে নতুন trade নয়।
+- **ফল:** Release-এর candle-এ দাম প্রায় 40 pip নিচে গিয়ে উল্টে ওপরে ওঠে। আপনি বাইরে ছিলেন, কোনো stop লাগেনি।
+- **শিক্ষা:** Calendar মানা মানে সুযোগ হারানো নয়, ঝুঁকি এড়ানো।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়।)
+
+## উদাহরণ ২: যখন ব্যর্থ হয় (কাল্পনিক)
+
+- **কী দেখা যাচ্ছিল:** Range ভেঙে নিচে নামছে, প্রথম spike দেখে sell।
+- **ফল:** Spike-এর পর দ্রুত উল্টো দিকে ছুটে stop লেগে যায়। দিক বদলে যাওয়ার আগেই বের হতে হয়।
+- **কেন ব্যর্থ:** প্রথম প্রতিক্রিয়াই ফাঁদ হতে পারে। দুই দিকেই দ্রুত ঝাঁকুনি এসেছিল (ওপরের chart)।
+- **শিক্ষা:** Release-এর কয়েক মিনিটের মধ্যে দিক দেখে ঢুকবেন না।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়।)
+
+## সাধারণ ভুল
+
+| ভুল                      | কেন হয়            | কী করবেন                          |
+| :----------------------- | :----------------- | :-------------------------------- |
+| Calendar না দেখেই trade  | অভ্যাসের অভাব      | দিনের শুরুতে ২ মিনিট দেখুন        |
+| ভুল time zone-এ সময় ধরা | সেটিং না মেলানো    | calendar-এর time zone যাচাই করুন  |
+| শুধু "বেশি impact" দেখা  | মাঝারি খবর উপেক্ষা | নিজের pair-এর সব খবর দেখুন        |
+| Release-এর মুহূর্তে ঢোকা | মিস করার ভয়       | পরের গঠন আসা পর্যন্ত অপেক্ষা করুন |
+
+## Pro tips
+
+<Callout type="tip">
+  একটি ছোট নিয়ম লিখে রাখুন: "বেশি-impact খবরের ৩০ মিনিট আগে ও ১৫ মিনিট পর নতুন
+  trade নয়।" সংখ্যাগুলো নিজের শৈলী অনুযায়ী বদলান, কিন্তু আগে থেকে লিখুন।
+</Callout>
+
+<Callout type="note">
+  Forecast মানে নিশ্চিত ফল নয়। বিশ্লেষকরাও ভুল করেন, আর সেই ফারাকেই বাজার নড়ে।
+</Callout>
+
+## কখন এটা কাজ করে না
+
+- **অপ্রত্যাশিত খবর এলে:** হঠাৎ রাজনৈতিক বা সংকটের খবর calendar-এ থাকে না।
+- **Calendar ভুল time zone-এ থাকলে:** সতর্কতা ভুল সময়ে আসে।
+- **একাধিক খবর পরপর এলে:** বাজার দীর্ঘ সময় অস্থির থাকে।
+- **দীর্ঘমেয়াদি trade-এ:** বছরের পর বছরের trend শুধু এক খবরে বদলায় না।
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- Calendar-এর impact, forecast ও actual পড়তে শিখুন।
+- NFP, CPI ও FOMC USD-এর ওপর সবচেয়ে বড় ঝাঁকুনি আনে।
+- Release-এর আগে নীরবতা, মুহূর্তে spike ও whipsaw, পরে শান্ত চাল।
+- আগে থেকে নিয়ম লিখুন: কোন সময়ে নতুন trade নয়।
+
+</KeyTakeaways>
+
+## অনুশীলন
+
+এই সপ্তাহের calendar খুলুন। আপনার pair-এর দুই মুদ্রার "বেশি impact" খবর বের করে আপনার time zone-এ সময় লিখুন এবং প্রতিটির আগে-পরের নিয়ম লিখুন।
+
+## কুইজ
+
+1. Calendar-এ forecast ও actual-এর ফারাক কেন গুরুত্বপূর্ণ?
+2. NFP কী মাপে?
+3. Release-এর মুহূর্তে spread সাধারণত কী হয়?
+4. কেন প্রথম spike দেখে entry ঝুঁকিপূর্ণ?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** কারণ বাজার forecast আগেই দামে ধরে, ফারাকেই নতুন চাল আসে।
+
+**২.** US-এ কৃষি-বহির্ভূত খাতে নতুন চাকরির সংখ্যা।
+
+**৩.** সাধারণত বেড়ে যায়, ফলে খরচ ও slippage বাড়ে।
+
+**৪.** প্রথম প্রতিক্রিয়া দ্রুত উল্টে যেতে পারে (whipsaw)।
+
+</details>
+
+## পরের ধাপ
+
+- আগে: [Central Bank, সুদ ও Inflation](/bn/learn/11-fundamental-intermarket-analysis/01-central-bank-interest-rate-inflation)।
+- পরে: [Currency Strength ও DXY](/bn/learn/11-fundamental-intermarket-analysis/03-currency-strength-dxy)।
+- সম্পর্কিত: [News Trade করা বা এড়ানো](/bn/learn/11-fundamental-intermarket-analysis/06-news-trade-avoid-korbo)।
+
+### সূত্র
+
+- <ExternalLink href="https://www.investopedia.com/terms/e/economic-calendar.asp">
+    Economic Calendar, Investopedia
+  </ExternalLink>
+- <ExternalLink href="https://www.babypips.com/learn/forex/economic-indicators">
+    Economic Indicators, BabyPips
+  </ExternalLink>
+
+<Disclaimer />

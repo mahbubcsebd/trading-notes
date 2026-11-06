@@ -1,0 +1,177 @@
+---
+title: "Gold ATR: Measuring Your Own 'Normal Movement'"
+description: "What ATR is, how to read it and set the stop in gold, and how to measure your own broker's ATR, with a pane chart. No fixed 'normal' value is given."
+level: intermediate
+tags: [gold, atr, volatility, stop-loss, indicator]
+instruments: [XAUUSD]
+timeframes: [H1]
+status: done
+sources:
+  - type: blog
+    title: "Average True Range - Investopedia"
+    url: "https://www.investopedia.com/terms/a/atr.asp"
+updated: 2026-11-06
+---
+
+# Gold ATR: Measuring Your Own 'Normal Movement'
+
+"How many dollars away should the stop be on gold?" has no fixed answer. The pace changes. ATR gives you a tape for measuring the current pace.
+
+## What you will be able to do
+
+- **Say what ATR is.**
+- **Set the stop distance with ATR.**
+- **Build the habit of measuring ATR** on your own timeframe.
+
+## Why it matters
+
+- **The pace of gold changes from time to time.** The stop that is enough today is too small tomorrow.
+- **Without ATR the stop is a guess.** If it is small, noise takes it. If it is big, the risk rises.
+- **Lot size stands on it.** When the stop changes, the [lot](/en/learn/13-gold-xauusd/08-gold-risk-lot-size) changes too.
+
+Prerequisites: [ATR-based stop](/en/learn/10-trade-management-execution/01-stop-loss-placement) and [Sessions](/en/learn/13-gold-xauusd/05-sessions-volatility).
+
+## What is ATR
+
+**ATR (Average True Range) is the average of how much price has moved, on average, in the last several candles.**
+
+Think of a car's speedometer. It says how fast you are going now, not how fast you will go tomorrow. ATR is the same: a measure of the current pace.
+
+In gold, ATR is read in dollars. An ATR of $5 (on H1) means each candle over the last few hours has moved about $5 on average.
+
+| ATR         | Meaning                | Effect on the stop                |
+| :---------- | :--------------------- | :-------------------------------- |
+| Rising      | The pace is picking up | Bigger stop, smaller lot          |
+| Falling     | The market is calm     | The stop can be smaller           |
+| Sudden jump | News or an event       | Be careful, staying out is better |
+
+No "normal" gold ATR is given here, because it changes with time and timeframe. Measure it from your own chart.
+
+## What it looks like on a chart
+
+<Chart
+  id="gold-atr-pane-01"
+  height={480}
+  caption="Imaginary XAUUSD H1, with ATR(14) below: when candles are big the ATR rises, and in calm times it falls. The numbers are imaginary."
+/>
+
+In the middle there is a burst of pace, and the ATR rose there. After the burst it came down step by step.
+
+## Step by step: the stop with ATR
+
+<Steps>
+
+### Step 1: Add ATR(14)
+
+On the timeframe of your trade.
+
+### Step 2: Read the current value
+
+In dollars, for example 5.0.
+
+### Step 3: Pick a multiplier
+
+For example stop = 1.5 × ATR. The multiplier is part of your plan; here it is an imaginary example.
+
+### Step 4: Match it with structure
+
+Place it beyond the swing high/low, not only by the number.
+
+### Step 5: Work out the lot
+
+Run the lot formula with the new stop distance.
+
+</Steps>
+
+## Example 1: when it works (synthetic)
+
+- **What was visible:** the H1 ATR steadily at $4, with room of about $6 below the swing low.
+- **Decision:** stop = 1.5 × 4 = $6, which matches the structure.
+- **Result:** a small push of noise did not hit the stop.
+- **Lesson:** using ATR and structure together makes the stop sensible.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Example 2: when it fails (synthetic)
+
+- **What was done:** last week's "worked well" $3 stop used again today.
+- **What happened:** today the ATR is $7. The stop is passed by a normal candle.
+- **Why it failed:** a measure of the old pace in a new market.
+- **Lesson:** set the stop every day from the current ATR.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Common mistakes
+
+| Mistake                            | Why it happens               | What to do                        |
+| :--------------------------------- | :--------------------------- | :-------------------------------- |
+| A fixed stop all the time          | Simplicity                   | Look at ATR each time             |
+| Taking ATR as the future           | Trusting the number          | It is a measure of past pace      |
+| Mixing ATR of different timeframes | Carelessness                 | The ATR of your trade's timeframe |
+| Trusting ATR after news            | Thinking the jump is lasting | Look again when it calms          |
+
+## Pro tips
+
+<Callout type="tip">
+  Think of ATR as a "tape". The tape does not say where you will go. It says how
+  much room you need. The direction comes from structure and the setup.
+</Callout>
+
+<Callout type="warning">
+  ATR is a lagging indicator. Even if ATR looks low just before news, price can
+  move many times that at the release.
+</Callout>
+
+## When this does not work
+
+- **On big news or a gap:** ATR looks smaller than reality.
+- **On a very new chart or with few candles:** the average is unreliable.
+- **When the session changes:** the pace changes fast, and ATR lags.
+
+## Summary
+
+<KeyTakeaways>
+
+- ATR is a measure of recent average movement. Read it in dollars.
+- Stop = multiplier × ATR, then match it with structure.
+- When ATR rises, the stop is bigger and the lot smaller.
+- There is no fixed "normal" value. Measure it from your own chart.
+
+</KeyTakeaways>
+
+## Practice
+
+Add ATR(14) to your H1 chart. Write the lowest and highest values over the last five days. Work out how many dollars a 1.5 × ATR stop is at the two ends.
+
+## Quiz
+
+1. What does ATR measure?
+2. When ATR rises, what happens to the stop and lot?
+3. Does ATR tell direction?
+4. If ATR looks low before news, what should you think?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** The recent average movement.
+
+**2.** The stop gets bigger, and the lot gets smaller to keep the risk the same.
+
+**3.** No. It is only a measure of pace.
+
+**4.** At the release, price can move many times the ATR.
+
+</details>
+
+## Next steps
+
+- Before: [Gold Risk and Lot Size](/en/learn/13-gold-xauusd/08-gold-risk-lot-size).
+- After: [London Breakout and NY Reversal](/en/learn/13-gold-xauusd/10-london-breakout-ny-reversal-setup).
+
+### Sources
+
+- <ExternalLink href="https://www.investopedia.com/terms/a/atr.asp">
+    Average True Range, Investopedia
+  </ExternalLink>
+
+<Disclaimer />

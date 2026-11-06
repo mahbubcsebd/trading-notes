@@ -1,0 +1,351 @@
+---
+title: "Long-Legged Doji: long wicks both ways, a fierce fight with no winner"
+description: "How to spot a long-legged doji, tell it from a plain doji and a news candle, trade the break of its range, and handle its wide stop, with a winning and a failing chart."
+type: neutral
+category: momentum-indecision
+level: intermediate
+candleCount: 1
+signal: indecision
+chartId: long-legged-doji-win-01
+tags: [pattern, candlestick, long-legged-doji, doji, volatility]
+status: done
+sources:
+  - type: book
+    title: "Japanese Candlestick Charting Techniques - Steve Nison"
+    note: "Long-legged doji, rickshaw man"
+  - type: blog
+    title: "Long-Legged Doji - Investopedia"
+    url: "https://www.investopedia.com/terms/l/long-legged-doji.asp"
+updated: 2026-11-06
+---
+
+In one candle price rose 40 pips, fell 50, and closed right at the open. Stops were hit on both sides, and the chart is left with a giant plus sign. That is a long-legged doji: the market fought hard and nobody won. The question is which way the next candle announces the result.
+
+## At a glance
+
+| Item          | Long-Legged Doji                                                                   |
+| :------------ | :--------------------------------------------------------------------------------- |
+| Type          | Neutral, high-volatility indecision candle, one candle                             |
+| Where to look | After a long move, at a marked level, or at the end of a trend pullback            |
+| Key features  | Almost no body, very long wicks above and below, range larger than nearby candles  |
+| Confirmation  | Next candle closes above the doji high or below its low                            |
+| Stop          | Beyond the wick on the side opposite the break, plus spread and a buffer           |
+| Invalidation  | After the break, price re-enters the doji range and closes beyond the opposite end |
+| Look-alikes   | Doji, [Spinning Top](/en/patterns/spinning-top), news spike candle                 |
+| Opposite      | [Marubozu](/en/patterns/marubozu) (large body, no wicks)                           |
+
+## What you will be able to do
+
+- **Measure** the difference between a long-legged doji and a plain doji by range.
+- **Separate** a news-release candle from a real long-legged doji.
+- **Trade the break** by treating the doji's range as a small range.
+- **Handle** the wide stop by cutting size.
+
+## Why it matters
+
+- **Volatility is up, direction is not decided.** Big wicks both ways mean both sides showed strength. A large move often follows, but you cannot know which way.
+- **Stops get hit on both sides.** On the wrong side at the wrong place, this one candle can take out traders in both directions.
+- **Easily confused with a news candle.** A data release prints nearly the same shape, but that is thin liquidity, not a battle.
+
+Prerequisites: the [Doji](/en/patterns/doji) page and [Range Breakout](/en/learn/06-trend-chart-patterns/03-range-breakout).
+
+## What is a long-legged doji
+
+**A long-legged doji is a doji whose open and close are almost equal, with very long wicks above and below that make its range clearly larger than nearby candles.** When the open-close sits near the middle of the range, Nison calls it a **rickshaw man**.
+
+Think of a wrestling match. Each wrestler throws the other down, and both get back up. A hard fight the whole time, and the result is a draw. If a plain doji is two people shaking hands, a long-legged doji is two exhausted wrestlers.
+
+<CandleDiagram
+  title="Standard doji vs long-legged doji"
+  candles={[
+    { o: 50, h: 54, l: 47, c: 52, dim: true },
+    { o: 52, h: 55, l: 49, c: 50, dim: true },
+    {
+      o: 50,
+      h: 54,
+      l: 46,
+      c: 50.2,
+      label: "Standard",
+      note: "range like its neighbours",
+    },
+    { o: 50, h: 53, l: 48, c: 51, dim: true },
+    {
+      o: 51,
+      h: 64,
+      l: 37,
+      c: 51.2,
+      label: "Long-legged",
+      note: "much larger range",
+    },
+  ]}
+  caption="Both have almost no body. The long-legged doji's wicks are far longer than nearby candles' ranges."
+/>
+
+### Identification rules
+
+| Rule                                             | Required?               | Why                                                          |
+| :----------------------------------------------- | :---------------------- | :----------------------------------------------------------- |
+| Open and close almost equal                      | Yes                     | A visible body makes it a high-wave spinning top             |
+| Long wicks on both sides                         | Yes                     | One wick only makes it a dragonfly or gravestone             |
+| Range clearly larger than nearby candles' ranges | Yes                     | This is the "long-legged" part that separates it from a doji |
+| Candle has closed                                | Yes                     | A live candle can still build a body either way              |
+| Not on a major news release                      | No (but very important) | A news candle's wicks reflect a thin market, not a battle    |
+
+## Strong vs weak long-legged doji
+
+<DiagramRow>
+  <CandleDiagram
+    title="Meaningful"
+    verdict="good"
+    verdictLabel="pay attention"
+    candles={[
+      { o: 40, h: 49, l: 39, c: 48, dim: true },
+      { o: 48, h: 57, l: 47, c: 56, dim: true },
+      { o: 56, h: 57, l: 50, c: 51, dim: true },
+      { o: 51, h: 57, l: 44, c: 51.2, label: "at the broken level" },
+      { o: 51.2, h: 58, l: 50.5, c: 57.5, dim: true },
+    ]}
+    levels={[{ price: 49, label: "old ceiling", tone: "support" }]}
+    caption="At the old ceiling after an uptrend pullback; the next candle closes above the high."
+  />
+  <CandleDiagram
+    title="Weak"
+    verdict="bad"
+    verdictLabel="avoid"
+    candles={[
+      { o: 50, h: 51, l: 49, c: 50.5, dim: true },
+      { o: 50.5, h: 51.5, l: 49.5, c: 50, dim: true },
+      { o: 50, h: 51, l: 49, c: 49.5, dim: true },
+      { o: 49.5, h: 62, l: 38, c: 49.7, label: "news candle" },
+      { o: 49.7, h: 56, l: 45, c: 46, dim: true },
+    ]}
+    caption="A sudden data release in a quiet market. Huge wicks both ways, but no fight at a level."
+  />
+</DiagramRow>
+
+| Quality check  | Meaningful                                              | Weak                                           |
+| :------------- | :------------------------------------------------------ | :--------------------------------------------- |
+| When           | Normal market, no news                                  | At a major data release                        |
+| Where          | At a marked level or the end of a trend pullback        | Mid-range, no level                            |
+| With the trend | Break in the trend direction                            | Break against the trend                        |
+| Stop and room  | Full-range stop still leaves 1.5R+ to the next obstacle | Stop so wide that no target gives a usable R:R |
+
+<Callout type="note">
+  To measure "range clearly larger", many traders use 1.5-2× the average range
+  of the previous 10 candles. This is a working measure, not a standard
+  definition. Set your own in a backtest.
+</Callout>
+
+### Same look, different meaning
+
+| Pattern               | Shape                                     | Difference                                    |
+| :-------------------- | :---------------------------------------- | :-------------------------------------------- |
+| **Long-Legged Doji**  | Almost no body, very long wicks both ways | Intense fight, high volatility                |
+| **Standard Doji**     | Almost no body, medium wicks              | Calm balance; range like its neighbours       |
+| **High-wave candle**  | Small but visible body, very long wicks   | Nearly the same meaning; spinning top family  |
+| **News spike candle** | Any shape, often huge wicks               | Thin liquidity at a release; treat separately |
+
+## The story inside the candle
+
+One common interpretation of a long-legged doji at a broken resistance (now support) at the end of an uptrend pullback, read through time:
+
+1. **Buyers push up first.** Buy orders at support lift price a good distance.
+2. **Sellers drive it down hard.** Profit-taking and new selling push price below support and trigger stops of earlier buyers.
+3. **Buyers bring it back.** New buyers arrive lower and price closes right near the open.
+
+The result: both sides made a big effort and weak traders on both sides were shaken out. Whichever way the next candle breaks and closes outside the doji range, that side scored the first clear win.
+
+<Callout type="note">
+  This is a common interpretation, not a proven fact. A chart does not show
+  whose stop was hit. We only see how price behaved.
+</Callout>
+
+## Where it works and where it does not
+
+<Compare
+  leftLabel="Where to pay attention"
+  rightLabel="Where it is usually noise"
+  left="- At a marked level after a long move
+- At the end of a trend pullback, on a retest of a broken level
+- In a normal session, without news
+- When the next candle breaks the range in the trend direction"
+  right="- On the candle of a big release such as NFP, CPI or a rate decision
+- In the middle of a range
+- Where a full-range stop leaves no usable R:R
+- When price falls back into the doji range after the break"
+/>
+
+## Step by step: trading a long-legged doji
+
+<Steps>
+
+### Step 1: Check the news first
+
+Look at the [economic calendar](/en/learn/11-fundamental-intermarket-analysis/02-economic-calendar-nfp-cpi-fomc). If the doji is the candle of a big release, stop here. Look again once the market calms down over the next few candles.
+
+### Step 2: Level and trend
+
+Where is the marked level, and which way is the higher-timeframe trend? A break in the trend direction is usually the cleaner setup.
+
+### Step 3: Mark the doji's range
+
+Draw lines at the doji high and low. It is now a small range. Check the shape: almost no body, range clearly larger than nearby candles.
+
+### Step 4: Wait for the break, then enter
+
+| Entry                      | Where                                                 | Pro                                      | Con                               |
+| :------------------------- | :---------------------------------------------------- | :--------------------------------------- | :-------------------------------- |
+| **Range break** (standard) | Stop order just beyond the end in the trend direction | You enter only once price shows its hand | Stop beyond the whole range: wide |
+| **Confirmation close**     | Once the next candle closes beyond the end            | Fewer wick false breaks                  | Entry further away                |
+| **Orders both ways (OCO)** | Buy stop above the high, sell stop below the low      | No need to guess direction               | Whipsaw risk on both sides        |
+
+For beginners, a single order in the trend direction is the simplest.
+
+### Step 5: Place the stop
+
+Beyond the wick on the side opposite the break, plus the [spread](/en/learn/01-foundations/04-spread-commission-swap) and a buffer. The whole doji range is the stop distance, so it will be wide.
+
+### Step 6: Size and target
+
+Wide stop means small size: calculate [position size](/en/learn/08-risk-management/02-position-sizing) from the entry-to-stop distance, risking no more than 1%. Put the target just before the next obstacle. If the [risk reward](/en/learn/08-risk-management/03-risk-reward) to there is below 1:1.5, skip it.
+
+### Step 7: Manage
+
+Repeated closes back in the middle of the doji range after the break mean the break is weak; consider exiting. A close beyond the opposite end means the idea is wrong.
+
+</Steps>
+
+### Pre-trade checklist
+
+<Checklist
+  id="pattern-long-legged-doji-pretrade-en"
+  items={[
+    "Does the doji sit at a marked level, and is it not the candle of a major news release?",
+    "Does the shape pass the rules (almost no body, long wicks both ways, range larger than nearby candles)?",
+    "Have both the doji and the breaking candle closed?",
+    "With a full-range stop, is the risk reward to the next obstacle still at least 1:1.5?",
+    "Is the break direction not against the higher-timeframe trend?",
+  ]}
+/>
+
+If any box stays empty, skip the trade.
+
+## Example 1: when it works (illustrative)
+
+<Chart
+  id="long-legged-doji-win-01"
+  height={420}
+  caption="USDJPY H4 (illustrative, synthetic) — a long-legged doji on the retest of an old ceiling after a range breakout; long on the high break, in the trend direction."
+/>
+
+- **What was visible:** Candles 0-6 ranged under a ceiling near 149.44. Candle 7 broke out and closed at 149.72. Candle 12 made a swing high at 150.90, and candles 13-16 pulled back to the old ceiling.
+- **The long-legged doji:** Candle 17 opened at 149.518 and closed at 149.528. High 149.798, low 149.238: about 28 pips of wick each way, with the low poking below the ceiling and returning.
+- **Decision:** Uptrend, so an order on the upside only. Buy stop at 149.818, stop at 149.198 (4 pips below the low): 62 pips of risk. Target 150.865, just under the swing high, about 1.7R.
+- **Result:** Candle 18 closed at 149.868 and filled the order. Candle 26 reached the target.
+- **Lesson:** In the trend direction, on the retest of a broken level, without news. The stop was wide, so the target went just before the real obstacle instead of the textbook 2R.
+
+<TradeSetup
+  direction="long"
+  pair="USDJPY"
+  entry={149.818}
+  stop={149.198}
+  target={150.865}
+/>
+
+(Illustrative example, not a real trade. Not every long-legged doji is followed by a move, and no result is guaranteed.)
+
+## Example 2: when it is a trap (illustrative)
+
+<Chart
+  id="long-legged-doji-fail-01"
+  height={420}
+  caption="EURUSD H1 (illustrative, synthetic) — a long-legged doji on a data-release candle; bought on the high break, then stopped out."
+/>
+
+- **What was visible:** Candles 0-10 drifted quietly between about 1.0834 and 1.0860, with most bodies of 2-6 pips.
+- **The doji:** Candle 11 was the candle of a major data release: open 1.0837, close 1.0839, high 1.0885, low 1.0792. About 45 pips of wick each way.
+- **The wrong decision:** "A long-legged doji near support; buy if the high breaks." Buy stop 1.0887, stop 1.0788: 99 pips of risk.
+- **What happened:** Candle 12 spiked to 1.0893 and filled the order, but closed at 1.0824. Candle 13 broke the stop.
+- **Why it failed:** This was not a battle at a level; it was thin liquidity at the release. The first checklist box would have filtered it out. On top of that, a 99-pip stop was abnormally wide compared with the quiet market.
+
+**Lesson:** A news candle's wicks are noise, not a signal. The stop set in advance capped the loss at 1R, but with [slippage](/en/learn/10-trade-management-execution/04-slippage-requote-spread-widening) on news it could have been more in practice.
+
+## Common mistakes
+
+| Mistake                                      | Why it happens                      | What to do instead                                |
+| :------------------------------------------- | :---------------------------------- | :------------------------------------------------ |
+| Treating a news candle as a long-legged doji | Same shape                          | Check the economic calendar; skip release candles |
+| Stop in the middle of the doji               | Fear of a wide stop                 | Stop beyond the opposite wick; cut size           |
+| Orders both ways, stopped out both ways      | Not wanting to choose a direction   | Pick one order in the trend direction             |
+| Target at 2R by default                      | 2R is far away with a wide stop     | Measure R:R to the next obstacle; skip below 1.5  |
+| Trading long-legged dojis mid-range          | Treating every big wick as a signal | Only at levels or at the end of pullbacks         |
+
+## Pro tips
+
+<Callout type="tip">
+  Measure the long-legged doji's range with
+  [ATR](/en/learn/07-technical-indicators/04-atr-stop-size). If the range is
+  more than twice ATR, a full-range stop is often too wide. Then consider
+  entering on the first pullback after the break on a lower timeframe.
+</Callout>
+
+<Callout type="tip">
+  Two or three long-legged dojis or high-wave candles in a row at the top of a
+  trend mean momentum is running out. Protecting profit in an open trade then
+  matters more than a new trade in the trend direction.
+</Callout>
+
+<Callout type="warning">
+  Spreads widen a lot on news and stop orders often fill at worse prices.
+  Entering at the moment of a release because of a long-legged doji is one of
+  the riskiest things a beginner can do.
+</Callout>
+
+## Summary
+
+<KeyTakeaways>
+
+- Long-legged doji = almost no body, very long wicks both ways, range clearly larger than nearby candles.
+- It shows an intense fight, not direction; the direction of the next candle's break is the answer.
+- Skip candles of news releases; they picture thin liquidity.
+- Enter on a range break in the trend direction; stop beyond the opposite wick, with reduced size, and the target before the real obstacle.
+
+</KeyTakeaways>
+
+## Practice and your own backtest
+
+Open USDJPY H4 or EURUSD H1 in TradingView. Find at least 20 long-legged dojis. Log one row each:
+
+| Date | News candle? | Range ÷ ATR | Break in trend direction? | R to next obstacle | Result (R) |
+| :--- | :----------- | :---------- | :------------------------ | :----------------- | :--------- |
+|      |              |             |                           |                    |            |
+
+Then compare the average R for news candles and normal candles. Also count how often price fell back into the range after the break. Do not draw conclusions from fewer than 30 samples.
+
+## Quiz
+
+1. What is the main difference between a long-legged doji and a standard doji?
+2. A perfect long-legged doji forms on the NFP release candle. What do you do?
+3. Why is a long-legged doji's stop wide, and how do you handle it?
+4. In Example 1, why was the target placed under the swing high instead of at 2R?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** Both have almost no body. The long-legged doji's wicks and range are clearly larger than nearby candles; a standard doji's range is like its neighbours'.
+
+**2.** No trade. It is a product of thin liquidity at the release. Once the market calms down, look again at the levels and structure.
+
+**3.** The stop goes beyond the opposite wick, so the whole large range is the risk. Cut size to keep risk at 1%, and skip it if R:R to the next obstacle is below 1.5.
+
+**4.** A 2R target would have sat beyond the swing high. Placing it just before the real obstacle gave about 1.7R, still above 1.5.
+
+</details>
+
+## Next steps
+
+- Before this: [Doji](/en/patterns/doji).
+- What to do around news: [Avoiding News Trades](/en/learn/11-fundamental-intermarket-analysis/06-news-trade-avoid-korbo).
+- Same family: [Spinning Top](/en/patterns/spinning-top), [Dragonfly Doji](/en/patterns/dragonfly-doji), [Gravestone Doji](/en/patterns/gravestone-doji).
+
+<Disclaimer />

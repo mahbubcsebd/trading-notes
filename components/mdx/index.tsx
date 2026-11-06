@@ -1,5 +1,5 @@
 import { cn } from '@/lib/utils';
-import { ChartLoader } from '@/components/chart/ChartLoader';
+import { ChartBlock } from '@/components/chart/ChartBlock';
 
 /**
  * Numbered steps container.
@@ -122,5 +122,5 @@ export function PatternCard({ name }) {
  * @param {{ id: string, height?: number, caption?: string }} props
  */
 export function Chart({ id, height = 420, caption }) {
-  return <ChartLoader id={id} height={height} caption={caption} />;
+  return <ChartBlock id={id} height={height} caption={caption} />;
 }

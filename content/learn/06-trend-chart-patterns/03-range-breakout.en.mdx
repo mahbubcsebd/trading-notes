@@ -1,0 +1,215 @@
+---
+title: "Range Breakout: 3 Conditions for Recognising a Real Breakout"
+description: "How to draw a range, how to check whether a breakout is real or a trap, and how to set the entry, stop and target on a retest, with charts."
+level: intermediate
+tags: [range, breakout, retest, consolidation]
+instruments: [EURUSD]
+timeframes: [H4]
+status: done
+sources:
+  - type: blog
+    title: "Breakout - Investopedia"
+    url: "https://www.investopedia.com/terms/b/breakout.asp"
+  - type: book
+    title: "Technical Analysis of the Financial Markets - John J. Murphy"
+    url: ""
+    note: "Section on confirming support-resistance breakouts"
+updated: 2026-11-06
+---
+
+# Range Breakout: 3 Conditions for Recognising a Real Breakout
+
+Price has been moving in the same box for two weeks. Suddenly one candle shoots up. You get in. The next candle comes back and takes out your stop. **Not every breakout is real. But there are clear conditions for recognising the real ones.**
+
+## What you will be able to do
+
+- **Draw** a **range** and measure its height.
+- **Check** whether a breakout is real **with three conditions**.
+- **Set the entry, stop and target** on a breakout and on a retest.
+- **Recognise and avoid** weak breakouts.
+
+## Why it matters
+
+- **A big move can come after a range breaks.** Built-up energy finds a way out, and this is where [Support and Resistance](/en/learn/05-support-resistance/01-levels-vs-zones) break.
+- **False breakouts take out the most stops.** If you know the conditions, you can avoid half the traps.
+- **The target is clear.** The height of the range is the measure of the target.
+
+Prerequisites: [Continuation Patterns](/en/learn/06-trend-chart-patterns/02-continuation-patterns) and [Trend and Range](/en/learn/03-market-structure/02-trend-range-hhhl).
+
+## What a range and a breakout are
+
+**A range is a period when price moves between a set upper and lower edge. A breakout is price moving out of those edges in a confirmed way.**
+
+Think of a pet bird in a cage. It keeps pecking at the top bars. If one day it breaks a bar and gets out, it flies far away, but after a weak peck it comes back. **The question is always the same: is the push really strong?**
+
+The word "confirmed" matters. If only a wick touches, or there is a spike for a moment, it is not a breakout.
+
+## The 3 conditions of a real breakout
+
+| #   | Condition             | What to look for                                          | Weak sign                               |
+| :-- | :-------------------- | :-------------------------------------------------------- | :-------------------------------------- |
+| 1   | **Close**             | The candle **closed** outside the range                   | Only the wick is outside                |
+| 2   | **Body and momentum** | The body is much bigger than the candles inside the range | Small body, long opposite wick          |
+| 3   | **Follow-through**    | The next candle or the retest holds the broken level      | Price quickly comes back into the range |
+
+If at least two of the three are not met, wait. For the third, follow-through, a retest is the best proof: broken resistance is now support, and this is [Role Reversal](/en/learn/05-support-resistance/02-role-reversal).
+
+## What it looks like on a chart: a real breakout
+
+<Chart
+  id="range-breakout-valid-01"
+  height={440}
+  caption="EURUSD H4 (educational, synthetic example): range 1.0800-1.0900, the top touched four times; candle 18 closes with a big body, candle 20 retests and holds, buy on candle 21"
+/>
+
+- **Range (0 to 17):** price touched the top at 1.0900 four times and turned back, and touched the bottom at 1.0800 three times. Repeated reactions at both edges mean the range is valid.
+- **Breakout (18):** the candle closed at 1.0935 with a body of about 59 pips. Candles inside the range averaged about 25 pips, so this is a big difference.
+- **Retest (20):** price came down and touched 1.0899, but did not close below. The old top is now support.
+- **Trigger (21):** price broke the high of candle 20 and moved on.
+
+## Step by step: trading a range breakout
+
+<Steps>
+
+### Step 1: Check the range
+
+You need at least two reactions at each edge, and the height of the range has to be big enough. A very narrow range has a lot of noise. In the example, the two edges are 1.0900 and 1.0800.
+
+### Step 2: Measure the height
+
+The distance from the top to the bottom. In the example, 100 pips. This is the measure of your target.
+
+### Step 3: Check the three conditions
+
+Look at the close, the body and the follow-through. Even if the close and body are right, it is safer to wait for the retest.
+
+### Step 4: Choose the entry
+
+- **When the high of the breakout candle breaks:** fast, but the stop is far away.
+- **When price holds on the retest and the high of the retest candle breaks:** slower, but the stop is close (in the example, buy 1.0930).
+
+### Step 5: Set the stop
+
+If price closes back inside the broken level, the breakout is cancelled. So the stop goes a little below the low of the retest. In the example, 1.0890, a risk of 40 pips.
+
+### Step 6: Measure the target
+
+Measure the height of the range from the broken edge: 1.0900 + 100 pips = 1.1000. Check the R:R by comparing stop and target; in the example, a 70-pip target against a 40-pip stop, about 1.75 times. More in the [Risk/Reward Ratio](/en/learn/08-risk-management/03-risk-reward) lesson.
+
+</Steps>
+
+## Example 1: when it works (synthetic)
+
+The chart above:
+
+- **What you could see:** a clear range, four reactions at the top, then a big-bodied close.
+- **Breakout:** candle 18 closed at 1.0935.
+- **Retest:** candle 20 had a low of 1.0899 and a close of 1.0915. The level held.
+- **Entry:** candle 21 broke the high of candle 20 (1.0928). Buy at 1.0930.
+- **Stop:** 1.0890, a risk of 40 pips.
+- **Target:** 1.1000, a distance of 70 pips.
+- **Result:** Price rose step by step and reached the target on candle 28.
+- **Lesson:** Waiting for the retest made the entry later, but the stop was smaller and it was proven that the breakout was real.
+
+(Synthetic educational example. This is not a real trade, and no result is guaranteed.)
+
+## Example 2: when it fails (synthetic)
+
+The same range, but the breakout is weak.
+
+<Chart
+  id="range-breakout-weak-01"
+  height={440}
+  caption="EURUSD H4 (educational, synthetic example): candle 18 closes only 8 pips above the top, with a long upper wick; candle 19 closes back inside and hits the stop"
+/>
+
+- **What you could see:** the same range. Candle 18 closed at 1.0908, but the upper wick was long (high 1.0925).
+- **Decision:** buy on the break of the high at 1.0927, stop 1.0884, a risk of 43 pips.
+- **What happened:** Candle 19 closed at 1.0884 and came back inside the range. The stop was filled. Later, price went toward the bottom of the range.
+- **Why it failed:** None of the three conditions was strong: small body, long wick (sellers were defending the top), and getting in without a retest.
+- **Lesson:** You cannot get in just because "price went up". The loss was the planned 43 pips. More on this kind of break that comes back in the next lesson, [Fake Breakout](/en/learn/06-trend-chart-patterns/04-fake-breakout).
+
+(Synthetic educational example. This is not a real trade.)
+
+## Common mistakes
+
+| Mistake                                            | Why it happens                          | What to do                                                                    |
+| :------------------------------------------------- | :-------------------------------------- | :---------------------------------------------------------------------------- |
+| Getting in as soon as you see a wick               | Fear of "missing it"                    | Wait for the close                                                            |
+| Trading a breakout of a very narrow range          | Thinking every sideways move is a range | Look for at least two reactions at each edge                                  |
+| Putting all your money in right after the breakout | Too much confidence                     | Small position, add the rest on the retest                                    |
+| Keeping the stop at the other edge of the range    | It feels "safe"                         | Stop just inside the broken level; measure risk and make the position smaller |
+| Trading a range breakout before big news           | Seeing price move                       | Wait before and after the news                                                |
+| Getting in without measuring the target            | "Let it go as far as it goes"           | Measure the height and check R:R                                              |
+
+## Pro tips
+
+<Callout type="tip">
+  The longer the range, the more likely the breakout is strong. More orders
+  build up in a long range. A breakout of a short range comes back easily.
+</Callout>
+
+<Callout type="tip">
+  Even if the breakout candle is small, if several candles in a row close above,
+  that is a sign of strength slowly building. Decide by looking at the sequence,
+  not at one candle.
+</Callout>
+
+<Callout type="warning">
+  A breakout and a fake breakout look almost the same at the start. Never trade
+  a breakout without a stop.
+</Callout>
+
+## When this does not work
+
+- **In a choppy market:** When the range is shaky, every edge is a trap.
+- **Around news:** A spike breaks through the edge and comes back. See this pattern in the [Liquidity and Stop Hunts](/en/learn/03-market-structure/04-liquidity-stop-hunts) lesson.
+- **Against the higher timeframe:** Even if an H1 range breaks up, the path is limited if D1 resistance is close. See [Multi-Timeframe Analysis](/en/learn/03-market-structure/05-multi-timeframe-analysis).
+- **At slow times:** Breakouts before a session starts or near its end often do not hold.
+
+## Summary
+
+<KeyTakeaways>
+
+- For a breakout to be real, look at the close, the body and the follow-through.
+- An entry on the retest makes the stop smaller, but the retest does not always come.
+- Target = the height of the range, measured from the broken edge.
+- Wicks, small bodies and quick returns are signs of a trap.
+
+</KeyTakeaways>
+
+## Practice
+
+Open a EUR/USD H4 chart on TradingView. Mark three ranges from the last 6 months. For each, write down: how many times the edges were touched, how big the body of the breakout candle was, whether a retest came, and whether price reached the target.
+
+## Quiz
+
+1. What are the three conditions for checking whether a breakout is real?
+2. How do you measure the target of a range?
+3. What does a long upper wick on the breakout candle usually mean?
+4. If you enter on the retest, where does the stop usually go?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** A close outside the range, a big body, and follow-through or a retest that holds the broken level.
+
+**2.** Measure the height of the range (top to bottom), then place the target that distance from the broken edge.
+
+**3.** Sellers are defending that edge, so the breakout is more likely to be weak.
+
+**4.** A little below the low of the retest candle, which means just inside the broken level.
+
+</details>
+
+## Next steps
+
+- Before: [Continuation Patterns](/en/learn/06-trend-chart-patterns/02-continuation-patterns).
+- After: [Fake Breakout](/en/learn/06-trend-chart-patterns/04-fake-breakout).
+- More on stops: [Stop Loss Placement](/en/learn/10-trade-management-execution/01-stop-loss-placement).
+
+### Sources
+
+- [Breakout, Investopedia](https://www.investopedia.com/terms/b/breakout.asp)
+
+<Disclaimer />

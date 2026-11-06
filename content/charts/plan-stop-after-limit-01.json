@@ -1,0 +1,74 @@
+{
+  "id": "plan-stop-after-limit-01",
+  "title": {
+    "en": "Day Closed at the Limit",
+    "bn": "Limit-এ দিন বন্ধ"
+  },
+  "symbol": "ACCOUNT",
+  "timeframe": "per trade",
+  "mode": "synthetic",
+  "type": "concept",
+  "bias": "neutral",
+  "outcome": "win",
+  "tags": [
+    "trading-plan",
+    "stop-rule"
+  ],
+  "module": "14-trading-plan-system",
+  "lessonSlugs": [
+    "05-kokhon-trading-bondho-korbo"
+  ],
+  "caption": {
+    "en": "Rule: two losses in a day, then close the platform. Two -1% trades; the day ends at -1.99% (hypothetical).",
+    "bn": "নিয়ম: দিনে দুটি loss হলে platform বন্ধ। দুটি -1% trade; দিন শেষ -1.99% (কাল্পনিক)।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data.",
+    "bn": "এটি শিক্ষামূলক কাল্পনিক ডেটা।"
+  },
+  "explanation": {
+    "en": "The stop rule capped the day's loss at the planned amount.",
+    "bn": "Stop-নিয়ম দিনের লোকসান পরিকল্পিত সীমায় আটকেছে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "A stop rule turns a bad day into a small, planned loss",
+      "bn": "Stop-নিয়ম খারাপ দিনকে ছোট, পরিকল্পিত লোকসানে বদলায়"
+    }
+  ],
+  "updatedAt": "2026-11-05T22:00:00Z",
+  "candles": [
+    {
+      "i": 0,
+      "o": 10000.0,
+      "h": 10012.0,
+      "l": 9888.0,
+      "c": 9900.0,
+      "v": 0
+    },
+    {
+      "i": 1,
+      "o": 9900.0,
+      "h": 9911.9,
+      "l": 9789.1,
+      "c": 9801.0,
+      "v": 0
+    }
+  ],
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 10000,
+      "label": "Start 10,000",
+      "color": "#3b82f6",
+      "style": "dotted"
+    },
+    {
+      "type": "hline",
+      "price": 9801,
+      "label": "Day ends 9,801",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ]
+}

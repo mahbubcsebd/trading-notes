@@ -1,0 +1,182 @@
+---
+title: "Premium ও Discount: কোন দামে buy বা sell?"
+description: "Swing range-কে ৫০% equilibrium দিয়ে ভাগ করে premium ও discount অংশ চেনা এবং trend-এর দিকে সঠিক দামে entry বাছার নিয়ম।"
+level: intermediate
+tags: [premium, discount, equilibrium, market-structure]
+instruments: [XAUUSD]
+timeframes: [H4, H1]
+status: done
+sources:
+  - type: blog
+    title: "Premium & Discount - LuxAlgo Library"
+    url: "https://www.luxalgo.com/library/concept/premium-and-discount/"
+updated: 2026-11-05
+---
+
+# Premium ও Discount: কোন দামে buy বা sell?
+
+আপনি uptrend দেখলেন, দিক ঠিক ধরলেন, buy-ও নিলেন। কিন্তু entry হলো ঠিক swing high-এর কাছে। একটু pullback এলেই stop লেগে গেল। দিক ঠিক ছিল, **দাম** ঠিক ছিল না।
+
+## এই লেখা পড়ে আপনি যা পারবেন
+
+- Swing range-এর **equilibrium** (৫০%) বের করতে পারবেন।
+- **Premium** ও **discount** অংশ চিনতে পারবেন।
+- Trend-এর দিক অনুযায়ী কোন অংশে buy বা sell খুঁজবেন বলতে পারবেন।
+- এই নিয়মের সীমা ও ভুল জানবেন।
+
+## কেন এটি জরুরি
+
+- একই দিকের trade-এ entry দাম বদলালে stop ও target-এর অনুপাত (R:R) বদলে যায়।
+- Discount-এ buy নিলে stop ছোট হয়, target বড় হয়।
+- Premium-এ buy করা মানে প্রায়ই "দেরিতে ঢোকা"।
+
+## Equilibrium, premium, discount কী?
+
+একটি **range** ধরুন: নিচে একটি swing low, ওপরে একটি swing high। Swing চেনার নিয়ম [প্রথম পাঠে](/bn/learn/03-market-structure/01-swing-high-low) আছে।
+
+- **Equilibrium:** range-এর ঠিক মাঝের দাম, অর্থাৎ ৫০%।
+- **Premium:** ৫০%-এর ওপরের অংশ। দাম তুলনামূলক "দামি"।
+- **Discount:** ৫০%-এর নিচের অংশ। দাম তুলনামূলক "সস্তা"।
+
+**উপমা:** একটি জিনিসের সাধারণ দাম ১০০ টাকা। ৭০ টাকায় পেলে কিনতে ভালো লাগে, ১৩০ টাকায় পেলে লাগে না। Premium ও discount-ও সেই তুলনা, তবে range-এর ভেতরে।
+
+সূত্র সহজ:
+
+```
+equilibrium = (swing high + swing low) / 2
+```
+
+যেমন low ২৩০০, high ২৩৪০ হলে equilibrium = (২৩৪০ + ২৩০০) / ২ = ২৩২০।
+
+## নিয়মটা কী
+
+| Trend     | কোথায় খুঁজবেন      | কোথায় এড়াবেন      |
+| :-------- | :------------------ | :------------------ |
+| Uptrend   | Discount-এ **buy**  | Premium-এ buy       |
+| Downtrend | Premium-এ **sell**  | Discount-এ sell     |
+| Range     | প্রান্ত, মাঝখান নয় | Equilibrium-এর কাছে |
+
+মূল কথা: [trend](/bn/learn/03-market-structure/02-trend-range-hhhl) আগে, দাম পরে। Premium বলেই sell করা যায় না। Uptrend-এ premium মানে সাধারণত শক্তিশালী বাজার, তাই শুধু অপেক্ষা করুন।
+
+## Chart-এ কেমন দেখায়
+
+নিচের chart-এ low ২৩০০ থেকে high ২৩৪০ পর্যন্ত impulse। Equilibrium ২৩২০। Price pullback করে ২৩১২ পর্যন্ত নামল, অর্থাৎ discount-এ ঢুকল।
+
+<Chart
+  id="premium-discount-02"
+  height={420}
+  caption="XAUUSD H1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — impulse-এর ৫০% লাইন, তার নিচে discount-এ buy"
+/>
+
+লক্ষ করুন, price ২৩২০ ভেঙে নামার আগে buy নেওয়ার কারণ নেই। ২৩২০-এর নিচে এলে তবেই discount শুরু।
+
+## ধাপে ধাপে
+
+<Steps>
+
+### ধাপ ১: bias ঠিক করুন
+
+Higher timeframe-এ trend দেখুন ([Multi-Timeframe Analysis](/bn/learn/03-market-structure/05-multi-timeframe-analysis))। Bullish হলে শুধু discount-এর buy খুঁজুন।
+
+### ধাপ ২: সঠিক range বাছুন
+
+সাম্প্রতিক impulse leg-এর swing low থেকে swing high টানুন। Chart-এ Fibonacci retracement tool-এ 0 ও 100 বসালে 0.5 লেভেল equilibrium দেখায়।
+
+### ধাপ ৩: অপেক্ষা করুন
+
+Price ৫০% লাইনের নিচে না আসা পর্যন্ত entry খুঁজবেন না।
+
+### ধাপ ৪: discount-এ trigger
+
+Discount-এ ঢোকার পর lower timeframe-এ [CHOCH বা BOS](/bn/learn/03-market-structure/03-break-of-structure) দেখুন। শুধু ৫০% ছোঁয়াই entry-র কারণ নয়।
+
+### ধাপ ৫: stop ও target
+
+Stop বসান pullback-এর low-এর নিচে। Target রাখুন আগের swing high বা তার ওপরের [liquidity](/bn/learn/03-market-structure/04-liquidity-stop-hunts)।
+
+</Steps>
+
+## বাস্তব উদাহরণ
+
+<Callout type="note">
+  **এই lesson-এর উদাহরণ কাল্পনিক।** যাচাই করা real OHLC data এখনো যোগ করা হয়নি।
+</Callout>
+
+**উদাহরণ (কাল্পনিক trade):** H4 bullish। H1-এ impulse ২৩০০ থেকে ২৩৪০। Equilibrium ২৩২০। Price নেমে ২৩১২-তে low বানাল, তারপর ঘুরল। আপনি ২৩১৬-তে buy নিলেন, stop ২৩০৯-এর নিচে, target ২৩৪০। ঝুঁকি ৭ point, সম্ভাব্য লাভ ২৪ point (প্রায় ৩.৪ গুণ)।
+
+তুলনা: একই trade premium-এ ২৩৩২-এ নিলে stop ২৩২৫ হলেও target ২৩৪০ মাত্র ৮ point দূরে। ঝুঁকি ৭, লাভ ৮। দিক একই, কিন্তু অনুপাত অনেক খারাপ।
+
+## ব্যর্থ উদাহরণ: discount মানেই buy নয় (কাল্পনিক/শিক্ষামূলক)
+
+- **কী দেখা যাচ্ছিল:** Uptrend, price ৫০%-এর নিচে এল।
+- **সিদ্ধান্ত:** Discount বলে সঙ্গে সঙ্গে buy।
+- **ফল:** Price আরও নামল, range-এর low ভেঙে গেল।
+- **শিক্ষা:** Low ভাঙা মানে uptrend-এর structure ভাঙল। তখন সেই range আর বৈধ নয়। Discount কোনো সুরক্ষা নয়, শুধু ভালো দামের এলাকা।
+
+## সাধারণ ভুল
+
+| ভুল                               | কেন হয়                  | কী করবেন                      |
+| :-------------------------------- | :----------------------- | :---------------------------- |
+| Trend না দেখে শুধু premium-এ sell | "দামি" শব্দে ভুলে যাওয়া | আগে bias, পরে দাম             |
+| ভুল swing থেকে range টানা         | কোনটা বড় swing বোঝা না  | সাম্প্রতিক impulse leg ধরুন   |
+| Range ভাঙার পরেও পুরোনো লাইন ধরা  | অভ্যাস                   | নতুন BOS হলে নতুন range টানুন |
+| ৫০% ছুঁলেই entry                  | লাইনকে সংকেত ভাবা        | Trigger-এর অপেক্ষা করুন       |
+
+## প্রো টিপস
+
+<Callout type="tip">
+  Discount অংশকে আরও ভাগ করে দেখুন। ৫০% ও range low-এর মাঝামাঝি যত নিচে, তত ভালো
+  দাম, কিন্তু structure ভাঙার ঝুঁকিও তত বেশি। এই ভারসাম্য নিজের trade লিখে যাচাই
+  করুন।
+</Callout>
+
+## কখন এটা কাজ করে না
+
+- **Range ছোট হলে:** ৫০% লাইন spread-এর কাছাকাছি চলে আসে।
+- **বড় news-এ:** price লাইন উপেক্ষা করে ছুটে যায়।
+- **Strong trend-এ:** price গভীর pullback না-ও করতে পারে। তখন অপেক্ষা করে trade মিস হয়।
+- **একা ব্যবহার করলে:** এটি দাম বাছার ছাঁকনি, লাভের নিশ্চয়তা নয়।
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- Equilibrium = swing high ও swing low-এর গড়, অর্থাৎ ৫০%।
+- ৫০%-এর ওপর premium, নিচে discount।
+- Uptrend-এ discount-এ buy, downtrend-এ premium-এ sell।
+- আগে trend, পরে দাম, শেষে trigger।
+- Range-এর প্রান্ত ভাঙলে নতুন range টানুন।
+
+</KeyTakeaways>
+
+## অনুশীলন
+
+XAUUSD H1 chart খুলুন। শেষ ৫টি impulse leg-এ Fibonacci tool বসান। প্রতিটির pullback ৫০%-এর নিচে পৌঁছেছিল কি না লিখুন। পৌঁছালে তার পরে price কী করল, আর না পৌঁছালে কী করল?
+
+## কুইজ
+
+1. Low ২৩০০ ও high ২৩৪০ হলে equilibrium কত?
+2. Uptrend-এ কোন অংশে buy খুঁজবেন?
+3. Premium-এ price থাকলে কি সবসময় sell করবেন?
+4. Range-এর low ভেঙে গেলে কী করবেন?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** ২৩২০।
+
+**২.** Discount অংশে, অর্থাৎ ৫০%-এর নিচে।
+
+**৩.** না। আগে downtrend আছে কি না দেখুন।
+
+**৪.** পুরোনো range বাদ দিন এবং নতুন structure দেখে নতুন range টানুন।
+
+</details>
+
+## পরের ধাপ
+
+- আগে: [Multi-Timeframe Analysis](/bn/learn/03-market-structure/05-multi-timeframe-analysis)।
+- পরে: [Candlestick-এর গঠন](/bn/learn/04-candlesticks/01-anatomy-of-a-candle)।
+- Entry-তে ব্যবহার: [Multi-timeframe entry top-down](/bn/learn/09-price-action-entries-strategies/03-multi-timeframe-entry-top-down)।
+
+<Disclaimer />

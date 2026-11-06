@@ -1,0 +1,89 @@
+---
+title: "Backtesting ও Journal: প্রমাণ দিয়ে plan গড়া (চ্যাপ্টার পরিচিতি)"
+description: "Backtest, performance metrics, forward testing, journal template, trade review ও plan v2 — অনুমান নয়, ডেটা দিয়ে নিয়ম যাচাই ও উন্নত করার পূর্ণ রোডম্যাপ।"
+level: intermediate
+tags: [backtest, journal, metrics, forward-test, review, overview, roadmap]
+status: done
+updated: 2026-11-05
+---
+
+# Backtesting ও Journal: প্রমাণ দিয়ে plan গড়া
+
+নতুন ওষুধ বাজারে আসার আগে পরীক্ষা হয়, ফলাফল লেখা হয়, আলাদা রোগীদের ওপর আবার দেখা হয়। আপনার trading নিয়মও একই পথ পেরোনোর যোগ্য: আগে পরীক্ষা, তারপর হিসাব, তারপর অদেখা ডেটায় যাচাই।
+
+## Backtesting ও Journal কী
+
+**Backtesting হলো নিয়ম অতীতের দামে চালিয়ে ফল মাপা; journal হলো নিজের আসল trade-এর ফল ও কারণ লিখে রাখা; দুটি মিলে plan-কে প্রমাণভিত্তিক করে।**
+
+এই অধ্যায় একটি প্রশ্নের উত্তর দেয়: **"আমার নিয়ম সত্যিই কাজ করে কি না, আমি জানব কীভাবে, আর কীভাবে ধীরে ধীরে ভালো করব?"**
+
+## কেন এটি এখন শিখবেন
+
+- **লিখিত plan আছে, কিন্তু প্রমাণ নেই।** [Trading Plan](/bn/learn/14-trading-plan-system/00-overview) নিয়ম দেয়, এই অধ্যায় সেগুলো পরীক্ষা করে।
+- **অনুমান ও ডেটা আলাদা।** "কাজ করে মনে হয়" দিয়ে ঝুঁকি নেওয়া ব্যয়বহুল।
+- **ভাগ্য ও দক্ষতা আলাদা করার একমাত্র উপায়** যথেষ্ট ডেটা।
+- **Advanced কৌশল শেখার আগে যাচাই দক্ষতা দরকার।**
+
+## এই অধ্যায় শেষে আপনি যা পারবেন
+
+- **Manual backtest** ফাঁদ এড়িয়ে চালাতে পারবেন।
+- **Win rate, expectancy, profit factor ও drawdown** বের করতে পারবেন।
+- **Forward test** দিয়ে backtest যাচাই করতে পারবেন।
+- **Journal template** বানিয়ে প্রতিদিন পূরণ করতে পারবেন।
+- **Review** করে দুর্বল setup চিনতে পারবেন।
+- **Plan v2** নিরাপদে লিখতে পারবেন।
+
+## পড়ার ক্রম: কোন পাঠে কী আছে
+
+| #   | পাঠ                                                                                                              | মূল প্রশ্ন                          | কঠিনতা |
+| :-- | :--------------------------------------------------------------------------------------------------------------- | :---------------------------------- | :----- |
+| ১   | [How to Backtest](/bn/learn/15-backtesting-journal/01-how-to-backtest)                                           | নিয়ম অতীতে পরীক্ষা করব কীভাবে?     | মাঝারি |
+| ২   | [Performance Metrics ও Forward Testing](/bn/learn/15-backtesting-journal/02-performance-metrics-forward-testing) | ফল মাপব ও যাচাই করব কীভাবে?         | মাঝারি |
+| ৩   | [Journal Template](/bn/learn/15-backtesting-journal/03-journal-template)                                         | কোন কলাম, কখন পূরণ?                 | সহজ    |
+| ৪   | [Reviewing Trades](/bn/learn/15-backtesting-journal/04-reviewing-trades)                                         | ডেটা ভাগ করে দুর্বলতা খুঁজব কীভাবে? | মাঝারি |
+| ৫   | [Building a Plan](/bn/learn/15-backtesting-journal/05-building-a-plan)                                           | Plan v2 কীভাবে বানাব?               | মাঝারি |
+
+## পাঠগুলো কীভাবে জোড়া লাগে
+
+একটি চক্র:
+
+1. **Backtest।** নিয়ম অতীতে চালিয়ে ফল লগে (পাঠ ১)।
+2. **মাপা।** Expectancy, drawdown; ভালো দেখালে forward test (পাঠ ২)।
+3. **Live বা demo-তে journal।** প্রতিটি trade একই ছাঁদে (পাঠ ৩)।
+4. **Review।** ভাগ করে দেখা, একটি দুর্বলতা বের করা (পাঠ ৪)।
+5. **Plan v2।** একটি বদল, যাচাইয়ের শর্তসহ। তারপর আবার ১ থেকে (পাঠ ৫)।
+
+## এই অধ্যায়ে যা নেই
+
+- Plan-এর প্রাথমিক গঠন: Trading Plan ও System।
+- ঝুঁকির সূত্র ও size: [Risk Management](/bn/learn/08-risk-management/00-overview)।
+- আবেগ ও discipline: [Trading Psychology](/bn/learn/12-trading-psychology/00-overview)।
+- Code-ভিত্তিক automation: [Automation](/bn/learn/16-advanced/05-automation)।
+
+## কীভাবে পড়বেন
+
+- ক্রমে পড়ুন, আর পাঠ ১-এর অনুশীলন আপনার নিজের plan-এ করুন।
+- Spreadsheet-এ কাজ করুন; এই অধ্যায়ের সূত্রগুলো সেখানে বসান।
+- বড় সিদ্ধান্ত নেওয়ার আগে ধৈর্য ধরে ডেটা জমান।
+- এই অধ্যায়ের সব chart কাল্পনিক (synthetic), ধারণা বোঝানোর জন্য। বাস্তব ফল নয়।
+
+## নিজেকে যাচাই করুন
+
+<Checklist
+  items={[
+    "আমার plan-এর entry, stop ও target মাপার মতো করে লেখা",
+    "R কী, জানি",
+    "Expectancy কী বলে, জানি",
+    "আমি প্রতিটি trade-এর আগে stop ও target লিখে রাখি",
+  ]}
+/>
+
+কোনোটিতে আটকালে Trading Plan বা Risk Management-এ ফিরে যান।
+
+## পরের ধাপ
+
+- শুরু: [How to Backtest](/bn/learn/15-backtesting-journal/01-how-to-backtest)।
+- আগের অধ্যায়: [Trading Plan ও System](/bn/learn/14-trading-plan-system/00-overview)।
+- পরের অধ্যায়: [Advanced SMC ও ICT](/bn/learn/16-advanced/01-smart-money-concepts-ict-basics)।
+
+<Disclaimer />

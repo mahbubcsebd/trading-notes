@@ -1,0 +1,271 @@
+---
+title: "Falling Three Methods: a quiet pause inside a downtrend, then the fall resumes"
+description: "How to spot falling three methods, the mirror of rising three methods, why the pause candles must be calm, and continuation short entry, stop and target, with charts."
+type: bearish
+category: continuation
+level: advanced
+candleCount: 5
+signal: continuation
+chartId: falling-three-methods-win-01
+tags: [pattern, candlestick, falling-three-methods, continuation, trend]
+status: done
+sources:
+  - type: book
+    title: "Japanese Candlestick Charting Techniques - Steve Nison"
+    note: "Falling three methods, continuation patterns"
+  - type: blog
+    title: "Falling Three Methods - Investopedia"
+    url: "https://www.investopedia.com/terms/f/falling-three-methods.asp"
+updated: 2026-11-06
+---
+
+After a big red candle in a downtrend, three candles stayed inside its range, then another red candle closed lower. Textbook falling three methods, so you go short. But the three middle candles were not calm: each swung thirty to forty pips both ways. That was not a rest but a fight between both sides, and buyers won the very next candle. This page is the mirror of [Rising Three Methods](/en/patterns/rising-three-methods); the rules and how to measure depth are detailed there.
+
+## At a glance
+
+| Item          | Falling Three Methods                                                                                                                    |
+| :------------ | :--------------------------------------------------------------------------------------------------------------------------------------- |
+| Type          | Bearish continuation, five candles (sometimes four to six)                                                                               |
+| Where to look | In the middle of an ongoing downtrend                                                                                                    |
+| Key features  | 1: long bearish; 2-4: small candles (usually bullish) inside the first one's range; 5: long bearish, closing below the first one's close |
+| Confirmation  | The fifth candle is the confirmation                                                                                                     |
+| Stop          | Above the middle candles' high (or above the first candle's high, conservative)                                                          |
+| Invalidation  | A close above the middle candles' high                                                                                                   |
+| Look-alikes   | Bear flag, a run of inside bars                                                                                                          |
+| Opposite      | Rising Three Methods                                                                                                                     |
+
+## What you will be able to do
+
+- **Separate** a calm pause from a messy fight in the middle of a downtrend.
+- **Measure** the pause candles' range to judge the pattern's quality.
+- **Place** a continuation short in the trend direction.
+
+## Why it matters
+
+- **It prevents going long too early in a downtrend.** Thinking "the bottom is in" because of a few small green candles.
+- **The character of the pause is the real information.** Small bodies and small ranges mean sellers are only resting. Big wicks both ways mean buyers are fighting.
+- **A trade with the trend.** The larger flow is on your side, so it is usually easier than a reversal.
+
+Prerequisites: the Rising Three Methods page (linked above) and [Continuation Patterns](/en/learn/06-trend-chart-patterns/02-continuation-patterns).
+
+## What are falling three methods
+
+**Falling three methods is a five-candle continuation pattern: a long bearish candle in a downtrend, then three (sometimes two or four) small candles that stay inside the first one's range, then another long bearish candle that closes below the first one's close.**
+
+<CandleDiagram
+  title="Falling three methods"
+  candles={[
+    { o: 70, h: 71, l: 64, c: 65, dim: true },
+    { o: 65, h: 66, l: 49.5, c: 50, label: "1" },
+    { o: 50, h: 53.5, l: 49.5, c: 53, label: "2" },
+    { o: 53, h: 55.5, l: 52, c: 55, label: "3" },
+    { o: 55, h: 57.5, l: 54, c: 56.5, label: "4" },
+    { o: 56.5, h: 57, l: 44, c: 44.5, label: "5", note: "below 1's close" },
+  ]}
+  caption="A long red candle, three small green candles in the lower part of its range, then another long red candle breaking below the first one's close."
+/>
+
+### Identification rules
+
+| Rule                                                                           | Required?               | Why                                  |
+| :----------------------------------------------------------------------------- | :---------------------- | :----------------------------------- |
+| A clear downtrend before it                                                    | Yes                     | Continuation needs a trend           |
+| The first candle long and bearish                                              | Yes                     | The push                             |
+| The middle candles inside the first one's range, never closing above its high  | Yes                     | The "pause inside the range"         |
+| The fifth candle long and bearish, closing clearly below the first one's close | Yes                     | The trend restarts                   |
+| The middle candles have small ranges and small wicks                           | No (but very important) | A calm pause; big wicks mean a fight |
+| The pause gives back no more than half of the first candle                     | No (but very important) | A deep pause means real buying       |
+
+## Strong vs weak falling three methods
+
+<DiagramRow>
+  <CandleDiagram
+    title="Strong"
+    verdict="good"
+    verdictLabel="tradeable"
+    candles={[
+      { o: 65, h: 66, l: 49.5, c: 50 },
+      { o: 50, h: 52.5, l: 49.5, c: 52 },
+      { o: 52, h: 54, l: 51.5, c: 53.5 },
+      { o: 53.5, h: 55, l: 53, c: 54.5 },
+      { o: 54.5, h: 55, l: 43, c: 43.5, label: "calm pause" },
+    ]}
+    caption="Small pause candles with small wicks in the lower half of the first candle; the fifth drops hard."
+  />
+  <CandleDiagram
+    title="Weak"
+    verdict="bad"
+    verdictLabel="avoid"
+    candles={[
+      { o: 65, h: 66, l: 49.5, c: 50 },
+      { o: 50, h: 58, l: 49.8, c: 53 },
+      { o: 53, h: 57.5, l: 49.8, c: 52 },
+      { o: 52, h: 58.5, l: 50, c: 54 },
+      { o: 54, h: 54.5, l: 49, c: 49.5, label: "messy pause" },
+    ]}
+    caption="Each pause candle throws big wicks both ways; the fifth only just closes below the first one's close."
+  />
+</DiagramRow>
+
+| Quality check | Strong                                    | Weak                                        |
+| :------------ | :---------------------------------------- | :------------------------------------------ |
+| Pause candles | Small bodies, small ranges, small wicks   | Small bodies, but big wicks both ways       |
+| Pause range   | Far smaller than the first candle's range | About half the first candle's range or more |
+| Fifth candle  | Long, clearly below the first one's close | Only just below the first one's close       |
+| Trend         | Clear lower highs and lower lows          | Weak, or near support                       |
+
+## The story inside the candle
+
+The rising three methods story in reverse. One common interpretation: in the first candle sellers push hard. In the middle candles some sellers take profit and buyers lift price a little, but there is no big attack. In the fifth candle new sellers arrive. But when the middle candles swing hard both ways the story changes: buyers are buying every lower price with force.
+
+<Callout type="note">
+  This is a common interpretation, not a proven fact. A chart does not show who
+  bought or sold.
+</Callout>
+
+## Where it works and where it does not
+
+<Compare
+  leftLabel="Where falling three methods carry weight"
+  rightLabel="Where it is often a trap"
+  left="- In a clear downtrend with lower highs and lower lows
+- With calm pause candles: small bodies, small ranges
+- With the pause in the lower half of the first candle
+- With the fifth candle clearly below the first one's close
+- With open space down to the next support"
+  right="- When the pause candles throw big wicks both ways
+- When the pause gives back more than half of the first candle
+- When the fifth candle only just closes below the first one's close
+- Right above a major support"
+/>
+
+## Step by step: trading falling three methods
+
+The full steps are on the Rising Three Methods page, reversed. Only what differs:
+
+<Steps>
+
+### Step 1: Measure the pause's volatility
+
+Average range of the middle candles ÷ the first candle's range. A working measure: under 0.3 is calm; near or above 0.5 is messy, so skip it. This is not a statistic; set it in your own backtest.
+
+### Step 2: Entry and stop
+
+Sell at the fifth close, or with a sell stop below the first candle's low. Stop above the highest high of the middle candles, plus the [spread](/en/learn/01-foundations/04-spread-commission-swap).
+
+### Step 3: Size
+
+The stop sits above the whole pause, so the distance is large. Calculate [position size](/en/learn/08-risk-management/02-position-sizing) from that distance, not with a fixed lot. Keep the [risk reward](/en/learn/08-risk-management/03-risk-reward) to the support below at least 1:1.5.
+
+</Steps>
+
+### Pre-trade checklist
+
+<Checklist
+  id="pattern-falling-three-methods-pretrade-en"
+  items={[
+    "Is the ongoing downtrend clear (lower highs, lower lows)?",
+    "Does the shape pass the rules (long red, small candles inside, the fifth closing below the first one's close)?",
+    "Have all five candles closed, and is the pause calm (small ranges, small wicks)?",
+    "Is the risk reward to the support below at least 1:1.5?",
+    "Is there no major higher-timeframe support right below?",
+  ]}
+/>
+
+If any box stays empty, skip the trade.
+
+## Example 1: when it works (illustrative)
+
+<Chart
+  id="falling-three-methods-win-01"
+  height={420}
+  caption="EURUSD H4 (illustrative, synthetic) — falling three methods in a downtrend, a calm pause, short at the fifth close."
+/>
+
+- **What was visible:** Candles 0-5 fell from 1.0950 to about 1.0847.
+- **The pattern:** Candle 6 was a long red candle: 1.0847 to 1.0779 (68 pips). Candles 7-9 were three small green candles, each with a 16-19 pip range and highs of 1.0795, 1.0805 and 1.0814, in the lower half of the first candle. Candle 10 was a long red candle closing at 1.0747, 32 pips below the first one's close.
+- **Decision:** Sell at the fifth close at 1.0747. Stop 1.0822 (8 pips above the pause high): 75 pips of risk. Target 1.0597 (2R).
+- **Result:** Candle 19 reached the target.
+- **Lesson:** A clear trend, a calm small pause, and a forceful fifth candle.
+
+<TradeSetup
+  direction="short"
+  pair="EURUSD"
+  entry={1.0747}
+  stop={1.0822}
+  target={1.0597}
+/>
+
+(Illustrative example, not a real trade. The fall does not always continue after falling three methods, and no result is guaranteed.)
+
+## Example 2: when it is a trap (illustrative)
+
+<Chart
+  id="falling-three-methods-fail-01"
+  height={420}
+  caption="USDJPY H1 (illustrative, synthetic) — a messy, two-sided pause and a weak fifth candle. Short at the fifth close, then stopped out."
+/>
+
+- **What was visible:** Candles 0-4 fell from 151.80 to about 151.38.
+- **The pattern:** Candle 5 was a long red candle: 151.38 to 150.72 (a range of about 73 pips). Candles 6-8 stayed inside its range, but each had a range of 34-37 pips with big wicks both ways: about half the first candle. Candle 9 closed at 150.69, only 3 pips below the first one's close.
+- **The wrong decision:** "The shape matches." Sell at the fifth close at 150.69, stop 151.12: 43 pips of risk, target 149.83.
+- **What happened:** Candle 10 snapped back and candle 12 broke the stop.
+- **Why it failed:** The pause was not calm; it was a fight between both sides, and the fifth candle barely cleared the first one's close. The third checklist box would have filtered it out.
+
+**Lesson:** A pause with big wicks both ways is a fight, not a rest. Because size came from the stop distance, the loss was 1R, that is 1%. With a fixed lot the same trade could have risked much more.
+
+## Common mistakes
+
+| Mistake                                        | Why it happens               | What to do instead                                     |
+| :--------------------------------------------- | :--------------------------- | :----------------------------------------------------- |
+| Going long on the middle green candles         | Thinking "the bottom is in"  | Wait while the pause stays in the first candle's range |
+| Counting a messy pause as the pattern          | Looking at bodies, not wicks | Measure pause range ÷ first candle range               |
+| A fixed lot on a wide stop                     | Not calculating size         | Size from the stop distance, 1% risk                   |
+| Shorting when the fifth only just closes lower | Thinking the rule was "met"  | The first one's close must be cleared clearly          |
+
+## Pro tips
+
+<Callout type="tip">
+  The bear flag and falling three methods are the same family. For the chart pattern view, see the Continuation Patterns lesson linked above. What is
+  five candles in candle language is often a small flag in chart language.
+</Callout>
+
+## Summary
+
+<KeyTakeaways>
+
+- Falling three methods = a long red candle, 2-4 small candles inside its range, then a long red candle clearing the first one's close.
+- Meaningless without an ongoing downtrend; it is a continuation pattern.
+- The character of the pause is the key: calm small candles mean a rest, big wicks both ways mean a fight.
+- Enter at the fifth close, stop above the pause high, size from that distance.
+
+</KeyTakeaways>
+
+## Practice and your own backtest
+
+Open EURUSD H4 or USDJPY H1 in TradingView. Inside downtrends, find at least 20 sequences of "big red, small pause, big red". For each, log: date, number of middle candles, average pause range ÷ first candle range, how far below the first one's close the fifth closed, and result (R). Then split into "calm pause" (under 0.3) and "messy pause" (near or above 0.5) and compare the average R. Do not draw conclusions from fewer than 30 samples.
+
+## Quiz
+
+1. Which feature of the middle candles matters most in falling three methods?
+2. The pause candles' range is about half the first candle's. What do you do?
+3. Which checklist box would have filtered out the trade in Example 2?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** Being calm: small bodies, small ranges, small wicks, and staying inside the first candle's range.
+
+**2.** Skip it. Swings that large mean a fight between both sides, not a calm pause.
+
+**3.** The third box: the pause was not calm.
+
+</details>
+
+## Next steps
+
+- Full walk-through: [Rising Three Methods](/en/patterns/rising-three-methods).
+- How to calculate size: [Risk per Trade](/en/learn/08-risk-management/01-risk-per-trade).
+- Same family: [Three Black Crows](/en/patterns/three-black-crows), [Bearish Engulfing](/en/patterns/bearish-engulfing), [Inside Bar](/en/patterns/inside-bar).
+
+<Disclaimer />

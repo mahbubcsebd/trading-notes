@@ -1,3 +1,12 @@
 {
-  "title": "Broker Platform Setup"
+  "title": "Broker Platform Setup",
+  "pages": [
+    "00-overview",
+    "01-broker-kivabe-choose-korbo",
+    "02-demo-vs-live-account",
+    "03-mt5-ar-tradingview-setup",
+    "04-order-types",
+    "05-lot-size-margin-call-stop-out",
+    "06-bangladesh-e-retail-forex-niyom-ar-tax"
+  ]
 }

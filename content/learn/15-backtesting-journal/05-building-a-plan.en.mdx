@@ -1,0 +1,181 @@
+---
+title: "Building a Plan: Making Plan v2 From Data"
+description: "How to build the next version of the plan from the results of backtest, forward test and review, which changes are safe, and why a change that improves the past is not to be trusted without checking, with a chart."
+level: intermediate
+tags: [trading-plan, plan-version, iteration, forward-test, review]
+instruments: [ACCOUNT]
+timeframes: [per-trade]
+status: done
+sources:
+  - type: blog
+    title: "Backtesting - Investopedia"
+    url: "https://www.investopedia.com/terms/b/backtesting.asp"
+updated: 2026-11-06
+---
+
+# Building a Plan: Making Plan v2 From Data
+
+Your [plan v1](/en/learn/14-trading-plan-system/01-trading-plan-template) is written, backtested, the journal is running, and a review has been done. Now the question: how do you put what the data says into the plan, without fooling yourself?
+
+## What you will be able to do
+
+- **Pick one change** from a review and write plan v2.
+- **Tell safe changes from risky ones.**
+- **Set the forward test rules** after a change.
+
+## Why it matters
+
+- **The plan is not fixed, but you need rules for changing it.** If you change it at any time, the data gets mixed.
+- **A change built by looking at the past risks overfitting.** The [traps of backtesting](/en/learn/15-backtesting-journal/01-how-to-backtest) apply here too.
+- **Slow improvement lasts.** When many changes happen at once, you cannot tell which one worked.
+
+Prerequisites: [Reviewing Trades](/en/learn/15-backtesting-journal/04-reviewing-trades).
+
+## What is a plan version
+
+**A plan version (v1, v2, …) is a fixed form of the plan written with a date, in which the reason for each change and the condition for checking it are written.**
+
+| Kind of change                | Risk   | Example                | Check                               |
+| :---------------------------- | :----- | :--------------------- | :---------------------------------- |
+| Removing (setup, time)        | Low    | Close the weak setup B | forward test, same rules            |
+| Tightening (cutting risk)     | Low    | Risk from 1% to 0.5%   | Start at a small risk               |
+| Adding new (a new setup)      | Medium | A new pattern          | A separate backtest + forward       |
+| Tuning numbers (stop, target) | High   | Target from 2R to 2.7R | Big risk of overfitting, be careful |
+
+Usually **removing and tightening** are safe, because you do not have to guess anything new. Tuning numbers is the most dangerous.
+
+## What it looks like on a chart
+
+<Chart
+  id="plan-v2-filtered-equity-01"
+  height={420}
+  caption="ACCOUNT, per trade (educational, imaginary example): taking only setup A in the same period as the earlier 20 trades gives 10 trades, +8R. This is data of the past; it has to be confirmed with a forward test."
+/>
+
+In the past, v2 looks good. But this is a **guess**, not proof, because we chose by looking at the result.
+
+## Step by step: plan v2
+
+<Steps>
+
+### Step 1: Pick one change
+
+One, from the result of the review. For example: "close setup B."
+
+### Step 2: Write the reason and the expectation
+
+Why the change, and what result you expect. For example: "B averages -0.4R, A +0.8R."
+
+### Step 3: Write the condition for checking first
+
+How many trades you will run forward, and what result keeps v2 and what sends you back. For example: 20 trades, average R positive.
+
+### Step 4: Run at a small risk
+
+In the forward test, half the risk. Match the numbers following the [Metrics](/en/learn/15-backtesting-journal/02-performance-metrics-forward-testing).
+
+### Step 5: Save with the version and date
+
+Do not throw v1 away. You need it if you have to go back.
+
+### Step 6: If the result matches, return the risk to normal
+
+As part of the regular review. If it does not match, go back to v1 or investigate anew.
+
+</Steps>
+
+## Example 1: when it works (synthetic)
+
+- **v1:** two setups, combined +4R (20 trades).
+- **Review:** A +8R, B -4R.
+- **v2:** only A. 20 forward trades at half risk, condition: average R positive.
+- **Result:** forward average +0.3R. The condition was met, and the risk went back to normal.
+- **Lesson:** write the condition before the change, then check on unseen data.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Example 2: when it fails (synthetic)
+
+- **What happened:** in the review the trader saw that a target of 2.7R instead of 2R gave a better result in the past. At the same time they tuned the stop and the time too.
+- **Result:** live, the result was many times worse than the backtest. It was not clear which change caused it.
+- **Why it failed:** many changes at once and number tuning are both doors to overfitting.
+- **Lesson:** one change at a time, and number tuning last, with care.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Common mistakes
+
+| Mistake                           | Why it happens                  | What to do                    |
+| :-------------------------------- | :------------------------------ | :---------------------------- |
+| Starting v2 without checking      | Confidence from the past result | A forward test is a must      |
+| Setting the check condition later | Choosing to suit the result     | Write it first                |
+| Many changes at once              | The urge to fix fast            | One at a time                 |
+| Deleting v1                       | Attention only on the new       | Save the versions             |
+| Frequent changes                  | Impatience                      | At the set time of the review |
+
+## Pro tips
+
+<Callout type="tip">
+  Keep a "change log" at the top of the plan: date, what changed, why, the
+  result. At the end of the year this is your most valuable lesson.
+</Callout>
+
+<Callout type="note">
+  Some changes only cut risk or tighten the rules. These need less checking, but
+  still write them in the log.
+</Callout>
+
+## When this does not work
+
+- **If there is little data:** the change stands on luck. Collect more trades.
+- **If the type of market changes:** a review of old data does not apply to the new situation.
+- **Driven by emotion:** changing the plan after breaking the [stopping rules](/en/learn/14-trading-plan-system/05-kokhon-trading-bondho-korbo) is risky.
+
+## Summary
+
+<KeyTakeaways>
+
+- The plan has versions, with dates and reasons.
+- Safe changes: removing and tightening.
+- Tuning numbers is the riskiest.
+- Write the checking condition first, and run a forward test.
+
+</KeyTakeaways>
+
+## Practice
+
+Pick one change from your latest review and write plan v2: the reason, the expectation, the checking condition, and the number of forward test trades.
+
+## Quiz
+
+1. Which kind of change is comparatively safe?
+2. When do you write the checking condition?
+3. Why is a change that looks good in the past not proof?
+4. Why keep v1?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** Removing and tightening.
+
+**2.** Before putting the change in use.
+
+**3.** It was chosen by looking at the result, so it may be overfit.
+
+**4.** To be able to go back and to compare.
+
+</details>
+
+## Next steps
+
+- Before: [Reviewing Trades](/en/learn/15-backtesting-journal/04-reviewing-trades).
+- After: [Smart Money Concepts and ICT Basics](/en/learn/16-advanced/01-smart-money-concepts-ict-basics).
+- Related: [Trading Plan Template](/en/learn/14-trading-plan-system/01-trading-plan-template).
+
+### Sources
+
+- <ExternalLink href="https://www.investopedia.com/terms/b/backtesting.asp">
+    Backtesting, Investopedia
+  </ExternalLink>
+
+<Disclaimer />

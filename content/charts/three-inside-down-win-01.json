@@ -1,0 +1,295 @@
+{
+  "id": "three-inside-down-win-01",
+  "title": {
+    "en": "Three Inside Down at an Old High, Short at the Third Close",
+    "bn": "পুরোনো high-এ three inside down, তৃতীয় close-এ short"
+  },
+  "symbol": "USDJPY",
+  "timeframe": "H1",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bearish",
+  "outcome": "win",
+  "tags": [
+    "three-inside-down",
+    "harami",
+    "candlestick",
+    "three-candle",
+    "resistance",
+    "pattern"
+  ],
+  "module": "patterns",
+  "lessonSlugs": [],
+  "caption": {
+    "en": "Illustrative synthetic USDJPY H1: a long bullish candle into an old high, a small red harami inside it, then a third candle closing below the first candle's open. Short at the third close, stop above the mother's high; price falls to the target just above the swing low.",
+    "bn": "শিক্ষামূলক কাল্পনিক USDJPY H1: পুরোনো high পর্যন্ত একটি লম্বা bullish candle, তার ভেতরে ছোট লাল harami, তারপর তৃতীয় candle প্রথমটার open-এর নিচে close করে। তৃতীয় close-এ short, stop mother-এর high-এর উপরে; দাম swing low-এর ঠিক উপরের target পর্যন্ত নামে।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data, not a real market record.",
+    "bn": "শিক্ষামূলক কাল্পনিক ডেটা, বাস্তব মার্কেটের রেকর্ড নয়।"
+  },
+  "updatedAt": "2026-11-06T12:00:00Z",
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 149.54,
+      "label": "Old high (resistance)",
+      "color": "#3b82f6",
+      "style": "dashed"
+    },
+    {
+      "type": "marker",
+      "i": 15,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Mother"
+    },
+    {
+      "type": "marker",
+      "i": 16,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Harami"
+    },
+    {
+      "type": "marker",
+      "i": 17,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Close below mother open"
+    },
+    {
+      "type": "hline",
+      "price": 149.15,
+      "label": "Entry (3rd close)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 149.57,
+      "label": "Stop",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 148.414,
+      "label": "Target (above swing low)",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candle 5 makes the old high. Candle 15 is a long bullish mother into it; candle 16 is a small red harami inside its body. Candle 17 closes below candle 15's open: three inside down. Short at that close, stop above the mother's high.",
+    "bn": "৫ নম্বর candle পুরোনো high বানায়। ১৫ নম্বর সেখানে লম্বা bullish mother; ১৬ নম্বর তার body-র ভেতরে ছোট লাল harami। ১৭ নম্বর ১৫ নম্বরের open-এর নিচে close করে: three inside down। সেই close-এ short, stop mother-এর high-এর উপরে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Three inside down is a bearish harami that has already been confirmed",
+      "bn": "Three inside down হলো ইতিমধ্যে নিশ্চিত হওয়া bearish harami"
+    }
+  ],
+  "entry": 149.15,
+  "stopLoss": 149.57,
+  "takeProfit": 148.414,
+  "rr": "1:1.8",
+  "candles": [
+    {
+      "i": 0,
+      "o": 149.0,
+      "h": 149.188,
+      "l": 148.937,
+      "c": 149.12
+    },
+    {
+      "i": 1,
+      "o": 149.12,
+      "h": 149.37,
+      "l": 149.033,
+      "c": 149.27
+    },
+    {
+      "i": 2,
+      "o": 149.27,
+      "h": 149.307,
+      "l": 149.193,
+      "c": 149.23
+    },
+    {
+      "i": 3,
+      "o": 149.23,
+      "h": 149.427,
+      "l": 149.135,
+      "c": 149.37
+    },
+    {
+      "i": 4,
+      "o": 149.37,
+      "h": 149.52,
+      "l": 149.295,
+      "c": 149.47
+    },
+    {
+      "i": 5,
+      "o": 149.47,
+      "h": 149.54,
+      "l": 149.41,
+      "c": 149.44
+    },
+    {
+      "i": 6,
+      "o": 149.44,
+      "h": 149.524,
+      "l": 149.081,
+      "c": 149.22
+    },
+    {
+      "i": 7,
+      "o": 149.22,
+      "h": 149.304,
+      "l": 148.755,
+      "c": 148.94
+    },
+    {
+      "i": 8,
+      "o": 148.94,
+      "h": 149.021,
+      "l": 148.668,
+      "c": 148.76
+    },
+    {
+      "i": 9,
+      "o": 148.76,
+      "h": 148.854,
+      "l": 148.724,
+      "c": 148.82
+    },
+    {
+      "i": 10,
+      "o": 148.82,
+      "h": 148.951,
+      "l": 148.486,
+      "c": 148.62
+    },
+    {
+      "i": 11,
+      "o": 148.62,
+      "h": 148.701,
+      "l": 148.384,
+      "c": 148.48
+    },
+    {
+      "i": 12,
+      "o": 148.48,
+      "h": 148.789,
+      "l": 148.388,
+      "c": 148.72
+    },
+    {
+      "i": 13,
+      "o": 148.72,
+      "h": 149.106,
+      "l": 148.549,
+      "c": 148.98
+    },
+    {
+      "i": 14,
+      "o": 148.98,
+      "h": 149.256,
+      "l": 148.847,
+      "c": 149.18
+    },
+    {
+      "i": 15,
+      "o": 149.18,
+      "h": 149.53,
+      "l": 149.17,
+      "c": 149.51
+    },
+    {
+      "i": 16,
+      "o": 149.51,
+      "h": 149.516,
+      "l": 149.368,
+      "c": 149.378
+    },
+    {
+      "i": 17,
+      "o": 149.378,
+      "h": 149.388,
+      "l": 149.14,
+      "c": 149.15
+    },
+    {
+      "i": 18,
+      "o": 149.15,
+      "h": 149.17,
+      "l": 149.11,
+      "c": 149.13
+    },
+    {
+      "i": 19,
+      "o": 149.13,
+      "h": 149.198,
+      "l": 148.92,
+      "c": 148.99
+    },
+    {
+      "i": 20,
+      "o": 148.99,
+      "h": 149.063,
+      "l": 148.958,
+      "c": 149.03
+    },
+    {
+      "i": 21,
+      "o": 149.03,
+      "h": 149.084,
+      "l": 148.805,
+      "c": 148.87
+    },
+    {
+      "i": 22,
+      "o": 148.87,
+      "h": 148.935,
+      "l": 148.702,
+      "c": 148.75
+    },
+    {
+      "i": 23,
+      "o": 148.75,
+      "h": 148.807,
+      "l": 148.719,
+      "c": 148.78
+    },
+    {
+      "i": 24,
+      "o": 148.78,
+      "h": 148.853,
+      "l": 148.595,
+      "c": 148.64
+    },
+    {
+      "i": 25,
+      "o": 148.64,
+      "h": 148.696,
+      "l": 148.484,
+      "c": 148.54
+    },
+    {
+      "i": 26,
+      "o": 148.54,
+      "h": 148.607,
+      "l": 148.364,
+      "c": 148.42
+    },
+    {
+      "i": 27,
+      "o": 148.42,
+      "h": 148.467,
+      "l": 148.293,
+      "c": 148.34
+    }
+  ]
+}

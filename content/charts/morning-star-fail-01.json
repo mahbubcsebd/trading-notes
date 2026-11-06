@@ -1,0 +1,339 @@
+{
+  "id": "morning-star-fail-01",
+  "title": {
+    "en": "Morning Star Under a Falling 10-Period Average",
+    "bn": "নিম্নমুখী 10-period average-এর নিচে morning star"
+  },
+  "symbol": "XAUUSD",
+  "timeframe": "D1",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bullish",
+  "outcome": "loss",
+  "tags": [
+    "morning-star",
+    "candlestick",
+    "three-candle",
+    "fail",
+    "moving-average",
+    "pattern"
+  ],
+  "module": "patterns",
+  "lessonSlugs": [],
+  "caption": {
+    "en": "Illustrative synthetic XAUUSD D1: in a steady downtrend, a morning star forms with no support beneath it. The long at the third close rallies straight into the falling 10-day simple moving average, is rejected there, and falls through the stop.",
+    "bn": "শিক্ষামূলক কাল্পনিক XAUUSD D1: একটানা downtrend-এ, নিচে কোনো support ছাড়া একটি morning star। তৃতীয় close-এর long সোজা নিম্নমুখী 10-day simple moving average পর্যন্ত ওঠে, সেখানে প্রত্যাখ্যাত হয়, তারপর stop ভেঙে নামে।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data, not a real market record.",
+    "bn": "শিক্ষামূলক কাল্পনিক ডেটা, বাস্তব মার্কেটের রেকর্ড নয়।"
+  },
+  "updatedAt": "2026-11-06T12:00:00Z",
+  "annotations": [
+    {
+      "type": "marker",
+      "i": 20,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "1"
+    },
+    {
+      "type": "marker",
+      "i": 21,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Star"
+    },
+    {
+      "type": "marker",
+      "i": 22,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "3"
+    },
+    {
+      "type": "marker",
+      "i": 24,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Rejected at SMA"
+    },
+    {
+      "type": "hline",
+      "price": 2383.0,
+      "label": "Entry (3rd close)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 2361.0,
+      "label": "Stop",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 2427.0,
+      "label": "Target 2R",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candles 0-19 are a downtrend that slows into a grind, below its falling 10-day SMA. Candles 20-22 form a morning star, but there is no support under it, and the SMA sits only about 1R above the entry while the 2R target lies beyond it. Candle 23 rallies into the SMA, candle 24 is rejected, and the stop goes.",
+    "bn": "০-১৯ নম্বর candle downtrend, শেষে ধীর গতিতে নামা, নিম্নমুখী 10-day SMA-র নিচে। ২০-২২ নম্বর morning star, কিন্তু নিচে কোনো support নেই, আর SMA entry-র মাত্র প্রায় 1R উপরে, যেখানে 2R target তার ওপারে। ২৩ নম্বর SMA পর্যন্ত ওঠে, ২৪ নম্বর প্রত্যাখ্যাত হয়, stop যায়।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "A falling average just above the entry is an obstacle too",
+      "bn": "Entry-র ঠিক উপরে নিম্নমুখী average-ও একটি বাধা"
+    }
+  ],
+  "overlays": [
+    {
+      "label": "SMA 10",
+      "color": "#3b82f6",
+      "values": [
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        null,
+        2434.5,
+        2427.5,
+        2422.3,
+        2416.1,
+        2411.5,
+        2407.5,
+        2403.4,
+        2400.6,
+        2399.2,
+        2396.8,
+        2395.6,
+        2392.8,
+        2389.8,
+        2388.5,
+        2387.25,
+        2385.2,
+        2381.85,
+        2377.9,
+        2374.05,
+        2369.4
+      ]
+    }
+  ],
+  "entry": 2383.0,
+  "stopLoss": 2361.0,
+  "takeProfit": 2427.0,
+  "rr": "1:2.0",
+  "candles": [
+    {
+      "i": 0,
+      "o": 2480.0,
+      "h": 2484.16,
+      "l": 2463.02,
+      "c": 2468.0
+    },
+    {
+      "i": 1,
+      "o": 2468.0,
+      "h": 2475.18,
+      "l": 2448.75,
+      "c": 2453.0
+    },
+    {
+      "i": 2,
+      "o": 2453.0,
+      "h": 2461.1,
+      "l": 2449.23,
+      "c": 2458.0
+    },
+    {
+      "i": 3,
+      "o": 2458.0,
+      "h": 2462.93,
+      "l": 2438.51,
+      "c": 2444.0
+    },
+    {
+      "i": 4,
+      "o": 2444.0,
+      "h": 2447.78,
+      "l": 2429.69,
+      "c": 2434.0
+    },
+    {
+      "i": 5,
+      "o": 2434.0,
+      "h": 2441.26,
+      "l": 2430.41,
+      "c": 2438.0
+    },
+    {
+      "i": 6,
+      "o": 2438.0,
+      "h": 2445.8,
+      "l": 2416.2,
+      "c": 2422.0
+    },
+    {
+      "i": 7,
+      "o": 2422.0,
+      "h": 2427.77,
+      "l": 2404.0,
+      "c": 2410.0
+    },
+    {
+      "i": 8,
+      "o": 2410.0,
+      "h": 2419.59,
+      "l": 2406.13,
+      "c": 2416.0
+    },
+    {
+      "i": 9,
+      "o": 2416.0,
+      "h": 2421.36,
+      "l": 2395.26,
+      "c": 2402.0
+    },
+    {
+      "i": 10,
+      "o": 2402.0,
+      "h": 2404.84,
+      "l": 2394.65,
+      "c": 2398.0
+    },
+    {
+      "i": 11,
+      "o": 2398.0,
+      "h": 2404.02,
+      "l": 2394.57,
+      "c": 2401.0
+    },
+    {
+      "i": 12,
+      "o": 2401.0,
+      "h": 2405.02,
+      "l": 2391.89,
+      "c": 2396.0
+    },
+    {
+      "i": 13,
+      "o": 2396.0,
+      "h": 2400.73,
+      "l": 2393.46,
+      "c": 2398.0
+    },
+    {
+      "i": 14,
+      "o": 2398.0,
+      "h": 2401.39,
+      "l": 2390.97,
+      "c": 2394.0
+    },
+    {
+      "i": 15,
+      "o": 2394.0,
+      "h": 2400.27,
+      "l": 2391.09,
+      "c": 2397.0
+    },
+    {
+      "i": 16,
+      "o": 2397.0,
+      "h": 2400.08,
+      "l": 2390.69,
+      "c": 2394.0
+    },
+    {
+      "i": 17,
+      "o": 2394.0,
+      "h": 2398.63,
+      "l": 2391.5,
+      "c": 2396.0
+    },
+    {
+      "i": 18,
+      "o": 2396.0,
+      "h": 2399.06,
+      "l": 2388.67,
+      "c": 2392.0
+    },
+    {
+      "i": 19,
+      "o": 2392.0,
+      "h": 2394.84,
+      "l": 2387.11,
+      "c": 2390.0
+    },
+    {
+      "i": 20,
+      "o": 2390.0,
+      "h": 2392.0,
+      "l": 2369.0,
+      "c": 2370.0
+    },
+    {
+      "i": 21,
+      "o": 2370.0,
+      "h": 2373.0,
+      "l": 2364.0,
+      "c": 2371.0
+    },
+    {
+      "i": 22,
+      "o": 2371.0,
+      "h": 2384.0,
+      "l": 2370.0,
+      "c": 2383.0
+    },
+    {
+      "i": 23,
+      "o": 2383.0,
+      "h": 2390.0,
+      "l": 2381.0,
+      "c": 2385.5
+    },
+    {
+      "i": 24,
+      "o": 2385.5,
+      "h": 2386.5,
+      "l": 2371.5,
+      "c": 2373.5
+    },
+    {
+      "i": 25,
+      "o": 2373.5,
+      "h": 2378.67,
+      "l": 2358.06,
+      "c": 2363.5
+    },
+    {
+      "i": 26,
+      "o": 2363.5,
+      "h": 2367.47,
+      "l": 2350.96,
+      "c": 2354.5
+    },
+    {
+      "i": 27,
+      "o": 2354.5,
+      "h": 2360.07,
+      "l": 2351.55,
+      "c": 2357.5
+    },
+    {
+      "i": 28,
+      "o": 2357.5,
+      "h": 2363.31,
+      "l": 2339.71,
+      "c": 2345.5
+    }
+  ]
+}

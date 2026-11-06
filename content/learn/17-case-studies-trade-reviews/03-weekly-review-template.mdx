@@ -1,14 +1,179 @@
 ---
-title: "Weekly review template"
-description: "Detailed notes on Weekly review template"
-status: draft
-updated: 2026-10-10
+title: "Weekly Review Template: এক সপ্তাহ, এক পাতা, একটি লক্ষ্য"
+description: "সপ্তাহের শেষে ৩০ মিনিটে কী কী হিসাব ও প্রশ্ন নিয়ে বসবেন, একটি পূর্ণ করা নমুনা, আর process অনুযায়ী ভাগ করলে কী ধরা পড়ে — chart সহ।"
+level: intermediate
+tags: [weekly-review, template, journal, process, review]
+instruments: [ACCOUNT]
+timeframes: [per-trade]
+status: done
+sources:
+  - type: blog
+    title: "Trading Plan - Investopedia"
+    url: "https://www.investopedia.com/articles/trading/06/tradingplan.asp"
+updated: 2026-11-05
 ---
 
-# Weekly review template
+# Weekly Review Template: এক সপ্তাহ, এক পাতা, একটি লক্ষ্য
 
-<div className="rounded-xl border border-border bg-card p-6 text-center text-muted-foreground my-8">
-  <p className="text-3xl mb-4">🚧</p>
-  <p className="font-semibold text-foreground">Coming in Phase 2</p>
-  <p className="text-sm mt-1">This module is under construction.</p>
-</div>
+সপ্তাহ শেষে অনেকে শুধু account-এর সংখ্যা দেখে বন্ধ করে দেন। লাভ হলে খুশি, ক্ষতি হলে হতাশ, তারপর সোমবার আবার একই। এই পাঠে একটি ছক পাবেন, যা সাপ্তাহিক review-কে ৩০ মিনিটের নিয়মিত কাজে বদলে দেয়।
+
+## এই লেখা পড়ে আপনি যা পারবেন
+
+- **এক পাতার review ছক** পূরণ করতে পারবেন।
+- **Process অনুযায়ী ভাগ** করে সপ্তাহ পড়তে পারবেন।
+- রিভিউ থেকে **একটি লক্ষ্য** বের করতে পারবেন।
+
+## কেন এটি জরুরি
+
+- **অভ্যাস তৈরি হয়।** [Daily ও Weekly Routine](/bn/learn/14-trading-plan-system/04-daily-weekly-routine) বলেছে review কখন; এখানে তার ছক।
+- **ধরন ধরা পড়ে।** একই ভুল পাঁচ সপ্তাহে পাঁচবার ঘটলে সেটি আর "দুর্ভাগ্য" নয়।
+- **Plan-কে ডেটা দেয়।** [Plan v2](/bn/learn/15-backtesting-journal/05-building-a-plan) এই review থেকে আসে।
+
+পূর্বশর্ত: [নিজের Trade Breakdown](/bn/learn/17-case-studies-trade-reviews/01-nijer-winning-losing-trade-breakdown)।
+
+## Weekly review ছক
+
+**Weekly review হলো সপ্তাহের সব trade একই ছকে সংখ্যা ও প্রশ্নে ভেঙে একটি পরের-সপ্তাহের লক্ষ্য লেখা।**
+
+| ভাগ                | কী লিখবেন                                     |
+| :----------------- | :-------------------------------------------- |
+| ১. সংখ্যা          | মোট trade, জেতা/হারা, নিট R, win rate         |
+| ২. Process         | নিয়ম মানা trade কয়টি, ভাঙা কয়টি (tag সহ)   |
+| ৩. ভাঙা ছাড়া ফল   | নিয়ম-মানা trade-গুলোর আলাদা নিট R            |
+| ৪. সবচেয়ে বড় ভুল | সবচেয়ে ব্যয়বহুল tag                         |
+| ৫. ভালো কাজ        | যা ঠিকঠাক হয়েছে (একটি)                       |
+| ৬. পরের সপ্তাহ     | খবরের তালিকা, গুরুত্বপূর্ণ level, একটি লক্ষ্য |
+
+পুরো ছক এক পাতায়। এর বেশি হলে পরের সপ্তাহে আর করবেন না।
+
+## Chart-এ কেমন দেখায়
+
+<Chart
+  id="case-week-review-equity-01"
+  height={420}
+  caption="ACCOUNT, প্রতি trade (শিক্ষামূলক, কাল্পনিক উদাহরণ) — ১২টি trade, ১% ঝুঁকি: ৫টি জেতা, ৭টি হারা, নিট +3R। দুটি trade 'নিয়ম ভাঙা' tag-যুক্ত (দুটিই -1R)। নিয়ম-মানা ১০টি trade-এ নিট +5R।"
+/>
+
+নিট +3R ভালোই দেখায়, কিন্তু দুটি ভাঙা trade না থাকলে +5R হতো। পার্থক্যটাই এই সপ্তাহের পাঠ।
+
+## ধাপে ধাপে: ৩০ মিনিটের review
+
+<Steps>
+
+### ধাপ ১ (৫ মিনিট): সংখ্যা
+
+Journal থেকে ছক-১ পূরণ। Spreadsheet-এর সারাংশ পাতা থেকে।
+
+### ধাপ ২ (১০ মিনিট): Process
+
+প্রতিটি trade-এর tag দেখুন। কোনটি `Plan`, কোনটি `Rule break`। ভাঙা trade-গুলোর কারণ এক লাইনে।
+
+### ধাপ ৩ (৫ মিনিট): ভাঙা বাদ দিয়ে হিসাব
+
+Process-মানা trade-গুলোর নিট R আলাদা। এটাই আপনার strategy-র আসল পরীক্ষা, ভাঙা trade-এর ক্ষতি strategy-র নয়।
+
+### ধাপ ৪ (৫ মিনিট): একটি ভালো, একটি খারাপ
+
+ভালো কাজটির প্রশংসা (সৎভাবে)। সবচেয়ে ব্যয়বহুল ভুলটির কারণ।
+
+### ধাপ ৫ (৫ মিনিট): পরের সপ্তাহ
+
+[খবরের তালিকা](/bn/learn/11-fundamental-intermarket-analysis/06-news-trade-avoid-korbo), level, আর **একটি** লক্ষ্য, যেমন "এই সপ্তাহে retest ছাড়া entry নয়"।
+
+</Steps>
+
+## উদাহরণ ১: যখন কাজ করে (কাল্পনিক)
+
+- **সংখ্যা:** ১২ trade, ৫ জেতা, ৭ হারা, নিট +3R।
+- **Process:** ১০টি মানা, ২টি `Rule break` (stop সরানো ও তাড়াহুড়ো entry)।
+- **ভাঙা ছাড়া:** ১০টিতে নিট +5R।
+- **লক্ষ্য:** "আমার ক্ষতির উৎস setup নয়, নিয়ম ভাঙা। পরের সপ্তাহে stop কখনো সরাব না।"
+- **শিক্ষা:** Win rate ৪২%, তবু লক্ষ্য strategy বদল নয়, আচরণ ঠিক করা।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়।)
+
+## উদাহরণ ২: যখন ব্যর্থ হয় (কাল্পনিক)
+
+- **কী ঘটল:** Trader শুধু নিট সংখ্যা (+3R) দেখে "সব ঠিক" ভেবে review বন্ধ করলেন।
+- **ফল:** পরের তিন সপ্তাহে একই দুটি ভাঙার ঘটনা আবার। কেউ খেয়াল করেনি, কারণ ভাগ করা হয়নি।
+- **কেন ব্যর্থ:** শুধু মোট ফল দেখলে ধরন অদৃশ্য থাকে। ভালো সপ্তাহ বিপজ্জনক, কারণ তখন review বাদ পড়ে।
+- **শিক্ষা:** ভালো সপ্তাহেও ছক পূরণ করুন। বিশেষ করে ভালো সপ্তাহে।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়।)
+
+## সাধারণ ভুল
+
+| ভুল                        | কেন হয়           | কী করবেন                           |
+| :------------------------- | :---------------- | :--------------------------------- |
+| ভালো সপ্তাহে review বাদ    | খুশির মেজাজ       | ক্যালেন্ডারে স্থির সময়            |
+| একসঙ্গে অনেক লক্ষ্য        | সব ঠিক করার ইচ্ছা | একটিমাত্র লক্ষ্য                   |
+| খোলা বাজারে review         | সুবিধার জন্য      | বাজার বন্ধ থাকলে (সপ্তাহান্ত)      |
+| ভাঙা trade-এর কারণ না লেখা | লজ্জা             | এক লাইনে সৎ কারণ                   |
+| শুধু সংখ্যা, প্রশ্ন নেই    | সহজ               | ছকের ৪, ৫, ৬ নম্বর ভাগ বাধ্যতামূলক |
+
+## Pro tips
+
+<Callout type="tip">
+  প্রতিটি review-র শেষে লক্ষ্যটি একটি কাগজে লিখে মনিটরের পাশে রাখুন। সোমবার
+  সকালে সেটিই প্রথম পড়ুন।
+</Callout>
+
+<Callout type="note">
+  চার সপ্তাহের review পাশাপাশি রাখলে মাসিক ধরন দেখা যায়। সেটিই plan বদলানোর
+  উপযুক্ত সময়।
+</Callout>
+
+## কখন এটা কাজ করে না
+
+- **Trade খুব কম হলে:** দুটি trade থেকে ধরন বোঝা যায় না; কয়েক সপ্তাহ একসঙ্গে দেখুন।
+- **Journal অসম্পূর্ণ হলে:** review অনুমানে চলে।
+- **আত্ম-সমালোচনা অতিরিক্ত হলে:** লক্ষ্য শাস্তি নয়, উন্নতি।
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- এক পাতা, ৩০ মিনিট, ছয় ভাগ।
+- Process অনুযায়ী ভাগ করে ভাঙা trade বাদ দিয়ে হিসাব।
+- একটিমাত্র লক্ষ্য।
+- ভালো সপ্তাহেও review।
+
+</KeyTakeaways>
+
+## অনুশীলন
+
+এই সপ্তাহের trade দিয়ে ছয় ভাগের ছক পূরণ করুন। ভাঙা trade বাদ দিলে নিট R কত? লক্ষ্য একটি বাক্যে লিখুন।
+
+## কুইজ
+
+1. Weekly review-র ছয় ভাগ কী কী?
+2. ভাঙা trade বাদ দিয়ে হিসাব কেন আলাদা করবেন?
+3. কতগুলো লক্ষ্য রাখবেন?
+4. ভালো সপ্তাহে review কেন জরুরি?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** সংখ্যা, process, ভাঙা ছাড়া ফল, সবচেয়ে বড় ভুল, ভালো কাজ, পরের সপ্তাহ।
+
+**২.** Strategy-র আসল পারফরম্যান্স ও আচরণ-ক্ষতি আলাদা করতে।
+
+**৩.** একটি।
+
+**৪.** ভালো সপ্তাহে ভুল লুকিয়ে থাকে, আর review বাদ পড়ার ঝোঁক বাড়ে।
+
+</details>
+
+## পরের ধাপ
+
+- আগে: [Gold Move বিশ্লেষণ](/bn/learn/17-case-studies-trade-reviews/02-famous-gold-move-analysis)।
+- পরে: [Book Notes](/bn/learn/18-notes-library/01-book-notes)।
+- সম্পর্কিত: [Reviewing Trades](/bn/learn/15-backtesting-journal/04-reviewing-trades)।
+
+### সূত্র
+
+- <ExternalLink href="https://www.investopedia.com/articles/trading/06/tradingplan.asp">
+    Trading Plan, Investopedia
+  </ExternalLink>
+
+<Disclaimer />

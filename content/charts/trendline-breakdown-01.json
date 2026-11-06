@@ -1,0 +1,136 @@
+{
+  "id": "trendline-breakdown-01",
+  "title": {
+    "en": "Trendline Breakdown with Supply Zone & Divergence Confluence",
+    "bn": "ট্রেন্ডলাইন ব্রেকডাউন — সাপ্লাই জোন ও ডাইভারজেন্স কনফ্লুয়েন্স সহ শর্ট সেটআপ"
+  },
+  "symbol": "EURUSD",
+  "timeframe": "H1",
+  "mode": "synthetic",
+  "type": "trade-setup",
+  "bias": "bearish",
+  "outcome": "win",
+  "tags": [
+    "trendline",
+    "breakdown",
+    "supply-demand",
+    "divergence",
+    "retest"
+  ],
+  "module": "05-support-resistance",
+  "lessonSlugs": [
+    "04-trendlines-channels"
+  ],
+  "caption": {
+    "en": "Ascending trendline breakdown confirmed by higher timeframe supply zone and bearish divergence on momentum.",
+    "bn": "হায়ার টাইমফ্রেম সাপ্লাই জোনে প্রাইস পৌঁছানোর পর বিয়ারিশ ডাইভারজেন্স তৈরি করে ঊর্ধ্বমুখী ট্রেন্ডলাইন ভেঙে রিটেস্ট এন্ট্রি।"
+  },
+  "notes": {
+    "en": "Never trade a trendline break blindly. Wait for confluence: key supply zone tap, RSI/MACD bearish divergence, a decisive candle close below the trendline, and an entry on the pullback/retest.",
+    "bn": "কখনই শুধু ট্রেন্ডলাইন ব্রেক দেখে অন্ধভাবে ট্রেড করবেন না। কনফ্লুয়েন্স খুঁজুন: সাপ্লাই জোন টেস্ট, আরএসআই/ম্যাকডি ডাইভারজেন্স, ট্রেন্ডলাইনের নিচে স্পষ্ট ক্লোজ এবং রিটেস্টে সেল এন্ট্রি।"
+  },
+  "updatedAt": "2026-10-31T20:00:00Z",
+  "candles": [
+    { "i": 0, "o": 1.2450, "h": 1.2480, "l": 1.2440, "c": 1.2475 },
+    { "i": 1, "o": 1.2475, "h": 1.2520, "l": 1.2470, "c": 1.2510 },
+    { "i": 2, "o": 1.2510, "h": 1.2530, "l": 1.2490, "c": 1.2505 },
+    { "i": 3, "o": 1.2505, "h": 1.2560, "l": 1.2500, "c": 1.2555 },
+    { "i": 4, "o": 1.2555, "h": 1.2610, "l": 1.2545, "c": 1.2600 },
+    { "i": 5, "o": 1.2600, "h": 1.2635, "l": 1.2580, "c": 1.2590 },
+    { "i": 6, "o": 1.2590, "h": 1.2600, "l": 1.2555, "c": 1.2565 },
+    { "i": 7, "o": 1.2565, "h": 1.2585, "l": 1.2550, "c": 1.2580 },
+    { "i": 8, "o": 1.2580, "h": 1.2650, "l": 1.2575, "c": 1.2640 },
+    { "i": 9, "o": 1.2640, "h": 1.2700, "l": 1.2630, "c": 1.2690 },
+    { "i": 10, "o": 1.2690, "h": 1.2725, "l": 1.2670, "c": 1.2680 },
+    { "i": 11, "o": 1.2680, "h": 1.2690, "l": 1.2630, "c": 1.2640 },
+    { "i": 12, "o": 1.2640, "h": 1.2665, "l": 1.2625, "c": 1.2655 },
+    { "i": 13, "o": 1.2655, "h": 1.2730, "l": 1.2650, "c": 1.2720 },
+    { "i": 14, "o": 1.2720, "h": 1.2790, "l": 1.2710, "c": 1.2780 },
+    { "i": 15, "o": 1.2780, "h": 1.2810, "l": 1.2750, "c": 1.2760 },
+    { "i": 16, "o": 1.2760, "h": 1.2800, "l": 1.2740, "c": 1.2750 },
+    { "i": 17, "o": 1.2750, "h": 1.2770, "l": 1.2680, "c": 1.2690 },
+    { "i": 18, "o": 1.2690, "h": 1.2700, "l": 1.2610, "c": 1.2620 },
+    { "i": 19, "o": 1.2620, "h": 1.2685, "l": 1.2615, "c": 1.2670 },
+    { "i": 20, "o": 1.2670, "h": 1.2680, "l": 1.2580, "c": 1.2590 },
+    { "i": 21, "o": 1.2590, "h": 1.2600, "l": 1.2520, "c": 1.2530 },
+    { "i": 22, "o": 1.2530, "h": 1.2540, "l": 1.2460, "c": 1.2475 }
+  ],
+  "annotations": [
+    {
+      "type": "trendline",
+      "from": { "i": 2, "price": 1.2490 },
+      "to": { "i": 19, "price": 1.2730 },
+      "color": "#3b82f6",
+      "label": "Ascending Trendline Support"
+    },
+    {
+      "type": "zone",
+      "from": { "i": 12, "price": 1.2750 },
+      "to": { "i": 20, "price": 1.2820 },
+      "color": "#ef4444",
+      "label": "Supply Zone (Resistance)"
+    },
+    {
+      "type": "marker",
+      "i": 18,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Trendline Break"
+    },
+    {
+      "type": "marker",
+      "i": 19,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Retest Entry"
+    },
+    {
+      "type": "hline",
+      "price": 1.2820,
+      "label": "Stop Loss (1.2820)",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.2670,
+      "label": "Entry (1.2670)",
+      "color": "#3b82f6",
+      "style": "solid"
+    },
+    {
+      "type": "hline",
+      "price": 1.2475,
+      "label": "Take Profit (1.2475)",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "In this setup, price is climbing along an ascending trendline making Higher Highs and Higher Lows. As price taps into an unmitigated higher timeframe Supply Zone, buyers lose momentum, generating strong Bearish Divergence on RSI and MACD. A powerful impulse candle cleanly closes below the trendline. Rather than chasing the breakout, we wait for a retest into the broken trendline/supply boundary. The long upper rejection wick at candle 19 confirms sellers are in full control, triggering our Short entry with high Risk-to-Reward ratio.",
+    "bn": "এই সেটআপে প্রাইস ঊর্ধ্বমুখী ট্রেন্ডলাইন ধরে হায়ার হাই ও হায়ার লো তৈরি করে ওপরে উঠছিল। কিন্তু যখনই প্রাইস হায়ার টাইমফ্রেমের শক্তিশালী সাপ্লাই জোনে ধাক্কা খায়, বায়ারদের মোমেন্টাম কমে গিয়ে আরএসআই ও ম্যাকডি-তে বিয়ারিশ ডাইভারজেন্স প্রকাশ পায়। এরপর একটি শক্তিশালী বিয়ারিশ ক্যান্ডেল ট্রেন্ডলাইন ভেঙে নিচে ক্লোজ দেয়। ব্রেকআউটের সাথে সাথে অন্ধভাবে ফোমো (FOMO) এন্ট্রি না নিয়ে আমরা অপেক্ষা করি ট্রেন্ডলাইনের রিটেস্টের জন্য। ক্যান্ডেল ১৯-এ ট্রেন্ডলাইনের নিচে রিজেকশন উইক নিশ্চিত করে যে সেলাররা সক্রিয়, যেখান থেকে সেল এন্ট্রি নেওয়া হয় এবং রিওয়ার্ড ৩ গুণের বেশি অর্জিত হয়।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "At least 2 points define a trendline, but the 3rd touch validates it.",
+      "bn": "কমপক্ষে ২টি পয়েন্ট দিয়ে ট্রেন্ডলাইন আঁকা শুরু হলেও ৩য় টাচ ট্রেন্ডলাইনের সত্যতা প্রমাণ করে।"
+    },
+    {
+      "en": "Do not trade trendline breaks in isolation; always align with Key Support/Demand or Resistance/Supply zones.",
+      "bn": "কখনই এককভাবে ট্রেন্ডলাইন ব্রেক ট্রেড করবেন না; অবশ্যই কি-সাপ্লাই/ডিমান্ড জোনের সহায়তা নিন।"
+    },
+    {
+      "en": "Confirm exhaustion with RSI or MACD divergence before the breakout.",
+      "bn": "ব্রেকআউটের আগেই আরএসআই বা ম্যাকডি ডাইভারজেন্স দেখে বায়ার/সেলারদের দুর্বলতা নিশ্চিত হোন।"
+    },
+    {
+      "en": "Wait for a confirmed candle close outside the line plus a pullback/retest before entering.",
+      "bn": "ট্রেন্ডলাইনের বাইরে ক্যান্ডেল ক্লোজ এবং রিটেস্ট দেখে এন্ট্রি নিলে ফলস ব্রেকআউট (Fakeout) এড়ানো যায়।"
+    }
+  ],
+  "entry": 1.2670,
+  "stopLoss": 1.2820,
+  "takeProfit": 1.2475,
+  "rr": "1.30"
+}
+

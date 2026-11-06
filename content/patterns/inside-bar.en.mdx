@@ -1,0 +1,329 @@
+---
+title: "Inside Bar: the market catching its breath inside a big candle's range"
+description: "How to spot an inside bar, how it differs from a harami, how to trade the breakout in the trend direction, where to put the stop, and why breaks into resistance often turn into a fakey, with charts."
+type: neutral
+category: range-bars
+level: beginner
+candleCount: 2
+signal: continuation
+chartId: inside-bar-win-01
+tags: [pattern, price-action, inside-bar, continuation, breakout]
+status: done
+sources:
+  - type: book
+    title: "Trading Price Action Trends - Al Brooks"
+    note: "Inside bars, ii and ioi patterns, breakouts and failed breakouts"
+updated: 2026-11-06
+---
+
+A big candle, then a small one entirely inside it. It looks like the market is coiling, ready to run either way. You place a buy stop above, price really does poke higher, the order fills, and then that same candle comes back and breaks the other way. An inside bar does not tell you the direction; what matters is whether the break lines up with the trend and the levels.
+
+## At a glance
+
+| Item          | Inside Bar                                                                                            |
+| :------------ | :---------------------------------------------------------------------------------------------------- |
+| Type          | Neutral, usually continuation; two candles (mother bar + inside bar)                                  |
+| Where to look | After a big push inside a trend, or at a marked level                                                 |
+| Key features  | The second candle's high and low both sit inside the previous candle's range                          |
+| Confirmation  | A break and close beyond the inside bar's (or mother bar's) high or low                               |
+| Stop          | Beyond the inside bar's opposite end (aggressive) or the mother bar's opposite end (conservative)     |
+| Invalidation  | After the break, price returns into the range and breaks the opposite end (a fakey)                   |
+| Look-alikes   | [Bullish Harami](/en/patterns/bullish-harami) (body-based), [Spinning Top](/en/patterns/spinning-top) |
+| Opposite      | [Outside Bar](/en/patterns/outside-bar)                                                               |
+
+## What you will be able to do
+
+- **Explain** the definitional difference between an inside bar and a harami.
+- **Trade** an inside bar breakout in the trend direction step by step.
+- **Choose** between two stop types knowing the trade-offs.
+- **Recognise** a fakey (false break).
+
+## Why it matters
+
+- **One of the most popular price action setups.** No candle colours needed, only highs and lows.
+- **Small stop, clear trigger.** The inside bar's range is small, so the stop is often small and the entry level obvious.
+- **Just as clear a trap when it breaks the wrong way.** The small range makes false breaks easy in both directions. So lining it up with trend and levels matters.
+
+Prerequisites: [Reading a Chart](/en/learn/01-foundations/06-reading-a-chart) and [Range Breakout](/en/learn/06-trend-chart-patterns/03-range-breakout).
+
+## What is an inside bar
+
+**An inside bar is a candle whose high is below the previous candle's high and whose low is above the previous candle's low.** The previous, larger candle is called the **mother bar**. Colour does not matter.
+
+Think of a runner resting after a sprint. They ran a long way, then stop and walk on the spot. The next sprint may go the same way or change direction, but the resting spot is inside the previous run.
+
+<CandleDiagram
+  title="Mother bar and inside bar"
+  candles={[
+    { o: 40, h: 45, l: 39, c: 44, dim: true },
+    { o: 44, h: 49, l: 43, c: 48, dim: true },
+    { o: 48, h: 63, l: 47, c: 62, label: "mother", note: "large range" },
+    {
+      o: 62,
+      h: 61.5,
+      l: 54,
+      c: 56,
+      label: "inside",
+      note: "high and low inside",
+    },
+    { o: 56, h: 64, l: 55.5, c: 63.5, dim: true },
+  ]}
+  caption="The inside bar's high (61.5) is below the mother's high (63) and its low (54) above the mother's low (47). The next candle breaks the inside bar's high and closes higher."
+/>
+
+### Identification rules
+
+| Rule                                                  | Required?          | Why                                                        |
+| :---------------------------------------------------- | :----------------- | :--------------------------------------------------------- |
+| Second candle's high < prior high and low > prior low | Yes                | This is "inside"; the whole range, wicks included          |
+| Candle has closed                                     | Yes                | A live candle can still leave the mother's range           |
+| Mother bar larger than nearby candles                 | No (but important) | A rest after a big push is what carries meaning            |
+| A clear trend before it                               | No (but important) | Inside bars within a range are mostly noise                |
+| Inside bar very small (under half the mother's range) | No                 | The smaller, the smaller the stop and the clearer the rest |
+
+<Callout type="note">
+  When the high or low **equals** the previous candle's, some traders count it
+  as an inside bar and some do not. Pick one rule and keep it on every chart.
+</Callout>
+
+## Strong vs weak inside bar
+
+<DiagramRow>
+  <CandleDiagram
+    title="Strong"
+    verdict="good"
+    verdictLabel="tradeable"
+    candles={[
+      { o: 40, h: 46, l: 39, c: 45, dim: true },
+      { o: 45, h: 51, l: 44, c: 50, dim: true },
+      { o: 50, h: 63, l: 49, c: 62 },
+      { o: 62, h: 62, l: 57, c: 59, label: "pause in a trend" },
+    ]}
+    caption="A large bullish mother in an uptrend, with a small inside bar in its upper half."
+  />
+  <CandleDiagram
+    title="Weak"
+    verdict="bad"
+    verdictLabel="avoid"
+    candles={[
+      { o: 50, h: 53, l: 48, c: 52, dim: true },
+      { o: 52, h: 54, l: 49, c: 50, dim: true },
+      { o: 50, h: 53, l: 48.5, c: 51.5 },
+      { o: 51.5, h: 52.5, l: 49, c: 50, label: "in a range" },
+    ]}
+    levels={[{ price: 54, label: "range top", tone: "resistance" }]}
+    caption="A small mother in a sideways range, with the range top right above. No direction."
+  />
+</DiagramRow>
+
+| Quality check             | Strong                                | Weak                                        |
+| :------------------------ | :------------------------------------ | :------------------------------------------ |
+| What came before          | A clear trend and a large mother bar  | A sideways range and a small mother         |
+| Where the inside bar sits | In the trend-side half of the mother  | On the opposite side, near the mother's low |
+| Break direction           | With the trend, with open space ahead | Straight into a resistance or support       |
+| Size                      | Under half the mother's range         | Nearly as big as the mother                 |
+
+### Same look, different meaning
+
+| Pattern                  | What it measures                                        | Difference                                         |
+| :----------------------- | :------------------------------------------------------ | :------------------------------------------------- |
+| **Inside Bar**           | The whole range (high and low)                          | Price action definition; no colour or trend needed |
+| **Harami**               | Bodies only                                             | Candlestick definition; wicks may go outside       |
+| **Outside Bar**          | The second candle covers the prior candle's whole range | The exact opposite: expansion, not contraction     |
+| **ii (two inside bars)** | Two inside bars in a row                                | More contraction; the break is often strong        |
+
+## The story inside the candle
+
+One common interpretation of an inside bar in an uptrend:
+
+1. **Mother bar: buyers make a big push.** Price rises a long way and many take profit.
+2. **Inside bar: nobody does anything new.** Buyers cannot take it higher, and sellers cannot push it down to the mother's low. The market is weighing up.
+3. **Break: whichever side leaves the range first.** A break in the trend direction means buyers are moving again; a break the other way means the push has run out.
+
+<Callout type="note">
+  This is a common interpretation, not a proven fact. A chart does not show who
+  bought or sold.
+</Callout>
+
+## Where it works and where it does not
+
+<Compare
+  leftLabel="Where an inside bar carries weight"
+  rightLabel="Where an inside bar is often a trap"
+  left="- After a big push in a clear trend, breaking with the trend
+- On a retest of a broken level
+- On larger timeframes such as D1 or H4
+- With open space to the next level in the break direction"
+  right="- Inside a sideways range
+- When the break heads straight into resistance or support
+- On small timeframes such as M5-M15, where inside bars are very common
+- Just before big news (random breaks)"
+/>
+
+## Step by step: trading an inside bar
+
+<Steps>
+
+### Step 1: Trend and level first
+
+Which way is the trend? Where is the nearest level in the break direction? If there is no open space in the trend direction, stop here.
+
+### Step 2: Wait for both candles to close
+
+A live inside bar can leave the mother's range in its last minute.
+
+### Step 3: Four lines
+
+The inside bar's high and low, and the mother bar's high and low. These give you the entry, the stop and the first obstacle.
+
+### Step 4: Entry type
+
+| Entry                            | Where                                                  | Pro                     | Con                             |
+| :------------------------------- | :----------------------------------------------------- | :---------------------- | :------------------------------ |
+| **IB high/low break** (standard) | Stop order just beyond the inside bar's trend-side end | Close entry, small stop | More false breaks on wicks      |
+| **Mother break**                 | Beyond the mother bar's end                            | Fewer false breaks      | Entry further away, smaller R:R |
+| **Close after the break**        | When the break candle closes outside the inside bar    | Avoids the wick trap    | Entry further still             |
+
+### Step 5: Place the stop
+
+**Aggressive:** beyond the inside bar's opposite end (small stop, more stop-outs). **Conservative:** beyond the mother bar's opposite end (bigger stop, fewer stop-outs). Either way, add the [spread](/en/learn/01-foundations/04-spread-commission-swap) and a buffer.
+
+### Step 6: Size and target
+
+[Position size](/en/learn/08-risk-management/02-position-sizing) from the entry-to-stop distance, risking no more than 1%. Target before the next level, with a [risk reward](/en/learn/08-risk-management/03-risk-reward) of at least 1:1.5.
+
+### Step 7: Manage
+
+If price closes back inside the inside bar after the break, be careful: it may be a fakey. If it breaks the opposite end, consider exiting rather than waiting for the stop.
+
+</Steps>
+
+### Pre-trade checklist
+
+<Checklist
+  id="pattern-inside-bar-pretrade-en"
+  items={[
+    "Is the trend clear, and is the break in the trend direction?",
+    "Does the shape pass the rules (high and low both inside the mother, mother larger than nearby candles)?",
+    "Have both candles closed, and have you decided the stop type (IB or mother) in advance?",
+    "Is the risk reward to the next level in the break direction at least 1:1.5?",
+    "Is there no higher-timeframe level right ahead in the break direction?",
+  ]}
+/>
+
+If any box stays empty, skip the trade.
+
+## Example 1: when it works (illustrative)
+
+<Chart
+  id="inside-bar-win-01"
+  height={420}
+  caption="GBPUSD D1 (illustrative, synthetic) — an inside bar after a large mother bar in an uptrend; long on the break of the inside bar's high."
+/>
+
+- **What was visible:** Candles 0-6 rallied from 1.2500 to about 1.2655.
+- **Mother and inside bar:** Candle 7 was a large bullish mother: 1.2655 to 1.2721, high 1.2727, low 1.2649. Candle 8 was an inside bar: high 1.2721, low 1.2683, both inside the mother.
+- **Decision:** Buy stop at 1.2724 (3 pips above the inside bar high). Stop at 1.2677 (6 pips below the inside bar low, the aggressive stop): 47 pips of risk. Target 1.2818 (2R); no marked resistance above.
+- **Result:** Candle 9 broke the inside bar high and filled the order. Candle 13 reached the target.
+- **Lesson:** A break in the trend direction, open space ahead, and a small inside bar giving a small stop.
+
+<TradeSetup
+  direction="long"
+  pair="GBPUSD"
+  entry={1.2724}
+  stop={1.2677}
+  target={1.2818}
+/>
+
+(Illustrative example, not a real trade. Not every inside bar breakout wins, and no result is guaranteed.)
+
+## Example 2: when it is a trap (illustrative)
+
+<Chart
+  id="inside-bar-fail-01"
+  height={420}
+  caption="XAUUSD H1 (illustrative, synthetic) — an inside bar just under an old high, a false break up, then down: a fakey."
+/>
+
+- **What was visible:** Candle 5 left an old high at 2404.88. Candles 6-9 fell and 10-12 rallied again.
+- **Mother and inside bar:** Candle 12 was the mother: 2390.88 to 2402.38, high 2403.88, just under the old high. Candle 13 was the inside bar: high 2402.38, low 2397.38.
+- **The wrong decision:** Buy stop 2402.88, stop 2395.88: $7 of risk, target 2416.88. The target lay beyond the old high, and the break headed straight into resistance.
+- **What happened:** Candle 14 rose to 2407.38, filled the order and even cleared the old high, but closed at 2398.88, back inside the inside bar. Candle 15 broke the inside bar low and took the stop, and price fell further.
+- **Why it failed:** The break headed into resistance with no open space ahead. The fourth and fifth checklist boxes would have filtered it out.
+
+**Lesson:** Inside bar breaks into resistance often fail. And that failure is itself a setup: the **fakey**, traded the other way. Because the stop was set in advance, the loss stayed at 1R.
+
+## Common mistakes
+
+| Mistake                                       | Why it happens                       | What to do instead                             |
+| :-------------------------------------------- | :----------------------------------- | :--------------------------------------------- |
+| Orders both ways, stopped out both ways       | Not wanting to choose a direction    | One order in the trend direction               |
+| Trading inside bars within a range            | Treating every inside bar as a setup | Only after a big push in a trend               |
+| Buying a break into resistance                | Not checking the level ahead         | Measure the open space in the break direction  |
+| Treating harami and inside bar as the same    | Mixing up bodies and ranges          | Inside bar = whole range; harami = bodies only |
+| Counting every inside bar on small timeframes | They are very common there           | D1 or H4                                       |
+
+## Pro tips
+
+<Callout type="tip">
+  **The fakey the other way.** When an inside bar false-breaks one side and
+  price closes back inside, many traders trade the opposite direction, with the
+  stop beyond the false break's wick. In Example 2, a short with the stop above
+  candle 14's wick was that setup. More in [Fake
+  Breakout](/en/learn/06-trend-chart-patterns/04-fake-breakout).
+</Callout>
+
+<Callout type="tip">
+  Two inside bars in a row (ii) or inside-outside-inside (ioi) mean even more
+  contraction. Al Brooks presents these as breakout patterns. The break is often
+  strong, but still judge the direction by trend and levels.
+</Callout>
+
+## Summary
+
+<KeyTakeaways>
+
+- Inside bar = the second candle's high and low both sit inside the previous (mother) candle's range.
+- It is a pause, not a direction; trade the break in the trend direction.
+- Stop beyond the inside bar's (aggressive) or the mother's (conservative) opposite end; decide in advance.
+- Breaks into resistance or support often turn into a fakey; the fakey is itself a setup the other way.
+
+</KeyTakeaways>
+
+## Practice and your own backtest
+
+Open GBPUSD D1 or XAUUSD H1 in TradingView. Find at least 20 inside bars. Log one row each:
+
+| Date | Break in trend direction? | R to next level in the break direction | Fakey? | Stop type | Result (R) |
+| :--- | :------------------------ | :------------------------------------- | :----- | :-------- | :--------- |
+|      |                           |                                        |        |           |            |
+
+Then calculate the same trades under both the IB stop and the mother stop and compare. Do not draw conclusions from fewer than 30 samples.
+
+## Quiz
+
+1. What is the main difference between an inside bar and a harami?
+2. An inside bar in an uptrend, with an old high right above. What do you do?
+3. What is a fakey?
+4. What is the difference between the aggressive and the conservative stop?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** An inside bar measures the whole range (high and low). A harami measures bodies only; wicks may go outside.
+
+**2.** Skip the long, because the break heads into resistance with no room ahead. If price false-breaks above the old high, consider a fakey short instead.
+
+**3.** A false break on one side of an inside bar, a close back inside, then a move the other way. It is a setup in its own right.
+
+**4.** The aggressive stop sits at the inside bar's opposite end: a small stop, more stop-outs. The conservative stop sits at the mother bar's opposite end: a bigger stop, fewer stop-outs.
+
+</details>
+
+## Next steps
+
+- Before this: [Range Breakout](/en/learn/06-trend-chart-patterns/03-range-breakout).
+- Entering after the break: [Breakout Retest Entry](/en/learn/09-price-action-entries-strategies/01-breakout-retest-pullback-entry).
+- Same family: [Outside Bar](/en/patterns/outside-bar), [Bullish Harami](/en/patterns/bullish-harami), [Rising Three Methods](/en/patterns/rising-three-methods).
+
+<Disclaimer />

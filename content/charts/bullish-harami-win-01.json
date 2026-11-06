@@ -1,0 +1,273 @@
+{
+  "id": "bullish-harami-win-01",
+  "title": {
+    "en": "Bullish Harami at Tested Support, Entry Above the Mother Midpoint",
+    "bn": "পরীক্ষিত support-এ bullish harami, mother candle-এর মাঝের উপরে entry"
+  },
+  "symbol": "USDJPY",
+  "timeframe": "H1",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bullish",
+  "outcome": "win",
+  "tags": [
+    "bullish-harami",
+    "harami",
+    "candlestick",
+    "support",
+    "pattern"
+  ],
+  "module": "patterns",
+  "lessonSlugs": [],
+  "caption": {
+    "en": "Illustrative synthetic USDJPY H1: a long bearish candle drives into a support that held once. The next candle is small and stays inside its body: a bullish harami. A buy stop just above the mother candle's midpoint fills on the next candle; price rallies to 2R.",
+    "bn": "শিক্ষামূলক কাল্পনিক USDJPY H1: একটি লম্বা bearish candle আগে একবার ধরে রাখা support-এ নামে। পরের candle ছোট, তার body-র ভেতরেই থাকে: bullish harami। Mother candle-এর মাঝের ঠিক উপরের buy stop পরের candle-এ fill হয়; দাম 2R পর্যন্ত যায়।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data, not a real market record.",
+    "bn": "শিক্ষামূলক কাল্পনিক ডেটা, বাস্তব মার্কেটের রেকর্ড নয়।"
+  },
+  "updatedAt": "2026-11-06T12:00:00Z",
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 148.008,
+      "label": "Support",
+      "color": "#3b82f6",
+      "style": "dashed"
+    },
+    {
+      "type": "marker",
+      "i": 15,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Mother"
+    },
+    {
+      "type": "marker",
+      "i": 16,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Harami"
+    },
+    {
+      "type": "hline",
+      "price": 148.198,
+      "label": "Mother 50%",
+      "color": "#3b82f6",
+      "style": "dotted"
+    },
+    {
+      "type": "hline",
+      "price": 148.218,
+      "label": "Entry (above 50%)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 147.968,
+      "label": "Stop",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 148.718,
+      "label": "Target 2R",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candle 4 marks support. Candle 15 is the long bearish mother candle into it. Candle 16 is a small bullish candle entirely inside the mother's body: selling has stalled. Candle 17 rises through the mother's midpoint and fills the buy stop; the stop sits under the mother's low.",
+    "bn": "৪ নম্বর candle support চিহ্নিত করে। ১৫ নম্বর সেখানে লম্বা bearish mother candle। ১৬ নম্বর ছোট bullish candle, পুরোটা mother-এর body-র ভেতরে: selling থেমেছে। ১৭ নম্বর mother-এর মাঝ পার হয়ে buy stop fill করে; stop mother-এর low-এর নিচে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "A harami is a pause; trade the break that ends the pause",
+      "bn": "Harami একটি বিরতি; বিরতি ভাঙার দিকে trade"
+    }
+  ],
+  "entry": 148.218,
+  "stopLoss": 147.968,
+  "takeProfit": 148.718,
+  "rr": "1:2.0",
+  "candles": [
+    {
+      "i": 0,
+      "o": 148.6,
+      "h": 148.667,
+      "l": 148.419,
+      "c": 148.48
+    },
+    {
+      "i": 1,
+      "o": 148.48,
+      "h": 148.571,
+      "l": 148.258,
+      "c": 148.33
+    },
+    {
+      "i": 2,
+      "o": 148.33,
+      "h": 148.392,
+      "l": 148.163,
+      "c": 148.23
+    },
+    {
+      "i": 3,
+      "o": 148.23,
+      "h": 148.325,
+      "l": 148.038,
+      "c": 148.09
+    },
+    {
+      "i": 4,
+      "o": 148.09,
+      "h": 148.14,
+      "l": 148.008,
+      "c": 148.128
+    },
+    {
+      "i": 5,
+      "o": 148.128,
+      "h": 148.422,
+      "l": 148.064,
+      "c": 148.308
+    },
+    {
+      "i": 6,
+      "o": 148.308,
+      "h": 148.629,
+      "l": 148.178,
+      "c": 148.528
+    },
+    {
+      "i": 7,
+      "o": 148.528,
+      "h": 148.563,
+      "l": 148.415,
+      "c": 148.468
+    },
+    {
+      "i": 8,
+      "o": 148.468,
+      "h": 148.756,
+      "l": 148.373,
+      "c": 148.668
+    },
+    {
+      "i": 9,
+      "o": 148.668,
+      "h": 148.9,
+      "l": 148.607,
+      "c": 148.828
+    },
+    {
+      "i": 10,
+      "o": 148.828,
+      "h": 149.027,
+      "l": 148.761,
+      "c": 148.948
+    },
+    {
+      "i": 11,
+      "o": 148.948,
+      "h": 149.053,
+      "l": 148.705,
+      "c": 148.788
+    },
+    {
+      "i": 12,
+      "o": 148.788,
+      "h": 148.91,
+      "l": 148.495,
+      "c": 148.608
+    },
+    {
+      "i": 13,
+      "o": 148.608,
+      "h": 148.711,
+      "l": 148.398,
+      "c": 148.468
+    },
+    {
+      "i": 14,
+      "o": 148.468,
+      "h": 148.516,
+      "l": 148.26,
+      "c": 148.348
+    },
+    {
+      "i": 15,
+      "o": 148.348,
+      "h": 148.378,
+      "l": 148.018,
+      "c": 148.048
+    },
+    {
+      "i": 16,
+      "o": 148.048,
+      "h": 148.203,
+      "l": 148.028,
+      "c": 148.183
+    },
+    {
+      "i": 17,
+      "o": 148.183,
+      "h": 148.318,
+      "l": 148.163,
+      "c": 148.288
+    },
+    {
+      "i": 18,
+      "o": 148.288,
+      "h": 148.474,
+      "l": 148.218,
+      "c": 148.428
+    },
+    {
+      "i": 19,
+      "o": 148.428,
+      "h": 148.467,
+      "l": 148.348,
+      "c": 148.378
+    },
+    {
+      "i": 20,
+      "o": 148.378,
+      "h": 148.629,
+      "l": 148.287,
+      "c": 148.558
+    },
+    {
+      "i": 21,
+      "o": 148.558,
+      "h": 148.739,
+      "l": 148.501,
+      "c": 148.678
+    },
+    {
+      "i": 22,
+      "o": 148.678,
+      "h": 148.721,
+      "l": 148.579,
+      "c": 148.618
+    },
+    {
+      "i": 23,
+      "o": 148.618,
+      "h": 148.857,
+      "l": 148.566,
+      "c": 148.778
+    },
+    {
+      "i": 24,
+      "o": 148.778,
+      "h": 148.933,
+      "l": 148.721,
+      "c": 148.878
+    }
+  ]
+}

@@ -1,0 +1,190 @@
+---
+title: "Mistakes Log: Measure the Cost of Mistakes in R and Fix the Most Expensive First"
+description: "A mistakes log template, mistake tags, working out the total and average cost of each in R, and why you fix the most expensive mistake first, not the most frequent one, with a chart."
+level: beginner
+tags: [mistakes-log, journal, tags, cost-of-mistakes, improvement]
+instruments: [ACCOUNT]
+timeframes: [per-trade]
+status: done
+sources:
+  - type: blog
+    title: "Trading Plan - Investopedia"
+    url: "https://www.investopedia.com/articles/trading/06/tradingplan.asp"
+updated: 2026-11-06
+---
+
+# Mistakes Log: Measure the Cost of Mistakes in R and Fix the Most Expensive First
+
+"I always make the same mistake." Which mistake? How many times? At what cost? If you do not know the answers, the effort to correct stays scattered. A mistakes log turns mistakes into numbers.
+
+## What you will be able to do
+
+- **Build a mistakes log template.**
+- **Work out the total and average cost** of each mistake in R.
+- **Set priorities.**
+
+## Why it matters
+
+- **The most frequent mistake and the most expensive mistake are not the same.** Two different lists.
+- **Strategy and behavior are separate.** It can be that the plan's trades are profitable, but the trades from mistakes are eating everything.
+- **Food for the [weekly review](/en/learn/17-case-studies-trade-reviews/03-weekly-review-template).** To pick one goal you need this log.
+
+Prerequisites: [Journal Template](/en/learn/15-backtesting-journal/03-journal-template).
+
+## What is a mistakes log
+
+**A mistakes log is a list of every rule-breaking trade: which mistake, why, and how many R it cost.**
+
+| Column        | What to write                                                                         |
+| :------------ | :------------------------------------------------------------------------------------ |
+| Date, trade   | which trade                                                                           |
+| Mistake tag   | `FOMO`, `Moved stop`, `Revenge`, `No-checklist`, `Late exit` and so on (a fixed list) |
+| What happened | in one line                                                                           |
+| Result (R)    | the result of the mistake trade                                                       |
+| Trigger       | what emotion or situation caused it (tiredness, an earlier loss)                      |
+| Remedy        | exactly what I will do next time                                                      |
+
+**Cost** = the total R of the trades with that tag. And **average cost** = total R ÷ number of trades.
+
+## What it looks like on a chart
+
+<Chart
+  id="mistakes-cost-by-tag-01"
+  height={440}
+  caption="ACCOUNT, per trade (educational, imaginary example): 20 trades, 1% risk. The 13 Plan trades give a net of +8R, the 7 mistake trades a net of -10R. Overall -2R."
+/>
+
+The plan itself is profitable (+8R), yet the overall result is negative. The loss is not the strategy's. It is the mistakes'.
+
+The calculation:
+
+| Tag        | Number of trades | Total R | Average R/trade |
+| :--------- | :--------------- | :------ | :-------------- |
+| Plan       | 13               | +8      | +0.62           |
+| FOMO       | 3                | −3      | −1.0            |
+| Moved stop | 2                | −5      | −2.5            |
+| Revenge    | 2                | −2      | −1.0            |
+
+The most frequent was FOMO (3 times), but the most expensive is `Moved stop`: a total of −5R, only 2 events, an average of −2.5R each time.
+
+## Step by step: keeping a log
+
+<Steps>
+
+### Step 1: A fixed list of tags
+
+4 to 6. Add a new tag only when it is truly a new kind of mistake.
+
+### Step 2: Write every rule-breaking trade at once
+
+After the trade closes, while the emotion is still there, including the "trigger" column.
+
+### Step 3: A summary by tag at the end of the month
+
+Like the table above: number, total R, average R.
+
+### Step 4: Pick the most expensive tag
+
+The tag with the most negative total R. That is the main goal for next month.
+
+### Step 5: Write the remedy as a rule
+
+Not "I'll be more careful". For example: "After placing the stop, I will keep my hand off the order modify button; if I want to move the stop, I will first write why."
+
+</Steps>
+
+## Example 1: when it works (synthetic)
+
+- **Data:** the table above.
+- **Decision:** `Moved stop` is the most expensive. Remedy: order modify off after placing the stop, or wait 2 minutes and write the reason before moving the stop.
+- **Next month:** `Moved stop` was zero. The overall result became positive.
+- **Lesson:** fixing one mistake made a big difference. Not an attempt to fix everything at once.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Example 2: when it fails (synthetic)
+
+- **What happened:** the trader kept no log, only a feeling: "I suffer from FOMO."
+- **Result:** they paid attention to FOMO (because it seems the most frequent), and the real cost of `Moved stop` did not catch their eye.
+- **Why it failed:** with the cost not measured, the most expensive mistake stayed unseen.
+- **Lesson:** priorities by numbers, not by feeling.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Common mistakes
+
+| Mistake                                  | Why it happens         | What to do                                   |
+| :--------------------------------------- | :--------------------- | :------------------------------------------- |
+| Only feelings, no numbers                | Writing is a bother    | Make the cost in R a required column         |
+| A new tag each time                      | Trying to split finely | A fixed list                                 |
+| Fixing all mistakes at once              | Wanting to be perfect  | One in a month                               |
+| Not writing the trigger                  | Shame                  | Honestly write about emotion or tiredness    |
+| Treating the log as a book of punishment | Self-criticism         | It is a book of information, not of judgment |
+
+## Pro tips
+
+<Callout type="tip">
+  Write the remedy so that someone else could read it and do it. Not "I'll be
+  attentive", but an action like "before every trade I'll tick the third box of
+  the checklist".
+</Callout>
+
+<Callout type="note">
+  Some triggers in the log (little sleep, work pressure) are outside trading.
+  Solve those in the [routine](/en/learn/12-trading-psychology/06-routine).
+</Callout>
+
+## When this does not work
+
+- **If the log is not honest:** if you give wrong tags, the calculation means nothing.
+- **On very little data:** priorities from two or three events can mislead.
+- **If there is no method to fix the mistake:** keeping a record is not enough. You need a remedy too.
+
+## Summary
+
+<KeyTakeaways>
+
+- Log = mistake tag, reason, cost in R, remedy.
+- Look at total and average cost separately.
+- The most expensive mistake first, not the most frequent.
+- The remedy is action-based.
+
+</KeyTakeaways>
+
+## Practice
+
+From the last 20 trades, pick the rule-breaking ones and give them tags. Work out the total R and average R for each tag. Which is the most expensive?
+
+## Quiz
+
+1. Why might the most frequent mistake and the most expensive mistake not be the same?
+2. Which is the most expensive tag in the table above?
+3. What is the mark of a good remedy?
+4. How is average cost worked out?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** The size of mistakes differs. A mistake that happens less can do big damage.
+
+**2.** `Moved stop` (total −5R, average −2.5R).
+
+**3.** Specific, action-based, something someone else could read and do.
+
+**4.** The total R of that tag ÷ the number of trades.
+
+</details>
+
+## Next steps
+
+- Before: [Cheat Sheets](/en/learn/18-notes-library/03-cheat-sheets).
+- After: [Weekly Review (Collection)](/en/learn/18-notes-library/05-weekly-review).
+- Related: [FOMO and Revenge Trading](/en/learn/12-trading-psychology/04-fomo-revenge-trading).
+
+### Sources
+
+- <ExternalLink href="https://www.investopedia.com/articles/trading/06/tradingplan.asp">
+    Trading Plan, Investopedia
+  </ExternalLink>
+
+<Disclaimer />

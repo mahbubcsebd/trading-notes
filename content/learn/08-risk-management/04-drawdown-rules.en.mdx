@@ -1,0 +1,211 @@
+---
+title: "Drawdown Rules: Decide in Advance What to Do When the Account Keeps Falling"
+description: "What drawdown is, why losing 50% needs a 100% gain, and how to write rules for cutting risk and taking a break, with equity curve charts and calculations."
+level: intermediate
+tags: [risk-management, drawdown, equity-curve, rules]
+status: done
+sources:
+  - type: blog
+    title: "Drawdown - Investopedia"
+    url: "https://www.investopedia.com/terms/d/drawdown.asp"
+  - type: blog
+    title: "Maximum Drawdown (MDD) - Investopedia"
+    url: "https://www.investopedia.com/terms/m/maximum-drawdown-mdd.asp"
+updated: 2026-11-06
+---
+
+# Drawdown Rules: Decide in Advance What to Do When the Account Keeps Falling
+
+What will you do after several losses in a row? Raise your risk "to win it back"? Or stop? A decision made in the middle of a losing run is often wrong. So you have to write it down beforehand.
+
+## What you will be able to do
+
+- **Explain** what drawdown is and how it is measured.
+- **Calculate** how much gain is needed to recover a loss.
+- **Recognize drawdown** on an equity curve.
+- **Write a drawdown rule** for yourself.
+
+## Why it matters
+
+- **Drawdown is normal.** Every system has bad periods. The only question is how deep.
+- **Recovery is uneven.** The more you fall, the more you need to climb back.
+- **Emotion ruins decisions.** Logic weakens in the middle of losses, and that is when a rule helps.
+
+Prerequisites: [Risk per Trade](/en/learn/08-risk-management/01-risk-per-trade).
+
+## What is drawdown
+
+**Drawdown is the fall from the account's highest point (peak) to the next lowest point, as a percentage.**
+
+Think of climbing a hill. How far you have come down from the summit is the drawdown. The descent is not over until you touch the peak again by climbing back up.
+
+**Maximum drawdown** is the deepest fall in a given period. For example, with a peak of 10,200 and a low of 8,300, the fall is about 18.6%.
+
+## The uneven math of recovering a loss
+
+The gain needed to get back to where you were = **loss ÷ (1 − loss)**.
+
+| Drawdown | Gain needed |
+| :------- | :---------- |
+| 10%      | about 11%   |
+| 20%      | 25%         |
+| 33%      | about 50%   |
+| 50%      | 100%        |
+
+**This is why avoiding a big drawdown matters more than profit.** After falling 50%, the pressure to double the account pushes people to take even more risk.
+
+## What it looks like on a chart
+
+<Chart
+  id="drawdown-nolimit-01"
+  height={440}
+  caption="Account equity (educational, imaginary trade sequence, 2% risk): each candle is one trade. The orange line is the highest point of equity. The maximum fall from the peak is about 18.6%."
+/>
+
+The gap between the orange line and the candle is the drawdown. The trade sequence here is made up, so it does not claim any real result.
+
+## Step by step: building a drawdown rule
+
+<Steps>
+
+### Step 1: Track the peak
+
+Write down the account's highest point every week. Drawdown is measured from it.
+
+### Step 2: Set the levels
+
+For example: -5%, -10%, -15%. These change with your own tolerance and your system.
+
+### Step 3: Write the response for each level
+
+- -5%: risk stays normal. Review whether anything has changed.
+- -10%: cut risk in half.
+- -15%: stop live trading and go back to demo. Review your journal.
+
+### Step 4: Write the condition for coming back
+
+For example, after 10 demo trades that follow the plan, or after a week's break.
+
+### Step 5: Put it in your plan
+
+A rule written with a clear head is easy to follow in the middle of losses.
+
+</Steps>
+
+## What changes when there is a rule
+
+Same trade sequence. The only difference: when the account falls 10% from the peak, risk drops from 2% to 1%.
+
+<Chart
+  id="drawdown-halve-rule-01"
+  height={440}
+  caption="Account equity (educational, imaginary): same sequence as before, but risk is halved once the account is 10% below the peak. The maximum fall is about 15.2%, against about 18.6% before."
+/>
+
+The difference is not dramatic. That is the main point: a rule is not a miracle, it makes the loss smaller. Remember that this depends on the sequence and the timing. With a different sequence the result would be different.
+
+## Example 1: when it works (synthetic)
+
+- **Rule:** at -10%, cut risk to 1%.
+- **What happened:** after the account fell about 10% from the peak, risk was reduced.
+- **Result:** the later losses were smaller, and the maximum fall was about 3.4 percentage points less.
+- **Lesson:** the rule acts before the feeling does.
+
+(Synthetic educational example.)
+
+## Example 2: when it fails (synthetic)
+
+The same sequence without a rule: the trader kept 2% even in a bad run, thinking "it will turn this time".
+
+- **What was visible:** several losses in a row, 18.6% below the peak.
+- **Result:** about 23% is needed to get back. Mental pressure grew, and so did the risk of bad decisions next.
+- **Why it was wrong:** there was no planned response, so emotion made the decision.
+- **Lesson:** a rule is like choosing the medicine before you fall ill.
+
+(Synthetic educational example. The result depends on the sequence and is not a guarantee.)
+
+## Common mistakes
+
+| Mistake                            | Why it happens                | What to do                      |
+| :--------------------------------- | :---------------------------- | :------------------------------ |
+| Raising risk after a loss          | Wanting to win it back fast   | Cut risk or stop                |
+| Keeping the rule only in your head | The bother of writing it      | Write it in your plan           |
+| Not measuring maximum drawdown     | Looking only at profit        | Watch the equity curve and peak |
+| Changing the rule mid-loss         | Emotion                       | Change it in a calm period      |
+| No condition for returning         | Not knowing when to come back | Write a specific condition      |
+
+## Pro tips
+
+<Callout type="tip">
+  Know the maximum drawdown from your own backtest. If a deeper fall arrives
+  live, assume something has changed: the market or you.
+</Callout>
+
+<Callout type="tip">
+  A break during drawdown is not defeat. Reviewing your journal and finding
+  mistakes is the most useful work to do in this time.
+</Callout>
+
+<Callout type="warning">
+  "I will win it all back on one trade with double the risk" is the most common
+  path from drawdown to a wiped-out account.
+</Callout>
+
+## When this does not work
+
+- **When the rule stays only on paper:** it does not work if you do not follow it.
+- **With slippage or a gap:** one event can jump past the levels of the rule.
+- **When the rule triggers too often:** the levels are too close or the risk is too high. Check both.
+- **When the sample is small:** you cannot call a system bad from a few trades.
+
+## Summary
+
+<KeyTakeaways>
+
+- Drawdown is the fall from the peak, as a percentage.
+- After losing 50% you need 100% to get back, so avoiding a big fall matters.
+- Write the rule first: at which level risk is cut, and when you stop.
+- Write the condition for coming back too.
+
+</KeyTakeaways>
+
+## Practice
+
+In your plan, write three drawdown levels and the response to each. Then take the R results of 20 trades (yours or imaginary), draw an equity curve, and see which level would have been triggered and when.
+
+## Quiz
+
+1. With a peak of 10,000 and a current balance of 8,000, what is the drawdown?
+2. What gain is needed to recover a 20% drawdown?
+3. Why is it good to write the drawdown rule in advance?
+4. Why is doubling risk after a loss dangerous?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** 20%.
+
+**2.** 25%.
+
+**3.** In the middle of losses, emotion makes decisions worse. A written rule is the decision of a calm mind.
+
+**4.** Another loss makes the fall deeper, and recovery harder.
+
+</details>
+
+## Next steps
+
+- Before: [Risk:Reward](/en/learn/08-risk-management/03-risk-reward).
+- After: [Daily and Weekly Limits](/en/learn/08-risk-management/05-daily-weekly-limits).
+- Related: [Journaling Habit](/en/learn/12-trading-psychology/05-journaling-habit).
+
+### Sources
+
+- <ExternalLink href="https://www.investopedia.com/terms/d/drawdown.asp">
+    Drawdown, Investopedia
+  </ExternalLink>
+- <ExternalLink href="https://www.investopedia.com/terms/m/maximum-drawdown-mdd.asp">
+    Maximum Drawdown, Investopedia
+  </ExternalLink>
+
+<Disclaimer />

@@ -1,0 +1,209 @@
+---
+title: "Bollinger Bands: Reading the Squeeze and the Band Walk Correctly"
+description: "What Bollinger Bands measure, how to catch a breakout after a squeeze, and why counter-trades at the upper band fail in a strong trend, with chart examples."
+level: intermediate
+tags: [bollinger-bands, squeeze, volatility, band-walk, indicators]
+instruments: [EURUSD]
+timeframes: [H4]
+status: done
+sources:
+  - type: blog
+    title: "Bollinger Bands - Investopedia"
+    url: "https://www.investopedia.com/terms/b/bollingerbands.asp"
+  - type: book
+    title: "Bollinger on Bollinger Bands - John Bollinger"
+    url: ""
+    note: "Squeeze and band walk ideas"
+updated: 2026-11-06
+---
+
+# Bollinger Bands: Reading the Squeeze and the Band Walk Correctly
+
+Price touched the upper band, and you thought "it should fall here". You sold. Price kept climbing along the band. A band is not a boundary; it is a measure.
+
+## What you will be able to do
+
+- Explain **what Bollinger Bands measure**.
+- Spot a **squeeze** and be ready for the breakout.
+- Spot a **band walk** and avoid wrong counter-trades.
+- Place **entry, stop and target** on a squeeze breakout.
+
+## Why it matters
+
+- **You can see volatility.** Wide bands mean a restless market; narrow bands mean a calm one.
+- **A move after the calm.** Narrow bands often come before a big move, without telling you the direction.
+- **The most common counter-trade trap.** Selling because price is at the upper band.
+
+Prerequisites: [ATR](/en/learn/07-technical-indicators/04-atr-stop-size) (the idea of volatility) and [Range Breakout](/en/learn/06-trend-chart-patterns/03-range-breakout).
+
+## What are Bollinger Bands
+
+**Bollinger Bands are three lines: a 20-period SMA in the middle, and two bands two standard deviations above and below it.**
+
+Think of a rubber band wrapped around price. When price is restless the band stretches; when it is calm the band shrinks.
+
+Key facts:
+
+- **Middle line:** 20 SMA, the average price.
+- **Upper and lower band:** average ± 2 × standard deviation.
+- **Wide bands:** high volatility. **Narrow bands:** low volatility.
+- Price usually stays inside the bands, but in a trend it can move along or outside a band.
+
+**A band is not a reversal limit.** It shows "how far price is from the average".
+
+## What it looks like on a chart: a squeeze breakout
+
+<Chart
+  id="bb-squeeze-breakout-01"
+  height={440}
+  caption="EURUSD H4 (educational, synthetic example) — at candle 42 the band width is only 9.5 pips (it was 45.2 pips at candle 22). Candle 43 closes above the upper band: buy 1.0915."
+/>
+
+Three stages:
+
+1. **Squeeze:** band width fell from 45.2 pips to 9.5 pips. The market is tired and calm.
+2. **Burst:** a strong candle closed above the upper band.
+3. **Follow-through:** price climbed hugging the band.
+
+Important: a squeeze tells you a move **is coming**, not which way. The direction comes from the breakout close.
+
+## Step by step: the squeeze breakout trade
+
+<Steps>
+
+### Step 1: Spot the squeeze
+
+Band width is clearly smaller than in the previous few weeks.
+
+### Step 2: Plan for both directions
+
+Do not pick a side in advance. Write down what you will do on a breakout either way.
+
+### Step 3: Wait for a close outside the band
+
+A close, not a touch. In the example, candle 43, buy 1.0915.
+
+### Step 4: Place the stop below the recent low
+
+In the example, 1.0901, a risk of 14 pips. You can check it against ATR if you like.
+
+### Step 5: Set the target
+
+At least twice the risk. In the example, 1.0943, hit at candle 49.
+
+</Steps>
+
+## Example 1: when it works (synthetic)
+
+The chart above:
+
+- **What you could see:** a long squeeze, then a strong close above the upper band.
+- **Entry:** buy 1.0915.
+- **Stop:** 1.0901. Risk 14 pips.
+- **Target:** 1.0943, 28 pips, 1:2.
+- **Lesson:** the squeeze gave the warning; the close gave the time to enter.
+
+(Synthetic educational example. This is not a real trade, and no result is guaranteed.)
+
+## Example 2: when it fails (synthetic)
+
+Now selling at the upper band in a strong uptrend:
+
+<Chart
+  id="bb-band-walk-01"
+  height={440}
+  caption="EURUSD H4 (educational, synthetic example) — in a strong uptrend, price closes on or above the upper band 4 times. A sell at candle 25 is stopped out at candle 30."
+/>
+
+- **What you could see:** price touched the upper band. It seems "it has risen too much".
+- **Decision:** sell 1.0888, stop 1.0918 (30 pips), target the middle line at 1.0837.
+- **Result:** the stop is hit at candle 30. Later price rose to 1.1150, 262 pips against the entry.
+- **Why it was wrong:** in a trend, price moves along the band (band walk). A touch alone is not a reversal.
+- **Lesson:** in a trend, the upper band means strength, not weakness.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Common mistakes
+
+| Mistake                                        | Why it happens                       | What to do                           |
+| :--------------------------------------------- | :----------------------------------- | :----------------------------------- |
+| Selling at the upper band, buying at the lower | Treating the band as a boundary      | First check whether there is a trend |
+| Picking a direction from the squeeze           | Rush to get in early                 | Wait for the close                   |
+| Entering on a touch only                       | It seems lower risk                  | Look for the close                   |
+| Placing the stop outside the band              | Treating the indicator as everything | Place it beyond the swing            |
+| Changing settings                              | Looking for better results           | Start with 20 and 2                  |
+
+## Pro tips
+
+<Callout type="tip">
+  In a range, the bands can hint at reversals; in a trend, they do not. First
+  decide which state the market is in.
+</Callout>
+
+<Callout type="tip">
+  On a squeeze breakout, look for confirmation from
+  [volume](/en/learn/07-technical-indicators/06-volume-vwap). The next lesson
+  covers it.
+</Callout>
+
+<Callout type="warning">
+  The first breakout after a squeeze can itself be a trap. Remember the
+  conditions from [Fake
+  Breakout](/en/learn/06-trend-chart-patterns/04-fake-breakout).
+</Callout>
+
+## When this does not work
+
+- **In a strong trend:** counter-trades at the upper or lower band keep failing.
+- **When a range changes edges:** the bands react late.
+- **Before big news:** there is a squeeze, but the direction depends on the news.
+- **On small timeframes:** noise creates countless small squeezes.
+
+## Summary
+
+<KeyTakeaways>
+
+- Bollinger Bands = 20 SMA ± 2 standard deviations; they measure volatility.
+- A squeeze warns that a move is coming, not its direction.
+- A band walk is normal in a trend; selling at the upper band is a trap.
+- After the breakout close, place the stop beyond structure.
+
+</KeyTakeaways>
+
+## Practice
+
+On TradingView, put Bollinger Bands (20, 2) on an EUR/USD H4 chart. In the last 6 months, find three squeezes. For each, note which way price went afterwards and whether the first breakout was itself a trap.
+
+## Quiz
+
+1. What do Bollinger Bands measure?
+2. What does a squeeze tell you, and what does it not?
+3. What is a band walk?
+4. Why is it wrong to sell just because price touched the upper band?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** How far price is from the average, that is, volatility.
+
+**2.** It tells you a move is coming; it does not tell you the direction.
+
+**3.** In a trend, price moving again and again along or above the band.
+
+**4.** In a trend, price can move along the band. A touch is not proof of a reversal.
+
+</details>
+
+## Next steps
+
+- Before: [ATR and Stop Size](/en/learn/07-technical-indicators/04-atr-stop-size).
+- Next: [Volume and VWAP](/en/learn/07-technical-indicators/06-volume-vwap).
+- On breakouts: [Range Breakout](/en/learn/06-trend-chart-patterns/03-range-breakout).
+
+### Sources
+
+- <ExternalLink href="https://www.investopedia.com/terms/b/bollingerbands.asp">
+    Bollinger Bands, Investopedia
+  </ExternalLink>
+
+<Disclaimer />

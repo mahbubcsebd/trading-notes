@@ -1,42 +1,373 @@
 ---
-title: "Doji (Market Indecision)"
-description: "A neutral pattern where the open and close are virtually identical, representing a temporary equilibrium and trend exhaustion."
+title: "Doji: open equals close, and the market cannot decide"
+description: "How to spot a doji, the four doji types, when it warns of a turning point and when it is noise, and where to enter and stop after confirmation, with charts."
 type: neutral
-category: "Doji (Market Indecision)"
-winrate: "65% - 70%"
-riskReward: "1:2.5 to 1:4"
-maxRisk: "1%"
-bestLocation: "Key Support / Resistance Boundary / Trend Exhaustion Point"
-chartId: "doji-indecision-01"
-tags: [pattern, candlestick, doji]
+category: momentum-indecision
+level: beginner
+candleCount: 1
+signal: indecision
+chartId: doji-win-01
+tags: [pattern, candlestick, doji, indecision]
+status: done
+sources:
+  - type: book
+    title: "Japanese Candlestick Charting Techniques - Steve Nison"
+    note: "Doji, doji at tops vs bottoms, long-legged, dragonfly and gravestone doji"
+  - type: blog
+    title: "Doji Candlestick - Investopedia"
+    url: "https://www.investopedia.com/terms/d/doji.asp"
+updated: 2026-11-06
 ---
 
-<div className="flex gap-6 items-end my-8 p-8 bg-zinc-950 border border-border/50 rounded-2xl w-max relative overflow-hidden">
-  <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:20px_20px]"></div>
-  <div className="relative z-10 flex gap-6">
-    <Candle color="bull" bodyH="h-8" topW="h-4" botW="h-4" offset="mt-8" />
-    <Candle color="neutral" bodyH="h-[2px]" topW="h-8" botW="h-8" offset="mt-8" />
-    <Candle color="bear" bodyH="h-8" topW="h-4" botW="h-4" offset="mt-8" />
-  </div>
-</div>
+You see a "plus sign" on the chart: open and close at the same price. Many books say "doji means reversal", so you fade the trend right away. But an M15 chart prints ten of these a day, and most of them mean nothing. A doji's power is not in its shape. It is in its location.
 
-## Market Psychology & Institutional Order Flow
-Buyers attempted to rally and sellers tried to sell off during the session, but neither could sustain control. Price closed right where it opened. Following an extended trend, a Doji marks a loss of momentum and a potential turning point.
+## At a glance
 
-## 5 Strict Anatomy & Recognition Rules
-1. **Negligible Real Body:** Open and close prices are virtually identical.
-2. **Bilateral Shadows:** Visible upper and lower shadows displaying two-way price discovery.
-3. **Varieties:** Standard Doji, Long-Legged Doji, Dragonfly Doji (bullish), or Gravestone Doji (bearish).
-4. **Context is Key:** Significance multiplies when occurring after a mature trend at HTF boundaries.
-5. **Requires Confirmation:** A Doji alone is neutral; the subsequent bar dictates resolution.
+| Item          | Doji                                                                                                                                      |
+| :------------ | :---------------------------------------------------------------------------------------------------------------------------------------- |
+| Type          | Neutral indecision candle, one candle                                                                                                     |
+| Where to look | At the end of a long move, at a marked support or resistance                                                                              |
+| Key features  | Open and close almost equal; the body is close to a line                                                                                  |
+| Confirmation  | Next candle closes above the doji high (at support) or below its low (at resistance)                                                      |
+| Stop          | Beyond the opposite end of the doji, plus spread and a buffer                                                                             |
+| Invalidation  | Instead of confirming, price closes through the doji in the trend direction                                                               |
+| Look-alikes   | [Spinning Top](/en/patterns/spinning-top), [Dragonfly Doji](/en/patterns/dragonfly-doji), [Gravestone Doji](/en/patterns/gravestone-doji) |
+| Opposite      | [Marubozu](/en/patterns/marubozu) (large body, no wicks)                                                                                  |
 
-## 3 Proven Trade Execution Strategies
-**Strategy 1 (Breakout Confirmation):** Enter in the direction of the candle following the Doji with Stop Loss at the opposite extreme of the Doji.
-**Strategy 2 (Star Setup Continuation):** Trade the Doji as the pivot component of a Morning Star or Evening Star.
-**Strategy 3 (Lower Timeframe Range Breakout):** Treat the Doji as a micro-consolidation and enter upon structural breakout on M15.
+## What you will be able to do
 
-## Where It Works vs Where It Fails
-- ✅ **A+ High Probability Setups:** HTF S/R boundaries, RSI extremes (> 75 or < 25), and high-volume Doji sessions.
-- ❌ **Low Probability Traps (AVOID):** Appearing in low-liquidity holiday sessions or flat consolidations.
+- **Measure** the difference between a doji and a spinning top.
+- **Recognise** the four doji types (standard, long-legged, dragonfly, gravestone) by shape.
+- **Separate** a doji that warns of a turning point from one that is noise, by location.
+- **Place** entry, stop and target step by step after confirmation.
 
-> ⚠️ **Pro Risk Management & Mindset Rule:** A Doji is a warning sign, not a trigger. Always wait for the breakout candle before allocating capital. Always limit risk to 1%–2% per trade and maintain a predefined Stop Loss.
+## Why it matters
+
+- **The best-known and most misread candle.** Almost everyone knows a doji, but most dojis are not tradeable.
+- **A clear picture of stalled momentum.** A doji after a move of large candles means the winning side could not gain a single pip this candle.
+- **The base of the whole family.** To read dragonfly, gravestone and long-legged dojis, or the middle candle of a morning or evening star, you first need the plain doji.
+
+Prerequisites: [Anatomy of a Candle](/en/learn/04-candlesticks/01-anatomy-of-a-candle) and [Candle Context](/en/learn/04-candlesticks/05-candle-context).
+
+## What is a doji
+
+**A doji is a candle whose open and close are at or almost at the same price, so the body is nearly a horizontal line.** It can have wicks above and below, so it often looks like a plus sign or a cross. The Japanese word roughly means "at the same time" or "a blunder": price ends the session where it began.
+
+Think of a balance scale. All session weight was added to both sides and the pans swung one way, then the other. At the end the scale sits exactly level. Neither side got heavier.
+
+<CandleDiagram
+  title="Four types of doji"
+  candles={[
+    {
+      o: 50,
+      h: 56,
+      l: 44,
+      c: 50.2,
+      label: "Standard",
+      note: "medium wicks both sides",
+    },
+    {
+      o: 50,
+      h: 64,
+      l: 36,
+      c: 50.2,
+      label: "Long-legged",
+      note: "very long wicks both sides",
+    },
+    {
+      o: 60,
+      h: 60.3,
+      l: 42,
+      c: 60.1,
+      label: "Dragonfly",
+      note: "open ≈ close ≈ high",
+    },
+    {
+      o: 42,
+      h: 60,
+      l: 41.8,
+      c: 42.1,
+      label: "Gravestone",
+      note: "open ≈ close ≈ low",
+    },
+  ]}
+  caption="Every doji has open ≈ close. They differ only in where the wicks are and how long."
+/>
+
+### Identification rules
+
+| Rule                                         | Required?               | Why                                                                          |
+| :------------------------------------------- | :---------------------- | :--------------------------------------------------------------------------- |
+| Open and close almost equal (very thin body) | Yes                     | A visible body makes it a spinning top                                       |
+| Body negligible compared with nearby candles | Yes                     | A doji is relative: when every candle is small, "almost equal" means nothing |
+| Candle has closed                            | Yes                     | A live candle's open-close gap changes at any moment                         |
+| A clear move before it (large-body candles)  | No (but very important) | Stopping after a move is the real news                                       |
+| Right at a marked level                      | No (but very important) | Without a level a doji is usually just a pause                               |
+
+**A fourth form: the four-price doji.** Open, high, low and close all at one price: a flat dash. In Forex it appears almost only in very thin holiday markets or data-feed gaps. It is not a trade signal, just "the market was nearly closed".
+
+## Strong vs weak doji
+
+<DiagramRow>
+  <CandleDiagram
+    title="Meaningful"
+    verdict="good"
+    verdictLabel="pay attention"
+    candles={[
+      { o: 64, h: 65, l: 57, c: 58, dim: true },
+      { o: 58, h: 59, l: 51, c: 52, dim: true },
+      { o: 52, h: 53, l: 45, c: 46, dim: true },
+      { o: 46, h: 49, l: 42, c: 46.1, label: "at support" },
+      { o: 46.1, h: 53, l: 45.5, c: 52.5, dim: true },
+    ]}
+    levels={[{ price: 44, label: "support", tone: "support" }]}
+    caption="A doji at support after large bearish candles; the next candle closes above its high."
+  />
+  <CandleDiagram
+    title="Meaningless"
+    verdict="bad"
+    verdictLabel="avoid"
+    candles={[
+      { o: 50, h: 51.5, l: 48.5, c: 49.5, dim: true },
+      { o: 49.5, h: 51, l: 48, c: 50.5, dim: true },
+      { o: 50.5, h: 52, l: 49, c: 50.6, label: "quiet market" },
+      { o: 50.6, h: 52, l: 49, c: 49.8, dim: true },
+      { o: 49.8, h: 51.5, l: 48.5, c: 50.4, dim: true },
+    ]}
+    caption="Every candle is small, and this is one more. Here a doji says nothing new."
+  />
+</DiagramRow>
+
+| Quality check      | Meaningful                                     | Meaningless                                          |
+| :----------------- | :--------------------------------------------- | :--------------------------------------------------- |
+| What came before   | A clear move of large bodies                   | Small candles anyway                                 |
+| Where              | Right at a marked support or resistance        | Mid-range or mid-trend                               |
+| State of the level | Fresh or tested once                           | Touched many times, each bounce weaker               |
+| Next candle        | Breaks the doji's end and closes the other way | Back in the trend direction, or another small candle |
+| Room ahead         | At least 1.5R to the nearest obstacle          | Nearest obstacle within 1R                           |
+
+<Callout type="note">
+  An observation from Nison: a doji at a top after an uptrend matters more,
+  because rising prices need new buyers and the doji shows they paused. In a
+  downtrend price can fall under its own weight, so at a bottom confirmation
+  after the doji matters even more. This is a book observation, not a verified
+  statistic.
+</Callout>
+
+### Same look, different meaning
+
+| Pattern              | Shape                                      | Difference                                         |
+| :------------------- | :----------------------------------------- | :------------------------------------------------- |
+| **Doji**             | Almost no body, wicks both sides           | Full balance; no direction                         |
+| **Spinning Top**     | Small but visible body, wicks both sides   | Nearly the same meaning, slightly less balanced    |
+| **Dragonfly Doji**   | Open ≈ close ≈ high, long lower wick only  | Lower prices rejected; bullish lean at support     |
+| **Gravestone Doji**  | Open ≈ close ≈ low, long upper wick only   | Higher prices rejected; bearish lean at resistance |
+| **Long-Legged Doji** | Almost no body, very long wicks both sides | Intense tug of war, higher volatility              |
+
+## The story inside the candle
+
+One common interpretation of a doji at support after a downtrend, read through time:
+
+1. **Sellers push down as before.** Price drops from the open and peeks slightly below support.
+2. **Buyers bring it back.** Buy orders at support plus shorts taking profit lift price back above the open.
+3. **The session ends where it began.** The close is right at the open. Sellers closed lower in every recent candle; this time they could not.
+
+The result: selling momentum has stalled, but buyers have not won yet. If the next candle closes above the doji high, buyers scored their first clear win. A close below the low puts sellers back in control.
+
+<Callout type="note">
+  This is a common interpretation, not a proven fact. A chart does not show who
+  bought or sold. We only see how price behaved.
+</Callout>
+
+## Where it works and where it does not
+
+<Compare
+  leftLabel="Where to pay attention to a doji"
+  rightLabel="Where a doji is usually noise"
+  left="- After a long move of large candles
+- At a fresh or once-tested support or resistance
+- At a higher-timeframe level
+- On larger timeframes such as H4 or D1
+- When the next candle clearly confirms"
+  right="- On small timeframes such as M1-M15, where dojis are common
+- In a quiet market where every candle is small
+- At a level touched many times, each bounce weaker
+- Just before big news
+- In thin holiday markets (four-price doji)"
+/>
+
+## Step by step: trading a doji
+
+<Steps>
+
+### Step 1: Move and level first
+
+Check for a clear move and a marked level ahead. Note how many times the level has been touched and whether the bounces are shrinking.
+
+### Step 2: Wait for the close
+
+Do not call a live candle a doji. The open-close gap can widen in the last minute.
+
+### Step 3: Measure
+
+Is the body negligible compared with nearby candles? Were the prior candles clearly larger? Which type is it: standard, long-legged, dragonfly or gravestone?
+
+### Step 4: Wait for confirmation, then enter
+
+A doji gives no direction by itself. At support, the next candle has to close above the doji high.
+
+| Entry                     | Where                                        | Pro                                      | Con                              |
+| :------------------------ | :------------------------------------------- | :--------------------------------------- | :------------------------------- |
+| **High break** (standard) | Buy stop just above the doji high            | You only enter once price shows its hand | Can fill on a wick and snap back |
+| **Confirmation close**    | Market buy when the confirming candle closes | Entry on a close, fewer false breaks     | Higher entry, bigger stop        |
+| **On the doji**           | Buy as the doji closes                       | Best price                               | No direction yet                 |
+
+### Step 5: Place the stop
+
+Below the doji low and below support too, plus the [spread](/en/learn/01-foundations/04-spread-commission-swap) and a buffer. A long-legged doji has a wide range, so the stop is wide; reduce size.
+
+### Step 6: Size and target
+
+Use the entry-to-stop distance to calculate [position size](/en/learn/08-risk-management/02-position-sizing), risking no more than 1% of the account. Before setting a target, find the **nearest obstacle**: an old high, a lower high, a round number. If the [risk reward](/en/learn/08-risk-management/03-risk-reward) to there is below 1:1.5, skip it.
+
+### Step 7: Manage
+
+A close below the doji low means the idea is wrong: get out. At the first obstacle, consider a partial or a break-even stop.
+
+</Steps>
+
+### Pre-trade checklist
+
+<Checklist
+  id="pattern-doji-pretrade-en"
+  items={[
+    "Was the level marked before the doji, and does it sit right at that level?",
+    "Does the shape pass the rules (negligible body, clearly larger candles before it)?",
+    "Have both the doji and the confirming candle closed?",
+    "Is the risk reward to the nearest obstacle at least 1:1.5?",
+    "Is there no higher-timeframe level right in front of the trade?",
+  ]}
+/>
+
+If any box stays empty, skip the trade.
+
+## Example 1: when it works (illustrative)
+
+<Chart
+  id="doji-win-01"
+  height={420}
+  caption="XAUUSD H1 (illustrative, synthetic) — a doji at a once-tested support; long when the next candle breaks its high."
+/>
+
+- **What was visible:** Candle 5 marked support near 2318.55. Candles 6-10 rallied to about 2355, and 11-17 fell back to support.
+- **The doji:** Candle 18 opened at 2322.05 and closed at 2322.15. Body only 10 cents, high 2326.25, low 2317.45. The low poked slightly below support and came back.
+- **Decision:** Buy stop at 2326.75 (50 cents above the high). Stop at 2315.45 (below both the doji low and support): $11.30 of risk. Target 2349.35 (2R), just under the earlier bounce high near 2355.
+- **Result:** Candle 19 broke the doji high and closed at 2328.75, filling the order. Candle 26 reached the target.
+- **Lesson:** There was a move, the level was fresh (tested only once), and the entry came after a confirming close.
+
+<TradeSetup
+  direction="long"
+  pair="XAUUSD"
+  entry={2326.75}
+  stop={2315.45}
+  target={2349.35}
+/>
+
+(Illustrative example, not a real trade. Not every doji is a turning point, and no result is guaranteed.)
+
+## Example 2: when it is a trap (illustrative)
+
+<Chart
+  id="doji-fail-01"
+  height={420}
+  caption="GBPUSD D1 (illustrative, synthetic) — a doji on the third test of support under lower highs. Confirmation comes, the stop is hit anyway."
+/>
+
+- **What was visible:** Candles 4 and 9 tested support at 1.2600. The second bounce stopped near 1.2709, below the first. Sellers came back sooner each time.
+- **The doji:** Candle 15 opened at 1.2614 and closed at 1.2615, high 1.2642, low 1.2588. A perfect shape.
+- **The wrong decision:** "A doji at support, and confirmation too." Candle 16 closed at 1.2649 and filled the buy stop at 1.2645. Stop 1.2578: 67 pips of risk, target 1.2779 (2R). But the lower high at 1.2709 was only 64 pips away, about 1R.
+- **What happened:** Candle 17 turned down and candle 18 broke both support and the stop.
+- **Why it failed:** Shape and confirmation were fine, but the level was worn out (third touch, lower highs) and the nearest obstacle was within 1R. The fourth checklist box would have filtered it out.
+
+**Lesson:** Measure the room to the nearest obstacle, not the textbook 2R. Because the stop was set in advance, the loss stayed at 1R.
+
+## Common mistakes
+
+| Mistake                                       | Why it happens                | What to do instead                                          |
+| :-------------------------------------------- | :---------------------------- | :---------------------------------------------------------- |
+| Fading the trend as soon as a doji forms      | "Doji means reversal"         | Wait for the next candle's confirming close                 |
+| Counting every doji on small timeframes       | Treating all dojis as equal   | Look on H4-D1; on small TFs only those at levels            |
+| Calling small candles in a quiet market dojis | Not measuring relatively      | Compare the body with nearby candles                        |
+| Trusting a doji at a level touched many times | "There is support"            | Watch for shrinking bounces; lower highs = sellers pressing |
+| Setting the target at 2R by default           | Not checking nearby obstacles | Measure R:R to the nearest high or lower high               |
+| Stop inside the doji                          | Wanting a small stop          | Beyond the doji's end and the level; cut size               |
+
+## Pro tips
+
+<Callout type="tip">
+  The candle after the doji matters most. A doji plus a large opposite candle
+  often forms a [Morning Star](/en/patterns/morning-star) or [Evening
+  Star](/en/patterns/evening-star). Then read it under the rules of the full
+  three-candle pattern, not as a lone doji.
+</Callout>
+
+<Callout type="tip">
+  A simple measure: if the doji body is under a tenth of the average body of the
+  previous 10 candles, it is a clear doji. This is a working measure, not a
+  standard definition; set your own in a backtest.
+</Callout>
+
+<Callout type="warning">
+  Do not accept numbers like "doji wins 65-70%" without checking. How dojis are
+  counted, which timeframe and which location change the result completely. Your
+  own backtest is the only number you can trust.
+</Callout>
+
+## Summary
+
+<KeyTakeaways>
+
+- Doji = open ≈ close, body nearly a line; four forms: standard, long-legged, dragonfly, gravestone.
+- A doji shows indecision, not direction. It is not a trade signal on its own.
+- Pay attention after a long move at a fresh level; in quiet markets, on small TFs or at worn-out levels it is usually noise.
+- Enter only after confirmation; measure R:R to the nearest obstacle before setting a target.
+
+</KeyTakeaways>
+
+## Practice and your own backtest
+
+Open XAUUSD H1 or GBPUSD D1 in TradingView. Find at least 20 dojis that formed after a clear move. Log one row each:
+
+| Date | Doji type | Times the level was touched | Confirmation came? | R to nearest obstacle | Result (R) |
+| :--- | :-------- | :-------------------------- | :----------------- | :-------------------- | :--------- |
+|      |           |                             |                    |                       |            |
+
+Then split into "fresh level" and "level touched three or more times" and compare the average R. Look at dojis at tops and at bottoms separately too. Do not draw conclusions from fewer than 30 samples.
+
+## Quiz
+
+1. A candle opens at 1.1000 and closes at 1.1006, and nearby candles have bodies of about 5 pips. Is it a doji?
+2. What is the main difference between a dragonfly and a gravestone doji?
+3. A doji at support, the next candle confirms, but there is a lower high 1R away. What do you do?
+4. According to Nison, where does a doji need confirmation more: at a top or a bottom?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** Probably not. A 6-pip body is not smaller than the 5-pip bodies around it. A doji is relative: its body must be negligible compared with nearby candles.
+
+**2.** In a dragonfly the open, close and high sit together with only a long lower wick: lower prices were rejected. In a gravestone the open, close and low sit together with only a long upper wick: higher prices were rejected.
+
+**3.** Skip it, or look for a new setup after the lower high breaks. R:R to the nearest obstacle is below 1:1.5.
+
+**4.** At a bottom. Nison writes that dojis are more meaningful at tops; in a downtrend price can fall under its own weight, so a doji at a bottom needs more confirmation.
+
+</details>
+
+## Next steps
+
+- Before this: [Anatomy of a Candle](/en/learn/04-candlesticks/01-anatomy-of-a-candle).
+- When a signal becomes a trade: [Confirmation vs Trigger](/en/learn/09-price-action-entries-strategies/04-confirmation-vs-trigger).
+- Same family: [Dragonfly Doji](/en/patterns/dragonfly-doji), [Gravestone Doji](/en/patterns/gravestone-doji), [Long-Legged Doji](/en/patterns/long-legged-doji).
+
+<Disclaimer />

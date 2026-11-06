@@ -1,0 +1,186 @@
+---
+title: "Confirmation বনাম Trigger: idea ঠিক হলেও কখন ঢুকবেন"
+description: "Setup, confirmation ও trigger আলাদা করুন: zone ছোঁয়ামাত্র entry কেন ব্যয়বহুল, আর confirmation candle-এর পর কোন মুহূর্তে ঢুকবেন — chart সহ।"
+level: intermediate
+tags: [price-action, confirmation, trigger, entry, engulfing]
+instruments: [EURUSD]
+timeframes: [H1]
+status: done
+sources:
+  - type: blog
+    title: "Candlestick Confirmation - Investopedia"
+    url: "https://www.investopedia.com/terms/c/confirmation.asp"
+  - type: blog
+    title: "Entry Triggers - BabyPips"
+    url: "https://www.babypips.com/learn/forex/support-and-resistance"
+updated: 2026-11-05
+---
+
+# Confirmation বনাম Trigger: idea ঠিক হলেও কখন ঢুকবেন
+
+দাম আপনার demand zone-এ পৌঁছেছে। আপনি buy করলেন, আর দাম zone ভেদ করে নেমে গেল। Idea হয়তো ঠিক ছিল, কিন্তু সময়টা ভুল।
+
+## এই লেখা পড়ে আপনি যা পারবেন
+
+- Setup, confirmation ও trigger **আলাদা করতে পারবেন**।
+- Confirmation candle চিনে trigger-এর **দাম নির্ধারণ করতে পারবেন**।
+- Zone ছোঁয়ামাত্র entry-র **ঝুঁকি বুঝিয়ে বলতে পারবেন**।
+
+## কেন এটি জরুরি
+
+- **Zone শুধু আগ্রহের এলাকা।** দাম সেখানে ঘুরতেও পারে, ভেদও করতে পারে।
+- **অপেক্ষা ঝুঁকি কমায়, লাভ বেশি কমায় না।** কিছুটা দেরিতে ঢুকলেও stop-এ ক্ষতির সম্ভাবনা কমে।
+- **Trigger নিয়ম হলে সিদ্ধান্ত যান্ত্রিক হয়।** তখন আবেগ কম কাজ করে।
+
+পূর্বশর্ত: [Candle Context](/bn/learn/04-candlesticks/05-candle-context) এবং [Support ও Resistance](/bn/learn/05-support-resistance/01-levels-vs-zones)।
+
+## Setup, Confirmation, Trigger কী
+
+**Setup হলো যেখানে দাম পৌঁছেছে (জায়গা)। Confirmation হলো সেখানে দাম ঘুরছে এমন প্রমাণ (candle, rejection)। Trigger হলো ঢোকার নির্দিষ্ট শর্ত (যেমন confirmation candle-এর high ভাঙা)।**
+
+ভাবুন ট্রাফিক সিগন্যাল। সিগন্যালের কাছে পৌঁছানো (setup), হলুদ বাতি (confirmation), সবুজ বাতি (trigger)। হলুদ দেখেই গাড়ি ছুটিয়ে দেবেন না।
+
+| ধাপ          | প্রশ্ন  | উদাহরণ                                |
+| :----------- | :------ | :------------------------------------ |
+| Setup        | কোথায়? | demand zone 1.0860-1.0880             |
+| Confirmation | কী?     | bullish engulfing candle              |
+| Trigger      | কখন?    | confirmation candle-এর high ভাঙলে buy |
+
+## Chart-এ কেমন দেখায়
+
+<Chart
+  id="confirm-trigger-win-01"
+  height={440}
+  caption="EURUSD H1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — দাম demand zone-এ নামে, bullish engulfing candle তৈরি হয়, পরের candle তার high ভেঙে ওপরে গেলে buy 1.0894। Stop 1.0852, target 1.0978।"
+/>
+
+Confirmation candle-এর সময় ঢোকা হয়নি। ঢোকা হয়েছে পরের candle যখন তার high পেরিয়েছে।
+
+## ধাপে ধাপে: trigger entry
+
+<Steps>
+
+### ধাপ ১: Setup চিহ্নিত করুন
+
+[Demand zone](/bn/learn/05-support-resistance/03-supply-demand) আঁকুন। দাম সেখানে না পৌঁছালে অপেক্ষা।
+
+### ধাপ ২: Confirmation-এর অপেক্ষা
+
+Zone-এ [bullish engulfing](/bn/learn/04-candlesticks/04-bullish-engulfing) বা লম্বা lower wick-এর rejection candle।
+
+### ধাপ ৩: Trigger দাম ঠিক করুন
+
+Confirmation candle-এর high-এর সামান্য ওপরে pending buy stop বা মনে মনে স্তর। এই দাম পেরোলেই entry।
+
+### ধাপ ৪: Stop বসান
+
+Zone ও confirmation candle-এর low-এর নিচে। ratio মাপুন, তারপর lot।
+
+### ধাপ ৫: Trigger না এলে বাতিল করুন
+
+কয়েকটি candle পরেও high ভাঙেনি? দাম উল্টো গেলে idea বাতিল।
+
+</Steps>
+
+## উদাহরণ ১: যখন কাজ করে (কাল্পনিক)
+
+- **আগে থেকে ঠিক:** ঝুঁকি 1%, stop 42 pip, target 84 pip (1:2)।
+- **ফল:** Confirmation-এর পর trigger আসে, দাম target পর্যন্ত গেছে।
+- **শিক্ষা:** তিনটি প্রশ্নের (কোথায়, কী, কখন) উত্তর পাওয়ার পরই entry।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়।)
+
+## উদাহরণ ২: যখন ব্যর্থ হয় (কাল্পনিক)
+
+<Chart
+  id="confirm-early-entry-fail-01"
+  height={440}
+  caption="EURUSD H1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — দাম zone ছুঁতেই buy 1.0868, confirmation ছাড়া। Stop 1.0852 লেগেছে, দাম পরে ফিরেছে কিন্তু trade ততক্ষণে বন্ধ।"
+/>
+
+- **কী দেখা যাচ্ছিল:** দাম demand zone ছুঁয়েছে।
+- **ফল:** Zone ভেদ করে দাম পড়েছে, stop লেগেছে।
+- **কেন ব্যর্থ:** ঘুরে দাঁড়ানোর কোনো প্রমাণ ছিল না। Touch-ই ছিল একমাত্র কারণ।
+- **শিক্ষা:** Idea ঠিক হলেও timing ভুল হলে stop লাগে।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়।)
+
+## সাধারণ ভুল
+
+| ভুল                             | কেন হয়                | কী করবেন                            |
+| :------------------------------ | :--------------------- | :---------------------------------- |
+| শুধু touch-এ ঢোকা               | ভালো দামের লোভ         | confirmation-এর অপেক্ষা             |
+| Confirmation-কেই trigger ভাবা   | candle সুন্দর দেখায়   | trigger আলাদা শর্ত, high ভাঙা       |
+| Trigger দাম ঠিক না করা          | অস্পষ্ট নিয়ম          | আগে লিখে রাখুন                      |
+| ভুয়া confirmation-এ জোর দেওয়া | সব candle মনে হয় ভালো | context (zone, trend) মিলিয়ে দেখুন |
+
+## Pro tips
+
+<Callout type="tip">
+  Confirmation দুর্বল হলে (ছোট body, বড় upper wick) trigger-এর অপেক্ষা না করে
+  trade বাতিল করুন। "প্রায় ভালো" candle-এ ঢোকা অভ্যাস নয়।
+</Callout>
+
+<Callout type="note">
+  Trigger-এর অপেক্ষা মানে কিছুটা খারাপ দামে ঢোকা। বদলে ঝুঁকি কমে। এই লেনদেন
+  সচেতনভাবে মেনে নিন।
+</Callout>
+
+## কখন এটা কাজ করে না
+
+- **দ্রুত বাজারে:** trigger-এর ঠিক পরেই দাম ছুটে যেতে পারে, slippage হয়।
+- **Confirmation অস্পষ্ট হলে:** trigger-ও অস্পষ্ট।
+- **Zone ভেদ করলে:** confirmation এসেছিল কিন্তু zone ব্যর্থ, তাই stop।
+- **Spread বেশি থাকলে:** trigger ও stop-এর মাঝের দূরত্ব বিকৃত হয়।
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- Setup (কোথায়), confirmation (কী), trigger (কখন): তিনটিই আলাদা।
+- Zone ছোঁয়া entry-র কারণ নয়, শুধু আগ্রহের এলাকা।
+- Trigger আগে লিখে রাখুন, যেমন confirmation candle-এর high ভাঙা।
+- Trigger না এলে trade বাতিল।
+
+</KeyTakeaways>
+
+## অনুশীলন
+
+তিনটি demand বা supply zone-এ দামের আচরণ দেখুন। প্রতিটিতে confirmation এসেছিল কি, trigger কোন দামে হতো, আর touch-এ ঢুকলে ফল কী হতো তুলনা করুন।
+
+## কুইজ
+
+1. Setup, confirmation ও trigger-এর তফাত কী?
+2. Zone ছুঁতেই entry-তে কী ঝুঁকি?
+3. Trigger না এলে কী করবেন?
+4. Confirmation-এর অপেক্ষায় কী ছাড়তে হয়?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** Setup জায়গা, confirmation ঘুরে দাঁড়ানোর প্রমাণ, trigger ঢোকার নির্দিষ্ট শর্ত।
+
+**২.** দাম zone ভেদ করলে কোনো প্রমাণ ছাড়াই stop লাগে।
+
+**৩.** Trade বাতিল করুন।
+
+**৪.** কিছুটা ভালো দাম। বদলে ঝুঁকি কমে।
+
+</details>
+
+## পরের ধাপ
+
+- আগে: [Multi-Timeframe Top-Down Entry](/bn/learn/09-price-action-entries-strategies/03-multi-timeframe-entry-top-down)।
+- পরে: [Entry Model Checklist](/bn/learn/09-price-action-entries-strategies/05-entry-model-checklist)।
+- সম্পর্কিত: [Order Types](/bn/learn/02-broker-platform-setup/04-order-types)।
+
+### সূত্র
+
+- <ExternalLink href="https://www.investopedia.com/terms/c/confirmation.asp">
+    Confirmation, Investopedia
+  </ExternalLink>
+- <ExternalLink href="https://www.babypips.com/learn/forex/support-and-resistance">
+    Support and Resistance, BabyPips
+  </ExternalLink>
+
+<Disclaimer />

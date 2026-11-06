@@ -1,0 +1,205 @@
+---
+title: "MACD: A Simple Guide to Reading Changes in Momentum"
+description: "Understand the MACD line, signal line and histogram separately, how to use a crossover at the start of a trend, and why it keeps giving false signals in a range."
+level: intermediate
+tags: [macd, momentum, crossover, histogram, indicators]
+instruments: [EURUSD]
+timeframes: [H4]
+status: done
+sources:
+  - type: blog
+    title: "Moving Average Convergence Divergence (MACD) - Investopedia"
+    url: "https://www.investopedia.com/terms/m/macd.asp"
+  - type: book
+    title: "Technical Analysis of the Financial Markets - John J. Murphy"
+    url: ""
+    note: "MACD and momentum sections"
+updated: 2026-11-06
+---
+
+# MACD: A Simple Guide to Reading Changes in Momentum
+
+Two lines on the chart and a pile of small and large bars. Beginners say "buy when it crosses up, sell when it crosses down". Sometimes this rule works; sometimes it is wrong five times in a row. The reason is hidden in how MACD is built.
+
+## What you will be able to do
+
+- Explain the **three parts** of MACD separately.
+- Read from the histogram **whether momentum is falling or rising**.
+- Place **entry, stop and target** with a crossover at the start of a trend.
+- Spot **the signs to avoid MACD** in a range.
+
+## Why it matters
+
+- **It catches changes in momentum direction.** Price is still up, but speed is falling, and MACD shows this early.
+- **One indicator, three pieces of information.** Direction, speed and its change.
+- **Wrong use costs money.** In a range, crossovers lose again and again.
+
+Prerequisites: [Moving Averages](/en/learn/07-technical-indicators/01-moving-averages-crossover) (EMA), because MACD is the difference between two EMAs.
+
+## What is MACD
+
+**MACD (Moving Average Convergence Divergence) is the difference between two EMAs. It shows how short-term speed compares with long-term speed.**
+
+Think of two friends walking. One is fast (EMA 12), the other slow (EMA 26). When the gap between them grows, speed is rising; when it shrinks, speed is falling.
+
+Three parts:
+
+| Part            | Calculation             | What it tells you                                                                  |
+| :-------------- | :---------------------- | :--------------------------------------------------------------------------------- |
+| **MACD line**   | EMA 12 − EMA 26         | Direction and strength of speed. Above zero means the short-term average is higher |
+| **Signal line** | EMA 9 of the MACD line  | A smoothed version of the MACD line                                                |
+| **Histogram**   | MACD line − Signal line | Whether speed is rising or falling. Crossing zero means a crossover                |
+
+The common setting is **12, 26, 9**.
+
+## What it looks like on a chart: a crossover at the start of a trend
+
+<Chart
+  id="macd-cross-trend-01"
+  height={460}
+  caption="EURUSD H4 (educational, synthetic example) — after a base, price breaks up and at candle 44 the MACD line crosses above the signal line. Buy 1.0895, stop 1.0844, target 1.0997."
+/>
+
+Notice:
+
+1. The histogram went from negative, through zero, to positive.
+2. The crossover happened **below** the zero line (MACD −0.00042, signal −0.00059). This means the downtrend's speed slowed and is now turning the other way.
+3. Price already shows a higher low and a break upward. MACD confirms it; it does not decide alone.
+
+## Step by step: the MACD crossover trade
+
+<Steps>
+
+### Step 1: Look for signs of change in price
+
+A higher low, a structure break or a level holding. MACD alone is not enough.
+
+### Step 2: Look at the histogram
+
+If the negative bars keep getting smaller, selling speed is falling. When it turns positive, the crossover is confirmed.
+
+### Step 3: Wait for the crossover candle to close
+
+The histogram changes while the candle is open. Wait until the close.
+
+### Step 4: Place the stop below the recent swing low
+
+In the example, 1.0844, a risk of 51 pips.
+
+### Step 5: Set the target
+
+At least twice the risk. In the example, 1.0997, 102 pips, 1:2.
+
+</Steps>
+
+## Example 1: when it works (synthetic)
+
+The chart above:
+
+- **What you could see:** price broke out of the base to 1.0895; MACD and signal both below zero but rising.
+- **Entry:** buy 1.0895 (candle 44).
+- **Stop:** 1.0844, below the swing low. Risk 51 pips.
+- **Target:** 1.0997, hit by candle 59.
+- **Lesson:** the MACD crossover worked because price itself was turning.
+
+(Synthetic educational example. This is not a real trade, and no result is guaranteed.)
+
+## Example 2: when it fails (synthetic)
+
+<Chart
+  id="macd-range-whipsaw-01"
+  height={460}
+  caption="EURUSD H4 (educational, synthetic example) — in a sideways market the histogram hovers near zero, with crossovers at candles 37, 47, 56 and 66."
+/>
+
+- **What you could see:** price in a 1.0830-1.0890 range; the histogram is small and flips quickly on both sides of the zero line.
+- **Signals:** sell 1.0847 at 37, buy 1.0861 at 47, sell 1.0854 at 56, buy 1.0857 at 66.
+- **Result:** closing at the next cross gives −14, −7 and −3 pips, a total of −24 pips, before spread and commission.
+- **Why it failed:** each time the signal came, the swing was almost over. The losses are small, but add spread and every one loses.
+- **Lesson:** a flat histogram and frequent crosses mean there is no trend.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Common mistakes
+
+| Mistake                                            | Why it happens                       | What to do                               |
+| :------------------------------------------------- | :----------------------------------- | :--------------------------------------- |
+| Trading every crossover                            | Simple rule                          | First look for signs of a trend in price |
+| Entering on the histogram while the candle is open | Rush                                 | Wait for the close                       |
+| Setting the stop based on MACD                     | Treating the indicator as everything | Place it below the swing low             |
+| Changing settings                                  | Looking for better results           | Stick with 12-26-9                       |
+| Ignoring the zero line                             | Looking only at the cross            | Understand the relation to the zero line |
+
+## Pro tips
+
+<Callout type="tip">
+  Shrinking histogram bars mean speed is falling. This warns you even before the
+  crossover.
+</Callout>
+
+<Callout type="tip">
+  MACD also shows
+  [divergence](/en/learn/07-technical-indicators/02-rsi-divergence): price makes
+  a new high, MACD a lower high. Same rule, same caution.
+</Callout>
+
+<Callout type="warning">
+  MACD lags, because it is built from EMAs. After a fast spike, the signal comes
+  late.
+</Callout>
+
+## When this does not work
+
+- **In a range:** the histogram is flat; crossovers are frequent and meaningless.
+- **During big news:** MACD jumps in a single candle.
+- **On very small timeframes:** noise creates countless crosses.
+- **Late in a strong trend:** the crossover comes when the move is almost over.
+
+## Summary
+
+<KeyTakeaways>
+
+- MACD = EMA 12 − EMA 26; signal = its EMA 9; histogram = the difference between the two.
+- The histogram shows whether speed is rising or falling.
+- A crossover works when price is also turning.
+- A flat histogram and frequent crosses mean stay out.
+
+</KeyTakeaways>
+
+## Practice
+
+On TradingView, add MACD (12, 26, 9). Compare how the histogram looks in a trending section and in a range section. Count how many crossovers happened in each.
+
+## Quiz
+
+1. What does the MACD histogram show?
+2. Why is a MACD crossover alone not enough?
+3. Which MACD sign in a range tells you to stay away?
+4. Where do you place the stop in a MACD trade?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** The difference between the MACD line and the signal line, that is, whether speed is rising or falling.
+
+**2.** MACD lags and gives frequent false crosses in a range, so you need confirmation from price structure.
+
+**3.** A flat histogram near zero, with frequent crosses.
+
+**4.** Beyond the recent swing low (buy) or swing high (sell).
+
+</details>
+
+## Next steps
+
+- Before: [RSI and Divergence](/en/learn/07-technical-indicators/02-rsi-divergence).
+- Next: [ATR and Stop Size](/en/learn/07-technical-indicators/04-atr-stop-size).
+- On stops: [Stop Loss Placement](/en/learn/10-trade-management-execution/01-stop-loss-placement).
+
+### Sources
+
+- <ExternalLink href="https://www.investopedia.com/terms/m/macd.asp">
+    MACD, Investopedia
+  </ExternalLink>
+
+<Disclaimer />

@@ -1,0 +1,209 @@
+---
+title: "Moving Averages: Spotting Trend Direction and Pullback Zones"
+description: "The difference between SMA and EMA, trend and pullback entries with EMA 20/50, and why crossovers keep failing in a range, with chart examples."
+level: beginner
+tags: [moving-average, sma, ema, crossover, pullback, indicators]
+instruments: [EURUSD]
+timeframes: [H4]
+status: done
+sources:
+  - type: blog
+    title: "Moving Average (MA) - Investopedia"
+    url: "https://www.investopedia.com/terms/m/movingaverage.asp"
+  - type: book
+    title: "Technical Analysis of the Financial Markets - John J. Murphy"
+    url: ""
+    note: "Moving average and crossover sections"
+updated: 2026-11-06
+---
+
+# Moving Averages: Spotting Trend Direction and Pullback Zones
+
+You put two lines on the chart. One line crosses above the other, and you buy. The same thing happens four times in three days, and you lose every time. The lines were fine. You used them in the wrong place.
+
+## What you will be able to do
+
+- Explain **the difference between SMA and EMA**.
+- Use EMAs to see **whether there is a trend and which way it goes**.
+- Place a **pullback entry, stop and target** in a trend.
+- **Understand from the chart** why crossovers do not work in a range.
+
+## Why it matters
+
+- **The simplest tool for catching a trend.** It smooths out price swings and shows the direction clearly.
+- **It gives a pullback zone.** In a trend, it gives a moving estimate of where price may come back and stop.
+- **It is misused more than anything else.** Crossovers eat money in a range.
+
+Prerequisites: [Trend and Range](/en/learn/03-market-structure/02-trend-range-hhhl) and [Swing High and Swing Low](/en/learn/03-market-structure/01-swing-high-low).
+
+## What is a moving average
+
+**A moving average is the average close of the last few candles. It moves forward with each new candle and forms a smooth line.**
+
+Think of the average temperature over the last 20 days. Even if today is hot, the average moves slowly. Price rushes; the average moves slowly. So the average shows which way the bigger move is going.
+
+Two types:
+
+| Feature     | SMA (Simple)                            | EMA (Exponential)                            |
+| :---------- | :-------------------------------------- | :------------------------------------------- |
+| Calculation | Equal average of n closes               | More weight on recent closes                 |
+| Speed       | Slow                                    | Reacts faster                                |
+| Risk        | Lags more                               | Changes direction quickly on a sudden spike  |
+| Common use  | Benchmark for longer periods (e.g. 200) | Pullbacks and short-term trend (e.g. 20, 50) |
+
+**Lag** is a feature of both. A moving average never tells you before price does. It only confirms afterwards.
+
+## What it looks like on a chart: a pullback in a trend
+
+<Chart
+  id="ma-trend-pullback-01"
+  height={440}
+  caption="EURUSD H4 (educational, synthetic example) — EMA 20 (blue) is above EMA 50 (orange) and pointing up. Candle 61 touched EMA 20 and closed above it as a bull candle: buy 1.0981, stop 1.0943, target 1.1057."
+/>
+
+Look at three things:
+
+1. **EMA 20 is above EMA 50.** The short-term average above the longer one means an uptrend.
+2. **Both lines point up.** A flat line means no direction.
+3. **Price dipped to EMA 20 and bounced.** It acted like moving support.
+
+## Step by step: the EMA pullback trade
+
+<Steps>
+
+### Step 1: Check whether there is a trend
+
+Check that EMA 20 > EMA 50, both point up, and price has higher highs and higher lows. If one condition is missing, skip it.
+
+### Step 2: Wait for the pullback
+
+Let price come down near EMA 20. Do not chase at a high price.
+
+### Step 3: Find the entry candle
+
+If a bull candle touches EMA 20 or goes slightly inside it and closes above the EMA, that is the entry. In the example, candle 61, buy 1.0981.
+
+### Step 4: Place the stop below the pullback low
+
+Below the swing low, not below the EMA. In the example, 1.0943, a risk of 38 pips. The EMA is a moving line, so a stop below it does not give a clear "proven wrong" point.
+
+### Step 5: Set the target
+
+At least twice the risk. In the example, 1.1057, 76 pips away, so 1:2. The [Risk Reward](/en/learn/08-risk-management/03-risk-reward) lesson covers this in detail.
+
+</Steps>
+
+## Example 1: when it works (synthetic)
+
+The chart above:
+
+- **What you could see:** EMA 20 = 1.0972, EMA 50 = 1.0923 (at candle 61). A clear uptrend.
+- **Entry:** buy 1.0981.
+- **Stop:** 1.0943, below the pullback low. Risk 38 pips.
+- **Target:** 1.1057, 76 pips away.
+- **Result:** candle 70 hit the target.
+- **Lesson:** the EMA gave the direction, but the stop and target came from price structure.
+
+(Synthetic educational example. This is not a real trade, and no result is guaranteed.)
+
+## Example 2: when it fails (synthetic)
+
+Now an EMA 9 and EMA 21 crossover in a sideways market:
+
+<Chart
+  id="ma-chop-whipsaw-01"
+  height={420}
+  caption="EURUSD H4 (educational, synthetic example) — in a range, EMA 9 keeps crossing EMA 21. 5 crosses, each reversed at the next cross."
+/>
+
+- **What you could see:** price moving between 1.0830 and 1.0875. The two lines are tangled.
+- **Signals:** sell 1.0833 at candle 23, buy 1.0870 at 29, sell 1.0835 at 35, buy 1.0870 at 42.
+- **Result:** if each trade closed at the next cross, the four lost −37, −35, −35 and −30 pips, a total of −137 pips (before spread).
+- **Why it failed:** price went from one edge of the range to the other. By the time the average changed, the move was almost over.
+- **Lesson:** crossovers can work in a trend, but in a range they lose again and again.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Common mistakes
+
+| Mistake                 | Why it happens                           | What to do                           |
+| :---------------------- | :--------------------------------------- | :----------------------------------- |
+| Trading every crossover | It looks like a simple rule              | First check whether there is a trend |
+| Entering on a flat MA   | You look at the cross, not the direction | Look at the slope of the line        |
+| Stop below the EMA      | The EMA looks like support               | Place it below the swing low         |
+| Adding many MAs         | More information seems better            | Two are enough                       |
+| Changing settings often | Looking for "better" past results        | Pick one value and stick with it     |
+
+## Pro tips
+
+<Callout type="tip">
+  Look at the EMA slope. If the line is flat, the market has no direction, so
+  avoid all MA-based signals.
+</Callout>
+
+<Callout type="tip">
+  Set the direction on a higher timeframe and look for pullbacks on a lower
+  timeframe. For direction, see [Multi-Timeframe
+  Analysis](/en/learn/03-market-structure/05-multi-timeframe-analysis).
+</Callout>
+
+<Callout type="warning">
+  Lag means the signal comes late. So set your stop and size first, and do not
+  trust the line blindly.
+</Callout>
+
+## When this does not work
+
+- **In a range or sideways market:** the lines get tangled and give frequent false signals.
+- **During big news:** the average cannot react properly to a spike.
+- **On very small timeframes:** there is so much noise that the average jumps around without meaning.
+- **A sudden trend after a slow, flat start:** the average reacts late and you miss the first move.
+
+## Summary
+
+<KeyTakeaways>
+
+- An MA is a smooth average and it lags; EMA is fast, SMA is slow.
+- EMA 20 > EMA 50 with both pointing up means an uptrend; look for pullbacks there.
+- The stop goes below structure, not below the EMA.
+- Crossovers lose again and again in a range, so check the trend first.
+
+</KeyTakeaways>
+
+## Practice
+
+On TradingView, put EMA 20 and EMA 50 on an EUR/USD H4 chart. In the last 3 months, find one trending section and one range section. For each, note the slope of the lines and count how many crossovers happened.
+
+## Quiz
+
+1. What is the main difference between SMA and EMA?
+2. What does it mean when EMA 20 is above EMA 50 and both point up?
+3. Where does the stop go in an EMA pullback trade?
+4. Why do crossovers keep failing in a range?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** EMA gives more weight to recent closes, so it reacts faster. SMA treats all closes equally.
+
+**2.** An uptrend. You can look for buys on pullbacks there.
+
+**3.** Below the swing low of the pullback, not below the EMA.
+
+**4.** Price swings from one edge to the other, and the average changes only after the move is almost over.
+
+</details>
+
+## Next steps
+
+- Before: [Fake Breakout](/en/learn/06-trend-chart-patterns/04-fake-breakout).
+- Next: [RSI and Divergence](/en/learn/07-technical-indicators/02-rsi-divergence).
+- On stops: [Stop Loss Placement](/en/learn/10-trade-management-execution/01-stop-loss-placement).
+
+### Sources
+
+- <ExternalLink href="https://www.investopedia.com/terms/m/movingaverage.asp">
+    Moving Average, Investopedia
+  </ExternalLink>
+
+<Disclaimer />

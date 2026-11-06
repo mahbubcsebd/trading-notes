@@ -1,0 +1,95 @@
+{
+  "id": "engulfing-retest-entry-01",
+  "title": {
+    "en": "Bullish Engulfing, Entry on a 50% Retest",
+    "bn": "Bullish engulfing, body-র 50% retest-এ entry"
+  },
+  "symbol": "EURUSD",
+  "timeframe": "H4",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bullish",
+  "outcome": "win",
+  "tags": ["engulfing", "candlestick", "entry", "retest"],
+  "module": "04-candlesticks",
+  "lessonSlugs": ["04-bullish-engulfing"],
+  "caption": {
+    "en": "A strong bullish engulfing at support. Price pulls back to the middle of the engulfing body, where a limit order fills with a tight stop.",
+    "bn": "Support-এ শক্তিশালী bullish engulfing। দাম engulfing body-র মাঝামাঝি ফিরে আসে, সেখানে limit order fill হয় এবং stop ছোট থাকে।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data.",
+    "bn": "এটি শিক্ষামূলক কাল্পনিক ডেটা।"
+  },
+  "updatedAt": "2026-11-05T16:00:00Z",
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 1.07,
+      "label": "Support",
+      "color": "#3b82f6",
+      "style": "dashed"
+    },
+    {
+      "type": "marker",
+      "i": 8,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Bullish engulfing"
+    },
+    {
+      "type": "marker",
+      "i": 9,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "50% retest"
+    },
+    {
+      "type": "hline",
+      "price": 1.0725,
+      "label": "Entry (body 50%)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.0682,
+      "label": "Stop (pattern low-এর নিচে)",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.081,
+      "label": "Target",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candle 7 is a clear bearish candle. Candle 8 opens below its close, closes near its own high and above candle 7's open. Candle 9 pulls back to the midpoint of candle 8's body, then price rises to the target.",
+    "bn": "৭ নম্বর স্পষ্ট bearish candle। ৮ নম্বর তার close-এর নিচে open করে, নিজের high-এর কাছে এবং ৭-এর open-এর উপরে close করে। ৯ নম্বর ৮-এর body-র মাঝামাঝি ফিরে আসে, তারপর দাম target-এ পৌঁছায়।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "A retest entry can cut the stop distance in half",
+      "bn": "Retest entry-তে stop-এর দূরত্ব অর্ধেক হতে পারে"
+    }
+  ],
+  "candles": [
+    { "i": 0, "o": 1.09, "h": 1.091, "l": 1.086, "c": 1.087 },
+    { "i": 1, "o": 1.087, "h": 1.088, "l": 1.083, "c": 1.084 },
+    { "i": 2, "o": 1.084, "h": 1.085, "l": 1.0795, "c": 1.0805 },
+    { "i": 3, "o": 1.0805, "h": 1.082, "l": 1.077, "c": 1.078 },
+    { "i": 4, "o": 1.078, "h": 1.079, "l": 1.0735, "c": 1.0745 },
+    { "i": 5, "o": 1.0745, "h": 1.076, "l": 1.07, "c": 1.071 },
+    { "i": 6, "o": 1.071, "h": 1.0735, "l": 1.0702, "c": 1.0728 },
+    { "i": 7, "o": 1.0728, "h": 1.0735, "l": 1.069, "c": 1.0698 },
+    { "i": 8, "o": 1.0694, "h": 1.0762, "l": 1.069, "c": 1.0756 },
+    { "i": 9, "o": 1.0756, "h": 1.076, "l": 1.0725, "c": 1.074 },
+    { "i": 10, "o": 1.074, "h": 1.0785, "l": 1.0736, "c": 1.078 },
+    { "i": 11, "o": 1.078, "h": 1.0815, "l": 1.0775, "c": 1.081 },
+    { "i": 12, "o": 1.081, "h": 1.084, "l": 1.0805, "c": 1.0835 },
+    { "i": 13, "o": 1.0835, "h": 1.085, "l": 1.0825, "c": 1.083 }
+  ]
+}

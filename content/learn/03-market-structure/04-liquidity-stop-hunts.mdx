@@ -1,0 +1,208 @@
+---
+title: "Liquidity ও Stop Hunt: price কেন আপনার stop ছুঁয়ে ফেরে"
+description: "Liquidity pool কোথায় জমে, sweep আর আসল break-এর পার্থক্য কী, আর stop hunt-এ নিজের stop কীভাবে বাঁচাবেন।"
+level: intermediate
+tags: [liquidity, stop-hunt, liquidity-sweep, market-structure, smc]
+instruments: [XAUUSD]
+timeframes: [H1, H4]
+status: done
+sources:
+  - type: blog
+    title: "Liquidity Sweeps - CrossTrade Learn"
+    url: "https://crosstrade.io/learn/price-action/liquidity-sweeps"
+updated: 2026-11-05
+---
+
+# Liquidity ও Stop Hunt: price কেন আপনার stop ছুঁয়ে ফেরে
+
+কখনো দেখেছেন, আপনার stop ঠিক হিট হওয়ার পরেই price উল্টো দিকে ছুটেছে? এটা দুর্ভাগ্য নয়। অনেক সময় এর পেছনে একটি নির্দিষ্ট কারণ থাকে: আপনার stop যেখানে ছিল, সেখানে **liquidity** জমে ছিল।
+
+## এই লেখা পড়ে আপনি যা পারবেন
+
+- **Liquidity** ও **liquidity pool** কী তা নিজের ভাষায় বলতে পারবেন।
+- Chart-এ **equal highs/lows** ও swing-এর পাশের pool চিনতে পারবেন।
+- **Liquidity sweep** আর আসল **BOS**-এর পার্থক্য ধরতে পারবেন।
+- নিজের **stop** এমন জায়গায় বসাতে পারবেন যেখানে ভিড় কম।
+
+## কেন এটি জরুরি
+
+- বেশিরভাগ নতুন trader একই স্পষ্ট জায়গায় stop রাখেন। সেখানেই price বারবার ঝাড়ু দেয়।
+- Sweep চিনলে wick দেখে ভুল break ধরা বন্ধ হয়, যা [BOS ও CHOCH](/bn/learn/03-market-structure/03-break-of-structure) lesson-এর মূল সতর্কতা।
+- নিজের stop-এর জায়গা ঠিক করলে অকারণে stop out কমে।
+
+## Liquidity কী?
+
+সহজ কথায়, liquidity মানে **ওই দামে অপেক্ষারত order**। কেউ buy করতে চাইলে তার বিপরীতে কেউ sell করতে হবে, নইলে trade হয় না। যেখানে অনেক order জমে থাকে, সেখানে বড় trade সহজে পূরণ হয়।
+
+**উপমা:** মেলার গেটে যেখানে ভিড় বেশি, সেখানে বড় দল ঢুকতে চাইলে সুবিধা পায়, কারণ অনেক মানুষের সঙ্গে একসঙ্গে লেনদেন হয়। Market-এ সেই ভিড় হলো জমে থাকা order।
+
+**নির্দিষ্ট সংজ্ঞা:** **Liquidity pool** হলো এমন price এলাকা যার ঠিক ওপরে বা নিচে অনেক stop loss ও pending order জমে আছে। Stop loss বিপরীত দিকের market order হয়ে পূরণ হয়। তাই buyer-এর stop নিচে হলে তা sell order, seller-এর stop ওপরে হলে তা buy order।
+
+<Callout type="note">
+  "বড় প্রতিষ্ঠান ইচ্ছা করে আপনার stop শিকার করে", এই ধারণা SMC শিক্ষকদের মধ্যে
+  খুব প্রচলিত, কিন্তু এর কোনো প্রমাণ আমরা এখানে দিচ্ছি না। এই lesson-এ আমরা শুধু
+  পর্যবেক্ষণযোগ্য আচরণ শিখছি: price প্রায়ই জমে থাকা stop-এর এলাকা ছুঁয়ে ফেরে।
+  কারণ যা-ই হোক, এটি চিনে রাখলে আপনার লাভ।
+</Callout>
+
+## Liquidity কোথায় জমে
+
+<Steps>
+
+### ১. Equal highs / equal lows
+
+দুটি বা বেশি swing প্রায় একই দামে তৈরি হলে সবাই সেটিকে "পরিষ্কার" support বা resistance ভাবে। Equal lows-এর নিচে buyer-দের stop জমে, equal highs-এর ওপরে seller-দের stop জমে। আগের [swing high ও swing low](/bn/learn/03-market-structure/01-swing-high-low) lesson-এর swing-ই এখানে লক্ষ্য।
+
+### ২. আগের swing-এর বাইরে
+
+গুরুত্বপূর্ণ swing high-এর ওপরে এবং swing low-এর নিচে stop থাকে, কারণ সেটাই সবচেয়ে বহুল প্রচলিত stop জায়গা।
+
+### ৩. Trendline-এর ওপারে
+
+স্পষ্ট trendline-এর নিচে বা ওপরে stop জমে। দেখুন [trendline ও channel](/bn/learn/05-support-resistance/04-trendlines-channels)।
+
+</Steps>
+
+## Chart-এ কেমন দেখায়
+
+নিচের chart-এ দুটি equal low (EQL) তৈরি হয়েছে। এরপর একটি candle তাদের নিচে wick নামিয়ে আবার ভেতরে close করেছে, তারপর price ওপরে উঠে structure ভেঙেছে।
+
+<Chart
+  id="eql-sweep-01"
+  height={420}
+  caption="XAUUSD H1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — equal lows-এর নিচে wick = sweep, body ভেতরে close"
+/>
+
+লক্ষ্য করুন, sweep candle-এর **body** equal lows-এর ওপরেই close করেছে। এই তফাতটাই sweep আর আসল break আলাদা করে।
+
+## Sweep বনাম আসল break
+
+|                 | Liquidity sweep        | আসল break (BOS)            |
+| :-------------- | :--------------------- | :------------------------- |
+| **Wick**        | level পেরোয়           | level পেরোয়               |
+| **Body close**  | ভেতরে ফিরে আসে         | বাইরে close করে            |
+| **পরের candle** | দ্রুত উল্টো দিকে       | একই দিকে চলে বা retest করে |
+| **অর্থ**        | জমে থাকা stop পূরণ হলো | নতুন structure তৈরি        |
+
+<Callout type="warning">
+  Sweep চেনা সহজ হয় ঘটনার পরে। Candle চলার সময় আপনি জানেন না এটি sweep নাকি
+  আসল break। তাই body close পর্যন্ত অপেক্ষা করুন, আর "সব wick-ই sweep" ভেবে
+  উল্টো দিকে ঝাঁপাবেন না।
+</Callout>
+
+## ধাপে ধাপে: sweep-কে trade-এর সূত্র হিসেবে ব্যবহার
+
+<Steps>
+
+### ধাপ ১: বড় ছবি দেখুন
+
+Higher timeframe-এ trend ও দিক ঠিক করুন। দেখুন [Multi-Timeframe Analysis](/bn/learn/03-market-structure/05-multi-timeframe-analysis)।
+
+### ধাপ ২: pool চিহ্নিত করুন
+
+Equal highs/lows বা স্পষ্ট swing-এর বাইরের এলাকা চিহ্নিত করুন।
+
+### ধাপ ৩: sweep-এর জন্য অপেক্ষা করুন
+
+Price pool-এর বাইরে wick দেওয়া পর্যন্ত অপেক্ষা করুন। আগে থেকে অনুমান করে ঢুকবেন না।
+
+### ধাপ ৪: body close দেখুন
+
+Body ভেতরে ফিরে এলে sweep-এর সম্ভাবনা বাড়ে। তারপর lower timeframe-এ CHOCH বা BOS অপেক্ষা করুন।
+
+### ধাপ ৫: stop sweep-এর বাইরে রাখুন
+
+Sweep-এর wick-এর সামান্য বাইরে stop রাখুন। Wick-এর ভেতরে stop রাখলে আবার ঝাড়ু খাবেন। Lot ঠিক করুন [position sizing](/bn/learn/08-risk-management/02-position-sizing) দিয়ে।
+
+</Steps>
+
+## বাস্তব উদাহরণ
+
+<Callout type="note">
+  **এই lesson-এর উদাহরণ কাল্পনিক।** যাচাই করা real OHLC data এখনো যোগ করা হয়নি।
+  উপরের chart শিক্ষামূলক কাল্পনিক data-য় তৈরি।
+</Callout>
+
+**উদাহরণ (কাল্পনিক trade):** উপরের chart-এ ২৩৪০-এর কাছে দুটি equal low ছিল। একটি candle ২৩৩৪ পর্যন্ত নেমে ২৩৪৫-এ close করল। Body equal lows-এর ওপরে। এরপর price আগের swing high ভেঙে ওপরে close করল (BOS)। আপনি buy নিলেন ২৩৫২-তে, stop ২৩৩৩-এর (sweep-এর wick) নিচে, target ২৩৭৮। এখানে stop দূরে, তাই lot ছোট রাখতে হবে।
+
+## ব্যর্থ উদাহরণ: "এটা তো sweep" ভেবে আগেই buy (কাল্পনিক/শিক্ষামূলক)
+
+- **কী দেখা যাচ্ছিল:** Equal lows ভেঙে price নামল। কেউ ধরে নিলেন এটি sweep, তাই সঙ্গে সঙ্গে buy।
+- **সিদ্ধান্ত:** Body close-এর জন্য অপেক্ষা না করা।
+- **ফল:** Candle নিচেই close হলো, পরের candle-গুলোও নামল। এটি আসল break ছিল। Stop লাগল।
+- **শিক্ষা:** Wick দেখেই sweep ধরবেন না। Body ভেতরে ফিরে আসা পর্যন্ত অপেক্ষা করুন।
+
+## সাধারণ ভুল
+
+| ভুল                                    | কেন হয়                           | কী করবেন                          |
+| :------------------------------------- | :-------------------------------- | :-------------------------------- |
+| সব wick-কে sweep ভাবা                  | ধরে নেওয়া যে প্রতিটি break ভুয়া | body close ও পরের candle দেখুন    |
+| Stop ঠিক equal low-এর নিচে রাখা        | "পরিষ্কার" জায়গা আকর্ষণীয় লাগে  | sweep-এর wick-এর বাইরে stop রাখুন |
+| Sweep-এর আগেই entry                    | তাড়াহুড়ো                        | sweep ও confirmation-এর পরে entry |
+| Higher timeframe অগ্রাহ্য করা          | শুধু chart-এর এক অংশ দেখা         | আগে বড় trend দেখুন               |
+| সব দোষ "বড় প্রতিষ্ঠানের" ঘাড়ে চাপানো | ব্যর্থতার ব্যাখ্যা খোঁজা          | নিজের stop ও risk plan ঠিক করুন   |
+
+## প্রো টিপস
+
+<Callout type="tip">
+  নিজেকে প্রশ্ন করুন: "বেশিরভাগ trader এখানে stop কোথায় রাখছে?" আপনার stop
+  সেখানে হলে এক ধাপ সরান। Stop সরালে লাভ-ক্ষতির অনুপাত বদলায়, তাই lot-ও আবার
+  হিসাব করুন।
+</Callout>
+
+<Callout type="tip">
+  Session-এর শুরুতে price প্রায়ই আগের session-এর high/low ছুঁয়ে যায়। সেটি
+  চিহ্নিত রাখুন: [Trading
+  Sessions](/bn/learn/01-foundations/05-trading-sessions)।
+</Callout>
+
+## কখন এটা কাজ করে না
+
+- **বড় news-এ:** price লাফ দেয়, sweep আর আসল break গুলিয়ে যায়।
+- **শক্ত trend-এ:** pool ভেঙে price আর ফেরে না, যেটি আসল break।
+- **খুব ছোট timeframe-এ:** noise-এ অনেক ভুয়া "sweep" দেখা যায়।
+- **একা ব্যবহার করলে:** sweep দিক বলে না। Trend ও structure-এর সঙ্গে মেলাতে হয়।
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- Liquidity pool হলো যেখানে stop ও pending order জমে থাকে।
+- Equal highs/lows ও স্পষ্ট swing-এর বাইরে pool বেশি থাকে।
+- Sweep: wick বাইরে, body ভেতরে। আসল break: body বাইরে close।
+- Body close ও higher timeframe না দেখে sweep ধরে trade নেবেন না।
+- নিজের stop ভিড়ের জায়গা থেকে সরিয়ে রাখুন।
+
+</KeyTakeaways>
+
+## অনুশীলন
+
+TradingView-এ XAUUSD-এর H1 chart খুলুন। শেষ দুই সপ্তাহে অন্তত ৩টি equal high বা equal low চিহ্নিত করুন। প্রতিটির জন্য দেখুন: price কি সেটি পেরিয়েছিল? Body কি বাইরে close করেছিল, নাকি ভেতরে ফিরেছিল? ফলাফল লিখে রাখুন।
+
+## কুইজ
+
+1. Liquidity pool কী?
+2. Equal lows-এর নিচে কাদের stop জমে?
+3. Sweep আর আসল break-এর মূল পার্থক্য কী?
+4. Sweep trade-এ stop কোথায় রাখবেন?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** যে price এলাকার কাছে অনেক stop ও pending order জমে আছে।
+
+**২.** Buyer-দের। তাদের stop sell order হয়ে পূরণ হয়।
+
+**৩.** Sweep-এ body ভেতরে ফিরে আসে, আসল break-এ body বাইরে close করে।
+
+**৪.** Sweep-এর wick-এর সামান্য বাইরে, যাতে আবার ঝাড়ুতে না পড়েন।
+
+</details>
+
+## পরের ধাপ
+
+- আগে: [Break of Structure ও CHOCH](/bn/learn/03-market-structure/03-break-of-structure)।
+- পরে: [Multi-Timeframe Analysis](/bn/learn/03-market-structure/05-multi-timeframe-analysis)।
+- ঝুঁকি: [Stop Loss Placement](/bn/learn/10-trade-management-execution/01-stop-loss-placement)।
+
+<Disclaimer />

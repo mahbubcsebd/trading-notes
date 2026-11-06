@@ -1,0 +1,194 @@
+---
+title: "Correlation Risk: Are Two Trades Really One Bet?"
+description: "What correlation is, how selling EURUSD and GBPUSD together doubles your risk, and the steps to add up your total risk, with charts and examples."
+level: intermediate
+tags: [risk-management, correlation, portfolio-risk, usd]
+instruments: [EURUSD, GBPUSD]
+timeframes: [H4]
+status: done
+sources:
+  - type: blog
+    title: "Currency Correlation - Investopedia"
+    url: "https://www.investopedia.com/terms/c/correlation.asp"
+  - type: blog
+    title: "Forex Correlations - BabyPips"
+    url: "https://www.babypips.com/learn/forex/currency-correlations"
+updated: 2026-11-06
+---
+
+# Correlation Risk: Are Two Trades Really One Bet?
+
+You found two different setups on two different pairs, with 1% risk on each. You thought the risk was spread out. But if both move for the same reason, you have really made one bet, at nearly double the size.
+
+## What you will be able to do
+
+- **Explain** what correlation is and why it happens in forex.
+- **Add up your open positions** to find the total risk.
+- **Recognize** which pairs tend to move in the same direction.
+- **Avoid** taking the same risk twice.
+
+## Why it matters
+
+- **Forex always comes in pairs.** In every pair, one currency is against another. When the USD gets weaker or stronger, many pairs move together.
+- **Risk per trade alone is not enough.** You have to add up the total risk.
+- **Stops get hit together.** Correlated trades often lose at the same time.
+
+Prerequisites: [Risk per Trade](/en/learn/08-risk-management/01-risk-per-trade) and [Daily and Weekly Limits](/en/learn/08-risk-management/05-daily-weekly-limits).
+
+## What is correlation
+
+**Correlation is the tendency of two assets or pairs to move in the same or opposite direction.** If they move the same way it is positive. If they move opposite ways it is negative.
+
+Think of two boats on the same river. If the current takes one to the left, it takes the other almost to the left too. Even if you keep your capital in the two boats separately, the current is one.
+
+Common examples in forex:
+
+- **EURUSD and GBPUSD:** in both, the USD is the second currency, so they often move the same way.
+- **EURUSD and USDCHF:** whichever way the USD goes, an opposite relationship shows up.
+- **Gold (XAUUSD) and the USD:** often in opposite directions, though not always. Details in [Gold vs DXY](/en/learn/11-fundamental-intermarket-analysis/05-correlation-gold-vs-dxy).
+
+**The relationship is not fixed.** It changes with time, market conditions and timeframe. Do not treat any number as permanent.
+
+## What it looks like on a chart
+
+<Chart
+  id="corr-eurusd-sell-01"
+  height={400}
+  caption="EURUSD H4 (educational, imaginary example): sell at 1.0860 on candle 40, stop 1.0890 (hit on candle 48), target 1.0790."
+/>
+
+<Chart
+  id="corr-gbpusd-sell-01"
+  height={400}
+  caption="GBPUSD H4 (educational, imaginary example): at the same time, for the same reason (USD strength), a second sell. The stop of the second sell is also hit on candle 48."
+/>
+
+Look at the two charts side by side. Even though the two setups look different, the reason is one: the move of the USD. If the USD turns around, both stops can be hit at about the same time.
+
+## Step by step: adding up total risk
+
+<Steps>
+
+### Step 1: List your open positions
+
+Write the pair, direction and risk of each.
+
+### Step 2: Find the common currency
+
+Which currency is in more than one trade? In which direction? For example, sell EURUSD + sell GBPUSD = buying USD in two places.
+
+### Step 3: Add the same bet together
+
+If two 1% trades are correlated in the same direction, assume the total risk is about 2%.
+
+### Step 4: Check against your limit
+
+Is the total risk within your daily or open-risk limit?
+
+### Step 5: Drop one or shrink them, if needed
+
+If you want to take both, halve the risk on each.
+
+</Steps>
+
+## Example 1: when it works (synthetic)
+
+The trader takes 0.5% on a sell of EURUSD and 0.5% on a sell of GBPUSD, about 1% in total.
+
+- **Calculation:** both are about the USD, so they should behave like one 1% bet.
+- **Result:** the USD got stronger, and both went toward their targets. Together the profit is about 1% × the ratio.
+- **Lesson:** it is possible to take two setups while keeping total risk within the limit.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Example 2: when it fails (synthetic)
+
+The two charts above: the trader took a full 1% risk on both.
+
+- **What was visible:** two separate setups, both sells.
+- **Result:** the USD turned around, and both stops were hit on candle 48. The loss was about 2%, not the planned 1%.
+- **Why it was wrong:** the two trades were treated as independent.
+- **Lesson:** on correlated trades, risk adds up. It does not average out.
+
+(Synthetic educational example. The result is not a guarantee.)
+
+## Common mistakes
+
+| Mistake                                          | Why it happens                 | What to do                                   |
+| :----------------------------------------------- | :----------------------------- | :------------------------------------------- |
+| Thinking different pairs mean different risk     | The pairs look different       | Look for the common currency                 |
+| Treating correlation as permanent                | The number seems fixed         | Check it again over time                     |
+| Thinking an opposite position is safe            | It looks like a hedge          | Look at the cost and direction of both pairs |
+| Not counting total open risk                     | Looking at each one separately | Keep the sum of all positions                |
+| Many trades in the same currency on the same day | More chances seem likely       | Set a limit per currency                     |
+
+## Pro tips
+
+<Callout type="tip">
+  At the start of the week, write down which currency interests you most. Treat
+  all pairs of that currency as one group and set a risk limit per group.
+</Callout>
+
+<Callout type="warning">
+  Correlation is not fixed. On a central bank announcement or big news, two
+  pairs can suddenly go opposite ways. Do not trust old numbers.
+</Callout>
+
+## When this does not work
+
+- **When the correlation breaks:** during news, the relationship can fall apart.
+- **On a different timeframe:** a relationship on M15 may not exist on D1.
+- **On cross pairs:** the currencies of the two pairs do not match, but an indirect relationship can still exist.
+- **When one trade is the opposite of another:** total risk falls, but the cost doubles.
+
+## Summary
+
+<KeyTakeaways>
+
+- Correlation is the tendency of two assets to move in the same or opposite direction.
+- If the same currency is on the same side, risk adds up. It does not average out.
+- The relationship is not fixed, so check it regularly.
+- Keep total open risk within your limit.
+
+</KeyTakeaways>
+
+## Practice
+
+Open EURUSD and GBPUSD H4 side by side on TradingView. Look at 5 big swings over the last 2 months and see whether the two moved the same way. Then write how your limit would change if you took trades in the same direction on both.
+
+## Quiz
+
+1. Why are a sell on EURUSD and a sell on GBPUSD almost the same bet?
+2. With two correlated trades at 1% risk each, what is the total risk roughly?
+3. Is correlation permanent?
+4. What do you do if you want to take two correlated setups?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** In both, the USD is on the same side, and the move of the USD affects both.
+
+**2.** About 2%.
+
+**3.** No. It changes with time and conditions.
+
+**4.** Reduce the risk on each so that total risk stays within the limit.
+
+</details>
+
+## Next steps
+
+- Before: [Daily and Weekly Limits](/en/learn/08-risk-management/05-daily-weekly-limits).
+- After: [Expectancy](/en/learn/08-risk-management/07-expectancy).
+- Related: [Currency Strength and DXY](/en/learn/11-fundamental-intermarket-analysis/03-currency-strength-dxy).
+
+### Sources
+
+- <ExternalLink href="https://www.investopedia.com/terms/c/correlation.asp">
+    Correlation, Investopedia
+  </ExternalLink>
+- <ExternalLink href="https://www.babypips.com/learn/forex/currency-correlations">
+    Currency Correlations, BabyPips
+  </ExternalLink>
+
+<Disclaimer />

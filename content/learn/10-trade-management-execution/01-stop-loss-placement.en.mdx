@@ -1,0 +1,182 @@
+---
+title: "Stop Loss Placement: Where to Put It So the Idea Is Proved Wrong"
+description: "How to place a stop loss beyond the structure, why a stop that is too close gets cut by noise, and the steps to work out the lot after placing the stop, with charts."
+level: beginner
+tags: [stop-loss, trade-management, structure, swing-low, risk]
+instruments: [EURUSD]
+timeframes: [H1]
+status: done
+sources:
+  - type: blog
+    title: "Stop-Loss Order - Investopedia"
+    url: "https://www.investopedia.com/terms/s/stop-lossorder.asp"
+  - type: blog
+    title: "Stop Loss - BabyPips"
+    url: "https://www.babypips.com/learn/forex/stop-loss"
+updated: 2026-11-06
+---
+
+# Stop Loss Placement: Where to Put It So the Idea Is Proved Wrong
+
+You placed a stop loss, price touched it exactly and went back, and the idea of your trade was right. Many traders have had this experience. Often the problem is not having a stop. It is the place of the stop.
+
+## What you will be able to do
+
+- **Place the stop beyond the structure.**
+- **Show the harm** of a stop that is too close.
+- **State the order** for working out the lot after the stop is set.
+
+## Why it matters
+
+- **The stop decides your maximum loss.** If it is not decided beforehand, it gets decided by emotion.
+- **A stop in the wrong place hurts both ways.** If it is close, noise cuts it. If it is far, the risk goes up.
+- **The lot depends on the stop.** When the stop changes, the lot has to change.
+
+Prerequisites: [Swing High and Swing Low](/en/learn/03-market-structure/01-swing-high-low) and [Position Sizing](/en/learn/08-risk-management/02-position-sizing).
+
+## What is a stop loss
+
+**A stop loss is a price decided in advance at which the trade will be closed. The right stop is the place where, if price reaches it, the idea behind the trade is proved wrong.**
+
+Think of a river embankment. If you have not decided how high the water can rise before the embankment breaks, you have to decide after the flood comes. The stop is that limit, decided beforehand.
+
+On a buy trade, the stop usually goes below an important swing low. On a sell, above a swing high. If price reaches there, the structure has broken.
+
+## What it looks like on a chart
+
+<Chart
+  id="sl-structure-win-01"
+  height={440}
+  caption="EURUSD H1 (educational, imaginary example): buy at 1.0930. Stop 1.0868, a little below the swing low at 1.0880. Target 1.1054 (1:2)."
+/>
+
+Not right against the swing low, but a little below it. This gap is for noise.
+
+## Step by step: placing the stop
+
+<Steps>
+
+### Step 1: Set the stop before entry
+
+First know where you are proved wrong. That is the stop.
+
+### Step 2: Find the structure
+
+The last important swing low (buy) or swing high (sell). Or beyond a [support zone](/en/learn/05-support-resistance/01-levels-vs-zones).
+
+### Step 3: Add a buffer
+
+Not exactly at the level. Look at the [ATR](/en/learn/07-technical-indicators/04-atr-stop-size) and leave a small gap. Keep the spread in mind too.
+
+### Step 4: Measure the distance and check the ratio
+
+How many pips from entry to stop? If the [ratio](/en/learn/08-risk-management/03-risk-reward) is below the minimum, skip the trade.
+
+### Step 5: Then work out the lot
+
+Keep the risk in money fixed and work out the lot from the stop distance. Do not do it the other way round.
+
+</Steps>
+
+## Example 1: when it works (synthetic)
+
+- **Set in advance:** risk 1%, stop 12 pips below the swing low, ratio 1:2.
+- **Result:** the pullback did not reach the swing low, and price touched the target.
+- **Lesson:** the place of the stop came from the chart, not from wishing.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Example 2: when it fails (synthetic)
+
+<Chart
+  id="sl-too-tight-fail-01"
+  height={440}
+  caption="EURUSD H1 (educational, imaginary example): same buy at 1.0930, but the stop is only 18 pips away at 1.0912. A normal pullback cuts the stop, and later price reaches the original target."
+/>
+
+- **What was visible:** same setup, and the trader pulled the stop close to show "less risk".
+- **Result:** the stop was hit on the pullback, and then price went up.
+- **Why it failed:** the stop was inside normal noise, not beyond the structure.
+- **Lesson:** even if the idea is right, a wrong stop causes a loss.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Common mistakes
+
+| Mistake                                  | Why it happens               | What to do                                 |
+| :--------------------------------------- | :--------------------------- | :----------------------------------------- |
+| Pulling the stop too close               | To show smaller risk         | Beyond the structure, then cut the lot     |
+| Not placing a stop                       | "I'll watch it"              | Place it in the order along with the entry |
+| Moving the stop farther during the trade | Not accepting the loss       | The stop moves only toward less risk       |
+| Stop right against the level             | Looking for the perfect spot | Leave a buffer for noise and spread        |
+
+## Pro tips
+
+<Callout type="tip">
+  The rule for moving a stop: only toward profit (toward less risk). Moving it
+  toward a loss means denying your earlier decision.
+</Callout>
+
+<Callout type="warning">
+  A "mental stop" (kept in your head) is dangerous. Under pressure it moves.
+  Place it as an order with the broker.
+</Callout>
+
+## When this does not work
+
+- **During news:** price can jump past the stop ([Slippage](/en/learn/10-trade-management-execution/04-slippage-requote-spread-widening)).
+- **When the structure is unclear:** you cannot tell where the idea is wrong, so skip the trade.
+- **When the stop is very far:** the ratio or the lot is unacceptable, so drop the trade.
+- **When the spread is high:** the stop can be hit early.
+
+## Summary
+
+<KeyTakeaways>
+
+- The stop goes where the idea of the trade is proved wrong.
+- Leave a small buffer beyond the structure.
+- First the stop, then the lot. Not the other way round.
+- The stop moves only toward less risk.
+
+</KeyTakeaways>
+
+## Practice
+
+Find three buy setups on a demo chart. For each, place the stop below the structure, measure the distance, and then work out the lot at 1% risk.
+
+## Quiz
+
+1. Where does the stop usually go on a buy trade?
+2. What is the harm of a stop that is too close?
+3. When do you work out the lot?
+4. In which direction can the stop be moved during a trade?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** Below an important swing low or support.
+
+**2.** It gets cut by noise, and you lose even if the idea is right.
+
+**3.** After the stop is set.
+
+**4.** Only toward less risk (toward profit).
+
+</details>
+
+## Next steps
+
+- Before: [Position Sizing](/en/learn/08-risk-management/02-position-sizing).
+- After: [Take Profit and Partial Close](/en/learn/10-trade-management-execution/02-take-profit-partial-close).
+- Related: [ATR and Stop Size](/en/learn/07-technical-indicators/04-atr-stop-size).
+
+### Sources
+
+- <ExternalLink href="https://www.investopedia.com/terms/s/stop-lossorder.asp">
+    Stop-Loss Order, Investopedia
+  </ExternalLink>
+- <ExternalLink href="https://www.babypips.com/learn/forex/stop-loss">
+    Stop Loss, BabyPips
+  </ExternalLink>
+
+<Disclaimer />

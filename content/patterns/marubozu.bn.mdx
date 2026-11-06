@@ -1,41 +1,357 @@
 ---
-title: "মারুবোজু (ফুল বডি মোমেন্টাম) (Marubozu (Full Body Momentum))"
-description: "উইক বা শ্যাডোবিহীন একটি পূর্ণাঙ্গ শক্তিশালী মোমেন্টাম ক্যান্ডেল যা ওপেন থেকে ক্লোজ পর্যন্ত সম্পূর্ণ নিয়ন্ত্রণ নির্দেশ করে।"
-type: reversal
-category: "মারুবোজু (ফুল বডি মোমেন্টাম)"
-winrate: "72% - 76%"
-riskReward: "1:2.5 to 1:4"
-maxRisk: "1%"
-bestLocation: "Key Support/Resistance Breakout / Fresh Trend Impulse"
-chartId: "marubozu-01"
-tags: [reversal, pattern, candlestick]
+title: "Marubozu: wick ছাড়া candle, যখন এক পক্ষ পুরো সময় জেতে"
+description: "Marubozu candle কীভাবে চিনবেন, কখন এটা নতুন move-এর শুরু আর কখন শেষ ধাক্কা, entry, stop ও target কোথায় বসাবেন — জেতা ও হারা chart example সহ।"
+type: neutral
+category: momentum-indecision
+level: beginner
+candleCount: 1
+signal: continuation
+chartId: marubozu-win-01
+tags: [pattern, candlestick, marubozu, momentum, breakout]
+status: done
+sources:
+  - type: book
+    title: "Japanese Candlestick Charting Techniques - Steve Nison"
+    note: "Marubozu, opening ও closing marubozu"
+  - type: blog
+    title: "Marubozu Candlestick - Investopedia"
+    url: "https://www.investopedia.com/terms/m/marubozu.asp"
+updated: 2026-11-06
 ---
 
-<div className="flex gap-6 items-end my-8 p-8 bg-zinc-950 border border-border/50 rounded-2xl w-max relative overflow-hidden">
-  <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:20px_20px]"></div>
-  <div className="relative z-10 flex gap-6">
-    <Candle color="bull" bodyH="h-20" topW="h-[1px]" botW="h-[1px]" offset="mt-2" />
-    <Candle color="bear" bodyH="h-20" topW="h-[1px]" botW="h-[1px]" offset="mt-2" />
-  </div>
-</div>
+একটা বিশাল সবুজ candle, নিচে-উপরে প্রায় কোনো wick নেই। দেখে মনে হয় ট্রেন ছেড়ে দিচ্ছে, এখনই উঠতে হবে। অনেকে ঠিক সেই candle-এর top-এ buy করেন, আর পরের কয়েক candle-এ দাম অর্ধেক ফিরে এসে stop নিয়ে যায়। Marubozu সত্যিই শক্তির চিহ্ন, কিন্তু কোথায় এসেছে আর কখন ঢুকছেন, সেটাই ফল ঠিক করে।
 
-## Market Psychology & প্রাতিষ্ঠানিক অর্ডার ফ্লো
-মার্কেটে প্রাতিষ্ঠানিক আগ্রাসনের চূড়ান্ত প্রমাণ। ওপেনিংয়ের প্রথম মুহূর্ত থেকেই এক পক্ষ কোনো বিরতি বা পুলব্যাক ছাড়াই একনাগাড়ে মার্কেট পুশ করতে থাকে এবং একদম হাই (বুলিশ হলে) বা লো (বিয়ারিশ হলে) পয়েন্টে ক্লোজ হয়। এটি প্রমাণ করে বিপরীত পক্ষের সব অর্ডার মুহূর্তে নিশ্চিহ্ন হয়ে গেছে।
+## এক নজরে
 
-## ক্যান্ডেল অ্যানাটমির ৫টি অপরিহার্য শর্ত
-1. **Zero or Minimal Wicks:** উপরের বা নিচের দিকে কোনো উইক থাকবে না অথবা সর্বোচ্চ ১-২% নগণ্য উইক থাকতে পারে।
-2. **Large Full Body:** ক্যান্ডেলটির বডি সাধারণ ক্যান্ডেলের তুলনায় অন্তত ২ থেকে ৩ গুণ দীর্ঘ হবে।
-3. **Open is the Low/High:** বুলিশ মারুবোজুতে ওপেনিং প্রাইস হলো লো প্রাইস; বিয়ারিশ মারুবোজুতে ওপেনিং প্রাইস হলো হাই প্রাইস।
-4. **Breakout of Structure:** সাধারণত কোনো গুরুত্বপূর্ণ সাপোর্ট, রেজিস্ট্যান্স বা রেঞ্জ ভাঙার মুহূর্তে তৈরি হয়।
-5. **Volume Explosion:** সাধারণ ক্যান্ডেলের চেয়ে ২-৩ গুণ বেশি ভলিউম থাকবে।
+| বিষয়                | Marubozu                                                                                                                  |
+| :------------------- | :------------------------------------------------------------------------------------------------------------------------ |
+| ধরন                  | Bullish বা bearish momentum candle, একটি candle                                                                           |
+| কোথায় খুঁজবেন       | Range বা level ভাঙার মুহূর্তে, নতুন trend-এর শুরুতে                                                                       |
+| চেনার মূল চিহ্ন      | বড় body, দুই দিকে wick প্রায় নেই, আশেপাশের candle-এর চেয়ে স্পষ্টভাবে বড়                                               |
+| Confirmation         | পরের candle-গুলো body-র অর্ধেকের বেশি ফেরত না দেওয়া, ভাঙা level-এর বাইরে থাকা                                            |
+| Stop                 | Marubozu-র বিপরীত প্রান্তের বাইরে (bullish হলে low-এর নিচে), spread-সহ buffer                                             |
+| বাতিল (invalidation) | Bullish marubozu-র low-এর নিচে close (bearish হলে high-এর উপরে)                                                           |
+| দেখতে একই রকম        | News spike candle, লম্বা wick-ওয়ালা বড় candle, [Three White Soldiers](/bn/patterns/three-white-soldiers)-এর একটি candle |
+| বিপরীত pattern       | Doji ও Spinning Top (body ছোট, সিদ্ধান্তহীনতা)                                                                            |
 
-## লাভজনক ট্রেড নেওয়ার ৩টি প্রমাণিত কৌশল (Execution Blueprint)
-**কৌশল ১ (৫০% ফিবোনাচি রিটেস্ট - সেরা পছন্দ):** মারুবোজু ক্যান্ডেলের ৫০% রিট্রেসমেন্টে লিমিট অর্ডার বসান। স্টপ লস মারুবোজু ক্যান্ডেলের ঠিক পেছনে।
-**কৌশল ২ (পরবর্তী বার কন্টিনিউয়েশন এন্ট্রি):** মারুবোজুর পর পরবর্তী ক্যান্ডেলের হাই ব্রেক হলে বাই দিন (বা লো ব্রেক হলে সেল দিন)।
-**কৌশল ৩ (M15 ফেয়ার ভ্যালু গ্যাপ / FVG রিটেস্ট):** মারুবোজু তৈরি করার সময় যে FVG রেখে যায়, M15 এ তার রিটেস্টে স্নাইপার এন্ট্রি নিন।
+## এই লেখা পড়ে আপনি যা পারবেন
 
-## কোথায় সফল হবে বনাম কোথায় ফাঁদে পড়বেন
-- ✅ **A+ হাই-প্রোবাবিলিটি সেটআপ:** কনসলিডেশন রেঞ্জ ব্রেকআউট, উচ্চ ফান্ডামেন্টাল নিউজ ভলিউম, এবং ক্লিয়ার মার্কেট ট্রেন্ড।
-- ❌ **লস খাওয়ার ট্র্যাপ (Avoid):** ইতিমধ্যে অনেক দূর মুভ করার পর এক্সহশন মোমেন্টে তৈরি হলে।
+- Marubozu আর সাধারণ বড় candle-এর তফাত **মেপে বলতে পারবেন**।
+- কোন marubozu নতুন move-এর শুরু আর কোনটা শেষ ধাক্কা, তা **জায়গা দেখে আলাদা করতে পারবেন**।
+- Candle-এর top-এ তাড়া না করে **50% retest entry বসাতে পারবেন**।
+- Stop ও target **ধাপে ধাপে ঠিক করতে পারবেন**।
 
-> ⚠️ **প্রো মানি ম্যানেজমেন্ট ও সাইকোলজি টিপ:** মারুবোজুর মাঝামাঝি (৫০% লেভেল) শক্তিশালী সাপোর্ট বা রেজিস্ট্যান্স হিসেবে কাজ করে, তাই সেখানে রিটেস্টেই সবচেয়ে সেরা ট্রেড পাওয়া যায়। সর্বোচ্চ ১% থেকে ২% ঝুঁকি নিয়ে প্রতিটি ট্রেডে নির্ধারিত স্টপ লস ব্যবহার করুন।
+## কেন জরুরি
+
+- **Momentum-এর সবচেয়ে পরিষ্কার ছবি।** একটি candle-এই বোঝা যায় কোন পক্ষ নিয়ন্ত্রণে। Breakout সত্যি কি না, তা যাচাইয়ের অন্যতম চিহ্ন।
+- **তাড়া করার সবচেয়ে বড় ফাঁদও এটাই।** বড় candle দেখলে মিস করার ভয় আসে। Candle-এর শেষে ঢুকলে stop হয় বিশাল, R:R হয় খারাপ।
+- **দুই অর্থ, একই আকার।** Range ভাঙার মুহূর্তে marubozu মানে শুরু। লম্বা দৌড়ের শেষে marubozu প্রায়ই মানে শেষ। তফাতটা শিখতেই হবে।
+
+পূর্বশর্ত: [Single Candle Patterns](/bn/learn/04-candlesticks/02-single-candle-patterns) এবং [Range Breakout](/bn/learn/06-trend-chart-patterns/03-range-breakout)।
+
+## Marubozu কী
+
+**Marubozu হলো এমন একটি candle, যার body প্রায় পুরো range জুড়ে, আর উপরে-নিচে wick নেই বা খুবই ছোট।** "Marubozu" জাপানি শব্দ, অর্থ প্রায় "ন্যাড়া মাথা": candle-এর মাথা আর পায়ে কোনো চুল (wick) নেই।
+
+একটা দড়ি টানাটানি খেলা ভাবুন। সাধারণ candle-এ দুই দল একবার এদিক, একবার ওদিক টানে, তাই wick তৈরি হয়। Marubozu-তে এক দল শুরু থেকে শেষ পর্যন্ত টেনে নিয়ে গেছে, অন্য দল একবারও দড়ি ফেরাতে পারেনি।
+
+<CandleDiagram
+  title="Bullish ও bearish marubozu"
+  candles={[
+    { o: 50, h: 54, l: 47, c: 52, dim: true },
+    { o: 52, h: 55, l: 49, c: 50, dim: true },
+    {
+      o: 50,
+      h: 70.3,
+      l: 49.8,
+      c: 70,
+      label: "Bullish",
+      note: "open ≈ low, close ≈ high",
+    },
+    { o: 70, h: 72, l: 66, c: 68, dim: true },
+    {
+      o: 68,
+      h: 68.2,
+      l: 47.7,
+      c: 48,
+      label: "Bearish",
+      note: "open ≈ high, close ≈ low",
+    },
+  ]}
+  caption="Bullish marubozu-তে open প্রায় low, close প্রায় high। Bearish-এ উল্টো। দুটোই আশেপাশের candle-এর চেয়ে অনেক বড়।"
+/>
+
+### চেনার নিয়ম
+
+| নিয়ম                                              | বাধ্যতামূলক?          | কেন                                               |
+| :------------------------------------------------- | :-------------------- | :------------------------------------------------ |
+| Body range-এর প্রায় পুরোটা                        | হ্যাঁ                 | Wick থাকা মানে বিপরীত পক্ষ কিছুটা দাম ফিরিয়েছে   |
+| আগের ১০-২০টি candle-এর গড় body-র চেয়ে স্পষ্ট বড় | হ্যাঁ                 | ছোট candle-এর wick না থাকা কোনো খবর নয়           |
+| Candle বন্ধ হয়েছে                                 | হ্যাঁ                 | চলমান candle শেষ মিনিটে wick বানাতে পারে          |
+| কোনো level বা range ভেঙে close                     | না (কিন্তু খুব জরুরি) | ভাঙার মুহূর্তের momentum-ই সবচেয়ে অর্থবহ         |
+| Tick volume আশেপাশের চেয়ে বেশি                    | না                    | Forex-এ শুধু tick volume, তাই দুর্বল ইঙ্গিত মাত্র |
+
+Nison দুটি রূপও আলাদা করেছেন: **opening marubozu** (open-এর দিকে wick নেই) আর **closing marubozu** (close-এর দিকে wick নেই)। Trade-এর জন্য closing দিকটা বেশি জরুরি: close যদি একদম প্রান্তে হয়, শেষ পর্যন্ত সেই পক্ষই জিতেছে।
+
+## শক্তিশালী বনাম দুর্বল marubozu
+
+<DiagramRow>
+  <CandleDiagram
+    title="শক্তিশালী"
+    verdict="good"
+    verdictLabel="trade-যোগ্য"
+    candles={[
+      { o: 50, h: 53, l: 48, c: 51, dim: true },
+      { o: 51, h: 53, l: 48, c: 49, dim: true },
+      { o: 49, h: 52, l: 47, c: 51, dim: true },
+      { o: 51, h: 66.3, l: 50.8, c: 66, label: "range ভেঙে close" },
+    ]}
+    levels={[{ price: 53, label: "range top", tone: "resistance" }]}
+    caption="শান্ত range-এর পর বড় body, close range-এর অনেক উপরে।"
+  />
+  <CandleDiagram
+    title="দুর্বল"
+    verdict="bad"
+    verdictLabel="এড়িয়ে চলুন"
+    candles={[
+      { o: 40, h: 46, l: 39.5, c: 45.5, dim: true },
+      { o: 45.5, h: 51, l: 45, c: 50.5, dim: true },
+      { o: 50.5, h: 56, l: 50, c: 55.5, dim: true },
+      { o: 55.5, h: 61, l: 55, c: 60.5, dim: true },
+      { o: 60.5, h: 68.3, l: 60.3, c: 68, label: "দৌড়ের শেষে" },
+    ]}
+    levels={[{ price: 69, label: "পুরোনো high", tone: "resistance" }]}
+    caption="টানা অনেক bullish candle-এর পর, ঠিক পুরোনো high-এ। উপরে জায়গা নেই।"
+  />
+</DiagramRow>
+
+| মান যাচাই    | শক্তিশালী                            | দুর্বল                                    |
+| :----------- | :----------------------------------- | :---------------------------------------- |
+| আগে কী ছিল   | Range, consolidation বা ছোট pullback | টানা অনেক candle একই দিকে, বিরতি ছাড়া    |
+| Close কোথায় | চিহ্নিত level-এর স্পষ্টভাবে বাইরে    | ঠিক কোনো বড় level-এর গায়ে               |
+| আকার         | আগের গড় body-র ৩-৪ গুণ              | আগের candle-গুলোর মতোই বড়, নতুন কিছু নয় |
+| সামনে জায়গা | পরের level পর্যন্ত অন্তত 2R          | পরের level 1R-এর মধ্যে                    |
+
+<Callout type="note">
+  "৩-৪ গুণ" ও "wick প্রায় নেই" আমার কাজ চালানোর মাপ, যাচাই-করা পরিসংখ্যান নয়।
+  অনেকে wick-কে range-এর ৫%-এর কম ধরেন। নিজের backtest-এ একটি মাপ ঠিক করুন,
+  তারপর সব chart-এ সেটাই রাখুন।
+</Callout>
+
+### দেখতে একই রকম, অর্থ আলাদা
+
+| Pattern                          | আকার                                    | তফাত                                                        |
+| :------------------------------- | :-------------------------------------- | :---------------------------------------------------------- |
+| **Marubozu**                     | বড় body, wick প্রায় নেই               | পুরো সময় এক পক্ষের নিয়ন্ত্রণ                              |
+| **লম্বা wick-ওয়ালা বড় candle** | বড় body, কিন্তু এক দিকে স্পষ্ট wick    | প্রান্তে বিপরীত পক্ষ দাম ফিরিয়েছে; momentum কিছুটা দুর্বল  |
+| **News spike candle**            | বিশাল body, wick থাকতেও পারে, না-ও পারে | Data release-এর মুহূর্তে পাতলা liquidity-র ফল, প্রায়ই ফেরে |
+| **Three White Soldiers**         | তিনটি পরপর বড় bullish candle           | একটি নয়, তিনটি candle-এর ধারাবাহিক চাপ                     |
+
+## Candle-এর ভেতরের গল্প
+
+একটি bullish marubozu সময় ধরে ভাঙলে একটি প্রচলিত ব্যাখ্যা এরকম:
+
+1. **Open থেকেই buyers এগিয়ে।** দাম open-এর নিচে প্রায় যায়ই না। Sellers শুরুতেই দাম নামাতে ব্যর্থ।
+2. **Level ভাঙে, stop কাটে।** Range-এর উপরে যাদের sell stop ছিল, সেগুলো কেটে buy order হয়। Breakout trader-রাও কেনে। চাপ আরও বাড়ে।
+3. **Close একদম উপরে।** শেষ মিনিট পর্যন্ত কেউ দাম ফেরাতে পারেনি। যারা range-এ sell করেছিল, তারা এখন লোকসানে।
+
+ফল: পুরো candle জুড়ে এক পক্ষ। কিন্তু মনে রাখুন, লম্বা দৌড়ের শেষে একই আকার আসতে পারে শেষ মুহূর্তের buyers আর short-দের জোর করে বেরোনোর (short covering) কারণে। তখন এটা শুরু নয়, শেষ।
+
+<Callout type="note">
+  এটি একটি প্রচলিত ব্যাখ্যা, প্রমাণিত ঘটনা নয়। Chart দেখে কে কিনেছে, তা জানা
+  যায় না। আমরা শুধু দামের আচরণ দেখি।
+</Callout>
+
+## কোথায় কাজ করে, কোথায় করে না
+
+<Compare
+  leftLabel="যেখানে marubozu-র ওজন বেশি"
+  rightLabel="যেখানে marubozu প্রায়ই ফাঁদ"
+  left="- লম্বা range বা consolidation ভেঙে close
+- চিহ্নিত support বা resistance ভাঙার মুহূর্তে
+- Trend-এর মধ্যে pullback শেষে, trend-এর দিকে
+- London বা New York open-এ, স্বাভাবিক volatility-তে
+- Higher timeframe-এর দিকের সঙ্গে মিলে"
+  right="- টানা ৫-৬টি একই দিকের candle-এর পর
+- ঠিক বড় পুরোনো high বা low-এর গায়ে
+- বড় news release-এর মুহূর্তে
+- Asian session-এর পাতলা বাজারে ছোট range-এ
+- Range-এর মাঝখানে, কোনো level না ভেঙে"
+/>
+
+## ধাপে ধাপে: marubozu trade
+
+<Steps>
+
+### ধাপ ১: আগে level
+
+Range-এর top-bottom বা চিহ্নিত support-resistance আগেই আঁকুন। Marubozu তখনই অর্থবহ, যখন এটা কিছু একটা ভাঙে।
+
+### ধাপ ২: Candle বন্ধ হওয়ার অপেক্ষা
+
+চলমান বড় candle শেষ মিনিটে লম্বা wick বানাতে পারে। শুধু বন্ধ হওয়া candle গুনুন।
+
+### ধাপ ৩: মাপুন
+
+Body আগের ১০-২০ candle-এর গড় body-র চেয়ে স্পষ্ট বড়? দুই দিকের wick প্রায় নেই? Close level-এর স্পষ্টভাবে বাইরে? আগে টানা অনেক candle একই দিকে যায়নি?
+
+### ধাপ ৪: Entry-র ধরন বেছে নিন
+
+| Entry                         | কোথায়                                   | সুবিধা                        | অসুবিধা                       |
+| :---------------------------- | :--------------------------------------- | :---------------------------- | :---------------------------- |
+| **50% retest** (প্রচলিত)      | Body-র মাঝামাঝি buy limit                | Stop অর্ধেক, R:R ভালো         | দাম না ফিরলে trade মিস        |
+| **পরের candle-এর high break** | পরের ছোট candle-এর high-এর উপরে buy stop | Momentum চলছে কি না দেখে ঢোকা | Entry দূরে, stop বড়          |
+| **Close entry**               | Marubozu বন্ধ হতেই market buy            | কখনো মিস হয় না               | Stop বিশাল, প্রায়ই খারাপ দাম |
+
+Marubozu-র ক্ষেত্রে close entry সবচেয়ে বিপজ্জনক, কারণ stop পুরো বড় candle-এর ওপারে। নতুনদের জন্য 50% retest সবচেয়ে ভালো: দাম না ফিরলে trade নেই, ক্ষতিও নেই।
+
+### ধাপ ৫: Stop বসান
+
+Bullish marubozu-র low-এর নিচে, [spread](/bn/learn/01-foundations/04-spread-commission-swap) ও কয়েক pip buffer-সহ। 50% retest entry হলে ঝুঁকি candle-এর অর্ধেক।
+
+### ধাপ ৬: Size ও target
+
+Entry থেকে stop-এর দূরত্ব দিয়ে [position size](/bn/learn/08-risk-management/02-position-sizing) বের করুন, ঝুঁকি account-এর ১%-এর বেশি নয়। Target পরের level-এর ঠিক আগে। সেখানে পর্যন্ত [risk reward](/bn/learn/08-risk-management/03-risk-reward) অন্তত 1:1.5 না হলে বাদ দিন।
+
+### ধাপ ৭: পরিচালনা
+
+দাম body-র 50%-এর নিচে টানা দুটি candle close করলে momentum দুর্বল হচ্ছে; partial বা exit ভাবুন। Marubozu-র low-এর নিচে close হলে ধারণা ভুল, বেরিয়ে যান।
+
+</Steps>
+
+### Trade-এর আগে checklist
+
+<Checklist
+  id="pattern-marubozu-pretrade-bn"
+  items={[
+    "Marubozu আসার আগেই level বা range চিহ্নিত ছিল, আর candle সেটা ভেঙে close করেছে?",
+    "আকার নিয়ম মানছে (বড় body, wick প্রায় নেই, আগের candle-গুলোর চেয়ে স্পষ্ট বড়)?",
+    "Candle বন্ধ হয়েছে, আর আগে টানা অনেক candle একই দিকে যায়নি?",
+    "পরের level পর্যন্ত risk reward অন্তত 1:1.5?",
+    "Higher timeframe-এর কোনো level ঠিক সামনে নেই?",
+  ]}
+/>
+
+একটি ঘরও খালি থাকলে trade বাদ দিন।
+
+## উদাহরণ ১: যখন কাজ করে (কাল্পনিক)
+
+<Chart
+  id="marubozu-win-01"
+  height={420}
+  caption="EURUSD H1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — range ভেঙে bullish marubozu, body-র 50% retest-এ entry।"
+/>
+
+- **কী দেখা যাচ্ছিল:** ০ থেকে ১১ নম্বর candle 1.0850 থেকে 1.0885-এর range-এ। Body বেশিরভাগ ৮-১৪ pip।
+- **Marubozu:** ১২ নম্বর 1.0861-এ open, 1.0903-এ close। Body 42 pip, দুই দিকে wick মাত্র 1 pip করে। Close range top-এর প্রায় 18 pip উপরে।
+- **সিদ্ধান্ত:** Buy limit 1.0882 (body-র 50%)। Stop 1.0855 (low-এর 5 pip নিচে), ঝুঁকি 27 pip। Target 1.0936, অর্থাৎ 2R। পুরো candle-এর top-এ ঢুকলে stop হতো প্রায় দ্বিগুণ।
+- **ফল:** ১৩ ও ১৪ নম্বর ধীরে নামে, ১৫ নম্বর 1.0882 ছুঁয়ে order fill করে, তারপর উপরে close করে। ২২ নম্বর candle target ছোঁয়।
+- **শিক্ষা:** Level ভেঙেছিল, আগে range ছিল (দৌড় নয়), আর entry তাড়া না করে pullback-এ। তিনটিই মিলেছে।
+
+<TradeSetup
+  direction="long"
+  pair="EURUSD"
+  entry={1.0882}
+  stop={1.0855}
+  target={1.0936}
+/>
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়। সব marubozu জেতে না, আর কোনো ফল গ্যারান্টি নয়।)
+
+## উদাহরণ ২: যখন ফাঁদ হয় (কাল্পনিক)
+
+<Chart
+  id="marubozu-fail-01"
+  height={420}
+  caption="XAUUSD H4 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — টানা rally-র শেষে পুরোনো high-এ marubozu। Retest fill হয়, তারপর stop।"
+/>
+
+- **কী দেখা যাচ্ছিল:** ০-৩ নম্বর candle প্রায় 2409-এ একটি পুরোনো high রেখে গেছে। ১০ থেকে ১৫ নম্বর ছয়টি bullish candle টানা উঠেছে, কোনো pullback নেই।
+- **Marubozu:** ১৬ নম্বর 2377.00-এ open, 2405.00-এ close। Body $28, wick 30-40 সেন্ট। আকারে নিখুঁত।
+- **ভুল সিদ্ধান্ত:** "এত শক্তিশালী candle, আরও উঠবে।" Buy limit 2391.00, stop 2374.70, ঝুঁকি $16.30, target 2423.60 (2R)। কিন্তু target পুরোনো high-এর ওপারে; high পর্যন্ত জায়গা মাত্র প্রায় 1.1R।
+- **কী হলো:** ১৭ নম্বর পুরোনো high-এর ঠিক নিচ থেকে ফিরে আসে। ১৮ নম্বর buy limit fill করে, দুর্বল close দেয়। ২০ নম্বর stop ভাঙে।
+- **কেন ব্যর্থ:** Marubozu দৌড়ের শুরুতে নয়, শেষে এসেছিল, আর সামনে ছিল দেয়াল। Checklist-এর চতুর্থ ঘরেই (R:R ≥ 1:1.5) trade বাদ পড়ত।
+
+**শিক্ষা:** লম্বা দৌড়ের শেষে level-এর গায়ে marubozu প্রায়ই শেষ ধাক্কা। Stop আগে বসানো ছিল বলে লোকসান 1R-এ আটকেছে।
+
+## সাধারণ ভুল
+
+| ভুল                                   | কেন হয়                          | কী করবেন                                        |
+| :------------------------------------ | :------------------------------- | :---------------------------------------------- |
+| Marubozu-র close-এ তাড়াহুড়ো করে buy | মিস করার ভয়                     | 50% retest-এ limit বসান, না ফিরলে ছেড়ে দিন     |
+| যেকোনো বড় candle-কে marubozu ধরা     | Wick মাপা হয় না                 | দুই দিকের wick range-এর তুলনায় মাপুন           |
+| দৌড়ের শেষের marubozu-তে নতুন buy     | "শক্তি বাড়ছে" ধারণা             | আগের ১০-২০ candle দেখুন; টানা দৌড় হলে সতর্ক    |
+| News candle-কে marubozu ধরা           | আকার একই রকম                     | Economic calendar দেখুন; news candle আলাদা ধরুন |
+| Stop candle-এর মাঝখানে রাখা           | ছোট stop-এর লোভ                  | Stop বিপরীত প্রান্তের বাইরে, size কমিয়ে নিন    |
+| পরের level না দেখে target             | Momentum-এর ওপর অতিরিক্ত বিশ্বাস | পরের level পর্যন্ত R:R মেপে তারপর ঢুকুন         |
+
+## Pro tips
+
+<Callout type="tip">
+  "বড়" মাপতে চোখের বদলে
+  [ATR](/bn/learn/07-technical-indicators/04-atr-stop-size) ব্যবহার করুন।
+  Marubozu-র range যদি ATR-এর দেড়-দুই গুণ হয়, সেটা সত্যিই ব্যতিক্রমী। এটি কাজ
+  চালানোর মাপ, পরিসংখ্যান নয়।
+</Callout>
+
+<Callout type="tip">
+  Range ভাঙা marubozu-র পর দাম প্রায়ই ভাঙা level-এ ফিরে পরীক্ষা করে। Body-র 50%
+  আর ভাঙা level কাছাকাছি হলে সেই এলাকা entry-র জন্য আরও শক্ত। বিস্তারিত:
+  [Breakout Retest
+  Entry](/bn/learn/09-price-action-entries-strategies/01-breakout-retest-pullback-entry)।
+</Callout>
+
+<Callout type="warning">
+  "Marubozu-র win rate ৭০%+" জাতীয় সংখ্যা যাচাই ছাড়া মানবেন না। ফল নির্ভর করে
+  বাজার, timeframe, জায়গা ও আপনি কীভাবে গুনছেন তার ওপর। নিজের backtest-ই
+  একমাত্র বিশ্বাসযোগ্য সংখ্যা।
+</Callout>
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- Marubozu = বড় body, দুই দিকে wick প্রায় নেই, আশেপাশের candle-এর চেয়ে স্পষ্ট বড়।
+- Range বা level ভাঙার মুহূর্তে এটা শুরুর চিহ্ন; লম্বা দৌড়ের শেষে level-এর গায়ে প্রায়ই শেষ ধাক্কা।
+- Close-এ তাড়া নয়: body-র 50% retest-এ entry, stop বিপরীত প্রান্তের বাইরে।
+- পরের level পর্যন্ত R:R মাপুন; জায়গা না থাকলে নিখুঁত marubozu-ও বাদ।
+
+</KeyTakeaways>
+
+## অনুশীলন ও নিজের backtest
+
+TradingView-এ EURUSD H1 বা XAUUSD H4 খুলুন। গত ৩ মাসে অন্তত ২০টি marubozu খুঁজুন। প্রতিটির জন্য একটি সারি লিখুন:
+
+| তারিখ | আগে range না দৌড়? | Level ভেঙেছে? | Body ÷ গড় body | 50% retest হয়েছে? | ফল (R) |
+| :---- | :----------------- | :------------ | :-------------- | :----------------- | :----- |
+|       |                    |               |                 |                    |        |
+
+এরপর "আগে range" আর "আগে দৌড়" দুই দলে ভাগ করে গড় R তুলনা করুন। কতগুলো marubozu-তে 50% retest আসেইনি, সেটাও গুনুন: এটাই এই entry-র আসল খরচ। অন্তত ৩০টি নমুনা ছাড়া সিদ্ধান্ত নেবেন না।
+
+## কুইজ
+
+1. একটি candle-এর body বড়, কিন্তু উপরে body-র এক-তৃতীয়াংশ সমান wick। এটি কি marubozu?
+2. টানা সাতটি bullish candle-এর পর পুরোনো high-এ একটি bullish marubozu। প্রথম কী যাচাই করবেন?
+3. Marubozu-র close-এ ঢোকা আর 50% retest-এ ঢোকার মূল তফাত কী?
+4. উদাহরণ ২-এর trade checklist-এর কোন ঘরে বাদ পড়ত?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** না। বড় upper wick মানে প্রান্তে sellers দাম ফিরিয়েছে। এটা বড় bullish candle, marubozu নয়।
+
+**২.** পুরোনো high পর্যন্ত আর কত জায়গা আছে, অর্থাৎ R:R। দৌড়ের শেষে level-এর গায়ে marubozu প্রায়ই শেষ ধাক্কা।
+
+**৩.** Close entry কখনো মিস হয় না, কিন্তু stop পুরো candle-এর ওপারে, তাই R:R খারাপ। 50% retest-এ stop অর্ধেক, কিন্তু দাম না ফিরলে trade মিস।
+
+**৪.** চতুর্থ ঘর: পুরোনো high পর্যন্ত R:R ছিল প্রায় 1.1, যা 1:1.5-এর কম।
+
+</details>
+
+## পরের ধাপ
+
+- আগে: [Single Candle Patterns](/bn/learn/04-candlesticks/02-single-candle-patterns)।
+- Breakout সত্যি কি না: [Range Breakout](/bn/learn/06-trend-chart-patterns/03-range-breakout)।
+- একই পরিবারের pattern: [Spinning Top](/bn/patterns/spinning-top), [Doji](/bn/patterns/doji), [Three White Soldiers](/bn/patterns/three-white-soldiers)।
+
+<Disclaimer />

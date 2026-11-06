@@ -1,0 +1,244 @@
+{
+  "symbol": "EURUSD",
+  "timeframe": "H4",
+  "mode": "synthetic",
+  "module": "05-support-resistance",
+  "lessonSlugs": [
+    "02-role-reversal"
+  ],
+  "notes": {
+    "en": "Illustrative synthetic data.",
+    "bn": "এটি শিক্ষামূলক কাল্পনিক ডেটা।"
+  },
+  "updatedAt": "2026-11-05T18:00:00Z",
+  "type": "trade-setup",
+  "id": "role-reversal-fail-01",
+  "title": {
+    "en": "Role Reversal That Fails",
+    "bn": "যে role reversal ব্যর্থ হলো"
+  },
+  "bias": "bullish",
+  "outcome": "loss",
+  "tags": [
+    "support-resistance",
+    "role-reversal",
+    "failed-setup"
+  ],
+  "caption": {
+    "en": "Resistance zone holds three times, candle 10 closes above it, candle 13 retests and bounces. Buy, but candle 16 closes back below the zone and the stop fills.",
+    "bn": "Resistance zone তিনবার টিকে, ১০ নম্বর candle উপরে close করে, ১৩ নম্বর candle retest করে উঠে যায়। Buy নেওয়া হয়, কিন্তু ১৬ নম্বর candle zone-এর নিচে ফিরে close করে, stop fill হয়।"
+  },
+  "annotations": [
+    {
+      "type": "zone",
+      "from": {
+        "price": 1.0942,
+        "i": 1
+      },
+      "to": {
+        "price": 1.092,
+        "i": 17
+      },
+      "label": "Old Resistance / New Support",
+      "color": "#f59e0b"
+    },
+    {
+      "type": "marker",
+      "i": 1,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Touch 1"
+    },
+    {
+      "type": "marker",
+      "i": 4,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Touch 2"
+    },
+    {
+      "type": "marker",
+      "i": 7,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Touch 3"
+    },
+    {
+      "type": "marker",
+      "i": 10,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Break"
+    },
+    {
+      "type": "marker",
+      "i": 13,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Retest"
+    },
+    {
+      "type": "marker",
+      "i": 16,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Flip failed"
+    },
+    {
+      "type": "hline",
+      "price": 1.0966,
+      "label": "Buy entry",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.0912,
+      "label": "Stop (below zone)",
+      "color": "#ef4444",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Resistance at 1.0920-1.0942 holds three times, then candle 10 closes at 1.0968, above it. Candle 13 retests the zone and bounces, candle 14 breaks its high: buy at 1.0966, stop 1.0912 below the zone (54 pips). Candle 16 closes at 1.0902, back inside and below the zone, and the stop fills. The flip failed; the loss is the planned 54 pips.",
+    "bn": "1.0920-1.0942 resistance তিনবার টিকে, তারপর ১০ নম্বর candle 1.0968-এ close করে ওপরে। ১৩ নম্বর candle zone retest করে উঠে যায়, ১৪ নম্বর তার high ভাঙে: buy 1.0966-এ, stop zone-এর নিচে 1.0912 (ঝুঁকি 54 pip)। ১৬ নম্বর candle 1.0902-এ close করে, zone-এর নিচে ফিরে, stop fill হয়। Flip ব্যর্থ; ক্ষতি পরিকল্পিত 54 pip।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "A flip is a probability, not a promise",
+      "bn": "Flip সম্ভাবনা, নিশ্চয়তা নয়"
+    },
+    {
+      "en": "Close back through the zone = idea is wrong",
+      "bn": "Zone-এর ভেতর দিয়ে ফিরে close = ধারণা ভুল"
+    }
+  ],
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.086,
+      "h": 1.0888,
+      "l": 1.0855,
+      "c": 1.0882
+    },
+    {
+      "i": 1,
+      "o": 1.0882,
+      "h": 1.0924,
+      "l": 1.0878,
+      "c": 1.089
+    },
+    {
+      "i": 2,
+      "o": 1.089,
+      "h": 1.0894,
+      "l": 1.0858,
+      "c": 1.0865
+    },
+    {
+      "i": 3,
+      "o": 1.0865,
+      "h": 1.0902,
+      "l": 1.0862,
+      "c": 1.0898
+    },
+    {
+      "i": 4,
+      "o": 1.0898,
+      "h": 1.0938,
+      "l": 1.0894,
+      "c": 1.0905
+    },
+    {
+      "i": 5,
+      "o": 1.0905,
+      "h": 1.091,
+      "l": 1.0872,
+      "c": 1.088
+    },
+    {
+      "i": 6,
+      "o": 1.088,
+      "h": 1.09,
+      "l": 1.0876,
+      "c": 1.0896
+    },
+    {
+      "i": 7,
+      "o": 1.0896,
+      "h": 1.0932,
+      "l": 1.0892,
+      "c": 1.09
+    },
+    {
+      "i": 8,
+      "o": 1.09,
+      "h": 1.0906,
+      "l": 1.088,
+      "c": 1.0886
+    },
+    {
+      "i": 9,
+      "o": 1.0886,
+      "h": 1.0925,
+      "l": 1.0884,
+      "c": 1.092
+    },
+    {
+      "i": 10,
+      "o": 1.092,
+      "h": 1.0975,
+      "l": 1.0916,
+      "c": 1.0968
+    },
+    {
+      "i": 11,
+      "o": 1.0968,
+      "h": 1.099,
+      "l": 1.0962,
+      "c": 1.0984
+    },
+    {
+      "i": 12,
+      "o": 1.0984,
+      "h": 1.0988,
+      "l": 1.095,
+      "c": 1.0952
+    },
+    {
+      "i": 13,
+      "o": 1.0952,
+      "h": 1.0966,
+      "l": 1.0924,
+      "c": 1.096
+    },
+    {
+      "i": 14,
+      "o": 1.096,
+      "h": 1.0972,
+      "l": 1.0955,
+      "c": 1.0968
+    },
+    {
+      "i": 15,
+      "o": 1.0968,
+      "h": 1.097,
+      "l": 1.093,
+      "c": 1.0936
+    },
+    {
+      "i": 16,
+      "o": 1.0936,
+      "h": 1.094,
+      "l": 1.0896,
+      "c": 1.0902
+    },
+    {
+      "i": 17,
+      "o": 1.0902,
+      "h": 1.091,
+      "l": 1.087,
+      "c": 1.0876
+    }
+  ]
+}

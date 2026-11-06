@@ -1,14 +1,190 @@
 ---
-title: "News trade avoid korbo"
-description: "Detailed notes on News trade avoid korbo"
-status: draft
-updated: 2026-10-10
+title: "News Trade: করবেন নাকি এড়াবেন"
+description: "উচ্চ-প্রভাবের খবরের আগে-পরে কী করবেন: trade এড়ানো, খোলা trade সামলানো, এবং spike-এর পরে retest-এর অপেক্ষা করে ঢোকার নিয়ম — দুটি chart সহ।"
+level: intermediate
+tags: [news-trading, event-risk, no-trade, retest, spread, volatility]
+instruments: [EURUSD]
+timeframes: [M5]
+status: done
+sources:
+  - type: blog
+    title: "News Trading - Investopedia"
+    url: "https://www.investopedia.com/articles/forex/news-trading.asp"
+  - type: blog
+    title: "Trading the News - BabyPips"
+    url: "https://www.babypips.com/learn/forex/trading-the-news"
+updated: 2026-11-05
 ---
 
-# News trade avoid korbo
+# News Trade: করবেন নাকি এড়াবেন
 
-<div className="rounded-xl border border-border bg-card p-6 text-center text-muted-foreground my-8">
-  <p className="text-3xl mb-4">🚧</p>
-  <p className="font-semibold text-foreground">Coming in Phase 2</p>
-  <p className="text-sm mt-1">This module is under construction.</p>
-</div>
+খবরের মুহূর্তে বাজার সবচেয়ে দ্রুত, সবচেয়ে ব্যয়বহুল ও সবচেয়ে অনিশ্চিত। অনেক নতুন trader ঠিক তখনই ঢোকেন, কারণ সবচেয়ে বেশি "সুযোগ" দেখা যায়। এই পাঠ বলে কখন বাইরে থাকা ভালো, আর কীভাবে খবরের পরে নিরাপদে ঢোকা যায়।
+
+## এই লেখা পড়ে আপনি যা পারবেন
+
+- **News trade ও সরাসরি spike ধরা কেন ঝুঁকিপূর্ণ** তা ব্যাখ্যা করবেন।
+- **আগে-পরের নিয়ম** লিখে ফেলতে পারবেন।
+- Spike-এর পরে **retest-এর অপেক্ষা করে** ঢোকা শিখবেন।
+
+## কেন এটি জরুরি
+
+- **Spread ও slippage সবচেয়ে বেশি।** আপনার হিসাব করা ঝুঁকি আসলে বড় হয়ে যায়।
+- **Stop কোথায় বসালেও টিকতে না-ও পারে।** Spike দুই দিকেই চলে।
+- **আবেগ সবচেয়ে বেশি কাজ করে।** আগে লেখা নিয়ম আপনাকে ফিরিয়ে আনে।
+
+পূর্বশর্ত: [Economic Calendar](/bn/learn/11-fundamental-intermarket-analysis/02-economic-calendar-nfp-cpi-fomc) এবং [Slippage ও Spread](/bn/learn/10-trade-management-execution/04-slippage-requote-spread-widening)।
+
+## তিনটি পথ
+
+**News trade হলো উচ্চ-প্রভাবের খবরের আশপাশে ইচ্ছাকৃতভাবে ট্রেড নেওয়া বা সামলানো। এর তিনটি সাধারণ পথ আছে।**
+
+| পথ                 | কী করেন                                       | ঝুঁকি                         |
+| :----------------- | :-------------------------------------------- | :---------------------------- |
+| এড়ানো             | Release-এর আগে-পরে নতুন trade নয়             | সুযোগ হারানো (সবচেয়ে নিরাপদ) |
+| খোলা trade সামলানো | Stop কাছে, অর্ধেক বন্ধ বা সম্পূর্ণ বন্ধ       | Spike-এ stop লাগতে পারে       |
+| পরে ঢোকা           | Spike-এর পর structure তৈরি হলে retest-এ entry | মাঝারি, নিয়ম মানলে           |
+
+নতুনদের জন্য প্রথম পথ সবচেয়ে ভালো। অভিজ্ঞ হলে তৃতীয় পথ ধীরে ধীরে চর্চা করা যায়।
+
+## Chart-এ কেমন দেখায়
+
+<Chart
+  id="news-skip-01"
+  height={440}
+  caption="EURUSD M5 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — release-এর আগে পরিষ্কার দেখতে range (নীল জোন)। Release-এ দুই candle-এ প্রায় 45 pip ওপরে, তারপর প্রায় 75 pip নিচে। বাইরে থাকা সিদ্ধান্ত।"
+/>
+
+Setup দেখতে ভালো ছিল, তবু খবরের কাছাকাছি হওয়ায় বাইরে থাকাই ঠিক ছিল।
+
+## ধাপে ধাপে: খবরের আগে-পরের নিয়ম
+
+<Steps>
+
+### ধাপ ১: Calendar-এ সময় চিহ্নিত করুন
+
+বেশি-impact খবরের সময় দিনের শুরুতেই লিখে রাখুন।
+
+### ধাপ ২: আগের জানালা ঠিক করুন
+
+যেমন release-এর 30 মিনিট আগে থেকে নতুন trade নয়। সংখ্যাটি আপনার শৈলী অনুযায়ী, কিন্তু আগে লেখা।
+
+### ধাপ ৩: খোলা trade-এর পরিকল্পনা করুন
+
+লাভে থাকলে অর্ধেক বন্ধ বা stop break-even-এ আনার কথা ভাবুন ([Take profit ও partial close](/bn/learn/10-trade-management-execution/02-take-profit-partial-close))। নিয়ম আগে থেকে ঠিক।
+
+### ধাপ ৪: Spike-এর পরে অপেক্ষা
+
+কয়েকটি candle কেটে যেতে দিন। দাম কোনো স্তরের ওপরে বা নিচে টিকে থাকে কিনা দেখুন।
+
+### ধাপ ৫: Retest-এ ঢুকুন
+
+[Retest](/bn/learn/09-price-action-entries-strategies/01-breakout-retest-pullback-entry) এলে structure-এর সামান্য ওপারে stop রেখে নিয়ম অনুযায়ী entry।
+
+### ধাপ ৬: Spread স্বাভাবিক না হলে বাদ দিন
+
+Spread এখনো চওড়া থাকলে ঢুকবেন না।
+
+</Steps>
+
+## উদাহরণ ১: যখন কাজ করে (কাল্পনিক)
+
+<Chart
+  id="news-retest-win-01"
+  height={440}
+  caption="EURUSD M5 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — release-এর spike বাদ দিয়ে অপেক্ষা। 7 candle পরে দাম ওপরে টিকে retest করে। Buy 1.0928, stop 1.0912, target 1.0960 (1:2)। Target লাগে।"
+/>
+
+- **আগে থেকে ঠিক:** Release-এ নয়, retest এলে প্রবেশ। ঝুঁকি 1%, stop 16 pip, target 32 pip।
+- **ফল:** Spike-এর পর দাম নতুন স্তরে টিকে retest করে, buy-তে target লাগে (1:2)।
+- **শিক্ষা:** Spike-এর পিছনে না ছুটে structure-এর অপেক্ষা করলে ঝুঁকি স্পষ্ট হয়।
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়।)
+
+## উদাহরণ ২: যখন ব্যর্থ হয় (কাল্পনিক)
+
+- **কী দেখা যাচ্ছিল:** আগের chart-এর (news-skip) মতো সুন্দর range, release-এর ঠিক আগে breakout-এর আশায় buy।
+- **ফল:** Release-এর candle প্রথমে ওপরে যায় (লাভ দেখায়), তারপর দ্রুত নিচে নেমে stop পার করে। Slippage-এ আসল লোকসান পরিকল্পনার চেয়ে বড়।
+- **কেন ব্যর্থ:** Setup-এর মান নয়, সময়টাই সমস্যা ছিল। কোনো stop জায়গাই এই spike টিকত না।
+- **শিক্ষা:** খবরের আগে সুন্দর setup-ও এড়ানো যায়। "কয়েক মিনিট পরে একই setup আবার আসবে।"
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়।)
+
+## সাধারণ ভুল
+
+| ভুল                             | কেন হয়             | কী করবেন                         |
+| :------------------------------ | :------------------ | :------------------------------- |
+| Release-এর আগেই breakout-এ ঢোকা | সুযোগ হাতছাড়ার ভয় | নিয়ম লিখুন: আগের জানালায় বাইরে |
+| Spike দেখে সঙ্গে সঙ্গে ছোটা     | FOMO                | কয়েক candle অপেক্ষা করুন        |
+| খোলা trade-এর পরিকল্পনা না থাকা | খবর ভুলে যাওয়া     | সকালে calendar দেখুন             |
+| খবরের পর spread না দেখে ঢোকা    | তাড়াহুড়ো          | spread স্বাভাবিক কিনা যাচাই করুন |
+
+## Pro tips
+
+<Callout type="tip">
+  "আজ কোন খবর আছে" চেকলিস্টের প্রথম লাইন বানান। একবার অভ্যাস হলে এটি আপনার
+  সবচেয়ে সস্তা ঝুঁকি-নিয়ন্ত্রণ হবে।
+</Callout>
+
+<Callout type="note">
+  Broker অনুযায়ী খবরের সময় execution ভিন্ন হয়। কিছু broker পরে fill করে, কিছু
+  spread অনেক বাড়ায়। নিজের account-এ ছোট size-এ আচরণ দেখে নিন।
+</Callout>
+
+## কখন এটা কাজ করে না
+
+- **একাধিক খবর পরপর এলে:** "ধুলো থিতোনো" পর্যন্ত বহু সময় লাগে।
+- **Spike-এর পর পরিষ্কার structure না হলে:** অপেক্ষা করেও entry না-ও মিলতে পারে, সেটিই ঠিক।
+- **Spread স্বাভাবিক না হলে:** retest-এও ঝুঁকি বেশি।
+- **ছোট account-এ খোলা trade থাকলে:** খবরে একটি spike-ই বড় ক্ষতি আনে, তাই আগেই বন্ধ করুন।
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- খবরের মুহূর্তে spread, slippage ও ঝুঁকি সবচেয়ে বেশি।
+- নিরাপদতম পথ হলো আগে-পরে নতুন trade না নেওয়া।
+- ঢুকতে চাইলে spike বাদ দিয়ে retest-এর অপেক্ষা করুন।
+- নিয়ম আগে লিখুন, মুহূর্তে সিদ্ধান্ত নেবেন না।
+
+</KeyTakeaways>
+
+## অনুশীলন
+
+আগামী সপ্তাহের একটি বেশি-impact খবর বেছে নিন। তার আগের জানালার নিয়ম, খোলা trade থাকলে পরিকল্পনা, এবং retest-এ ঢোকার শর্ত তিন লাইনে লিখুন। খবরের সময় chart দেখে (trade না নিয়ে) আপনার নিয়ম মিলল কিনা যাচাই করুন।
+
+## কুইজ
+
+1. খবরের মুহূর্তে কেন stop কোথাও টিকতে না-ও পারে?
+2. সবচেয়ে নিরাপদ পথ কোনটি?
+3. Retest-এ ঢোকার সুবিধা কী?
+4. খবরের পরে spread চওড়া থাকলে কী করবেন?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** Spike দুই দিকেই দ্রুত চলে এবং slippage হতে পারে।
+
+**২.** খবরের আগে-পরে নতুন trade না নেওয়া।
+
+**৩.** Structure স্পষ্ট হয়, stop কাছে ও যুক্তিযুক্ত জায়গায় বসানো যায়।
+
+**৪.** ঢুকবেন না, স্বাভাবিক হওয়ার অপেক্ষা করুন।
+
+</details>
+
+## পরের ধাপ
+
+- আগে: [Gold বনাম DXY](/bn/learn/11-fundamental-intermarket-analysis/05-correlation-gold-vs-dxy)।
+- পরে: [Trading Psychology](/bn/learn/12-trading-psychology/01-discipline)।
+- সম্পর্কিত: [Gold-এ News Events](/bn/learn/13-gold-xauusd/06-news-events)।
+
+### সূত্র
+
+- <ExternalLink href="https://www.investopedia.com/articles/forex/news-trading.asp">
+    News Trading, Investopedia
+  </ExternalLink>
+- <ExternalLink href="https://www.babypips.com/learn/forex/trading-the-news">
+    Trading the News, BabyPips
+  </ExternalLink>
+
+<Disclaimer />

@@ -1,0 +1,180 @@
+---
+title: "Spread, Commission and Swap: The Three Costs of Trading"
+description: "How the bid-ask spread, commission and overnight swap work, how to calculate the total cost of each trade, and how costs eat profit on small targets — with a chart and worked numbers."
+level: beginner
+tags: [spread, commission, swap, trading-costs, bid-ask]
+instruments: [EURUSD]
+timeframes: [H1]
+status: done
+sources:
+  - type: blog
+    title: "Bid and Ask - Investopedia"
+    url: "https://www.investopedia.com/terms/b/bid-and-ask.asp"
+updated: 2026-11-06
+---
+
+# Spread, Commission and Swap: The Three Costs of Trading
+
+In a shop, you buy an item at one price, but if you return it you get less back. That gap is the shopkeeper's income. In Forex, the gap is called the **spread**. Together with commission and swap, it is the silent cost of every trade you make.
+
+## What you will be able to do
+
+- **Recognise** bid, ask and spread.
+- **Understand** how commission and swap work.
+- **Work out** the total cost of a trade.
+- **Spot** when costs make a strategy unworkable.
+
+## Why it matters
+
+- **Costs are certain; profit is not.** Every trade starts with a cost.
+- **On small targets, costs take a big share.** This hits scalping hardest.
+- **A [backtest](/en/learn/15-backtesting-journal/01-how-to-backtest) that leaves out costs gives false results.**
+
+Prerequisites: [Pips, Lots, Leverage and Margin](/en/learn/01-foundations/03-pips-lots-leverage-margin).
+
+## The three costs
+
+**Spread** = ask − bid. You buy at the ask and sell at the bid.
+
+| Cost            | What it is                                               | When you pay it                                   |
+| :-------------- | :------------------------------------------------------- | :------------------------------------------------ |
+| Spread          | The gap between bid and ask                              | The moment you open a trade, built into the price |
+| Commission      | The broker's fixed fee (per lot, per side or round turn) | Depends on the account type (not every account)   |
+| Swap (rollover) | The interest difference for holding a position overnight | Every day after a set time                        |
+
+- **Swap** can be positive or negative (depending on the interest rate difference between the two currencies and your direction). Many brokers charge three days of swap on one day of the week (often Wednesday); check your broker's rules.
+- Some brokers offer **swap-free** (Islamic) accounts, but other fees may apply.
+- **Spread** can widen during news and at the end of the day (rollover).
+
+## What it looks like on a chart
+
+<Chart
+  id="spread-entry-cost-01"
+  height={420}
+  caption="EURUSD (educational, synthetic example) — Bid 1.0900, Ask 1.0902, spread 2 pips. A buy opens at the ask (1.0902); close it immediately and it closes at the bid (1.0900), so you are −2 pips without the market moving."
+/>
+
+So even to break even, price has to move at least the size of the spread.
+
+## Step by step: working out the total cost
+
+<Steps>
+
+### Step 1: The spread in pips
+
+Read the bid and ask on the platform and subtract. For example, 1.2 pips.
+
+### Step 2: Convert to money
+
+At 0.10 lot, one pip ≈ 1 USD. Spread cost ≈ 1.2 USD.
+
+### Step 3: Add commission
+
+Check the broker's fee list. Example (synthetic): 0.70 USD round turn for 0.10 lot.
+
+### Step 4: Swap (if you hold overnight)
+
+Check the platform's swap table. Example (synthetic): −0.30 USD per night.
+
+### Step 5: Compare with the stop and target
+
+What percentage of the target is the total cost? If it is high, drop small targets.
+
+</Steps>
+
+## Example 1: when it works (synthetic)
+
+- **Trade:** EURUSD, 0.10 lot, target 50 pips, stop 30 pips, spread 1.2 pips.
+- **Cost:** Spread ≈ 1.2 USD + commission 0.70 USD = about 1.9 USD.
+- **Result:** If the target is hit, gross +50 USD, net about +48 USD. Costs are about 4% of the target.
+- **Lesson:** On a large target, costs are a small fraction.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Example 2: when it fails (synthetic)
+
+- **Trade:** A scalper, 1.0 lot, target 5 pips, stop 5 pips, spread 2 pips, commission 7 USD round turn.
+- **Cost:** Spread = 2 × 10 = 20 USD, commission 7 USD, total 27 USD.
+- **Result:** If the target is hit, gross +50 USD, net +23 USD. If the stop is hit, gross −50, net −77 USD. Costs are 54% of the target.
+- **Why it's a problem:** Winners earn less and losers lose more. The breakeven win rate rises from 50% to about 77 ÷ (23 + 77) = 77% (calculation: loss ÷ (profit + loss)).
+- **Lesson:** If you don't count costs, the idea that "more trades = more income" is wrong.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Common mistakes
+
+| Mistake                                       | Why it happens                | What to do                          |
+| :-------------------------------------------- | :---------------------------- | :---------------------------------- |
+| Looking only at spread, forgetting commission | Seeing the words "raw spread" | Total cost (spread + commission)    |
+| Ignoring the spread during news               | Assuming the normal spread    | Check the spread at different times |
+| Holding for a week without checking swap      | The number looks small        | Count swap on longer trades         |
+| Treating low spread as the only criterion     | Advertising                   | Check execution and regulation too  |
+| Leaving costs out of a backtest               | Oversimplifying               | Subtract costs from every trade     |
+
+## Pro tips
+
+<Callout type="tip">
+  For each strategy, write down "average target ÷ total cost". If the ratio is
+  below 10, costs are a big problem.
+</Callout>
+
+<Callout type="note">
+  At rollover (end of day) and during big news, spreads jump suddenly. A tight
+  stop is risky at these times. More detail: [Slippage and Spread
+  Widening](/en/learn/10-trade-management-execution/04-slippage-requote-spread-widening).
+</Callout>
+
+## When this does not work
+
+- **Fee structures differ by broker:** The numbers here are examples; check your own broker's list.
+- **On indices, gold and crypto:** The cost structure is different (contract specs and overnight fees).
+- **On long-term positions:** Swap can become the main cost.
+
+## Summary
+
+<KeyTakeaways>
+
+- Spread = ask − bid; buy at the ask, sell at the bid.
+- Commission and swap are separate costs.
+- The bigger the share of the target that costs take, the weaker the strategy.
+- Always include costs in a backtest.
+
+</KeyTakeaways>
+
+## Practice
+
+Write down the current EURUSD spread at your broker or demo, work out the spread cost in money for 0.10 lot, then calculate what percentage of a 20-pip target that cost is.
+
+## Quiz
+
+1. At which price does a buy open, ask or bid?
+2. Can swap be positive?
+3. With a 2-pip spread and a 10-pip target, what percentage is the cost?
+4. What does the spread do during news?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** At the ask.
+
+**2.** Yes, depending on the direction and the interest rate difference.
+
+**3.** 20%.
+
+**4.** It often widens.
+
+</details>
+
+## Next steps
+
+- Previous: [Pips, Lots, Leverage and Margin](/en/learn/01-foundations/03-pips-lots-leverage-margin).
+- Next: [Trading Sessions](/en/learn/01-foundations/05-trading-sessions).
+- Related: [How to Choose a Broker](/en/learn/02-broker-platform-setup/01-broker-kivabe-choose-korbo).
+
+### Sources
+
+- <ExternalLink href="https://www.investopedia.com/terms/b/bid-and-ask.asp">
+    Bid and Ask, Investopedia
+  </ExternalLink>
+
+<Disclaimer />

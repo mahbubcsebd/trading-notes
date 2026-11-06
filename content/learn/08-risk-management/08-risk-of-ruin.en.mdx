@@ -1,0 +1,205 @@
+---
+title: "Risk of Ruin: At What Risk the Path to a Wiped-Out Account Opens"
+description: "What risk of ruin is, how a higher risk percentage cuts your chance of survival, and how many losses in a row halve the account, with charts and calculations."
+level: intermediate
+tags: [risk-management, risk-of-ruin, survival, position-sizing]
+status: done
+sources:
+  - type: blog
+    title: "Risk of Ruin - Investopedia"
+    url: "https://www.investopedia.com/terms/r/risk-of-ruin.asp"
+  - type: blog
+    title: "Risk Management - BabyPips"
+    url: "https://www.babypips.com/learn/forex/risk-management"
+updated: 2026-11-06
+---
+
+# Risk of Ruin: At What Risk the Path to a Wiped-Out Account Opens
+
+A good strategy, good analysis, and still the account is gone. In such stories the fault is usually not the strategy. It is the size of the risk. This lesson shows exactly how a big size can kill even a good system.
+
+## What you will be able to do
+
+- **Explain** what risk of ruin is.
+- **Calculate** how fast the account falls in a losing streak.
+- **Compare** the result of small and large risk on the same system.
+- **Set your own maximum risk** with reasons.
+
+## Why it matters
+
+- **Survival is the first condition.** If the account is gone, even the best system is of no use.
+- **Loss and recovery are uneven.** Once you fall into a deep hole, getting back is hard (you saw this in [Drawdown Rules](/en/learn/08-risk-management/04-drawdown-rules)).
+- **The size of the risk is in your hands.** Not the win rate or the market. Size is the thing you control here.
+
+Prerequisites: [Expectancy](/en/learn/08-risk-management/07-expectancy) and [Risk per Trade](/en/learn/08-risk-management/01-risk-per-trade).
+
+## What is risk of ruin
+
+**Risk of ruin is the chance that, under your risk rules, the account falls so far that you cannot keep trading or cannot recover in a meaningful way.**
+
+Think of the weight in a boat. However good the boat, if you load too much it sinks in a small wave. The size of the load (size) and the wave (a bad run) together decide the sinking.
+
+**This lesson does not include the exact probability formula**, because it needs precise knowledge of the win rate and ratio, which are not always fixed in real life. Instead, look at the simple, checkable calculation below.
+
+## How many losses in a row halve the account
+
+If the risk each time is r, after n losses in a row the account has (1 − r)^n left.
+To halve it you need: **n ≈ ln(0.5) ÷ ln(1 − r)**.
+
+| Risk per trade | Losses in a row to halve |
+| :------------- | :----------------------- |
+| 1%             | about 69                 |
+| 2%             | about 34-35              |
+| 5%             | about 14                 |
+| 10%            | about 7                  |
+
+Losing seven in a row is not impossible, especially in a steadily bad market. 69 times is almost impossible. That difference is the power of size.
+
+## What it looks like on a chart: the same trades, two sizes
+
+Below is the same imaginary sequence: 20 trades, of which 4 win (+2R) and 16 lose (−1R). This is a **deliberately hard run**, not a typical result.
+
+<Chart
+  id="ruin-small-risk-01"
+  height={420}
+  caption="Account equity (educational, imaginary): the same 20-trade sequence, 1% risk on each. It ends at about 9,216 (−7.8%). Painful, but there is a way back."
+/>
+
+<Chart
+  id="ruin-big-risk-01"
+  height={420}
+  caption="Account equity (educational, imaginary): the same 20-trade sequence, 10% risk on each. It ends at about 3,842. About 160% gain is needed to get back."
+/>
+
+The trades are the same, and the order of wins and losses is the same. Only the size changed: the first is −7.8%, the second is −61.6%.
+
+## Step by step: setting your own limit
+
+<Steps>
+
+### Step 1: Imagine a bad run
+
+"If I lose 10 in a row, what percent will I lose?" At 1% it is about 9.6%, at 5% about 40%.
+
+### Step 2: Set the fall you can tolerate
+
+What is the most you can tolerate falling? Many people say 10-20%. This is personal.
+
+### Step 3: Work backward
+
+If you do not want to fall more than 10% in 10 losses in a row, the risk per trade is about 1% or less.
+
+### Step 4: Add drawdown and daily limits
+
+Do not bind the limit with size alone. Also use [Daily and Weekly Limits](/en/learn/08-risk-management/05-daily-weekly-limits).
+
+### Step 5: Reassess regularly
+
+When the account or the market changes, look at the numbers again.
+
+</Steps>
+
+## Example 1: when it works (synthetic)
+
+- **Size:** 1% risk.
+- **What happened:** a bad run with 16 losses and 4 wins.
+- **Result:** the account is about −7.8%, and it is possible to keep trading.
+- **Lesson:** a small size makes a bad run painful, but does not end it.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Example 2: when it fails (synthetic)
+
+- **Size:** 10% risk, same run.
+- **Result:** the account is about 3,842, which is −61.6%.
+- **The way back:** about 160% gain is needed.
+- **Why it was wrong:** the size was raised thinking "I take more on a good setup", without thinking about a bad run.
+- **Lesson:** the strategy was the same. Only the size changed the result.
+
+(Synthetic educational example. The result is not a guarantee.)
+
+## Common mistakes
+
+| Mistake                           | Why it happens           | What to do                       |
+| :-------------------------------- | :----------------------- | :------------------------------- |
+| "More risk on a good setup"       | Overconfidence           | The same limit on every trade    |
+| Sizing by thinking only of wins   | Optimism                 | Calculate with a bad run in mind |
+| Moving the risk limit as you like | Emotion                  | Follow the written limit         |
+| Treating margin as risk           | High leverage            | Stop-based risk is the real one  |
+| Many correlated trades at once    | More chances seem likely | Add up the total risk            |
+
+## Pro tips
+
+<Callout type="tip">
+  Ask yourself: "If I lose 10 in a row, what is my plan?" If the answer is
+  unclear, the size is too big.
+</Callout>
+
+<Callout type="tip">
+  With a new system, keep the risk at half at first, and raise it as evidence
+  builds up. Raising is easy. Winning back what you lost is hard.
+</Callout>
+
+<Callout type="warning">
+  With big risk, one surprising win makes you forget many days of caution. The
+  urge to raise size after a win is the most expensive.
+</Callout>
+
+## When this does not work
+
+- **The simple formula assumes** the same risk percentage every time. If the risk changes in real life, the calculation changes too.
+- **With a gap or slippage:** the loss can be bigger than the planned risk.
+- **When the win rate and ratio are unknown:** the probability calculation stands on guesswork.
+- **Mental pressure is not in the calculation:** even when the numbers are right, people make mistakes during a fall.
+
+## Summary
+
+<KeyTakeaways>
+
+- Risk of ruin is the chance that, under your risk rules, the account falls so far that it is hard to come back.
+- At 1% risk it takes about 69 losses in a row to halve the account, at 10% only about 7.
+- On the same system, changing the size alone changes the result completely.
+- First calculate the bad run, then the size.
+
+</KeyTakeaways>
+
+## Practice
+
+At your risk percentage, work out what is left of the account after 10 losses in a row (previous amount × (1 − r), 10 times). If it is not within your tolerance, reduce the percentage.
+
+## Quiz
+
+1. At 5% risk, about how many losses in a row halve the account?
+2. Why is the result different when the same system uses a different size?
+3. After 10 losses in a row at 2% risk, by about what percent does the account fall?
+4. Why is raising size after a win risky?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** About 14.
+
+**2.** The same losing sequence gives a bigger percentage fall at a bigger size, and a bigger fall needs a much bigger gain to recover.
+
+**3.** 0.98 multiplied 10 times ≈ 0.817, so it falls by about 18.3%.
+
+**4.** Confidence rises, but the future run is not certain. The next bad run does bigger damage at a bigger size.
+
+</details>
+
+## Next steps
+
+- Before: [Expectancy](/en/learn/08-risk-management/07-expectancy).
+- Next chapter: [Price Action Entries](/en/learn/09-price-action-entries-strategies/01-breakout-retest-pullback-entry).
+- Related: [Trading Plan Template](/en/learn/14-trading-plan-system/01-trading-plan-template).
+
+### Sources
+
+- <ExternalLink href="https://www.investopedia.com/terms/r/risk-of-ruin.asp">
+    Risk of Ruin, Investopedia
+  </ExternalLink>
+- <ExternalLink href="https://www.babypips.com/learn/forex/risk-management">
+    Risk Management, BabyPips
+  </ExternalLink>
+
+<Disclaimer />

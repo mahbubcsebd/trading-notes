@@ -1,0 +1,190 @@
+---
+title: "Wyckoff Basics: Reading the Sequence of an Accumulation Range"
+description: "The main idea of the Wyckoff method, the stages of an accumulation range (SC, AR, ST, spring, SOS, LPS), and the difference between a spring and a real breakdown mistaken for one, with two charts."
+level: advanced
+tags: [wyckoff, accumulation, spring, sos, lps, range]
+instruments: [EURUSD]
+timeframes: [H1]
+status: done
+sources:
+  - type: blog
+    title: "Wyckoff Method - Investopedia"
+    url: "https://www.investopedia.com/terms/w/wyckoffmethod.asp"
+updated: 2026-11-06
+---
+
+# Wyckoff Basics: Reading the Sequence of an Accumulation Range
+
+After a long downtrend, price keeps moving around one place. Everyone says "range". Wyckoff asks: **who is buying in this range, who is selling, and who is tired?** In this lesson you will learn a simple, testable form of that question.
+
+## What you will be able to do
+
+- **Recognize the six stages of an accumulation range.**
+- **Pick an entry** by reading the stages **in order**.
+- **Tell a spring** from a real breakdown.
+- **Know the limits** of Wyckoff.
+
+## Why it matters
+
+- **It shows the story inside a [range](/en/learn/06-trend-chart-patterns/03-range-breakout).** One step beyond just "buy if it breaks up".
+- **It teaches reading a sequence.** Not one candle, but a row of events.
+- **You get the reason for the stop.** Each stage has a condition under which it becomes invalid.
+
+Prerequisites: [Volume Profile](/en/learn/16-advanced/02-volume-profile-market-profile) and [Support-Resistance Zones](/en/learn/05-support-resistance/01-levels-vs-zones).
+
+## What is Wyckoff
+
+**The Wyckoff method is a framework for reading a range as an accumulation (gathering) or distribution (releasing) phase by looking at price and volume.** The name comes from Richard Wyckoff, who gave this idea at the start of the last century.
+
+To be honest: it is a **model**. Not every range is accumulation; many ranges break and go down. Measure the result in your own backtest.
+
+## The stages of an accumulation range
+
+| Short  | Name                  | What happens                                                           |
+| :----- | :-------------------- | :--------------------------------------------------------------------- |
+| SC     | Selling Climax        | Sharp selling, big volume, settling lower at the end                   |
+| AR     | Automatic Rally       | A natural bounce after the SC, which sets the upper limit of the range |
+| ST     | Secondary Test        | A return near the SC to test, with low volume                          |
+| Spring | Spring                | A brief dip below the range and a quick return                         |
+| SOS    | Sign of Strength      | A firm rise above the upper limit of the range                         |
+| LPS    | Last Point of Support | A pullback after the SOS, a higher low, the area for entry             |
+
+Not every range has every stage. This is the ideal form.
+
+## What it looks like on a chart
+
+<Chart
+  id="wyckoff-accumulation-01"
+  height={480}
+  caption="EURUSD H1 (educational, imaginary example): after a downtrend, SC, AR, ST, a spring below the range, a firm SOS, then an LPS. Buy at 1.0988 on the LPS, stop 1.0958, target 1.1048."
+/>
+
+The entry came **after seeing the proof of strength (SOS)**, not on the first dip.
+
+## Step by step: reading Wyckoff
+
+<Steps>
+
+### Step 1: First recognize the trend
+
+Accumulation comes after a downtrend. If there was no downtrend before, this framework does not apply.
+
+### Step 2: Draw the limits of the range
+
+The low of the SC and the high of the AR. These two are the structure of the range.
+
+### Step 3: Look for the sequence
+
+Did volume fall on the ST? Did the spring return quickly? If the sequence does not match, wait.
+
+### Step 4: Wait for the SOS
+
+Has the upper limit of the range been broken firmly? Do not enter yet.
+
+### Step 5: Enter on the LPS
+
+If a higher low forms on the pullback after the SOS, there. The stop below the LPS, the target at least 2R.
+
+</Steps>
+
+## Example 1: when it works (synthetic)
+
+- **What there was:** from a downtrend, an SC around 1.0900, an AR at 1.0975, an ST, then a spring at 1.0880.
+- **While running:** price broke the upper limit of the range (SOS), then pulled back around 1.0988 (LPS). Buy 1.0988, stop 1.0958, target 1.1048.
+- **Result:** the target was hit, +2R.
+- **Lesson:** entry after the sequence was complete, and the reason for the stop was clear.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Example 2: when it fails (synthetic)
+
+<Chart
+  id="wyckoff-spring-fail-01"
+  height={460}
+  caption="EURUSD H1 (educational, imaginary example): when price falls below the range support at 1.0900, the trader thinks it is a spring and buys at 1.0893. There is no quick return; price keeps falling, and the stop at 1.0866 was hit."
+/>
+
+- **What happened:** price fell below the range, and the trader assumed it was a spring.
+- **Result:** buy 1.0893, the stop at 1.0866 was hit, -1R.
+- **Why it failed:** the condition for a spring is a **quick return**. That did not happen. The assumption in advance was a guess.
+- **Lesson:** before calling it a spring, wait for the return. Buying before the return means catching a breakdown against it.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Common mistakes
+
+| Mistake                                      | Why it happens              | What to do                                             |
+| :------------------------------------------- | :-------------------------- | :----------------------------------------------------- |
+| Thinking every range is accumulation         | Bias toward the model       | First see whether there is a downtrend                 |
+| Buying before the spring                     | Hurry                       | Wait until the quick return is confirmed               |
+| Ignoring volume                              | Looking only at price       | Look for low volume on the ST and big volume on the SC |
+| Entering without an SOS                      | Thinking it is "cheap"      | You need proof of strength                             |
+| Mixing up the opposite order of distribution | A tangle of memorized names | First master accumulation alone                        |
+
+## Pro tips
+
+<Callout type="tip">
+  Set a "cancel line" outside the range, such as far below the low of the SC. If
+  it breaks, the idea of accumulation is cancelled. Then do not wait; get out.
+</Callout>
+
+<Callout type="note">
+  Forex volume is tick-based (the limit from the Volume Profile lesson applies
+  here too). So signals about volume are a help, not reliable proof.
+</Callout>
+
+## When this does not work
+
+- **If the range is small or unclear:** you cannot recognize the stages.
+- **On a news shock:** the whole structure breaks in one candle.
+- **On a lower timeframe:** more noise, and it is easy to make up stages (hindsight bias).
+- **If you place the stages by looking back:** it is easy to go back on the chart and put labels like "SC, AR"; it is hard live. Practice on demo first.
+
+## Summary
+
+<KeyTakeaways>
+
+- Accumulation has six stages: SC, AR, ST, spring, SOS, LPS.
+- When the sequence is complete, enter on the LPS, after seeing proof of strength.
+- A spring means a quick return; if it doesn't return, it is a breakdown.
+- This is a model; check it in your own backtest.
+
+</KeyTakeaways>
+
+## Practice
+
+On the D1 chart of your favorite pair, find three ranges from the last two years. See whether the SC, AR and ST can be marked in each, and write whether price finally went up or down.
+
+## Quiz
+
+1. What are the SC and the AR?
+2. What is the most important condition for a spring?
+3. Why no entry before the SOS?
+4. Name one limit of the Wyckoff model.
+
+<details>
+<summary>Show answers</summary>
+
+**1.** The SC is the last stage of sharp selling; the AR is the natural bounce after it, which sets the upper limit of the range.
+
+**2.** Dipping below the range and returning quickly.
+
+**3.** Without proof of strength it is still just inside the range.
+
+**4.** Not every range is accumulation; placing the stages by looking back is easy and live it is hard.
+
+</details>
+
+## Next steps
+
+- Before: [Volume Profile and Market Profile](/en/learn/16-advanced/02-volume-profile-market-profile).
+- After: [Elliott Wave](/en/learn/16-advanced/04-elliott-wave).
+- Related: [Range Breakout](/en/learn/06-trend-chart-patterns/03-range-breakout).
+
+### Sources
+
+- <ExternalLink href="https://www.investopedia.com/terms/w/wyckoffmethod.asp">
+    Wyckoff Method, Investopedia
+  </ExternalLink>
+
+<Disclaimer />

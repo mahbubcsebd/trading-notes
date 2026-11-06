@@ -1,0 +1,225 @@
+{
+  "id": "three-black-crows-fail-01",
+  "title": {
+    "en": "Three Black Crows at the End of a Long Decline",
+    "bn": "লম্বা পতনের শেষে three black crows"
+  },
+  "symbol": "USDJPY",
+  "timeframe": "D1",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bearish",
+  "outcome": "loss",
+  "tags": [
+    "three-black-crows",
+    "candlestick",
+    "three-candle",
+    "fail",
+    "exhaustion",
+    "pattern"
+  ],
+  "module": "patterns",
+  "lessonSlugs": [],
+  "caption": {
+    "en": "Illustrative synthetic USDJPY D1: after a long, steep decline, three more large bearish days drive straight into a major support. Sold at the third close, the trade is caught in a sharp bounce as shorts take profit, and the stop above the second crow goes.",
+    "bn": "শিক্ষামূলক কাল্পনিক USDJPY D1: লম্বা, খাড়া পতনের পর আরও তিনটি বড় bearish দিন সোজা একটি বড় support-এ নামে। তৃতীয় close-এ sell, short-রা profit নিলে তীব্র bounce, আর দ্বিতীয় crow-এর উপরের stop যায়।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data, not a real market record.",
+    "bn": "শিক্ষামূলক কাল্পনিক ডেটা, বাস্তব মার্কেটের রেকর্ড নয়।"
+  },
+  "updatedAt": "2026-11-06T12:00:00Z",
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 147.742,
+      "label": "Major support",
+      "color": "#3b82f6",
+      "style": "dashed"
+    },
+    {
+      "type": "marker",
+      "i": 10,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "1"
+    },
+    {
+      "type": "marker",
+      "i": 11,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "2"
+    },
+    {
+      "type": "marker",
+      "i": 12,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "3 (at support)"
+    },
+    {
+      "type": "hline",
+      "price": 147.802,
+      "label": "Entry (3rd close)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 148.62,
+      "label": "Stop",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 146.166,
+      "label": "Target 2R",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candles 0-9 are already a long, steep decline. Candles 10-12 are three black crows by shape, but they come late and the third one lands right on a major support. Nison warns that crows after a long decline can mean the market is oversold. Candle 13 bounces hard and the rally takes the stop.",
+    "bn": "০-৯ নম্বর candle ইতিমধ্যে লম্বা, খাড়া পতন। ১০-১২ নম্বর আকারে three black crows, কিন্তু দেরিতে এসেছে, আর তৃতীয়টা ঠিক একটি বড় support-এ নামে। Nison সতর্ক করেছেন: লম্বা পতনের পর crows মানে বাজার oversold হতে পারে। ১৩ নম্বর জোরে bounce করে, rally stop নেয়।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Crows that arrive late, into support, often mark the end of the fall",
+      "bn": "দেরিতে, support-এ আসা crows প্রায়ই পতনের শেষ চিহ্ন"
+    }
+  ],
+  "entry": 147.802,
+  "stopLoss": 148.62,
+  "takeProfit": 146.166,
+  "rr": "1:2.0",
+  "candles": [
+    {
+      "i": 0,
+      "o": 152.0,
+      "h": 152.155,
+      "l": 151.42,
+      "c": 151.6
+    },
+    {
+      "i": 1,
+      "o": 151.6,
+      "h": 151.778,
+      "l": 150.884,
+      "c": 151.05
+    },
+    {
+      "i": 2,
+      "o": 151.05,
+      "h": 151.267,
+      "l": 150.977,
+      "c": 151.2
+    },
+    {
+      "i": 3,
+      "o": 151.2,
+      "h": 151.3,
+      "l": 150.582,
+      "c": 150.7
+    },
+    {
+      "i": 4,
+      "o": 150.7,
+      "h": 150.88,
+      "l": 150.1,
+      "c": 150.25
+    },
+    {
+      "i": 5,
+      "o": 150.25,
+      "h": 150.412,
+      "l": 150.188,
+      "c": 150.37
+    },
+    {
+      "i": 6,
+      "o": 150.37,
+      "h": 150.542,
+      "l": 149.558,
+      "c": 149.77
+    },
+    {
+      "i": 7,
+      "o": 149.77,
+      "h": 149.884,
+      "l": 149.123,
+      "c": 149.29
+    },
+    {
+      "i": 8,
+      "o": 149.29,
+      "h": 149.441,
+      "l": 149.238,
+      "c": 149.39
+    },
+    {
+      "i": 9,
+      "o": 149.39,
+      "h": 149.493,
+      "l": 148.692,
+      "c": 148.87
+    },
+    {
+      "i": 10,
+      "o": 148.87,
+      "h": 148.91,
+      "l": 148.55,
+      "c": 148.57
+    },
+    {
+      "i": 11,
+      "o": 148.57,
+      "h": 148.6,
+      "l": 148.23,
+      "c": 148.25
+    },
+    {
+      "i": 12,
+      "o": 148.25,
+      "h": 148.28,
+      "l": 147.762,
+      "c": 147.802
+    },
+    {
+      "i": 13,
+      "o": 147.802,
+      "h": 148.102,
+      "l": 147.762,
+      "c": 148.062
+    },
+    {
+      "i": 14,
+      "o": 148.062,
+      "h": 148.551,
+      "l": 147.983,
+      "c": 148.412
+    },
+    {
+      "i": 15,
+      "o": 148.412,
+      "h": 148.76,
+      "l": 148.296,
+      "c": 148.662
+    },
+    {
+      "i": 16,
+      "o": 148.662,
+      "h": 148.722,
+      "l": 148.506,
+      "c": 148.562
+    },
+    {
+      "i": 17,
+      "o": 148.562,
+      "h": 148.97,
+      "l": 148.475,
+      "c": 148.862
+    }
+  ]
+}

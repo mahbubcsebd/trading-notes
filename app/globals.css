@@ -1,4 +1,3 @@
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Hind+Siliguri:wght@300;400;500;600;700&family=Noto+Sans+Bengali:wght@300;400;500;600;700&family=JetBrains+Mono:ital,wght@0,400;0,500;0,700;1,400&display=swap");
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
@@ -9,9 +8,26 @@
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  --font-sans: var(--font-inter), "Hind Siliguri", "Noto Sans Bengali", system-ui, sans-serif;
-  --font-mono: var(--font-jetbrains-mono), "Courier New", monospace;
-  --font-heading: var(--font-inter), "Hind Siliguri", system-ui, sans-serif;
+  --font-sans:
+    var(--font-hanken), var(--font-hind-siliguri), "Noto Sans Bengali",
+    system-ui, sans-serif;
+  --font-mono: var(--font-jetbrains), ui-monospace, monospace;
+  --font-display:
+    var(--font-fraunces), var(--font-hind-siliguri), Georgia, serif;
+  --font-heading:
+    var(--font-fraunces), var(--font-hind-siliguri), Georgia, serif;
+  /* TradeNotes palette */
+  --color-bg: var(--bg);
+  --color-bg2: var(--bg-2);
+  --color-surface: var(--surface);
+  --color-line: var(--line);
+  --color-fg: var(--fg);
+  --color-fg2: var(--fg-2);
+  --color-mute: var(--mute);
+  --color-gold-ink: var(--gold-ink);
+  --color-up: var(--up);
+  --color-down: var(--down);
+  --color-warn: var(--warn);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -47,79 +63,101 @@
   --color-gold: var(--gold);
   --color-panel: var(--panel);
   --color-app-bg: var(--bg);
+  /* Article role colors: one distinct hue per content role */
+  --color-link: var(--link);
+  --color-keynote: var(--keynote);
+  --color-title: var(--title);
+  --color-table: var(--table);
+  --color-chart: var(--chart);
+  --color-placeholder: var(--placeholder);
 }
 
 /* ─── Light Theme ────────────────────────────────────────────────────── */
 :root {
-  --background: #f8f9fb;
-  --foreground: #0f1419;
-  --card: #ffffff;
-  --card-foreground: #0f1419;
-  --popover: #ffffff;
-  --popover-foreground: #0f1419;
-  --primary: #0f1419;
-  --primary-foreground: #f8f9fb;
-  --secondary: #eef0f5;
-  --secondary-foreground: #0f1419;
-  --muted: #eef0f5;
-  --muted-foreground: #5a6478;
-  --accent: #f0f4ff;
-  --accent-foreground: #0f1419;
-  --destructive: #ef4444;
-  --border: #dde1ea;
-  --input: #dde1ea;
-  --ring: #f5b301;
+  /* TradeNotes design: cool paper, ink-navy text, bronze-gold signal */
+  --bg: #f4f6fa;
+  --bg-2: #eaeef6;
+  --surface: #ffffff;
+  --line: #d3dae8;
+  --fg: #121a2e;
+  --fg-2: #47516c;
+  --mute: #6c7690;
+  --gold: #8a6a2f;
+  --gold-ink: #ffffff;
+  --up: #2f7a58;
+  --down: #a8504f;
+  --warn: #a5522f;
+
+  /* shadcn / fumadocs aliases (all derived from the tokens above) */
+  --background: var(--bg);
+  --foreground: var(--fg);
+  --card: var(--surface);
+  --card-foreground: var(--fg);
+  --popover: var(--surface);
+  --popover-foreground: var(--fg);
+  --primary: var(--gold);
+  --primary-foreground: var(--gold-ink);
+  --secondary: var(--bg-2);
+  --secondary-foreground: var(--fg);
+  --muted: var(--bg-2);
+  --muted-foreground: var(--fg-2);
+  --accent: var(--bg-2);
+  --accent-foreground: var(--fg);
+  --destructive: var(--down);
+  --border: var(--line);
+  --input: var(--line);
+  --ring: var(--gold);
   --radius: 0.75rem;
-  --sidebar: #ffffff;
-  --sidebar-foreground: #0f1419;
-  --sidebar-primary: #0f1419;
-  --sidebar-primary-foreground: #ffffff;
-  --sidebar-accent: #eef0f5;
-  --sidebar-accent-foreground: #0f1419;
-  --sidebar-border: #dde1ea;
-  --sidebar-ring: #f5b301;
-  /* Trading brand */
-  --bull: #16a34a;
-  --bear: #dc2626;
-  --gold: #d97706;
-  --bg: #f8f9fb;
-  --panel: #ffffff;
+  --sidebar: var(--bg);
+  --sidebar-foreground: var(--fg);
+  --sidebar-primary: var(--gold);
+  --sidebar-primary-foreground: var(--gold-ink);
+  --sidebar-accent: var(--bg-2);
+  --sidebar-accent-foreground: var(--fg);
+  --sidebar-border: var(--line);
+  --sidebar-ring: var(--gold);
+  --bull: var(--up);
+  --bear: var(--down);
+  --panel: var(--surface);
+  --dot: rgb(18 26 46 / 0.08);
+  --shadow-soft:
+    0 1px 2px rgb(18 26 46 / 0.05), 0 10px 28px -14px rgb(18 26 46 / 0.16);
+  /* Article roles (one hue each, never reuse gold) */
+  --link: #2f5fa8;
+  --keynote: #a15f12;
+  --title: #6446b0;
+  --table: #0f6f66;
+  --chart: #a8386f;
+  --placeholder: #c4531a;
+  color-scheme: light;
 }
 
 /* ─── Dark Theme (default) ───────────────────────────────────────────── */
 .dark {
-  --background: #0b0e14;
-  --foreground: #e8ecf4;
-  --card: #121722;
-  --card-foreground: #e8ecf4;
-  --popover: #121722;
-  --popover-foreground: #e8ecf4;
-  --primary: #f5b301;
-  --primary-foreground: #0b0e14;
-  --secondary: #1a2030;
-  --secondary-foreground: #e8ecf4;
-  --muted: #1a2030;
-  --muted-foreground: #8b95a7;
-  --accent: #1f2d44;
-  --accent-foreground: #e8ecf4;
-  --destructive: #ef4444;
-  --border: #1f2733;
-  --input: #1f2733;
-  --ring: #f5b301;
-  --sidebar: #0f1420;
-  --sidebar-foreground: #e8ecf4;
-  --sidebar-primary: #f5b301;
-  --sidebar-primary-foreground: #0b0e14;
-  --sidebar-accent: #1a2030;
-  --sidebar-accent-foreground: #e8ecf4;
-  --sidebar-border: #1f2733;
-  --sidebar-ring: #f5b301;
-  /* Trading brand */
-  --bull: #22c55e;
-  --bear: #ef4444;
-  --gold: #f5b301;
-  --bg: #0b0e14;
-  --panel: #121722;
+  --bg: #0c1120;
+  --bg-2: #10172a;
+  --surface: #141c31;
+  --line: #243049;
+  --fg: #efeadd;
+  --fg-2: #a3aabd;
+  --mute: #7d86a0;
+  --gold: #d9b77e;
+  --gold-ink: #0c1120;
+  --up: #7fb59a;
+  --down: #c98585;
+  --warn: #e3a68f;
+
+  --popover: var(--surface);
+  --dot: rgb(239 234 221 / 0.07);
+  --shadow-soft:
+    0 1px 0 rgb(255 255 255 / 0.03) inset, 0 14px 34px -18px rgb(0 0 0 / 0.65);
+  --link: #7aa7e0;
+  --keynote: #e8b04a;
+  --title: #a99be0;
+  --table: #5ec4b6;
+  --chart: #e08bb3;
+  --placeholder: #e8955a;
+  color-scheme: dark;
 }
 
 /* ─── Base Styles ────────────────────────────────────────────────────── */
@@ -136,7 +174,54 @@
 
   body {
     @apply bg-background text-foreground min-h-screen;
-    font-feature-settings: "kern" 1, "liga" 1;
+    font-size: 16px;
+    line-height: 1.6;
+    font-feature-settings:
+      "kern" 1,
+      "liga" 1;
+  }
+
+  /* Display serif for headings (Fraunces); Bangla falls back to Hind Siliguri */
+  h1,
+  h2,
+  h3 {
+    font-family: var(--font-display);
+    font-weight: 400;
+    letter-spacing: -0.015em;
+    text-wrap: balance;
+  }
+
+  /* Print / "Save as PDF": article only, no glow, keep chart + badge colors */
+  @media print {
+    @page {
+      size: A4;
+      margin: 14mm 12mm;
+    }
+    body {
+      background-image: none;
+      -webkit-print-color-adjust: exact;
+      print-color-adjust: exact;
+    }
+    .no-print,
+    [data-pdf-exclude="true"] {
+      display: none !important;
+    }
+    #main-lesson-article,
+    #pattern-details-article {
+      max-width: none;
+    }
+    figure,
+    table,
+    pre,
+    img,
+    canvas,
+    svg {
+      break-inside: avoid;
+    }
+    h2,
+    h3 {
+      break-after: avoid;
+    }
   }
 
   /* Bengali paragraph typography */
@@ -144,7 +229,10 @@
   .prose-bn p,
   .content-bn {
     line-height: 1.8;
-    font-family: "Hind Siliguri", "Noto Sans Bengali", system-ui, sans-serif;
+  }
+
+  ::selection {
+    background: color-mix(in oklab, var(--gold) 28%, transparent);
   }
 
   /* Mono for prices and numbers */
@@ -198,6 +286,145 @@
     border-color: var(--border);
   }
 
+  /* ── Lesson article base typography (no @tailwindcss/typography; mirrors tradenotes Prose) ── */
+  .lesson-prose {
+    font-size: 17px;
+    line-height: 1.75;
+    color: var(--fg);
+  }
+  .lesson-prose:lang(bn),
+  .lesson-prose :lang(bn) {
+    line-height: 1.85;
+  }
+  .lesson-prose
+    :where(p, ul, ol, blockquote, pre, hr):not(:where(.not-prose *)) {
+    margin-block: 0 1rem;
+  }
+  .lesson-prose :where(h2):not(:where(.not-prose *)) {
+    font-size: 28px;
+    line-height: 1.2;
+    margin-block: 3rem 0.875rem;
+  }
+  .lesson-prose :where(h3):not(:where(.not-prose *)) {
+    font-size: 21px;
+    line-height: 1.3;
+    margin-block: 2rem 0.625rem;
+  }
+  .lesson-prose :where(h4):not(:where(.not-prose *)) {
+    font-size: 17px;
+    font-weight: 600;
+    margin-block: 1.5rem 0.5rem;
+  }
+  .lesson-prose :where(ul, ol):not(:where(.not-prose *)) {
+    padding-left: 1.25rem;
+  }
+  .lesson-prose :where(ul):not(:where(.not-prose *)) {
+    list-style: disc;
+  }
+  .lesson-prose :where(ol):not(:where(.not-prose *)) {
+    list-style: decimal;
+  }
+  .lesson-prose :where(li):not(:where(.not-prose *)) {
+    margin-block: 0.4rem;
+  }
+  .lesson-prose :where(li)::marker {
+    color: var(--gold);
+  }
+  .lesson-prose :where(strong):not(:where(.not-prose *)) {
+    font-weight: 600;
+    color: var(--fg);
+  }
+  .lesson-prose :where(blockquote):not(:where(.not-prose *)) {
+    border-left: 3px solid var(--gold);
+    background: color-mix(in oklab, var(--gold) 7%, transparent);
+    border-radius: 0 0.75rem 0.75rem 0;
+    padding: 0.75rem 1.125rem;
+    color: var(--fg-2);
+  }
+  .lesson-prose :where(hr):not(:where(.not-prose *)) {
+    border: 0;
+    border-top: 1px solid var(--line);
+    margin-block: 2rem;
+  }
+  .lesson-prose :where(code):not(:where(.not-prose *, pre *)) {
+    font-size: 0.88em;
+    color: var(--gold);
+    background: var(--bg-2);
+    border-radius: 0.375rem;
+    padding: 0.1em 0.4em;
+  }
+  .lesson-prose :where(pre):not(:where(.not-prose *)) {
+    background: var(--surface);
+    border: 1px solid var(--line);
+    border-radius: 0.75rem;
+    padding: 1rem 1.125rem;
+    overflow-x: auto;
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .lesson-prose :where(img):not(:where(.not-prose *)) {
+    max-width: 100%;
+    height: auto;
+    border-radius: 0.75rem;
+  }
+  .lesson-prose :where(table):not(:where(.not-prose *)) {
+    margin-block: 1.5rem;
+    font-size: 15px;
+  }
+  .lesson-prose :where(thead th):not(:where(.not-prose *)) {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    text-align: left;
+  }
+
+  /* ── Lesson article colors: match tradenotes Prose (fg headings, gold accents) ── */
+  .lesson-prose h1 {
+    font-size: clamp(1.875rem, 1.4rem + 1.6vw, 2.5rem);
+    line-height: 1.15;
+    letter-spacing: -0.025em;
+    margin-bottom: 0.75em;
+  }
+  .lesson-prose a:not(.not-link) {
+    color: var(--gold);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .lesson-prose table {
+    display: table;
+    width: 100%;
+    border: 1px solid var(--line);
+    border-radius: 0.75rem;
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+  .lesson-prose thead th {
+    background: var(--bg-2);
+    color: var(--gold);
+    white-space: nowrap;
+  }
+  .lesson-prose tbody td {
+    color: var(--fg-2);
+  }
+  .lesson-prose tbody td:first-child {
+    color: var(--fg);
+    font-weight: 500;
+  }
+  /* hide blank template rows (all cells empty) */
+  .lesson-prose tbody tr:not(:has(td:not(:empty))) {
+    display: none;
+  }
+  .lesson-prose td,
+  .lesson-prose th {
+    border-top: 1px solid var(--line);
+    padding: 0.75rem 1rem;
+  }
+  .lesson-prose thead th {
+    border-top: 0;
+  }
+
   /* Prose max-width for articles */
   .prose-article {
     max-width: 72ch;
@@ -214,5 +441,334 @@
     background: oklch(from var(--card) l c h / 0.7);
     backdrop-filter: blur(12px);
     border: 1px solid oklch(from var(--border) l c h / 0.5);
+  }
+
+  /* Dot-grid texture, faded at edges */
+  .bg-dots {
+    background-image: radial-gradient(var(--dot) 1px, transparent 1px);
+    background-size: 22px 22px;
+    mask-image: radial-gradient(
+      ellipse 70% 60% at 50% 40%,
+      #000 40%,
+      transparent 100%
+    );
+  }
+
+  /* Mono eyebrow label */
+  .eyebrow {
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 500;
+    line-height: 1.2;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+  }
+
+  /* ── TradeNotes components ── */
+  .wrap {
+    margin-inline: auto;
+    max-width: 88rem;
+    padding-inline: max(1rem, env(safe-area-inset-left, 0px))
+      max(1rem, env(safe-area-inset-right, 0px));
+  }
+  .sec {
+    border-top: 1px solid var(--line);
+    padding-block: 4.5rem;
+  }
+  .btn {
+    display: inline-flex;
+    height: 2.75rem;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    white-space: nowrap;
+    border-radius: 9999px;
+    border: 1px solid var(--line);
+    padding-inline: 1.25rem;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition:
+      border-color 0.15s,
+      filter 0.15s;
+  }
+  .btn:hover {
+    border-color: var(--mute);
+  }
+  .btn-gold {
+    background: var(--gold);
+    color: var(--gold-ink);
+    border-color: var(--gold);
+  }
+  .btn-gold:hover {
+    filter: brightness(1.07);
+    border-color: var(--gold);
+  }
+  .btn-sm {
+    height: 2.375rem;
+    padding-inline: 1rem;
+    font-size: 14px;
+  }
+  .chip {
+    display: inline-flex;
+    height: 2.125rem;
+    align-items: center;
+    gap: 0.5rem;
+    border-radius: 9999px;
+    border: 1px solid var(--line);
+    padding-inline: 0.75rem;
+    font-family: var(--font-mono);
+    font-size: 12px;
+    font-weight: 500;
+    color: var(--fg-2);
+    cursor: pointer;
+    transition:
+      color 0.15s,
+      border-color 0.15s;
+  }
+  .chip:hover {
+    color: var(--fg);
+    border-color: var(--mute);
+  }
+  .chip[aria-pressed="true"] {
+    background: var(--gold);
+    color: var(--gold-ink);
+    border-color: var(--gold);
+  }
+  .pill {
+    display: inline-flex;
+    height: 1.625rem;
+    align-items: center;
+    border-radius: 9999px;
+    border: 1px solid var(--line);
+    padding-inline: 0.625rem;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+    color: var(--fg-2);
+  }
+  .pill-up {
+    color: var(--up);
+    border-color: color-mix(in srgb, var(--up) 45%, var(--line));
+  }
+  .pill-gold {
+    color: var(--gold);
+    border-color: color-mix(in srgb, var(--gold) 45%, var(--line));
+  }
+  .pill-down {
+    color: var(--down);
+    border-color: color-mix(in srgb, var(--down) 45%, var(--line));
+  }
+  .card {
+    border-radius: 1rem;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    padding: 1.375rem;
+  }
+  .link {
+    color: var(--gold);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .input {
+    height: 2.75rem;
+    width: 100%;
+    border-radius: 0.625rem;
+    border: 1px solid var(--line);
+    background: var(--bg-2);
+    color: var(--fg);
+    padding-inline: 0.875rem;
+    font-family: var(--font-mono);
+    font-size: 16px;
+    font-weight: 500;
+  }
+  .input:focus {
+    outline: none;
+    border-color: var(--gold);
+  }
+
+  /* SVG chart helpers (figures, candle diagrams) */
+  .g-line {
+    stroke: var(--line);
+    stroke-width: 1;
+    fill: none;
+  }
+  .g-txt {
+    fill: var(--mute);
+    font: 400 10px var(--font-mono);
+  }
+  .c-up {
+    fill: var(--up);
+    stroke: var(--up);
+  }
+  .c-dn {
+    fill: var(--down);
+    stroke: var(--down);
+  }
+  .ma {
+    fill: none;
+    stroke: var(--fg-2);
+    stroke-width: 1.2;
+    opacity: 0.8;
+  }
+  .lvl-line {
+    fill: none;
+    stroke: var(--gold);
+    stroke-width: 1;
+    stroke-dasharray: 4 4;
+  }
+
+  /* Markdown content (notes) */
+  .md {
+    font-size: 17px;
+    line-height: 1.75;
+  }
+  .md > * + * {
+    margin-top: 1rem;
+  }
+  .md h2 {
+    margin-top: 3rem;
+    font-size: 28px;
+    line-height: 1.2;
+    scroll-margin-top: 6rem;
+  }
+  .md h3 {
+    margin-top: 2rem;
+    font-size: 22px;
+    line-height: 1.25;
+    scroll-margin-top: 6rem;
+  }
+  .md ul,
+  .md ol {
+    padding-left: 1.25rem;
+    display: grid;
+    gap: 0.6rem;
+  }
+  .md ul {
+    list-style: disc;
+  }
+  .md ol {
+    list-style: decimal;
+  }
+  .md li::marker {
+    color: var(--gold);
+  }
+  .md ul:has(input[type="checkbox"]) {
+    list-style: none;
+    padding-left: 0;
+  }
+  .md input[type="checkbox"] {
+    margin-right: 0.6rem;
+    accent-color: var(--gold);
+  }
+  .md strong {
+    font-weight: 600;
+    color: var(--fg);
+  }
+  .md a {
+    color: var(--gold);
+    text-decoration: underline;
+    text-underline-offset: 3px;
+  }
+  .md code {
+    font-family: var(--font-mono);
+    font-size: 0.88em;
+    color: var(--gold);
+  }
+  .md pre {
+    overflow-x: auto;
+    border: 1px solid var(--line);
+    background: var(--bg-2);
+    border-radius: 12px;
+    padding: 1rem;
+  }
+  .md pre code {
+    color: var(--fg);
+  }
+  .md img {
+    max-width: 100%;
+    border-radius: 12px;
+    border: 1px solid var(--line);
+  }
+  .md blockquote {
+    border: 1px solid var(--line);
+    background: var(--bg-2);
+    border-radius: 12px;
+    padding: 1rem 1.15rem;
+    font-size: 16px;
+    line-height: 1.65;
+  }
+  .md blockquote p {
+    margin: 0;
+  }
+  .md table {
+    display: block;
+    width: 100%;
+    min-width: 480px;
+    overflow-x: auto;
+    border-collapse: collapse;
+    text-align: left;
+    font-size: 15px;
+  }
+  .md table th {
+    padding: 0.75rem 1rem;
+    font-family: var(--font-mono);
+    font-size: 11px;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--gold);
+    background: var(--bg-2);
+  }
+  .md table td {
+    padding: 0.75rem 1rem;
+    border-top: 1px solid var(--line);
+    color: var(--fg-2);
+  }
+  .md hr {
+    border: 0;
+    border-top: 1px solid var(--line);
+    margin: 2.5rem 0;
+  }
+
+  .shadow-soft {
+    box-shadow: var(--shadow-soft);
+  }
+
+  /* Hero chart: candles rise in, last price pings */
+  .hero-candle {
+    transform-box: fill-box;
+    transform-origin: bottom;
+    animation: candle-in 0.5s cubic-bezier(0.2, 0.8, 0.2, 1) both;
+  }
+  .hero-ping {
+    transform-box: fill-box;
+    transform-origin: center;
+    animation: ping-dot 2s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+
+  .text-balance {
+    text-wrap: balance;
+  }
+}
+
+@keyframes candle-in {
+  from {
+    opacity: 0;
+    transform: scaleY(0.2);
+  }
+  to {
+    opacity: 1;
+    transform: scaleY(1);
+  }
+}
+
+@keyframes ping-dot {
+  75%,
+  100% {
+    transform: scale(3);
+    opacity: 0;
   }
 }

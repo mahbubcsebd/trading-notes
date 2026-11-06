@@ -12,7 +12,7 @@ interface ChartThumbnailProps {
 export function ChartThumbnail({ candles, annotations = [], className = '' }: ChartThumbnailProps) {
   if (!candles || candles.length === 0) {
     return (
-      <div className={`w-full h-44 bg-card flex items-center justify-center text-xs text-muted-foreground ${className}`}>
+      <div className={`w-full h-44 bg-surface flex items-center justify-center text-xs text-mute ${className}`}>
         No candle data
       </div>
     );
@@ -52,16 +52,6 @@ export function ChartThumbnail({ candles, annotations = [], className = '' }: Ch
     <div className={`relative w-full h-44 bg-panel/60 overflow-hidden flex items-center justify-center ${className}`}>
       {/* Background Subtle Grid Lines */}
       <svg className="w-full h-full" viewBox={`0 0 ${width} ${height}`} preserveAspectRatio="none">
-        <defs>
-          <linearGradient id="bullGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stopColor="#22c55e" stopOpacity="0.9" />
-            <stop offset="100%" stopColor="#16a34a" stopOpacity="0.9" />
-          </linearGradient>
-          <linearGradient id="bearGrad" x1="0%" y1="0%" x2="0%" y2="100%">
-            <stop offset="0%" stopColor="#ef4444" stopOpacity="0.9" />
-            <stop offset="100%" stopColor="#dc2626" stopOpacity="0.9" />
-          </linearGradient>
-        </defs>
 
         {/* 3 Horizontal Grid lines */}
         <line x1="0" y1={height * 0.25} x2={width} y2={height * 0.25} stroke="currentColor" className="text-border/20" strokeDasharray="3 3" />
@@ -76,7 +66,7 @@ export function ChartThumbnail({ candles, annotations = [], className = '' }: Ch
             const y2 = getY(Math.min(a.from!.price, a.to!.price));
             const x1 = Math.max(0, (a.from!.i ?? 0) * step);
             const x2 = Math.min(width, ((a.to!.i ?? candleCount - 1) + 1) * step);
-            const color = a.color || '#22c55e';
+            const color = a.color || 'var(--up)';
             return (
               <rect
                 key={idx}
@@ -99,7 +89,7 @@ export function ChartThumbnail({ candles, annotations = [], className = '' }: Ch
           .filter((a) => a.type === 'hline' && a.price !== undefined)
           .map((a, idx) => {
             const y = getY(a.price!);
-            const color = a.color || '#d4af37';
+            const color = a.color || 'var(--gold)';
             return (
               <line
                 key={idx}
@@ -126,7 +116,7 @@ export function ChartThumbnail({ candles, annotations = [], className = '' }: Ch
 
           const bodyTop = Math.min(openY, closeY);
           const bodyHeight = Math.max(1.5, Math.abs(closeY - openY));
-          const color = isBull ? '#22c55e' : '#ef4444';
+          const color = isBull ? 'var(--up)' : 'var(--down)';
 
           return (
             <g key={i}>
@@ -145,7 +135,8 @@ export function ChartThumbnail({ candles, annotations = [], className = '' }: Ch
                 y={bodyTop}
                 width={candleWidth}
                 height={bodyHeight}
-                fill={isBull ? 'url(#bullGrad)' : 'url(#bearGrad)'}
+                fill={isBull ? 'var(--up)' : 'var(--down)'}
+                fillOpacity="0.9"
                 rx="1"
               />
             </g>

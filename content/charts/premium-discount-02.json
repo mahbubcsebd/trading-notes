@@ -1,0 +1,249 @@
+{
+  "id": "premium-discount-02",
+  "title": {
+    "en": "Buy in discount: pullback below the 50% line",
+    "bn": "Discount-এ buy: ৫০% লাইনের নিচে pullback"
+  },
+  "symbol": "XAUUSD",
+  "timeframe": "H1",
+  "mode": "synthetic",
+  "type": "concept",
+  "bias": "bullish",
+  "outcome": null,
+  "tags": [
+    "premium",
+    "discount",
+    "equilibrium"
+  ],
+  "module": "03-market-structure",
+  "lessonSlugs": [
+    "06-premium-discount-zones"
+  ],
+  "caption": {
+    "en": "Impulse from swing low to swing high; price pulls back into the discount half before continuing up.",
+    "bn": "Swing low থেকে swing high পর্যন্ত impulse; price discount অংশে নেমে এসে আবার উঠছে।"
+  },
+  "updatedAt": "2026-11-05T12:00:00Z",
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 2340,
+      "label": "Range high (100%)",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 2320,
+      "label": "Equilibrium (50%)",
+      "color": "#f5b301",
+      "style": "solid"
+    },
+    {
+      "type": "hline",
+      "price": 2300,
+      "label": "Range low (0%)",
+      "color": "#22c55e",
+      "style": "dashed"
+    },
+    {
+      "type": "zone",
+      "from": {
+        "i": 11,
+        "price": 2320
+      },
+      "to": {
+        "i": 19,
+        "price": 2340
+      },
+      "label": "Premium",
+      "color": "#ef4444"
+    },
+    {
+      "type": "zone",
+      "from": {
+        "i": 11,
+        "price": 2300
+      },
+      "to": {
+        "i": 19,
+        "price": 2320
+      },
+      "label": "Discount",
+      "color": "#22c55e"
+    },
+    {
+      "type": "marker",
+      "i": 1,
+      "position": "belowBar",
+      "shape": "circle",
+      "text": "Swing low"
+    },
+    {
+      "type": "marker",
+      "i": 10,
+      "position": "aboveBar",
+      "shape": "circle",
+      "text": "Swing high"
+    },
+    {
+      "type": "marker",
+      "i": 16,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Buy in discount"
+    }
+  ],
+  "keyTakeaways": [
+    {
+      "en": "Buy in discount, sell in premium, with the trend.",
+      "bn": "Trend-এর দিকে discount-এ buy, premium-এ sell।"
+    }
+  ],
+  "entry": 2316,
+  "stopLoss": 2309,
+  "takeProfit": 2340,
+  "rr": "3.4",
+  "candles": [
+    {
+      "i": 0,
+      "o": 2306,
+      "h": 2308,
+      "l": 2302,
+      "c": 2303
+    },
+    {
+      "i": 1,
+      "o": 2303,
+      "h": 2305,
+      "l": 2300,
+      "c": 2304
+    },
+    {
+      "i": 2,
+      "o": 2304,
+      "h": 2312,
+      "l": 2303,
+      "c": 2311
+    },
+    {
+      "i": 3,
+      "o": 2311,
+      "h": 2316,
+      "l": 2309,
+      "c": 2315
+    },
+    {
+      "i": 4,
+      "o": 2315,
+      "h": 2319,
+      "l": 2313,
+      "c": 2314
+    },
+    {
+      "i": 5,
+      "o": 2314,
+      "h": 2322,
+      "l": 2313,
+      "c": 2321
+    },
+    {
+      "i": 6,
+      "o": 2321,
+      "h": 2327,
+      "l": 2320,
+      "c": 2326
+    },
+    {
+      "i": 7,
+      "o": 2326,
+      "h": 2330,
+      "l": 2323,
+      "c": 2324
+    },
+    {
+      "i": 8,
+      "o": 2324,
+      "h": 2332,
+      "l": 2323,
+      "c": 2331
+    },
+    {
+      "i": 9,
+      "o": 2331,
+      "h": 2336,
+      "l": 2329,
+      "c": 2335
+    },
+    {
+      "i": 10,
+      "o": 2335,
+      "h": 2340,
+      "l": 2333,
+      "c": 2338
+    },
+    {
+      "i": 11,
+      "o": 2338,
+      "h": 2339,
+      "l": 2331,
+      "c": 2332
+    },
+    {
+      "i": 12,
+      "o": 2332,
+      "h": 2334,
+      "l": 2326,
+      "c": 2327
+    },
+    {
+      "i": 13,
+      "o": 2327,
+      "h": 2329,
+      "l": 2322,
+      "c": 2323
+    },
+    {
+      "i": 14,
+      "o": 2323,
+      "h": 2325,
+      "l": 2318,
+      "c": 2319
+    },
+    {
+      "i": 15,
+      "o": 2319,
+      "h": 2321,
+      "l": 2314,
+      "c": 2315
+    },
+    {
+      "i": 16,
+      "o": 2315,
+      "h": 2318,
+      "l": 2312,
+      "c": 2317
+    },
+    {
+      "i": 17,
+      "o": 2317,
+      "h": 2324,
+      "l": 2316,
+      "c": 2323
+    },
+    {
+      "i": 18,
+      "o": 2323,
+      "h": 2330,
+      "l": 2322,
+      "c": 2329
+    },
+    {
+      "i": 19,
+      "o": 2329,
+      "h": 2336,
+      "l": 2328,
+      "c": 2335
+    }
+  ]
+}

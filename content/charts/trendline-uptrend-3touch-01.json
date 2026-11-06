@@ -1,0 +1,257 @@
+{
+  "id": "trendline-uptrend-3touch-01",
+  "title": {
+    "en": "Valid Uptrend Trendline — 3 Touches, then Bounce",
+    "bn": "ভ্যালিড আপট্রেন্ড ট্রেন্ডলাইন — ৩ স্পর্শ ও বাউন্স"
+  },
+  "symbol": "EURUSD",
+  "timeframe": "H1",
+  "mode": "synthetic",
+  "type": "educational",
+  "bias": "bullish",
+  "tags": [
+    "trendline",
+    "bounce",
+    "uptrend"
+  ],
+  "module": "05-support-resistance",
+  "lessonSlugs": [
+    "04-trendlines-channels"
+  ],
+  "caption": {
+    "en": "Touches 1-2 draw the line; touch 3 validates it; touch 4 is the bounce entry.",
+    "bn": "১ম-২য় স্পর্শে লাইন আঁকা, ৩য় স্পর্শে ভ্যালিড, ৪র্থ স্পর্শের বাউন্সে এন্ট্রি।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data.",
+    "bn": "এটি শিক্ষামূলক কাল্পনিক ডেটা।"
+  },
+  "updatedAt": "2026-11-05T10:00:00Z",
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.2403,
+      "h": 1.2416,
+      "l": 1.2402,
+      "c": 1.241
+    },
+    {
+      "i": 1,
+      "o": 1.2415,
+      "h": 1.2443,
+      "l": 1.2414,
+      "c": 1.2434
+    },
+    {
+      "i": 2,
+      "o": 1.2434,
+      "h": 1.2465,
+      "l": 1.2429,
+      "c": 1.246
+    },
+    {
+      "i": 3,
+      "o": 1.246,
+      "h": 1.2468,
+      "l": 1.2452,
+      "c": 1.246
+    },
+    {
+      "i": 4,
+      "o": 1.246,
+      "h": 1.2466,
+      "l": 1.2448,
+      "c": 1.2456
+    },
+    {
+      "i": 5,
+      "o": 1.2463,
+      "h": 1.2493,
+      "l": 1.2462,
+      "c": 1.2484
+    },
+    {
+      "i": 6,
+      "o": 1.2484,
+      "h": 1.2517,
+      "l": 1.2479,
+      "c": 1.2512
+    },
+    {
+      "i": 7,
+      "o": 1.2512,
+      "h": 1.2544,
+      "l": 1.2504,
+      "c": 1.2536
+    },
+    {
+      "i": 8,
+      "o": 1.2536,
+      "h": 1.2542,
+      "l": 1.2526,
+      "c": 1.2532
+    },
+    {
+      "i": 9,
+      "o": 1.2532,
+      "h": 1.2541,
+      "l": 1.2508,
+      "c": 1.2516
+    },
+    {
+      "i": 10,
+      "o": 1.2523,
+      "h": 1.2551,
+      "l": 1.2522,
+      "c": 1.2546
+    },
+    {
+      "i": 11,
+      "o": 1.2546,
+      "h": 1.2584,
+      "l": 1.2538,
+      "c": 1.2576
+    },
+    {
+      "i": 12,
+      "o": 1.2576,
+      "h": 1.2608,
+      "l": 1.257,
+      "c": 1.2602
+    },
+    {
+      "i": 13,
+      "o": 1.2602,
+      "h": 1.2611,
+      "l": 1.2587,
+      "c": 1.2596
+    },
+    {
+      "i": 14,
+      "o": 1.2596,
+      "h": 1.2601,
+      "l": 1.2568,
+      "c": 1.2576
+    },
+    {
+      "i": 15,
+      "o": 1.2583,
+      "h": 1.2618,
+      "l": 1.2582,
+      "c": 1.261
+    },
+    {
+      "i": 16,
+      "o": 1.261,
+      "h": 1.265,
+      "l": 1.2604,
+      "c": 1.2644
+    },
+    {
+      "i": 17,
+      "o": 1.2644,
+      "h": 1.2679,
+      "l": 1.2635,
+      "c": 1.267
+    },
+    {
+      "i": 18,
+      "o": 1.267,
+      "h": 1.2675,
+      "l": 1.2657,
+      "c": 1.2662
+    },
+    {
+      "i": 19,
+      "o": 1.2662,
+      "h": 1.267,
+      "l": 1.2648,
+      "c": 1.2656
+    },
+    {
+      "i": 20,
+      "o": 1.2656,
+      "h": 1.2662,
+      "l": 1.264,
+      "c": 1.2648
+    },
+    {
+      "i": 21,
+      "o": 1.2655,
+      "h": 1.2695,
+      "l": 1.2654,
+      "c": 1.2686
+    },
+    {
+      "i": 22,
+      "o": 1.2686,
+      "h": 1.2725,
+      "l": 1.2681,
+      "c": 1.272
+    },
+    {
+      "i": 23,
+      "o": 1.272,
+      "h": 1.2748,
+      "l": 1.2712,
+      "c": 1.274
+    }
+  ],
+  "annotations": [
+    {
+      "type": "trendline",
+      "from": {
+        "i": 4,
+        "price": 1.2448
+      },
+      "to": {
+        "i": 23,
+        "price": 1.2676
+      },
+      "color": "#3b82f6",
+      "label": "Ascending Trendline (Dynamic Support)"
+    },
+    {
+      "type": "marker",
+      "i": 4,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "1"
+    },
+    {
+      "type": "marker",
+      "i": 9,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "2"
+    },
+    {
+      "type": "marker",
+      "i": 14,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "3 valid"
+    },
+    {
+      "type": "marker",
+      "i": 20,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "4 bounce entry"
+    }
+  ],
+  "explanation": {
+    "en": "Price makes higher lows along one rising line. The first two lows only define the line; the third touch proves buyers keep defending the same slope. The fourth touch with a rejection candle is the low-risk bounce entry, stop just below the line.",
+    "bn": "প্রাইস একই ঊর্ধ্বমুখী লাইনে হায়ার লো বানাচ্ছে। প্রথম দুটি লো শুধু লাইন আঁকে; ৩য় স্পর্শ প্রমাণ করে বায়াররা একই ঢালে ডিফেন্ড করছে। ৪র্থ স্পর্শে রিজেকশন ক্যান্ডেল দেখে বাউন্স এন্ট্রি, স্টপ লাইনের সামান্য নিচে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Two points draw, three points validate",
+      "bn": "দুই পয়েন্টে আঁকা, তিন পয়েন্টে ভ্যালিড"
+    },
+    {
+      "en": "Enter on rejection, stop below the line",
+      "bn": "রিজেকশনে এন্ট্রি, স্টপ লাইনের নিচে"
+    }
+  ]
+}

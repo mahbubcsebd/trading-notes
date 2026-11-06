@@ -1,0 +1,211 @@
+{
+  "id": "long-legged-doji-fail-01",
+  "title": {
+    "en": "Long-Legged Doji on a News Release",
+    "bn": "News release-এর candle-এ long-legged doji"
+  },
+  "symbol": "EURUSD",
+  "timeframe": "H1",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bullish",
+  "outcome": "loss",
+  "tags": [
+    "long-legged-doji",
+    "doji",
+    "candlestick",
+    "fail",
+    "news",
+    "pattern"
+  ],
+  "module": "patterns",
+  "lessonSlugs": [],
+  "caption": {
+    "en": "Illustrative synthetic EURUSD H1: after quiet candles, a data release prints a long-legged doji near support. A buy stop above its high fills on the next spike, which closes lower; price then breaks the doji low.",
+    "bn": "শিক্ষামূলক কাল্পনিক EURUSD H1: শান্ত candle-এর পর একটি data release support-এর কাছে long-legged doji দেয়। পরের spike-এ তার high-এর উপরের buy stop fill হয়, কিন্তু candle নিচে close করে; এরপর দাম doji-র low ভাঙে।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data, not a real market record.",
+    "bn": "শিক্ষামূলক কাল্পনিক ডেটা, বাস্তব মার্কেটের রেকর্ড নয়।"
+  },
+  "updatedAt": "2026-11-06T12:00:00Z",
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 1.0833,
+      "label": "Support",
+      "color": "#3b82f6",
+      "style": "dashed"
+    },
+    {
+      "type": "marker",
+      "i": 11,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "News candle"
+    },
+    {
+      "type": "marker",
+      "i": 12,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Spike fills, closes lower"
+    },
+    {
+      "type": "hline",
+      "price": 1.0887,
+      "label": "Entry (high break)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.0788,
+      "label": "Stop",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.1085,
+      "label": "Target 2R",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candles 0-10 drift quietly in a few pips. Candle 11 is the news candle: almost no body, about 45 pips of wick each way. Its shape is a long-legged doji, but it is a product of thin liquidity at the release, not a battle at a level. Candle 12 fills the buy stop and closes lower; candle 14 breaks the stop.",
+    "bn": "০-১০ নম্বর candle কয়েক pip-এর মধ্যে শান্তভাবে চলে। ১১ নম্বর news candle: body প্রায় নেই, দুই দিকে প্রায় 45 pip wick। আকারে long-legged doji, কিন্তু এটা release-এর মুহূর্তের পাতলা liquidity-র ফল, level-এর লড়াই নয়। ১২ নম্বর buy stop fill করে নিচে close করে; ১৪ নম্বর stop ভাঙে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "A news candle's wicks are noise, not a signal",
+      "bn": "News candle-এর wick noise, signal নয়"
+    }
+  ],
+  "entry": 1.0887,
+  "stopLoss": 1.0788,
+  "takeProfit": 1.1085,
+  "rr": "1:2.0",
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.085,
+      "h": 1.08562,
+      "l": 1.08468,
+      "c": 1.0854
+    },
+    {
+      "i": 1,
+      "o": 1.0854,
+      "h": 1.08565,
+      "l": 1.08491,
+      "c": 1.0851
+    },
+    {
+      "i": 2,
+      "o": 1.0851,
+      "h": 1.08593,
+      "l": 1.08481,
+      "c": 1.0856
+    },
+    {
+      "i": 3,
+      "o": 1.0856,
+      "h": 1.08593,
+      "l": 1.08488,
+      "c": 1.0852
+    },
+    {
+      "i": 4,
+      "o": 1.0852,
+      "h": 1.08572,
+      "l": 1.08496,
+      "c": 1.0855
+    },
+    {
+      "i": 5,
+      "o": 1.0855,
+      "h": 1.08582,
+      "l": 1.08471,
+      "c": 1.085
+    },
+    {
+      "i": 6,
+      "o": 1.085,
+      "h": 1.08567,
+      "l": 1.08473,
+      "c": 1.0854
+    },
+    {
+      "i": 7,
+      "o": 1.0854,
+      "h": 1.08559,
+      "l": 1.08498,
+      "c": 1.0852
+    },
+    {
+      "i": 8,
+      "o": 1.0852,
+      "h": 1.08561,
+      "l": 1.08431,
+      "c": 1.0846
+    },
+    {
+      "i": 9,
+      "o": 1.0846,
+      "h": 1.08486,
+      "l": 1.08386,
+      "c": 1.0842
+    },
+    {
+      "i": 10,
+      "o": 1.0842,
+      "h": 1.08456,
+      "l": 1.08336,
+      "c": 1.0837
+    },
+    {
+      "i": 11,
+      "o": 1.0837,
+      "h": 1.0885,
+      "l": 1.0792,
+      "c": 1.0839
+    },
+    {
+      "i": 12,
+      "o": 1.0839,
+      "h": 1.0893,
+      "l": 1.0819,
+      "c": 1.0824
+    },
+    {
+      "i": 13,
+      "o": 1.0824,
+      "h": 1.08353,
+      "l": 1.07824,
+      "c": 1.0794
+    },
+    {
+      "i": 14,
+      "o": 1.0794,
+      "h": 1.08027,
+      "l": 1.07482,
+      "c": 1.0759
+    },
+    {
+      "i": 15,
+      "o": 1.0759,
+      "h": 1.07708,
+      "l": 1.07554,
+      "c": 1.0767
+    },
+    {
+      "i": 16,
+      "o": 1.0767,
+      "h": 1.07771,
+      "l": 1.0736,
+      "c": 1.0742
+    }
+  ]
+}

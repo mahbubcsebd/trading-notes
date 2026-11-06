@@ -1,0 +1,272 @@
+{
+  "id": "piercing-line-win-01",
+  "title": {
+    "en": "Deep Piercing Line at Tested Support, High Break Entry",
+    "bn": "পরীক্ষিত support-এ গভীর piercing line, high ভাঙলে entry"
+  },
+  "symbol": "EURUSD",
+  "timeframe": "H1",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bullish",
+  "outcome": "win",
+  "tags": [
+    "piercing-line",
+    "candlestick",
+    "support",
+    "pattern"
+  ],
+  "module": "patterns",
+  "lessonSlugs": [],
+  "caption": {
+    "en": "Illustrative synthetic EURUSD H1: at a support that held once, a long bearish candle is followed by a green candle that dips below support and closes about three quarters of the way back into the red body. The next candle breaks the piercing candle's high; price rallies to 2R.",
+    "bn": "শিক্ষামূলক কাল্পনিক EURUSD H1: আগে একবার ধরে রাখা support-এ একটি লম্বা bearish candle, তারপর একটি সবুজ candle support-এর নিচে নেমে লাল body-র প্রায় তিন-চতুর্থাংশ পর্যন্ত ফিরে close করে। পরের candle piercing candle-এর high ভাঙে; দাম 2R পর্যন্ত যায়।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data, not a real market record.",
+    "bn": "শিক্ষামূলক কাল্পনিক ডেটা, বাস্তব মার্কেটের রেকর্ড নয়।"
+  },
+  "updatedAt": "2026-11-06T12:00:00Z",
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 1.0834,
+      "label": "Support",
+      "color": "#3b82f6",
+      "style": "dashed"
+    },
+    {
+      "type": "marker",
+      "i": 4,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "1st touch"
+    },
+    {
+      "type": "marker",
+      "i": 16,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Piercing line"
+    },
+    {
+      "type": "hline",
+      "price": 1.08593,
+      "label": "Entry (high break)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.0825,
+      "label": "Stop",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.09279,
+      "label": "Target 2R",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candle 4 marks support. Candle 15 is a long bearish candle into it. Candle 16 opens at that close, dips under support, and closes about 75% back into candle 15's body, but below its open: a piercing line. Candle 17 breaks the piercing candle's high and fills the buy stop; the stop sits below the pattern low.",
+    "bn": "৪ নম্বর candle support চিহ্নিত করে। ১৫ নম্বর সেখানে একটি লম্বা bearish candle। ১৬ নম্বর তার close-এ open করে, support-এর নিচে নামে, তারপর ১৫ নম্বরের body-র প্রায় 75% পর্যন্ত ফিরে close করে, কিন্তু তার open-এর নিচে: piercing line। ১৭ নম্বর piercing candle-এর high ভেঙে buy stop fill করে; stop pattern-এর low-এর নিচে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "The deeper the green close into the red body, the stronger the signal",
+      "bn": "সবুজ close লাল body-র যত গভীরে, signal তত শক্ত"
+    }
+  ],
+  "entry": 1.08593,
+  "stopLoss": 1.0825,
+  "takeProfit": 1.09279,
+  "rr": "1:2.0",
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.092,
+      "h": 1.09318,
+      "l": 1.08895,
+      "c": 1.0902
+    },
+    {
+      "i": 1,
+      "o": 1.0902,
+      "h": 1.09156,
+      "l": 1.0866,
+      "c": 1.088
+    },
+    {
+      "i": 2,
+      "o": 1.088,
+      "h": 1.0891,
+      "l": 1.08555,
+      "c": 1.0865
+    },
+    {
+      "i": 3,
+      "o": 1.0865,
+      "h": 1.08784,
+      "l": 1.08371,
+      "c": 1.0845
+    },
+    {
+      "i": 4,
+      "o": 1.0845,
+      "h": 1.0851,
+      "l": 1.0834,
+      "c": 1.0848
+    },
+    {
+      "i": 5,
+      "o": 1.0848,
+      "h": 1.08878,
+      "l": 1.08353,
+      "c": 1.0873
+    },
+    {
+      "i": 6,
+      "o": 1.0873,
+      "h": 1.09041,
+      "l": 1.08626,
+      "c": 1.0895
+    },
+    {
+      "i": 7,
+      "o": 1.0895,
+      "h": 1.08996,
+      "l": 1.08804,
+      "c": 1.0887
+    },
+    {
+      "i": 8,
+      "o": 1.0887,
+      "h": 1.09312,
+      "l": 1.08761,
+      "c": 1.0915
+    },
+    {
+      "i": 9,
+      "o": 1.0915,
+      "h": 1.09463,
+      "l": 1.0908,
+      "c": 1.0935
+    },
+    {
+      "i": 10,
+      "o": 1.0935,
+      "h": 1.0942,
+      "l": 1.09021,
+      "c": 1.0915
+    },
+    {
+      "i": 11,
+      "o": 1.0915,
+      "h": 1.09301,
+      "l": 1.08809,
+      "c": 1.0891
+    },
+    {
+      "i": 12,
+      "o": 1.0891,
+      "h": 1.08986,
+      "l": 1.08648,
+      "c": 1.0873
+    },
+    {
+      "i": 13,
+      "o": 1.0873,
+      "h": 1.08783,
+      "l": 1.08467,
+      "c": 1.0857
+    },
+    {
+      "i": 14,
+      "o": 1.0857,
+      "h": 1.0864,
+      "l": 1.0855,
+      "c": 1.0864
+    },
+    {
+      "i": 15,
+      "o": 1.0864,
+      "h": 1.0866,
+      "l": 1.0835,
+      "c": 1.0837
+    },
+    {
+      "i": 16,
+      "o": 1.0837,
+      "h": 1.08583,
+      "l": 1.0828,
+      "c": 1.08573
+    },
+    {
+      "i": 17,
+      "o": 1.08573,
+      "h": 1.08653,
+      "l": 1.08553,
+      "c": 1.08633
+    },
+    {
+      "i": 18,
+      "o": 1.08633,
+      "h": 1.08902,
+      "l": 1.08555,
+      "c": 1.08813
+    },
+    {
+      "i": 19,
+      "o": 1.08813,
+      "h": 1.08843,
+      "l": 1.08717,
+      "c": 1.08753
+    },
+    {
+      "i": 20,
+      "o": 1.08753,
+      "h": 1.0908,
+      "l": 1.08697,
+      "c": 1.08973
+    },
+    {
+      "i": 21,
+      "o": 1.08973,
+      "h": 1.09204,
+      "l": 1.08908,
+      "c": 1.09133
+    },
+    {
+      "i": 22,
+      "o": 1.09133,
+      "h": 1.09181,
+      "l": 1.09007,
+      "c": 1.09053
+    },
+    {
+      "i": 23,
+      "o": 1.09053,
+      "h": 1.0932,
+      "l": 1.08985,
+      "c": 1.09253
+    },
+    {
+      "i": 24,
+      "o": 1.09253,
+      "h": 1.09443,
+      "l": 1.09208,
+      "c": 1.09393
+    },
+    {
+      "i": 25,
+      "o": 1.09393,
+      "h": 1.09576,
+      "l": 1.0934,
+      "c": 1.09513
+    }
+  ]
+}

@@ -1,0 +1,261 @@
+{
+  "id": "mistakes-cost-by-tag-01",
+  "title": {
+    "en": "What Each Mistake Cost",
+    "bn": "প্রতিটি ভুলের খরচ"
+  },
+  "symbol": "ACCOUNT",
+  "timeframe": "per trade",
+  "mode": "synthetic",
+  "type": "concept",
+  "bias": "neutral",
+  "outcome": "loss",
+  "tags": [
+    "mistakes",
+    "journal",
+    "tags"
+  ],
+  "module": "18-notes-library",
+  "lessonSlugs": [
+    "04-mistakes-log"
+  ],
+  "caption": {
+    "en": "Hypothetical 20 trades at 1% risk. Plan trades: 13 trades, net +8R. Mistake trades (FOMO, Moved stop, Revenge): 7 trades, net -10R. Overall -2R, although the plan itself is profitable.",
+    "bn": "১% ঝুঁকিতে ২০টি কাল্পনিক trade। Plan-এর trade: ১৩টি, নিট +8R। ভুলের trade (FOMO, Moved stop, Revenge): ৭টি, নিট -10R। সামগ্রিক -2R, যদিও plan নিজে লাভজনক।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data.",
+    "bn": "এটি শিক্ষামূলক কাল্পনিক ডেটা।"
+  },
+  "explanation": {
+    "en": "Tags show that the mistakes, not the strategy, produced the loss; the Moved stop trades cost the most per trade.",
+    "bn": "Tag দেখায়, ক্ষতির উৎস strategy নয়, ভুল; প্রতি trade-এ সবচেয়ে বেশি খরচ Moved stop-এর।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "Cost your mistakes in R and fix the most expensive one first",
+      "bn": "ভুলকে R-এ খরচে বদলান, সবচেয়ে ব্যয়বহুলটি আগে ঠিক করুন"
+    }
+  ],
+  "updatedAt": "2026-11-05T22:00:00Z",
+  "candles": [
+    {
+      "i": 0,
+      "o": 10000.0,
+      "h": 10222.0,
+      "l": 9978.0,
+      "c": 10200.0,
+      "v": 0
+    },
+    {
+      "i": 1,
+      "o": 10200.0,
+      "h": 10212.2,
+      "l": 10085.8,
+      "c": 10098.0,
+      "v": 0
+    },
+    {
+      "i": 2,
+      "o": 10098.0,
+      "h": 10110.1,
+      "l": 9984.92,
+      "c": 9997.02,
+      "v": 0
+    },
+    {
+      "i": 3,
+      "o": 9997.02,
+      "h": 10218.95,
+      "l": 9975.03,
+      "c": 10196.96,
+      "v": 0
+    },
+    {
+      "i": 4,
+      "o": 10196.96,
+      "h": 10209.16,
+      "l": 10082.79,
+      "c": 10094.99,
+      "v": 0
+    },
+    {
+      "i": 5,
+      "o": 10094.99,
+      "h": 10117.18,
+      "l": 9870.9,
+      "c": 9893.09,
+      "v": 0
+    },
+    {
+      "i": 6,
+      "o": 9893.09,
+      "h": 9904.98,
+      "l": 9782.27,
+      "c": 9794.16,
+      "v": 0
+    },
+    {
+      "i": 7,
+      "o": 9794.16,
+      "h": 10011.63,
+      "l": 9772.57,
+      "c": 9990.04,
+      "v": 0
+    },
+    {
+      "i": 8,
+      "o": 9990.04,
+      "h": 10002.03,
+      "l": 9878.15,
+      "c": 9890.14,
+      "v": 0
+    },
+    {
+      "i": 9,
+      "o": 9890.14,
+      "h": 9902.03,
+      "l": 9779.35,
+      "c": 9791.24,
+      "v": 0
+    },
+    {
+      "i": 10,
+      "o": 9791.24,
+      "h": 10008.64,
+      "l": 9769.66,
+      "c": 9987.06,
+      "v": 0
+    },
+    {
+      "i": 11,
+      "o": 9987.06,
+      "h": 9999.05,
+      "l": 9875.2,
+      "c": 9887.19,
+      "v": 0
+    },
+    {
+      "i": 12,
+      "o": 9887.19,
+      "h": 9899.08,
+      "l": 9776.43,
+      "c": 9788.32,
+      "v": 0
+    },
+    {
+      "i": 13,
+      "o": 9788.32,
+      "h": 10005.67,
+      "l": 9766.74,
+      "c": 9984.09,
+      "v": 0
+    },
+    {
+      "i": 14,
+      "o": 9984.09,
+      "h": 10016.04,
+      "l": 9652.62,
+      "c": 9684.57,
+      "v": 0
+    },
+    {
+      "i": 15,
+      "o": 9684.57,
+      "h": 9696.25,
+      "l": 9576.03,
+      "c": 9587.72,
+      "v": 0
+    },
+    {
+      "i": 16,
+      "o": 9587.72,
+      "h": 9800.64,
+      "l": 9566.55,
+      "c": 9779.47,
+      "v": 0
+    },
+    {
+      "i": 17,
+      "o": 9779.47,
+      "h": 9791.25,
+      "l": 9669.9,
+      "c": 9681.68,
+      "v": 0
+    },
+    {
+      "i": 18,
+      "o": 9681.68,
+      "h": 9693.36,
+      "l": 9573.18,
+      "c": 9584.86,
+      "v": 0
+    },
+    {
+      "i": 19,
+      "o": 9584.86,
+      "h": 9797.73,
+      "l": 9563.69,
+      "c": 9776.56,
+      "v": 0
+    }
+  ],
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 10000,
+      "label": "Start 10,000",
+      "color": "#3b82f6",
+      "style": "dotted"
+    },
+    {
+      "type": "marker",
+      "i": 2,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "FOMO"
+    },
+    {
+      "type": "marker",
+      "i": 5,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Moved stop"
+    },
+    {
+      "type": "marker",
+      "i": 8,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Revenge"
+    },
+    {
+      "type": "marker",
+      "i": 11,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "FOMO"
+    },
+    {
+      "type": "marker",
+      "i": 14,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Moved stop"
+    },
+    {
+      "type": "marker",
+      "i": 17,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Revenge"
+    },
+    {
+      "type": "marker",
+      "i": 18,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "FOMO"
+    }
+  ]
+}

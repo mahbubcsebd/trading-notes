@@ -1,3 +1,9 @@
 {
-  "title": "Case Studies Trade Reviews"
+  "title": "Case Studies Trade Reviews",
+  "pages": [
+    "00-overview",
+    "01-nijer-winning-losing-trade-breakdown",
+    "02-famous-gold-move-analysis",
+    "03-weekly-review-template"
+  ]
 }

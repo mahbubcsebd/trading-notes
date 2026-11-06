@@ -1,0 +1,330 @@
+{
+  "symbol": "EURUSD",
+  "timeframe": "H4",
+  "mode": "synthetic",
+  "module": "06-trend-chart-patterns",
+  "lessonSlugs": [
+    "04-fake-breakout"
+  ],
+  "notes": {
+    "en": "Illustrative synthetic data.",
+    "bn": "এটি শিক্ষামূলক কাল্পনিক ডেটা।"
+  },
+  "updatedAt": "2026-11-05T21:00:00Z",
+  "type": "trade-setup",
+  "id": "fakeout-reversal-01",
+  "title": {
+    "en": "Fake Breakout, Fade the Failure",
+    "bn": "Fake breakout, ব্যর্থতায় উল্টো trade"
+  },
+  "bias": "bearish",
+  "outcome": "win",
+  "tags": [
+    "fake-breakout",
+    "false-breakout",
+    "range"
+  ],
+  "caption": {
+    "en": "Candle 18 breaks the 1.0900 top, candle 19 closes back inside at 1.0888. Sell 1.0888, stop 1.0932 above the fake high, target 1.0808 near the range bottom.",
+    "bn": "১৮ নম্বর candle 1.0900 top ভাঙে, ১৯ নম্বর candle ভিতরে 1.0888-এ ফিরে close করে। Sell 1.0888, stop 1.0932 (fake high-এর ওপরে), target 1.0808 (range bottom-এর কাছে)।"
+  },
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 1.09,
+      "label": "Range top 1.0900",
+      "color": "#3b82f6",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.08,
+      "label": "Range bottom 1.0800",
+      "color": "#3b82f6",
+      "style": "dashed"
+    },
+    {
+      "type": "marker",
+      "i": 18,
+      "position": "aboveBar",
+      "shape": "arrowUp",
+      "text": "Breakout?"
+    },
+    {
+      "type": "marker",
+      "i": 19,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Back inside"
+    },
+    {
+      "type": "marker",
+      "i": 20,
+      "position": "belowBar",
+      "shape": "arrowDown",
+      "text": "Sell"
+    },
+    {
+      "type": "hline",
+      "price": 1.0888,
+      "label": "Sell entry",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.0932,
+      "label": "Stop (above fake high)",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.0808,
+      "label": "Target (range bottom)",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Failure level is the 1.0900 top: price accepted above it for one candle only. Stop sits above the fake high 1.0932, risk 44 pips for 80 pips of target (about 1.8R). Trapped buyers add selling pressure on the way down.",
+    "bn": "Failure level হলো 1.0900 top: দাম মাত্র একটি candle-এর জন্য ওপরে টিকেছিল। Stop fake high 1.0932-এর ওপরে, ঝুঁকি 44 pip, target 80 pip দূরে (প্রায় 1.8R)। আটকে পড়া ক্রেতাদের বিক্রি নিচে নামার সময় চাপ বাড়ায়।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "A fake breakout is confirmed by a close back inside, not by the spike",
+      "bn": "Fake breakout নিশ্চিত হয় ভিতরে ফিরে close করলে, spike দেখে নয়"
+    },
+    {
+      "en": "Stop goes above the extreme of the fake move",
+      "bn": "Stop যায় fake move-এর চূড়ার ওপরে"
+    }
+  ],
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.0842,
+      "h": 1.0856,
+      "l": 1.0836,
+      "c": 1.085
+    },
+    {
+      "i": 1,
+      "o": 1.085,
+      "h": 1.0881,
+      "l": 1.0842,
+      "c": 1.0873
+    },
+    {
+      "i": 2,
+      "o": 1.0873,
+      "h": 1.0901,
+      "l": 1.0863,
+      "c": 1.0895
+    },
+    {
+      "i": 3,
+      "o": 1.0895,
+      "h": 1.0901,
+      "l": 1.0846,
+      "c": 1.0852
+    },
+    {
+      "i": 4,
+      "o": 1.0852,
+      "h": 1.086,
+      "l": 1.08,
+      "c": 1.081
+    },
+    {
+      "i": 5,
+      "o": 1.081,
+      "h": 1.0861,
+      "l": 1.08,
+      "c": 1.0851
+    },
+    {
+      "i": 6,
+      "o": 1.0851,
+      "h": 1.0899,
+      "l": 1.0845,
+      "c": 1.0892
+    },
+    {
+      "i": 7,
+      "o": 1.0892,
+      "h": 1.09,
+      "l": 1.0841,
+      "c": 1.0849
+    },
+    {
+      "i": 8,
+      "o": 1.0849,
+      "h": 1.0859,
+      "l": 1.0799,
+      "c": 1.0806
+    },
+    {
+      "i": 9,
+      "o": 1.0806,
+      "h": 1.0854,
+      "l": 1.08,
+      "c": 1.0848
+    },
+    {
+      "i": 10,
+      "o": 1.0848,
+      "h": 1.0902,
+      "l": 1.084,
+      "c": 1.089
+    },
+    {
+      "i": 11,
+      "o": 1.089,
+      "h": 1.09,
+      "l": 1.0842,
+      "c": 1.0852
+    },
+    {
+      "i": 12,
+      "o": 1.0852,
+      "h": 1.0858,
+      "l": 1.0801,
+      "c": 1.0815
+    },
+    {
+      "i": 13,
+      "o": 1.0815,
+      "h": 1.086,
+      "l": 1.0807,
+      "c": 1.0852
+    },
+    {
+      "i": 14,
+      "o": 1.0852,
+      "h": 1.09,
+      "l": 1.0842,
+      "c": 1.0888
+    },
+    {
+      "i": 15,
+      "o": 1.0888,
+      "h": 1.0894,
+      "l": 1.0861,
+      "c": 1.0867
+    },
+    {
+      "i": 16,
+      "o": 1.0867,
+      "h": 1.0875,
+      "l": 1.0837,
+      "c": 1.0845
+    },
+    {
+      "i": 17,
+      "o": 1.0845,
+      "h": 1.0886,
+      "l": 1.0835,
+      "c": 1.0876
+    },
+    {
+      "i": 18,
+      "o": 1.0876,
+      "h": 1.0932,
+      "l": 1.0872,
+      "c": 1.0912
+    },
+    {
+      "i": 19,
+      "o": 1.0912,
+      "h": 1.0928,
+      "l": 1.0884,
+      "c": 1.0888
+    },
+    {
+      "i": 20,
+      "o": 1.0888,
+      "h": 1.089,
+      "l": 1.0868,
+      "c": 1.0874
+    },
+    {
+      "i": 21,
+      "o": 1.0874,
+      "h": 1.088,
+      "l": 1.0857,
+      "c": 1.0863
+    },
+    {
+      "i": 22,
+      "o": 1.0863,
+      "h": 1.0871,
+      "l": 1.0844,
+      "c": 1.0852
+    },
+    {
+      "i": 23,
+      "o": 1.0852,
+      "h": 1.0862,
+      "l": 1.0833,
+      "c": 1.0843
+    },
+    {
+      "i": 24,
+      "o": 1.0843,
+      "h": 1.0849,
+      "l": 1.0828,
+      "c": 1.0834
+    },
+    {
+      "i": 25,
+      "o": 1.0834,
+      "h": 1.0842,
+      "l": 1.0818,
+      "c": 1.0826
+    },
+    {
+      "i": 26,
+      "o": 1.0826,
+      "h": 1.0836,
+      "l": 1.0808,
+      "c": 1.0818
+    },
+    {
+      "i": 27,
+      "o": 1.0818,
+      "h": 1.0824,
+      "l": 1.0807,
+      "c": 1.0813
+    },
+    {
+      "i": 28,
+      "o": 1.0813,
+      "h": 1.0821,
+      "l": 1.0803,
+      "c": 1.0808
+    },
+    {
+      "i": 29,
+      "o": 1.0808,
+      "h": 1.0818,
+      "l": 1.0795,
+      "c": 1.0805
+    },
+    {
+      "i": 30,
+      "o": 1.0805,
+      "h": 1.0811,
+      "l": 1.0797,
+      "c": 1.0803
+    },
+    {
+      "i": 31,
+      "o": 1.0803,
+      "h": 1.0811,
+      "l": 1.0796,
+      "c": 1.08
+    }
+  ],
+  "entry": 1.0888
+}

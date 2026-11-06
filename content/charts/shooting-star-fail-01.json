@@ -1,0 +1,266 @@
+{
+  "id": "shooting-star-fail-01",
+  "title": {
+    "en": "Shooting Star With the Stop Hidden Mid-Wick",
+    "bn": "Wick-এর মাঝে লুকানো stop-সহ shooting star"
+  },
+  "symbol": "USDJPY",
+  "timeframe": "H4",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bearish",
+  "outcome": "loss",
+  "tags": [
+    "shooting-star",
+    "candlestick",
+    "fail",
+    "stop-placement",
+    "pattern"
+  ],
+  "module": "patterns",
+  "lessonSlugs": [],
+  "caption": {
+    "en": "Illustrative synthetic USDJPY H4: a valid shooting star at an old high, short on the low break. The stop was placed in the middle of the upper wick to improve R:R. Price retests into the wick, takes that stop, then falls as the idea predicted.",
+    "bn": "শিক্ষামূলক কাল্পনিক USDJPY H4: পুরোনো high-এ একটি সঠিক shooting star, low ভাঙলে short। R:R ভালো দেখাতে stop রাখা হয়েছিল উপরের wick-এর মাঝখানে। দাম wick-এ ফিরে সেই stop নেয়, তারপর ধারণা অনুযায়ী নিচে নামে।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data, not a real market record.",
+    "bn": "শিক্ষামূলক কাল্পনিক ডেটা, বাস্তব মার্কেটের রেকর্ড নয়।"
+  },
+  "updatedAt": "2026-11-06T12:00:00Z",
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 151.907,
+      "label": "Old high (resistance)",
+      "color": "#3b82f6",
+      "style": "dashed"
+    },
+    {
+      "type": "marker",
+      "i": 15,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Shooting star"
+    },
+    {
+      "type": "marker",
+      "i": 17,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Retest takes tight stop"
+    },
+    {
+      "type": "hline",
+      "price": 151.737,
+      "label": "Entry (low break)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 152.057,
+      "label": "Tight stop (mid-wick)",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 152.357,
+      "label": "Proper stop (above wick)",
+      "color": "#ef4444",
+      "style": "dotted"
+    },
+    {
+      "type": "hline",
+      "price": 151.097,
+      "label": "Target 2R (tight)",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candle 15 is a clean shooting star at the old high, and candle 16 breaks its low. The stop sat at the middle of the wick instead of above its high. Candle 17 retests into the wick and takes that stop. A stop above the wick high would have survived, and price later reached that wider 2R target too.",
+    "bn": "১৫ নম্বর পুরোনো high-এ পরিষ্কার shooting star, ১৬ নম্বর তার low ভাঙে। Stop wick-এর high-এর উপরে নয়, মাঝখানে ছিল। ১৭ নম্বর wick-এ ফিরে সেই stop নেয়। Wick high-এর উপরের stop টিকে যেত, আর দাম পরে সেই বড় 2R target-ও ছুঁয়েছে।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "A stop inside the wick sits where price has already traded",
+      "bn": "Wick-এর ভেতরের stop এমন জায়গায়, যেখানে দাম আগেই গেছে"
+    }
+  ],
+  "entry": 151.737,
+  "stopLoss": 152.057,
+  "takeProfit": 151.097,
+  "rr": "1:2.0",
+  "candles": [
+    {
+      "i": 0,
+      "o": 150.8,
+      "h": 151.152,
+      "l": 150.663,
+      "c": 151.05
+    },
+    {
+      "i": 1,
+      "o": 151.05,
+      "h": 151.523,
+      "l": 150.884,
+      "c": 151.35
+    },
+    {
+      "i": 2,
+      "o": 151.35,
+      "h": 151.41,
+      "l": 151.195,
+      "c": 151.25
+    },
+    {
+      "i": 3,
+      "o": 151.25,
+      "h": 151.703,
+      "l": 151.128,
+      "c": 151.53
+    },
+    {
+      "i": 4,
+      "o": 151.53,
+      "h": 151.877,
+      "l": 151.435,
+      "c": 151.75
+    },
+    {
+      "i": 5,
+      "o": 151.75,
+      "h": 151.907,
+      "l": 151.6,
+      "c": 151.667
+    },
+    {
+      "i": 6,
+      "o": 151.667,
+      "h": 151.738,
+      "l": 151.273,
+      "c": 151.417
+    },
+    {
+      "i": 7,
+      "o": 151.417,
+      "h": 151.613,
+      "l": 150.983,
+      "c": 151.117
+    },
+    {
+      "i": 8,
+      "o": 151.117,
+      "h": 151.205,
+      "l": 150.904,
+      "c": 150.967
+    },
+    {
+      "i": 9,
+      "o": 150.967,
+      "h": 151.14,
+      "l": 150.895,
+      "c": 151.087
+    },
+    {
+      "i": 10,
+      "o": 151.087,
+      "h": 151.205,
+      "l": 150.827,
+      "c": 150.887
+    },
+    {
+      "i": 11,
+      "o": 150.887,
+      "h": 151.225,
+      "l": 150.802,
+      "c": 151.087
+    },
+    {
+      "i": 12,
+      "o": 151.087,
+      "h": 151.429,
+      "l": 150.975,
+      "c": 151.347
+    },
+    {
+      "i": 13,
+      "o": 151.347,
+      "h": 151.605,
+      "l": 151.271,
+      "c": 151.527
+    },
+    {
+      "i": 14,
+      "o": 151.527,
+      "h": 151.847,
+      "l": 151.467,
+      "c": 151.807
+    },
+    {
+      "i": 15,
+      "o": 151.807,
+      "h": 152.307,
+      "l": 151.757,
+      "c": 151.757
+    },
+    {
+      "i": 16,
+      "o": 151.757,
+      "h": 151.787,
+      "l": 151.657,
+      "c": 151.687
+    },
+    {
+      "i": 17,
+      "o": 151.687,
+      "h": 152.117,
+      "l": 151.647,
+      "c": 151.807
+    },
+    {
+      "i": 18,
+      "o": 151.807,
+      "h": 151.9,
+      "l": 151.442,
+      "c": 151.507
+    },
+    {
+      "i": 19,
+      "o": 151.507,
+      "h": 151.633,
+      "l": 151.045,
+      "c": 151.157
+    },
+    {
+      "i": 20,
+      "o": 151.157,
+      "h": 151.294,
+      "l": 151.117,
+      "c": 151.257
+    },
+    {
+      "i": 21,
+      "o": 151.257,
+      "h": 151.405,
+      "l": 150.756,
+      "c": 150.857
+    },
+    {
+      "i": 22,
+      "o": 150.857,
+      "h": 150.987,
+      "l": 150.461,
+      "c": 150.557
+    },
+    {
+      "i": 23,
+      "o": 150.557,
+      "h": 150.647,
+      "l": 150.192,
+      "c": 150.307
+    }
+  ]
+}

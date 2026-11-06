@@ -1,0 +1,96 @@
+{
+  "id": "revenge-spiral-01",
+  "title": {
+    "en": "The Revenge Spiral",
+    "bn": "Revenge trading-এর ঢাল"
+  },
+  "symbol": "ACCOUNT",
+  "timeframe": "per trade",
+  "mode": "synthetic",
+  "type": "concept",
+  "bias": "neutral",
+  "outcome": "loss",
+  "tags": [
+    "revenge-trading",
+    "position-size",
+    "drawdown"
+  ],
+  "module": "12-trading-psychology",
+  "lessonSlugs": [
+    "04-fomo-revenge-trading"
+  ],
+  "caption": {
+    "en": "After one -1% loss the trader risks 2%, then 4%, then 6% to win it back. Four losses cost about 12.4%. At the plan's 1% they would have cost about 3.9% (hypothetical).",
+    "bn": "একটি -1% লোকসানের পর ফেরাতে 2%, তারপর 4%, তারপর 6% ঝুঁকি। চারটি লোকসানে প্রায় 12.4% যায়। Plan-এর 1%-এ যেত প্রায় 3.9% (কাল্পনিক)।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data.",
+    "bn": "এটি শিক্ষামূলক কাল্পনিক ডেটা।"
+  },
+  "explanation": {
+    "en": "Raising size after a loss turns a normal losing streak into a deep drawdown.",
+    "bn": "লোকসানের পর size বাড়ালে স্বাভাবিক ধারা গভীর drawdown হয়ে যায়।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "After a loss, size stays the same or gets smaller",
+      "bn": "লোকসানের পর size একই থাকে বা কমে"
+    }
+  ],
+  "updatedAt": "2026-11-05T22:00:00Z",
+  "candles": [
+    {
+      "i": 0,
+      "o": 10000.0,
+      "h": 10012.0,
+      "l": 9888.0,
+      "c": 9900.0,
+      "v": 0
+    },
+    {
+      "i": 1,
+      "o": 9900.0,
+      "h": 9921.8,
+      "l": 9680.2,
+      "c": 9702.0,
+      "v": 0
+    },
+    {
+      "i": 2,
+      "o": 9702.0,
+      "h": 9742.81,
+      "l": 9273.11,
+      "c": 9313.92,
+      "v": 0
+    },
+    {
+      "i": 3,
+      "o": 9313.92,
+      "h": 9371.8,
+      "l": 8697.2,
+      "c": 8755.08,
+      "v": 0
+    }
+  ],
+  "annotations": [
+    {
+      "type": "hline",
+      "price": 10000,
+      "label": "Start 10,000",
+      "color": "#3b82f6",
+      "style": "dotted"
+    }
+  ],
+  "overlays": [
+    {
+      "label": "Plan 1% risk",
+      "color": "#f97316",
+      "values": [
+        9900.0,
+        9801.0,
+        9702.99,
+        9605.96
+      ]
+    }
+  ]
+}

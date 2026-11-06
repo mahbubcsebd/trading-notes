@@ -1,0 +1,205 @@
+---
+title: "Risk per Trade: How Much Is Safe to Lose on One Trade"
+description: "What risk per trade is, why the 1% rule is common, how a losing streak eats an account, and the steps to set your risk in money, with charts and calculations."
+level: beginner
+tags: [risk-management, risk-per-trade, stop-loss, 1-percent-rule]
+instruments: [EURUSD]
+timeframes: [H4]
+status: done
+sources:
+  - type: blog
+    title: "Risk Management Techniques for Active Traders - Investopedia"
+    url: "https://www.investopedia.com/articles/trading/09/risk-management.asp"
+  - type: blog
+    title: "Forex Money Management - BabyPips"
+    url: "https://www.babypips.com/learn/forex/risk-management"
+updated: 2026-11-06
+---
+
+# Risk per Trade: How Much Is Safe to Lose on One Trade
+
+Your analysis was right, but you still lost four trades in a row. Now the question is: how much of the account is left? The answer is not decided by your analysis. It is decided by how much risk you took **before** the trade.
+
+## What you will be able to do
+
+- **Explain in your own words** what risk per trade is.
+- **Work out the risk in money** from a percentage of the account.
+- **Show by calculation** the difference between small and large risk in a losing streak.
+- **Set a risk per trade limit** for yourself.
+
+## Why it matters
+
+- **Losses are unavoidable.** No setup works every time. How much you lose is in your hands.
+- **Risk is the only thing you can control.** You do not know where the market will go, but you know how much you will lose.
+- **Risk is wasted in two steps.** First a big loss, then a bigger risk to win it back.
+
+Prerequisites: [Pip, Lot, Leverage, Margin](/en/learn/01-foundations/03-pips-lots-leverage-margin) and the idea of a stop loss.
+
+## What is risk per trade
+
+**Risk per trade is the part of your account you lose if the stop loss is hit on one trade.** It is usually stated as a percentage of the account (for example 1%).
+
+Think of a business budget, not a gambling table. A shopkeeper risks only a small part of the capital each day, not all of it. One bad day of sales does not close the shop.
+
+Formula: **risk (money) = account × risk percent**.
+
+(Imaginary example) With an account of 10,000 and risk of 1%, the maximum risk on one trade is 100.
+
+## What it looks like on a chart
+
+<Chart
+  id="risk-1pct-win-01"
+  height={440}
+  caption="EURUSD H4 (educational, imaginary example): buy at 1.0900 on candle 40. Stop 40 pips below (1.0860), target 80 pips above (1.0980). If the stop is hit, the loss is exactly 1%."
+/>
+
+Here the risk of 100 was set first. Then the lot size was set from the stop distance (the formula is in the [Position Sizing](/en/learn/08-risk-management/02-position-sizing) lesson). Do not reverse the order.
+
+## Step by step: setting your own risk
+
+<Steps>
+
+### Step 1: Write down the account amount
+
+Count only the money set aside for trading. Not the rent money.
+
+### Step 2: Pick a percentage
+
+The usual range for beginners is 0.5% to 1%. Many experienced traders also go no higher than 2%. This is not a rule, just common practice.
+
+### Step 3: Convert to money
+
+10,000 × 1% = 100. This is the maximum loss on each trade.
+
+### Step 4: Stop first, lot second
+
+Set the stop by looking at structure. Then work out the lot size from the risk and the stop.
+
+### Step 5: Write it down
+
+In your trading plan, write: "No trade risks more than X% of the account."
+
+</Steps>
+
+## Why a small percentage: the losing streak calculation
+
+<Chart
+  id="risk-streak-equity-01"
+  height={440}
+  caption="Account (educational calculation): 10 losses in a row. The candles show the account risking 1%, the orange line shows the account risking 5%. The calculation is simple multiplication, not real data."
+/>
+
+| Risk | After 10 losses (from 10,000) | Gain needed to get back |
+| :--- | :---------------------------- | :---------------------- |
+| 1%   | about 9,044                   | about 10.6%             |
+| 5%   | about 5,987                   | about 67%               |
+
+**Notice that the way back from a loss is not straight.** If you lose 40%, a 40% gain does not bring you back. You need about 67%. More in the [Drawdown Rules](/en/learn/08-risk-management/04-drawdown-rules) lesson.
+
+## Example 1: when it works (synthetic)
+
+The EURUSD chart above:
+
+- **Set in advance:** risk 100 (1%).
+- **Entry:** buy 1.0900. **Stop:** 1.0860. **Target:** 1.0980.
+- **Result:** price did not touch the stop. It reached the target. Profit about 200.
+- **Lesson:** the risk was right even when winning, so the result could be handled calmly.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Example 2: when it fails (synthetic)
+
+Trader A risks 5% on each trade. After 10 losses in a row, the account falls to about 5,987. Trader B risks 1%, and the account is about 9,044.
+
+- **What was visible:** both have the same analysis, setups and loss streak.
+- **Result:** A needs a gain of about 67% to recover. B needs about 10.6%.
+- **Why it was wrong:** A thought "this setup is good" and took a big risk. Good setups lose too.
+- **Lesson:** set the size of the risk by thinking about losing, not by hoping to win.
+
+(Synthetic educational calculation. No result is guaranteed.)
+
+## Common mistakes
+
+| Mistake                                     | Why it happens               | What to do                        |
+| :------------------------------------------ | :--------------------------- | :-------------------------------- |
+| Raising risk because "this one is certain"  | Overconfidence               | Same percentage on every trade    |
+| Doubling risk on the next trade to win back | Cannot accept the loss       | Keep the risk fixed               |
+| Thinking in lots, not in money              | It seems easier              | Money first, then lots            |
+| Moving the stop farther away                | Not wanting to admit loss    | Move the stop only to cut risk    |
+| Treating margin as risk                     | Margin seems to be the limit | The limit is the stop, not margin |
+
+## Pro tips
+
+<Callout type="tip">
+  If you are new, start with 0.5%. The goal for the first few months is not
+  profit. It is building the habit of following the rules.
+</Callout>
+
+<Callout type="tip">
+  When the account grows or shrinks, the money at risk changes but the
+  percentage does not. 1% of 9,000 is 90.
+</Callout>
+
+<Callout type="warning">
+  High leverage allows you to take more risk, but it does not require you to.
+  However much leverage the broker gives, your limit is in your plan.
+</Callout>
+
+## When this does not work
+
+- **Where the stop slips:** in a fast market or a gap, the loss may not be exactly 1%.
+- **With a very small account:** because of the minimum lot, it can be hard to fit 1% risk.
+- **On a trade with no stop:** then there is no limit on the risk at all.
+- **Small risk does not mean profit:** it is a condition for survival, not a guarantee of profit.
+
+## Summary
+
+<KeyTakeaways>
+
+- Risk per trade is the part of the account you lose if the stop is hit.
+- Set the risk in money first, then set the lot size.
+- With small risk you can survive a losing streak. With big risk it is hard to come back.
+- Write the percentage in your plan and follow it on every trade.
+
+</KeyTakeaways>
+
+## Practice
+
+Write down the amount of your (or an imaginary) account. Write down how much money the risk is at 0.5%, 1% and 2%. Then, for each, work out what the account is after 8 losses in a row (each time: previous amount × (1 − percent)).
+
+## Quiz
+
+1. With an account of 5,000 and risk of 2%, what is the risk on one trade?
+2. Why is it a problem to set the lot first and the stop afterward?
+3. After 10 losses in a row at 5% risk, by about what percent does the account fall?
+4. When the account falls, what happens to the money at risk?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** 5,000 × 2% = 100.
+
+**2.** The risk then depends on the stop distance, which you did not set beforehand. The risk goes by guesswork.
+
+**3.** About 40% (0.95 multiplied 10 times ≈ 0.60).
+
+**4.** The percentage stays the same, so the amount of money falls.
+
+</details>
+
+## Next steps
+
+- Before: [Risk Management Overview](/en/learn/08-risk-management/00-overview).
+- After: [Position Sizing](/en/learn/08-risk-management/02-position-sizing).
+- Related: [Risk:Reward](/en/learn/08-risk-management/03-risk-reward).
+
+### Sources
+
+- <ExternalLink href="https://www.investopedia.com/articles/trading/09/risk-management.asp">
+    Risk Management, Investopedia
+  </ExternalLink>
+- <ExternalLink href="https://www.babypips.com/learn/forex/risk-management">
+    Forex Risk Management, BabyPips
+  </ExternalLink>
+
+<Disclaimer />

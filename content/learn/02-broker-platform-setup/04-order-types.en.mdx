@@ -1,0 +1,193 @@
+---
+title: "Order Types: Market, Limit, Stop and Protective Orders"
+description: "When to use market, buy/sell limit, buy/sell stop, stop loss, take profit and trailing stop orders, how each works, and the pros and risks of limit and stop orders — with two charts."
+level: beginner
+tags:
+  [order-types, market-order, limit-order, stop-order, stop-loss, take-profit]
+instruments: [EURUSD]
+timeframes: [H1]
+status: done
+sources:
+  - type: blog
+    title: "Order Types - Investopedia"
+    url: "https://www.investopedia.com/terms/o/order.asp"
+updated: 2026-11-06
+---
+
+# Order Types: Market, Limit, Stop and Protective Orders
+
+In a restaurant you can say "bring me whatever you have, now" (market), or "bring it if the price is this much" (limit). In trading, the order type likewise decides when and at what price you get in. Choose the wrong type and you can lose the profit even when your direction is right.
+
+## What you will be able to do
+
+- **Recognise** the six main order types.
+- **Explain** the difference between limit and stop orders.
+- **Place** protective orders (stop loss, take profit).
+- **Choose** which one to use in which situation.
+
+## Why it matters
+
+- **The entry price changes the result.** [Slippage](/en/learn/10-trade-management-execution/04-slippage-requote-spread-widening) and R:R both depend on it.
+- **Trading without a stop is dangerous.** A [stop](/en/learn/10-trade-management-execution/01-stop-loss-placement) in the wrong place throws your risk calculation off.
+- **The wrong button on the platform** causes real losses.
+
+Prerequisites: [MT5 and TradingView Setup](/en/learn/02-broker-platform-setup/03-mt5-ar-tradingview-setup).
+
+## What an order is
+
+**An order is an instruction to your broker: what to buy or sell, how much, and on what terms.**
+
+| Order      | When it executes                                 | Position relative to price  |
+| :--------- | :----------------------------------------------- | :-------------------------- |
+| Market     | Now, at the current price                        | —                           |
+| Buy limit  | When price falls to a set level                  | **Below** the current price |
+| Sell limit | When price rises to a set level                  | **Above** the current price |
+| Buy stop   | When price rises past a set level                | **Above** the current price |
+| Sell stop  | When price falls past a set level                | **Below** the current price |
+| Stop-limit | A limit order activates when the stop is touched | Varies by platform          |
+
+**In short:** Limit = buy or sell at a better price (waiting against the move). Stop = get in with the momentum once price touches a level.
+
+**Protective orders:**
+
+- **Stop loss (SL):** The level at which the position closes to limit the loss.
+- **Take profit (TP):** The level at which you lock in the profit.
+- **Trailing stop:** The stop moves automatically as price goes in your favour ([Trailing Stop](/en/learn/10-trade-management-execution/03-trailing-stop)).
+
+## What it looks like on a chart
+
+<Chart
+  id="order-buy-limit-win-01"
+  height={440}
+  caption="EURUSD H1 (educational, synthetic example) — price is at 1.0950 and the trader doesn't want to buy there. A buy limit waits at 1.0900; price falls, the order fills, and the trade reaches the 1.0950 target."
+/>
+
+A limit order gets you in at a better price by itself. But if price doesn't come to that level, it doesn't fill.
+
+## Step by step: choosing an order
+
+<Steps>
+
+### Step 1: What does your setup call for?
+
+Entering on a pullback (limit) or on a breakout (stop)?
+
+### Step 2: Check the position relative to price
+
+Buy limit below, buy stop above. Put it on the wrong side and the platform will object or behave differently.
+
+### Step 3: Set the stop and target
+
+Together with the order. Use the minimum ratio from [Risk Reward](/en/learn/08-risk-management/03-risk-reward).
+
+### Step 4: Set the expiry
+
+Until tonight, or until you cancel? A forgotten old pending order is dangerous.
+
+### Step 5: Stick to the plan once it fills
+
+Write down in advance what you will do after the order fills.
+
+</Steps>
+
+## Example 1: when it works (synthetic)
+
+- **Setup:** A pullback in an uptrend; price is at 1.0950, and the trader wants to buy at the 1.0900 support.
+- **Action:** Buy limit 1.0900, stop 1.0875, target 1.0950.
+- **Result:** Price fell and filled at 1.0900, then rose to hit the target. +2R.
+- **Lesson:** A limit gets you in at a better price and keeps the stop small.
+
+(Synthetic educational example. This is not a real trade.)
+
+## Example 2: when it fails (synthetic)
+
+<Chart
+  id="order-buy-stop-fail-01"
+  height={440}
+  caption="EURUSD H1 (educational, synthetic example) — a buy stop at 1.0960 triggers when the range high breaks. The break doesn't last; price returns inside the range and hits the stop at 1.0930."
+/>
+
+- **What happened:** A buy stop above the range; price broke out briefly and came back.
+- **Result:** It filled and then the stop was hit, −1R.
+- **Why it failed:** A stop order gets you in on any breakout, including a false one. There was no filter.
+- **Lesson:** Pair breakout orders with a confirmation rule (such as a close and a retest). ([Fake Breakout](/en/learn/06-trend-chart-patterns/04-fake-breakout))
+
+(Synthetic educational example. This is not a real trade.)
+
+## Common mistakes
+
+| Mistake                                     | Why it happens          | What to do                              |
+| :------------------------------------------ | :---------------------- | :-------------------------------------- |
+| Confusing limit with stop                   | The names sound similar | Remember the table: "limit = buy below" |
+| An order without a stop                     | "I'll add it later"     | Set it with the order                   |
+| Forgetting old pending orders               | No expiry set           | A rule for expiry or cancelling         |
+| No confirmation on a stop order             | The pull of momentum    | Wait for a close                        |
+| Leaving pending orders in place before news | Busy with other things  | Cancel them beforehand                  |
+
+## Pro tips
+
+<Callout type="tip">
+  Make it a habit to cancel all pending orders before news. In a news spike, an
+  order can fill at an unexpected price.
+</Callout>
+
+<Callout type="note">
+  With a limit order, even if price reaches your level exactly and turns back,
+  the order may not fill (because of the queue and the spread). A fill is not
+  guaranteed.
+</Callout>
+
+## When this does not work
+
+- **In very fast markets:** A stop order can fill far from your level (slippage).
+- **Definitions differ by platform:** Stop-limit and other types vary by platform; read your platform's help pages.
+- **Not every broker offers every order type:** Especially OCO and some conditional orders.
+
+## Summary
+
+<KeyTakeaways>
+
+- Market = now; limit = wait for a better price; stop = get in when a level is touched.
+- Buy limit below price, buy stop above.
+- Set the stop loss and take profit together with the order.
+- A limit fill is not guaranteed; a stop can catch a false breakout.
+
+</KeyTakeaways>
+
+## Practice
+
+On demo, place one buy limit and one buy stop (below and above the price), both with a small lot and a stop. Write down which filled first, and why.
+
+## Quiz
+
+1. Is a buy limit below or above the price?
+2. Why can a stop order get you into a false breakout?
+3. What is the weakness of a limit order?
+4. What should you do with pending orders before news?
+
+<details>
+<summary>Show answers</summary>
+
+**1.** Below.
+
+**2.** Because it triggers as soon as price touches the level, without checking whether the break will hold.
+
+**3.** If price doesn't come, it doesn't fill.
+
+**4.** Cancel them.
+
+</details>
+
+## Next steps
+
+- Previous: [MT5 and TradingView Setup](/en/learn/02-broker-platform-setup/03-mt5-ar-tradingview-setup).
+- Next: [Lot Size, Margin Call and Stop-out](/en/learn/02-broker-platform-setup/05-lot-size-margin-call-stop-out).
+- Related: [Breakout and Retest](/en/learn/09-price-action-entries-strategies/01-breakout-retest-pullback-entry).
+
+### Sources
+
+- <ExternalLink href="https://www.investopedia.com/terms/o/order.asp">
+    Order, Investopedia
+  </ExternalLink>
+
+<Disclaimer />

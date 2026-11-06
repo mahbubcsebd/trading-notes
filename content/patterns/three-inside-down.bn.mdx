@@ -1,0 +1,281 @@
+---
+title: "Three Inside Down: bearish harami-র পর নিশ্চিত হওয়া reversal"
+description: "Three inside down কীভাবে চিনবেন, three inside up-এর উল্টো ছবি, তৃতীয় candle mother-এর open-এর নিচে, entry, আর কেন stop-এর buffer-এ spread ও rollover মাথায় রাখবেন — chart সহ।"
+type: bearish
+category: three-candle
+level: intermediate
+candleCount: 3
+signal: reversal
+chartId: three-inside-down-win-01
+tags: [pattern, candlestick, three-inside-down, harami, three-candle]
+status: done
+sources:
+  - type: book
+    title: "Candlestick Charting Explained - Gregory L. Morris"
+    note: "Three inside up / down"
+  - type: blog
+    title: "Three Inside Up/Down - Investopedia"
+    url: "https://www.investopedia.com/terms/t/three-inside-updown.asp"
+updated: 2026-11-06
+---
+
+পুরোনো high-এ নিখুঁত three inside down, short নিলেন, stop রাখলেন mother-এর high-এর ঠিক 1 pip উপরে। রাতে daily rollover-এর সময় spread হঠাৎ কয়েক গুণ চওড়া হলো, আর একটা সরু spike-এ stop কেটে গেল। সকালে দেখলেন দাম আপনার target-এর দিকেই নামছে। ধারণা ঠিক ছিল, buffer ছিল না। এই পাতা [Three Inside Up](/bn/patterns/three-inside-up)-এর mirror; বিস্তারিত নিয়ম সেখানে।
+
+## এক নজরে
+
+| বিষয়                | Three Inside Down                                                                                           |
+| :------------------- | :---------------------------------------------------------------------------------------------------------- |
+| ধরন                  | Bearish reversal, তিন candle (bearish harami + confirmation)                                                |
+| কোথায় খুঁজবেন       | Uptrend-এর চূড়ায়, চিহ্নিত resistance-এ                                                                    |
+| চেনার মূল চিহ্ন      | ১: লম্বা bullish mother; ২: ছোট candle mother-এর body-র ভেতরে; ৩: bearish, mother-এর open-এর নিচে close     |
+| Confirmation         | তৃতীয় candle-ই confirmation                                                                                |
+| Stop                 | Mother-এর high-এর উপরে, spread আর যথেষ্ট buffer-সহ                                                          |
+| বাতিল (invalidation) | Mother-এর high-এর উপরে close                                                                                |
+| দেখতে একই রকম        | [Bearish Harami](/bn/patterns/bearish-harami) (প্রথম দুই candle), [Evening Star](/bn/patterns/evening-star) |
+| বিপরীত pattern       | Three Inside Up                                                                                             |
+
+## এই লেখা পড়ে আপনি যা পারবেন
+
+- Three inside down আর bearish harami-র **তফাত** বলতে পারবেন।
+- Mother-এর open-কে **প্রথম ভাঙা বাধা** হিসেবে পড়তে পারবেন।
+- **Spread ও rollover** মাথায় রেখে stop-এর buffer ঠিক করতে পারবেন।
+
+## কেন জরুরি
+
+- **নিশ্চিত হওয়া bearish harami।** তৃতীয় candle mother-এর open-এর নিচে close করলে mother-এ যারা কিনেছিল, সবাই লোকসানে।
+- **Short-এর stop ask দামে।** Chart সাধারণত bid দেখায়। Short trade ask দামে বন্ধ হয়, যা bid + spread। Spread চওড়া হলে chart-এ না দেখা দামেও stop কাটতে পারে।
+- **Rollover-এর ঘণ্টা আলাদা।** দিনের শেষে broker-দের rollover-এর সময় liquidity কমে, spread প্রায়ই অনেক বাড়ে। বিস্তারিত: [Spread, Commission ও Swap](/bn/learn/01-foundations/04-spread-commission-swap)।
+
+পূর্বশর্ত: Three Inside Up পাতা (উপরে link)।
+
+## Three Inside Down কী
+
+**Three inside down হলো তিন candle-এর pattern: একটি লম্বা bullish candle, তার body-র ভেতরে একটি ছোট candle (bearish harami), তারপর একটি bearish candle যা প্রথম candle-এর open-এর নিচে close করে।**
+
+<CandleDiagram
+  title="Bearish harami থেকে three inside down"
+  candles={[
+    { o: 40, h: 46, l: 39, c: 45, dim: true },
+    { o: 45, h: 58, l: 44, c: 57, label: "১ mother" },
+    { o: 57, h: 57.5, l: 51, c: 51.5, label: "২ harami" },
+    {
+      o: 51.5,
+      h: 52,
+      l: 42,
+      c: 43,
+      label: "৩",
+      note: "mother open (45)-এর নিচে",
+    },
+  ]}
+  caption="প্রথম দুই candle একটি bearish harami। তৃতীয় candle mother-এর open-এর নিচে close করে harami নিশ্চিত করে।"
+/>
+
+### চেনার নিয়ম
+
+| নিয়ম                                               | বাধ্যতামূলক?      | কেন                                  |
+| :-------------------------------------------------- | :---------------- | :----------------------------------- |
+| আগে uptrend, mother লম্বা bullish                   | হ্যাঁ             | Harami-র ভিত্তি                      |
+| দ্বিতীয় candle-এর body mother-এর body-র ভেতরে      | হ্যাঁ             | এটাই harami                          |
+| তৃতীয় candle bearish, mother-এর open-এর নিচে close | হ্যাঁ             | এটাই "down": প্রথম বাধা পার          |
+| চিহ্নিত resistance-এ                                | হ্যাঁ             | Level ছাড়া এটা uptrend-এর মাঝের dip |
+| নিচের বাধা অন্তত 1.5R দূরে                          | না (কিন্তু জরুরি) | Entry দেরিতে, তাই নিচে জায়গা কম     |
+
+## শক্তিশালী বনাম দুর্বল three inside down
+
+<DiagramRow>
+  <CandleDiagram
+    title="শক্তিশালী"
+    verdict="good"
+    verdictLabel="trade-যোগ্য"
+    candles={[
+      { o: 40, h: 46, l: 39, c: 45, dim: true },
+      { o: 45, h: 56, l: 44, c: 55 },
+      { o: 55, h: 55.5, l: 51, c: 51.5 },
+      { o: 51.5, h: 52, l: 42.5, c: 43, label: "নিচে খোলা" },
+    ]}
+    levels={[{ price: 56, label: "পুরোনো high", tone: "resistance" }]}
+    caption="পুরোনো high-এ mother, ছোট harami, তৃতীয়টা mother-এর open-এর স্পষ্ট নিচে।"
+  />
+  <CandleDiagram
+    title="দুর্বল"
+    verdict="bad"
+    verdictLabel="এড়িয়ে চলুন"
+    candles={[
+      { o: 40, h: 46, l: 39, c: 45, dim: true },
+      { o: 45, h: 54, l: 44, c: 53 },
+      { o: 53, h: 53.5, l: 50, c: 50.5 },
+      { o: 50.5, h: 51, l: 44, c: 44.6, label: "support-এর গায়ে" },
+    ]}
+    levels={[{ price: 44, label: "daily demand", tone: "support" }]}
+    caption="তৃতীয় candle সবে mother-এর open-এর নিচে, ঠিক daily demand zone-এর গায়ে।"
+  />
+</DiagramRow>
+
+| মান যাচাই     | শক্তিশালী                                  | দুর্বল                                   |
+| :------------ | :----------------------------------------- | :--------------------------------------- |
+| জায়গা        | চিহ্নিত পুরোনো high বা supply-তে           | Uptrend-এর মাঝে, level ছাড়া             |
+| তৃতীয় candle | Mother-এর open-এর স্পষ্ট নিচে, low-এর কাছে | সবে নিচে, লম্বা lower wick               |
+| নিচে বাধা     | Swing low বা zone অন্তত 1.5R দূরে          | Daily demand বা higher low 1.5R-এর মধ্যে |
+
+## Candle-এর ভেতরের গল্প
+
+Three inside up-এর গল্পই উল্টো দিকে। একটি প্রচলিত ব্যাখ্যা: mother-এ buyers জোরে তোলে, harami-তে থামে, তৃতীয় candle-এ sellers mother-এর পুরো লাভ মুছে দেয়। Mother candle-এ যারা কিনেছিল, তাদের বেরোনোর চাপ পরের পতনে যোগ হয়।
+
+<Callout type="note">
+  এটি একটি প্রচলিত ব্যাখ্যা, প্রমাণিত ঘটনা নয়। Chart দেখে কে কিনেছে বা বেচেছে,
+  তা জানা যায় না।
+</Callout>
+
+## কোথায় কাজ করে, কোথায় করে না
+
+<Compare
+  leftLabel="যেখানে three inside down-এর ওজন বেশি"
+  rightLabel="যেখানে three inside down প্রায়ই ফাঁদ"
+  left="- চিহ্নিত পুরোনো high বা supply zone-এ
+- তৃতীয় candle mother-এর open-এর স্পষ্ট নিচে close করলে
+- Downtrend-এর pullback-এর চূড়ায়, trend-এর দিকে
+- নিচে swing low পর্যন্ত যথেষ্ট জায়গা"
+  right="- ঠিক daily বা weekly demand zone-এর উপরে
+- Uptrend-এর মাঝে, কোনো level ছাড়া
+- Stop mother-এর high-এর গায়ে, buffer ছাড়া
+- Rollover বা বড় news-এর আগে খুব tight stop"
+/>
+
+## 24 ঘণ্টার বাজারে gap
+
+<Callout type="note">
+  Three inside up-এর মতোই: gap লাগে না, দ্বিতীয় candle mother-এর close থেকে
+  শুরু হয়। Gap-এর বদলে Forex-এর আসল ঝুঁকি হলো **spread**: দিনের rollover,
+  weekend open আর বড় news-এ spread হঠাৎ চওড়া হয়।
+</Callout>
+
+## ধাপে ধাপে: three inside down trade
+
+পুরো ধাপ Three Inside Up পাতায় আছে, উল্টো দিকে। শুধু যা আলাদা:
+
+<Steps>
+
+### ধাপ ১: Entry
+
+তৃতীয় candle-এর close-এ sell, বা mother-এর open-এর retest-এ sell limit।
+
+### ধাপ ২: Stop-এর buffer হিসাব
+
+Stop = mother-এর high + **স্বাভাবিক spread + অতিরিক্ত buffer**। একটি কাজ চালানোর নিয়ম: buffer অন্তত স্বাভাবিক spread-এর দুই-তিন গুণ, আর rollover পার হবে এমন trade-এ আরও বেশি। এটা পরিসংখ্যান নয়; নিজের broker-এর rollover spread দেখে ঠিক করুন।
+
+### ধাপ ৩: Size আর R:R
+
+বড় buffer মানে বড় stop, তাই [position size](/bn/learn/08-risk-management/02-position-sizing) সেই দূরত্ব দিয়েই। নিচের swing low পর্যন্ত [risk reward](/bn/learn/08-risk-management/03-risk-reward) অন্তত 1:1.5।
+
+</Steps>
+
+### Trade-এর আগে checklist
+
+<Checklist
+  id="pattern-three-inside-down-pretrade-bn"
+  items={[
+    "Pattern আসার আগেই resistance চিহ্নিত ছিল, আর mother সেখানে থেমেছে?",
+    "আকার নিয়ম মানছে (লম্বা সবুজ mother, ভেতরে ছোট harami, তৃতীয়টা mother-এর open-এর নিচে close)?",
+    "তিনটি candle-ই বন্ধ হয়েছে, আর stop-এর buffer-এ spread ও rollover ধরেছেন?",
+    "নিচের সবচেয়ে কাছের বাধা পর্যন্ত risk reward অন্তত 1:1.5?",
+    "এক ধাপ বড় timeframe-এ কোনো demand zone ঠিক নিচে নেই?",
+  ]}
+/>
+
+একটি ঘরও খালি থাকলে trade বাদ দিন।
+
+## উদাহরণ ১: যখন কাজ করে (কাল্পনিক)
+
+<Chart
+  id="three-inside-down-win-01"
+  height={420}
+  caption="USDJPY H1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — পুরোনো high-এ three inside down, তৃতীয় close-এ short।"
+/>
+
+- **কী দেখা যাচ্ছিল:** ৫ নম্বর candle প্রায় 149.54-এ পুরোনো high রেখে গেছে। ৬-১১ নম্বর প্রায় 148.38 পর্যন্ত নামে, ১২-১৪ নম্বর আবার ওঠে।
+- **Pattern:** ১৫ নম্বর mother: 149.18 থেকে 149.51। ১৬ নম্বর harami: 149.51 থেকে 149.378। ১৭ নম্বর 149.15-এ close, mother-এর open 149.18-এর নিচে।
+- **সিদ্ধান্ত:** তৃতীয় close-এ sell 149.15। Stop 149.57 (mother high-এর 4 pip উপরে), ঝুঁকি 42 pip। Target 148.414, swing low-এর ঠিক উপরে, প্রায় 1.8R।
+- **ফল:** ২৬ নম্বর candle target ছোঁয়।
+- **শিক্ষা:** Level, harami, mother-এর open ভাঙা, আর target বাস্তব বাধার আগে।
+
+<TradeSetup
+  direction="short"
+  pair="USDJPY"
+  entry={149.15}
+  stop={149.57}
+  target={148.414}
+/>
+
+(কাল্পনিক শিক্ষামূলক উদাহরণ। এটি real trade নয়। সব three inside down জেতে না, আর কোনো ফল গ্যারান্টি নয়।)
+
+## উদাহরণ ২: যখন ফাঁদ হয় (কাল্পনিক)
+
+<Chart
+  id="three-inside-down-fail-01"
+  height={420}
+  caption="EURUSD H1 (শিক্ষামূলক, কাল্পনিক উদাহরণ) — সঠিক three inside down, কিন্তু stop mother-এর high-এর মাত্র 1 pip উপরে। Rollover-এর spike-এ stop, তারপর দাম নিচে।"
+/>
+
+- **কী দেখা যাচ্ছিল:** ৫ নম্বর candle প্রায় 1.0964-এ পুরোনো high রেখে গেছে। ১৪-১৬ নম্বর সেখানে three inside down: mother 1.0943 থেকে 1.0961 (high 1.0963), harami 1.09538-এ close, তৃতীয় 1.0940-এ close।
+- **সিদ্ধান্ত:** তৃতীয় close-এ sell 1.0940। Stop 1.0964, mother high-এর মাত্র 1 pip উপরে, ঝুঁকি 24 pip।
+- **কী হলো:** ১৮ নম্বর daily rollover-এর ঘণ্টা। Spread চওড়া হয়, একটি সরু spike 1.09655 পর্যন্ত গিয়ে stop নেয়। তারপর দাম নামতে থাকে; প্রায় 6 pip buffer-এর stop (1.0969) টিকে থাকত, আর ২৪ নম্বর candle সেই stop-এর 2R target ছুঁত।
+- **কেন ব্যর্থ:** Pattern আর জায়গা ঠিক ছিল; buffer-এ spread আর rollover ধরা হয়নি। Checklist-এর তৃতীয় ঘরেই এটা ধরা পড়ত।
+
+**শিক্ষা:** Stop-এর buffer-এ spread ধরুন, বিশেষ করে rollover-এর সময়। ছোট stop কোনো দক্ষতা নয়।
+
+## সাধারণ ভুল
+
+| ভুল                                            | কেন হয়                  | কী করবেন                                   |
+| :--------------------------------------------- | :----------------------- | :----------------------------------------- |
+| Short-এর stop bid chart দেখে বসানো             | Ask দামের কথা না জানা    | Spread যোগ করে stop বসান                   |
+| Rollover পার হবে এমন trade-এ tight stop        | Rollover spread না জানা  | Buffer বাড়ান বা rollover-এর আগে size কমান |
+| Mother body-র মাঝ ভাঙাকে three inside down ধরা | নিয়ম গুলিয়ে ফেলা       | Mother-এর **open**-এর নিচে close লাগে      |
+| Demand zone-এর ঠিক উপরে short                  | Higher timeframe না দেখা | এক ধাপ বড় timeframe-এর zone আগে আঁকুন     |
+
+## Pro tips
+
+<Callout type="tip">
+  আপনার broker-এর rollover spread একবার নিজে দেখে রাখুন: rollover-এর আগে-পরে
+  কয়েক রাত spread লিখে রাখুন। সেই সংখ্যাই বলবে rollover পার হওয়া trade-এ
+  buffer কত হওয়া উচিত।
+</Callout>
+
+## সারসংক্ষেপ
+
+<KeyTakeaways>
+
+- Three inside down = লম্বা সবুজ mother, ভেতরে ছোট harami, তারপর mother-এর open-এর নিচে close করা লাল candle।
+- এটা নিশ্চিত হওয়া bearish harami; entry তৃতীয় close-এ বা mother-এর open-এর retest-এ।
+- Stop mother-এর high-এর উপরে, spread আর rollover-এর buffer-সহ।
+- নিচের বাধা, higher timeframe demand zone সহ, আগেই মাপুন।
+
+</KeyTakeaways>
+
+## অনুশীলন ও নিজের backtest
+
+TradingView-এ USDJPY H1 বা EURUSD H1 খুলুন। অন্তত ২০টি three inside down খুঁজুন। প্রতিটির জন্য লিখুন: তারিখ ও সময়, resistance-এ ছিল কি না, তৃতীয় candle mother-এর open-এর কত নিচে, trade rollover পার হয়েছে কি না, stop-এর buffer কত, ফল (R)। এরপর 1-2 pip buffer আর বড় buffer-এ একই trade-গুলোর ফল তুলনা করুন। অন্তত ৩০টি নমুনা ছাড়া সিদ্ধান্ত নেবেন না।
+
+## কুইজ
+
+1. Three inside down আর bearish harami-র তফাত কী?
+2. Short trade কোন দামে বন্ধ হয়, bid না ask?
+3. Rollover পার হবে এমন trade-এ stop নিয়ে কী করবেন?
+
+<details>
+<summary>উত্তর দেখুন</summary>
+
+**১.** Bearish harami দুই candle-এর বিরতি। Three inside down-এ তৃতীয় candle mother-এর open-এর নিচে close করে harami নিশ্চিত করে।
+
+**২.** Ask দামে। Chart সাধারণত bid দেখায়, তাই short-এর stop-এ spread যোগ করতে হয়।
+
+**৩.** Buffer বাড়ান (আর size সেই অনুযায়ী কমান), বা rollover-এর আগে size কমান। মাত্র 1-2 pip buffer রাখবেন না।
+
+</details>
+
+## পরের ধাপ
+
+- পুরো walk-through: [Three Inside Up](/bn/patterns/three-inside-up)।
+- Stop কোথায় আর কত দূরে: [Stop Loss Placement](/bn/learn/10-trade-management-execution/01-stop-loss-placement)।
+- একই পরিবারের pattern: [Bearish Harami](/bn/patterns/bearish-harami), [Evening Star](/bn/patterns/evening-star), [Bearish Engulfing](/bn/patterns/bearish-engulfing)।
+
+<Disclaimer />

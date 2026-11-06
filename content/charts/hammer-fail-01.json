@@ -1,0 +1,217 @@
+{
+  "id": "hammer-fail-01",
+  "title": {
+    "en": "Hammer in Mid-Air During a Momentum Drop",
+    "bn": "Momentum drop-এর মাঝখানে ফাঁকা জায়গায় hammer"
+  },
+  "symbol": "GBPUSD",
+  "timeframe": "H4",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bullish",
+  "outcome": "loss",
+  "tags": [
+    "hammer",
+    "candlestick",
+    "fail",
+    "location",
+    "pattern"
+  ],
+  "module": "patterns",
+  "lessonSlugs": [],
+  "caption": {
+    "en": "Illustrative synthetic GBPUSD H4: a hammer forms after five large bearish candles with no support nearby. The next candle pokes above the hammer high and fills the entry, then closes weak. Price breaks the hammer low.",
+    "bn": "শিক্ষামূলক কাল্পনিক GBPUSD H4: কাছে কোনো support নেই, পাঁচটি বড় bearish candle-এর পর hammer। পরের candle-এর wick hammer high ছুঁয়ে entry fill করে, কিন্তু দুর্বল close দেয়। এরপর দাম hammer low ভাঙে।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data, not a real market record.",
+    "bn": "শিক্ষামূলক কাল্পনিক ডেটা, বাস্তব মার্কেটের রেকর্ড নয়।"
+  },
+  "updatedAt": "2026-11-06T12:00:00Z",
+  "annotations": [
+    {
+      "type": "marker",
+      "i": 10,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Hammer (no level)"
+    },
+    {
+      "type": "marker",
+      "i": 11,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Weak close"
+    },
+    {
+      "type": "hline",
+      "price": 1.2708,
+      "label": "Entry",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.2646,
+      "label": "Stop",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 1.258,
+      "label": "Real support",
+      "color": "#3b82f6",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candles 5-9 are large bearish candles: strong selling momentum. Candle 10 is a valid hammer by shape, but it has no level under it. Candle 11 fills the buy stop with a wick and closes below the hammer close. Candle 13 breaks the stop. Price only finds support much lower.",
+    "bn": "৫-৯ নম্বর বড় bearish candle: শক্তিশালী selling momentum। ১০ নম্বর আকারে সঠিক hammer, কিন্তু নিচে কোনো level নেই। ১১ নম্বর wick দিয়ে buy stop fill করে, কিন্তু hammer-এর close-এর নিচে close করে। ১৩ নম্বর stop ভাঙে। দাম অনেক নিচে গিয়ে support পায়।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "A perfect shape in the wrong place is still the wrong trade",
+      "bn": "ভুল জায়গায় নিখুঁত আকারও ভুল trade"
+    }
+  ],
+  "entry": 1.2708,
+  "stopLoss": 1.2646,
+  "takeProfit": 1.2832,
+  "rr": "1:2.0",
+  "candles": [
+    {
+      "i": 0,
+      "o": 1.286,
+      "h": 1.28677,
+      "l": 1.28422,
+      "c": 1.285
+    },
+    {
+      "i": 1,
+      "o": 1.285,
+      "h": 1.28613,
+      "l": 1.28466,
+      "c": 1.2856
+    },
+    {
+      "i": 2,
+      "o": 1.2856,
+      "h": 1.28632,
+      "l": 1.28376,
+      "c": 1.2844
+    },
+    {
+      "i": 3,
+      "o": 1.2844,
+      "h": 1.28497,
+      "l": 1.28307,
+      "c": 1.2835
+    },
+    {
+      "i": 4,
+      "o": 1.2835,
+      "h": 1.28434,
+      "l": 1.28311,
+      "c": 1.284
+    },
+    {
+      "i": 5,
+      "o": 1.284,
+      "h": 1.2846,
+      "l": 1.28047,
+      "c": 1.2812
+    },
+    {
+      "i": 6,
+      "o": 1.2812,
+      "h": 1.28176,
+      "l": 1.2772,
+      "c": 1.2778
+    },
+    {
+      "i": 7,
+      "o": 1.2778,
+      "h": 1.27853,
+      "l": 1.27499,
+      "c": 1.2756
+    },
+    {
+      "i": 8,
+      "o": 1.2756,
+      "h": 1.27657,
+      "l": 1.27066,
+      "c": 1.2718
+    },
+    {
+      "i": 9,
+      "o": 1.2718,
+      "h": 1.27245,
+      "l": 1.26871,
+      "c": 1.2692
+    },
+    {
+      "i": 10,
+      "o": 1.2692,
+      "h": 1.2706,
+      "l": 1.2654,
+      "c": 1.2702
+    },
+    {
+      "i": 11,
+      "o": 1.2702,
+      "h": 1.2713,
+      "l": 1.2693,
+      "c": 1.2696
+    },
+    {
+      "i": 12,
+      "o": 1.2696,
+      "h": 1.27027,
+      "l": 1.2674,
+      "c": 1.268
+    },
+    {
+      "i": 13,
+      "o": 1.268,
+      "h": 1.26899,
+      "l": 1.26403,
+      "c": 1.265
+    },
+    {
+      "i": 14,
+      "o": 1.265,
+      "h": 1.26602,
+      "l": 1.26194,
+      "c": 1.2626
+    },
+    {
+      "i": 15,
+      "o": 1.2626,
+      "h": 1.26332,
+      "l": 1.26025,
+      "c": 1.2608
+    },
+    {
+      "i": 16,
+      "o": 1.2608,
+      "h": 1.26199,
+      "l": 1.26039,
+      "c": 1.2616
+    },
+    {
+      "i": 17,
+      "o": 1.2616,
+      "h": 1.26216,
+      "l": 1.25916,
+      "c": 1.2596
+    },
+    {
+      "i": 18,
+      "o": 1.2596,
+      "h": 1.26006,
+      "l": 1.25786,
+      "c": 1.2584
+    }
+  ]
+}

@@ -1,0 +1,204 @@
+{
+  "id": "falling-three-methods-fail-01",
+  "title": {
+    "en": "Falling Three Methods With a Noisy, Two-Sided Pause",
+    "bn": "এলোমেলো, দুই দিকের বিরতি-সহ falling three methods"
+  },
+  "symbol": "USDJPY",
+  "timeframe": "H1",
+  "mode": "synthetic",
+  "type": "pattern",
+  "bias": "bearish",
+  "outcome": "loss",
+  "tags": [
+    "falling-three-methods",
+    "candlestick",
+    "continuation",
+    "fail",
+    "volatility",
+    "pattern"
+  ],
+  "module": "patterns",
+  "lessonSlugs": [],
+  "caption": {
+    "en": "Illustrative synthetic USDJPY H1: after a long bearish candle, the three middle candles stay inside its range but swing with big wicks in both directions, each about half as wide as the first candle. The fifth candle closes just below the first one's close; the short fails as price snaps back.",
+    "bn": "শিক্ষামূলক কাল্পনিক USDJPY H1: একটি লম্বা bearish candle-এর পর মাঝের তিনটি candle তার range-এর ভেতরে থাকে, কিন্তু দুই দিকে বড় wick নিয়ে দোলে, প্রতিটি প্রথম candle-এর প্রায় অর্ধেক চওড়া। পঞ্চম candle প্রথমটার close-এর সামান্য নিচে close করে; দাম ফিরে এলে short ব্যর্থ।"
+  },
+  "notes": {
+    "en": "Illustrative synthetic data, not a real market record.",
+    "bn": "শিক্ষামূলক কাল্পনিক ডেটা, বাস্তব মার্কেটের রেকর্ড নয়।"
+  },
+  "updatedAt": "2026-11-06T12:00:00Z",
+  "annotations": [
+    {
+      "type": "marker",
+      "i": 5,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "1"
+    },
+    {
+      "type": "marker",
+      "i": 7,
+      "position": "belowBar",
+      "shape": "arrowUp",
+      "text": "Noisy pause"
+    },
+    {
+      "type": "marker",
+      "i": 9,
+      "position": "aboveBar",
+      "shape": "arrowDown",
+      "text": "Weak 5th"
+    },
+    {
+      "type": "hline",
+      "price": 150.72,
+      "label": "Candle 1 close",
+      "color": "#3b82f6",
+      "style": "dotted"
+    },
+    {
+      "type": "hline",
+      "price": 150.69,
+      "label": "Entry (5th close)",
+      "color": "#f5b301",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 151.12,
+      "label": "Stop",
+      "color": "#ef4444",
+      "style": "dashed"
+    },
+    {
+      "type": "hline",
+      "price": 149.83,
+      "label": "Target 2R",
+      "color": "#22c55e",
+      "style": "dashed"
+    }
+  ],
+  "explanation": {
+    "en": "Candle 5 is a long bearish candle. Candles 6-8 stay inside its range, but each one swings 30-40 pips both ways: that is a two-sided fight, not a calm pause. Candle 9 closes only 3 pips below candle 5's close. Short at that close; candle 10 snaps back and the stop above the pause goes.",
+    "bn": "৫ নম্বর লম্বা bearish candle। ৬-৮ নম্বর তার range-এর ভেতরে থাকে, কিন্তু প্রতিটি দুই দিকে 30-40 pip দোলে: এটা দুই পক্ষের লড়াই, শান্ত বিরতি নয়। ৯ নম্বর ৫ নম্বরের close-এর মাত্র 3 pip নিচে close করে। সেই close-এ short; ১০ নম্বর ফিরে আসে, বিরতির উপরের stop যায়।"
+  },
+  "keyTakeaways": [
+    {
+      "en": "A pause with big wicks both ways is a fight, not a rest",
+      "bn": "দুই দিকে বড় wick-ওয়ালা বিরতি বিশ্রাম নয়, লড়াই"
+    }
+  ],
+  "entry": 150.69,
+  "stopLoss": 151.12,
+  "takeProfit": 149.83,
+  "rr": "1:2.0",
+  "candles": [
+    {
+      "i": 0,
+      "o": 151.8,
+      "h": 151.908,
+      "l": 151.493,
+      "c": 151.62
+    },
+    {
+      "i": 1,
+      "o": 151.62,
+      "h": 151.717,
+      "l": 151.577,
+      "c": 151.68
+    },
+    {
+      "i": 2,
+      "o": 151.68,
+      "h": 151.797,
+      "l": 151.409,
+      "c": 151.48
+    },
+    {
+      "i": 3,
+      "o": 151.48,
+      "h": 151.562,
+      "l": 151.261,
+      "c": 151.33
+    },
+    {
+      "i": 4,
+      "o": 151.33,
+      "h": 151.423,
+      "l": 151.28,
+      "c": 151.38
+    },
+    {
+      "i": 5,
+      "o": 151.38,
+      "h": 151.41,
+      "l": 150.68,
+      "c": 150.72
+    },
+    {
+      "i": 6,
+      "o": 150.72,
+      "h": 151.06,
+      "l": 150.69,
+      "c": 150.88
+    },
+    {
+      "i": 7,
+      "o": 150.88,
+      "h": 151.04,
+      "l": 150.7,
+      "c": 150.84
+    },
+    {
+      "i": 8,
+      "o": 150.84,
+      "h": 151.08,
+      "l": 150.72,
+      "c": 150.9
+    },
+    {
+      "i": 9,
+      "o": 150.9,
+      "h": 150.92,
+      "l": 150.66,
+      "c": 150.69
+    },
+    {
+      "i": 10,
+      "o": 150.69,
+      "h": 150.91,
+      "l": 150.63,
+      "c": 150.87
+    },
+    {
+      "i": 11,
+      "o": 150.87,
+      "h": 151.114,
+      "l": 150.824,
+      "c": 151.03
+    },
+    {
+      "i": 12,
+      "o": 151.03,
+      "h": 151.232,
+      "l": 150.975,
+      "c": 151.17
+    },
+    {
+      "i": 13,
+      "o": 151.17,
+      "h": 151.202,
+      "l": 151.092,
+      "c": 151.12
+    },
+    {
+      "i": 14,
+      "o": 151.12,
+      "h": 151.359,
+      "l": 151.039,
+      "c": 151.3
+    }
+  ]
+}
