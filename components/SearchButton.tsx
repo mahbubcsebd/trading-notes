@@ -2,10 +2,14 @@
 
 import { useEffect, useState } from "react";
 import { Search } from "lucide-react";
-import {
-  SearchDialog,
-  type SearchLabels,
-} from "@/components/search/SearchDialog";
+import dynamic from "next/dynamic";
+import type { SearchLabels } from "@/components/search/SearchDialog";
+
+const SearchDialog = dynamic(
+  () =>
+    import("@/components/search/SearchDialog").then((m) => m.SearchDialog),
+  { ssr: false },
+);
 
 function isTypingTarget(target: EventTarget | null): boolean {
   if (!(target instanceof HTMLElement)) return false;
@@ -24,6 +28,11 @@ export function SearchButton({
 }) {
   const [open, setOpen] = useState(false);
   const [isMac, setIsMac] = useState(true);
+  const [hasOpened, setHasOpened] = useState(false);
+
+  useEffect(() => {
+    if (open) setHasOpened(true);
+  }, [open]);
 
   useEffect(() => {
     setIsMac(/Mac|iPhone|iPad/.test(navigator.platform || navigator.userAgent));
@@ -55,12 +64,14 @@ export function SearchButton({
         </kbd>
       </button>
 
-      <SearchDialog
-        open={open}
-        onOpenChange={setOpen}
-        lang={lang}
-        labels={labels}
-      />
+      {hasOpened && (
+        <SearchDialog
+          open={open}
+          onOpenChange={setOpen}
+          lang={lang}
+          labels={labels}
+        />
+      )}
     </>
   );
 }

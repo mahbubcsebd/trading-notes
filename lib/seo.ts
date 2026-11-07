@@ -18,7 +18,7 @@ export const SITE_URL = (() => {
   }
 })();
 
-export const isIndexable = process.env.NEXT_PUBLIC_INDEXABLE === "true";
+export const isIndexable = process.env.NEXT_PUBLIC_INDEXABLE !== "false";
 
 const OG_LOCALE: Record<string, string> = { bn: "bn_BD", en: "en_US" };
 
