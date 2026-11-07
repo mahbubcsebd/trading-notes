@@ -7,7 +7,10 @@ export const OG_IMAGE_SIZE = { width: 1200, height: 630 } as const;
 
 /** Absolute origin used for canonical / hreflang / OG URLs. Set NEXT_PUBLIC_SITE_URL in production. */
 export const SITE_URL = (() => {
-  const raw = process.env.NEXT_PUBLIC_SITE_URL ?? FALLBACK_SITE_URL;
+  const vercelHost = process.env.VERCEL_PROJECT_PRODUCTION_URL;
+  const raw =
+    process.env.NEXT_PUBLIC_SITE_URL ??
+    (vercelHost ? `https://${vercelHost}` : FALLBACK_SITE_URL);
   try {
     return new URL(raw);
   } catch {
